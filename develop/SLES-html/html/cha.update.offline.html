@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Upgrading Offline | Deployment Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 23. Upgrading Offline" /><meta name="description" content="This chapter describes how to upgrade an existing SUSE Linux Enterprise installation using YaST which is booted from an installation medium. The YaST installer can, for example, be started from a DVD, over the network, or from the hard disk the system resides on." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.update.html" title="Part V. Updating and Upgrading SUSE Linux Enterprise" /><link rel="prev" href="cha.update.sle.html" title="Chapter 22. Upgrading SUSE Linux Enterprise" /><link rel="next" href="cha.update.online.html" title="Chapter 24. Upgrading Online" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.update.html">Updating and Upgrading SUSE Linux Enterprise</a><span> › </span><a class="crumb" href="cha.update.offline.html">Upgrading Offline</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.aarch64.html"><span class="number">3 </span><span class="name">Installation on ARM AArch64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">4 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">5 </span><span class="name">Installation on IBM z Systems</span></a></li><li class="inactive"><a href="cha.kiso.html"><span class="number">6 </span><span class="name">Installation on Hardware Not Supported at Release</span></a></li></ol></li><li class="inactive"><a href="part.deployment.html"><span class="number">II </span><span class="name">The Installation Workflow</span></a><ol><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">7 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">8 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.remote_installation.html"><span class="number">9 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.deployment.clone_image.html"><span class="number">10 </span><span class="name">Cloning Disk Images</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">11 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting Up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">12 </span><span class="name">Setting Up a Network Installation Source</span></a></li><li class="inactive"><a href="cha.deployment.prep_pxe.html"><span class="number">13 </span><span class="name">Preparing Network Boot Environment</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">IV </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.yast.hw.html"><span class="number">14 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">15 </span><span class="name">Advanced Disk Setup</span></a></li><li class="inactive"><a href="cha.yast.sw.html"><span class="number">16 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">17 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">18 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.yast.userman.html"><span class="number">19 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">20 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">V </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">21 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">22 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.offline.html"><span class="number">23 </span><span class="name">Upgrading Offline</span></a></li><li class="inactive"><a href="cha.update.online.html"><span class="number">24 </span><span class="name">Upgrading Online</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">25 </span><span class="name">Backporting Source Code</span></a></li></ol></li><li class="inactive"><a href="app.create-os-image.html"><span class="number">A </span><span class="name">Imaging and Creating Products</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 22. Upgrading SUSE Linux Enterprise" href="cha.update.sle.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Upgrading Online" href="cha.update.online.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.update.html">Updating and Upgrading SUSE Linux Enterprise</a><span> › </span><a class="crumb" href="cha.update.offline.html">Upgrading Offline</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 22. Upgrading SUSE Linux Enterprise" href="cha.update.sle.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Upgrading Online" href="cha.update.online.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.update.offline"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">23 </span><span class="name">Upgrading Offline</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>sle_update_offline.xml</li><li><span class="ds-label">ID: </span>cha.update.offline</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.update.offline.html#idm140159832042384">#</a></h6></div><p>
+    This chapter describes how to upgrade an existing SUSE Linux Enterprise installation using YaST which is booted from an installation medium. The YaST
+    installer can, for example, be started from a DVD, over the network, or from
+    the hard disk the system resides on.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.offline.conceptual-overview"><span class="number">23.1 </span><span class="name">Conceptual Overview</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.offline.dvd"><span class="number">23.2 </span><span class="name">Starting the Upgrade from Installation Medium</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.offline.network"><span class="number">23.3 </span><span class="name">Starting Upgrade from Network Source</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.offline.harddisk"><span class="number">23.4 </span><span class="name">Starting Upgrade from Hard Disk</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.offline.automated"><span class="number">23.5 </span><span class="name">Enabling Automatic Upgrade</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot"><span class="number">23.6 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.sle.manager"><span class="number">23.7 </span><span class="name">Updating via SUSE Manager</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.reg.status.after.rollback"><span class="number">23.8 </span><span class="name">Updating Registration Status after Rollback</span></a></span></dt><dt><span class="sect1"><a href="cha.update.offline.html#sec.update.registersystem"><span class="number">23.9 </span><span class="name">Registering Your System</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.update.offline.conceptual-overview"><div class="titlepage"><div><div><h2 class="title" id="sec.update.offline.conceptual-overview"><span class="number">23.1 </span><span class="name">Conceptual Overview</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.offline.conceptual-overview">#</a></h2></div></div></div><p>
+   Before upgrading your system, read <a class="xref" href="cha.update.sle.html#sec.update.prep" title="22.3. Preparing the System">Section 22.3, “Preparing the System”</a>
+   first.
+  </p><p>
+   To upgrade your system, boot from an installation source, as you would
+   do for a fresh installation. However, when the boot
+   screen appears, you need to select <span class="guimenu">Upgrade</span> (instead of
+   <span class="guimenu">Installation</span>). The upgrade can be started from:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title">Removable Media. </span>
+      This includes media such as CDs, DVDs or USB mass storage devices.
+      For more information, see
+      <a class="xref" href="cha.update.offline.html#sec.update.offline.dvd" title="23.2. Starting the Upgrade from Installation Medium">Section 23.2, “Starting the Upgrade from Installation Medium”</a>.
+     </p></li><li class="listitem "><p><span class="formalpara-title">Network Resource. </span>
+      You can either boot from the local medium
+      and then select the respective network installation type, or boot via PXE.
+      For more information, see
+      <a class="xref" href="cha.update.offline.html#sec.update.offline.network" title="23.3. Starting Upgrade from Network Source">Section 23.3, “Starting Upgrade from Network Source”</a>.
+     </p></li><li class="listitem "><p><span class="formalpara-title">Hard Disk. </span>
+      You can copy the new kernel and initrd image from
+      the ISO image to your hard disk containing the current SUSE Linux Enterprise installation
+      and adjust the boot menu. For more information, see
+      <a class="xref" href="cha.update.offline.html#sec.update.offline.harddisk" title="23.4. Starting Upgrade from Hard Disk">Section 23.4, “Starting Upgrade from Hard Disk”</a>.
+     </p></li></ul></div></div><div class="sect1 " id="sec.update.offline.dvd"><div class="titlepage"><div><div><h2 class="title" id="sec.update.offline.dvd"><span class="number">23.2 </span><span class="name">Starting the Upgrade from Installation Medium</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.offline.dvd">#</a></h2></div></div></div><p>
+   The procedure below describes booting from a DVD, but you can
+   also use another local installation medium like an ISO image on a USB mass
+   storage device. The medium and boot method to select depends on the system
+   architecture and on whether the machine has a traditional BIOS or UEFI.
+  </p><div class="procedure " id="pro.update.sle12.offline.dvd"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 23.1: </span><span class="name">Manually Upgrading from SLE 11 SP4  to SLE 12 SP3 </span><a title="Permalink" class="permalink" href="cha.update.offline.html#pro.update.sle12.offline.dvd">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Select and prepare a boot medium, see <a class="xref" href="part.prep.html" title="Part I. Installation Preparation">Part I, “Installation Preparation”</a>.
+    </p></li><li class="step "><p>
+     Insert DVD 1 of the SUSE Linux Enterprise 12 SP3 installation medium and boot your
+     machine. A <span class="guimenu">Welcome</span> screen is displayed, followed by
+     the boot screen.
+    </p></li><li class="step "><p>
+     Start up the system by selecting <span class="emphasis"><em>Upgrade</em></span>
+     in the boot menu.
+    </p></li><li class="step "><p>
+     Proceed with the upgrade process as described in
+     <a class="xref" href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot" title="23.6. Upgrading SUSE Linux Enterprise">Section 23.6, “Upgrading SUSE Linux Enterprise”</a>.
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.update.offline.network"><div class="titlepage"><div><div><h2 class="title" id="sec.update.offline.network"><span class="number">23.3 </span><span class="name">Starting Upgrade from Network Source</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.offline.network">#</a></h2></div></div></div><p>
+   To start an upgrade from a network installation source, make
+   sure that the following requirements are met:
+  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Requirements for Upgrading from a Network Installation Source </span><a title="Permalink" class="permalink" href="cha.update.offline.html#idm140159832018096">#</a></h6></div><dl class="variablelist"><dt id="idm140159832017312"><span class="term ">Network Installation Source</span></dt><dd><p>
+      A network installation source is set up according to
+      <a class="xref" href="cha.deployment.instserver.html" title="Chapter 12. Setting Up a Network Installation Source">Chapter 12, <em>Setting Up a Network Installation Source</em></a>.
+     </p></dd><dt id="idm140159832014880"><span class="term ">Network Connection and Network Services</span></dt><dd><p>
+      Both the installation server and the target machine must have a functioning
+      network connection. Required network services are:
+     </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Domain Name Service</p></li><li class="listitem "><p>DHCP (only needed for booting via PXE, IP can be set manually during setup)</p></li><li class="listitem "><p>OpenSLP (optional)</p></li></ul></div></dd><dt id="idm140159832010704"><span class="term ">Boot Medium</span></dt><dd><p>
+      You have a <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> DVD 1 (or a local ISO image) at hand to boot the target
+      system <span class="emphasis"><em>or</em></span> a target system that is set up for
+      booting via PXE according to
+      <a class="xref" href="cha.deployment.prep_pxe.html#sec.deployment.prep_boot.pxeprep" title="13.4. Preparing the Target System for PXE Boot">Section 13.4, “Preparing the Target System for PXE Boot”</a>.
+      Refer to <a class="xref" href="cha.remote_installation.html" title="Chapter 9. Remote Installation">Chapter 9, <em>Remote Installation</em></a> for in-depth
+      information on starting the upgrade from a remote server.
+     </p></dd></dl></div><div class="sect2 " id="sec.update.sle.manual.network.boot-from-dvd"><div class="titlepage"><div><div><h3 class="title" id="sec.update.sle.manual.network.boot-from-dvd"><span class="number">23.3.1 </span><span class="name">Manually Upgrading via Network Installation Source—Booting from DVD</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.sle.manual.network.boot-from-dvd">#</a></h3></div></div></div><p>
+    This procedure describes booting from a DVD as an example, but you can
+    also use another local installation medium like an ISO image on a USB mass
+    storage device. The way to select the boot method and to start up the
+    system from the medium depends on the system architecture and on whether
+    the machine has a traditional BIOS or UEFI. For details, see the links
+    below.
+   </p><div class="procedure " id="pro.update.sle.manual.network.boot-from-dvd"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Insert DVD 1 of the SUSE Linux Enterprise 12 SP2 installation media and boot your
+      machine. A <span class="guimenu">Welcome</span> screen is displayed, followed by
+      the boot screen.
+     </p></li><li class="step "><p>
+      Select the type of network installation source you want to use (FTP,
+      HTTP, NFS, SMB, or SLP). Usually you get this choice by pressing
+      <span class="keycap">F4</span>, but in case your machine is equipped with UEFI
+      instead of a traditional BIOS, you may need to manually adjust boot
+      parameters. For details, see <a class="xref" href="cha.boot_parameters.html" title="Chapter 7. Boot Parameters">Chapter 7, <em>Boot Parameters</em></a> in
+      <a class="xref" href="cha.install.html" title="Chapter 8. Installation with YaST">Chapter 8, <em>Installation with YaST</em></a>.
+     </p></li><li class="step "><p>
+      Proceed with the upgrade process as described in
+      <a class="xref" href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot" title="23.6. Upgrading SUSE Linux Enterprise">Section 23.6, “Upgrading SUSE Linux Enterprise”</a>.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.update.sle.manual.network.pxe-boot"><div class="titlepage"><div><div><h3 class="title" id="sec.update.sle.manual.network.pxe-boot"><span class="number">23.3.2 </span><span class="name">Manually Upgrading via Network Installation Source—Booting via PXE</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.sle.manual.network.pxe-boot">#</a></h3></div></div></div><p>
+    To perform an upgrade from a network installation source using PXE boot,
+    proceed as follows:
+   </p><div class="procedure " id="pro.update.sle.manual.network.pxe-boot"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Adjust the setup of your DHCP server to provide the address information
+      needed for booting via PXE. For details, see
+      <a class="xref" href="cha.deployment.prep_pxe.html#proc.deployment.dhcp_server">Procedure 13.0, “”</a>.
+     </p></li><li class="step "><p>
+      Set up a TFTP server to hold the boot image needed for booting via PXE.
+      Use DVD 1 of your SUSE Linux Enterprise 12 SP2 installation media for this or follow the
+      instructions in <a class="xref" href="cha.deployment.prep_pxe.html#sec.deployment.tftp_server" title="13.2. Setting Up a TFTP Server">Section 13.2, “Setting Up a TFTP Server”</a>.
+     </p></li><li class="step "><p>
+      Prepare PXE Boot and Wake-on-LAN on the target machine.
+     </p></li><li class="step "><p>
+      Initiate the boot of the target system and use VNC to remotely connect to
+      the installation routine running on this machine. For more information,
+      see <a class="xref" href="cha.remote_installation.html#sec.remote_installation.monitor_vnc" title="9.3. Monitoring Installation via VNC">Section 9.3, “Monitoring Installation via VNC”</a>.
+     </p></li><li class="step "><p>
+      Proceed with the upgrade process as described in
+      <a class="xref" href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot" title="23.6. Upgrading SUSE Linux Enterprise">Section 23.6, “Upgrading SUSE Linux Enterprise”</a>.
+     </p></li></ol></div></div></div></div><div class="sect1 " id="sec.update.offline.harddisk"><div class="titlepage"><div><div><h2 class="title" id="sec.update.offline.harddisk"><span class="number">23.4 </span><span class="name">Starting Upgrade from Hard Disk</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.offline.harddisk">#</a></h2></div></div></div><div class="sect2 " id="sec.update.sle.offline.automated"><div class="titlepage"><div><div><h3 class="title" id="sec.update.sle.offline.automated"><span class="number">23.4.1 </span><span class="name">Automated Migration from SUSE Linux Enterprise 11 SP3 or SP4 to SUSE Linux Enterprise 12 SP2</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.sle.offline.automated">#</a></h3></div></div></div><div class="procedure " id="pro.update.sle.offline.automated"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Copy the installation kernel <code class="filename">linux</code> and the file
+      <code class="filename">initrd</code> from <code class="filename">/boot/x86_64/loader/</code>
+      from your first installation DVD to your system's
+      <code class="filename">/boot</code> directory:
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">cp</code> -vi <em class="replaceable ">DVDROOT</em>/boot/x86_64/loader/linux /boot/linux.upgrade
+<code class="prompt root">root # </code><code class="command">cp</code> -vi <em class="replaceable ">DVDROOT</em>/boot/x86_64/loader/initrd /boot/initrd.upgrade</pre></div><p>
+      <em class="replaceable ">DVDROOT</em> denotes the path where your system
+      mounts the DVD, usually <code class="filename">/run/media/$USER/$DVDNAME</code>.
+     </p></li><li class="step "><p>
+      Open the GRUB legacy configuration file
+      <code class="filename">/boot/grub/menu.lst</code> and add another section. For
+      other boot loaders, edit the respective configuration file(s). Adjust
+      device names and the <em class="parameter ">root</em> parameter accordingly.
+      For example:
+     </p><p>
+      
+     </p><div class="verbatim-wrap"><pre class="screen">title Linux Upgrade Kernel
+kernel (hd0,0)/boot/linux.upgrade root=/dev/sda1 upgrade=1 autoupgrade=1
+initrd (hd0,0)/boot/initrd.upgrade</pre></div></li><li class="step "><p>
+      The following steps either need the DVD in the drive or the ISO image
+      has to be present on the local disk. If the computer has no DVD drive,
+      either download the ISO and save it as <code class="filename">/install.iso</code>
+      or copy it from the DVD.
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">dd</code> if=/dev/cdrom of=/install.iso</pre></div><p>
+      If you copied the ISO to your hard disk, you need to add a parameter
+      to the previously edited <code class="filename">/boot/grub/menu.lst</code>.
+      To the line beginning with <code class="literal">kernel</code> add the option
+     </p><div class="verbatim-wrap"><pre class="screen">install=hd:/install.iso</pre></div></li><li class="step "><p>
+      Reboot your machine and select the newly added section from the boot menu
+      (here: <span class="emphasis"><em>Linux Upgrade Kernel</em></span>). You can use
+      <code class="command">grubonce</code> to preselect the newly created GRUB entry for
+      an unattended automatic reboot into the newly created entry. You can also
+      use <code class="command">reboot</code> to initiate the reboot from the command
+      line.
+     </p></li><li class="step "><p>
+      Proceed with the upgrade process as described in
+      <a class="xref" href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot" title="23.6. Upgrading SUSE Linux Enterprise">Section 23.6, “Upgrading SUSE Linux Enterprise”</a>.
+     </p></li><li class="step "><p>
+      After the upgrade process was finished successfully, remove the
+      installation kernel and initrd files
+      (<code class="filename">/boot/linux.upgrade</code> and
+      <code class="filename">/boot/initrd.upgrade</code>). They are not needed anymore.
+     </p></li></ol></div></div></div></div><div class="sect1 " id="sec.update.offline.automated"><div class="titlepage"><div><div><h2 class="title" id="sec.update.offline.automated"><span class="number">23.5 </span><span class="name">Enabling Automatic Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.offline.automated">#</a></h2></div></div></div><p>
+   The upgrade process can be executed automatically. To enable the automatic
+   update, the kernel parameter <code class="literal">autoupgrade=1</code>
+   must be set. The parameter can be set on boot in the <code class="literal">Boot Options</code>
+   field. For details, see
+   <a class="link" href="https://www.suse.com/documentation/sles-12/book_autoyast/data/introduction.html" target="_blank">https://www.suse.com/documentation/sles-12/book_autoyast/data/introduction.html</a>.
+  </p></div><div class="sect1 " id="sec.update.sle12.start.upgr.after.boot"><div class="titlepage"><div><div><h2 class="title" id="sec.update.sle12.start.upgr.after.boot"><span class="number">23.6 </span><span class="name">Upgrading SUSE Linux Enterprise</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.sle12.start.upgr.after.boot">#</a></h2></div></div></div><p>
+   
+  </p><p>
+   Before you upgrade your system, read <a class="xref" href="cha.update.sle.html#sec.update.prep" title="22.3. Preparing the System">Section 22.3, “Preparing the System”</a>
+   first. To perform an automated migration, proceed as follows:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     After you have booted (either from an installation medium or the network),
+     select the <span class="guimenu">Upgrade</span> entry on the boot screen. If you want
+     to do the upgrade as described in the next steps manually, you need to
+     disable the automatic upgrade process. Refer to
+     <a class="xref" href="cha.update.offline.html#sec.update.offline.automated" title="23.5. Enabling Automatic Upgrade">Section 23.5, “Enabling Automatic Upgrade”</a>.
+    </p><div id="idm140159831950000" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Wrong Choice May Lead to Data Loss</h6><p>
+      If you select <span class="guimenu">Installation</span> instead of
+      <span class="guimenu">Upgrade</span>, data may be lost later. You need to be extra
+      careful  not to destroy your data partitions by doing a fresh
+      installation.
+     </p><p>
+      Make sure to select <span class="guimenu">Upgrade</span> here.
+     </p></div><p>
+     YaST starts the installation system.
+    </p></li><li class="step "><p>
+     On the <span class="guimenu">Welcome</span> screen, choose
+     <span class="guimenu">Language</span> and <span class="guimenu">Keyboard</span>.
+     Proceed with <span class="guimenu">Next</span>.
+    </p><p>
+     YaST checks your partitions for already installed SUSE Linux Enterprise systems.
+    </p></li><li class="step "><p>
+     On the <span class="guimenu">Select for Upgrade</span> screen, select the partition
+     to upgrade and click <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     YaST mounts the selected partition and displays the licence agreement
+     for the upgraded product. To continue accept the license.
+    </p></li><li class="step "><p>
+     On the <span class="guimenu">Previously Used Repositories</span> screen, adjust the
+     status of the repositories: enable those you want to include in the
+     upgrade process and disable any repositories that are no longer needed.
+     Proceed with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     The next step depends on whether the upgraded system is registered or not.
+    </p><ol type="a" class="substeps "><li class="step "><p>
+       If the system is not registered then YaST displays a popup message
+       suggesting using a second installation medium, the SLE-15-Packages medium.
+      </p><p>
+       If you do not have that medium then the system can be upgraded only to
+       a minimal SUSE Linux Enterprise 15 system.
+      </p></li><li class="step "><p>
+       If the system is registered then YaST will show possible migration
+       targets and a summary.
+      </p><p>
+       Select one migration target from the list and proceed with
+       <span class="guimenu">Next</span>.
+      </p></li></ol></li><li class="step "><p>
+     In the next dialog you can optionally add an additional installation medium.
+     If you have additional installation media then activate the
+     <span class="guimenu">I would like to install an additional Add-on Product</span>
+     option and specify the media type.
+    </p></li><li class="step "><p>
+     Review the <span class="guimenu">Installation Settings</span> for the upgrade.
+    </p><div id="idm140159831930304" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Choice of Desktop</h6><p>
+      If you used KDE before upgrading to SUSE Linux Enterprise 15
+      (<code class="varname">DEFAULT_WM</code> in
+      <code class="filename">/etc/sysconfig/windowmanager</code> was set to
+      <code class="literal">kde*</code>), your desktop environment will automatically be
+      replaced with GNOME after the upgrade. By default, the KDM display
+      manager will be replaced with GDM.
+     </p></div></li><li class="step "><p>
+     If all settings are according to your wishes, start the installation and
+     removal procedure by clicking <span class="guimenu">Update</span>.
+    </p></li><li class="step "><p>
+     After the upgrade process was finished successfully, check for any
+     <span class="quote">“<span class="quote">orphaned packages</span>”</span>. Orphaned packages are packages which
+     belong to no active repository anymore. The following command gives you a
+     list of these:
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>zypper packages --orphaned</pre></div><p>
+     With this list, you can decide if a package is still needed or can be
+     uninstalled safely.
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.update.sle.manager"><div class="titlepage"><div><div><h2 class="title" id="sec.update.sle.manager"><span class="number">23.7 </span><span class="name">Updating via SUSE Manager</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.sle.manager">#</a></h2></div></div></div><p>
+   SUSE Manager is a server solution for providing updates, patches, and
+   security fixes for SUSE Linux Enterprise clients. It comes with a set of tools and a
+   Web-based user interface for management tasks. See <a class="link" href="https://www.suse.com/products/suse-manager/" target="_blank">https://www.suse.com/products/suse-manager/</a> for more
+   information about SUSE Manager.
+  </p><p>
+   SUSE Manager can support you with SP Migration or a full system upgrade.
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140159831919360"><span class="term ">SP Migration</span></dt><dd><p>
+      SP Migration allows migrating from one Service Pack (SP) to
+      another within one major version (for example, from SLES 12 SP1
+      to 12 SP2).  For more information, see the <em class="citetitle ">SUSE Manager
+      Best Practices</em>, chapter <span class="quote">“<span class="quote">Client
+      Migration</span>”</span>, section <span class="quote">“<span class="quote">Migrating SUSE Linux Enterprise
+      Server 12 or later to version 12 SP2</span>”</span>:
+     </p><p>
+      
+      <a class="link" href="https://www.suse.com/documentation/suse-manager/" target="_blank">https://www.suse.com/documentation/suse-manager/</a>,
+      version 3.1.
+     </p></dd><dt id="idm140159831914912"><span class="term ">System Upgrade</span></dt><dd><p>
+      With SUSE Manager you can perform a system upgrade.  With the
+      integrated AutoYaST technology, upgrades from one major version to the
+      next are possible (for example, from SLES 11 SP3 to 12 SP2).  For
+      more information, see the <em class="citetitle ">SUSE Manager Best
+      Practices</em>, chapter <span class="quote">“<span class="quote">Client Migration</span>”</span>,
+      section <span class="quote">“<span class="quote">Migrating SUSE Linux Enterprise 11 SP3 to
+      version 12 SP2</span>”</span>:
+     </p><p>
+      
+      <a class="link" href="https://www.suse.com/documentation/suse-manager/" target="_blank">https://www.suse.com/documentation/suse-manager/</a>,
+      version 3.1.
+     </p></dd></dl></div></div><div class="sect1 " id="sec.update.reg.status.after.rollback"><div class="titlepage"><div><div><h2 class="title" id="sec.update.reg.status.after.rollback"><span class="number">23.8 </span><span class="name">Updating Registration Status after Rollback</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.reg.status.after.rollback">#</a></h2></div></div></div><p>
+   When performing a service pack upgrade, it is necessary to change the
+   configuration on the registration server to provide access to the new
+   repositories. If the upgrade process is interrupted or reverted (via
+   restoring from a backup or snapshot), the information on the registration
+   server is inconsistent with the status of the system. This may lead to you
+   being prevented from accessing update repositories or to wrong repositories
+   being used on the client.
+  </p><p>
+   When a rollback is done via Snapper, the system will notify the registration
+   server to ensure access to the correct repositories is set up during the
+   boot process. If the system was restored any other way or the communication
+   with the registration server failed for any reason (for example, because the
+   server was not accessible because of network issues), trigger the rollback
+   on the client manually by calling:
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">snapper</code> rollback</pre></div><p>
+   We suggest always checking that the correct repositories are set up on the
+   system, especially after refreshing the service using:
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">zypper</code> ref -s</pre></div><p>
+   This functionality is available in the
+   <span class="package">rollback-helper</span>
+   package.
+  </p></div><div class="sect1 " id="sec.update.registersystem"><div class="titlepage"><div><div><h2 class="title" id="sec.update.registersystem"><span class="number">23.9 </span><span class="name">Registering Your System</span> <a title="Permalink" class="permalink" href="cha.update.offline.html#sec.update.registersystem">#</a></h2></div></div></div><p>
+   If the system has not been registered before running the upgrade you can
+   register your system at any time using the <span class="guimenu">Product
+   Registration</span> module in YaST.
+  </p><p>
+   Registering your systems has these advantages:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Eligibility for support
+    </p></li><li class="listitem "><p>
+     Availability of security updates and bug fixes
+    </p></li><li class="listitem "><p>
+     Access to SUSE Customer Center
+    </p></li></ul></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Start YaST and select <span class="guimenu">Software</span> › <span class="guimenu">Product Registration</span> to open the
+     <span class="guimenu">Registration</span> dialog.
+    </p></li><li class="step "><p>
+     Provide the <span class="guimenu">E-mail</span> address associated with the SUSE
+     account you or your organization uses to manage subscriptions. In case you
+     do not have a SUSE account yet, go to the SUSE Customer Center home page
+     (<a class="link" href="https://scc.suse.com/" target="_blank">https://scc.suse.com/</a>) to create one.
+    </p></li><li class="step "><p>
+     Enter the <span class="guimenu">Registration Code</span> you received with your copy
+     of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>.
+    </p></li><li class="step "><p>
+      If one or more local registration servers are available on your network,
+      you can choose one of them from a list.
+     </p></li><li class="step " id="step.y2.register.final"><p>
+     To start the registration, proceed with <span class="guimenu">Next</span>.
+    </p><p>
+     After successful registration, YaST lists extensions, add-ons, and
+     modules that are available for your system. To select and install them,
+     proceed with <a class="xref" href="cha.add-ons.html#sec.add-ons.extensions" title="17.1. Installing Modules and Extensions from Online Channels">Section 17.1, “Installing Modules and Extensions from Online Channels”</a>.
+    </p></li></ol></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.update.online.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 24 </span>Upgrading Online</span></a><a class="nav-link" href="cha.update.sle.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 22 </span>Upgrading SUSE Linux Enterprise</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
