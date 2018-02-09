@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Installing Add-On Products | Start-Up | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="Start-Up" /><meta name="chapter-title" content="Chapter 12. Installing Add-On Products" /><meta name="description" content="Add-on products are system extensions. You can install a third party add-on product or a special system extension of openSUSE® Leap (for example, a CD with support for additional languages or a CD with binary drivers). To install a new add-on, start YaST and select SoftwareAdd-On Products. You can select various types of product media, like CD, FTP, USB mass storage devices (such as USB flash drives or disks) or a local directory. You can also work directly with ISO files. To add an add-on as ISO file media, select Local ISO Image then enter the Path to ISO Image. The Repository Name is arbitrary." /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.reference.software.html" title="Part III. Managing and Updating Software" /><link rel="prev" href="cha.yast.sw.html" title="Chapter 11. Installing or Removing Software" /><link rel="next" href="cha.onlineupdate.you.html" title="Chapter 13. YaST Online Update" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="openSUSE Leap Documentation"><span class="book-icon">openSUSE Leap Documentation</span></a><span> › </span><a class="crumb" href="book.opensuse.startup.html">Start-Up</a><span> › </span><a class="crumb" href="part.reference.software.html">Managing and Updating Software</a><span> › </span><a class="crumb" href="cha.add-ons.html">Installing Add-On Products</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Start-Up</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.start-up.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.basics.html"><span class="number">I </span><span class="name">Installation</span></a><ol><li class="inactive"><a href="art.opensuse.installquick.html"><span class="number">1 </span><span class="name"><em class="citetitle ">Installation Quick Start</em></span></a></li><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">2 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">4 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.reference.administration.html"><span class="number">II </span><span class="name">Administration</span></a><ol><li class="inactive"><a href="cha.yast.userman.html"><span class="number">5 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">6 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.yast.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.print.html"><span class="number">8 </span><span class="name">Printer Operation</span></a></li><li class="inactive"><a href="cha.x11.html"><span class="number">9 </span><span class="name">The X Window System</span></a></li><li class="inactive"><a href="cha.fuse.html"><span class="number">10 </span><span class="name">Accessing File Systems with FUSE</span></a></li></ol></li><li class="inactive"><a href="part.reference.software.html"><span class="number">III </span><span class="name">Managing and Updating Software</span></a><ol><li class="inactive"><a href="cha.yast.sw.html"><span class="number">11 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">12 </span><span class="name">Installing Add-On Products</span></a></li><li class="inactive"><a href="cha.onlineupdate.you.html"><span class="number">13 </span><span class="name">YaST Online Update</span></a></li><li class="inactive"><a href="cha.update.osuse.html"><span class="number">14 </span><span class="name">Upgrading the System and System Changes</span></a></li></ol></li><li class="inactive"><a href="part.bash.html"><span class="number">IV </span><span class="name">The Bash Shell</span></a><ol><li class="inactive"><a href="cha.new.bash.html"><span class="number">15 </span><span class="name">Shell Basics</span></a></li><li class="inactive"><a href="cha.adm.shell.html"><span class="number">16 </span><span class="name">Bash and Bash Scripts</span></a></li></ol></li><li class="inactive"><a href="part.help.html"><span class="number">V </span><span class="name">Help and Troubleshooting</span></a><ol><li class="inactive"><a href="cha.adminhelp.html"><span class="number">17 </span><span class="name">Help and Documentation</span></a></li><li class="inactive"><a href="cha.trouble.html"><span class="number">18 </span><span class="name">Common Problems and Their Solutions</span></a></li></ol></li><li class="inactive"><a href="bk01apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 11. Installing or Removing Software" href="cha.yast.sw.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 13. YaST Online Update" href="cha.onlineupdate.you.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="openSUSE Leap Documentation"><span class="book-icon">openSUSE Leap Documentation</span></a><span> › </span><a class="crumb" href="book.opensuse.startup.html">Start-Up</a><span> › </span><a class="crumb" href="part.reference.software.html">Managing and Updating Software</a><span> › </span><a class="crumb" href="cha.add-ons.html">Installing Add-On Products</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 11. Installing or Removing Software" href="cha.yast.sw.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 13. YaST Online Update" href="cha.onlineupdate.you.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.add-ons"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">openSUSE Leap</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">42.3</span></span></span></div><div><h2 class="title"><span class="number">12 </span><span class="name">Installing Add-On Products</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>yast2_sw_addon_osuse.xml</li><li><span class="ds-label">ID: </span>cha.add-ons</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.add-ons.html#idm139637876443552">#</a></h6></div><p>
+    Add-on products are system extensions. You can install a third party
+    add-on product or a special system extension of <span class="productname"><span class="phrase">openSUSE® Leap</span></span> (for
+    example, a CD with support for additional languages or a CD with binary
+    drivers). To install a new add-on, start YaST and select <span class="guimenu">Software</span> › <span class="guimenu">Add-On Products</span>. You can select various types of product media, like CD,
+    FTP, USB mass storage devices (such as USB flash drives or disks) or a
+    local directory. You can also work directly with ISO files. To add an
+    add-on as ISO file media, select <span class="guimenu">Local ISO Image</span> then
+    enter the <span class="guimenu">Path to ISO Image</span>. The <span class="guimenu">Repository
+    Name</span> is arbitrary.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.add-ons.html#sec.add-ons.addon"><span class="number">12.1 </span><span class="name">Add-Ons</span></a></span></dt><dt><span class="sect1"><a href="cha.add-ons.html#sec.add-ons.drivers"><span class="number">12.2 </span><span class="name">Binary Drivers</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.add-ons.addon"><div class="titlepage"><div><div><h2 class="title" id="sec.add-ons.addon"><span class="number">12.1 </span><span class="name">Add-Ons</span> <a title="Permalink" class="permalink" href="cha.add-ons.html#sec.add-ons.addon">#</a></h2></div></div></div><p>
+   To install a new add-on, proceed as follows:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     In YaST select <span class="guimenu">Software</span> › <span class="guimenu">Add-On Products</span> to see an overview of
+     already installed add-on products.
+    </p></li><li class="step "><p>
+     To install a new add-on product, click <span class="guimenu">Add</span>.
+    </p></li><li class="step "><p>
+     From the list of available <span class="guimenu">Media Types</span> specify the
+     type matching your repository.
+    </p></li><li class="step "><p>
+     To add a repository from a removable medium, choose the relevant option
+     and insert the medium or connect the USB device to the machine,
+     respectively.
+    </p></li><li class="step "><p>
+     You can choose to <span class="guimenu">Download Repository Description
+     Files</span> now. If the option is unchecked, YaST will
+     automatically download the files later, if needed. Click
+     <span class="guimenu">Next</span> to proceed.
+    </p></li><li class="step "><p>
+     When adding a repository from the network, enter the data you are
+     prompted for. Continue with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Depending on the repository you have added, you may be asked if you
+     want to import the GPG key with which it is signed or asked to agree to
+     a license.
+    </p><p>
+     After confirming these messages, YaST will download and parse the
+     metadata and add the repository to the list of <span class="guimenu">Configured
+     Repositories.</span>.
+    </p></li><li class="step "><p>
+     If needed, adjust the repository <span class="guimenu">Properties</span> as
+     described in <a class="xref" href="cha.yast.sw.html#sec.yast.sw.instsource.manage" title="11.3.2. Managing Repository Properties">Section 11.3.2, “Managing Repository Properties”</a> or confirm
+     your changes with <span class="guimenu">OK</span> to close the configuration
+     dialog.
+    </p></li><li class="step "><p>
+     After having successfully added the repository for the add-on media,
+     the software manager starts and you can install packages. Refer to
+     <a class="xref" href="cha.yast.sw.html" title="Chapter 11. Installing or Removing Software">Chapter 11, <em>Installing or Removing Software</em></a> for details.
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.add-ons.drivers"><div class="titlepage"><div><div><h2 class="title" id="sec.add-ons.drivers"><span class="number">12.2 </span><span class="name">Binary Drivers</span> <a title="Permalink" class="permalink" href="cha.add-ons.html#sec.add-ons.drivers">#</a></h2></div></div></div><p>
+   Some hardware needs binary-only drivers to function properly. If you have
+   such hardware, refer to the release notes for more information about
+   availability of binary drivers for your system. To read the release
+   notes, open YaST and select <span class="guimenu">Miscellaneous</span> › <span class="guimenu">Release Notes</span>.
+  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.onlineupdate.you.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 13 </span>YaST Online Update</span></a><a class="nav-link" href="cha.yast.sw.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 11 </span>Installing or Removing Software</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
