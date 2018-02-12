@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Storing Images | Docker Guide | SUSE Linux Enterprise Server 12 SP3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP3" /><meta name="book-title" content="Docker Guide" /><meta name="chapter-title" content="Chapter 4. Storing Images" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP3" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="book.sles.docker.html" title="Docker Guide" /><link rel="prev" href="cha.sle2docker.installation.html" title="Chapter 3. Installing sle2docker" /><link rel="next" href="docker.building.images.html" title="Chapter 5. Creating Custom Images" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.registry.installation.html">Storing Images</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Docker Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="cha.docker.overview.html"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="cha.docker.installation.html"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="cha.sle2docker.installation.html"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="cha.registry.installation.html"><span class="number">4 </span><span class="name">Storing Images</span></a></li><li class="inactive"><a href="docker.building.images.html"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="docker.dockerizing.application.html"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="cha.working.with.containers.html"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="app.docker.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk11apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 3. Installing sle2docker" href="cha.sle2docker.installation.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 5. Creating Custom Images" href="docker.building.images.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.registry.installation.html">Storing Images</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 3. Installing sle2docker" href="cha.sle2docker.installation.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 5. Creating Custom Images" href="docker.building.images.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.registry.installation" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP3</span></span></span></div><div><h1 class="title"><span class="number">4 </span><span class="name">Storing Images</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>docker_registry.xml</li><li><span class="ds-label">ID: </span>cha.registry.installation</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.registry.installation.html#sec.docker.registry.definition"><span class="number">4.1 </span><span class="name">What is a Docker Registry?</span></a></span></dt><dt><span class="sect1"><a href="cha.registry.installation.html#sec.docker.registry.installation"><span class="number">4.2 </span><span class="name">Installing and Setting Up Docker Registry</span></a></span></dt><dt><span class="sect1"><a href="cha.registry.installation.html#sec.docker.registry.limitations"><span class="number">4.3 </span><span class="name">Limitations</span></a></span></dt><dt><span class="sect1"><a href="cha.registry.installation.html#sec.docker.portus"><span class="number">4.4 </span><span class="name">Portus</span></a></span></dt></dl></div></div><p>
+  Prior to creating your own images, you should decide where you will store the
+  images.  The easiest solution would be to push these images to the <a class="link" href="https://hub.docker.com" target="_blank">Docker Hub</a>. By default all images
+  pushed to the Docker Hub are public. This is probably fine as long as this
+  does not violate your company's policy and your images do not contain
+  sensitive data or proprietary software.
+</p><p>
+ If you need to restrict access to your Docker images, there are two
+ options:
+</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+   Get a subscription on Docker Hub that unlocks the feature to create private
+   repositories.
+  </p></li><li class="listitem "><p>
+   Run an on-site Docker registry where to store all the Docker images used
+   by your organization or company and combine them with Portus to secure the
+   registry.
+  </p></li></ul></div><p>
+ This chapter describes how to set up an on-site Docker registry and how to
+ combine it with Portus.
+</p><div class="sect1 " id="sec.docker.registry.definition"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.registry.definition"><span class="number">4.1 </span><span class="name">What is a Docker Registry?</span> <a title="Permalink" class="permalink" href="cha.registry.installation.html#sec.docker.registry.definition">#</a></h2></div></div></div><p> The Docker registry is an open source project created by
+        Docker Inc. It allows the storage and retrieval of Docker
+        images. By running a local instance of the Docker registry it is
+        possible to completely avoid usage of the Docker Hub.
+         </p><p>
+    The Docker registry is also used by the Docker Hub. However, the Docker
+    Hub, as seen from the user perspective, is made of the following parts
+    at least:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      The user interface (UI): The part that is accessed by users with their
+      browser. The UI provides a nice and intuitive way to browse the
+      contents of the Docker Hub either manually or by using a search
+      feature. It also allows to create organizations made by different
+      users.
+     </p><p>
+      This component is closed source.
+     </p></li><li class="listitem "><p> The authentication component: This is used to protect the
+            images stored inside of the Docker Hub. It validates all
+            push, pull and search requests.
+            </p><p>
+      This component is closed source.
+     </p></li><li class="listitem "><p>
+      The storage back-end: This is where the Docker images are sent and
+      downloaded from. It is provided by the Docker registry.
+     </p><p>
+      This component is open source.
+     </p></li></ul></div></div><div class="sect1 " id="sec.docker.registry.installation"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.registry.installation"><span class="number">4.2 </span><span class="name">Installing and Setting Up Docker Registry</span> <a title="Permalink" class="permalink" href="cha.registry.installation.html#sec.docker.registry.installation">#</a></h2></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Install the <code class="systemitem">docker-distribution-registry</code>
+      package:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo zypper install docker-distribution-registry</pre></div></li><li class="step "><p>
+      To automatically start the Docker registry at boot time:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl enable registry</pre></div></li><li class="step "><p>
+      Start the Docker registry:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl start registry</pre></div></li></ol></div></div><p>
+    The Docker registry configuration is defined inside of
+    <code class="filename">/etc/registry/config.yml</code>.
+   </p><p>
+    With the default configuration the registry listens on ports
+    <code class="literal">5000</code> and stores the Docker images under
+    <code class="filename">/var/lib/docker-registry</code>.
+   </p><div id="idm140276586199344" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Incompatible Versions of Docker and Docker Registry</h6><p>
+       Docker registry version 2.3 is not compatible with Docker versions older
+       than 1.10, because v2 manifests were only introduced with Docker 1.10.
+       As Docker and Docker registry can be installed on different boxes, the
+       versions might be incompatible. If you experience communication errors
+       between Docker and Docker registry, update both to the latest versions.
+     </p></div><p>
+    For more details about Docker registry and its configuration, see the
+    official documentation at:
+    <a class="link" href="https://docs.docker.com/registry/" target="_blank">https://docs.docker.com/registry/</a>.
+   </p></div><div class="sect1 " id="sec.docker.registry.limitations"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.registry.limitations"><span class="number">4.3 </span><span class="name">Limitations</span> <a title="Permalink" class="permalink" href="cha.registry.installation.html#sec.docker.registry.limitations">#</a></h2></div></div></div><p>
+    The Docker registry has two major limitations:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      It lacks any form of authentication. That means everybody with access
+      to the Docker registry can push and pull images to it. That also
+      includes the possibility to overwrite already existing images.
+     </p></li><li class="listitem "><p>
+      There is no way to see which images have been pushed to the Docker
+      registry. You can
+      
+      manually take notes of what is being stored inside of it. There is
+      also no search functionality, which makes collaboration harder.
+     </p></li></ul></div><p>
+    The next section is going to introduce Portus, the solution to all of
+    the problems above.
+   </p></div><div class="sect1 " id="sec.docker.portus"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.portus"><span class="number">4.4 </span><span class="name">Portus</span> <a title="Permalink" class="permalink" href="cha.registry.installation.html#sec.docker.portus">#</a></h2></div></div></div><p>
+   Portus is an authentication service and user interface for the Docker
+   registry. It is an open source project created by SUSE to address all
+   the limitations faced by the local instances of Docker registry.
+  </p><p>
+   By combining Portus and Docker registry, it is possible to have a secure
+   and enterprise ready on-premise version of the Docker Hub.
+  </p><p>
+    Portus is accessible for SLE 12 customers through the Containers
+    module. To install Portus, use the following command:
+  </p><div class="verbatim-wrap"><pre class="screen">sudo zypper in portus</pre></div><p>
+    In order to configure Portus properly, follow these steps:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+        First of all, you should install Portus's dependencies if you haven't
+        already. This is thoroughly documented here:
+        <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages.html#portus-dependencies" target="_blank">http://port.us.org/docs/setups/1_rpm_packages.html#portus-dependencies</a>.
+        This document will help you to get through the installation process, and
+        it will also warn you about some of the common pitfalls.
+      </p></li><li class="step "><p>
+        After installing Portus and its dependencies, you need to configure
+        your instance. The initial setup of Portus is explained here: <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages.html#initial-setup" target="_blank">http://port.us.org/docs/setups/1_rpm_packages.html#initial-setup</a>.
+        When you are done with <code class="command">portusctl</code>, you should modify
+        some configurable values before using Portus. This is thoroughly
+        explained in this documentation page: <a class="link" href="http://port.us.org/docs/Configuring-Portus.html" target="_blank">http://port.us.org/docs/Configuring-Portus.html</a>.
+      </p></li><li class="step "><p>
+        To apply the configuration changes, restart Apache (this is required
+        after each configuration change).
+      </p></li><li class="step "><p>
+        Finally, when entering Portus for the first time, you will be required
+        to enter some information about your installed registry. For details, see:
+        <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages#the-default-installation.html" target="_blank">http://port.us.org/docs/setups/1_rpm_packages#the-default-installation.html</a>.
+      </p></li><li class="step "><p>
+        The Portus setup is now complete and you can start using Portus.
+      </p></li></ol></div></div><p>
+   Currently, Portus is part of SUSE's Docker offer as a technology
+   preview. For more information and documentation about Portus, see:
+   <a class="link" href="http://port.us.org/" target="_blank">http://port.us.org/</a>.
+  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="docker.building.images.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 5 </span>Creating Custom Images</span></a><a class="nav-link" href="cha.sle2docker.installation.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 3 </span>Installing <code class="literal">sle2docker</code></span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
