@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Docker Quick Start | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Docker Quick Start" /><meta name="description" content="This guide introduces Docker, a lightweight virtualization solution to run virtual units simultaneously on a single control host." /><link rel="home" href="index.html" title="Docker Quick Start" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="single-crumb" href="index.html"><span class="single-contents-icon"></span>Docker Quick Start</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="single-crumb" href="index.html"><span class="single-contents-icon"></span>Show Contents: Docker Quick Start</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="index.html#sec.docker.term"><span class="number">1 </span><span class="name">Terminology</span></a></li><li class="inactive"><a href="index.html#sec.docker.overview"><span class="number">2 </span><span class="name">Overview</span></a></li><li class="inactive"><a href="index.html#sec.docker.setup"><span class="number">3 </span><span class="name">Setting Up a Docker Host</span></a></li><li class="inactive"><a href="index.html#sec.docker.basic"><span class="number">4 </span><span class="name">Basic Docker Operations</span></a></li><li class="inactive"><a href="index.html#sec.docker.building_images"><span class="number">5 </span><span class="name">Building Docker Images</span></a></li><li class="inactive"><a href="index.html#sec.docker.sle_images"><span class="number">6 </span><span class="name">SUSE Linux Enterprise Images for Docker</span></a></li><li class="inactive"><a href="index.html#sec.docker.registry"><span class="number">7 </span><span class="name">Hosting Docker Images On-premise</span></a></li><li class="inactive"><a href="index.html#sec.docker.portus"><span class="number">8 </span><span class="name">Portus</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.docker" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></h6><div><h1 class="title">Docker Quick Start </h1></div><div><h3 class="subtitle"><em><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP1</span></span></em></h3></div><div class="abstract "><p>
+    This guide introduces Docker, a lightweight virtualization solution to
+    run virtual units simultaneously on a single control host.
+   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>
+February 12, 2018
+</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="index.html#sec.docker.term"><span class="number">1 </span><span class="name">Terminology</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.overview"><span class="number">2 </span><span class="name">Overview</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.setup"><span class="number">3 </span><span class="name">Setting Up a Docker Host</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.basic"><span class="number">4 </span><span class="name">Basic Docker Operations</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.building_images"><span class="number">5 </span><span class="name">Building Docker Images</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.sle_images"><span class="number">6 </span><span class="name">SUSE Linux Enterprise Images for Docker</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.registry"><span class="number">7 </span><span class="name">Hosting Docker Images On-premise</span></a></span></dt><dt><span class="sect1"><a href="index.html#sec.docker.portus"><span class="number">8 </span><span class="name">Portus</span></a></span></dt></dl></div></div><p>
+  Docker is a lightweight virtualization solution to run multiple virtual
+  units (containers) simultaneously on a single control host. Containers are
+  isolated with Kernel Control Groups (<a class="xref" href="index.html#vle.docker.cgroup">cgroups</a>)
+  and <a class="xref" href="index.html#vle.docker.namespace">Kernel Namespaces</a>.
+ </p><p>
+  Full virtualization solutions such as Xen, KVM, or <code class="systemitem">libvirt</code> are based
+  on the processor simulating a complete hardware environment and
+  controlling the virtual machines. However, Docker only provides operating
+  system-level virtualization where the Linux kernel controls isolated
+  containers.
+ </p><div class="sect1 " id="sec.docker.term"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.term"><span class="number">1 </span><span class="name">Terminology</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.term">#</a></h2></div></div></div><p>
+   The following list contains important terminology and introduces you to
+   certain fundamental concepts of Docker.
+   
+  </p><div class="variablelist "><dl class="variablelist"><dt id="vle.docker.cgroup"><span class="term ">cgroups</span></dt><dd><p>
+      Control Groups is a Linux kernel feature that allows aggregating or
+      partitioning tasks (processes) and all their children into
+      hierarchically organized groups to isolate resources.
+     </p></dd><dt id="idm140325581648432"><span class="term ">Image</span></dt><dd><p>
+      A <span class="emphasis"><em>virtual machine</em></span> on the host server that can run
+      any Linux system, for example SUSE Linux Enterprise Server, SUSE Linux Enterprise Desktop, or openSUSE. A Docker
+      image is made by a series of layers built one over the other. Each layer
+      corresponds to a permanent change committed from a container to the
+      image. For more details, see the official Docker documentation at <a class="link" href="http://docs.docker.com/engine/reference/glossary/#image/" target="_blank">http://docs.docker.com/engine/reference/glossary/#image/</a>.
+      </p></dd><dt id="idm140325581645728"><span class="term ">Image Name</span></dt><dd><p>
+      A name that refers to an image. The name is used by the Docker
+      commands.
+     </p></dd><dt id="idm140325581644192"><span class="term ">Container</span></dt><dd><p>
+      A running Docker image.
+     </p></dd><dt id="idm140325581642656"><span class="term ">Container ID</span></dt><dd><p>
+      An ID that refers to a particular container. The ID is used by the
+      Docker commands.
+     </p></dd><dt id="idm140325581641120"><span class="term ">Tag</span></dt><dd><p> A string associated with an image. It is commonly used to
+            identify a specific version of an image (similar to tags in
+            version control systems). It is also possible to refer to
+            the same image with different tags. </p></dd><dt id="vle.docker.namespace"><span class="term ">Kernel Namespaces</span></dt><dd><p>
+      Namespaces are a kernel feature to isolate some resources like
+      network, users, and others for a group of processes.
+     </p></dd><dt id="idm140325581637504"><span class="term ">Docker Host Server</span></dt><dd><p>
+      The system that runs the Docker daemon, and provides images and
+      management control capabilities through
+      <a class="xref" href="index.html#vle.docker.cgroup">cgroups</a>.
+     </p></dd><dt id="idm140325581635440"><span class="term ">Registry</span></dt><dd><p>
+      A remote storage for Docker images.
+     </p></dd><dt id="idm140325581633904"><span class="term ">Repository</span></dt><dd><p> Place where all the versions of a Docker image are kept. </p></dd></dl></div></div><div class="sect1 " id="sec.docker.overview"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.overview"><span class="number">2 </span><span class="name">Overview</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.overview">#</a></h2></div></div></div><p>
+   Docker is a platform that allows developers and system administrators to
+   manage the complete life cycle of images. Docker makes it easy to build,
+   ship and run images containing applications.
+  </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Benefits of Docker </span><a title="Permalink" class="permalink" href="index.html#idm140325581630736">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+     Isolation of applications and operating systems through containers.
+    </p></li><li class="listitem "><p> Near native performance, as Docker manages allocation of
+          resources in real time. </p></li><li class="listitem "><p>
+     Controls network interfaces and resources available inside containers
+     through cgroups.
+    </p></li><li class="listitem "><p>
+     Versioning of images.
+    </p></li><li class="listitem "><p>
+     Allows building new images based on existing ones.
+    </p></li><li class="listitem "><p>
+     Docker Hub allows sharing and storing of images on
+     <a class="link" href="http://docs.docker.com/docker-hub/" target="_blank">public</a> or
+     <a class="link" href="http://docs.docker.com/userguide/dockerrepos/#private-repositories" target="_blank">
+     private</a> repositories.
+    </p></li><li class="listitem "><p>
+     Provides you with container orchestration. Starting with Docker 1.12 the container orchestration is now an integral part of the Docker engine. Even though this feature is available in SLESSP1, it is not supported and it is only a technical preview. Use Kubernetes for Docker containers orchestration, for details refer to the <a class="link" href="http://kubernetes.io/docs/getting-started-guides/kubeadm/" target="_blank">Kubernetes documentation</a>.
+    </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="index.html#idm140325581622064">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+     Containers run inside the host system's kernel and cannot use a
+     different kernel.
+    </p></li><li class="listitem "><p>
+     Only allows Linux <span class="emphasis"><em>guest</em></span> operating systems.
+    </p></li><li class="listitem "><p>
+     Docker is not a full virtualization stack like Xen, KVM, or
+     <code class="systemitem">libvirt</code>.
+    </p></li><li class="listitem "><p>
+     Security depends on the host system. Refer to the
+     <a class="link" href="http://docs.docker.com/articles/security/" target="_blank">official
+     security documentation</a> for more details.
+    </p></li></ul></div><div class="sect2 " id="sec.docker.containerd"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.containerd"><span class="number">2.1 </span><span class="name">Container Drivers</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.containerd">#</a></h3></div></div></div><p>
+     Docker uses <a class="link" href="https://github.com/docker/libcontainer" target="_blank">libcontainer</a> as the back-end driver to handle containers.
+   </p></div><div class="sect2 " id="sec.docker.storaged"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.storaged"><span class="number">2.2 </span><span class="name">Storage Drivers</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.storaged">#</a></h3></div></div></div><p>
+    Docker supports different storage drivers:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      <code class="systemitem">vfs</code>: this driver is
+      automatically used when the Docker host file system does not support
+      copy-on-write. This is a simple driver which does not offer some
+      advantages of Docker (like sharing layers, more on that in the
+      next sections). It is highly reliable but also slow.
+     </p></li><li class="listitem "><p>
+      <code class="systemitem">devicemapper</code>: this driver
+      relies on the device-mapper thin provisioning module. It supports
+      copy-on-write, hence it offers all the advantages of Docker.
+     </p></li><li class="listitem "><p>
+      <code class="systemitem">btrfs</code>: this driver relies on
+      Btrfs to provide all the features required by Docker. To use this
+      driver the <code class="filename">/var/lib/docker</code> directory must be on a
+      Btrfs file system.
+     </p></li><li class="listitem "><p>
+            <code class="systemitem">AUFS</code>: this driver
+            relies on the AUFS union file system. Neither the upstream
+            kernel nor the SUSE one supports this file system. Hence the
+            AUFS driver is not built into the SUSE Docker package. </p></li></ul></div><p>
+    SLE 12 uses the Btrfs file system by default, which leads Docker
+    to use the <code class="systemitem">btrfs</code> driver.
+   </p><p>
+    It is possible to specify which driver to use by changing the value of
+    the <code class="envar">DOCKER_OPTS</code> variable defined inside of the
+    <code class="filename">/etc/sysconfig/docker</code> file. This can be done either
+    manually or using YaST by browsing to <span class="guimenu">System</span> › <span class="guimenu">/etc/sysconfig Editor</span> › <span class="guimenu">System</span> › <span class="guimenu">Management</span> › <span class="guimenu">DOCKER_OPTS</span> menu and entering the
+    <code class="systemitem">-s storage_driver</code> string.
+   </p><p>
+    For example, to force the usage of the
+    <code class="systemitem">devicemapper</code> driver enter the
+    following text:
+   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm140325581596832" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
+     It is recommended to have <code class="filename">/var/lib/docker</code> mounted on
+     a separate partition or volume to not affect the Docker host operating
+     system in case of a file system corruption.  +</p><p>
+     In case you choose the Btrfs file system for
+     <code class="filename">/var/lib/docker</code>, it is strongly recommended to create
+     a subvolume for it.  This ensures that the directory is excluded from file
+     system snapshots. If not excluding <code class="filename">/var/lib/docker</code>
+     from snapshots, the file system will likely run out of disk space soon
+     after you start deploying containers. Whats more, a rollback to a previous
+     snapshot will also reset the Docker database and images.  Disabling
+     copy-on-write for this subvolume is also recommended, to avoid duplication
+     of data blocks. Refer to <em class="citetitle ">Creating and Mounting New
+     Subvolumes</em> at <a class="link" href="https://www.suse.com/documentation/sles-12/book_sle_admin/data/sec_snapper_setup.html" target="_blank">https://www.suse.com/documentation/sles-12/book_sle_admin/data/sec_snapper_setup.html</a>
+     for details.
+    </p></div></div></div><div class="sect1 " id="sec.docker.setup"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.setup"><span class="number">3 </span><span class="name">Setting Up a Docker Host</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.setup">#</a></h2></div></div></div><div class="sect2 " id="sec.docker.setup.general"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.setup.general"><span class="number">3.1 </span><span class="name">General Preparation</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.setup.general">#</a></h3></div></div></div><p>
+    Prepare the host as described below. Before installing any
+    Docker-related packages, you need to enable the container module:
+   </p><div class="procedure " id="idm140325581588800"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1: </span><span class="name">Enabling the Container Module Using YaST </span><a title="Permalink" class="permalink" href="index.html#idm140325581588800">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Start YaST, and select <span class="guimenu">Software</span> › <span class="guimenu"> Software Repositories</span>.
+     </p></li><li class="step "><p>
+      Click <span class="guimenu">Add</span> to open the add-on dialog.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Extensions and Modules from Registration
+      Server</span> and click <span class="guimenu">Next</span>.
+     </p></li><li class="step "><p>
+      From the list of available extensions and modules, select
+      <span class="guimenu">Container Module 12 x86_64</span> and click
+      <span class="guimenu">Next</span>.
+     </p><p>
+      The containers module and its repositories will be added to your
+      system.
+     </p></li><li class="step "><p> If you use Subscription Management Tool, update the list of repositories on the
+            SMT server. </p></li></ol></div></div><div class="procedure " id="idm140325581580144"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2: </span><span class="name">Enabling the Container Module Using SUSEConnect </span><a title="Permalink" class="permalink" href="index.html#idm140325581580144">#</a></h6></div><div class="procedure-contents"><ul class="procedure"><li class="step "><p>
+      The Container Module can be added also with the following command:
+     </p><div class="verbatim-wrap"><pre class="screen">$ sudo SUSEConnect -p sle-module-containers/12/x86_64 -r ''</pre></div><div id="idm140325581578192" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Note about the SUSEConnect syntax</h6><p>
+       The <code class="option">-r ''</code> flag is required to avoid a known
+       limitation of SUSEConnect.
+      </p></div></li></ul></div></div><div class="procedure " id="idm140325581576208"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 3: </span><span class="name">Installing and Setting Up Docker </span><a title="Permalink" class="permalink" href="index.html#idm140325581576208">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Install the <code class="systemitem">docker</code> package:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo zypper install docker</pre></div></li><li class="step "><p>
+      To automatically start the Docker service at boot time:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl enable docker.service</pre></div><p>
+      This will automatically enable docker.socket in consequence.
+     </p></li><li class="step "><p>
+      Start the Docker service:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl start docker.service</pre></div><p>
+      This will automatically start docker.socket in consequence.
+     </p></li></ol></div></div><p>
+    The Docker daemon listens on a local socket which is accessible only by
+    the <code class="systemitem">root</code> user and by the
+    members of the <code class="systemitem">docker</code> group.
+    The <code class="systemitem">docker</code> group is
+    automatically created at package installation time. To allow a certain
+    user to connect to the local Docker daemon, use the following command:
+   </p><div class="verbatim-wrap"><pre class="screen">sudo /usr/sbin/usermod -aG docker <em class="replaceable ">USERNAME</em></pre></div><p>
+    The user can communicate with the local Docker daemon upon his next
+    login.
+   </p></div><div class="sect2 " id="sec.docker.setup.net"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.setup.net"><span class="number">3.2 </span><span class="name">Networking</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.setup.net">#</a></h3></div></div></div><p>
+      If you want your containers to be able to access the external
+      network, you must enable the <code class="option">ipv4 ip_forward</code>
+      rule. This can be done using YaST by browsing to <span class="guimenu">System</span> › <span class="guimenu">Network Settings</span> › <span class="guimenu">Routing</span> menu and ensuring
+      <code class="option">Enable IPv4 Forwarding</code> is checked.
+    </p><p> This option cannot be changed when networking is handled by
+        the Network Manager. In such cases the
+          <code class="filename">/etc/sysconfig/SuSEfirewall2</code> file needs
+        to be edited manually to ensure the <code class="option">FW_ROUTE</code>
+        flag is set to <code class="option">yes</code>:
+    </p><div class="verbatim-wrap"><pre class="screen">FW_ROUTE="yes"</pre></div><div class="sect3 " id="sec.docker.setup.net.power"><div class="titlepage"><div><div><h4 class="title" id="sec.docker.setup.net.power"><span class="number">3.2.1 </span><span class="name">Networking Limitations on Power Architecture</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.setup.net.power">#</a></h4></div></div></div><p>
+        Currently Docker networking has two limitations on the Power architecture.
+      </p><p>
+        The first limitation is about iptables. SLE 12 machines cannot
+        run Docker with the iptables support enabled. An update of the kernel
+        is going to solve this issue. In the meantime the Docker
+        package for Power has iptables support disabled via a dedicated
+        directive inside of <code class="filename">/etc/sysconfig/docker</code>.
+      </p><p>
+        As a result of this limitation Docker containers are not going to have
+        access to the outer network. A possible workaround is to share the same
+        network namespace between and host and the containers.
+        This however reduces the isolation of the containers.
+      </p><p>
+        The network namespace of the host can be shared on a per-container basis
+        by supplying the <code class="option">--net=host</code> to the
+        <code class="option">docker run</code> command.
+      </p><div id="idm140325581555152" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: iptables support on SLE 12 SP1 </h6><p>
+          SLE 12 SP1 hosts are not affected by this limitation but, given they
+          use the same SLE 12 package, they are going to have iptables
+          support disabled. This can be changed by removing the
+          <code class="option">-iptables=false</code> setting inside of
+          <code class="filename">/etc/sysconfig/docker</code>.
+        </p></div><p>
+        The second limitation is about network isolation between the containers
+        and the host. Currently it is not possible to prevent containers from
+        probing or accessing arbitrary ports of each other.
+      </p></div></div></div><div class="sect1 " id="sec.docker.basic"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.basic"><span class="number">4 </span><span class="name">Basic Docker Operations</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.basic">#</a></h2></div></div></div><p>
+   Images can be pulled from Docker's central index at
+   <a class="link" href="http://index.docker.io" target="_blank">http://index.docker.io</a> using the following command:
+  </p><div class="verbatim-wrap"><pre class="screen">docker pull <em class="replaceable ">IMAGE_NAME</em></pre></div><p>
+   Containers can be started using the <code class="command">docker run</code>
+   command. Refer to the official documentation of Docker at
+   <a class="link" href="http://docs.docker.com/" target="_blank">http://docs.docker.com/</a> for more details.
+  </p></div><div class="sect1 " id="sec.docker.building_images"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.building_images"><span class="number">5 </span><span class="name">Building Docker Images</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.building_images">#</a></h2></div></div></div><p>
+   Starting with version 5.06.8, KIWI can be used to build Docker images.
+   Also see the official KIWI documentation, in particular
+   <a class="link" href="https://doc.opensuse.org/projects/kiwi/doc/#chap.lxc" target="_blank">https://doc.opensuse.org/projects/kiwi/doc/#chap.lxc</a>.
+   The official <code class="systemitem">kiwi-doc</code> package contains examples
+   of Docker images.
+  </p><p>
+   Docker has an
+   <a class="link" href="http://docs.docker.com/reference/builder/" target="_blank">internal
+   build system</a> which can be used to create new images based on
+   existing ones.
+  </p><p>
+   Some users might be confused about which build system to use for what
+   task. The recommended approach is to customize the official SLE images
+   for Docker using the Docker build system. This approach has two
+   advantages:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p> You can use Docker-specific directives (like
+            <code class="literal">ENTRYPOINT</code>, <code class="literal">EXPOSE</code>,
+          etc). </p></li><li class="listitem "><p>
+     You can re-use existing layers.
+    </p></li></ul></div><p>
+   Sharing the common layers between different images makes it possible to:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Use less disk space on the Docker hosts and on the remote registry
+     service.
+    </p></li><li class="listitem "><p>
+     Deploy faster: only the requested layers are sent over the network
+     (this is similar to upgrading installed packages using delta RPMs).
+    </p></li><li class="listitem "><p>
+     Take full advantage of caching while building Docker images: this will
+     result in faster executions of the <code class="command">docker build</code>
+     command.
+    </p></li></ul></div><p>
+   SUSE creates the official
+   <a class="link" href="http://docs.docker.com/reference/glossary/#base-image" target="_blank">base
+   images</a> using KIWI and publishes them to allow customers to use
+   those as foundation blocks inside of the Docker build system. Only the
+   Docker images built on top of our official ones via the Docker build
+   system are going to be supported.
+  </p></div><div class="sect1 " id="sec.docker.sle_images"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.sle_images"><span class="number">6 </span><span class="name">SUSE Linux Enterprise Images for Docker</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images">#</a></h2></div></div></div><p>
+   Currently we cannot distribute SLE images for Docker because there is
+   no way to associate an End-User License Agreement (EULA) to a Docker
+   image. However, we provide official pre-built Docker images for SLE
+   and a convenience tool called
+   <a class="link" href="https://github.com/SUSE/sle2docker" target="_blank">sle2docker</a>
+   that can be used to activate these images locally.
+  </p><p> Pre-built images do not have repositories configured. But when
+      the Docker host has an SLE subscription that provides access to
+      the product used in the image, Zypper will automatically have
+      access to the right repositories. For more details see <a class="xref" href="index.html#sec.docker.sle_images.customizing_the_images" title="6.3. Customizing the Images">Section 6.3, “Customizing the Images”</a>. </p><div class="sect2 " id="sec.docker.sle_images.sle2docker_install"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.sle_images.sle2docker_install"><span class="number">6.1 </span><span class="name">Installing sle2docker</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images.sle2docker_install">#</a></h3></div></div></div><p>
+    The <code class="command">sle2docker</code> tool is part of the official container
+    module. It can be installed using the following command:
+   </p><div class="verbatim-wrap"><pre class="screen">sudo zypper install sle2docker</pre></div><div id="idm140325581718176" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The Docker Daemon Needs to Be Running</h6><p>
+     <code class="command">sle2docker</code> requires the Docker daemon to be running
+     on the system.
+    </p></div></div><div class="sect2 " id="sec.docker.sle_images.activate"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.sle_images.activate"><span class="number">6.2 </span><span class="name">Activating the Pre-built Docker Images</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images.activate">#</a></h3></div></div></div><p>
+    The official pre-built Docker images for SLE are shipped as RPM
+    packages inside of the <code class="literal">containers</code> module. They can be
+    installed using Zypper:
+   </p><div class="verbatim-wrap"><pre class="screen">sudo zypper in sles11sp3-docker-image sles12-docker-image</pre></div><p>
+    <code class="command">sle2docker</code> can list the available pre-built images
+    with the following command:
+   </p><div class="verbatim-wrap"><pre class="screen">sle2docker list</pre></div><p>
+    To activate a pre-built image, use the following command:
+   </p><div class="verbatim-wrap"><pre class="screen">sle2docker activate <em class="replaceable ">PRE-BUILT_IMAGE_NAME</em></pre></div><p>
+    At the end of the activation, <code class="command">sle2docker</code> will print
+    the name of the Docker image that has been created.
+   </p></div><div class="sect2 " id="sec.docker.sle_images.customizing_the_images"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.sle_images.customizing_the_images"><span class="number">6.3 </span><span class="name">Customizing the Images</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images.customizing_the_images">#</a></h3></div></div></div><p>
+    To create custom Docker images based on the official ones use
+    <a class="link" href="http://docs.docker.com/reference/builder/" target="_blank"> Docker's
+    integrated build system </a>.
+   </p><p>
+    The pre-built images do not have any repository configured. They contain
+    a <a class="link" href="https://github.com/SUSE/container-suseconnect" target="_blank">
+    zypper service</a> that contacts either the SUSE Customer Center (SCC) or your
+    Subscription Management Tool (SMT) server, according to the
+    configuration of the SLE host that runs the Docker container. The
+    service obtains the list of repositories available for the product used
+    by the Docker image.
+   </p><p>
+    You do not need to add any credentials to the Docker image because the
+    machine credentials are automatically injected into the container by the
+    docker daemon. They are injected inside of the
+    <code class="filename">/run/secrets</code> directory. The same applies to the
+    <code class="filename">/etc/SUSEConnect</code> file of the host system, which is
+    automatically injected into the <code class="filename">/run/secrets</code> file.
+   </p><div id="idm140325581490336" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Credentials and Security</h6><p>
+     The contents of the <code class="filename">/run/secrets</code> directory are
+     never committed to a Docker image, hence there is no risk of your
+     credentials leaking.
+    </p></div><p>
+    To obtain the list of repositories use the following command:
+   </p><div class="verbatim-wrap"><pre class="screen">zypper ref -s</pre></div><p>
+    It will automatically add all the repositories to your container. For
+    each repository added to the system a new file is going to be created
+    under <code class="command">/etc/zypp/repos.d</code>. The URLs of these
+    repositories include an access token that automatically expires after 12
+    hours. To renew the token call the <code class="command">zypper ref -s</code>
+    command. It is secure to commit these files to a Docker image.
+   </p><p>
+    If you want to use a different set of credentials, place a custom
+    <code class="filename">/etc/zypp/credentials.d/SCCcredentials</code> file inside
+    of the Docker image. It contains the machine credentials that have the
+    subscription you want to use. The same applies to the
+    <code class="filename">SUSEConnect</code> file: to override the file available on
+    the host system that is running the Docker container, add a custom
+    <code class="filename">/etc/SUSEConnect</code> file inside of the Docker image.
+   </p><div class="sect3 " id="sec.docker.sle_images.customizing_the_images.sles12"><div class="titlepage"><div><div><h4 class="title" id="sec.docker.sle_images.customizing_the_images.sles12"><span class="number">6.3.1 </span><span class="name">Creating a Custom SLE 12 Image</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images.customizing_the_images.sles12">#</a></h4></div></div></div><p>
+     The following Docker file creates a simple Docker image based on
+     SLE 12:
+    </p><div class="verbatim-wrap"><pre class="screen">FROM suse/sles12:latest
+
+RUN zypper --gpg-auto-import-keys ref -s
+RUN zypper -n in vim</pre></div><p>
+     When the Docker host machine is registered against an internal SMT
+     server, the Docker image requires the SSL certificate used by SMT:
+    </p><div class="verbatim-wrap"><pre class="screen">FROM suse/sles12:latest
+
+# Import the crt file of our private SMT server
+ADD http://smt.test.lan/smt.crt /etc/pki/trust/anchors/smt.crt
+RUN update-ca-certificates
+
+RUN zypper --gpg-auto-import-keys ref -s
+RUN zypper -n in vim</pre></div></div><div class="sect3 " id="sec.docker.sle_images.customizing_the_images.sles11sp3"><div class="titlepage"><div><div><h4 class="title" id="sec.docker.sle_images.customizing_the_images.sles11sp3"><span class="number">6.3.2 </span><span class="name">Creating a Custom SLE 11 SP3 Image</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.sle_images.customizing_the_images.sles11sp3">#</a></h4></div></div></div><p>
+     The following Docker file creates a simple Docker image based on
+     SLE 11 SP3:
+    </p><div class="verbatim-wrap"><pre class="screen">FROM suse/sles11sp3:latest
+
+RUN zypper --gpg-auto-import-keys ref -s
+RUN zypper -n in vim</pre></div><p>
+     When the Docker host machine is registered against an internal SMT
+     server, the Docker image requires the SSL certificate used by SMT:
+    </p><div class="verbatim-wrap"><pre class="screen">FROM suse/sles11sp3:latest
+
+# Import the crt file of our private SMT server
+ADD http://smt.test.lan/smt.crt /etc/ssl/certs/smt.pem
+RUN c_rehash /etc/ssl/certs
+
+RUN zypper --gpg-auto-import-keys ref -s
+RUN zypper -n in vim</pre></div></div></div></div><div class="sect1 " id="sec.docker.registry"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.registry"><span class="number">7 </span><span class="name">Hosting Docker Images On-premise</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.registry">#</a></h2></div></div></div><p>
+   This section addresses some common questions like: what can be done with
+   the custom Docker images I created? How can they be shared within my
+   organization?
+  </p><p>
+   The easiest solution would be to push these images to the Docker Hub.
+   However, there are a couple of important matters to keep in mind: By
+   default, all the images pushed to the Docker Hub are public. To keep them
+   private you need to pay a subscription-based fee. Moreover you do not
+   have control over the servers where your data is stored. This may not
+   comply with your organization's or company's policies to have full
+   control over their intellectual property. The solution to this problem is
+   simple: To avoid the use of Docker Hub, you can run an on-site Docker
+   registry where to store all the Docker images used by your organization
+   or company.
+  </p><div class="sect2 " id="sec.docker.registry.definition"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.registry.definition"><span class="number">7.1 </span><span class="name">What is a Docker Registry?</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.registry.definition">#</a></h3></div></div></div><p> The Docker registry is an open source project created by
+        Docker Inc. It allows the storage and retrieval of Docker
+        images. By running a local instance of the Docker registry it is
+        possible to completely avoid usage of the Docker Hub. </p><p>
+    The Docker registry is also used by the Docker Hub. However, the Docker
+    Hub, as seen from the user perspective, is made of the following parts
+    at least:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      The user interface (UI): The part that is accessed by users with their
+      browser. The UI provides a nice and intuitive way to browse the
+      contents of the Docker Hub either manually or by using a search
+      feature. It also allows to create organizations made by different
+      users.
+     </p><p>
+      This component is closed source.
+     </p></li><li class="listitem "><p> The authentication component: This is used to protect the
+            images stored inside of the Docker Hub. It validates all
+            push, pull and search requests. </p><p>
+      This component is closed source.
+     </p></li><li class="listitem "><p>
+      The storage back-end: This is where the Docker images are sent and
+      downloaded from. It is provided by the Docker registry.
+     </p><p>
+      This component is open source.
+     </p></li></ul></div></div><div class="sect2 " id="sec.docker.registry.installation"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.registry.installation"><span class="number">7.2 </span><span class="name">Installing and Setting Up Docker Registry</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.registry.installation">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Install the <code class="systemitem">docker-distribution-registry</code>
+      package:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo zypper install docker-distribution-registry</pre></div></li><li class="step "><p>
+      To automatically start the Docker registry at boot time:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl enable registry</pre></div></li><li class="step "><p>
+      Start the Docker registry:
+     </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl start registry</pre></div></li></ol></div></div><p>
+    The Docker registry configuration is defined inside of
+    <code class="filename">/etc/registry/config.yml</code>.
+   </p><p>
+    With the default configuration the registry listens on ports
+    <code class="literal">5000</code> and stores the Docker images under
+    <code class="filename">/var/lib/docker-registry</code>.
+   </p><div id="idm140325581459712" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Incompatible Versions of Docker and Docker Registry</h6><p>
+       Docker registry version 2.3 is not compatible with Docker versions older
+       than 1.10, because v2 manifests were only introduced with Docker 1.10.
+       As Docker and Docker registry can be installed on different boxes, the
+       versions might be incompatible. If you experience communication errors
+       between Docker and Docker registry, update both to the latest versions.
+     </p></div><p>
+    For more details about Docker registry and its configuration, see the
+    official documentation at:
+    <a class="link" href="https://docs.docker.com/registry/" target="_blank">https://docs.docker.com/registry/</a>.
+   </p></div><div class="sect2 " id="sec.docker.registry.limitations"><div class="titlepage"><div><div><h3 class="title" id="sec.docker.registry.limitations"><span class="number">7.3 </span><span class="name">Limitations</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.registry.limitations">#</a></h3></div></div></div><p>
+    The Docker registry has two major limitations:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      It lacks any form of authentication. That means everybody with access
+      to the Docker registry can push and pull images to it. That also
+      includes the possibility to overwrite already existing images.
+     </p></li><li class="listitem "><p>
+      There is no way to see which images have been pushed to the Docker
+      registry. You can
+      
+      manually take notes of what is being stored inside of it. There is
+      also no search functionality, which makes collaboration harder.
+     </p></li></ul></div><p>
+    The next section is going to introduce Portus, the solution to all of
+    the problems above.
+   </p></div></div><div class="sect1 " id="sec.docker.portus"><div class="titlepage"><div><div><h2 class="title" id="sec.docker.portus"><span class="number">8 </span><span class="name">Portus</span> <a title="Permalink" class="permalink" href="index.html#sec.docker.portus">#</a></h2></div></div></div><p>
+   Portus is an authentication service and user interface for the Docker
+   registry. It is an open source project created by SUSE to address all
+   the limitations faced by the local instances of Docker registry.
+  </p><p>
+   By combining Portus and Docker registry, it is possible to have a secure
+   and enterprise ready on-premise version of the Docker Hub.
+  </p><p>
+    Portus is accessible for SLE 12 customers through the Containers
+    module. To install Portus, use the following command:
+  </p><div class="verbatim-wrap"><pre class="screen">sudo zypper in Portus</pre></div><p>
+    In order to configure Portus properly, follow these steps:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+        First of all, you should install Portus' dependencies if you haven't
+        already. This is thoroughly documented here:
+        <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages.html#portus-dependencies" target="_blank">http://port.us.org/docs/setups/1_rpm_packages.html#portus-dependencies</a>.
+        This document will help you to get through the installation process, and
+        it will also warn you about some of the common pitfalls.
+      </p></li><li class="step "><p>
+        After installing Portus and its dependencies, you need to configure
+        your instance. The initial setup of Portus is explained here:
+        <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages.html#initial-setup" target="_blank">http://port.us.org/docs/setups/1_rpm_packages.html#initial-setup</a>.
+        When you are done with portusctl, you should modify some configurable
+        values before using Portus. This is thoroughly explained in this
+        documentation page:
+        <a class="link" href="http://port.us.org/docs/Configuring-Portus.html" target="_blank">http://port.us.org/docs/Configuring-Portus.html</a>.
+      </p></li><li class="step "><p>
+        To apply the configuration changes, restart Apache (this is required
+        after each configuration change).
+      </p></li><li class="step "><p>
+        Finally, when entering Portus for the first time, you will be required
+        to enter some information about your installed registry. For details, see:
+        <a class="link" href="http://port.us.org/docs/setups/1_rpm_packages#the-default-installation.html" target="_blank">http://port.us.org/docs/setups/1_rpm_packages#the-default-installation.html</a>.
+      </p></li><li class="step "><p>
+        The Portus setup is now complete and you can start using Portus.
+      </p></li></ol></div></div><p>
+   Currently, Portus is part of SUSE's Docker offer as a technology
+   preview. For more information and documentation about Portus, see:
+   <a class="link" href="http://port.us.org/" target="_blank">http://port.us.org/</a>.
+  </p></div></div></div><div class="page-bottom"><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

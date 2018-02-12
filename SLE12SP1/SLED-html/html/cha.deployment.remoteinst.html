@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Remote Installation | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 10. Remote Installation" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP1 (SLED 12 SP1)" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.mandeploy.html" title="Part I. Manual Deployment" /><link rel="prev" href="cha.y2.lang.html" title="Chapter 9. Changing Language and Country Settings with YaST" /><link rel="next" href="cha.advdisk.html" title="Chapter 11. Advanced Disk Setup" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.deployment.remoteinst.html">Remote Installation</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">I </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">2 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">4 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">5 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">6 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">7 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">8 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">9 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">II </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">12 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">13 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">14 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">15 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">III </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">16 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">17 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">18 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">19 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">20 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">21 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">IV </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">22 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">23 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 9. Changing Language and Country Settings with YaST" href="cha.y2.lang.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 11. Advanced Disk Setup" href="cha.advdisk.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.deployment.remoteinst.html">Remote Installation</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 9. Changing Language and Country Settings with YaST" href="cha.y2.lang.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 11. Advanced Disk Setup" href="cha.advdisk.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.deployment.remoteinst"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">10 </span><span class="name">Remote Installation</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_remote.xml</li><li><span class="ds-label">ID: </span>cha.deployment.remoteinst</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario"><span class="number">10.1 </span><span class="name">Installation Scenarios for Remote Installation</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver"><span class="number">10.2 </span><span class="name">Setting Up the Server Holding the Installation Sources</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot"><span class="number">10.3 </span><span class="name">Preparing the Boot of the Target System</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst"><span class="number">10.4 </span><span class="name">Booting the Target System for Installation</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor"><span class="number">10.5 </span><span class="name">Monitoring the Installation Process</span></a></span></dt></dl></div></div><p>
+  <span class="productname"><span class="phrase">SUSE® Linux Enterprise Desktop</span></span> can be installed in different ways. Apart from the
+  usual media installation covered in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>, you can
+  choose from various network-based approaches or even take a completely
+  hands-off approach to the installation of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>.
+ </p><p>
+  Each method is introduced by means of two short checklists: one listing
+  the prerequisites for this method and the other illustrating the basic
+  procedure. More detail is then provided for all the techniques used in
+  these installation scenarios.
+ </p><div id="idm140318370682288" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
+   In the following sections, the system to hold your new <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>
+   installation is called <span class="emphasis"><em>target system</em></span> or
+   <span class="emphasis"><em>installation target</em></span>. The term
+   <span class="emphasis"><em>repository</em></span> (previously called <span class="quote">“<span class="quote">installation
+   source</span>”</span>) is used for all sources of installation data. This
+   includes physical media, such as CD and DVD, and network servers
+   distributing the installation data in your network.
+  </p></div><div class="sect1 " id="sec.deployment.remoteinst.scenario"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.remoteinst.scenario"><span class="number">10.1 </span><span class="name">Installation Scenarios for Remote Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario">#</a></h2></div></div></div><p>
+   This section introduces the most common installation scenarios for remote
+   installations. For each scenario, carefully check the list of
+   prerequisites and follow the procedure outlined for this scenario. If in
+   need of detailed instructions for a particular step, follow the links
+   provided for each one of them.
+  </p><div class="sect2 " id="sec.deployment.remoteinst.scenario.vncstat"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.vncstat"><span class="number">10.1.1 </span><span class="name">Simple Remote Installation via VNC—Static Network Configuration</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat">#</a></h3></div></div></div><p>
+    This type of installation still requires some degree of physical access
+    to the target system to boot for installation. The installation itself
+    is entirely controlled by a remote workstation using VNC to connect to
+    the installation program. User interaction is required as with the
+    manual installation in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+   </p><p>
+    For this type of installation, make sure that the following requirements
+    are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>A repository, either remote or local:</p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Remote repository: NFS, HTTP, FTP, TFTP, or SMB with working network
+      connection.</p></li><li class="listitem "><p>Local repository: DVD without the parameter
+                  <code class="option">install=</code></p></li></ul></div></li><li class="listitem "><p>
+      Target system with working network connection.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and VNC viewer
+      software or Java-enabled browser (Firefox, Chromium, Internet
+      Explorer, Opera, etc.).
+     </p></li><li class="listitem "><p>
+      Physical boot medium (CD, DVD, or flash disk) for booting the
+      target system.
+     </p></li><li class="listitem "><p>
+      Valid static IP addresses already assigned to the repository and the
+      controlling system.
+     </p></li><li class="listitem "><p>
+      Valid static IP address to assign to the target system.
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.vncstat"><div class="procedure-contents"><p>
+     To perform this kind of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, FTP, or TFTP network server. For an SMB repository, refer to
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="step "><p>
+      When the boot screen of the target system appears, use the boot
+      options prompt to set the appropriate VNC options and the address of
+      the repository. This is described in detail in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst" title="10.4. Booting the Target System for Installation">Section 10.4, “Booting the Target System for Installation”</a>.
+     </p><p>
+      The target system boots to a text-based environment, giving the
+      network address and display number under which the graphical
+      installation environment can be addressed by any VNC viewer
+      application or browser. VNC installations announce themselves over
+      OpenSLP and if the firewall settings permit. They can be found using
+      <code class="command">slptool</code> as described at
+      <a class="xref" href="cha.deployment.remoteinst.html#proc.deployment.remoteinst.monitor.vnc.prep" title="Locating VNC installations via OpenSLP">Procedure 10.1, “Locating VNC installations via OpenSLP”</a>.
+     </p></li><li class="step "><p>
+      On the controlling workstation, open a VNC viewing application or Web
+      browser and connect to the target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc" title="10.5.1. VNC Installation">Section 10.5.1, “VNC Installation”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.scenario.vncdyn"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.vncdyn"><span class="number">10.1.2 </span><span class="name">Simple Remote Installation via VNC—Dynamic Network Configuration</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncdyn">#</a></h3></div></div></div><p>
+    This type of installation still requires some degree of physical access
+    to the target system to boot for installation. The network configuration
+    is made with DHCP. The installation itself is entirely controlled from a
+    remote workstation using VNC to connect to the installer, but still
+    requires user interaction for the actual configuration efforts.
+   </p><p>
+    For this type of installation, make sure that the following requirements
+    are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Remote repository: NFS, HTTP, FTP, or SMB with working network
+      connection.
+     </p></li><li class="listitem "><p>
+      Target system with working network connection.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and VNC viewer
+      software or Java-enabled browser (Firefox, Chromium, Internet
+      Explorer, or Opera).
+     </p></li><li class="listitem "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="listitem "><p>
+      Running DHCP server providing IP addresses.
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.vncdyn"><div class="procedure-contents"><p>
+     To perform this kind of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, or FTP network server. For an SMB repository, refer to
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="step "><p>
+      When the boot screen of the target system appears, use the boot
+      options prompt to set the appropriate VNC options and the address of
+      the repository. This is described in detail in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst" title="10.4. Booting the Target System for Installation">Section 10.4, “Booting the Target System for Installation”</a>.
+     </p><p>
+      The target system boots to a text-based environment, giving the
+      network address and display number under which the graphical
+      installation environment can be addressed by any VNC viewer
+      application or browser. VNC installations announce themselves over
+      OpenSLP and if the firewall settings permit. They can be found using
+      <code class="command">slptool</code> as described at
+      <a class="xref" href="cha.deployment.remoteinst.html#proc.deployment.remoteinst.monitor.vnc.prep" title="Locating VNC installations via OpenSLP">Procedure 10.1, “Locating VNC installations via OpenSLP”</a>.
+     </p></li><li class="step "><p>
+      On the controlling workstation, open a VNC viewing application or Web
+      browser and connect to the target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc" title="10.5.1. VNC Installation">Section 10.5.1, “VNC Installation”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.scenario.vncpxe"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.vncpxe"><span class="number">10.1.3 </span><span class="name">Remote Installation via VNC—PXE Boot and Wake on LAN</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe">#</a></h3></div></div></div><p>
+    This type of installation is completely hands-off. The target machine is
+    started and booted remotely. User interaction is only needed for the
+    actual installation. This approach is suitable for cross-site
+    deployments.
+   </p><p>
+    To perform this type of installation, make sure that the following
+    requirements are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Remote repository: NFS, HTTP, FTP, or SMB with working network
+      connection.
+     </p></li><li class="listitem "><p>
+      TFTP server.
+     </p></li><li class="listitem "><p>
+      Running DHCP server for your network.
+     </p></li><li class="listitem "><p>
+      Target system capable of PXE boot, networking, and Wake on LAN,
+      plugged in and connected to the network.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and VNC viewer
+      software or Java-enabled browser (Firefox, Chromium, Internet
+      Explorer, or Opera).
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.vncpxe"><div class="procedure-contents"><p>
+     To perform this type of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, or FTP network server or configure an SMB repository as
+      described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Set up a TFTP server to hold a boot image that can be pulled by the
+      target system. This is described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp" title="10.3.2. Setting Up a TFTP Server">Section 10.3.2, “Setting Up a TFTP Server”</a>.
+     </p></li><li class="step "><p>
+      Set up a DHCP server to provide IP addresses to all machines and
+      reveal the location of the TFTP server to the target system. This is
+      described in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp" title="10.3.1. Setting Up a DHCP Server">Section 10.3.1, “Setting Up a DHCP Server”</a>.
+     </p></li><li class="step "><p>
+      Prepare the target system for PXE boot. This is described in further
+      detail in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxeprep" title="10.3.5. Preparing the Target System for PXE Boot">Section 10.3.5, “Preparing the Target System for PXE Boot”</a>.
+     </p></li><li class="step "><p>
+      Initiate the boot process of the target system using Wake on LAN. This
+      is described in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wol" title="10.3.7. Wake on LAN">Section 10.3.7, “Wake on LAN”</a>.
+     </p></li><li class="step "><p>
+      On the controlling workstation, open a VNC viewing application or Web
+      browser and connect to the target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc" title="10.5.1. VNC Installation">Section 10.5.1, “VNC Installation”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.scenario.sshstat"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.sshstat"><span class="number">10.1.4 </span><span class="name">Simple Remote Installation via SSH—Static Network Configuration</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshstat">#</a></h3></div></div></div><p>
+    This type of installation still requires some degree of physical access
+    to the target system to boot for installation and to determine the IP
+    address of the installation target. The installation itself is entirely
+    controlled from a remote workstation using SSH to connect to the
+    installer. User interaction is required as with the regular installation
+    described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+   </p><p>
+    For this type of installation, make sure that the following requirements
+    are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Remote repository: NFS, HTTP, FTP, or SMB with working network
+      connection.
+     </p></li><li class="listitem "><p>
+      Target system with working network connection.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and working SSH
+      client software.
+     </p></li><li class="listitem "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="listitem "><p>
+      Valid static IP addresses already assigned to the repository and the
+      controlling system.
+     </p></li><li class="listitem "><p>
+      Valid static IP address to assign to the target system.
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.sshstat"><div class="procedure-contents"><p>
+     To perform this kind of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, or FTP network server. For an SMB repository, refer to
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="step "><p>
+      When the boot screen of the target system appears, use the boot
+      options prompt to set the appropriate parameters for network
+      connection, address of the repository, and SSH enablement. This is
+      described in detail in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom" title="10.4.2. Using Custom Boot Options">Section 10.4.2, “Using Custom Boot Options”</a>.
+     </p><p>
+      The target system boots to a text-based environment, giving the
+      network address under which the graphical installation environment can
+      be addressed by any SSH client.
+     </p></li><li class="step "><p>
+      On the controlling workstation, open a terminal window and connect to
+      the target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh.connect" title="10.5.2.2. Connecting to the Installation Program">Section 10.5.2.2, “Connecting to the Installation Program”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.scenario.sshdyn"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.sshdyn"><span class="number">10.1.5 </span><span class="name">Simple Remote Installation via SSH—Dynamic Network Configuration</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshdyn">#</a></h3></div></div></div><p>
+    This type of installation still requires some degree of physical access
+    to the target system to boot for installation and determine the IP
+    address of the installation target. The installation itself is entirely
+    controlled from a remote workstation using SSH to connect to the
+    installer, but still requires user interaction for the actual
+    configuration efforts.
+   </p><div id="idm140318370579296" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Avoid Lost Connections After the Second Step (Installation)</h6><p>
+     In the network settings dialog, check the <span class="guimenu">Traditional Method
+     with ifup</span> and avoid NetworkManager. If not, your SSH connection will
+     be lost during installation. Reset the settings to <span class="guimenu">User
+     Controlled with NetworkManager</span> after your installation has finished.
+    </p></div><p>
+    For this type of installation, make sure that the following requirements
+    are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>A repository, either remote or local:
+     </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>Remote repository: NFS, HTTP, FTP, TFTP, or SMB with
+            working network connection.</p></li><li class="listitem "><p>Local repository: DVD without the parameter <em class="parameter ">install=</em>.</p></li></ul></div></li><li class="listitem "><p>
+      Target system with working network connection.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and working SSH
+      client software.
+     </p></li><li class="listitem "><p>
+      Physical boot medium (CD, DVD, or flash disk) for booting the
+      target system.
+     </p></li><li class="listitem "><p>
+      Running DHCP server providing IP addresses.
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.sshdyn"><div class="procedure-contents"><p>
+     To perform this kind of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository source as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, or FTP network server. For an SMB repository, refer to
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Boot the target system using DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> media kit.
+     </p></li><li class="step "><p>
+      When the boot screen of the target system appears, use the boot
+      options prompt to pass the appropriate parameters for network
+      connection, location of the installation source, and SSH enablement.
+      See <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom" title="10.4.2. Using Custom Boot Options">Section 10.4.2, “Using Custom Boot Options”</a> for
+      detailed instructions on the use of these parameters.
+     </p><p>
+      The target system boots to a text-based environment, giving you the
+      network address under which the graphical installation environment can
+      be addressed by any SSH client.
+     </p></li><li class="step "><p>
+      On the controlling workstation, open a terminal window and connect to
+      the target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh.connect" title="10.5.2.2. Connecting to the Installation Program">Section 10.5.2.2, “Connecting to the Installation Program”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.scenario.sshpxe"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.scenario.sshpxe"><span class="number">10.1.6 </span><span class="name">Remote Installation via SSH—PXE Boot and Wake on LAN</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshpxe">#</a></h3></div></div></div><p>
+    This type of installation is completely hands-off. The target machine is
+    started and booted remotely.
+   </p><p>
+    To perform this type of installation, make sure that the following
+    requirements are met:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Remote repository: NFS, HTTP, FTP, or SMB with working network
+      connection.
+     </p></li><li class="listitem "><p>
+      TFTP server.
+     </p></li><li class="listitem "><p>
+      Running DHCP server for your network, providing a static IP to the
+      host to install.
+     </p></li><li class="listitem "><p>
+      Target system capable of PXE boot, networking, and Wake on LAN,
+      plugged in and connected to the network.
+     </p></li><li class="listitem "><p>
+      Controlling system with working network connection and SSH client
+      software.
+     </p></li></ul></div><div class="procedure " id="proc.deployment.remoteinst.scenario.sshpxe"><div class="procedure-contents"><p>
+     To perform this type of installation, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Set up the repository as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an NFS,
+      HTTP, or FTP network server. For the configuration of an SMB
+      repository, refer to
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a>.
+     </p></li><li class="step "><p>
+      Set up a TFTP server to hold a boot image that can be pulled by the
+      target system. This is described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp" title="10.3.2. Setting Up a TFTP Server">Section 10.3.2, “Setting Up a TFTP Server”</a>.
+     </p></li><li class="step "><p>
+      Set up a DHCP server to provide IP addresses to all machines and
+      reveal the location of the TFTP server to the target system. This is
+      described in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp" title="10.3.1. Setting Up a DHCP Server">Section 10.3.1, “Setting Up a DHCP Server”</a>.
+     </p></li><li class="step "><p>
+      Prepare the target system for PXE boot. This is described in further
+      detail in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxeprep" title="10.3.5. Preparing the Target System for PXE Boot">Section 10.3.5, “Preparing the Target System for PXE Boot”</a>.
+     </p></li><li class="step "><p>
+      Initiate the boot process of the target system using Wake on LAN. This
+      is described in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wol" title="10.3.7. Wake on LAN">Section 10.3.7, “Wake on LAN”</a>.
+     </p></li><li class="step "><p>
+      On the controlling workstation, start an SSH client and connect to the
+      target system as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh" title="10.5.2. SSH Installation">Section 10.5.2, “SSH Installation”</a>.
+     </p></li><li class="step "><p>
+      Perform the installation as described in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      Reconnect to the target system after it reboots for the final part of
+      the installation.
+     </p></li><li class="step "><p>
+      Finish the installation.
+     </p></li></ol></div></div></div></div><div class="sect1 " id="sec.deployment.remoteinst.instserver"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.remoteinst.instserver"><span class="number">10.2 </span><span class="name">Setting Up the Server Holding the Installation Sources</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver">#</a></h2></div></div></div><p>
+   Depending on the operating system running on the machine to use as the
+   network installation source for <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>, there are several
+   options for the server configuration. The easiest way to set up an
+   installation server is to use YaST on SUSE Linux Enterprise Server 11/opensuse; 11.1 or
+   higher.
+  </p><div id="idm140318370530400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installation Server Operating System</h6><p>
+    You can even use a Microsoft Windows machine as the installation server
+    for your Linux deployment. See
+    <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb" title="10.2.5. Managing an SMB Repository">Section 10.2.5, “Managing an SMB Repository”</a> for details.
+   </p></div><div class="sect2 " id="sec.deployment.remoteinst.instserver.sles9"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.instserver.sles9"><span class="number">10.2.1 </span><span class="name">Setting Up an Installation Server Using YaST</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.sles9">#</a></h3></div></div></div><p>
+    YaST offers a graphical tool for creating network repositories. It
+    supports HTTP, FTP, and NFS network installation servers.
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.sles9"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code> to the machine that should act as installation
+      server.
+     </p></li><li class="step "><p>
+      Start <span class="guimenu">YaST</span> › <span class="guimenu">Miscellaneous</span> › <span class="guimenu">Installation
+      Server</span>.
+     </p></li><li class="step "><p>
+      Select the repository type (HTTP, FTP, or NFS). The selected service
+      is started automatically every time the system starts. If a service of
+      the selected type is already running on your system and you want to
+      configure it manually for the server, deactivate the automatic
+      configuration of the server service with <span class="guimenu">Do Not Configure Any
+      Network Services</span>. In both cases, define the directory in
+      which the installation data should be made available on the server.
+     </p></li><li class="step "><p>
+      Configure the required repository type. This step relates to the
+      automatic configuration of server services. It is skipped when
+      automatic configuration is deactivated.
+     </p><p>
+
+      Define an alias for the root directory of the FTP or HTTP server on
+      which the installation data should be found. The repository will later
+      be located under
+      <code class="literal">ftp://<em class="replaceable ">Server-IP</em>/<em class="replaceable ">Alias</em>/<em class="replaceable ">Name</em></code>
+      (FTP) or under
+      <code class="literal">http://<em class="replaceable ">Server-IP</em>/<em class="replaceable ">Alias</em>/<em class="replaceable ">Name</em></code>
+      (HTTP). <em class="replaceable ">Name</em> stands for the name of the
+      repository, which is defined in the following step. If you selected
+      NFS in the previous step, define wild cards and export options. The
+      NFS server will be accessible under
+      <code class="literal">nfs://<em class="replaceable ">Server-IP</em>/<em class="replaceable ">Name</em></code>.
+      Details of NFS and exports can be found in <a class="xref" href="cha.nfs.html" title="Chapter 24. Sharing File Systems with NFS">Chapter 24, <em>Sharing File Systems with NFS</em></a>.
+     </p><div id="idm140318370512480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Firewall Settings</h6><p>
+       Make sure that the firewall settings of your server system allow
+       traffic on the ports for HTTP, NFS, and FTP. If they currently do
+       not, enable <span class="guimenu">Open Port in Firewall</span> or check
+       <span class="guimenu">Firewall Details</span> first.
+      </p></div></li><li class="step "><p>
+      Configure the repository. Before the installation media are copied to
+      their destination, define the name of the repository (ideally, an easily
+      remembered abbreviation of the product and version). YaST allows
+      providing ISO images of the media instead of copies of the installation
+      DVDs. If you want this, activate the relevant check box and specify the
+      directory path under which the ISO files can be found locally. Depending
+      on the product to distribute using this installation server, it might be
+      necessary to add additional media, such as service pack DVDs as extra
+      repositories. To announce your installation server in the network via
+      OpenSLP, activate the appropriate option.
+     </p><div id="idm140318370508464" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Announcing the Repository</h6><p>
+       Consider announcing your repository via OpenSLP if your network setup
+       supports this option. This saves you from entering the network
+       installation path on every target machine. The target systems are
+       booted using the SLP boot option and find the network repository
+       without any further configuration. For details on this option, refer
+       to <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst" title="10.4. Booting the Target System for Installation">Section 10.4, “Booting the Target System for Installation”</a>.
+      </p></div></li><li class="step "><p>Configuring extra repositories. 
+        YaST follows a specific naming convention to configure add-on CDs
+        or service pack CDs repositories. Configuration is accepted only if
+        the repository name of the add-on CDs is preceded with the repository
+        name of the installation media, In other words, if you chose 
+        <code class="literal">SLES12SP1</code> as repository name for DVD1 than you should chose 
+        <code class="literal">SLES12SP1addon</code> repository name for DVD2.
+        Same applies to SDK CDs.</p></li><li class="step "><p>
+      Upload the installation data. The most lengthy step in configuring an
+      installation server is copying the actual installation media. Insert
+      the media in the sequence requested by YaST and wait for the
+      copying procedure to end. When the sources have been fully copied,
+      return to the overview of existing repositories and close the
+      configuration by selecting <span class="guimenu">Finish</span>.
+     </p><p>
+      Your installation server is now fully configured and ready for
+      service. It is automatically started every time the system is started.
+      No further intervention is required. You only need to configure and
+      start this service correctly by hand if you have deactivated the
+      automatic configuration of the selected network service with YaST
+      as an initial step.
+     </p></li></ol></div></div><p>
+    To deactivate a repository, select the repository to remove then select
+    <span class="guimenu">Delete</span>. The installation data are removed from the
+    system. To deactivate the network service, use the respective YaST
+    module.
+   </p><p>
+    If your installation server needs to provide the installation data for
+    more than one product of the product version, start the YaST
+    installation server module and select <span class="guimenu">Add</span> in the
+    overview of existing repositories to configure the new repository.
+   </p></div><div class="sect2 " id="sec.deployment.remoteinst.instserver.nfs"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.instserver.nfs"><span class="number">10.2.2 </span><span class="name">Setting Up an NFS Repository Manually</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.nfs">#</a></h3></div></div></div><div id="idm140318370497408" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
+     This assumes that you are using some kind of SUSE Linux-based
+     operating system on the machine that will serve as installation server.
+     If this is not the case, turn to the other vendor's documentation on
+     NFS instead of following these instructions.
+    </p></div><p>
+    Setting up an NFS source for installation is done in two main steps. In
+    the first step, create the directory structure holding the installation
+    data and copy the installation media over to this structure. Second,
+    export the directory holding the installation data to the network.
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.nfs.cdir"><div class="procedure-contents"><p>
+     To create a directory to hold the installation data, proceed as
+     follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Create a directory that will later hold all installation data and
+      change into this directory. For example:
+     </p><div class="verbatim-wrap"><pre class="screen">mkdir install/<em class="replaceable ">product</em>/<em class="replaceable ">productversion</em>
+cd install/<em class="replaceable ">product</em>/<em class="replaceable ">productversion</em></pre></div><p>
+      Replace <em class="replaceable ">product</em> with an abbreviation of the
+      product name and <em class="replaceable ">product_version</em> with a
+      string that contains the product name and version.
+     </p></li><li class="step "><p>
+      For each DVD contained in the media kit execute the following
+      commands:
+     </p><ol type="a" class="substeps "><li class="step "><p>
+        Copy the entire content of the installation DVD into the
+        installation server directory:
+       </p><div class="verbatim-wrap"><pre class="screen">cp -a /media/<em class="replaceable ">path_to_your_DVD_drive .</em></pre></div><p>
+        Replace <em class="replaceable ">path_to_your_DVD_drive</em> with the
+        actual path under which your DVD drive is addressed. Depending on
+        the type of drive used in your system, this can be
+        <code class="filename">cdrom</code>, <code class="filename">cdrecorder</code>,
+        <code class="filename">dvd</code>, or <code class="filename">dvdrecorder</code>.
+       </p></li><li class="step "><p>
+        Rename the directory to the DVD number:
+       </p><div class="verbatim-wrap"><pre class="screen">mv <em class="replaceable ">path_to_your_DVD_drive</em> DVD<em class="replaceable ">x</em></pre></div><p>
+        Replace <em class="replaceable ">x</em> with the actual number of your
+        DVD.
+       </p></li></ol></li></ol></div></div><div class="procedure " id="proc.deployment.remoteinst.instserver.nfs.export"><div class="procedure-contents"><p>
+     On <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>, you can export the repository with NFS using
+     YaST. Proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Start <span class="guimenu">YaST</span> › <span class="guimenu">Network
+      Services</span> › <span class="guimenu">NFS Server</span>.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Start</span> and <span class="guimenu">Open Port in
+      Firewall</span> and click <span class="guimenu">Next</span>.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Add Directory</span> and browse for the directory
+      containing the installation sources, in this case,
+      <code class="filename"><em class="replaceable ">productversion</em></code>.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Add Host</span> and enter the host names of the
+      machines to which to export the installation data. Instead of
+      specifying host names here, you could also use wild cards, ranges of
+      network addresses, or the domain name of your network. Enter the
+      appropriate export options or leave the default, which works fine in
+      most setups. For more information about the syntax used in exporting
+      NFS shares, read the <code class="systemitem">exports</code> man page.
+     </p></li><li class="step "><p>
+      Click <span class="guimenu">Finish</span>. The NFS server holding the
+      <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> repository is automatically started and integrated
+      into the boot process.
+     </p></li></ol></div></div><div class="procedure " id="proc.deployment.remoteinst.instserver.nfs.exportman"><div class="procedure-contents"><p>
+     If you prefer manually exporting the repository via NFS instead of
+     using the YaST NFS Server module, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Open the file <code class="filename">/etc/exports</code> and enter the
+      following line:
+     </p><div class="verbatim-wrap"><pre class="screen">/<em class="replaceable ">productversion</em> *(ro,root_squash,sync)</pre></div><p>
+      This exports the directory
+      <code class="filename">/<em class="replaceable ">productversion</em></code> to any
+      host that is part of this network or to any host that can connect to
+      this server. To limit the access to this server, use netmasks or
+      domain names instead of the general wild card <code class="literal">*</code>.
+      Refer to the <code class="systemitem">export</code> man page for details.
+      Save and exit this configuration file.
+     </p></li><li class="step "><p>
+      To add the NFS service to the list of servers started during system
+      boot, execute the following commands:
+     </p><div class="verbatim-wrap"><pre class="screen">systemctl enable nfsserver</pre></div></li><li class="step "><p>
+      Start the NFS server with <code class="command">systemctl start
+      nfsserver</code>. If you need to change the configuration
+      of your NFS server later, modify the configuration file and restart
+      the NFS daemon with <code class="command">systemctl restart
+      nfsserver</code>.
+     </p></li></ol></div></div><div class="procedure " id="proc.deployment.remoteinst.instserver.nfs.slpann"><div class="procedure-contents"><p>
+     Announcing the NFS server via OpenSLP makes its address known to all
+     clients in your network.
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Create the <code class="filename">/etc/slp.reg.d/install.suse.nfs.reg</code>
+      configuration file with the following lines:
+     </p><div class="verbatim-wrap"><pre class="screen"># Register the NFS Installation Server
+service:install.suse:nfs://$HOSTNAME/<em class="replaceable ">path_to_repository</em>/DVD1,en,65535 
+description=NFS Repository</pre></div><p>
+      Replace <em class="replaceable ">path_to_repository</em> with the actual
+      path to the installation source on your server.
+     </p></li><li class="step "><p>
+      Start the OpenSLP daemon with <code class="command">systemctl start
+      slpd</code>.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.instserver.ftp"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.instserver.ftp"><span class="number">10.2.3 </span><span class="name">Setting Up an FTP Repository Manually</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.ftp">#</a></h3></div></div></div><p>
+    Creating an FTP repository is very similar to creating an NFS
+    repository. An FTP repository can be announced over the network using
+    OpenSLP as well.
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.ftp"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Create a directory holding the installation sources as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.nfs" title="10.2.2. Setting Up an NFS Repository Manually">Section 10.2.2, “Setting Up an NFS Repository Manually”</a>.
+     </p></li><li class="step "><p>
+      Configure the FTP server to distribute the contents of your
+      installation directory:
+     </p><ol type="a" class="substeps "><li class="step "><p>
+        Log in as <code class="systemitem">root</code> and install the package
+        <code class="systemitem">vsftpd</code> using the YaST software
+        management.
+       </p></li><li class="step "><p>
+        Enter the FTP server root directory:
+       </p><div class="verbatim-wrap"><pre class="screen">cd <code class="option">/srv/ftp</code></pre></div></li><li class="step "><p>
+        Create a subdirectory holding the installation sources in the FTP
+        root directory:
+       </p><div class="verbatim-wrap"><pre class="screen">mkdir <em class="replaceable ">repository</em></pre></div><p>
+        Replace <em class="replaceable ">repository</em> with the product name.
+       </p></li><li class="step "><p>
+        Mount the contents of the installation repository into the change
+        root environment of the FTP server:
+       </p><div class="verbatim-wrap"><pre class="screen">mount --bind <em class="replaceable ">path_to_repository</em> /srv/ftp/<em class="replaceable ">repository</em></pre></div><p>
+        Replace <em class="replaceable ">path_to_repository</em> and
+        <em class="replaceable ">repository</em> with values matching your
+        setup. If you need to make this permanent, add it to
+        <code class="filename">/etc/fstab</code>.
+       </p></li><li class="step "><p>
+        Start vsftpd with <code class="command">vsftpd</code>.
+       </p></li></ol></li><li class="step "><p>
+      Announce the repository via OpenSLP, if this is supported by your
+      network setup:
+     </p><ol type="a" class="substeps "><li class="step "><p>
+        Create the <code class="filename">/etc/slp.reg.d/install.suse.ftp.reg</code>
+        configuration file with the following lines:
+       </p><div class="verbatim-wrap"><pre class="screen"># Register the FTP Installation Server
+service:install.suse:ftp://$HOSTNAME/<em class="replaceable ">repository</em>/DVD1,en,65535 
+description=FTP Repository</pre></div><p>
+        Replace <em class="replaceable ">repository</em> with the actual name
+        to the repository directory on your server. The
+        <code class="literal">service:</code> line should be entered as one continuous
+        line.
+       </p></li><li class="step "><p>
+        Start the OpenSLP daemon with <code class="command">systemctl start
+        slpd</code>.
+       </p></li></ol></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.instserver.http"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.instserver.http"><span class="number">10.2.4 </span><span class="name">Setting Up an HTTP Repository Manually</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.http">#</a></h3></div></div></div><p>
+    Creating an HTTP repository is very similar to creating an NFS
+    repository. An HTTP repository can be announced over the network using
+    OpenSLP as well.
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.http"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Create a directory holding the installation sources as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.nfs" title="10.2.2. Setting Up an NFS Repository Manually">Section 10.2.2, “Setting Up an NFS Repository Manually”</a>.
+     </p></li><li class="step "><p>
+      Configure the HTTP server to distribute the contents of your
+      installation directory:
+     </p><ol type="a" class="substeps "><li class="step "><p>
+        <span class="phrase">Install
+        the Web server Apache</span>.
+       </p></li><li class="step "><p>
+        Enter the root directory of the HTTP server
+        (<code class="filename">/srv/www/htdocs</code>) and create the subdirectory
+        that will hold the installation sources:
+       </p><div class="verbatim-wrap"><pre class="screen">mkdir <em class="replaceable ">repository</em></pre></div><p>
+        Replace <em class="replaceable ">repository</em> with the product name.
+       </p></li><li class="step "><p>
+        Create a symbolic link from the location of the installation sources
+        to the root directory of the Web server
+        (<code class="filename">/srv/www/htdocs</code>):
+       </p><div class="verbatim-wrap"><pre class="screen">ln -s <em class="replaceable ">/path_to_repository </em>/srv/www/htdocs/<em class="replaceable ">repository</em></pre></div></li><li class="step "><p>
+        Modify the configuration file of the HTTP server
+        (<code class="filename">/etc/apache2/default-server.conf</code>) to make it
+        follow symbolic links. Replace the following line:
+       </p><div class="verbatim-wrap"><pre class="screen">Options None</pre></div><p>
+        with
+       </p><div class="verbatim-wrap"><pre class="screen">Options Indexes FollowSymLinks</pre></div></li><li class="step "><p>
+        Reload the HTTP server configuration using <code class="command">systemctl reload
+        apache2</code>.
+       </p></li></ol></li><li class="step "><p>
+      Announce the repository via OpenSLP, if this is supported by your
+      network setup:
+     </p><ol type="a" class="substeps "><li class="step "><p>
+        Create the <code class="filename">/etc/slp.reg.d/install.suse.http.reg</code>
+        configuration file with the following lines:
+       </p><div class="verbatim-wrap"><pre class="screen"># Register the HTTP Installation Server
+service:install.suse:http://$HOSTNAME/<em class="replaceable ">repository</em>/DVD1/,en,65535 
+description=HTTP Repository</pre></div><p>
+        Replace <em class="replaceable ">repository</em> with the actual path
+        to the repository on your server. The <code class="literal">service:</code>
+        line should be entered as one continuous line.
+       </p></li><li class="step "><p>
+        Start the OpenSLP daemon using <code class="command">systemctl start
+        slpd</code>.
+       </p></li></ol></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.instserver.smb"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.instserver.smb"><span class="number">10.2.5 </span><span class="name">Managing an SMB Repository</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.smb">#</a></h3></div></div></div><p>
+    Using SMB, you can import the installation sources from a Microsoft
+    Windows server and start your Linux deployment even with no Linux
+    machine around.
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.smb.export"><div class="procedure-contents"><p>
+     To set up an exported Windows Share holding your <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>
+     repository, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Log in to your Windows machine.
+     </p></li><li class="step "><p>
+      Create a new directory that will hold the entire installation tree and
+      name it <code class="filename">INSTALL</code>, for example.
+     </p></li><li class="step "><p>
+      Export this share according the procedure outlined in your Windows
+      documentation.
+     </p></li><li class="step "><p>
+      Enter this share and create a subdirectory, called
+      <code class="filename"><em class="replaceable ">product</em></code>. Replace
+      <em class="replaceable ">product</em> with the actual product name.
+     </p></li><li class="step "><p>
+      Enter the
+      <code class="filename">INSTALL/<em class="replaceable ">product</em></code>
+      directory and copy each DVD to a separate directory, such as
+      <code class="literal">DVD1</code> and <code class="literal">DVD2</code>.
+     </p></li></ol></div></div><p>
+    To use an SMB mounted share as a repository, proceed as follows:
+   </p><div class="procedure " id="proc.deployment.remoteinst.instserver.smb.use"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Boot the installation target.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Installation</span>.
+     </p></li><li class="step "><p>
+      Press <span class="keycap">F4</span> for a selection of the repository.
+     </p></li><li class="step "><p>
+      Choose SMB and enter the Windows machine's name or IP address, the
+      share name
+      (<code class="filename">INSTALL/<em class="replaceable ">product</em>/DVD1</code>,
+      in this example), user name, and password. The syntax looks like this:
+     </p><div class="verbatim-wrap"><pre class="screen">smb://workdomain;user:password@server/INSTALL/DVD1</pre></div><p>
+      After you press <span class="keycap">Enter</span>, YaST
+      starts and you can perform the installation.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.iso"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.iso"><span class="number">10.2.6 </span><span class="name">Using ISO Images of the Installation Media on the Server</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.iso">#</a></h3></div></div></div><p>
+    Instead of copying physical media into your server directory manually,
+    you can also mount the ISO images of the installation media into your
+    installation server and use them as a repository. To set up an HTTP, NFS
+    or FTP server that uses ISO images instead of media copies, proceed as
+    follows:
+   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Download the ISO images and save them to the machine to use as the
+      installation server.
+     </p></li><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Choose and create an appropriate location for the installation data,
+      as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.nfs" title="10.2.2. Setting Up an NFS Repository Manually">Section 10.2.2, “Setting Up an NFS Repository Manually”</a>,
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.ftp" title="10.2.3. Setting Up an FTP Repository Manually">Section 10.2.3, “Setting Up an FTP Repository Manually”</a>, or
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.http" title="10.2.4. Setting Up an HTTP Repository Manually">Section 10.2.4, “Setting Up an HTTP Repository Manually”</a>.
+     </p></li><li class="step "><p>
+      Create subdirectories for each DVD.
+     </p></li><li class="step "><p>
+      To mount and unpack each ISO image to the final location, issue the
+      following command:
+     </p><div class="verbatim-wrap"><pre class="screen">mount -o loop <em class="replaceable ">path_to_iso</em><em class="replaceable ">path_to_repository</em>/<em class="replaceable ">product</em>/<em class="replaceable ">mediumx</em></pre></div><p>
+      Replace <em class="replaceable ">path_to_iso</em> with the path to your
+      local copy of the ISO image,
+      <em class="replaceable ">path_to_repository</em> with the source
+      directory of your server, <em class="replaceable ">product</em> with the
+      product name, and <em class="replaceable ">mediumx</em> with the type (CD
+      or DVD) and number of media you are using.
+     </p></li><li class="step "><p>
+      Repeat the previous step to mount all ISO images needed for your
+      product.
+     </p></li><li class="step "><p>
+      Start your installation server as usual, as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.nfs" title="10.2.2. Setting Up an NFS Repository Manually">Section 10.2.2, “Setting Up an NFS Repository Manually”</a>,
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.ftp" title="10.2.3. Setting Up an FTP Repository Manually">Section 10.2.3, “Setting Up an FTP Repository Manually”</a>, or
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.http" title="10.2.4. Setting Up an HTTP Repository Manually">Section 10.2.4, “Setting Up an HTTP Repository Manually”</a>.
+     </p></li></ol></div></div><p>
+    To automatically mount the ISO images at boot time, add the respective
+    mount entries to <code class="filename">/etc/fstab</code>. An entry according to
+    the previous example would look like the following:
+   </p><div class="verbatim-wrap"><pre class="screen"><em class="replaceable ">path_to_iso</em> <em class="replaceable ">path_to_repository</em>/<em class="replaceable ">product</em><em class="replaceable ">medium</em> auto loop</pre></div></div></div><div class="sect1 " id="sec.deployment.remoteinst.boot"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.remoteinst.boot"><span class="number">10.3 </span><span class="name">Preparing the Boot of the Target System</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot">#</a></h2></div></div></div><p>
+   This section covers the configuration tasks needed in complex boot
+   scenarios. It contains ready-to-apply configuration examples for DHCP,
+   PXE boot, TFTP, and Wake on LAN.
+  </p><div class="sect2 " id="sec.deployment.remoteinst.boot.dhcp"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.dhcp"><span class="number">10.3.1 </span><span class="name">Setting Up a DHCP Server</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp">#</a></h3></div></div></div><p>
+    There are two ways to set up a DHCP server. For <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>,
+    YaST provides a graphical interface to the process. Users can also
+    manually edit the configuration files.
+   </p><div class="sect3 " id="sec.deployment.remoteinst.boot.dhcp.yast"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.boot.dhcp.yast"><span class="number">10.3.1.1 </span><span class="name">Setting Up a DHCP Server with YaST</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp.yast">#</a></h4></div></div></div><p>
+     To announce the TFTP server's location to the network clients and
+     specify the boot image file the installation target should use, add two
+     declarations to your DHCP server configuration.
+    </p><div class="procedure " id="proc.deployment.remoteinst.boot.dhcp.yast"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Log in as <code class="systemitem">root</code> to the machine hosting the DHCP server.
+      </p></li><li class="step "><p>
+       Start <span class="guimenu">YaST</span> › <span class="guimenu">Network
+       Services</span> › <span class="guimenu">DHCP Server</span>.
+      </p></li><li class="step "><p>
+       Complete the setup wizard for basic DHCP server setup.
+      </p></li><li class="step " id="st.deployment.remoteinst.boot.dhcp.yast.expert"><p>
+       Select <span class="guimenu">Expert Settings</span> and select
+       <span class="guimenu">Yes</span> when warned about leaving the start-up dialog.
+      </p></li><li class="step "><p>
+       In the <span class="guimenu">Configured Declarations</span> dialog, select the
+       subnet in which the new system should be located and click
+       <span class="guimenu">Edit</span>.
+      </p></li><li class="step "><p>
+       In the <span class="guimenu">Subnet Configuration</span> dialog select
+       <span class="guimenu">Add</span> to add a new option to the subnet's
+       configuration.
+      </p></li><li class="step "><p>
+       Select <code class="option">filename</code> and enter
+       <code class="literal">pxelinux.0</code> as the value.
+      </p></li><li class="step "><p>
+       Add another option (<code class="option">next-server</code>) and set its value
+       to the address of the TFTP server.
+      </p></li><li class="step "><p>
+       Select <span class="guimenu">OK</span> and <span class="guimenu">Finish</span> to
+       complete the DHCP server configuration.
+      </p></li></ol></div></div><p>
+     To configure DHCP to provide a static IP address to a specific host,
+     enter the <span class="guimenu">Expert Settings</span> of the DHCP server
+     configuration module
+     (<a class="xref" href="cha.deployment.remoteinst.html#st.deployment.remoteinst.boot.dhcp.yast.expert" title="Step 4">Step 4</a>)
+     and add a new declaration of the host type. Add the options
+     <code class="option">hardware</code> and <code class="option">fixed-address</code> to this
+     host declaration and provide the appropriate values.
+    </p></div><div class="sect3 " id="sec.deployment.remoteinst.boot.dhcp.man"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.boot.dhcp.man"><span class="number">10.3.1.2 </span><span class="name">Setting Up a DHCP Server Manually</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp.man">#</a></h4></div></div></div><p>
+     All the DHCP server needs to do, apart from providing automatic address
+     allocation to your network clients, is to announce the IP address of
+     the TFTP server and the file that needs to be pulled in by the
+     installation routines on the target machine.
+    </p><div class="procedure " id="proc.deployment.remoteinst.boot.dhcp.man"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Log in as <code class="systemitem">root</code> to the machine hosting the DHCP server.
+      </p></li><li class="step "><p>
+       Append the following lines to a subnet configuration of your DHCP
+       server's configuration file located under
+       <code class="filename">/etc/dhcpd.conf</code>:
+      </p><div class="verbatim-wrap"><pre class="screen">subnet 192.168.1.0 netmask 255.255.255.0 { 
+  range dynamic-bootp 192.168.1.200 192.168.1.228;
+  # PXE related settings
+  #
+  # "next-server" defines the TFTP server that will be used
+  next-server <em class="replaceable ">ip_tftp_server</em>;
+  #
+  # "filename" specifies the pxelinux image on the TFTP server
+  # the server runs in chroot under /srv/tftpboot
+  filename  "pxelinux.0";
+}</pre></div><p>
+       Replace
+
+       <em class="replaceable ">ip_of_the_tftp_server</em> with the actual IP
+       address of the TFTP server. For more information about the options
+       available in <code class="filename">dhcpd.conf</code>, refer to the
+       <code class="systemitem">dhcpd.conf</code> manual page.
+      </p></li><li class="step "><p>
+       Restart the DHCP server by executing <code class="command">systemctl restart
+       dhcpd</code>.
+      </p></li></ol></div></div><p>
+     If you plan on using SSH for the remote control of a PXE and Wake on
+     LAN installation, explicitly specify the IP address DHCP should provide
+     to the installation target. To achieve this, modify the above mentioned
+     DHCP configuration according to the following example:
+    </p><div class="verbatim-wrap"><pre class="screen">group {
+  # PXE related settings
+  # 
+  # "next-server" defines the TFTP server that will be used 
+  next-server <em class="replaceable ">ip_tftp_server</em>:
+  # 
+  # "filename" specifies the pxelinux image on the TFTP server 
+  # the server runs in chroot under /srv/tftpboot
+  filename "pxelinux.0";
+  host test {
+    hardware ethernet <em class="replaceable ">mac_address</em>; 
+    fixed-address <em class="replaceable ">some_ip_address</em>;
+    }
+}</pre></div><p>
+     The host statement introduces the host name of the installation target.
+     To bind the host name and IP address to a specific host, you must know
+     and specify the system's hardware (MAC) address. Replace all the
+     variables used in this example with the actual values that match your
+     environment.
+    </p><p>
+     After restarting the DHCP server, it provides a static IP to the host
+     specified, enabling you to connect to the system via SSH.
+    </p></div></div><div class="sect2 " id="sec.deployment.remoteinst.boot.tftp"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.tftp"><span class="number">10.3.2 </span><span class="name">Setting Up a TFTP Server</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp">#</a></h3></div></div></div><p>
+    If using a SUSE based installation, you may use YaST to set up
+    a TFTP Server. Alternatively, set it up manually. The TFTP server
+    delivers the boot image to the target system after it boots and sends a
+    request for it.
+   </p><div class="sect3 " id="sec.deployment.remoteinst.boot.tftp.yast"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.boot.tftp.yast"><span class="number">10.3.2.1 </span><span class="name">Setting Up a TFTP Server Using YaST</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp.yast">#</a></h4></div></div></div><div class="procedure " id="proc.deployment.remoteinst.boot.tftp.yast"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Log in as <code class="systemitem">root</code>.
+      </p></li><li class="step "><p>
+       Start <span class="guimenu">YaST</span> › <span class="guimenu">Network
+       Services</span> › <span class="guimenu">TFTP Server</span> and
+       install the requested package.
+      </p></li><li class="step "><p>
+       Click <span class="guimenu">Enable</span> to make sure that the server is
+       started and included in the boot routines. No further action from
+       your side is required to secure this. xinetd starts tftpd at boot
+       time.
+      </p></li><li class="step "><p>
+       Click <span class="guimenu">Open Port in Firewall</span> to open the
+       appropriate port in the firewall running on your machine. If there is
+       no firewall running on your server, this option is not available.
+      </p></li><li class="step "><p>
+       Click <span class="guimenu">Browse</span> to browse for the boot image
+       directory. The default directory <code class="filename">/tftpboot</code> is
+       created and selected automatically.
+      </p></li><li class="step "><p>
+       Click <span class="guimenu">Finish</span> to apply your settings and start the
+       server.
+      </p></li></ol></div></div></div><div class="sect3 " id="sec.deployment.remoteinst.boot.tftp.man"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.boot.tftp.man"><span class="number">10.3.2.2 </span><span class="name">Setting Up a TFTP Server Manually</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp.man">#</a></h4></div></div></div><div class="procedure " id="proc.deployment.remoteinst.boot.tftp.man"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Log in as <code class="systemitem">root</code> and install the packages
+       <code class="systemitem">tftp</code> and <code class="systemitem">xinetd</code>.
+      </p></li><li class="step "><p>
+       If unavailable, create <code class="filename">/srv/tftpboot</code> and
+       <code class="filename">/srv/tftpboot/pxelinux.cfg</code> directories.
+      </p></li><li class="step "><p>
+       Add the appropriate files needed for the boot image as described in
+       <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxe" title="10.3.3. Using PXE Boot">Section 10.3.3, “Using PXE Boot”</a>.
+      </p></li><li class="step "><p>
+       Modify the configuration of xinetd located under
+       <code class="filename">/etc/xinetd.d</code> to make sure that the TFTP server
+       is started on boot:
+      </p><ol type="a" class="substeps "><li class="step "><p>
+         If it does not exist, create a file called
+         <code class="filename">tftp</code> under this directory with <code class="command">touch
+         tftp</code>. Then run <code class="command">chmod 755 tftp</code>.
+        </p></li><li class="step "><p>
+         Open the file <code class="filename">tftp</code> and add the following
+         lines:
+        </p><div class="verbatim-wrap"><pre class="screen">service tftp 
+{ 
+        socket_type            = dgram
+        protocol               = udp 
+        wait                   = yes 
+        user                   = root 
+        server                 = /usr/sbin/in.tftpd 
+        server_args            = -s /srv/tftpboot 
+        disable                = no 
+}</pre></div></li><li class="step "><p>
+         Save the file and restart xinetd with <code class="command">rcxinetd
+         restart</code>.
+
+        </p></li></ol></li></ol></div></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.boot.pxe"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.pxe"><span class="number">10.3.3 </span><span class="name">Using PXE Boot</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxe">#</a></h3></div></div></div><p>
+    Some technical background information and PXE's complete
+    specifications are available in the Preboot Execution Environment (PXE)
+    Specification
+    (<a class="link" href="http://www.pix.net/software/pxeboot/archive/pxespec.pdf" target="_blank">http://www.pix.net/software/pxeboot/archive/pxespec.pdf</a>).
+   </p><div class="procedure " id="proc.deployment.remoteinst.boot.pxe"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Change to the directory
+      <code class="filename">boot/&lt;architecture&gt;/loader</code> of your
+      installation repository and copy the <code class="filename">linux</code>,
+      <code class="filename">initrd</code>, <code class="filename">message</code>,
+      <code class="filename">biostest</code>, and <code class="filename">memtest</code> files
+      to the <code class="filename">/srv/tftpboot</code> directory by entering the
+      following:
+     </p><div class="verbatim-wrap"><pre class="screen">cp -a linux initrd message biostest memtest /srv/tftpboot</pre></div></li><li class="step "><p>
+      Install the <code class="systemitem">syslinux</code> package directly from
+      your installation DVDs with YaST.
+     </p></li><li class="step "><p>
+      Copy the <code class="filename">/usr/share/syslinux/pxelinux.0</code> file to
+      the <code class="filename">/srv/tftpboot</code> directory by entering the
+      following:
+     </p><div class="verbatim-wrap"><pre class="screen">cp -a /usr/share/syslinux/pxelinux.0 /srv/tftpboot</pre></div></li><li class="step "><p>
+      Change to the directory of your installation repository and copy the
+      <code class="filename">isolinux.cfg</code> file to <code class="filename">
+      /srv/tftpboot/pxelinux.cfg/default</code> by entering the
+      following:
+     </p><div class="verbatim-wrap"><pre class="screen">cp -a boot/&lt;architecture&gt;/loader/isolinux.cfg /srv/tftpboot/pxelinux.cfg/default</pre></div></li><li class="step "><p>
+      Edit the <code class="filename">/srv/tftpboot/pxelinux.cfg/default</code> file
+      and remove the lines beginning with <code class="literal">readinfo</code> and
+      <code class="literal">framebuffer</code>.
+     </p></li><li class="step "><p>
+
+      Insert the following entries in the append lines of the default
+      <code class="option">failsafe</code> and <code class="option">apic</code> labels:
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373794288"><span class="term "><code class="option">insmod=<em class="replaceable ">kernel module</em></code>
+       </span></dt><dd><p>
+         By means of this entry, enter the network Kernel module needed to
+         support network installation on the PXE client. Replace
+         <em class="replaceable ">kernel module</em> with the appropriate
+         module name for your network device.
+        </p></dd><dt id="idm140318373791280"><span class="term "><code class="option">netdevice=<em class="replaceable ">interface</em></code>
+       </span></dt><dd><p>
+         This entry defines the client's network interface that must be used
+         for the network installation. It is only necessary if the client is
+         equipped with several network cards and must be adapted
+         accordingly. In case of a single network card, this entry can be
+         omitted.
+        </p></dd><dt id="idm140318373788608"><span class="term ">
+<code class="option">install=nfs://<em class="replaceable ">ip_instserver</em>/<em class="replaceable ">path_to_repository</em>/DVD1</code>
+       </span></dt><dd><p>
+         This entry defines the NFS server and the repository for the client
+         installation. Replace
+
+         <em class="replaceable ">ip_instserver</em> with the actual IP address
+         of your installation server.
+         <em class="replaceable ">path_to_repository</em> should be replaced
+         with the actual path to the repository. HTTP, FTP, or SMB
+         repositories are addressed in a similar manner, except for the
+         protocol prefix, which should read <code class="literal">http</code>,
+         <code class="literal">ftp</code>, or <code class="literal">smb</code>.
+        </p><div id="idm140318373783200" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Adding Boot Options</h6><p>
+          If you need to pass other boot options to the installation
+          routines, such as SSH or VNC boot parameters, append them to the
+          <code class="option">install</code> entry. An overview of parameters and some
+          examples are given in
+          <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst" title="10.4. Booting the Target System for Installation">Section 10.4, “Booting the Target System for Installation”</a>.
+         </p></div></dd></dl></div><div id="idm140318373780144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Changing Kernel and initrd File Names</h6><p>
+       It is possible to use different file names for Kernel and initrd
+       images. This is useful if you want to provide different operating
+       systems from the same boot server. However, you should be aware that
+       only one dot is permitted in the file names that are provided by TFTP
+       for the PXE boot.
+      </p></div><p>
+      An example <code class="option">/srv/tftpboot/pxelinux.cfg/default</code> file
+      follows. Adjust the protocol prefix for the repository to match your
+      network setup and specify your preferred method of connecting to the
+      installer by adding the <code class="literal">vnc</code> and
+      <code class="literal">VNCPassword</code> or the <code class="literal">ssh</code> and
+      <code class="literal">ssh.password</code> options to the
+      <code class="literal">install</code> entry. The lines separated by
+      <code class="literal">\</code> must be entered as one continuous line without a
+      line break and without the <code class="literal">\</code>.
+     </p><div class="verbatim-wrap"><pre class="screen">default harddisk 
+        
+# default
+label linux 
+  kernel linux 
+  append initrd=initrd ramdisk_size=65536 \
+     install=nfs://<em class="replaceable ">ip_instserver</em>/<em class="replaceable ">path_to_repository</em>/<em class="replaceable ">product</em>/DVD1 
+	    
+# repair
+label repair
+  kernel linux
+  append initrd=initrd splash=silent repair=1 showopts
+
+# rescue 
+label rescue 
+  kernel linux 
+  append initrd=initrd ramdisk_size=65536 rescue=1 
+
+# bios test
+label firmware
+  kernel linux
+  append initrd=biostest,initrd splash=silent install=exec:/bin/run_biostest showopts
+
+#  memory test 
+label memtest 
+  kernel memtest 
+
+#  hard disk 
+label harddisk
+  localboot 0
+
+implicit     0 
+display      message
+prompt       1 
+timeout      100</pre></div></li><li class="step "><p>
+      Replace
+
+      <em class="replaceable ">ip_instserver</em> and
+      <em class="replaceable ">path_to_repository</em> with the values used in
+      your setup.
+     </p><p>
+      The following section serves as a short reference to the PXELINUX
+      options used in this setup. Find more information about the options
+      available in the documentation of the
+      <code class="systemitem">syslinux</code> package located under
+      <code class="filename">/usr/share/doc/packages/syslinux/</code>.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.boot.pxeopts"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.pxeopts"><span class="number">10.3.4 </span><span class="name">PXELINUX Configuration Options</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxeopts">#</a></h3></div></div></div><p>
+    The options listed here are a subset of all the options available for
+    the PXELINUX configuration file.
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373765872"><span class="term "><code class="option">APPEND <em class="replaceable ">options... </em></code>
+     </span></dt><dd><p>
+       Add one or more options to the Kernel command line. These are added
+       for both automatic and manual boots. The options are added at the
+       very beginning of the Kernel command line, usually permitting
+       explicitly entered Kernel options to override them.
+      </p></dd><dt id="idm140318373763232"><span class="term "><code class="option">APPEND -</code>
+     </span></dt><dd><p>
+       Append nothing. <code class="option">APPEND</code> with a single hyphen as
+       argument in a <code class="option">LABEL</code> section can be used to override
+       a global <code class="option">APPEND</code>.
+      </p></dd><dt id="idm140318373759728"><span class="term "><code class="option">DEFAULT <em class="replaceable ">kernel options</em>...</code>
+     </span></dt><dd><p>
+       Sets the default Kernel command line. If PXELINUX boots
+       automatically, it acts as if the entries after DEFAULT had been typed
+       in at the boot prompt, except the auto option is automatically added,
+       indicating an automatic boot.
+      </p><p>
+       If no configuration file exists or no DEFAULT entry is defined in the
+       configuration file, the default is the Kernel name <span class="quote">“<span class="quote">linux</span>”</span>
+       with no options.
+      </p></dd><dt id="idm140318373755920"><span class="term "><code class="option">IFAPPEND <em class="replaceable ">FLAG</em></code>
+     </span></dt><dd><p>
+       Adds a specific option to the kernel command line depending on the
+       <em class="replaceable ">FLAG</em> value. The <code class="option">IFAPPEND</code>
+       option is available only on PXELINUX. <em class="replaceable ">FLAG</em>
+       expects a value, described in
+       <a class="xref" href="cha.deployment.remoteinst.html#tab.deployment.boot.pxeopts.ifappend" title="Generated and Added Kernel Command Line Options from IFAPPEND">Table 10.1, “Generated and Added Kernel Command Line Options from <code class="option">IFAPPEND</code>”</a>:
+      </p><div class="table" id="tab.deployment.boot.pxeopts.ifappend"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 10.1: </span><span class="name">Generated and Added Kernel Command Line Options from <code class="option">IFAPPEND</code> </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#tab.deployment.boot.pxeopts.ifappend">#</a></h6></div><div class="table-contents"><table summary="Generated and Added Kernel Command Line Options from IFAPPEND" border="1"><colgroup><col /><col /></colgroup><thead><tr><th valign="middle">
+           <p>
+            Argument
+           </p>
+          </th><th>
+           <p>
+            Generated Kernel Command Line / Description
+           </p>
+          </th></tr></thead><tbody><tr><td>
+           <p>
+            <code class="option">1</code>
+           </p>
+          </td><td>
+<div class="verbatim-wrap"><pre class="screen">ip=<em class="replaceable ">CLIENT_IP</em>:<em class="replaceable ">BOOT_SERVER_IP</em>:<em class="replaceable ">GW_IP</em>:<em class="replaceable ">NETMASK</em></pre></div>
+           <p>
+            The placeholders are replaced based on the input from the
+            DHCP/BOOTP or PXE boot server.
+           </p>
+           <p>
+            Note, this option is not a substitute for running a DHCP client
+            in the booted system. Without regular renewals, the lease
+            acquired by the PXE BIOS will expire, making the IP address
+            available for reuse by the DHCP server.
+           </p>
+          </td></tr><tr><td>
+           <p>
+            <code class="option">2</code>
+           </p>
+          </td><td>
+<div class="verbatim-wrap"><pre class="screen">BOOTIF=<em class="replaceable ">MAC_ADDRESS_OF_BOOT_INTERFACE</em></pre></div>
+           <p>
+            This option is useful if you want to avoid timeouts when the
+            installation server probes one LAN interface after the other
+            until it gets a reply from a DHCP server. Using this option
+            allows an initrd program to determine from which interface the
+            system has been booted. linuxrc reads this option and uses this
+            network interface.
+           </p>
+          </td></tr><tr><td>
+           <p>
+            <code class="option">4</code>
+           </p>
+          </td><td>
+<div class="verbatim-wrap"><pre class="screen">SYSUUID=<em class="replaceable ">SYSTEM_UUID</em></pre></div>
+           <p>
+            Adds UUIDs in lowercase hexadecimals, see
+            <code class="filename">/usr/share/doc/packages/syslinux/pxelinux.txt</code>
+           </p>
+          </td></tr></tbody></table></div></div></dd><dt id="idm140318373731120"><span class="term "><code class="option">LABEL <em class="replaceable ">label</em> KERNEL <em class="replaceable ">image</em>
+       APPEND <em class="replaceable ">options</em>...</code>
+     </span></dt><dd><p>
+       Indicates that if <em class="replaceable ">label</em> is entered as the
+       Kernel to boot, PXELINUX should instead boot
+       <em class="replaceable ">image</em> and the specified
+       <code class="option">APPEND</code> options should be used instead of the ones
+       specified in the global section of the file (before the first
+       <code class="option">LABEL</code> command). The default for
+       <em class="replaceable ">image</em> is the same as
+       <em class="replaceable ">label</em> and, if no <code class="option">APPEND</code>
+       is given, the default is to use the global entry (if any). Up to 128
+       <code class="option">LABEL</code> entries are permitted.
+      </p><p>
+       PXELINUX uses the following syntax:
+      </p><div class="verbatim-wrap"><pre class="screen">label <em class="replaceable ">mylabel</em> 
+  kernel <em class="replaceable ">mykernel</em> 
+  append <em class="replaceable ">myoptions</em></pre></div><p>
+       Labels are mangled as if they were file names and they must be unique
+       after mangling. For example, the two labels <span class="quote">“<span class="quote">v2.6.30</span>”</span>
+       and <span class="quote">“<span class="quote">v2.6.31</span>”</span> would not be distinguishable under
+       PXELINUX because both mangle to the same DOS file name.
+      </p><p>
+       The Kernel does not need to be a Linux Kernel; it can be a boot
+       sector or a COMBOOT file.
+      </p></dd><dt id="idm140318373719600"><span class="term "><code class="option">LOCALBOOT <em class="replaceable ">type</em></code>
+     </span></dt><dd><p>
+       On PXELINUX, specifying <code class="option">LOCALBOOT 0</code> instead of a
+       <code class="option">KERNEL</code> option means invoking this particular label
+       and causes a local disk boot instead of a Kernel boot.
+      </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
+           <p>
+            Argument
+           </p>
+          </th><th>
+           <p>
+            Description
+           </p>
+          </th></tr></thead><tbody><tr><td>
+           <p>
+            <code class="literal">0</code>
+           </p>
+          </td><td>
+           <p>
+            Perform a normal boot
+           </p>
+          </td></tr><tr><td>
+           <p>
+            <code class="literal">4</code>
+           </p>
+          </td><td>
+           <p>
+            Perform a local boot with the Universal Network Driver Interface
+            (UNDI) driver still resident in memory
+           </p>
+          </td></tr><tr><td>
+           <p>
+            <code class="literal">5</code>
+           </p>
+          </td><td>
+           <p>
+            Perform a local boot with the entire PXE stack, including the
+            UNDI driver, still resident in memory
+           </p>
+          </td></tr></tbody></table></div><p>
+       All other values are undefined. If you do not know what the UNDI or
+       PXE stacks are, specify <code class="literal">0</code>.
+      </p></dd><dt id="idm140318373699824"><span class="term "><code class="option">TIMEOUT <em class="replaceable ">time-out</em></code>
+     </span></dt><dd><p>
+       Indicates how long to wait at the boot prompt until booting
+       automatically, in units of 1/10 second. The time-out is canceled as
+       soon as the user types anything on the keyboard, assuming the user
+       will complete the command begun. A time-out of zero disables the
+       time-out completely (this is also the default). The maximum possible
+       time-out value is 35996 (just less than one hour).
+      </p></dd><dt id="idm140318373697040"><span class="term "><code class="option">PROMPT<em class="replaceable "> flag_val</em></code>
+     </span></dt><dd><p>
+       If <code class="option">flag_val</code> is 0, displays the boot prompt only if
+       <span class="keycap">Shift</span> or
+       <span class="keycap">Alt</span> is pressed or <span class="keycap">Caps
+       Lock</span> or <span class="keycap">Scroll Lock</span> is set (this is the
+       default). If <code class="option">flag_val</code> is 1, always displays the boot
+       prompt.
+      </p><div class="verbatim-wrap"><pre class="screen">F2  <em class="replaceable ">filename</em>
+F1  <em class="replaceable ">filename</em> 
+..etc... 
+F9  <em class="replaceable ">filename</em>
+F10 <em class="replaceable ">filename</em></pre></div><p>
+       Displays the indicated file on the screen when a function key is
+       pressed at the boot prompt. This can be used to implement preboot
+       online help (presumably for the Kernel command line options). For
+       backward compatibility with earlier releases, <span class="keycap">F10</span>
+       can be also entered as <code class="literal">F0</code>. Note that there is
+       currently no way to bind file names to <span class="keycap">F11</span> and
+       <span class="keycap">F12</span>.
+      </p></dd></dl></div></div><div class="sect2 " id="sec.deployment.remoteinst.boot.pxeprep"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.pxeprep"><span class="number">10.3.5 </span><span class="name">Preparing the Target System for PXE Boot</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxeprep">#</a></h3></div></div></div><p>
+    Prepare the system's BIOS for PXE boot by including the PXE option in
+    the BIOS boot order.
+   </p><div id="idm140318373684896" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: BIOS Boot Order</h6><p>
+     Do not place the PXE option ahead of the hard disk boot option in the
+     BIOS. Otherwise this system would try to re-install itself every time
+     you boot it.
+    </p></div></div><div class="sect2 " id="sec.deployment.remoteinst.boot.wolprep"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.wolprep"><span class="number">10.3.6 </span><span class="name">Preparing the Target System for Wake on LAN</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wolprep">#</a></h3></div></div></div><p>
+    Wake on LAN (WOL) requires the appropriate BIOS option to be enabled
+    prior to the installation. Also, note down the MAC address of the target
+    system. This data is needed to initiate Wake on LAN.
+   </p></div><div class="sect2 " id="sec.deployment.remoteinst.boot.wol"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.wol"><span class="number">10.3.7 </span><span class="name">Wake on LAN</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wol">#</a></h3></div></div></div><p>
+    Wake on LAN allows a machine to be turned on by a special network packet
+    containing the machine's MAC address. Because every machine in the world
+    has a unique MAC identifier, you do not need to worry about accidentally
+    turning on the wrong machine.
+   </p><div id="idm140318373679296" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wake on LAN across Different Network Segments</h6><p>
+     If the controlling machine is not located in the same network segment
+     as the installation target that should be awakened, either configure
+     the WOL requests to be sent as multicasts or remotely control a machine
+     on that network segment to act as the sender of these requests.
+    </p></div><p>
+    Users of SUSE Linux Enterprise Server can use a YaST module called WOL to easily
+    configure Wake on LAN. Users of other versions of SUSE Linux-based
+    operating systems can use a command line tool.
+   </p></div><div class="sect2 " id="sec.deployment.remoteinst.boot.wolyast"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.boot.wolyast"><span class="number">10.3.8 </span><span class="name">Wake on LAN with YaST</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wolyast">#</a></h3></div></div></div><div class="procedure " id="proc.deployment.remoteinst.boot.wolyast"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Log in as <code class="systemitem">root</code>.
+     </p></li><li class="step "><p>
+      Start <span class="guimenu">YaST</span> › <span class="guimenu">Network
+      Services</span> › <span class="guimenu">WOL</span>.
+     </p></li><li class="step "><p>
+      Click <span class="guimenu">Add</span> and enter the host name and MAC address
+      of the target system.
+     </p></li><li class="step "><p>
+      To turn on this machine, select the appropriate entry and click
+      <span class="guimenu">Wake up</span>.
+     </p></li></ol></div></div></div></div><div class="sect1 " id="sec.deployment.remoteinst.bootinst"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.remoteinst.bootinst"><span class="number">10.4 </span><span class="name">Booting the Target System for Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst">#</a></h2></div></div></div><p>
+   There are two different ways to customize the boot process for
+   installation apart from those mentioned under
+   <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.wol" title="10.3.7. Wake on LAN">Section 10.3.7, “Wake on LAN”</a> and
+   <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxe" title="10.3.3. Using PXE Boot">Section 10.3.3, “Using PXE Boot”</a>. You can either use
+   the default boot options and function keys or use the boot options prompt
+   of the installation boot screen to pass any boot options that the
+   installation Kernel might need on this particular hardware.
+  </p><div class="sect2 " id="sec.deployment.remoteinst.bootinst.opts"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.bootinst.opts"><span class="number">10.4.1 </span><span class="name">Using the Default Boot Options</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.opts">#</a></h3></div></div></div><p>
+    The boot options are described in detail in <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+    Generally, selecting <span class="guimenu">Installation</span> starts the
+    installation boot process.
+   </p><p>
+    If problems occur, use <span class="guimenu">Installation—ACPI
+    Disabled</span> or <span class="guimenu">Installation—Safe
+    Settings</span>. For more information about troubleshooting the
+    installation process, refer to <a class="xref" href="cha.trouble.html#sec.trouble.install" title="31.2. Installation Problems">Section 31.2, “Installation Problems”</a>.
+   </p><p>
+    The menu bar at the bottom screen offers some advanced functionality
+    needed in some setups. Using the F keys, you can specify additional
+    options to pass to the installation routines without having to know the
+    detailed syntax of these parameters (see
+    <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom" title="10.4.2. Using Custom Boot Options">Section 10.4.2, “Using Custom Boot Options”</a>). A detailed
+    description of the available function keys is available at
+    <a class="xref" href="cha.inst.html#sec.i.yast2.bootscreen" title="3.2.1.1. The Boot Screen on Machines Equipped with Traditional BIOS">Section 3.2.1.1, “The Boot Screen on Machines Equipped with Traditional BIOS”</a>.
+   </p></div><div class="sect2 " id="sec.deployment.remoteinst.bootinst.custom"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.bootinst.custom"><span class="number">10.4.2 </span><span class="name">Using Custom Boot Options</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom">#</a></h3></div></div></div><p>
+    Using the appropriate set of boot options helps simplify your
+    installation procedure. Many parameters can also be configured later
+    using the linuxrc routines, but using the boot options is easier. In
+    some automated setups, the boot options can be provided with
+    <code class="filename">initrd</code> or an <code class="filename">info</code> file.
+   </p><p>
+    The following table lists all installation scenarios mentioned in this
+    chapter with the required parameters for booting and the corresponding
+    boot options. Append all of them in the order they appear in this table
+    to get one boot option string that is handed to the installation
+    routines. For example (all in one line):
+   </p><div class="verbatim-wrap"><pre class="screen">install=<em class="replaceable ">xxx</em> netdevice<em class="replaceable ">=xxx</em> hostip=<em class="replaceable ">xxx</em> netmask=<em class="replaceable ">xxx</em> vnc=<em class="replaceable ">xxx</em> VNCPassword=<em class="replaceable ">xxx</em></pre></div><p>
+    Replace all the values <em class="replaceable ">xxx</em> in this string
+    with the values appropriate for your setup.
+   </p><div class="variablelist " id="tab.deployment.remoteinst.bootinst.custom"><dl class="variablelist"><dt id="idm140318373649056"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
+     </span></dt><dd><p><span class="formalpara-title">Parameters Needed for Booting. </span>
+        None
+       </p><p><span class="formalpara-title">Boot Options. </span>
+        None needed
+       </p></dd><dt id="idm140318373644592"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat" title="10.1.1. Simple Remote Installation via VNC—Static Network Configuration">Section 10.1.1, “Simple Remote Installation via VNC—Static Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373643200">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         Network device
+        </p></li><li class="listitem "><p>
+         IP address
+        </p></li><li class="listitem "><p>
+         Netmask
+        </p></li><li class="listitem "><p>
+         Gateway
+        </p></li><li class="listitem "><p>
+         VNC enablement
+        </p></li><li class="listitem "><p>
+         VNC password
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373635344">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">path_to_instmedia</em></code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">netdevice=<em class="replaceable ">some_netdevice</em></code>
+         (only needed if several network devices are available)
+        </p></li><li class="listitem "><p>
+         <code class="filename">hostip=<em class="replaceable ">some_ip</em> </code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">netmask=<em class="replaceable ">some_netmask</em>
+         </code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">gateway=<em class="replaceable ">ip_gateway</em> </code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">vnc=1</code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">VNCPassword=<em class="replaceable ">some_password</em>
+         </code>
+        </p></li></ul></div></dd><dt id="idm140318373621728"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncdyn" title="10.1.2. Simple Remote Installation via VNC—Dynamic Network Configuration">Section 10.1.2, “Simple Remote Installation via VNC—Dynamic Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373620272">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         VNC enablement
+        </p></li><li class="listitem "><p>
+         VNC password
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373616064">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">path_to_instmedia</em></code>
+        </p></li><li class="listitem "><p>
+         <code class="literal">vnc=1</code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">VNCPassword=<em class="replaceable ">some_password</em>
+         </code>
+        </p></li></ul></div></dd><dt id="idm140318373609520"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe" title="10.1.3. Remote Installation via VNC—PXE Boot and Wake on LAN">Section 10.1.3, “Remote Installation via VNC—PXE Boot and Wake on LAN”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373608064">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         Location of the TFTP server
+        </p></li><li class="listitem "><p>
+         VNC enablement
+        </p></li><li class="listitem "><p>
+         VNC password
+        </p></li></ul></div><p><span class="formalpara-title">Boot Options. </span>
+        Not applicable; process managed through PXE and DHCP
+       </p></dd><dt id="idm140318373601216"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshstat" title="10.1.4. Simple Remote Installation via SSH—Static Network Configuration">Section 10.1.4, “Simple Remote Installation via SSH—Static Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373599760">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         Network device
+        </p></li><li class="listitem "><p>
+         IP address
+        </p></li><li class="listitem "><p>
+         Netmask
+        </p></li><li class="listitem "><p>
+         Gateway
+        </p></li><li class="listitem "><p>
+         SSH enablement
+        </p></li><li class="listitem "><p>
+         SSH password
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373591904">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">path_to_instmedia</em></code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">netdevice=<em class="replaceable ">some_netdevice</em></code>
+         (only needed if several network devices are available)
+        </p></li><li class="listitem "><p>
+         <code class="filename">hostip=<em class="replaceable ">some_ip</em> </code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">netmask=<em class="replaceable ">some_netmask</em>
+         </code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">gateway=<em class="replaceable ">ip_gateway</em> </code>
+        </p></li><li class="listitem "><p>
+         <code class="literal">ssh=1</code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">ssh.password=<em class="replaceable ">some_password</em>
+         </code>
+        </p></li></ul></div></dd><dt id="idm140318373578288"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshdyn" title="10.1.5. Simple Remote Installation via SSH—Dynamic Network Configuration">Section 10.1.5, “Simple Remote Installation via SSH—Dynamic Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373576832">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         SSH enablement
+        </p></li><li class="listitem "><p>
+         SSH password
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140318373572624">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+         <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">path_to_instmedia</em></code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">ssh=1</code>
+        </p></li><li class="listitem "><p>
+         <code class="filename">ssh.password=<em class="replaceable ">some_password</em>
+         </code>
+        </p></li></ul></div></dd><dt id="idm140318373566080"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshpxe" title="10.1.6. Remote Installation via SSH—PXE Boot and Wake on LAN">Section 10.1.6, “Remote Installation via SSH—PXE Boot and Wake on LAN”</a>
+     </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist compact"><li class="listitem "><p>
+         Location of the installation server
+        </p></li><li class="listitem "><p>
+         Location of the TFTP server
+        </p></li><li class="listitem "><p>
+         SSH enablement
+        </p></li><li class="listitem "><p>
+         SSH password
+        </p></li></ul></div><p><span class="formalpara-title">Boot Options. </span>
+        Not applicable; process managed through PXE and DHCP
+       </p></dd></dl></div><div id="idm140318373558080" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: More Information about linuxrc Boot Options</h6><p>
+     Find more information about the linuxrc boot options used for booting a
+     Linux system at
+     <a class="link" href="http://en.opensuse.org/SDB:Linuxrc" target="_blank">http://en.opensuse.org/SDB:Linuxrc</a>.
+    </p></div><div class="sect3 " id="sec.deployment.remoteinst.bootinst.custom.addon"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.bootinst.custom.addon"><span class="number">10.4.2.1 </span><span class="name">Installing Add-On Products and Driver Updates</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom.addon">#</a></h4></div></div></div><p>
+     <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> supports the installation of add-on products providing
+     extensions (for example the SUSE Linux Enterprise High Availability Extension), third-party products
+     and drivers or additional software. To automatically install
+     an add-on product when deploying <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> remotely, specify the
+     <code class="literal">addon=<em class="replaceable ">REPOSITORY</em></code>
+     parameter.
+    </p><p>
+     <em class="replaceable ">REPOSITORY</em> needs to be a hosted repository
+     that can be read by YaST (YaST2 or YUM (rpm-md)). ISO images
+     are currently not supported.
+    </p><div id="idm140318373550016" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Driver Updates</h6><p>
+      Driver Updates can be found at
+      <a class="link" href="http://drivers.suse.com/" target="_blank">http://drivers.suse.com/</a>. Not all driver updates
+      are provided as repositories—some are only available as iso
+      images and therefore cannot be installed with the
+      <code class="literal">addon</code> parameter. Instructions on how to install
+      driver updates via iso image are available at
+      <a class="link" href="http://drivers.suse.com/doc/SolidDriver/Driver_Kits.html" target="_blank">http://drivers.suse.com/doc/SolidDriver/Driver_Kits.html</a>.
+     </p></div></div></div></div><div class="sect1 " id="sec.deployment.remoteinst.monitor"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.remoteinst.monitor"><span class="number">10.5 </span><span class="name">Monitoring the Installation Process</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor">#</a></h2></div></div></div><p>
+   There are several options for remotely monitoring the installation
+   process. If the proper boot options have been specified while booting for
+   installation, either VNC or SSH can be used to control the installation
+   and system configuration from a remote workstation.
+  </p><div class="sect2 " id="sec.deployment.remoteinst.monitor.vnc"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.monitor.vnc"><span class="number">10.5.1 </span><span class="name">VNC Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc">#</a></h3></div></div></div><p>
+    Using any VNC viewer software, you can remotely control the installation
+    of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> from virtually any operating system. This section
+    introduces the setup using a VNC viewer application or a Web browser.
+   </p><div class="sect3 " id="sec.deployment.remoteinst.monitor.vnc.prep"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.monitor.vnc.prep"><span class="number">10.5.1.1 </span><span class="name">Preparing for VNC Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc.prep">#</a></h4></div></div></div><p>
+     All you need to do on the installation target to prepare for a VNC
+     installation is to provide the appropriate boot options at the initial
+     boot for installation (see
+     <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom" title="10.4.2. Using Custom Boot Options">Section 10.4.2, “Using Custom Boot Options”</a>). The
+     target system boots into a text-based environment and waits for a VNC
+     client to connect to the installation program.
+    </p><p>
+     The installation program announces the IP address and display number
+     needed to connect for installation. If you have physical access to the
+     target system, this information is provided right after the system
+     booted for installation. Enter this data when your VNC client software
+     prompts for it and provide your VNC password.
+    </p><p>
+     Because the installation target announces itself via OpenSLP, you can
+     retrieve the address information of the installation target via an SLP
+     browser without the need for any physical contact to the installation
+     itself, provided your network setup and all machines support OpenSLP:
+    </p><div class="procedure " id="proc.deployment.remoteinst.monitor.vnc.prep"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 10.1: </span><span class="name">Locating VNC installations via OpenSLP </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#proc.deployment.remoteinst.monitor.vnc.prep">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Run <code class="command">slptool findsrvtypes | grep vnc</code> to get a list
+       of all services offering vnc. The vnc installation targets should be
+       available under a service named
+       <code class="literal">YaST.installation.suse</code>.
+      </p></li><li class="step "><p>
+       Run <code class="command">slptool findsrvs</code>
+       <em class="replaceable ">YaST.installation.suse</em> to get a list of
+       installations available. Use the IP address and the port (usually
+       <code class="systemitem">5901</code>) provided with your VNC viewer.
+      </p></li></ol></div></div></div><div class="sect3 " id="sec.deployment.remoteinst.monitor.vnc.connect"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.monitor.vnc.connect"><span class="number">10.5.1.2 </span><span class="name">Connecting to the Installation Program</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc.connect">#</a></h4></div></div></div><p>
+     There are two ways to connect to a VNC server (the installation target
+     in this case). You can either start an independent VNC viewer
+     application on any operating system or connect using a Java-enabled Web
+     browser.
+    </p><p>
+     Using VNC, you can control the installation of a Linux system from any
+     other operating system, including other Linux flavors, Windows, or Mac
+     OS.
+    </p><p>
+     On a Linux machine, make sure that the package
+     <code class="systemitem">tightvnc</code> is installed. On a Windows machine,
+     install the Windows port of this application, which can be obtained at
+     the TightVNC home page
+     (<a class="link" href="http://www.tightvnc.com/download.html" target="_blank">http://www.tightvnc.com/download.html</a>).
+    </p><div class="procedure " id="proc.deployment.remoteinst.monitor.vnc.connect.app"><div class="procedure-contents"><p>
+      To connect to the installation program running on the target machine,
+      proceed as follows:
+     </p><ol class="procedure" type="1"><li class="step "><p>
+       Start the VNC viewer.
+      </p></li><li class="step "><p>
+       Enter the IP address and display number of the installation target as
+       provided by the SLP browser or the installation program itself:
+
+      </p><div class="verbatim-wrap"><pre class="screen"><em class="replaceable ">ip_address</em>:<em class="replaceable ">display_number</em></pre></div><p>
+       A window opens on your desktop displaying the YaST screens as in
+       a normal local installation.
+      </p></li></ol></div></div><p>
+     Using a Web browser to connect to the installation program makes you
+     totally independent of any VNC software or the underlying operating
+     system. As long as the browser application has Java support enabled,
+     you can use any browser (Firefox, Internet Explorer, Chromium, Opera,
+     etc.) to perform the installation of your Linux system.
+    </p><p>
+     To perform a VNC installation, proceed as follows:
+    </p><div class="procedure " id="proc.deployment.remoteinst.monitor.vnc.connect.brow"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Launch your preferred Web browser.
+      </p></li><li class="step "><p>
+       Enter the following at the address prompt:
+
+      </p><div class="verbatim-wrap"><pre class="screen">http://<em class="replaceable ">ip_address_of_target</em>:5801</pre></div></li><li class="step "><p>
+       Enter your VNC password when prompted to do so. The browser window
+       now displays the YaST screens as in a normal local installation.
+      </p></li></ol></div></div></div></div><div class="sect2 " id="sec.deployment.remoteinst.monitor.ssh"><div class="titlepage"><div><div><h3 class="title" id="sec.deployment.remoteinst.monitor.ssh"><span class="number">10.5.2 </span><span class="name">SSH Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh">#</a></h3></div></div></div><p>
+    Using SSH, you can remotely control the installation of your Linux
+    machine using any SSH client software.
+   </p><div class="sect3 " id="sec.deployment.remoteinst.monitor.ssh.prep"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.monitor.ssh.prep"><span class="number">10.5.2.1 </span><span class="name">Preparing for SSH Installation</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh.prep">#</a></h4></div></div></div><p>
+     Apart from installing the appropriate software package (OpenSSH for
+     Linux and PuTTY for Windows), you need to pass the appropriate boot
+     options to enable SSH for installation. See
+     <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom" title="10.4.2. Using Custom Boot Options">Section 10.4.2, “Using Custom Boot Options”</a> for
+     details. OpenSSH is installed by default on any
+     SUSE Linux–based operating system.
+    </p></div><div class="sect3 " id="sec.deployment.remoteinst.monitor.ssh.connect"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.monitor.ssh.connect"><span class="number">10.5.2.2 </span><span class="name">Connecting to the Installation Program</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.ssh.connect">#</a></h4></div></div></div><div class="procedure " id="proc.deployment.remoteinst.monitor.ssh.connect"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Retrieve the installation target's IP address. If you have physical
+       access to the target machine, take the IP address the installation
+       routine provides at the console after the initial boot. Otherwise
+       take the IP address that has been assigned to this particular host in
+       the DHCP server configuration.
+      </p></li><li class="step "><p>
+       At a command line, enter the following command:
+      </p><div class="verbatim-wrap"><pre class="screen">ssh -X root@<em class="replaceable ">
+ip_address_of_target</em></pre></div><p>
+       Replace <em class="replaceable ">ip_address_of_target</em> with the
+       actual IP address of the installation target.
+      </p></li><li class="step "><p>
+       When prompted for a user name, enter <code class="literal">root</code>.
+      </p></li><li class="step "><p>
+       When prompted for the password, enter the password that has been set
+       with the SSH boot option. After you have successfully authenticated,
+       a command line prompt for the installation target appears.
+      </p></li><li class="step "><p>
+       Enter <code class="command">yast</code> to launch the installation program. A
+       window opens showing the normal YaST screens as described in
+       <a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>.
+      </p></li></ol></div></div></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.advdisk.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 11 </span>Advanced Disk Setup</span></a><a class="nav-link" href="cha.y2.lang.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 9 </span>Changing Language and Country Settings with YaST</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

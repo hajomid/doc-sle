@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Creating Images with YaST Image Creator | Deployment Guide | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 23. Creating Images with YaST Image Creator" /><meta name="description" content="The YaST Image Creator is a graphical interface for the KIWI imaging tool (see for more information on KIWI). With Image Creator, you can create a new KIWI configuration, or import an existing one and modify it, then build the image after the configuration is complete. Advanced users can save the configuration to disk, then modify it and build the image manually. To be able to use it you need to install the package yast2-product-creator from the SUSE Software Development Kit. The SDK is a module for SUSE Linux Enterprise and is available via an online channel from the SUSE Customer Center. Alternatively download it from . (Search for SUSE Linux Enterprise Software Development Kit). Refer to for details." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.imaging.html" title="Part IV. Imaging and Creating Products" /><link rel="prev" href="cha.productcreator.html" title="Chapter 22. Creating Images with YaST Product Creator" /><link rel="next" href="cha.deployment_firstboot.html" title="Chapter 24. Deploying Customized Preinstallations" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.imaging.html">Imaging and Creating Products</a><span> › </span><a class="crumb" href="cha.imgcreator.html">Creating Images with YaST Image Creator</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="part.archspec.html"><span class="number">I </span><span class="name">Architecture-Specific Installation Considerations</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">3 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">4 </span><span class="name">Installation on IBM z Systems</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">5 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">6 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">8 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">9 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">10 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">11 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">12 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">13 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">14 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">III </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">15 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">16 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">17 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">18 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">IV </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">19 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">20 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">21 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">22 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">23 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">24 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">V </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">25 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.update.auto.html"><span class="number">26 </span><span class="name">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">27 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 22. Creating Images with YaST Product Creator" href="cha.productcreator.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Deploying Customized Preinstallations" href="cha.deployment_firstboot.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.imaging.html">Imaging and Creating Products</a><span> › </span><a class="crumb" href="cha.imgcreator.html">Creating Images with YaST Image Creator</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 22. Creating Images with YaST Product Creator" href="cha.productcreator.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Deploying Customized Preinstallations" href="cha.deployment_firstboot.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.imgcreator"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">23 </span><span class="name">Creating Images with YaST Image Creator</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>image_creator.xml</li><li><span class="ds-label">ID: </span>cha.imgcreator</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.imgcreator.html#idm140016716727248">#</a></h6></div><p>
+    The YaST Image Creator is a graphical interface for the KIWI
+    imaging tool (see
+    <a class="link" href="http://doc.opensuse.org/projects/kiwi/doc/" target="_blank">http://doc.opensuse.org/projects/kiwi/doc/</a> for more
+    information on KIWI). With Image Creator, you can create a new
+    KIWI configuration, or import an existing one and modify it, then
+    build the image after the configuration is complete. Advanced users can
+    save the configuration to disk, then modify it and build the image
+    manually.
+   </p><p>
+    To be able to use it you need to install the package <code class="systemitem">yast2-product-creator</code> from the SUSE Software Development Kit. The
+    SDK is a module for SUSE Linux Enterprise and is available via an online channel from the
+    SUSE Customer Center.  Alternatively download it from <a class="link" href="http://download.suse.com/" target="_blank">http://download.suse.com/</a>. (Search for <code class="literal">SUSE Linux Enterprise
+    Software Development Kit</code>). Refer to <a class="xref" href="cha.add-ons.html" title="Chapter 9. Installing Modules, Extensions, and Third Party Add-On Products">Chapter 9, <em>Installing Modules, Extensions, and Third Party Add-On Products</em></a> for details.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.imgcreator.html#sec.img.create"><span class="number">23.1 </span><span class="name">Creating Images</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.img.create"><div class="titlepage"><div><div><h2 class="title" id="sec.img.create"><span class="number">23.1 </span><span class="name">Creating Images</span> <a title="Permalink" class="permalink" href="cha.imgcreator.html#sec.img.create">#</a></h2></div></div></div><p>
+   To create an image of a product, proceed as follows:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Start YaST and open the <span class="guimenu">Image Creator</span> module.
+    </p></li><li class="step "><p>
+     The window lists all existing images configuration. You may
+     <span class="guimenu">Edit</span> or <span class="guimenu">Delete</span> them. Choose
+     <span class="guimenu">Add</span> to create a new one.
+    </p></li><li class="step "><p>
+     Enter the name for the new <span class="guimenu">Kiwi Configuration</span>, and
+     choose whether you want to begin from scratch, or base on existing
+     KIWI configuration. In the latter case, provide a path to the
+     existing KIWI configuration so that Image Creator can import it.
+    </p></li><li class="step "><p>
+     Choose the image type you need to build. There are several options -
+     <span class="guimenu">Live ISO Image</span>, <span class="guimenu">Xen Image</span>,
+     or <span class="guimenu">Virtual Disk Image</span>.
+    </p></li><li class="step "><p>
+     Select the output directory where you want to store the KIWI
+     configuration.
+    </p></li><li class="step "><p>
+     If you are running Image Creator on a 64-bit architecture, you can
+     force KIWI to configure the image for 32-bit architecture, and,
+     moreover, limit it to i586 only.
+    </p></li><li class="step "><p>
+     Add the list of package repositories you need to use for your KIWI
+     configuration. Click <span class="guimenu">Add</span> to add a new repository, or
+     <span class="guimenu">Add from System</span> to add repositories that are
+     configured in the system where Image Creator is running. If you need
+     to modify details of an existing repository, select it and click
+     <span class="guimenu">Edit</span>. To remove an unneeded repository, select it
+     and click <span class="guimenu">Delete</span>.
+    </p><p>
+     Proceed with <span class="guimenu">Next</span>.
+    </p><div class="figure" id="fig.imgcreator.repos"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/image_creator.png"><img src="images/image_creator.png" width="" alt="Editing Repository in Image Creator" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 23.1: </span><span class="name">Editing Repository in Image Creator </span><a title="Permalink" class="permalink" href="cha.imgcreator.html#fig.imgcreator.repos">#</a></h6></div></div></li><li class="step "><p>
+     There are four tabs in the next screen. Here you can set more
+     configuration options supported by KIWI to fine-tune the resulting
+     image.
+    </p><p>
+     In the <span class="guimenu">Image Configuration</span> tab, you can set the
+     image version and size, and then modify the software selection for the
+     image in detail. You can specify patterns/packages for three package
+     sections: packages included on the image, in the bootstrap, and
+     packages intended to be deleted from the image.
+    </p><div class="figure" id="fig.imgcreator.tabs"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/image_creator_tabs.png"><img src="images/image_creator_tabs.png" width="" alt="KIWI Detailed Configuration in Image Creator" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 23.2: </span><span class="name">KIWI Detailed Configuration in Image Creator </span><a title="Permalink" class="permalink" href="cha.imgcreator.html#fig.imgcreator.tabs">#</a></h6></div></div><p>
+     To change the list of packages and/or patterns intended for
+     installation (or for ignoring), click <span class="guimenu">Change</span> and
+     <span class="guimenu">YaST Package Selector</span> opens, where you can make
+     your selection.
+    </p><p>
+     In the <span class="guimenu">Description</span> tab, fill in information about
+     the author of the image, description, and the locale settings.
+    </p><p>
+     The <span class="guimenu">Users</span> tab lets you add new users who should be
+     available on the target system.
+    </p><p>
+     Next, you can edit the configuration <span class="guimenu">Scripts</span> used to
+     build your image.
+    </p><p>
+     Lastly, configure the directory with system configuration and scripts
+     in the <span class="guimenu">Directories</span> tab.
+    </p></li><li class="step "><p>
+     After you finish configuring the image, click <span class="guimenu">Finish</span>
+     to build it. YaST asks you to confirm your choice. If you decline,
+     the configuration will be saved, and you are returned to the overview
+     screen. If you confirm the build, KIWI is started, and you can see
+     a progress window showing the KIWI log file.
+    </p><p>
+     If the image is successfully built, it is saved to the output directory
+     specified earlier.
+    </p></li></ol></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.deployment_firstboot.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 24 </span>Deploying Customized Preinstallations</span></a><a class="nav-link" href="cha.productcreator.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 22 </span>Creating Images with YaST Product Creator</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

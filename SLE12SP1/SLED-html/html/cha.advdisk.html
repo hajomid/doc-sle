@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Advanced Disk Setup | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 11. Advanced Disk Setup" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP1 (SLED 12 SP1)" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.mandeploy.html" title="Part I. Manual Deployment" /><link rel="prev" href="cha.deployment.remoteinst.html" title="Chapter 10. Remote Installation" /><link rel="next" href="part.update.html" title="Part II. Updating and Upgrading SUSE Linux Enterprise" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.advdisk.html">Advanced Disk Setup</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">I </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">2 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">4 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">5 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">6 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">7 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">8 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">9 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">II </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">12 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">13 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">14 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">15 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">III </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">16 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">17 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">18 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">19 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">20 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">21 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">IV </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">22 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">23 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 10. Remote Installation" href="cha.deployment.remoteinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. Updating and Upgrading SUSE Linux Enterprise" href="part.update.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.advdisk.html">Advanced Disk Setup</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 10. Remote Installation" href="cha.deployment.remoteinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. Updating and Upgrading SUSE Linux Enterprise" href="part.update.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.advdisk"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">11 </span><span class="name">Advanced Disk Setup</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>advanced_disksetup.xml</li><li><span class="ds-label">ID: </span>cha.advdisk</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.advdisk.html#sec.yast2.i_y2_part_expert"><span class="number">11.1 </span><span class="name">Using the YaST Partitioner</span></a></span></dt><dt><span class="sect1"><a href="cha.advdisk.html#sec.yast2.system.lvm"><span class="number">11.2 </span><span class="name">LVM Configuration</span></a></span></dt><dt><span class="sect1"><a href="cha.advdisk.html#sec.yast2.system.raid"><span class="number">11.3 </span><span class="name">Soft RAID Configuration</span></a></span></dt></dl></div></div><p>
+  Sophisticated system configurations require specific disk setups. All
+  common partitioning tasks can be done with YaST. To get persistent
+  device naming with block devices, use the block devices below
+  <code class="filename">/dev/disk/by-id</code> or
+  <code class="filename">/dev/disk/by-uuid</code>. Logical Volume Management (LVM) is
+  a disk partitioning scheme that is designed to be much more flexible than
+  the physical partitioning used in standard setups. Its snapshot
+  functionality enables easy creation of data backups. Redundant Array of
+  Independent Disks (RAID) offers increased data integrity, performance, and
+  fault tolerance. <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> also supports multipath I/O
+  , and there is also the option to use iSCSI as a
+  networked disk.
+ </p><div class="sect1 " id="sec.yast2.i_y2_part_expert"><div class="titlepage"><div><div><h2 class="title" id="sec.yast2.i_y2_part_expert"><span class="number">11.1 </span><span class="name">Using the YaST Partitioner</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>yast2_manpart.xml</li><li><span class="ds-label">ID: </span>sec.yast2.i_y2_part_expert</li></ul></div></div></div></div><a id="idm140318373488720" class="indexterm"></a><a id="idm140318373487696" class="indexterm"></a><p>
+  With the expert partitioner, shown in
+  <a class="xref" href="cha.advdisk.html#fig.yast2.i_y2_disk_part" title="The YaST Partitioner">Figure 11.1, “The YaST Partitioner”</a>, manually modify the
+  partitioning of one or several hard disks. You can add, delete, resize,
+  and edit partitions, or access the soft RAID, and LVM
+  configuration.
+ </p><div id="idm140318373485296" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Repartitioning the Running System</h6><p>
+   Although it is possible to repartition your system while it is running,
+   the risk of making a mistake that causes data loss is very high. Try
+   to avoid repartitioning your installed system and always do a complete
+   backup of your data before attempting to do so.
+  </p></div><div class="figure" id="fig.yast2.i_y2_disk_part"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/i_y2_disk_part.png"><img src="images/i_y2_disk_part.png" width="" alt="The YaST Partitioner" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.1: </span><span class="name">The YaST Partitioner </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.yast2.i_y2_disk_part">#</a></h6></div></div><p>
+  All existing or suggested partitions on all connected hard disks are
+  displayed in the list of <span class="guimenu">Available Storage</span> in the
+  YaST <span class="guimenu">Expert Partitioner</span> dialog. Entire hard disks
+  are listed as devices without numbers, such as
+  <code class="filename">/dev/sda</code>. Partitions are listed as parts
+  of these devices, such as
+  <code class="filename">/dev/sda1</code>. The size, type,
+  encryption status, file system, and mount point of the hard disks and
+  their partitions are also displayed. The mount point describes where the
+  partition appears in the Linux file system tree.
+ </p><p>
+  Several functional views are available on the left hand <span class="guimenu">System
+  View</span>. Use these views to gather information about existing
+  storage configurations, or to configure functions like
+  <code class="literal">RAID</code>, <code class="literal">Volume Management</code>,
+  <code class="literal">Crypt Files</code>, or view file systems with additional
+  features, such as Btrfs, NFS, or <code class="literal">TMPFS</code>.
+ </p><p>
+  If you run the expert dialog during installation, any free hard disk space
+  is also listed and automatically selected. To provide more disk space to
+  <span class="productname"><span class="phrase">SUSE® Linux Enterprise Desktop</span></span>, free the needed space starting from the bottom toward
+  the top of the list (starting from the last partition of a hard disk
+  toward the first).
+ </p><div class="sect2 " id="sec.IB.part.typen"><div class="titlepage"><div><div><h3 class="title" id="sec.IB.part.typen"><span class="number">11.1.1 </span><span class="name">Partition Types</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.IB.part.typen">#</a></h3></div></div></div><a id="idm140318373469824" class="indexterm"></a><p>
+   Every hard disk has a partition table with space for four entries. Every
+   entry in the partition table corresponds to a primary partition or an
+   extended partition. Only one extended partition entry is allowed,
+   however.
+  </p><p>
+   A primary partition simply consists of a continuous range of cylinders
+   (physical disk areas) assigned to a particular operating system. With
+   primary partitions you would be limited to four partitions per hard disk,
+   because more do not fit in the partition table. This is why extended
+   partitions are used. Extended partitions are also continuous ranges of
+   disk cylinders, but an extended partition may be divided into
+   <span class="emphasis"><em>logical partitions</em></span> itself. Logical partitions do not
+   require entries in the partition table. In other words, an extended
+   partition is a container for logical partitions.
+  </p><p>
+   If you need more than four partitions, create an extended partition as
+   the fourth partition (or earlier). This extended partition should occupy
+   the entire remaining free cylinder range. Then create multiple logical
+   partitions within the extended partition. The maximum number of logical
+   partitions is 63, independent of the disk type. It does not matter which
+   types of partitions are used for Linux. Primary and logical partitions
+   both function normally.
+  </p></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.newpart"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.newpart"><span class="number">11.1.2 </span><span class="name">Creating a Partition</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.newpart">#</a></h3></div></div></div><a id="idm140318373464352" class="indexterm"></a><p>
+   To create a partition from scratch select <span class="guimenu">Hard Disks</span>
+   and then a hard disk with free space. The actual modification can be done
+   in the <span class="guimenu">Partitions</span> tab:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Select <span class="guimenu">Add</span> and specify the partition type (primary
+     or extended). Create up to four primary partitions or up to three
+     primary partitions and one extended partition. Within the extended
+     partition, create several logical partitions (see
+     <a class="xref" href="cha.advdisk.html#sec.IB.part.typen" title="11.1.1. Partition Types">Section 11.1.1, “Partition Types”</a>).
+    </p></li><li class="step "><p>
+     Specify the size of the new partition. You can either choose to occupy
+     all the free unpartitioned space, or enter a custom size.
+    </p></li><li class="step "><p>
+     Select the file system to use and a mount point. YaST suggests a
+     mount point for each partition created. To use a different mount
+     method, like mount by label, select <span class="guimenu">Fstab Options</span>.
+     For more information on supported file systems, see
+     <code class="systemitem">root</code>.
+    </p></li><li class="step "><p>
+     Specify additional file system options if your setup requires them.
+     This is necessary, for example, if you need persistent device names.
+     For details on the available options, refer to
+     <a class="xref" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.options" title="11.1.3. Editing a Partition">Section 11.1.3, “Editing a Partition”</a>.
+    </p></li><li class="step "><p>
+     Click <span class="guimenu">Finish</span> to apply your partitioning setup and
+     leave the partitioning module.
+    </p><p>
+     If you created the partition during installation, you are returned to
+     the installation overview screen.
+    </p></li></ol></div></div><div class="sect3 " id="yast2.btrfs"><div class="titlepage"><div><div><h4 class="title" id="yast2.btrfs"><span class="number">11.1.2.1 </span><span class="name">Btrfs Partitioning</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#yast2.btrfs">#</a></h4></div></div></div><p>
+    The default file system for the root partition is Btrfs (see
+    <a class="xref" href="cha.snapper.html" title="Chapter 3. System Recovery and Snapshot Management with Snapper">Chapter 3, <em>System Recovery and Snapshot Management with Snapper</em></a> for more information on
+    Btrfs). The root file system is the default subvolume and it is not
+    listed in the list of created subvolumes. As a default Btrfs subvolume,
+    it can be mounted as a normal file system.
+   </p><div id="idm140318373449840" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Btrfs on an Encrypted Root Partition</h6><p>
+     The default partitioning setup suggests the root partition as Btrfs
+     with <code class="filename">/boot</code> being a directory. If you need to have the
+     root partition encrypted in this setup, make sure to use the GPT
+     partition table type instead of the default MSDOS type. Otherwise
+     the GRUB2 boot loader may not have enough space for the second stage loader.
+    </p></div><p>
+    It is possible to create snapshots of Btrfs subvolumes—either
+    manually, or automatically based on system events. For example when
+    making changes to the file system, <code class="command">zypper</code> invokes the
+    <code class="command">snapper</code> command to create snapshots before and after
+    the change. This is useful if you are not satisfied with the change
+    <code class="command">zypper</code> made and want to restore the previous state.
+    As <code class="command">snapper</code> invoked by <code class="command">zypper</code>
+    snapshots the <span class="emphasis"><em>root</em></span> file system by default, it is
+    reasonable to exclude specific directories from being snapshot,
+    depending on the nature of data they hold. And that is why YaST
+    suggests creating the following separate subvolumes.
+   </p><p>
+    
+   </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Suggested Btrfs Subvolumes </span><a title="Permalink" class="permalink" href="cha.advdisk.html#idm140318373442912">#</a></h6></div><dl class="variablelist"><dt id="idm140318373442160"><span class="term "><code class="filename">/tmp /var/tmp /var/run</code>
+     </span></dt><dd><p>
+       Directories with frequently changed content.
+      </p></dd><dt id="idm140318373440032"><span class="term "><code class="filename">/var/spool</code>
+     </span></dt><dd><p>
+       Contains user data, such as mails.
+      </p></dd><dt id="idm140318373437920"><span class="term "><code class="filename">/var/lib</code>
+     </span></dt><dd><p>Holds dynamic data libraries and files plus state information
+       pertaining to an application or the system. </p><p>By default, subvolumes with the option <code class="literal">no copy on
+       write</code> are created for: <code class="filename">/var/lib/mariadb</code>,
+       <code class="filename">/var/lib/pgsql</code>, and
+       <code class="filename">/var/lib/libvirt/images</code>.</p></dd><dt id="idm140318373433488"><span class="term "><code class="filename">/var/log</code>
+     </span></dt><dd><p>
+       Contains system and applications' log files which should never be
+       rolled back.
+      </p></dd><dt id="idm140318373431328"><span class="term "><code class="filename">/var/crash</code>
+     </span></dt><dd><p>
+       Contains memory dumps of crashed kernels.
+      </p></dd><dt id="idm140318373429200"><span class="term "><code class="filename">/srv</code>
+     </span></dt><dd><p>
+       Contains data files belonging to FTP and HTTP servers.
+      </p></dd><dt id="idm140318373427072"><span class="term "><code class="filename">/opt</code>
+     </span></dt><dd><p>
+       Contains third party software.
+      </p></dd></dl></div><div id="idm140318373424800" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Size of Btrfs Partition</h6><p>
+     Because saved snapshots require more disk space, it is recommended to
+     reserve more space for Btrfs partition than for a partition not capable
+     of snapshotting (such as Ext3). Recommended size for a root Btrfs
+     partition with suggested subvolumes is 20GB.
+    </p></div><div class="sect4 " id="yast2.btrfs.yast"><div class="titlepage"><div><div><h5 class="title" id="yast2.btrfs.yast"><span class="number">11.1.2.1.1 </span><span class="name">Managing Btrfs Subvolumes using YaST</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#yast2.btrfs.yast">#</a></h5></div></div></div><p>
+     Subvolumes of a Btrfs partition can be now managed with the YaST
+     <span class="guimenu">Expert partitioner</span> module. You can add new or remove
+     existing subvolumes.
+    </p><div class="procedure " id="idm140318373421008"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11.1: </span><span class="name">Btrfs Subvolumes with YaST </span><a title="Permalink" class="permalink" href="cha.advdisk.html#idm140318373421008">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+       Start the YaST <span class="guimenu">Expert Partitioner</span> with
+       <span class="guimenu">System</span> › <span class="guimenu">Partitioner</span>.
+      </p></li><li class="step "><p>
+       Choose <span class="guimenu">Btrfs</span> in the left <span class="guimenu">System
+       View</span> pane.
+      </p></li><li class="step "><p>
+       Select the Btrfs partition whose subvolumes you need to manage and
+       click <span class="guimenu">Edit</span>.
+      </p></li><li class="step "><p>
+       Click <span class="guimenu">Subvolume Handling</span>. You can see a list off
+       all existing subvolumes of the selected Btrfs partition. You can
+       notice several <code class="literal">@/.snapshots/xyz/snapshot</code>
+       entries—each of these subvolumes belongs to one existing
+       snapshot.
+      </p></li><li class="step "><p>
+       Depending on whether you want to add or remove subvolumes, do the
+       following:
+      </p><ol type="a" class="substeps "><li class="step "><p>
+         To remove a subvolume, select it from the list of <span class="guimenu">Exisitng
+         Subvolumes</span> and click <span class="guimenu">Remove</span>.
+        </p></li><li class="step "><p>
+         To add a new subvolume, enter its name to the <span class="guimenu">New
+         Subvolume</span> text box and click <span class="guimenu">Add new</span>.
+        </p><div class="figure" id="fig.yast2.btrfs.subvolumes"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yats2_btrfs_subvolumes.png"><img src="images/yats2_btrfs_subvolumes.png" width="" alt="Btrfs Subvolumes in YaST Partitioner" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.2: </span><span class="name">Btrfs Subvolumes in YaST Partitioner </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.yast2.btrfs.subvolumes">#</a></h6></div></div></li></ol></li><li class="step "><p>
+       Confirm with <span class="guimenu">OK</span> and <span class="guimenu">Finish</span>.
+      </p></li><li class="step "><p>
+       Leave the partitioner with <span class="guimenu">Finish</span>.
+      </p></li></ol></div></div></div></div></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.options"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.options"><span class="number">11.1.3 </span><span class="name">Editing a Partition</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.options">#</a></h3></div></div></div><a id="idm140318373397136" class="indexterm"></a><p>
+   When you create a new partition or modify an existing partition, you can
+   set various parameters. For new partitions, the default parameters set by
+   YaST are usually sufficient and do not require any modification. To
+   edit your partition setup manually, proceed as follows:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Select the partition.
+    </p></li><li class="step "><p>
+     Click <span class="guimenu">Edit</span> to edit the partition and set the
+     parameters:
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373392560"><span class="term ">File System ID</span></dt><dd><p>
+        <a id="idm140318373391248" class="indexterm"></a>  <a id="idm140318373389904" class="indexterm"></a> Even if you do not want to format the partition at this
+        stage, assign it a file system ID to ensure that the partition is
+        registered correctly. Typical values are <span class="guimenu">Linux</span>,
+        <span class="guimenu">Linux swap</span>, <span class="guimenu">Linux LVM</span>, and
+        <span class="guimenu">Linux RAID</span>.
+       </p></dd><dt id="idm140318373386128"><span class="term ">
+       File System
+      </span></dt><dd><p>
+        <a id="idm140318373384800" class="indexterm"></a> <a id="idm140318373383456" class="indexterm"></a> To change the partition file system, click
+        <span class="guimenu">Format Partition</span> and select file system type in
+        the <span class="guimenu">File System</span> list.
+       </p><p>
+        <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> supports several types of file systems. Btrfs is
+        the Linux file system of choice for the root partition because of
+        its advanced features. It supports copy-on-write functionality,
+        creating snapshots, multi-device spanning, subvolumes, and other
+        useful techniques. XFS, Ext3 and JFS are journaling file systems.
+        These file systems can restore the system very quickly after
+        a system crash, using write processes logged during the operation.
+        Ext2 is not a journaling file system, but it is adequate for smaller
+        partitions because it does not require much disk space for
+        management.
+       </p><p>
+        The default file system for the root partition is Btrfs. The default
+        file system for additional partitions is XFS.
+       </p><p>
+        Swap is a special format that allows the partition to be used as a
+        virtual memory. Create a swap partition of at least 256 MB.
+        However, if you use up your swap space, consider adding more memory
+        to your system instead of adding more swap space.
+       </p><div id="idm140318373377472" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Changing the File System</h6><p>
+         Changing the file system and reformatting partitions irreversibly
+         deletes all data from the partition.
+        </p></div><p>
+        For details on the various file systems, refer to
+        <em class="citetitle ">Storage Administration Guide</em>.
+       </p></dd><dt id="idm140318373374720"><span class="term ">
+       Encrypt Device 
+      </span></dt><dd><p>
+        If you activate the encryption, all data is written to the hard disk
+        in encrypted form. This increases the security of sensitive data,
+        but reduces the system speed, as the encryption takes some time to
+        process. More information about the encryption of file systems is
+        provided in <a class="xref" href="cha.security.cryptofs.html" title="Chapter 11. Encrypting Partitions and Files">Chapter 11, <em>Encrypting Partitions and Files</em></a>.
+       </p></dd><dt id="idm140318373372048"><span class="term ">
+       Mount Point
+      </span></dt><dd><p>
+        Specify the directory where the partition should be mounted in the
+        file system tree. Select from YaST suggestions or enter any
+        other name.
+       </p></dd><dt id="idm140318373370080"><span class="term ">
+       Fstab Options
+      </span></dt><dd><p>
+        Specify various parameters contained in the global file system
+        administration file (<code class="filename">/etc/fstab</code>). The default
+        settings should suffice for most setups. You can, for example,
+        change the file system identification from the device name to a
+        volume label. In the volume label, use all characters except
+        <code class="literal">/</code> and space.
+       </p><p>
+        To get persistent devices names, use the mount option
+        <span class="guimenu">Device ID</span>, <span class="guimenu">UUID</span> or
+        <span class="guimenu">LABEL</span>. In <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>, persistent device
+        names are enabled by default.
+       </p><p>
+        If you prefer to mount the partition by its label, you need to
+        define one in the <span class="guimenu">Volume label</span> text entry. For
+        example, you could use the partition label <code class="literal">HOME</code>
+        for a partition intended to mount to <code class="filename">/home</code>.
+       </p><p>
+        If you intend to use quotas on the file system, use the mount option
+        <span class="guimenu">Enable Quota Support</span>. This must be done before
+        you can define quotas for users in the YaST <span class="guimenu">User
+        Management</span> module. For further information on how to
+        configure user quota, refer to
+        <a class="xref" href="cha.y2.userman.html#sec.y2.userman.adv.quota" title="8.3.4. Managing Quotas">Section 8.3.4, “Managing Quotas”</a>.
+       </p></dd></dl></div></li><li class="step "><p>
+     Select <span class="guimenu">Finish</span> to save the changes.
+    </p></li></ol></div></div><div id="idm140318373358128" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Resize File Systems</h6><p>
+    To resize an existing file system, select the partition and use
+    <span class="guimenu">Resize</span>. Note, that it is not possible to resize
+    partitions while mounted. To resize partitions, unmount the relevant
+    partition before running the partitioner.
+   </p></div></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.options2"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.options2"><span class="number">11.1.4 </span><span class="name">Expert Options</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.options2">#</a></h3></div></div></div><p>
+   After you select a hard disk device (like <span class="guimenu">sda</span>) in the
+   <span class="guimenu">System View</span> pane, you can access the
+   <span class="guimenu">Expert</span> menu in the lower
+   right part of the
+   <span class="guimenu">Expert Partitioner</span> window. The menu contains the
+   following commands:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373352112"><span class="term ">Create New Partition Table</span></dt><dd><p>
+      This option helps you create a new partition table on the selected
+      device.
+     </p><div id="idm140318373350544" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Creating a New Partition Table</h6><p>
+       Creating a new partition table on a device irreversibly removes all
+       the partitions and their data from that device.
+      </p></div></dd><dt id="idm140318373348736"><span class="term ">Clone This Disk</span></dt><dd><p>
+      This option helps you clone the device partition layout (but not the
+      data) to other available disk devices.
+     </p></dd></dl></div></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.configure_options"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.configure_options"><span class="number">11.1.5 </span><span class="name">Advanced Options</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.configure_options">#</a></h3></div></div></div><p>
+   After you select the host name of the computer (the top-level of the tree
+   in the <span class="guimenu">System View</span> pane), you can access the
+   <span class="guimenu">Configure</span> menu in the lower right part of the
+   <span class="guimenu">Expert Partitioner</span> window. The menu contains the
+   following commands:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373343024"><span class="term ">Configure iSCSI</span></dt><dd><p>
+      To access SCSI over IP block devices, you first need to configure
+      iSCSI. This results in additionally available devices in the main
+      partition list.
+     </p></dd><dt id="idm140318373341072"><span class="term ">Configure Multipath</span></dt><dd><p>
+      Selecting this option helps you configure the multipath enhancement to
+      the supported mass storage devices.
+     </p></dd></dl></div></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.info"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.info"><span class="number">11.1.6 </span><span class="name">More Partitioning Tips</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.info">#</a></h3></div></div></div><p>
+   The following section includes a few hints and tips on partitioning that
+   should help you make the right decisions when setting up your system.
+  </p><div id="idm140318373337008" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Cylinder Numbers</h6><p>
+    Note, that different partitioning tools may start counting the cylinders
+    of a partition with <code class="literal">0</code> or with <code class="literal">1</code>.
+    When calculating the number of cylinders, you should always use the
+    difference between the last and the first cylinder number and add one.
+   </p></div><div class="sect3 " id="sec.yast2.i_y2_part_expert.info.swap"><div class="titlepage"><div><div><h4 class="title" id="sec.yast2.i_y2_part_expert.info.swap"><span class="number">11.1.6.1 </span><span class="name">Using <code class="literal">swap</code></span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.info.swap">#</a></h4></div></div></div><p>
+    Swap is used to extend the available physical memory. It is then
+    possible to use more memory than physical RAM available. The memory
+    management system of kernels before 2.4.10 needed swap as a safety
+    measure. Then, if you did not have twice the size of your RAM in swap,
+    the performance of the system suffered. These limitations no longer
+    exist.
+   </p><p>
+    Linux uses a page called <span class="quote">“<span class="quote">Least Recently Used</span>”</span> (LRU) to
+    select pages that might be moved from memory to disk. Therefore, running
+    applications have more memory available and caching works more smoothly.
+   </p><p>
+    If an application tries to allocate the maximum allowed memory, problems
+    with swap can arise. There are three major scenarios to look at:
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373330384"><span class="term ">System with no swap</span></dt><dd><p>
+       The application gets the maximum allowed memory. All caches are
+       freed, and thus all other running applications are slowed. After a
+       few minutes, the kernel's out-of-memory kill mechanism activates and
+       kills the process.
+      </p></dd><dt id="idm140318373328352"><span class="term ">System with medium sized swap (128 MB–512 MB)</span></dt><dd><p>
+       At first, the system slows like a system without swap. After all
+       physical RAM has been allocated, swap space is used as well. At this
+       point, the system becomes very slow and it becomes impossible to run
+       commands from remote. Depending on the speed of the hard disks that
+       run the swap space, the system stays in this condition for about 10
+       to 15 minutes until the out-of-memory kill mechanism resolves the
+       issue. Note that you will need a certain amount of swap if the
+       computer needs to perform a <span class="quote">“<span class="quote">suspend to disk</span>”</span>. In that
+       case, the swap size should be large enough to contain the necessary
+       data from memory (512 MB–1GB).
+      </p></dd><dt id="idm140318373325424"><span class="term ">System with lots of swap (several GB)</span></dt><dd><p>
+       It is better to not have an application that is out of control and
+       swapping excessively in this case. If you use such application, the
+       system will need many hours to recover. In the process, it is likely
+       that other processes get timeouts and faults, leaving the system in
+       an undefined state, even after terminating the faulty process. In
+       this case, do a hard machine reboot and try to get it running again.
+       Lots of swap is only useful if you have an application that relies on
+       this feature. Such applications (like databases or graphics
+       manipulation programs) often have an option to directly use hard disk
+       space for their needs. It is advisable to use this option instead of
+       using lots of swap space.
+      </p></dd></dl></div><p>
+    If your system is not out of control, but needs more swap after some
+    time, it is possible to extend the swap space online. If you prepared a
+    partition for swap space, add this partition with YaST. If you do
+    not have a partition available, you can also use a swap file to extend
+    the swap. Swap files are generally slower than partitions, but compared
+    to physical RAM, both are extremely slow so the actual difference is
+    negligible.
+   </p><div class="procedure " id="idm140318373321792"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11.2: </span><span class="name">Adding a Swap File Manually </span><a title="Permalink" class="permalink" href="cha.advdisk.html#idm140318373321792">#</a></h6></div><div class="procedure-contents"><p>
+     To add a swap file in the running system, proceed as follows:
+    </p><ol class="procedure" type="1"><li class="step "><p>
+      Create an empty file in your system. For example, if you want to add a
+      swap file with 128 MB swap at
+      <code class="filename">/var/lib/swap/swapfile</code>, use the commands:
+     </p><div class="verbatim-wrap"><pre class="screen">mkdir -p /var/lib/swap
+dd if=/dev/zero of=/var/lib/swap/swapfile bs=1M count=128</pre></div></li><li class="step "><p>
+      Initialize this swap file with the command
+     </p><div class="verbatim-wrap"><pre class="screen">mkswap /var/lib/swap/swapfile</pre></div><div id="idm140318373317312" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changed UUID for Swap Partitions when Formatting via <code class="command">mkswap</code></h6><p>Do not reformat existing swap partitions with <code class="command">mkswap</code>
+     if possible. Reformatting with <code class="command">mkswap</code> will change
+     the UUID value of the swap partition. Either reformat via YaST (will
+     update <code class="filename">/etc/fstab</code>) or adjust
+     <code class="filename">/etc/fstab</code> manually.
+  </p></div></li><li class="step "><p>
+      Activate the swap with the command
+     </p><div class="verbatim-wrap"><pre class="screen">swapon /var/lib/swap/swapfile</pre></div><p>
+      To disable this swap file, use the command
+     </p><div class="verbatim-wrap"><pre class="screen">swapoff /var/lib/swap/swapfile</pre></div></li><li class="step "><p>
+      Check the current available swap spaces with the command
+     </p><div class="verbatim-wrap"><pre class="screen">cat /proc/swaps</pre></div><p>
+      Note that at this point, it is only temporary swap space. After the
+      next reboot, it is no longer used.
+     </p></li><li class="step "><p>
+      To enable this swap file permanently, add the following line to
+      <code class="filename">/etc/fstab</code>:
+     </p><div class="verbatim-wrap"><pre class="screen">/var/lib/swap/swapfile swap swap defaults 0 0</pre></div></li></ol></div></div></div></div><div class="sect2 " id="sec.yast2.i_y2_part_expert.lvm"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.i_y2_part_expert.lvm"><span class="number">11.1.7 </span><span class="name">Partitioning and LVM</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.i_y2_part_expert.lvm">#</a></h3></div></div></div><p>
+   From the <span class="guimenu">Expert partitioner</span>, access the LVM
+   configuration by clicking the <span class="guimenu">Volume Management</span> item
+   in the <span class="guimenu">System View</span> pane. However, if a working LVM
+   configuration already exists on your system, it is automatically
+   activated upon entering the initial LVM configuration of a session. In
+   this case, all disks containing a partition (belonging to an activated
+   volume group) cannot be repartitioned. The Linux kernel cannot reread the
+   modified partition table of a hard disk when any partition on this disk
+   is in use. If you already have a working LVM configuration on your
+   system, physical repartitioning should not be necessary. Instead, change
+   the configuration of the logical volumes.
+  </p><p>
+   At the beginning of the physical volumes (PVs), information about the
+   volume is written to the partition. To reuse such a partition for other
+   non-LVM purposes, it is advisable to delete the beginning of this volume.
+   For example, in the VG <code class="literal">system</code> and PV
+   <code class="filename">/dev/sda2</code>, do this with the command
+   <code class="command">dd</code> <code class="option">if=/dev/zero of=/dev/sda2 bs=512
+   count=1</code>.
+  </p><div id="idm140318373300784" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: File System for Booting</h6><p>
+    The file system used for booting (the root file system or
+    <code class="filename">/boot</code>) must not be stored on an LVM logical volume.
+    Instead, store it on a normal physical partition.
+   </p></div><p>
+    In case you want to change your <code class="filename">/usr</code> or
+    <code class="systemitem">swap</code>, refer to <a class="xref" href="cha.boot.html#pro.boot.linuxrc.lvm" title="Updating Init RAM Disk When Switching to Logical Volumes">Procedure 9.1, “Updating Init RAM Disk When Switching to Logical Volumes”</a>.
+  </p></div></div><div class="sect1 " id="sec.yast2.system.lvm"><div class="titlepage"><div><div><h2 class="title" id="sec.yast2.system.lvm"><span class="number">11.2 </span><span class="name">LVM Configuration</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>lvm.xml</li><li><span class="ds-label">ID: </span>sec.yast2.system.lvm</li></ul></div></div></div></div><a id="idm140318373292304" class="indexterm"></a><a id="idm140318373291280" class="indexterm"></a><a id="idm140318373290256" class="indexterm"></a><p>
+  This section briefly describes the principles behind the Logical Volume
+  Manager (LVM) and its multipurpose features. In
+  <a class="xref" href="cha.advdisk.html#sec.yast2.system.lvm.yast" title="11.2.2. LVM Configuration with YaST">Section 11.2.2, “LVM Configuration with YaST”</a>, learn how to set up LVM with
+  YaST.
+ </p><div id="idm140318373287904" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Back up Your Data</h6><p>
+   Using LVM is sometimes associated with increased risk such as data loss.
+   Risks also include application crashes, power failures, and faulty
+   commands. Save your data before implementing LVM or reconfiguring
+   volumes. Never work without a backup.
+  </p></div><div class="sect2 " id="sec.yast2.system.lvm.explained"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.system.lvm.explained"><span class="number">11.2.1 </span><span class="name">The Logical Volume Manager</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm.explained">#</a></h3></div></div></div><p>
+   The LVM enables flexible distribution of hard disk space over several
+   file systems. It was developed because sometimes the need to change the
+   segmenting of hard disk space arises just after the initial partitioning
+   has been done. Because it is difficult to modify partitions on a running
+   system, LVM provides a virtual pool (volume group, VG for short) of
+   memory space from which logical volumes (LVs) can be created as needed.
+   The operating system accesses these LVs instead of the physical
+   partitions. Volume groups can occupy more than one disk, so that several
+   disks or parts of them may constitute one single VG. This way, LVM
+   provides a kind of abstraction from the physical disk space that allows
+   its segmentation to be changed in a much easier and safer way than with
+   physical repartitioning. Background information regarding physical
+   partitioning can be found in <a class="xref" href="cha.advdisk.html#sec.IB.part.typen" title="11.1.1. Partition Types">Section 11.1.1, “Partition Types”</a> and
+   <a class="xref" href="cha.advdisk.html#sec.yast2.i_y2_part_expert" title="11.1. Using the YaST Partitioner">Section 11.1, “Using the YaST Partitioner”</a>.
+  </p><div class="figure" id="fig.lvm.explained.schematic"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/lvm.png"><img src="images/lvm.png" width="" alt="Physical Partitioning versus LVM" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.3: </span><span class="name">Physical Partitioning versus LVM </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.lvm.explained.schematic">#</a></h6></div></div><p>
+   <a class="xref" href="cha.advdisk.html#fig.lvm.explained.schematic" title="Physical Partitioning versus LVM">Figure 11.3, “Physical Partitioning versus LVM”</a> compares physical
+   partitioning (left) with LVM segmentation (right). On the left side, one
+   single disk has been divided into three physical partitions (PART), each
+   with a mount point (MP) assigned so that the operating system can gain
+   access. On the right side, two disks have been divided into two and three
+   physical partitions each. Two LVM volume groups (VG 1 and
+   VG 2) have been defined. VG 1 contains two partitions
+   from DISK 1 and one from DISK 2. VG 2 contains
+   the remaining two partitions from DISK 2. In LVM, the physical
+   disk partitions that are incorporated in a volume group are called
+   physical volumes (PVs). Within the volume groups, four LVs (LV 1
+   through LV 4) have been defined. They can be used by the
+   operating system via the associated mount points. The border between
+   different LVs do not need to be aligned with any partition border. See
+   the border between LV 1 and LV 2 in this example.
+  </p><p>
+   LVM features:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Several hard disks or partitions can be combined in a large logical
+     volume.
+    </p></li><li class="listitem "><p>
+     Provided the configuration is suitable, an LV (such as
+     <code class="filename">/usr</code>) can be enlarged if free space is exhausted.
+    </p></li><li class="listitem "><p>
+     With LVM, it is possible to add hard disks or LVs in a running system.
+     However, this requires hotpluggable hardware.
+    </p></li><li class="listitem "><p>
+     It is possible to activate a "striping mode" that distributes the data
+     stream of an LV over several PVs. If these PVs reside on different
+     disks, the read and write performance is enhanced, as with
+     RAID 0.
+    </p></li><li class="listitem "><p>
+     The snapshot feature enables consistent backups (especially for
+     servers) of the running system.
+    </p></li></ul></div><p>
+   With these features, LVM is ready for heavily used home PCs or small
+   servers. LVM is well-suited for the user with a growing data stock (as in
+   the case of databases, music archives, or user directories). This would
+   allow file systems that are larger than the physical hard disk. Another
+   advantage of LVM is that up to 256 LVs can be added. However, working
+   with LVM is different from working with conventional partitions.
+   Instructions and further information about configuring LVM is available
+   in the official LVM HOWTO at
+   <a class="link" href="http://tldp.org/HOWTO/LVM-HOWTO/" target="_blank">http://tldp.org/HOWTO/LVM-HOWTO/</a>.
+  </p><p>
+   Starting from Kernel version 2.6, LVM version 2 is
+   available, which is backward-compatible with the previous LVM and enables
+   the continued management of old volume groups. When creating new volume
+   groups, decide whether to use the new format or the backward-compatible
+   version. LVM 2 does not require any kernel patches. It uses
+   the device mapper integrated in kernel 2.6. This kernel only supports
+   LVM version 2. Therefore, when talking about LVM, this section
+   always refers to LVM version 2.
+  </p><div class="sect3 " id="sec.yast2.system.lvm.explained.thin"><div class="titlepage"><div><div><h4 class="title" id="sec.yast2.system.lvm.explained.thin"><span class="number">11.2.1.1 </span><span class="name">Thin Provisioning</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm.explained.thin">#</a></h4></div></div></div><p>
+    Starting from Kernel version 3.4, LVM supports thin
+    provisioning. A thin-provisioned volume has a virtual capacity and a
+    real capacity. <span class="emphasis"><em>Virtual</em></span> capacity is the volume
+    storage capacity that is available to a host. <span class="emphasis"><em>Real</em></span>
+    capacity is the storage capacity that is allocated to a volume copy from
+    a storage pool. In a fully allocated volume, the virtual capacity and
+    real capacity are the same. In a thin-provisioned volume, however, the
+    virtual capacity can be much larger than the real capacity. If a
+    thin-provisioned volume does not have enough real capacity for a write
+    operation, the volume is taken offline and an error is logged.
+   </p><p>
+    For more general information, see
+    <a class="link" href="http://wikibon.org/wiki/v/Thin_provisioning" target="_blank">http://wikibon.org/wiki/v/Thin_provisioning</a>.
+   </p></div></div><div class="sect2 " id="sec.yast2.system.lvm.yast"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.system.lvm.yast"><span class="number">11.2.2 </span><span class="name">LVM Configuration with YaST</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm.yast">#</a></h3></div></div></div><p>
+   The YaST LVM configuration can be reached from the YaST Expert
+   Partitioner (see <a class="xref" href="cha.advdisk.html#sec.yast2.i_y2_part_expert" title="11.1. Using the YaST Partitioner">Section 11.1, “Using the YaST Partitioner”</a>) within the
+   <span class="guimenu">Volume Management</span> item in the <span class="guimenu">System
+   View</span> pane. The Expert Partitioner allows you to edit and delete
+   existing partitions and also create new ones that need to be used with
+   LVM. The first task is to create PVs that provide space to a volume
+   group:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Select a hard disk from <span class="guimenu">Hard Disks</span>.
+    </p></li><li class="step "><p>
+     Change to the <span class="guimenu">Partitions</span> tab.
+    </p></li><li class="step "><p>
+     Click <span class="guimenu">Add</span> and enter the desired size of the PV on
+     this disk.
+    </p></li><li class="step "><p>
+     Use <span class="guimenu">Do not format partition</span> and change the
+     <span class="guimenu">File System ID</span> to <span class="guimenu">0x8E Linux LVM</span>.
+     Do not mount this partition.
+    </p></li><li class="step "><p>
+     Repeat this procedure until you have defined all the desired physical
+     volumes on the available disks.
+    </p></li></ol></div></div><div class="sect3 " id="sec.yast2.system.lvm.yast.volume_groups"><div class="titlepage"><div><div><h4 class="title" id="sec.yast2.system.lvm.yast.volume_groups"><span class="number">11.2.2.1 </span><span class="name">Creating Volume Groups</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm.yast.volume_groups">#</a></h4></div></div></div><p>
+    If no volume group exists on your system, you must add one (see
+    <a class="xref" href="cha.advdisk.html#fig.lvm.yast.volgrp" title="Creating a Volume Group">Figure 11.4, “Creating a Volume Group”</a>). It is possible to create
+    additional groups by clicking <span class="guimenu">Volume Management</span> in
+    the <span class="guimenu">System View</span> pane, and then on <span class="guimenu">Add Volume
+    Group</span>. One single volume group is usually sufficient.
+   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Enter a name for the VG, for example, <code class="literal">system</code>.
+     </p></li><li class="step "><p>
+      Select the desired <span class="guimenu">Physical Extend Size</span>. This value
+      defines the size of a physical block in the volume group. All the disk
+      space in a volume group is handled in blocks of this size.
+     </p></li><li class="step "><p>
+      Add the prepared PVs to the VG by selecting the device and clicking
+      <span class="guimenu">Add</span>. Selecting several devices is possible by
+      holding <span class="keycap">Ctrl</span> while selecting the devices.
+     </p></li><li class="step "><p>
+      Select <span class="guimenu">Finish</span> to make the VG available to further
+      configuration steps.
+     </p></li></ol></div></div><div class="figure" id="fig.lvm.yast.volgrp"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_lvm4.png"><img src="images/yast2_lvm4.png" width="" alt="Creating a Volume Group" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.4: </span><span class="name">Creating a Volume Group </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.lvm.yast.volgrp">#</a></h6></div></div><p>
+    If you have multiple volume groups defined and want to add or remove
+    PVs, select the volume group in the <span class="guimenu">Volume Management</span>
+    list and click <span class="guimenu">Resize</span>. In the following window, you
+    can add or remove PVs to the selected volume group.
+   </p></div><div class="sect3 " id="sec.yast2.system.lvm.yast.logical_vol"><div class="titlepage"><div><div><h4 class="title" id="sec.yast2.system.lvm.yast.logical_vol"><span class="number">11.2.2.2 </span><span class="name">Configuring Logical Volumes</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.lvm.yast.logical_vol">#</a></h4></div></div></div><p>
+    After the volume group has been filled with PVs, define the LVs which
+    the operating system should use in the next dialog. Choose the current
+    volume group and change to the <span class="guimenu">Logical Volumes</span> tab.
+    <span class="guimenu">Add</span>, <span class="guimenu">Edit</span>,
+    <span class="guimenu">Resize</span>, and <span class="guimenu">Delete</span> LVs as needed
+    until all space in the volume group has been occupied. Assign at least
+    one LV to each volume group.
+   </p><div class="figure" id="fig.lvm.yast.mgmt"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_lvm6.png"><img src="images/yast2_lvm6.png" width="" alt="Logical Volume Management" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.5: </span><span class="name">Logical Volume Management </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.lvm.yast.mgmt">#</a></h6></div></div><p>
+    Click <span class="guimenu">Add</span> and go through the wizard-like pop-up that
+    opens:
+   </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+      Enter the name of the LV. For a partition that should be mounted to
+      <code class="filename">/home</code>, a name like <code class="literal">HOME</code> could
+      be used.
+     </p></li><li class="listitem "><p>
+      Select the type of the LV. It can be either <span class="guimenu">Normal
+      Volume</span>, <span class="guimenu">Thin Pool</span>, or <span class="guimenu">Thin
+      Volume</span>. Note that you need to create a thin pool first, which
+      can store individual thin volumes. The big advantage of thin
+      provisioning is that the total sum of all thin volumes stored in a thin
+      pool can exceed the size of the pool itself.
+     </p></li><li class="listitem "><p>
+      Select the size and the number of stripes of the LV. If you have only
+      one PV, selecting more than one stripe is not useful.
+     </p></li><li class="listitem "><p>
+      Choose the file system to use on the LV and the mount point.
+     </p></li></ol></div><p>
+    By using stripes it is possible to distribute the data stream in the LV
+    among several PVs (striping). However, striping a volume can only be
+    done over different PVs, each providing at least the amount of space of
+    the volume. The maximum number of stripes equals to the number of PVs,
+    where Stripe "1" means "no striping". Striping only makes sense with PVs
+    on different hard disks, otherwise performance will decrease.
+   </p><div id="idm140318373213856" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Striping</h6><p>
+     YaST cannot, at this point, verify the correctness of your entries
+     concerning striping. Any mistake made here is apparent only later when
+     the LVM is implemented on disk.
+    </p></div><p>
+    If you have already configured LVM on your system, the existing logical
+    volumes can also be used. Before continuing, assign appropriate mount
+    points to these LVs. With <span class="guimenu">Finish</span>, return to the
+    YaST Expert Partitioner and finish your work there.
+   </p></div></div></div><div class="sect1 " id="sec.yast2.system.raid"><div class="titlepage"><div><div><h2 class="title" id="sec.yast2.system.raid"><span class="number">11.3 </span><span class="name">Soft RAID Configuration</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.raid">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>raid.xml</li><li><span class="ds-label">ID: </span>sec.yast2.system.raid</li></ul></div></div></div></div><a id="idm140318373206432" class="indexterm"></a><a id="idm140318373205408" class="indexterm"></a><a id="idm140318373204384" class="indexterm"></a><p>
+  The purpose of RAID (redundant array of independent disks) is to combine
+  several hard disk partitions into one large <span class="emphasis"><em>virtual</em></span>
+  hard disk to optimize performance and/or data security. Most RAID
+  controllers use the SCSI protocol because it can address a larger number
+  of hard disks in a more effective way than the IDE protocol. It is also
+  more suitable for the parallel command processing. There are some RAID
+  controllers that support IDE or SATA hard disks. Soft RAID provides the
+  advantages of RAID systems without the additional cost of hardware RAID
+  controllers. However, this requires some CPU time and has memory
+  requirements that make it unsuitable for high performance computers.
+ </p><p>
+  With <span class="productname"><span class="phrase">SUSE® Linux Enterprise Desktop</span></span> , you can combine several hard disks into one
+  soft RAID system. RAID implies several strategies for combining several
+  hard disks in a RAID system, each with different goals, advantages, and
+  characteristics. These variations are commonly known as <span class="emphasis"><em>RAID
+  levels</em></span>.
+ </p><p>
+  Common RAID levels are:
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140318373198608"><span class="term ">RAID 0</span></dt><dd><p>
+     This level improves the performance of your data access by spreading
+     out blocks of each file across multiple disk drives. Actually, this is
+     not really a RAID, because it does not provide data backup, but the
+     name <span class="emphasis"><em>RAID 0</em></span> for this type of system is
+     commonly used. With RAID 0, two or more hard disks are pooled
+     together. Performance is enhanced, but the RAID system is destroyed and
+     your data lost if even one hard disk fails.
+    </p></dd><dt id="idm140318373195936"><span class="term ">RAID 1</span></dt><dd><p>
+     This level provides adequate security for your data, because the data
+     is copied to another hard disk 1:1. This is known as <span class="emphasis"><em>hard
+     disk mirroring</em></span>. If one disk is destroyed, a copy of its
+     contents is available on the other one. All disks but one could be
+     damaged without endangering your data. However, if the damage is not
+     detected, the damaged data can be mirrored to the undamaged disk. This
+     could result in the same loss of data. The writing performance suffers
+     in the copying process compared to using single disk access (10 to 20 %
+     slower), but read access is significantly faster in comparison to any
+     one of the normal physical hard disks. The reason is that the duplicate
+     data can be parallel-scanned. Generally it can be said that
+     Level 1 provides nearly twice the read transfer rate of single
+     disks and almost the same write transfer rate as single disks.
+    </p></dd><dt id="idm140318373192816"><span class="term ">RAID 5</span></dt><dd><p>
+     RAID 5 is an optimized compromise between Level 0 and
+     Level 1, in terms of performance and redundancy. The hard disk
+     space equals the number of disks used minus one. The data is
+     distributed over the hard disks as with RAID 0.
+     <span class="emphasis"><em>Parity blocks</em></span>, created on one of the partitions,
+     exist for security reasons. They are linked to each other with XOR,
+     enabling the contents to be reconstructed by the corresponding parity
+     block in case of system failure. With RAID 5, no more than one
+     hard disk can fail at the same time. If one hard disk fails, it must be
+     replaced as soon as possible to avoid the risk of losing data.
+    </p></dd><dt id="idm140318373189952"><span class="term ">RAID 6</span></dt><dd><p>
+     To further increase the reliability of the RAID system, it is possible
+     to use RAID 6. In this level, even if two disks fail, the array
+     still can be reconstructed. With RAID 6, at least 4 hard disks
+     are needed to run the array. Note that when running as software raid,
+     this configuration needs a considerable amount of CPU time and memory.
+    </p></dd><dt id="idm140318373187808"><span class="term ">RAID 10 (RAID 1+0)</span></dt><dd><p>
+     This RAID implementation combines features of RAID 0 and
+     RAID 1: the data is first mirrored to separate disk arrays,
+     which are inserted into a new RAID 0; type array. In each
+     RAID 1 sub-array, one disk can fail without any damage to the
+     data. A minimum of four disks and an even number of disks is needed to
+     run a RAID 10. This type of RAID is used for database
+     application where a huge load is expected.
+    </p></dd><dt id="idm140318373185584"><span class="term ">Other RAID Levels</span></dt><dd><p>
+     Several other RAID levels have been developed (RAID 2,
+     RAID 3, RAID 4, RAIDn, RAID 10,
+     RAID 0+1, RAID 30, RAID 50, etc.), some
+     being proprietary implementations created by hardware vendors. These
+     levels are not very common and therefore are not explained here.
+    </p></dd></dl></div><div class="sect2 " id="sec.yast2.system.raid.conf"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.system.raid.conf"><span class="number">11.3.1 </span><span class="name">Soft RAID Configuration with YaST</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.raid.conf">#</a></h3></div></div></div><p>
+   The YaST <span class="guimenu">RAID</span> configuration can be reached from
+   the YaST Expert Partitioner, described in
+   <a class="xref" href="cha.advdisk.html#sec.yast2.i_y2_part_expert" title="11.1. Using the YaST Partitioner">Section 11.1, “Using the YaST Partitioner”</a>. This partitioning tool
+   enables you to edit and delete existing partitions and create new ones to
+   be used with soft RAID:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Select a hard disk from <span class="guimenu">Hard Disks</span>.
+    </p></li><li class="step "><p>
+     Change to the <span class="guimenu">Partitions</span> tab.
+    </p></li><li class="step "><p>
+     Click <span class="guimenu">Add</span> and enter the desired size of the raid
+     partition on this disk.
+    </p></li><li class="step "><p>
+     Use <span class="guimenu">Do not Format the Partition</span> and change the
+     <span class="guimenu">File System ID</span> to <span class="guimenu">0xFD Linux
+     RAID</span>. Do not mount this partition.
+    </p></li><li class="step "><p>
+     Repeat this procedure until you have defined all the desired physical
+     volumes on the available disks.
+    </p></li></ol></div></div><p>
+   For RAID 0 and RAID 1, at least two partitions are
+   needed—for RAID 1, usually exactly two and no more. If
+   RAID 5 is used, at least three partitions are required, RAID 6
+   and RAID 10 require at least four partitions. It is recommended to use
+   partitions of the same size only. The RAID partitions should be located
+   on different hard disks to decrease the risk of losing data if one is
+   defective (RAID 1 and 5) and to optimize the performance of
+   RAID 0. After creating all the partitions to use with RAID, click
+   <span class="guimenu">RAID</span> › <span class="guimenu">Add
+   RAID</span> to start the RAID configuration.
+  </p><p>
+   In the next dialog, choose between RAID levels 0, 1, 5, 6 and 10. Then,
+   select all partitions with either the <span class="quote">“<span class="quote">Linux RAID</span>”</span> or
+   <span class="quote">“<span class="quote">Linux native</span>”</span> type that should be used by the RAID system.
+   No swap or DOS partitions are shown.
+  </p><div id="idm140318373169280" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Classify Disks</h6><p>
+    For RAID types where the order of added disks matters, you can mark
+    individual disks with one of the letters A to E. Click the
+    <span class="guimenu">Classify</span> button, select the disk and click of the
+    <span class="guimenu">Class X</span> buttons, where X is the letter you want to
+    assign to the disk. Assign all available RAID disks this way, and
+    confirm with <span class="guimenu">OK</span>. You can easily sort the classified
+    disks with the <span class="guimenu">Sorted</span> or
+    <span class="guimenu">Interleaved</span> buttons, or add a sort pattern from a
+    text file with <span class="guimenu">Pattern File</span>.
+   </p></div><div class="figure" id="fig.yast2.system.raid.conf"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_raid4.png"><img src="images/yast2_raid4.png" width="" alt="RAID Partitions" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 11.6: </span><span class="name">RAID Partitions </span><a title="Permalink" class="permalink" href="cha.advdisk.html#fig.yast2.system.raid.conf">#</a></h6></div></div><p>
+   To add a previously unassigned partition to the selected RAID volume,
+   first click the partition then <span class="guimenu">Add</span>. Assign all
+   partitions reserved for RAID. Otherwise, the space on the partition
+   remains unused. After assigning all partitions, click
+   <span class="guimenu">Next</span> to select the available <span class="guimenu">RAID
+   Options</span>.
+  </p><p>
+   In this last step, set the file system to use, encryption and
+   the mount point for the RAID volume. After completing the configuration
+   with <span class="guimenu">Finish</span>, see the <code class="filename">/dev/md0</code>
+   device and others indicated with <span class="emphasis"><em>RAID</em></span> in the expert
+   partitioner.
+  </p></div><div class="sect2 " id="sec.yast2.system.raid.trouble"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.system.raid.trouble"><span class="number">11.3.2 </span><span class="name">Troubleshooting</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.raid.trouble">#</a></h3></div></div></div><p>
+   Check the file <code class="filename">/proc/mdstat</code> to find out whether a
+   RAID partition has been damaged. If th system fails, shut
+   down your Linux system and replace the defective hard disk with a new one
+   partitioned the same way. Then restart your system and enter the command
+   <code class="command">mdadm /dev/mdX --add /dev/sdX</code>. Replace 'X' with your
+   particular device identifiers. This integrates the hard disk
+   automatically into the RAID system and fully reconstructs it.
+  </p><p>
+   Note that although you can access all data during the rebuild, you may
+   encounter some performance issues until the RAID has been fully rebuilt.
+  </p></div><div class="sect2 " id="sec.yast2.system.raid.information"><div class="titlepage"><div><div><h3 class="title" id="sec.yast2.system.raid.information"><span class="number">11.3.3 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.advdisk.html#sec.yast2.system.raid.information">#</a></h3></div></div></div><p>
+   Configuration instructions and more details for soft RAID can be found in
+   the HOWTOs at:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     <code class="filename">/usr/share/doc/packages/mdadm/Software-RAID.HOWTO.html</code>
+    </p></li><li class="listitem "><p>
+     <a class="link" href="http://raid.wiki.kernel.org" target="_blank">http://raid.wiki.kernel.org</a>
+    </p></li></ul></div><p>
+   Linux RAID mailing lists are available, such as
+   <a class="link" href="http://marc.info/?l=linux-raid" target="_blank">http://marc.info/?l=linux-raid</a>.
+  </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.update.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part II </span>Updating and Upgrading SUSE Linux Enterprise</span></a><a class="nav-link" href="cha.deployment.remoteinst.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 10 </span>Remote Installation</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

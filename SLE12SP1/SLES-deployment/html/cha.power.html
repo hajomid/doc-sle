@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Installation on IBM POWER | Deployment Guide | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 3. Installation on IBM POWER" /><meta name="description" content="This chapter describes the procedure for preparing the installation of SUSE® Linux Enterprise Server on IBM POWER systems." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.archspec.html" title="Part I. Architecture-Specific Installation Considerations" /><link rel="prev" href="cha.x86.html" title="Chapter 2. Installation on AMD64 and Intel 64" /><link rel="next" href="cha.zseries.html" title="Chapter 4. Installation on IBM z Systems" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.archspec.html">Architecture-Specific Installation Considerations</a><span> › </span><a class="crumb" href="cha.power.html">Installation on IBM POWER</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="part.archspec.html"><span class="number">I </span><span class="name">Architecture-Specific Installation Considerations</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">3 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">4 </span><span class="name">Installation on IBM z Systems</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">5 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">6 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">8 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">9 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">10 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">11 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">12 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">13 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">14 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">III </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">15 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">16 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">17 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">18 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">IV </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">19 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">20 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">21 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">22 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">23 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">24 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">V </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">25 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.update.auto.html"><span class="number">26 </span><span class="name">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">27 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 2. Installation on AMD64 and Intel 64" href="cha.x86.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 4. Installation on IBM z Systems" href="cha.zseries.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.archspec.html">Architecture-Specific Installation Considerations</a><span> › </span><a class="crumb" href="cha.power.html">Installation on IBM POWER</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 2. Installation on AMD64 and Intel 64" href="cha.x86.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 4. Installation on IBM z Systems" href="cha.zseries.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.power"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">3 </span><span class="name">Installation on IBM POWER</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>power.xml</li><li><span class="ds-label">ID: </span>cha.power</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.power.html#idm140486208456896">#</a></h6></div><p>
+    This chapter describes the procedure for preparing the installation of
+    <span class="productname"><span class="phrase">SUSE® Linux Enterprise Server</span></span> on IBM POWER systems.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.power.html#sec.power.requirements"><span class="number">3.1 </span><span class="name">Requirements</span></a></span></dt><dt><span class="sect1"><a href="cha.power.html#cha.power.prep"><span class="number">3.2 </span><span class="name">Preparation</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.power.requirements"><div class="titlepage"><div><div><h2 class="title" id="sec.power.requirements"><span class="number">3.1 </span><span class="name">Requirements</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.power.requirements">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>power_requirements.xml</li><li><span class="ds-label">ID: </span>sec.power.requirements</li></ul></div></div></div></div><p>
+  A standard installation requires at least 512 MB of RAM. The installation
+  of a standard system with the GNOME desktop requires at least 3.5 GB of
+  free hard disk space; for more information about hard disk space
+  requirements, see <a class="xref" href="cha.x86.html#l.x86.sysreqs.hw.hd">Hard Disk Requirements</a>.
+ </p><div class="sect2 " id="sec.power.requirements.hw"><div class="titlepage"><div><div><h3 class="title" id="sec.power.requirements.hw"><span class="number">3.1.1 </span><span class="name">Hardware Requirements</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.power.requirements.hw">#</a></h3></div></div></div><a id="idm140486208446736" class="indexterm"></a><p>
+   The SUSE® Linux Enterprise Server operating system can be operated on a wide range of
+   hardware. To provide you with a guide to help you during the planning
+   phase, the minimum requirements are presented here.
+  </p><p>
+   If you want to be sure that a given computer configuration will work,
+   check the database of hardware certified by SUSE. Find a list of
+   certified hardware at
+   <a class="link" href="http://www.suse.com/yessearch/Search.jsp" target="_blank">http://www.suse.com/yessearch/Search.jsp</a>.
+  </p><p>
+   <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> may support additional IBM POWER systems not listed
+   below. For the latest information, see the IBM Information Center for
+   Linux at
+   <a class="link" href="http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaam%2Fliaamdistros.htm" target="_blank">http://publib.boulder.ibm.com/infocenter/lnxinfo/v3r0m0/index.jsp?topic=%2Fliaam%2Fliaamdistros.htm</a>.
+  </p><p>
+   Find up-to-date firmware at IBM FixCentral
+   (<a class="link" href="http://www.ibm.com/support/fixcentral/" target="_blank">http://www.ibm.com/support/fixcentral/</a>). Select
+   your system from the Product Group list.
+  </p><div class="sect3 " id="sec.power.requirements.hw.power8"><div class="titlepage"><div><div><h4 class="title" id="sec.power.requirements.hw.power8"><span class="number">3.1.1.1 </span><span class="name">IBM POWER8 Processor-Based Servers</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.power.requirements.hw.power8">#</a></h4></div></div></div><p>
+    All POWER8 servers are supported that are PowerKVM-capable.
+   </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">POWER8 servers </span><a title="Permalink" class="permalink" href="cha.power.html#idm140486208438288">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+      8247-21L (IBM Power® System S120L)
+     </p></li><li class="listitem "><p>
+      8247-22L (IBM Power System S220L)
+     </p></li><li class="listitem "><p>
+      8284-22A (IBM Power System S2200)
+     </p></li><li class="listitem "><p>
+      8286-41A (IBM Power System S1400)
+     </p></li><li class="listitem "><p>
+      8286-42A (IBM Power System S2400)
+     </p></li></ul></div></div></div><div class="sect2 " id="sec.power.requirements.sw"><div class="titlepage"><div><div><h3 class="title" id="sec.power.requirements.sw"><span class="number">3.1.2 </span><span class="name">Software Requirements</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.power.requirements.sw">#</a></h3></div></div></div><a id="idm140486208430800" class="indexterm"></a><p>
+   A Web browser able to connect to PowerKVM running on the
+   PowerLinux server is required. With this Web browser you will
+   perform pre-installation steps using the Kimchi Web interface.
+  </p></div></div><div class="sect1 " id="cha.power.prep"><div class="titlepage"><div><div><h2 class="title" id="cha.power.prep"><span class="number">3.2 </span><span class="name">Preparation</span> <a title="Permalink" class="permalink" href="cha.power.html#cha.power.prep">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>power_preparing.xml</li><li><span class="ds-label">ID: </span>cha.power.prep</li></ul></div></div></div></div><a id="idm140486208424032" class="indexterm"></a><p>
+  This section describes the preparatory steps that must be taken before the
+  actual installation of SUSE Linux Enterprise Server. The installation procedure depends on the
+  system used. See the following documentation:
+ </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+    For IBM PowerLinux servers with IBM PowerKVM using Kimchi, see
+    <a class="xref" href="cha.power.html#sec.prep.powerlinux.powerkvm.kimchi" title="3.2.1. Installation on IBM PowerLinux Servers with IBM PowerKVM using Kimchi">Section 3.2.1, “Installation on IBM PowerLinux Servers with IBM PowerKVM using Kimchi”</a>.
+   </p></li></ul></div><p>
+  If SUSE® Linux Enterprise Server needs to be installed on several systems or partitions,
+  it is recommended you create a network installation source. The same
+  source can also be used for the concurrent installation on several
+  partitions or several systems. The configuration of a network installation
+  source is described in
+  <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver.sles9" title="13.2.1. Setting Up an Installation Server Using YaST">Section 13.2.1, “Setting Up an Installation Server Using YaST”</a>.
+ </p><p>
+  The installation can be controlled with a VNC client. For more information
+  about VNC, see
+  <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat" title="13.1.1. Simple Remote Installation via VNC—Static Network Configuration">Section 13.1.1, “Simple Remote Installation via VNC—Static Network Configuration”</a>.
+ </p><p>
+  To participate in the <code class="filename">linuxppc-dev</code> mailing list,
+  register using the forms at
+  <a class="link" href="http://lists.ozlabs.org/listinfo/linuxppc-dev/" target="_blank">http://lists.ozlabs.org/listinfo/linuxppc-dev/</a>. The
+  following links are pertinent to the maintenance of an installation:
+ </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+    <a class="link" href="http://www.suse.com/support/kb/" target="_blank">http://www.suse.com/support/kb/</a> is an effective
+    help tool for assisting customers in solving problems. A corresponding
+    article is published whenever SUSE discover that a special case
+    could lead to serious problems. Search the portal using keywords like
+    POWER or PowerKVM.
+   </p></li><li class="listitem "><p>
+    Find security alerts at
+    <a class="link" href="http://www.suse.com/support/security/" target="_blank">http://www.suse.com/support/security/</a>. SUSE
+    also maintains two security-related mailing lists to which anyone may
+    subscribe.
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      <code class="literal">suse-security</code> — General discussion of
+      security regarding Linux and SUSE. All security alerts for
+      SUSE Linux Enterprise Server are sent to this list.
+     </p></li><li class="listitem "><p>
+      <code class="literal">suse-security-announce</code> — The SUSE
+      mailing list exclusively for security alerts.
+     </p></li></ul></div></li></ul></div><div class="sect2 " id="sec.prep.powerlinux.powerkvm.kimchi"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.powerlinux.powerkvm.kimchi"><span class="number">3.2.1 </span><span class="name">Installation on IBM PowerLinux Servers with IBM PowerKVM using Kimchi</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.prep.powerlinux.powerkvm.kimchi">#</a></h3><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>power_powerlinux_powerkvm.xml</li><li><span class="ds-label">ID: </span>sec.prep.powerlinux.powerkvm.kimchi</li></ul></div></div></div></div><a id="idm140486208403680" class="indexterm"></a><p>
+  This section covers the preparatory steps for installing SUSE® Linux Enterprise Server on
+  IBM PowerLinux systems with PowerKVM. It explains the
+  installation from an ISO image with the Kimchi Web interface.
+
+  Kimchi is a tool for administrating IBM PowerKVM.
+ </p><p>
+  This section assumes you have PowerKVM running on your IBM
+  PowerLinux server. If PowerKVM is not preinstalled see
+  <span class="quote">“<span class="quote">Configuring IBM PowerKVM on Power Systems</span>”</span> on
+  <a class="link" href="http://www-01.ibm.com/support/knowledgecenter/linuxonibm/liabp/liabpkickoff.htm" target="_blank">http://www-01.ibm.com/support/knowledgecenter/linuxonibm/liabp/liabpkickoff.htm</a>
+  for installing and setting up PowerKVM.
+ </p><div class="sect3 " id="sec.prep.powerlinux.powerkvm.template"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.powerlinux.powerkvm.template"><span class="number">3.2.1.1 </span><span class="name">Creating a SUSE Linux Enterprise Server Template with Kimchi</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.prep.powerlinux.powerkvm.template">#</a></h4></div></div></div><p>
+   Templates are the installation source for PowerKVM guests.
+  </p><div class="procedure " id="idm140486208398560"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 3.1: </span><span class="name">Creating a Template with Kimchi </span><a title="Permalink" class="permalink" href="cha.power.html#idm140486208398560">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     In the Web browser, enter the URL of the PowerLinux server where
+     PowerKVM is running, for example
+     <code class="literal">https://<em class="replaceable ">powerlinux_ip</em>:8001</code>
+     (replace <em class="replaceable ">powerlinux_ip</em> with the IP address
+     of your system).
+    </p></li><li class="step "><p>
+     Click the <span class="guimenu">Templates</span> tab to activate the
+     <span class="guimenu">Templates</span> page.
+    </p></li><li class="step "><p>
+     Click the green plus sign (<span class="guimenu">+</span>) to create the SUSE Linux Enterprise Server
+     template.
+    </p><p>
+     Provide either a local or a remote ISO image of SUSE Linux Enterprise Server.
+    </p><p>
+     Check <span class="guimenu">I want to use a specific ISO file</span>, and specify
+     the path to the file of the ISO image.
+    </p></li><li class="step "><p>
+     To configure the newly created template, click
+     <span class="guimenu">Actions</span> › <span class="guimenu">Edit</span>,
+     and change the default values as required by your workload.
+    </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/kimchi_create_template.png"><img src="images/kimchi_create_template.png" width="" /></a></div></div></li></ol></div></div><p>
+   For more information, see <span class="quote">“<span class="quote">Setting up a template using
+   Kimchi</span>”</span> on
+   <a class="link" href="http://www-01.ibm.com/support/knowledgecenter/linuxonibm/liabp/liabpkimchitemplate.htm" target="_blank">http://www-01.ibm.com/support/knowledgecenter/linuxonibm/liabp/liabpkimchitemplate.htm</a>.
+  </p></div><div class="sect3 " id="sec.prep.powerlinux.powerkvm.install"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.powerlinux.powerkvm.install"><span class="number">3.2.1.2 </span><span class="name">Installing SUSE Linux Enterprise Server as a Guest with Kimchi</span> <a title="Permalink" class="permalink" href="cha.power.html#sec.prep.powerlinux.powerkvm.install">#</a></h4></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     In the Web browser, enter the URL of the PowerLinux server where
+     PowerKVM is running, for example
+     <code class="literal">https://<em class="replaceable ">powerlinux_ip</em>:8001</code>
+     (replace <em class="replaceable ">powerlinux_ip</em> with the IP address
+     of your system).
+    </p></li><li class="step "><p>
+     Click the <span class="guimenu">Guests</span> tab to activate the
+     <span class="guimenu">Guests</span> page.
+    </p></li><li class="step "><p>
+     Click the green plus sign (<span class="guimenu">+</span>) to create the SUSE Linux Enterprise Server
+     guest.
+    </p></li><li class="step "><p>
+     Enter a <span class="guimenu">Virtual Machine Name</span> for the SUSE Linux Enterprise Server guest.
+    </p><p>
+     Choose the SUSE Linux Enterprise Server template created in
+     <a class="xref" href="cha.power.html#sec.prep.powerlinux.powerkvm.template" title="3.2.1.1. Creating a SUSE Linux Enterprise Server Template with Kimchi">Section 3.2.1.1, “Creating a SUSE Linux Enterprise Server Template with Kimchi”</a> and click
+     <span class="guimenu">Create</span>.
+    </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/kimchi_create_guest.png"><img src="images/kimchi_create_guest.png" width="" /></a></div></div><p>
+     The SUSE Linux Enterprise Server guest is created and ready to be started.
+    </p></li><li class="step "><p>
+     Click the red power button to start the SUSE Linux Enterprise Server guest. Alternatively,
+     select <span class="guimenu">Start</span> from the <span class="guimenu">Actions</span>
+     pull-down button.
+    </p></li><li class="step "><p>
+     Click <span class="guimenu">Actions</span> › <span class="guimenu">Connect</span>, and connect your VNC viewer to the installation process
+     as outlined in
+     <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.monitor.vnc.connect" title="13.5.1.2. Connecting to the Installation Program">Section 13.5.1.2, “Connecting to the Installation Program”</a>.
+    </p></li></ol></div></div><p>
+   Now you can continue with the default installation via VNC.
+  </p></div></div><div class="sect2 " id="sec.prep.powerlinux.powerkvm.virt-install"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.powerlinux.powerkvm.virt-install"><span class="number">3.2.2 </span><span class="name">Installation on IBM PowerLinux Servers with IBM PowerKVM using <code class="command">virt-install</code></span> <a title="Permalink" class="permalink" href="cha.power.html#sec.prep.powerlinux.powerkvm.virt-install">#</a></h3></div></div></div><p>
+   Alternatively, use the <code class="command">virt-install</code> command line tool,
+   if you need to install multiple virtual machines on IBM PowerLinux
+   Server systems. <code class="command">virt-install</code> allows many installation
+   scenarios; in the following a remote installation scenario via VNC and
+   PXE boot is outlined. For more information about
+   <code class="command">virt-install</code>, see
+   <span class="intraxref">Book “<em class="citetitle ">Virtualization Guide</em>”, Chapter 9 “Guest Installation”, Section 9.2 “Installing from the Command Line with <code class="command">virt-install</code>”</span>.
+  </p><p>
+   Prepare a repository with the installation sources and PXE boot enabled
+   target system as described in
+   <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe" title="13.1.3. Remote Installation via VNC—PXE Boot and Wake on LAN">Section 13.1.3, “Remote Installation via VNC—PXE Boot and Wake on LAN”</a>.
+  </p><p>
+   On the command line, enter something similar as follows (adjust the
+   options according to your needs and matching your hardware):
+  </p><div class="verbatim-wrap"><pre class="screen">virt-install --name server_sle12 --memory 4096 --vcpus=2 --pxe \
+--graphics vnc --os-variant sles11 \
+--disk pool=default,size=3000,format=qcow2,allocation=1G,bus=virtio \
+-w mac=<em class="replaceable ">mac_address</em>,model=spapr-vlan</pre></div><p>
+   It will use VNC graphics, and it will automatically launch the graphical
+   client.
+  </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.zseries.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 4 </span>Installation on IBM z Systems</span></a><a class="nav-link" href="cha.x86.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 2 </span>Installation on AMD64 and Intel 64</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

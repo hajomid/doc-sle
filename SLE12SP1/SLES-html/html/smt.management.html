@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Managing Repositories with YaST SMT Server Management | Subscription Management Tool for SLES 12 SP1 | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Subscription Management Tool for SLES 12 SP1" /><meta name="chapter-title" content="Chapter 4. Managing Repositories with YaST SMT Server Management" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="index.html" title="Subscription Management Tool for SLES 12 SP1" /><link rel="prev" href="smt.mirroring.html" title="Chapter 3. Mirroring Repositories on the SMT Server" /><link rel="next" href="smt.registration.html" title="Chapter 5. Managing Client Machines with SMT" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">SMT Guide</a><span> › </span><a class="crumb" href="smt.management.html">Managing Repositories with YaST SMT Server Management</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Subscription Management Tool for SLES 12 SP1</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="pre_smt.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="smt.installation.html"><span class="number">1 </span><span class="name">SMT Installation</span></a></li><li class="inactive"><a href="smt.server.html"><span class="number">2 </span><span class="name">SMT Server Configuration</span></a></li><li class="inactive"><a href="smt.mirroring.html"><span class="number">3 </span><span class="name">Mirroring Repositories on the SMT Server</span></a></li><li class="inactive"><a href="smt.management.html"><span class="number">4 </span><span class="name">Managing Repositories with YaST SMT Server Management</span></a></li><li class="inactive"><a href="smt.registration.html"><span class="number">5 </span><span class="name">Managing Client Machines with SMT</span></a></li><li class="inactive"><a href="smt.reporting.html"><span class="number">6 </span><span class="name">SMT Reports</span></a></li><li class="inactive"><a href="smt.tools.html"><span class="number">7 </span><span class="name">SMT Tools and Configuration Files</span></a></li><li class="inactive"><a href="smt.client.html"><span class="number">8 </span><span class="name">Configuring Clients to Use SMT</span></a></li><li class="inactive"><a href="smt.backup.html"><span class="number">9 </span><span class="name">Backup of the SMT Server</span></a></li><li class="inactive"><a href="smt.app.api.html"><span class="number">A </span><span class="name">SMT REST API</span></a></li><li class="inactive"><a href="app.smt.docupdates.html"><span class="number">B </span><span class="name">Documentation Updates</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 3. Mirroring Repositories on the SMT Server" href="smt.mirroring.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 5. Managing Client Machines with SMT" href="smt.registration.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">SMT Guide</a><span> › </span><a class="crumb" href="smt.management.html">Managing Repositories with YaST SMT Server Management</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 3. Mirroring Repositories on the SMT Server" href="smt.mirroring.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 5. Managing Client Machines with SMT" href="smt.registration.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="smt.management"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h1 class="title"><span class="number">4 </span><span class="name">Managing Repositories with YaST SMT Server Management</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>smt_management.xml</li><li><span class="ds-label">ID: </span>smt.management</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="smt.management.html#smt.yast.staging.starting"><span class="number">4.1 </span><span class="name">Starting SMT Management Module</span></a></span></dt><dt><span class="sect1"><a href="smt.management.html#smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span></a></span></dt><dt><span class="sect1"><a href="smt.management.html#smt.yast.staging.stage"><span class="number">4.3 </span><span class="name">Staging Repositories</span></a></span></dt><dt><span class="sect1"><a href="smt.management.html#smt.yast.staging.client"><span class="number">4.4 </span><span class="name">Checking the Client Status</span></a></span></dt></dl></div></div><p>
+  You can use the YaST SMT Server Management module for day-to-day
+  management. SMT Server Management enables and disables the mirroring
+  of repositories, the staging flag for repositories, and performs the
+  mirroring and staging.
+ </p><div class="sect1 " id="smt.yast.staging.starting"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.starting"><span class="number">4.1 </span><span class="name">Starting SMT Management Module</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.starting">#</a></h2></div></div></div><p>
+   SMT Management is a YaST module. To start the module, do one of
+   the following:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Start YaST and select <span class="guimenu">Network Services</span>, then
+     <span class="guimenu">SMT Server Management</span>.
+    </p></li><li class="listitem "><p>
+     Enter <code class="command">yast2 smt</code> in the command line as
+     <code class="systemitem">root</code>.
+    </p></li></ul></div><p>
+   The SMT Management application window opens with the
+   <span class="guimenu">Repositories</span> tab active.
+  </p><div class="figure" id="idm140016694509984"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_repos.png"><img src="images/smt_repos.png" width="" alt="List of Repositories" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.1: </span><span class="name">List of Repositories </span><a title="Permalink" class="permalink" href="smt.management.html#idm140016694509984">#</a></h6></div></div></div><div class="sect1 " id="smt.yast.staging.viewing"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.viewing">#</a></h2></div></div></div><p>
+   In the <span class="guimenu">Repositories</span> tab, you can see the list of all
+   available package repositories for SMT. For each repository, the
+   list shows the repository's name, target product and architecture,
+   mirroring and staging flag, date of last mirroring, and a short
+   description. You can sort the list by clicking the relevant column's
+   header, and scroll the list items using the scrollbars on the window's
+   right side.
+  </p><div class="sect2 " id="smt.yast.staging.viewing.filter"><div class="titlepage"><div><div><h3 class="title" id="smt.yast.staging.viewing.filter"><span class="number">4.2.1 </span><span class="name">Filtering Repositories</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.viewing.filter">#</a></h3></div></div></div><p>
+    You can also filter out groups of repositories with the
+    <span class="guimenu">Filter</span> drop-down box in the upper left part of the
+    window. The filter list items are collected and assembled dynamically
+    from the first word of the repositories' names. If you use a filter to
+    limit the number of displayed repositories, you can always go back and
+    view all of them by selecting <span class="guimenu">All</span> from the
+    <span class="guimenu">Filter</span> drop-down box. You can also use more than one
+    filter in sequence.
+   </p></div><div class="sect2 " id="smt.yast.staging.viewing.mirror"><div class="titlepage"><div><div><h3 class="title" id="smt.yast.staging.viewing.mirror"><span class="number">4.2.2 </span><span class="name">Mirroring Repositories</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.viewing.mirror">#</a></h3></div></div></div><p> Before you can start to offer package repositories, you need
+        to create a local mirror of their packages. To do so, follow
+        this procedure: </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      From the list, select the line containing the name of the repository
+      you want to mirror.
+     </p></li><li class="step "><p> Click the selected line to highlight it. </p></li><li class="step "><p>
+      Click the <span class="guimenu">Toggle Mirroring</span> button in the lower
+      left part of the window. In the <span class="guimenu">Mirroring</span> column of
+      the selected repository, a check mark appears. If the repository was
+      already selected for mirroring before, the check mark will disappear,
+      and the repository will not be mirrored anymore.
+     </p></li><li class="step "><p>
+      Hit the <span class="guimenu">Mirror Now</span> button and the repository will
+      be mirrored immediately.
+     </p></li><li class="step "><p>
+      A pop-up window appears with the information about mirroring status
+      and result.
+     </p></li><li class="step "><p>
+      Click OK and the original window with the list of repositories will be
+      refreshed.
+     </p></li></ol></div></div><div class="figure" id="idm140016718304144"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_mirroring-done.png"><img src="images/smt_mirroring-done.png" width="" alt="Status of Mirroring Process" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.2: </span><span class="name">Status of Mirroring Process </span><a title="Permalink" class="permalink" href="smt.management.html#idm140016718304144">#</a></h6></div></div></div></div><div class="sect1 " id="smt.yast.staging.stage"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.stage"><span class="number">4.3 </span><span class="name">Staging Repositories</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.stage">#</a></h2></div></div></div><p>
+   After the mirroring is finished, you can stage the mirrored repositories.
+   In SMT, <span class="emphasis"><em>staging</em></span> is a process where you create
+   either testing or production repositories based on the mirrored ones. The
+   testing repository helps you examine the repository and its packages
+   before you make them available in a production environment. To make
+   repositories available for staging, do the following:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     From the repository list, select the line containing the name of the
+     repository you want to manage.
+    </p></li><li class="step "><p>
+     Click the selected line, highlighting it.
+    </p></li><li class="step "><p>
+     Click the <span class="guimenu">Toggle Staging</span> button in the lower left
+     part of the window next to the <span class="guimenu">Toggle Mirroring</span>
+     button. In the <span class="guimenu">Staging</span> column of the selected
+     repository, a check mark appears. If the repository was already
+     selected for staging before, the check mark will disappear, and the
+     repository will not be available for staging.
+    </p></li><li class="step "><p> Repeat steps 1 to 3 for all directories whose staging flag
+          you wish to change. </p></li></ol></div></div><div id="idm140016695708192" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Toggle Staging Button Not Active</h6><p>
+    You can only stage the repositories that were previously selected for
+    mirroring. If it is not the case, the <span class="guimenu">Toggle Staging</span>
+    button will not be active.
+   </p></div><p>
+   Once you mirror the repositories and make them available for staging,
+   click the <span class="guimenu">Staging</span> tab. In the upper left part of
+   the window, there is a <span class="guimenu">Repository Name</span> drop-down box
+   of all repositories which are available for staging. There the repository
+   names have the name of the staging group attached in parentheses. Select
+   the one you want to stage and a list of packages of this repository
+   appears below. Information about the patch name, its version and
+   category, testing and production flags, and a short summary is available
+   for each patch.
+  </p><p>
+   Next to the <span class="guimenu">Repository Name</span> drop-down box, there is a
+   <span class="guimenu">Patch Category</span> filter. It helps you to list only the
+   patches that belong to one of the predefined categories.
+  </p><p>
+   If the selected repository allows for patch filtering, you can toggle the
+   status flag for individual patches. Do so by clicking the
+   <span class="guimenu">Toggle Patch Status</span> button in the lower left part of
+   the window.
+  </p><p> Before creating a repository of packages that are available in
+      the <span class="emphasis"><em>production</em></span> environment, you need to
+      create and test the <span class="emphasis"><em>testing</em></span> repository. Click
+      the <span class="guimenu">Create Snapshot</span> drop-down box and select
+      the <span class="guimenu">From Full Mirror to Testing</span> menu item. A
+      small pop-up window appears informing you about the staging
+      process. After the testing repository snapshot is created, the
+      relevant check marks in the <span class="guimenu">Testing</span> column will
+      be displayed. </p><div class="figure" id="idm140016720193600"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_staging1.png"><img src="images/smt_staging1.png" width="" alt="Testing Snapshot Created" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.3: </span><span class="name">Testing Snapshot Created </span><a title="Permalink" class="permalink" href="smt.management.html#idm140016720193600">#</a></h6></div></div><div id="idm140016719486256" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Creating a Production Snapshot</h6><p>
+    After you enable <span class="emphasis"><em>staging</em></span> for an update repository,
+    you need to create its <span class="emphasis"><em>production</em></span> snapshot to make
+    it available to the clients. Otherwise the clients will not be able to
+    find the update repository.
+   </p></div><p> After you have examined the newly created testing repository,
+      you can safely create a production one. Click the <span class="guimenu">Create
+        Snapshot</span> drop-down box and select the <span class="guimenu">From
+        Testing to Production</span> menu item. A small pop-up window
+      appears informing you about linking the testing repository to the
+      production one. After the production snapshot is created, the
+      relevant check marks in the <span class="guimenu">Production</span> column
+      will be displayed. Also, a green check mark appears in the
+        <span class="guimenu">Repository Name</span> drop-down box. </p></div><div class="sect1 " id="smt.yast.staging.client"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.client"><span class="number">4.4 </span><span class="name">Checking the Client Status</span> <a title="Permalink" class="permalink" href="smt.management.html#smt.yast.staging.client">#</a></h2></div></div></div><p>
+   The third tab called <span class="guimenu">Clients Status</span> contains the
+   status information about all the clients that use the repositories on
+   your SMT server. It is divided into two main parts: the list of the
+   clients and the detailed information.
+  </p><p>
+   You can read the client's host name, the date and time of the last
+   network contact with the SMT server, and its update status. The
+   update status can be one of the following:
+  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name"> </span><a title="Permalink" class="permalink" href="smt.management.html#idm140016721333088">#</a></h6></div><dl class="variablelist"><dt id="idm140016721332512"><span class="term ">Up-to-date</span></dt><dd><p>
+      The client packages are updated to their last version available in the
+      production repository.
+     </p></dd><dt id="idm140016721330624"><span class="term ">Updates available</span></dt><dd><p>
+      This status means that there are updates available for the client that
+      are either <code class="literal">optional</code> or
+      <code class="literal">recommended</code>.
+     </p></dd><dt id="idm140016721327856"><span class="term ">Critical</span></dt><dd><p>
+      Either <code class="literal">security</code> patches or <code class="literal">package
+      manager</code> patches are available for the client.
+     </p></dd></dl></div><p>
+   In the lower part of the window, more detailed information about the
+   selected client is available. It usually consists of extended status
+   information and detailed information about the number and types of
+   available updates.
+  </p><div class="figure" id="idm140016721324304"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_clients_status.png"><img src="images/smt_clients_status.png" width="" alt="Clients Status" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.4: </span><span class="name">Clients Status </span><a title="Permalink" class="permalink" href="smt.management.html#idm140016721324304">#</a></h6></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="smt.registration.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 5 </span>Managing Client Machines with SMT</span></a><a class="nav-link" href="smt.mirroring.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 3 </span>Mirroring Repositories on the SMT Server</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

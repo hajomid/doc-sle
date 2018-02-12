@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Creating Add-on Products With Add-on Product Creator | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 18. Creating Add-on Products With Add-on Product Creator" /><meta name="description" content="An add-on is a special designed media, usually a CD or DVD, to extend SUSE Linux Enterprise Desktop with your product. The Add-on Product Creator was developed to support customers and partners and simplify third-party software distribution for all SUSE products. To be able to use the Add-on Product Creator you need to install the package yast2-add-on-creator from the SUSE Software Development Kit. The SDK is a module for SUSE Linux Enterprise and is available via an online channel from the SUSE Customer Center. Alternatively, go to , search for SUSE Linux Enterprise Software Development Kit and download it from there. Refer to for details." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP1 (SLED 12 SP1)" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.imaging.html" title="Part III. Imaging and Creating Products" /><link rel="prev" href="cha.studio.pointer.html" title="Chapter 17. Creating Images with SUSE Studio" /><link rel="next" href="cha.productcreator.html" title="Chapter 19. Creating Images with YaST Product Creator" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.imaging.html">Imaging and Creating Products</a><span> › </span><a class="crumb" href="cha.addon_creator.html">Creating Add-on Products With Add-on Product Creator</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">I </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">2 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">4 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">5 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">6 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">7 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">8 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">9 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">II </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">12 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">13 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">14 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">15 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">III </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">16 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">17 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">18 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">19 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">20 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">21 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">IV </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">22 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">23 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 17. Creating Images with SUSE Studio" href="cha.studio.pointer.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 19. Creating Images with YaST Product Creator" href="cha.productcreator.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.imaging.html">Imaging and Creating Products</a><span> › </span><a class="crumb" href="cha.addon_creator.html">Creating Add-on Products With Add-on Product Creator</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 17. Creating Images with SUSE Studio" href="cha.studio.pointer.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 19. Creating Images with YaST Product Creator" href="cha.productcreator.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.addon_creator"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">18 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>image_addon_creator.xml</li><li><span class="ds-label">ID: </span>cha.addon_creator</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.addon_creator.html#idm139875196416608">#</a></h6></div><p>
+    An add-on is a special designed media, usually a CD or DVD, to extend
+    <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> with your product. The Add-on Product Creator was developed
+    to support customers and partners and simplify third-party software
+    distribution for all SUSE products.
+   </p><p>
+    To be able to use the Add-on Product Creator you need to install the package
+    <code class="systemitem">yast2-add-on-creator</code> from the
+    SUSE Software Development Kit. The SDK is a module for SUSE Linux Enterprise and is available via an online channel from
+    the SUSE Customer Center.  Alternatively, go to <a class="link" href="http://download.suse.com/" target="_blank">http://download.suse.com/</a>, search for <code class="literal">SUSE Linux Enterprise
+    Software Development Kit</code> and download it from there.
+    Refer to <a class="xref" href="cha.add-ons.html" title="Chapter 6. Installing Modules, Extensions, and Third Party Add-On Products">Chapter 6, <em>Installing Modules, Extensions, and Third Party Add-On Products</em></a> for details.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.addon_creator.html#sec.addon_creator.creating"><span class="number">18.1 </span><span class="name">Creating Images</span></a></span></dt><dt><span class="sect1"><a href="cha.addon_creator.html#sec.addon_creator.structure"><span class="number">18.2 </span><span class="name">Add-on Structure</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.addon_creator.creating"><div class="titlepage"><div><div><h2 class="title" id="sec.addon_creator.creating"><span class="number">18.1 </span><span class="name">Creating Images</span> <a title="Permalink" class="permalink" href="cha.addon_creator.html#sec.addon_creator.creating">#</a></h2></div></div></div><p>
+   To create an image of an add-on product, proceed as follows:
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     Start YaST and open the <span class="guimenu">Add-on Creator</span> module.
+    </p></li><li class="step "><p>
+     If you have not created an add-on before, click <span class="guimenu">Create an
+     Add-on from the Beginning</span> to start. Alternatively, you may
+     create the add-on based on an existing add-on product.Specify the path
+     to the directory containing the data—this may also be a
+     mounted ISO image or a CD/DVD.
+    </p><p>
+     In case you have already created an add-on, the window lists all existing
+     add-ons. You may <span class="guimenu">Edit</span> or <span class="guimenu">Delete</span>
+     them. Choose <span class="guimenu">Add</span> to create a new one.
+    </p><p>
+     This tutorial explains how to <span class="guimenu">Create an Add-on from the
+     Beginning</span>.
+    </p></li><li class="step "><p>
+     Enter the name (<span class="guimenu">Add-on Product Label</span>) and the
+     version of your add-on and provide additional information:
+    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       Under <span class="guimenu">Required Product</span> choose the SUSE Linux
+       product for which to create the add-on.
+      </p></li><li class="listitem "><p>
+       Select the path to a directory containing the add-on product
+       packages.
+      </p></li><li class="listitem "><p>
+       Optionally, choose the path to a directory containing RPM packages
+       from the <span class="guimenu">Required Product</span>. Typically, these
+       packages originate in the required product (already chosen) and are
+       not part of the add-on itself, but other packages from the add-on
+       depend on them. These packages will not be added to the add-on
+       product, but can be used to create patterns.
+      </p></li></ul></div><p>
+     Proceed with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Each installation media contains a content file and a product file
+     defining the add-on product. Use this dialog to provide the data for
+     both files. Select an entry and choose <span class="guimenu">Edit</span> to set
+     or change a value. Alternatively, double-click an entry. See
+     <span class="guimenu">Help</span> for more information and possible values.
+    </p><p>
+     To import values from an existing content or product file, choose the
+     respective <span class="guimenu">Import</span> button.
+    </p><p>
+     You need to at least enter values for <span class="guimenu">Product
+     architectures</span>, <span class="guimenu">Product name</span> and
+     <span class="guimenu">Vendor name</span> of the content file. Proceed with
+     <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Enter or change the package descriptions on the next screen. Use
+     <span class="guimenu">Add Language</span> to insert a new language and add
+     translated descriptions (this step is optional). You may also
+     <span class="guimenu">Import</span> existing package descriptions.
+    </p><p>
+     Proceed with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Optionally, add patterns in the next step. With patterns you can group
+     your RPM packages. Use <span class="guimenu">New</span> to add a new pattern name
+     and change the respective attributes in the list below. Check
+     <span class="guimenu">Required Pattern</span> for patterns that will
+     automatically be selected for installation when installing the add-on
+     product.
+    </p><p>
+     Proceed with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Provide a path to the output directory. If you rather want to create an
+     ISO image, check <span class="guimenu">Create ISO Image</span> and provide a file
+     name. Select <span class="guimenu">Create Changelog</span> to create a file
+     containing the changelog entries of all packages included in your
+     product. Additionally, you can modify the workflow and add files:
+    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       Use <span class="guimenu">Configure Workflow</span> to enter files to customize
+       your product workflow. This way you can, for example, insert
+       additional dialogs with options into the add-on installation process
+       that are needed for the correct product operation. See
+       <span class="guimenu">Help</span> for more information.
+      </p></li><li class="listitem "><p>
+       Use <span class="guimenu">Optional Files</span> to the following files to your
+       add-on product:
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm139875196377056"><span class="term "><span class="guimenu">info.txt</span>
+        </span></dt><dd><p>
+          A text file containing general information about the add-on
+          product.
+         </p></dd><dt id="idm139875196374896"><span class="term "><span class="guimenu">License Files</span>
+        </span></dt><dd><p>
+          Add files containing license information in various languages. The
+          files are named
+          <code class="literal">license.<em class="replaceable ">LANGUAGE</em></code>,
+          for example <code class="filename">license.en_US</code>.
+         </p></dd><dt id="idm139875196371520"><span class="term ">README Files</span></dt><dd><p>
+          Add README files with a name of your choice.
+         </p></dd></dl></div><p>
+       Enter the content of the files in the respective text boxes.
+       Alternatively, <span class="guimenu">Import</span> the content from an existing
+       file.
+      </p></li></ul></div><p>
+     Proceed with <span class="guimenu">Next</span>.
+    </p></li><li class="step "><p>
+     Sign your add-on product with your GPG key to provide evidence of
+     the origin of your product. If you do not have a key, create one first
+     and enter the respective passphrase twice.
+    </p></li><li class="step "><p>
+     Check your settings in the configuration summary and proceed with
+     <span class="guimenu">Finish</span>. Choose the <span class="guimenu">Back</span> buttons
+     to change a setting.
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.addon_creator.structure"><div class="titlepage"><div><div><h2 class="title" id="sec.addon_creator.structure"><span class="number">18.2 </span><span class="name">Add-on Structure</span> <a title="Permalink" class="permalink" href="cha.addon_creator.html#sec.addon_creator.structure">#</a></h2></div></div></div><p>
+   An add-on product contains the following files and directories:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139875196361824"><span class="term "><code class="filename">ARCHIVES.gz</code>
+    </span></dt><dd><p>
+      Contains information about all packages included (the output of
+      <code class="command">rpm -qil</code> for each package). This file is compressed
+      with gzip.
+     </p></dd><dt id="idm139875196359184"><span class="term "><code class="filename">Changelog</code>
+    </span></dt><dd><p>
+      Contains all the changes of the RPM files ordered by date of change.
+     </p></dd><dt id="idm139875196357040"><span class="term "><code class="filename">content</code>
+    </span></dt><dd><p>
+      The content file created during the add-on setup.
+     </p></dd><dt id="idm139875196354912"><span class="term "><code class="filename">content.asc</code>
+    </span></dt><dd><p>
+      The GPG signature file.
+     </p></dd><dt id="idm139875196352864"><span class="term "><code class="filename">content.key</code>,
+      <code class="filename">gpg-pubkey-<em class="replaceable ">NUMBER</em>.asc</code>
+    </span></dt><dd><p>
+      The public GPG key.
+     </p></dd><dt id="idm139875196349872"><span class="term "><code class="filename">INDEX.gz</code>
+    </span></dt><dd><p>
+      A list of all RPM files. This file is compressed with gzip.
+     </p></dd><dt id="idm139875196347728"><span class="term "><code class="filename">ls-lR.gz</code>
+    </span></dt><dd><p>
+      A list of all files and directories of the add-on product medium. This
+      file is compressed with gzip.
+     </p></dd><dt id="idm139875196345552"><span class="term "><code class="filename">media.<em class="replaceable ">N</em>/</code>
+    </span></dt><dd><p>
+      Contains files with basic information about the add-on media set. The
+      directory is numbered, so <code class="filename">media.1/</code> is for the
+      first add-on medium (for example DVD1). Additional media have a
+      consecutive number.
+     </p></dd><dt id="idm139875196342384"><span class="term "><code class="filename">suse/</code>
+    </span></dt><dd><p>
+      Contains sub directories with architecture-specific information.
+      Exceptions are <code class="filename">noarch/</code> for
+      architecture-independent packages, and <code class="filename">src/</code> for
+      source packages. Proprietary software packages are stored under
+      <code class="filename">nosrc/</code>.
+     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.productcreator.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 19 </span>Creating Images with YaST Product Creator</span></a><a class="nav-link" href="cha.studio.pointer.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 17 </span>Creating Images with SUSE Studio</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

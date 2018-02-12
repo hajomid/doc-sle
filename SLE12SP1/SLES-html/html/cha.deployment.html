@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Deployment Strategies | Deployment Guide | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 5. Deployment Strategies" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.mandeploy.html" title="Part II. Manual Deployment" /><link rel="prev" href="part.mandeploy.html" title="Part II. Manual Deployment" /><link rel="next" href="cha.inst.html" title="Chapter 6. Installation with YaST" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.deployment.html">Deployment Strategies</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="part.archspec.html"><span class="number">I </span><span class="name">Architecture-Specific Installation Considerations</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">3 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">4 </span><span class="name">Installation on IBM z Systems</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">5 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">6 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">8 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">9 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">10 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">11 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">12 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">13 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">14 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">III </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">15 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">16 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">17 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">18 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">IV </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">19 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">20 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">21 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">22 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">23 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">24 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">V </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">25 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.update.auto.html"><span class="number">26 </span><span class="name">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">27 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Part II. Manual Deployment" href="part.mandeploy.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation with YaST" href="cha.inst.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.mandeploy.html">Manual Deployment</a><span> › </span><a class="crumb" href="cha.deployment.html">Deployment Strategies</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Part II. Manual Deployment" href="part.mandeploy.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation with YaST" href="cha.inst.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.deployment"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">5 </span><span class="name">Deployment Strategies</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment.xml</li><li><span class="ds-label">ID: </span>cha.deployment</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.deployment.html#sec.deployment.strat.ten"><span class="number">5.1 </span><span class="name">Deploying up to 10 Workstations</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.html#sec.deployment.strat.cent"><span class="number">5.2 </span><span class="name">Deploying up to 100 Workstations</span></a></span></dt><dt><span class="sect1"><a href="cha.deployment.html#sec.deployment.strat.centplus"><span class="number">5.3 </span><span class="name">Deploying More than 100 Workstations</span></a></span></dt></dl></div></div><p>
+  There are several different ways to deploy <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. Choose from
+  various approaches ranging from a local installation using physical media
+  or a network installation server to a mass deployment using a
+  remote-controlled, highly-customized, and automated installation
+  technique. Select the method that best matches your requirements.
+ </p><div class="sect1 " id="sec.deployment.strat.ten"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.strat.ten"><span class="number">5.1 </span><span class="name">Deploying up to 10 Workstations</span> <a title="Permalink" class="permalink" href="cha.deployment.html#sec.deployment.strat.ten">#</a></h2></div></div></div><p>
+   If your deployment of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> only involves 1 to 10
+   workstations, the easiest and least complex way of deploying
+   <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is a plain manual installation as featured in
+   <a class="xref" href="cha.inst.html" title="Chapter 6. Installation with YaST">Chapter 6, <em>Installation with YaST</em></a>. Manual installation can be done in several
+   different ways, depending on your requirements:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140016716188832"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.man.cd" title="Installing from the SUSE Linux Enterprise Server Media">Installing from the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Media</a>
+    </span></dt><dd><p>
+      Consider this approach if you want to install a single, disconnected
+      workstation.
+     </p></dd><dt id="idm140016716186288"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.man.slpnet" title="Installing from a Network Server Using SLP">Installing from a Network Server Using SLP</a>
+    </span></dt><dd><p>
+      Consider this approach if you have a single workstation or a few
+      workstations and if a network installation server announced via SLP is
+      available.
+     </p></dd><dt id="idm140016716183648"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.man.netserv" title="Installing from a Network Server">Installing from a Network Server</a>
+    </span></dt><dd><p>
+      Consider this approach if you have a single workstation or a few
+      workstations and if a network installation server is available.
+     </p></dd></dl></div><div class="table" id="tab.deployment.man.cd"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.1: </span><span class="name">Installing from the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Media </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.man.cd">#</a></h6></div><div class="table-contents"><table summary="Installing from the SUSE Linux Enterprise Server Media" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Media Kit
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Tasks Requiring Manual Interaction
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Inserting the installation media
+         </p></li><li class="listitem "><p>
+          Booting the installation target
+         </p></li><li class="listitem "><p>
+          Changing media
+         </p></li><li class="listitem "><p>
+          Determining the YaST installation scope
+         </p></li><li class="listitem "><p>
+          Configuring the system with YaST
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Remotely Controlled Tasks
+       </p>
+      </td><td>
+       <p>
+        None
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.inst.html#sec.i.yast2.source.cd">Installing from the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Media (DVD, USB)</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.man.slpnet"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.2: </span><span class="name">Installing from a Network Server Using SLP </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.man.slpnet">#</a></h6></div><div class="table-contents"><table summary="Installing from a Network Server Using SLP" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network installation server holding the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
+        installation media
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Tasks Requiring Manual Interaction
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Inserting the boot disk
+         </p></li><li class="listitem "><p>
+          Booting installation target
+         </p></li><li class="listitem "><p>
+          Determining the YaST installation scope
+         </p></li><li class="listitem "><p>
+          Configuring the system with YaST
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Remotely Controlled Tasks
+       </p>
+      </td><td>
+       <p>
+        None, but this method can be combined with VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.inst.html#sec.i.yast2.source.net">Installing from a Network Server</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.man.netserv"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.3: </span><span class="name">Installing from a Network Server </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.man.netserv">#</a></h6></div><div class="table-contents"><table summary="Installing from a Network Server" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network installation server holding the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
+        installation media
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Tasks Requiring Manual Interaction
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Inserting the boot disk
+         </p></li><li class="listitem "><p>
+          Providing boot options
+         </p></li><li class="listitem "><p>
+          Booting the installation target
+         </p></li><li class="listitem "><p>
+          Determining the YaST installation scope
+         </p></li><li class="listitem "><p>
+          Configuring the system with YaST
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Remotely Controlled Tasks
+       </p>
+      </td><td>
+       <p>
+        None, but method can be combined with VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.inst.html#sec.i.yast2.source.net">Installing from a Network Server</a>
+       </p>
+      </td></tr></tbody></table></div></div></div><div class="sect1 " id="sec.deployment.strat.cent"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.strat.cent"><span class="number">5.2 </span><span class="name">Deploying up to 100 Workstations</span> <a title="Permalink" class="permalink" href="cha.deployment.html#sec.deployment.strat.cent">#</a></h2></div></div></div><p>
+   With a growing number of workstations to install, you certainly do not
+   want to install and configure each one of them manually. There are many
+   automated or semi-automated approaches and several options for
+   performing an installation with minimal to no physical user interaction.
+  </p><p>
+   Before considering a fully-automated approach, take into account that the
+   more complex the scenario gets the longer it takes to set up. If a time
+   limit is associated with your deployment, it might be a good idea to
+   select a less complex approach that can be carried out much more quickly.
+   Automation makes sense for huge deployments and those that need to be
+   carried out remotely.
+  </p><p>
+   Choose from the following options:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140016716121408"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.vncstat" title="Simple Remote Installation via VNC—Static Network Configuration">Simple Remote Installation via VNC—Static Network Configuration</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario with a static
+      network setup. A network, network installation server, and VNC viewer
+      application are required.
+     </p></dd><dt id="idm140016716118752"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.vncdyn" title="Simple Remote Installation via VNC—Dynamic Network Configuration">Simple Remote Installation via VNC—Dynamic Network Configuration</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario with dynamic
+      network setup through DHCP. A network, network installation server,
+      and VNC viewer application are required.
+     </p></dd><dt id="idm140016716116096"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.vncpxe" title="Remote Installation via VNC—PXE Boot and Wake on LAN">Remote Installation via VNC—PXE Boot and Wake on LAN</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario that needs to be
+      installed via the network and without physical interaction with the
+      installation targets. A network, a network installation server,
+      network boot images, network bootable target hardware, and a VNC
+      viewer application are required.
+     </p></dd><dt id="idm140016716113296"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.sshstat" title="Simple Remote Installation via SSH—Static Network Configuration">Simple Remote Installation via SSH—Static Network Configuration</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario with static
+      network setup. A network, network installation server, and SSH client
+      application are required.
+     </p></dd><dt id="idm140016716110640"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.sshdyn" title="Remote Installation via SSH—Dynamic Network Configuration">Remote Installation via SSH—Dynamic Network Configuration</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario with dynamic
+      network setup through DHCP. A network, network installation server,
+      and SSH client application are required.
+     </p></dd><dt id="idm140016716107984"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.sshpxe" title="Remote Installation via SSH—PXE Boot and Wake on LAN">Remote Installation via SSH—PXE Boot and Wake on LAN</a>
+    </span></dt><dd><p>
+      Consider this approach in a small to medium scenario that needs to be
+      installed via the network and without physical interaction with the
+      installation targets. A network, a network installation server,
+      network boot images, network bootable target hardware, and an SSH
+      client application are required.
+     </p></dd><dt id="idm140016716105184"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.auto.simple" title="Simple Mass Installation">Simple Mass Installation</a>
+    </span></dt><dd><p>
+      Consider this approach for large deployments to identical machines. If
+      configured to use network booting, physical interaction with the
+      target systems is not needed. A network, a network installation
+      server, a remote controlling application (such as a VNC viewer or an
+      SSH client), and an AutoYaST configuration profile are required. If
+      using network boot, a network boot image and network bootable hardware
+      are required, as well.
+     </p></dd><dt id="idm140016716102240"><span class="term "><a class="xref" href="cha.deployment.html#tab.deployment.remote.auto.rules" title="Rule-Based Autoinstallation">Rule-Based Autoinstallation</a>
+    </span></dt><dd><p>
+      Consider this approach for large deployments to various types of
+      hardware. If configured to use network booting, physical interaction
+      with the target systems is not needed. A network,
+      installation server, a remote controlling application (such as a VNC
+      viewer or an SSH client), and several AutoYaST configuration profiles
+      as well (as a rule setup for AutoYaST) are required. If using network
+      boot, a network boot image and network bootable hardware are required,
+      as well.
+     </p></dd></dl></div><div class="table" id="tab.deployment.remote.vncstat"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.4: </span><span class="name">Simple Remote Installation via VNC—Static Network Configuration </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.vncstat">#</a></h6></div><div class="table-contents"><table summary="Simple Remote Installation via VNC—Static Network Configuration" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up an installation source
+         </p></li><li class="listitem "><p>
+          Booting from the installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <p>
+        Small to medium scenarios with varying hardware
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Each machine must be set up individually
+         </p></li><li class="listitem "><p>
+          Physical access is needed for booting
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat" title="13.1.1. Simple Remote Installation via VNC—Static Network Configuration">Section 13.1.1, “Simple Remote Installation via VNC—Static Network Configuration”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.vncdyn"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.5: </span><span class="name">Simple Remote Installation via VNC—Dynamic Network Configuration </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.vncdyn">#</a></h6></div><div class="table-contents"><table summary="Simple Remote Installation via VNC—Dynamic Network Configuration" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up the installation source
+         </p></li><li class="listitem "><p>
+          Booting from the installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <p>
+        Small to medium scenarios with varying hardware
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Each machine must be set up individually
+         </p></li><li class="listitem "><p>
+          Physical access is needed for booting
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncdyn" title="13.1.2. Simple Remote Installation via VNC—Dynamic Network Configuration">Section 13.1.2, “Simple Remote Installation via VNC—Dynamic Network Configuration”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.vncpxe"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.6: </span><span class="name">Remote Installation via VNC—PXE Boot and Wake on LAN </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.vncpxe">#</a></h6></div><div class="table-contents"><table summary="Remote Installation via VNC—PXE Boot and Wake on LAN" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up the installation source
+         </p></li><li class="listitem "><p>
+          Configuring DHCP, TFTP, PXE boot, and WOL
+         </p></li><li class="listitem "><p>
+          Booting from the network
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Small to medium scenarios with varying hardware
+         </p></li><li class="listitem "><p>
+          Completely remote installations; cross-site deployment
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <p>
+        Each machine must be set up manually
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe" title="13.1.3. Remote Installation via VNC—PXE Boot and Wake on LAN">Section 13.1.3, “Remote Installation via VNC—PXE Boot and Wake on LAN”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.sshstat"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.7: </span><span class="name">Simple Remote Installation via SSH—Static Network Configuration </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.sshstat">#</a></h6></div><div class="table-contents"><table summary="Simple Remote Installation via SSH—Static Network Configuration" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up the installation source
+         </p></li><li class="listitem "><p>
+          Booting from the installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: SSH
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Small to medium scenarios with varying hardware
+         </p></li><li class="listitem "><p>
+          Low bandwidth connections to target
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Each machine must be set up individually
+         </p></li><li class="listitem "><p>
+          Physical access is needed for booting
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshstat" title="13.1.4. Simple Remote Installation via SSH—Static Network Configuration">Section 13.1.4, “Simple Remote Installation via SSH—Static Network Configuration”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.sshdyn"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.8: </span><span class="name">Remote Installation via SSH—Dynamic Network Configuration </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.sshdyn">#</a></h6></div><div class="table-contents"><table summary="Remote Installation via SSH—Dynamic Network Configuration" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up the installation source
+         </p></li><li class="listitem "><p>
+          Booting from installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: SSH
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Small to medium scenarios with varying hardware
+         </p></li><li class="listitem "><p>
+          Low bandwidth connections to target
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Each machine must be set up individually
+         </p></li><li class="listitem "><p>
+          Physical access is needed for booting
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshdyn" title="13.1.5. Simple Remote Installation via SSH—Dynamic Network Configuration">Section 13.1.5, “Simple Remote Installation via SSH—Dynamic Network Configuration”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.sshpxe"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.9: </span><span class="name">Remote Installation via SSH—PXE Boot and Wake on LAN </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.sshpxe">#</a></h6></div><div class="table-contents"><table summary="Remote Installation via SSH—PXE Boot and Wake on LAN" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Setting up the installation source
+         </p></li><li class="listitem "><p>
+          Configuring DHCP, TFTP, PXE boot, and WOL
+         </p></li><li class="listitem "><p>
+          Booting from the network
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Remote: SSH
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Small to medium scenarios with varying hardware
+         </p></li><li class="listitem "><p>
+          Completely remote installs; cross-site deployment
+         </p></li><li class="listitem "><p>
+          Low bandwidth connections to target
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <p>
+        Each machine must be set up individually
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshpxe" title="13.1.6. Remote Installation via SSH—PXE Boot and Wake on LAN">Section 13.1.6, “Remote Installation via SSH—PXE Boot and Wake on LAN”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.auto.simple"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.10: </span><span class="name">Simple Mass Installation </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.auto.simple">#</a></h6></div><div class="table-contents"><table summary="Simple Mass Installation" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Preferably network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Gathering hardware information
+         </p></li><li class="listitem "><p>
+          Creating AutoYaST profile
+         </p></li><li class="listitem "><p>
+          Setting up the installation server
+         </p></li><li class="listitem "><p>
+          Distributing the profile
+         </p></li><li class="listitem "><p>
+          Setting up network boot (DHCP, TFTP, PXE, WOL)
+         </p><p>
+          <span class="emphasis"><em>or</em></span>
+         </p><p>
+          Booting the target from installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Local or remote through VNC or SSH
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Large scenarios
+         </p></li><li class="listitem "><p>
+          Identical hardware
+         </p></li><li class="listitem "><p>
+          No access to system (network boot)
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <p>
+        Applies only to machines with identical hardware
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.autoinst.html#sec.deployment.autoinst.simple" title="25.1. Simple Mass Installation">Section 25.1, “Simple Mass Installation”</a>
+       </p>
+      </td></tr></tbody></table></div></div><div class="table" id="tab.deployment.remote.auto.rules"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.11: </span><span class="name">Rule-Based Autoinstallation </span><a title="Permalink" class="permalink" href="cha.deployment.html#tab.deployment.remote.auto.rules">#</a></h6></div><div class="table-contents"><table summary="Rule-Based Autoinstallation" border="1"><colgroup><col /><col /></colgroup><tbody><tr><td>
+       <p>
+        Installation Source
+       </p>
+      </td><td>
+       <p>
+        Preferably network
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Preparations
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Gathering hardware information
+         </p></li><li class="listitem "><p>
+          Creating AutoYaST profiles
+         </p></li><li class="listitem "><p>
+          Creating AutoYaST rules
+         </p></li><li class="listitem "><p>
+          Setting up the installation server
+         </p></li><li class="listitem "><p>
+          Distributing the profile
+         </p></li><li class="listitem "><p>
+          Setting up network boot (DHCP, TFTP, PXE, WOL)
+         </p><p>
+          <span class="emphasis"><em>or</em></span>
+         </p><p>
+          Booting the target from installation media
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Control and Monitoring
+       </p>
+      </td><td>
+       <p>
+        Local or remote through SSH or VNC
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Best Suited For
+       </p>
+      </td><td>
+       <div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          Varying hardware
+         </p></li><li class="listitem "><p>
+          Cross-site deployments
+         </p></li></ul></div>
+      </td></tr><tr><td>
+       <p>
+        Drawbacks
+       </p>
+      </td><td>
+       <p>
+        Complex rule setup
+       </p>
+      </td></tr><tr><td>
+       <p>
+        Details
+       </p>
+      </td><td>
+       <p>
+        <a class="xref" href="cha.deployment.autoinst.html#sec.deployment.autoinst.advanced" title="25.2. Rule-Based Autoinstallation">Section 25.2, “Rule-Based Autoinstallation”</a>
+       </p>
+      </td></tr></tbody></table></div></div></div><div class="sect1 " id="sec.deployment.strat.centplus"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.strat.centplus"><span class="number">5.3 </span><span class="name">Deploying More than 100 Workstations</span> <a title="Permalink" class="permalink" href="cha.deployment.html#sec.deployment.strat.centplus">#</a></h2></div></div></div><p>
+   Most of the considerations brought up for medium installation scenarios
+   in <a class="xref" href="cha.deployment.html#sec.deployment.strat.ten" title="5.1. Deploying up to 10 Workstations">Section 5.1, “Deploying up to 10 Workstations”</a>
+   still hold true for large scale deployments. However, with a growing
+   number of installation targets, the benefits of a fully automated
+   installation method outweigh its drawbacks.
+  </p><p>
+   It pays off to invest a considerable amount of time to create a
+   sophisticated rule and class framework in AutoYaST to match the
+   requirements of a huge deployment site. Not having to touch each target
+   separately can save you a tremendous amount of time depending on the
+   scope of your installation project.
+  </p><p>
+   As an alternative, and if user settings should be done during the first
+   bootup, create preload images with kiwi and firstboot. Deploying such
+   images could even be done by a PXE boot server specialized for this task.
+   For more details, see
+   <a class="link" href="http://doc.opensuse.org/projects/kiwi/doc/" target="_blank">http://doc.opensuse.org/projects/kiwi/doc/</a>,
+   <a class="xref" href="cha.autokiwi.html" title="Chapter 27. Automated Deployment of Preload Images">Chapter 27, <em>Automated Deployment of Preload Images</em></a>,
+   <a class="xref" href="cha.deployment.autoinst.html" title="Chapter 25. Automated Installation">Chapter 25, <em>Automated Installation</em></a>, and
+   <a class="xref" href="cha.deployment_firstboot.html" title="Chapter 24. Deploying Customized Preinstallations">Chapter 24, <em>Deploying Customized Preinstallations</em></a>.
+  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.inst.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 6 </span>Installation with YaST</span></a><a class="nav-link" href="part.mandeploy.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Part II </span>Manual Deployment</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

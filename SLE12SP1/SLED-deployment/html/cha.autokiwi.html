@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Automated Deployment of Preload Images | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 23. Automated Deployment of Preload Images" /><meta name="description" content="With KIWI you can create operating system images. This chapter describes the process of deploying a system image to an empty client machine. For this, you need to create a preload image which contains a bootable RAW image. This file contains two important parts: a partition table and the actual operating system. This RAW image will be written to the empty hard disk and the operating system extends to the remaining disk space at first boot." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP1 (SLED 12 SP1)" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.autoinstall.html" title="Part IV. Automated Installations" /><link rel="prev" href="cha.deployment.autoinst.html" title="Chapter 22. Automated Installation" /><link rel="next" href="app.deployment.docupdates.html" title="Appendix A. Documentation Updates" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.autoinstall.html">Automated Installations</a><span> › </span><a class="crumb" href="cha.autokiwi.html">Automated Deployment of Preload Images</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">I </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">2 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">4 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">5 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">6 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">7 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">8 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">9 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">II </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">12 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">13 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">14 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">15 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">III </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">16 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">17 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">18 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">19 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">20 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">21 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">IV </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">22 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">23 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 22. Automated Installation" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix A. Documentation Updates" href="app.deployment.docupdates.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.autoinstall.html">Automated Installations</a><span> › </span><a class="crumb" href="cha.autokiwi.html">Automated Deployment of Preload Images</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 22. Automated Installation" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix A. Documentation Updates" href="app.deployment.docupdates.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.autokiwi"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">23 </span><span class="name">Automated Deployment of Preload Images</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_kiwi.xml</li><li><span class="ds-label">ID: </span>cha.autokiwi</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.autokiwi.html#idm139875195686336">#</a></h6></div><p>
+    With KIWI you can create operating system images. This
+    chapter describes the process of deploying a system image to an empty
+    client machine. For this, you need to create a preload image which
+    contains a bootable RAW image. This file contains two important parts: a
+    partition table and the actual operating system. This RAW image will be
+    written to the empty hard disk and the operating system extends to the
+    remaining disk space at first boot.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.autokiwi.html#sec.autokiwi.manual"><span class="number">23.1 </span><span class="name">Deploying system manually from rescue image</span></a></span></dt><dt><span class="sect1"><a href="cha.autokiwi.html#sec.autokiwi.pxe"><span class="number">23.2 </span><span class="name">Automated Deployment with PXE Boot</span></a></span></dt></dl></div></div><p>
+  To create such an image, see
+  <a class="link" href="http://doc.opensuse.org/projects/kiwi/doc/" target="_blank">http://doc.opensuse.org/projects/kiwi/doc/</a>. When you
+  build the ISO image, you can find the RAW file in the destination
+  directory. There are many ways to dump a raw image onto a disk.
+ </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+    Plug the disk into a deployment server and copy the image to the raw
+    device.
+   </p></li><li class="listitem "><p>
+    Provide the raw image by means of an HTTP or FTP server and dump it on
+    the disk of the client machine.
+   </p></li><li class="listitem "><p>
+    Create a netboot image to get the image and dump it on the disk. This is
+    a good method for mass deployment.
+   </p></li><li class="listitem "><p>
+    Boot a rescue disk and do the dump manually from the rescue image.
+   </p></li></ul></div><p>
+  For a quick start, it is good to use one of the methods described in
+  <a class="xref" href="cha.autokiwi.html#sec.autokiwi.manual" title="23.1. Deploying system manually from rescue image">Section 23.1, “Deploying system manually from rescue image”</a>.
+ </p><div class="sect1 " id="sec.autokiwi.manual"><div class="titlepage"><div><div><h2 class="title" id="sec.autokiwi.manual"><span class="number">23.1 </span><span class="name">Deploying system manually from rescue image</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.manual">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139875195674720"><span class="term ">Deploying with generated ISO file from KIWI:</span></dt><dd><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+        Burn the ISO image you get from the KIWI building process on
+        CD/DVD.
+       </p></li><li class="listitem "><p>
+        Boot from this medium onto the client machine.
+       </p></li><li class="listitem "><p>
+        Select the hard disk for installation.
+       </p></li><li class="listitem "><p>
+        Restart the client machine and boot from hard disk.
+       </p></li></ol></div></dd><dt id="idm139875195668832"><span class="term ">Deploying over rescue system:</span></dt><dd><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+        Boot the client machine with a rescue system. Such systems are
+        available on all SUSE installation CDs or DVDs.
+       </p></li><li class="listitem "><p>
+        Log in as <code class="systemitem">root</code>. Do not
+        enter password.
+       </p></li><li class="listitem "><p>
+        Configure your network. If you have DHCP available in your network,
+        this is merely the command <code class="command">ifup-dhcp eth0</code>. If you
+        must do this manually, use the command <code class="command">ip</code> to
+        configure your network. The output starting DHCP also tells you the
+        IP address of the computer.
+       </p></li><li class="listitem "><p>
+        Listen on an unused port of your network like
+        <code class="systemitem">1234</code> and dump the incoming data to disk
+        with the following command:
+       </p><div class="verbatim-wrap"><pre class="screen">netcat -l -p 1234 &gt; /dev/sda</pre></div></li><li class="listitem "><p>
+        On the imaging server, send the raw image to the client machine with
+        the command:
+       </p><div class="verbatim-wrap"><pre class="screen">netcat &lt;IP of client&gt; 1234 &lt; $HOME/preload_image/&lt;image_name&gt;</pre></div></li><li class="listitem "><p>
+        When the image is transferred, remove the rescue system from your CD
+        or DVD drive and shut down the client machine. On reboot, the boot
+        loader <code class="literal">GRUB</code> should be started on the client and
+        the firstboot system will take over.
+       </p></li></ol></div></dd></dl></div></div><div class="sect1 " id="sec.autokiwi.pxe"><div class="titlepage"><div><div><h2 class="title" id="sec.autokiwi.pxe"><span class="number">23.2 </span><span class="name">Automated Deployment with PXE Boot</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.pxe">#</a></h2></div></div></div><p>
+   When doing multiple installations of an operating system on similar
+   hardware, it is useful to put some effort into preparing a mass
+   deployment of the operating system and to minimize the time needed for
+   the actual deployment. This chapter describes this process. The goal is
+   to simply plug in a computer, connect it to a network, start a network
+   boot, and wait until it powers down.
+  </p><p>
+   The following actions need to be performed to accomplish this
+   task:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139875195653984"><span class="term ">Set up a boot and install server</span></dt><dd><p>
+      A dedicated machine is needed, that should be prepared to offer PXE
+      boot and an FTP or Web server to provide a preload image. It is
+      a good idea to give the machine enough memory to hold all necessary
+      installation data in memory. For a default installation, you should
+      have at least 4 GByte of memory. All the necessary tasks can be
+      accomplished with SUSE Linux Enterprise Server. For more details, see
+      <a class="xref" href="cha.autokiwi.html#sec.autokiwi.instserver" title="23.2.1. Set Up a Boot and Install Server">Section 23.2.1, “Set Up a Boot and Install Server”</a>.
+     </p></dd><dt id="idm139875195651184"><span class="term ">Prepare a preload Image</span></dt><dd><p>
+      The actual installation is done by the copying of a raw image of the
+      operating system to the new hard disk. All features and settings must
+      be prepared and tested carefully. To provide such an image, KIWI
+      can be used (available in the SDK of the SUSE Linux Enterprise operating system).
+      More information about image creation with KIWI is available at
+      <a class="link" href="http://doc.opensuse.org/projects/kiwi/doc/" target="_blank">http://doc.opensuse.org/projects/kiwi/doc/</a>. For
+      more details about the requirements of the preload image, see
+      <a class="xref" href="cha.autokiwi.html#sec.autokiwi.preloadimage" title="23.2.2. Creating a Preload Image">Section 23.2.2, “Creating a Preload Image”</a>.
+     </p><p>
+      KIWI is available from the SUSE Linux Enterprise SDK.
+      The SDK is a module for SUSE Linux Enterprise and is available via an online channel from
+      the SUSE Customer Center.  Alternatively, go to <a class="link" href="http://download.suse.com/" target="_blank">http://download.suse.com/</a>, search for <code class="literal">SUSE Linux Enterprise
+      Software Development Kit</code> and download it from there.
+      Refer to <a class="xref" href="cha.add-ons.html" title="Chapter 6. Installing Modules, Extensions, and Third Party Add-On Products">Chapter 6, <em>Installing Modules, Extensions, and Third Party Add-On Products</em></a> for details.
+     </p></dd><dt id="idm139875195645504"><span class="term ">Create an initial system for deployment</span></dt><dd><p>
+      This is a task that requires some Linux expertise. A description on
+      how this can be achieved by means of an example installation is
+      available at <a class="xref" href="cha.autokiwi.html#sec.autokiwi.initrd" title="23.2.3. Creating an Initial System to Deploy a Preload Image">Section 23.2.3, “Creating an Initial System to Deploy a Preload Image”</a>.
+     </p></dd><dt id="idm139875195642992"><span class="term ">Configure the boot server for automatic deployment</span></dt><dd><p>
+      PXE boot must be told to boot the installation system, that in turn
+      will take the preload image from the server and copy it to the hard
+      disk.
+     </p></dd></dl></div><div class="sect2 " id="sec.autokiwi.instserver"><div class="titlepage"><div><div><h3 class="title" id="sec.autokiwi.instserver"><span class="number">23.2.1 </span><span class="name">Set Up a Boot and Install Server</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.instserver">#</a></h3></div></div></div><p>
+    There are four steps to accomplish to perform this task after a
+    SUSE Linux Enterprise Server installation:
+   </p><div class="procedure " id="proc.autokiwi.instserver"><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Set up the installation source as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.instserver" title="10.2. Setting Up the Server Holding the Installation Sources">Section 10.2, “Setting Up the Server Holding the Installation Sources”</a>. Choose an
+      HTTP, or FTP network server.
+     </p></li><li class="step "><p>
+      Set up a TFTP server to hold a boot image (this image will be created
+      in a later step). This is described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.tftp" title="10.3.2. Setting Up a TFTP Server">Section 10.3.2, “Setting Up a TFTP Server”</a>.
+     </p></li><li class="step "><p>
+      Set up a DHCP server to assign IP addresses to all machines and to
+      reveal the location of the TFTP server to the target system. This is
+      described in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.dhcp" title="10.3.1. Setting Up a DHCP Server">Section 10.3.1, “Setting Up a DHCP Server”</a>.
+     </p></li><li class="step "><p>
+      Prepare the installation server PXE boot. This is described in further
+      detail in <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxe" title="10.3.3. Using PXE Boot">Section 10.3.3, “Using PXE Boot”</a>.
+     </p></li></ol></div></div><p>
+    Note that the actual installation process will greatly benefit if you
+    provide enough memory on this machine to hold the preload image. Also,
+    using gigabit Ethernet will speed up the deployment process considerably
+    (compared to slower networks).
+   </p></div><div class="sect2 " id="sec.autokiwi.preloadimage"><div class="titlepage"><div><div><h3 class="title" id="sec.autokiwi.preloadimage"><span class="number">23.2.2 </span><span class="name">Creating a Preload Image</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.preloadimage">#</a></h3></div></div></div><p>
+    The process of creating images with KIWI is described at
+    <a class="link" href="http://doc.opensuse.org/projects/kiwi/doc/" target="_blank">http://doc.opensuse.org/projects/kiwi/doc/</a>.
+    However, to create a useful image for mass deployment, several
+    considerations should be taken into account:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      A typical preload image will use the following type:
+     </p><div class="verbatim-wrap"><pre class="screen">&lt;type primary="true" filesystem="btrfs" boot="oemboot/suse-SLES12"&gt;vmx&lt;/type&gt;</pre></div></li><li class="listitem "><p>
+      During the setup of a preload image, the image creation process is run
+      multiple times. The repositories needed to build the image should be
+      available on the local computer.
+     </p></li><li class="listitem "><p>
+      Depending on the desired usage of the preload, some effort should be
+      invested in configuring firstboot. Find more details about firstboot
+      in <a class="xref" href="cha.deployment_firstboot.html" title="Chapter 21. Deploying Customized Preinstallations">Chapter 21, <em>Deploying Customized Preinstallations</em></a>. With this method you
+      can also require the user to do initial configurations at the first
+      bootup of the system.
+     </p></li><li class="listitem "><p>
+      Many additional features can be configured into the image, like adding
+      update repositories or doing an update on initial bootup. However, it
+      is impossible to describe all possibilities in this document, and
+      (depending on the requirements) the creation of the preload image
+      requires in-depth knowledge of the imaging system KIWI, and
+      several other technologies used in <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>.
+     </p></li></ul></div><p>
+    The actual image to be deployed should be available from the FTP or HTTP
+    server that you provided on the installation server.
+   </p></div><div class="sect2 " id="sec.autokiwi.initrd"><div class="titlepage"><div><div><h3 class="title" id="sec.autokiwi.initrd"><span class="number">23.2.3 </span><span class="name">Creating an Initial System to Deploy a Preload Image</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.initrd">#</a></h3></div></div></div><p>
+    To run an automatic deployment, it is necessary to start an
+    initial Linux system on the target computer. During a typical
+    installation, the kernel and initial RAM file system are read from some
+    boot medium and started by the bios. The needed functionality can be
+    implemented in the RAM file system , which together with the kernel will
+    serve as the initial system.
+   </p><p>
+    The main features that must be provided by the initial system is the
+    enabling of access to the hard disk and the making available of the
+    network connection. Both of these functions are dependent on the
+    hardware onto which you want to deploy. In theory it is possible to
+    create an initial system from scratch, but to simplify this task it is
+    also possible to modify the initial RAM file system used by the machine
+    during boot.
+   </p><p>
+    The following procedure is only one example of how to create the needed
+    initial RAM file system:
+   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      Do a standard installation of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> on the target system.
+     </p></li><li class="step "><p>
+      Install the package <code class="systemitem">busybox</code> on the system.
+     </p></li><li class="step "><p>
+      
+      Create a new RAM file system with the following command:
+     </p><div class="verbatim-wrap"><pre class="screen">dracut -a busybox</pre></div><p>
+      The parameter <code class="systemitem">-a busybox</code> adds the multi call
+      binary <code class="systemitem">busybox</code> to the RAM file system. After
+      doing this, many standard unix commands are available inside this
+      system.
+     </p></li><li class="step "><p>
+      Copy the new RAM file system and the kernel to your boot server with
+      the command:
+     </p><div class="verbatim-wrap"><pre class="screen">scp /boot/initrd /boot/vmlinuz pxe.example.com:</pre></div><p>
+      Replace pxe.example.com with the name of your local boot server or IP
+      address.
+     </p></li><li class="step "><p>
+      Log in to your boot server as user
+      <code class="systemitem">root</code>, and create a directory
+      where you can modify the RAM file system:
+     </p><div class="verbatim-wrap"><pre class="screen">mkdir ~/bootimage</pre></div></li><li class="step "><p>
+      Change your working directory to this directory with the command
+      <code class="command">cd ~/bootimage</code>.
+     </p></li><li class="step "><p>
+      Unpack the previously copied initial RAM file system with the command:
+     </p><div class="verbatim-wrap"><pre class="screen">zcat ../initrd | cpio -i</pre></div></li><li class="step "><p>
+      Edit the file <code class="filename">run_all.sh</code>.
+     </p></li><li class="step "><p>
+      Search for the following line, delete it and the rest of the file:
+     </p><div class="verbatim-wrap"><pre class="screen">[ "$debug" ] &amp;&amp; echo preping 21-nfs.sh</pre></div></li><li class="step "><p>
+      Add the following lines to the end of the files
+      <code class="filename">run_all.sh</code>:
+     </p><div class="verbatim-wrap"><pre class="screen">[ "$debug" ] &amp;&amp; echo preping 92-install.sh
+[ "$debug" ] &amp;&amp; echo running 92-install.sh
+source boot/92-install.sh
+[ "$modules" ] &amp;&amp; load_modules</pre></div></li><li class="step "><p>
+      Create a new script <code class="filename">boot/92-install.sh</code> with the
+      following content:
+     </p><div class="verbatim-wrap"><pre class="screen">#!/bin/bash
+if [ "$(get_param rawimage)" ]; then
+  rawimage=$(get_param rawimage)
+  if  [ "$(get_param rawdevice)" ]; then
+    rawdevice=$(get_param rawdevice)
+    echo "wget -O ${rawdevice} ${rawimage}"
+    wget -O ${rawdevice} ${rawimage}
+    sync
+    sleep 5
+    echo "DONE"
+  fi
+fi
+# /bin/bash
+/bin/poweroff -f</pre></div></li><li class="step "><p>
+      If you want to have a debug shell before the computer switches off,
+      remove the comment sign before <code class="filename">/bin/bash</code>.
+     </p></li><li class="step "><p>
+      Make this script executable with the command <code class="command">chmod 755
+      boot/92-install.sh</code>.
+     </p></li><li class="step "><p>
+      Create a new initial RAM file system with the commands:
+     </p><div class="verbatim-wrap"><pre class="screen">mkdir -p /srv/tftpboot
+find . | cpio --quiet -H newc -o | gzip -9 -n &gt; \
+/srv/tftpboot/initrd.boot</pre></div></li><li class="step "><p>
+      Copy the kernel to this directory:
+     </p><div class="verbatim-wrap"><pre class="screen">cp ../vmlinuz /srv/tftpboot/linux.boot</pre></div></li></ol></div></div><p>
+    The initial RAM file system is now prepared to take two new kernel
+    command line parameters. The parameter
+    <code class="systemitem">rawimage=&lt;URL&gt;</code> is used to identify
+    the location of the preload image. Any URL that is understood by wget
+    can be used. The parameter
+    <code class="systemitem">rawdevice=&lt;device&gt;</code> is used to
+    identify the block device for the hard disk on the target machine.
+   </p></div><div class="sect2 " id="sec.autokiwi.boot_server"><div class="titlepage"><div><div><h3 class="title" id="sec.autokiwi.boot_server"><span class="number">23.2.4 </span><span class="name">Boot Server Configuration</span> <a title="Permalink" class="permalink" href="cha.autokiwi.html#sec.autokiwi.boot_server">#</a></h3></div></div></div><p>
+    The configuration of the boot server is covered in detail in several
+    different chapters as listed in
+    <a class="xref" href="cha.autokiwi.html#sec.autokiwi.instserver" title="23.2.1. Set Up a Boot and Install Server">Section 23.2.1, “Set Up a Boot and Install Server”</a>. This section should give a
+    checklist that covers steps that are necessary to configure the system.
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Set up a DHCP server. The subnet where the machines are installed
+      needs the additional lines:
+     </p><div class="verbatim-wrap"><pre class="screen">filename "pxelinux.0";
+next-server 192.168.1.115;</pre></div><p>
+      In this example, 192.168.1.115 is the ip address of the PXE server
+      pxe.example.com.
+     </p></li><li class="listitem "><p>
+      Configure a PXE server as described in
+      <a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.boot.pxe" title="10.3.3. Using PXE Boot">Section 10.3.3, “Using PXE Boot”</a>. When editing
+      <code class="filename">/srv/tftpboot/pxelinux.cfg/default</code>, add the
+      following entries:
+     </p><div class="verbatim-wrap"><pre class="screen">default bootinstall
+label bootinstall
+  kernel linux.boot
+  append initrd=initrd.boot \
+  rawimage=ftp://192.168.1.115/preload/preloadimage.raw rawdevice=/dev/sda</pre></div></li><li class="listitem "><p>
+      Set up an FTP server and copy your prepared preload image to
+      <code class="filename">/srv/ftp/preload/preloadimage.raw</code>.
+     </p></li></ul></div><p>
+    Test your setup by booting the target system with PXE network boot. This
+    will automatically copy the prepared preload image to hard disk and
+    switch off the machine when ready.
+   </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="app.deployment.docupdates.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Appendix A </span>Documentation Updates</span></a><a class="nav-link" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 22 </span>Automated Installation</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

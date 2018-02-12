@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Documentation Updates | Storage Administration Guide | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Storage Administration Guide" /><meta name="chapter-title" content="Appendix A. Documentation Updates" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="stor_admin.html" title="Storage Administration Guide" /><link rel="prev" href="cha.storage_trouble.html" title="Chapter 17. Troubleshooting Storage Issues" /><link rel="next" href="bk08apb.html" title="Appendix B. GNU Licenses" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="storage.docupdates.html">Documentation Updates</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">4 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">5 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">6 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">7 </span><span class="name">Configuring Software RAID 1 for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">8 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">9 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">10 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">11 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">12 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">13 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">14 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">15 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">16 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="part.storage_trouble.html"><span class="number">V </span><span class="name">Troubleshooting</span></a><ol><li class="inactive"><a href="cha.storage_trouble.html"><span class="number">17 </span><span class="name">Troubleshooting Storage Issues</span></a></li></ol></li><li class="inactive"><a href="storage.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk08apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 17. Troubleshooting Storage Issues" href="cha.storage_trouble.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix B. GNU Licenses" href="bk08apb.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="storage.docupdates.html">Documentation Updates</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 17. Troubleshooting Storage Issues" href="cha.storage_trouble.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix B. GNU Licenses" href="bk08apb.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="storage.docupdates"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h1 class="title"><span class="number">A </span><span class="name">Documentation Updates</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_docupdates.xml</li><li><span class="ds-label">ID: </span>storage.docupdates</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="storage.docupdates.html#storage.docupdates.sle12_sp1"><span class="number">A.1 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span></a></span></dt><dt><span class="sect1"><a href="storage.docupdates.html#storage.docupdates.sle12_ga_maint1"><span class="number">A.2 </span><span class="name">February 2015 (Documentation Maintenance Update)</span></a></span></dt><dt><span class="sect1"><a href="storage.docupdates.html#storage.docupdates.sle12_ga"><span class="number">A.3 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span></a></span></dt></dl></div></div><p>
+  This chapter lists content changes for this document.
+ </p><p>
+  This manual was updated on the following dates:
+ </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+    <a class="xref" href="storage.docupdates.html#storage.docupdates.sle12_sp1" title="A.1. December 2015 (Initial Release of SUSE Linux Enterprise Server 12 SP1)">Section A.1, “December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)”</a>
+   </p></li><li class="listitem "><p>
+    <a class="xref" href="storage.docupdates.html#storage.docupdates.sle12_ga_maint1" title="A.2. February 2015 (Documentation Maintenance Update)">Section A.2, “February 2015 (Documentation Maintenance Update)”</a>
+   </p></li><li class="listitem "><p>
+    <a class="xref" href="storage.docupdates.html#storage.docupdates.sle12_ga" title="A.3. October 2014 (Initial Release of SUSE Linux Enterprise Server 12)">Section A.3, “October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)”</a>
+   </p></li></ul></div><div class="sect1 " id="storage.docupdates.sle12_sp1"><div class="titlepage"><div><div><h2 class="title" id="storage.docupdates.sle12_sp1"><span class="number">A.1 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span> <a title="Permalink" class="permalink" href="storage.docupdates.html#storage.docupdates.sle12_sp1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016677943584"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      <a class="xref" href="index.html" title="Subscription Management Tool for SLES 12 SP1">SMT Guide</a> is now part of the documentation for
+      <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>.
+     </p></li><li class="listitem "><p>
+      Add-ons provided by SUSE have been renamed to modules and
+      extensions. The manuals have been updated to reflect this change.
+     </p></li><li class="listitem "><p>
+      Numerous small fixes and additions to the documentation, based on
+      technical feedback.
+     </p></li><li class="listitem "><p> The registration service has been changed from Novell
+            Customer Center to SUSE Customer Center. </p></li><li class="listitem "><p>
+      In YaST, you will now reach <span class="guimenu">Network Settings</span>
+      via the <span class="guimenu">System</span> group.  <span class="guimenu">Network
+      Devices</span> is gone
+      (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=867809" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=867809</a>).
+     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016677932192"><span class="term "><a class="xref" href="cha.filesystems.html" title="Chapter 1. Overview of File Systems in Linux">Chapter 1, <em>Overview of File Systems in Linux</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p> Mentioned that subvolumes with the option <code class="literal">no copy on
+       write</code> for <code class="filename">/var/lib/mariadb</code>,
+       <code class="filename">/var/lib/pgsql</code>, and
+       <code class="filename">/var/lib/libvirt/images</code> are created by default to
+       avoid extensive fragmenting with Btrfs.</p></li><li class="listitem "><p>Mentioned compression with Btrf and its implications, see <a class="xref" href="cha.filesystems.html#sec.filesystems.major.btrfs.compress" title="1.2.1.2.1. Mounting Compressed Btrfs File Systems">Section 1.2.1.2.1, “Mounting Compressed Btrfs File Systems”</a> (Fate #316463).
+       </p></li><li class="listitem "><p>
+       Added <a class="xref" href="cha.filesystems.html#sect.filesystems.trouble.trim" title="1.6.2. Freeing Unused Filesystem Blocks">Section 1.6.2, “Freeing Unused Filesystem Blocks”</a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=951783" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=951783</a>).
+      </p></li></ul></div></dd><dt id="idm140016677923344"><span class="term "><a class="xref" href="cha.lvm.html" title="Chapter 4. LVM Configuration">Chapter 4, <em>LVM Configuration</em></a></span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+	Added a tip on the option <code class="option">--resizefs</code> for the commands
+	<code class="command">lvextend</code>, <code class="command">lvresize</code>, and
+	<code class="command">lvreduce</code> to <a class="xref" href="cha.lvm.html#sec.lvm.cli.resize" title="4.8.1. Resizing a Logical Volume with Commands">Section 4.8.1, “Resizing a Logical Volume with Commands”</a>.
+       </p></li></ul></div></dd><dt id="idm140016677918048"><span class="term "><a class="xref" href="cha.raid.html" title="Chapter 6. Software RAID Configuration">Chapter 6, <em>Software RAID Configuration</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       Added <a class="xref" href="cha.raid.html#sec.raid.trouble.autorecovery" title="6.3.1. Recovery after Failing Disk is Back Again">Section 6.3.1, “Recovery after Failing Disk is Back Again”</a> (Fate #316381).
+      </p></li></ul></div></dd><dt id="idm140016677913568"><span class="term "><a class="xref" href="cha.isns.html" title="Chapter 12. iSNS for Linux">Chapter 12, <em>iSNS for Linux</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       Updated commands to restart iSCSI service and target in <a class="xref" href="cha.isns.html#sec.isns.domains.iscsi_nodes" title="12.3.2. Adding iSCSI Nodes to a Discovery Domain">Section 12.3.2, “Adding iSCSI Nodes to a Discovery Domain”</a> (Fate #317929).
+      </p></li></ul></div></dd><dt id="idm140016677909040"><span class="term "><a class="xref" href="cha.multipath.html" title="Chapter 15. Managing Multipath I/O for Devices">Chapter 15, <em>Managing Multipath I/O for Devices</em></a></span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+	Fixed a wrong command in <a class="xref" href="cha.multipath.html#sec.multipath.best_practice.scanpart" title="15.14.2. Scanning for New Partitioned Devices without Rebooting">Section 15.14.2, “Scanning for New Partitioned Devices without Rebooting”</a> (Doc Comment #27121).
+       </p></li></ul></div></dd><dt id="idm140016677905504"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       Added <a class="xref" href="cha.filesystems.html#sect.filesystems.trouble.trim" title="1.6.2. Freeing Unused Filesystem Blocks">Section 1.6.2, “Freeing Unused Filesystem Blocks”</a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=951783" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=951783</a>).
+      </p></li><li class="listitem "><p>
+	<code class="filename">/var/lib/open-iscsi moved</code> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=952469" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=952469</a>).
+       </p></li><li class="listitem "><p>
+	KIWI build fails because of noudevsync (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=943298" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=943298</a>).
+       </p></li><li class="listitem "><p>
+	VM <code class="literal">volume_list</code> description error ( <a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=951321" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=951321</a>).
+       </p></li><li class="listitem "><p>
+	Removed hint on restriction of 256 logical volumes (only applies to
+	lvm1) (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=947941" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=947941</a>).
+       </p></li><li class="listitem "><p>
+	Replaced <span class="quote">“<span class="quote">memory space</span>”</span> with <span class="quote">“<span class="quote">storage space</span>”</span>
+	(<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=948174" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=948174</a>).
+       </p></li><li class="listitem "><p>
+	Added a tip on the option <code class="option">--resizefs</code> for LVM resizing
+	commands (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=947952" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=947952</a>).
+       </p></li><li class="listitem "><p>
+	lvmetad is Enabled by Default on SLE 12 SP1 (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=948178" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=948178</a>).
+       </p></li><li class="listitem "><p>
+	Corrected LVM introduction (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=947949" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=947949</a>).
+       </p></li><li class="listitem "><p>
+	Removed a duplicated paragraph on thinly provisioned LVM (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=947484" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=947484</a>).
+       </p></li><li class="listitem "><p>
+        <code class="filename">/boot</code> may reside on RAID 1 in <a class="xref" href="cha.raidroot.html" title="Chapter 7. Configuring Software RAID 1 for the Root Partition">Chapter 7, <em>Configuring Software RAID 1 for the Root Partition</em></a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=939197" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=939197</a>).
+       </p></li><li class="listitem "><p>
+        Replaced <span class="guimenu">Login</span> with <span class="guimenu">Connect</span> in
+        <a class="xref" href="cha.iscsi.html#sec.iscsi.initiator.yast.discovered" title="13.3.1.3. Discovering iSCSI Targets Manually">Section 13.3.1.3, “Discovering iSCSI Targets Manually”</a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=939529" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=939529</a>).
+       </p></li><li class="listitem "><p>
+	use_lvmetad, Change Does not Describe Required Target Value
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=939519" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=939519</a>).
+       </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="storage.docupdates.sle12_ga_maint1"><div class="titlepage"><div><div><h2 class="title" id="storage.docupdates.sle12_ga_maint1"><span class="number">A.2 </span><span class="name">February 2015 (Documentation Maintenance Update)</span> <a title="Permalink" class="permalink" href="storage.docupdates.html#storage.docupdates.sle12_ga_maint1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016677876336"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Completely restructured the manual by introducing parts.
+       </p></li><li class="listitem "><p>
+        Completely revised the complete guide.
+       </p></li><li class="listitem "><p>
+        Shortened the majority of procedures.
+       </p></li><li class="listitem "><p>
+        The <code class="systemitem">cciss</code> driver has been replaced with the
+        <code class="systemitem">hpsa</code> driver. Changed all affected
+        paragraphs accordingly (Fate #316683).
+       </p></li></ul></div></dd><dt id="idm140016677869296"><span class="term "><a class="xref" href="cha.filesystems.html" title="Chapter 1. Overview of File Systems in Linux">Chapter 1, <em>Overview of File Systems in Linux</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added <a class="xref" href="cha.filesystems.html#sec.filesystems.major.btrfs.suse" title="1.2.1.2. The Root File System Setup on SUSE Linux Enterprise Server">Section 1.2.1.2, “The Root File System Setup on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>”</a>.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.filesystems.html#sec.filesystems.major.btrfs.quota" title="1.2.1.5. Btrfs Quota Support for Subvolumes">Section 1.2.1.5, “Btrfs Quota Support for Subvolumes”</a> (Fate
+        #315690).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.filesystems.html#sec.filesystems.major.btrfs.deduplication" title="1.2.1.6. Data Deduplication Support">Section 1.2.1.6, “Data Deduplication Support”</a>
+        (Fate #316317).
+       </p></li><li class="listitem "><p>
+        Added ReiserFs to the list of file systems that can be converted to
+        Btrfs (Fate #313096).
+       </p></li><li class="listitem "><p>
+        Added a note on the new XFS on-disk format to
+        <a class="xref" href="cha.filesystems.html#sec.filesystems.major.prealloc" title="1.2.2.3. Preallocation to Avoid File System Fragmentation">Section 1.2.2.3, “Preallocation to Avoid File System Fragmentation”</a> (Fate #317042).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.filesystems.html#sec.filesystems.major.ext4" title="1.2.5. Ext4">Section 1.2.5, “Ext4”</a>.
+       </p></li><li class="listitem "><p>
+        Added a note about the support status of ReiserFs to
+        <a class="xref" href="cha.filesystems.html#sec.filesystems.major.reiser" title="1.2.6. ReiserFS">Section 1.2.6, “ReiserFS”</a> (Fate #313799).
+       </p></li></ul></div></dd><dt id="idm140016677856608"><span class="term "><a class="xref" href="cha.resize_fs.html" title="Chapter 2. Resizing File Systems">Chapter 2, <em>Resizing File Systems</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added <a class="xref" href="cha.resize_fs.html#sec.resize_fs.usecases" title="2.1. Use Cases">Section 2.1, “Use Cases”</a>.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.resize_fs.html#sec.resize_fs.btrfs" title="2.3. Changing the Size of a Btrfs File System">Section 2.3, “Changing the Size of a Btrfs File System”</a> (Fate #310777).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.resize_fs.html#sec.resize_fs.xfs" title="2.4. Changing the Size of an XFS File System">Section 2.4, “Changing the Size of an XFS File System”</a>.
+       </p></li></ul></div></dd><dt id="idm140016677849488"><span class="term "><a class="xref" href="cha.lvm.html" title="Chapter 4. LVM Configuration">Chapter 4, <em>LVM Configuration</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Updated all parts dealing with the YaST Partitioner, because of a
+        new design and workflow.
+       </p></li><li class="listitem "><p>
+        Added instructions on how to list physical volumes used by logical
+        volumes to <a class="xref" href="cha.lvm.html#sec.lvm.vg_resize" title="4.5. Resizing an Existing Volume Group">Section 4.5, “Resizing an Existing Volume Group”</a> (Fate #316074).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.lvm.html#sec.lvm.cli.lvmetad" title="4.8.2. Dynamic Aggregation of LVM Metadata via lvmetad">Section 4.8.2, “Dynamic Aggregation of LVM Metadata via <code class="systemitem">lvmetad</code>”</a> (Fate #314556).
+       </p></li></ul></div></dd><dt id="idm140016677842736"><span class="term "><a class="xref" href="cha.raid.html" title="Chapter 6. Software RAID Configuration">Chapter 6, <em>Software RAID Configuration</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Updated all parts dealing with the YaST Partitioner, because of a
+        new design and workflow.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.raid.html#sec.raid.yast.names" title="6.2.1. RAID Names">Section 6.2.1, “RAID Names”</a> (Fate #315590).
+       </p></li></ul></div></dd><dt id="idm140016677837536"><span class="term "><a class="xref" href="cha.raid10.html" title="Chapter 8. Creating Software RAID 10 Devices">Chapter 8, <em>Creating Software RAID 10 Devices</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Removed RAID 6 from this chapter, since setting up
+        RAID 6 arrays is now supported by the YaST Partitioner.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.raid10.html#sec.raid10.complex" title="8.2. Creating a Complex RAID 10">Section 8.2, “Creating a Complex RAID 10”</a>.
+       </p></li></ul></div></dd><dt id="idm140016677832336"><span class="term "><a class="xref" href="cha.isns.html" title="Chapter 12. iSNS for Linux">Chapter 12, <em>iSNS for Linux</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Removed all discovery domain set content, since this is no longer
+        supported by open-isns.
+       </p></li></ul></div></dd><dt id="idm140016677828608"><span class="term "><a class="xref" href="cha.iscsi.html" title="Chapter 13. Mass Storage over IP Networks: iSCSI">Chapter 13, <em>Mass Storage over IP Networks: iSCSI</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+	Replaced iSCSI Target with iSCSI LIO Target.
+       </p></li></ul></div></dd><dt id="idm140016677825488"><span class="term "><a class="xref" href="cha.multipath.html" title="Chapter 15. Managing Multipath I/O for Devices">Chapter 15, <em>Managing Multipath I/O for Devices</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Restructured the whole chapter.
+       </p></li><li class="listitem "><p>
+        Removed <code class="literal">prio_callout</code> from
+        <a class="xref" href="cha.multipath.html#sec.multipath.policies_failover.prio" title="15.10.2. Configuring Failover Priorities">Section 15.10.2, “Configuring Failover Priorities”</a>, since it is
+        no longer supported.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.multipath.html#sec.multipath.best_practice" title="15.14. Best Practice">Section 15.14, “Best Practice”</a>.
+       </p></li></ul></div></dd><dt id="idm140016677818400"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Replace ReiserFS by Ext3 for Shrinking LV
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=884287" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=884287</a>).
+       </p></li><li class="listitem "><p>
+        System Drops Into Emergency Shell After Enabling Multipath
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=889317/" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=889317/</a>).
+       </p></li><li class="listitem "><p>
+        There is no iSCSI Target in the Package List
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=905239" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=905239</a>).
+       </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="storage.docupdates.sle12_ga"><div class="titlepage"><div><div><h2 class="title" id="storage.docupdates.sle12_ga"><span class="number">A.3 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span> <a title="Permalink" class="permalink" href="storage.docupdates.html#storage.docupdates.sle12_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016677805456"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Removed all KDE documentation and references because KDE is no longer
+      shipped.
+     </p></li><li class="listitem "><p>
+      Removed all references to SuSEconfig, which is no longer supported
+      (Fate #100011).
+     </p></li><li class="listitem "><p>
+      Move from System V init to systemd (Fate #310421). Updated affected
+      parts of the documentation.
+     </p></li><li class="listitem "><p>
+      YaST Runlevel Editor has changed to Services Manager
+      (Fate #312568). Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      Removed all references to ISDN support, as ISDN support has been
+      removed (Fate #314594).
+     </p></li><li class="listitem "><p>
+      Removed all references to the YaST DSL module as it is no longer
+      shipped (Fate #316264).
+     </p></li><li class="listitem "><p>
+      Removed all references to the YaST Modem module as it is no longer
+      shipped (Fate #316264).
+     </p></li><li class="listitem "><p>
+      Btrfs has become the default file system for the root partition
+      (Fate #315901). Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The <code class="command">dmesg</code> now provides human-readable time stamps in
+      <code class="literal">ctime()</code>-like format (Fate #316056). Updated affected
+      parts of the documentation.
+     </p></li><li class="listitem "><p>
+      syslog and syslog-ng have been replaced by rsyslog (Fate #316175).
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      MariaDB is now shipped as the relational database instead of MySQL
+      (Fate #313595). Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      SUSE-related products are no longer available from
+      <a class="link" href="http://download.novell.com" target="_blank">http://download.novell.com</a> but from
+      <a class="link" href="http://download.suse.com" target="_blank">http://download.suse.com</a>. Adjusted links
+      accordingly.
+     </p></li><li class="listitem "><p>
+      Novell Customer Center has been replaced with SUSE Customer Center. Updated
+      affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      <code class="filename">/var/run</code> is mounted as tmpfs (Fate #303793).
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The following architectures are no longer supported: Itanium and x86.
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The traditional method for setting up the network with
+      <code class="systemitem">ifconfig</code> has been replaced by
+      <code class="systemitem">wicked</code>. Updated affected parts of the
+      documentation.
+     </p></li><li class="listitem "><p>
+      A lot of networking commands are deprecated and have been replaced by
+      newer commands (usually <code class="command">ip</code>). Updated affected
+      parts of the documentation.
+     </p><table border="0" summary="Simple list" class="simplelist "><tr><td><code class="command">arp</code>: <code class="command">ip neighbor</code>
+      </td></tr><tr><td><code class="command">ifconfig</code>: <code class="command">ip addr</code>, <code class="command">ip
+      link</code>
+      </td></tr><tr><td><code class="command">iptunnel</code>: <code class="command">ip tunnel</code>
+      </td></tr><tr><td><code class="command">iwconfig</code>: <code class="command">iw</code>
+      </td></tr><tr><td><code class="command">nameif</code>: <code class="command">ip link</code>,
+      <code class="command">ifrename</code>
+      </td></tr><tr><td><code class="command">netstat</code>: <code class="command">ss</code>,
+      <code class="command">ip route</code>,
+      <code class="command">ip -s link</code>,
+      <code class="command">ip maddr</code>
+      </td></tr><tr><td><code class="command">route</code>: <code class="command">ip route</code>
+      </td></tr></table></li><li class="listitem "><p>
+      Numerous small fixes and additions to the documentation, based on
+      technical feedback.
+     </p></li></ul></div></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="bk08apb.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Appendix B </span>GNU Licenses</span></a><a class="nav-link" href="cha.storage_trouble.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 17 </span>Troubleshooting Storage Issues</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

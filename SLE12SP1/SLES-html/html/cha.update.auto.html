@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3 | Deployment Guide | SUSE Linux Enterprise Server 12 SP1</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP1" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 26. Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP1" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.autoinstall.html" title="Part V. Automated Installations" /><link rel="prev" href="cha.deployment.autoinst.html" title="Chapter 25. Automated Installation" /><link rel="next" href="cha.autokiwi.html" title="Chapter 27. Automated Deployment of Preload Images" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.autoinstall.html">Automated Installations</a><span> › </span><a class="crumb" href="cha.update.auto.html">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="part.archspec.html"><span class="number">I </span><span class="name">Architecture-Specific Installation Considerations</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">3 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">4 </span><span class="name">Installation on IBM z Systems</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">Manual Deployment</span></a><ol><li class="inactive"><a href="cha.deployment.html"><span class="number">5 </span><span class="name">Deployment Strategies</span></a></li><li class="inactive"><a href="cha.inst.html"><span class="number">6 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">8 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">9 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">10 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">11 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">12 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">13 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">14 </span><span class="name">Advanced Disk Setup</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">III </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">15 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">16 </span><span class="name">Backporting Source Code</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">17 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">18 </span><span class="name">Service Pack Migration</span></a></li></ol></li><li class="inactive"><a href="part.imaging.html"><span class="number">IV </span><span class="name">Imaging and Creating Products</span></a><ol><li class="inactive"><a href="cha.kiwi.pointer.html"><span class="number">19 </span><span class="name">Creating Images with KIWI</span></a></li><li class="inactive"><a href="cha.studio.pointer.html"><span class="number">20 </span><span class="name">Creating Images with SUSE Studio</span></a></li><li class="inactive"><a href="cha.addon_creator.html"><span class="number">21 </span><span class="name">Creating Add-on Products With Add-on Product Creator</span></a></li><li class="inactive"><a href="cha.productcreator.html"><span class="number">22 </span><span class="name">Creating Images with YaST Product Creator</span></a></li><li class="inactive"><a href="cha.imgcreator.html"><span class="number">23 </span><span class="name">Creating Images with YaST Image Creator</span></a></li><li class="inactive"><a href="cha.deployment_firstboot.html"><span class="number">24 </span><span class="name">Deploying Customized Preinstallations</span></a></li></ol></li><li class="inactive"><a href="part.autoinstall.html"><span class="number">V </span><span class="name">Automated Installations</span></a><ol><li class="inactive"><a href="cha.deployment.autoinst.html"><span class="number">25 </span><span class="name">Automated Installation</span></a></li><li class="inactive"><a href="cha.update.auto.html"><span class="number">26 </span><span class="name">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</span></a></li><li class="inactive"><a href="cha.autokiwi.html"><span class="number">27 </span><span class="name">Automated Deployment of Preload Images</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 25. Automated Installation" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 27. Automated Deployment of Preload Images" href="cha.autokiwi.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.autoinstall.html">Automated Installations</a><span> › </span><a class="crumb" href="cha.update.auto.html">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 25. Automated Installation" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 27. Automated Deployment of Preload Images" href="cha.autokiwi.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.update.auto"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP1</span></span></span></div><div><h2 class="title"><span class="number">26 </span><span class="name">Automated Upgrade from SUSE Linux Enterprise 11 SP2 to 11 SP3</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>automated_upgrade.xml</li><li><span class="ds-label">ID: </span>cha.update.auto</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.update.auto.html#sec.update.auto.prep_autoyast"><span class="number">26.1 </span><span class="name">Preparing the AutoYaST Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.update.auto.html#sec.update.auto.run"><span class="number">26.2 </span><span class="name">Running the Automated Upgrade</span></a></span></dt><dt><span class="sect1"><a href="cha.update.auto.html#sec.update.auto.grub"><span class="number">26.3 </span><span class="name">GRUB 2 Menu Section for Booting into the Upgrade</span></a></span></dt><dt><span class="sect1"><a href="cha.update.auto.html#sec.update.auto.2nd-stage"><span class="number">26.4 </span><span class="name">Second Stage of the Upgrade</span></a></span></dt><dt><span class="sect1"><a href="cha.update.auto.html#sec.update.auto.limitations"><span class="number">26.5 </span><span class="name">Limitations and Hints</span></a></span></dt></dl></div></div><p>
+  The following procedure is a way to do a mass upgrade unattended from
+  SUSE Linux Enterprise 11 SP2 to SUSE Linux Enterprise 11 SP3. Several preparation
+  steps are needed to create a suitable AutoYaST profile. AutoYaST finally
+  will execute the upgrade process.
+ </p><div class="sect1 " id="sec.update.auto.prep_autoyast"><div class="titlepage"><div><div><h2 class="title" id="sec.update.auto.prep_autoyast"><span class="number">26.1 </span><span class="name">Preparing the AutoYaST Profile</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.prep_autoyast">#</a></h2></div></div></div><p>
+   The AutoYaST profile for the automated upgrade uses the same file format
+   as the AutoYaST installation. For more information about AutoYaST, see
+   <a class="xref" href="cha.deployment.autoinst.html" title="Chapter 25. Automated Installation">Chapter 25, <em>Automated Installation</em></a> and
+   <a class="xref" href="book.autoyast.html" title="AutoYaST">AutoYaST</a>.
+  </p><p>
+   However, there are some parts of the system (for example, partitioning)
+   that do not make sense to be configured during the upgrade. On the other
+   hand, it is useful to set upgrade-specific options by means of the
+   AutoYaST profile.
+  </p><div class="sect2 " id="sec.update.auto.prep_autoyast.upgrade"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.prep_autoyast.upgrade"><span class="number">26.1.1 </span><span class="name">Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.prep_autoyast.upgrade">#</a></h3></div></div></div><p>
+    The upgrade options define the behavior of the dependency solver during
+    upgrade:
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;upgrade&gt;
+  &lt;only_installed_packages
+    config:type="boolean"&gt;false&lt;/only_installed_packages&gt;
+  &lt;stop_on_solver_conflict
+    config:type="boolean"&gt;true&lt;/stop_on_solver_conflict&gt;
+&lt;/upgrade&gt;</pre></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016699952608"><span class="term "><code class="literal">only_installed_packages</code>
+     </span></dt><dd><p>
+       Set to <code class="literal">true</code> for package-based upgrades
+       (recommended for upgrading to the next service pack of the same
+       product) or <code class="literal">false</code> for pattern-based upgrades
+       (recommended for an upgrade between versions of a product, for
+       example, from SLES10 to SLES11).
+      </p></dd><dt id="idm140016699949408"><span class="term "><code class="literal">stop_on_solver_conflict</code>
+     </span></dt><dd><p>
+       Defines whether to show the proposal in case of failure to resolve
+       package dependencies interactively (recommended to be set to
+       <code class="literal">true</code>, but this could result in an interactive
+       process, during which the user needs to resolve the conflicts
+       manually).
+      </p></dd></dl></div></div><div class="sect2 " id="sec.update.auto.prep_autoyast.sw_selection"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.prep_autoyast.sw_selection"><span class="number">26.1.2 </span><span class="name">Software Selection</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.prep_autoyast.sw_selection">#</a></h3></div></div></div><p>
+    The software selection options define, which components to select or
+    deselect in addition to the results of the resolver:
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
+  &lt;packages config:type="list"&gt;
+    &lt;package&gt;autoyast2-installation&lt;/package&gt;
+    &lt;package&gt;apparmor-profile-editor&lt;/package&gt;
+  &lt;/packages&gt;
+  &lt;patterns config:type="list"&gt;
+    &lt;pattern&gt;base&lt;/pattern&gt;
+  &lt;/patterns&gt;
+  &lt;remove-packages config:type="list"/&gt;
+  &lt;remove-patterns config:type="list"/&gt;
+&lt;/software&gt;</pre></div><p>
+    It is especially important to set packages or patterns for being
+    selected or deselected to resolve package conflicts and thus to
+    avoid the need for interactive intervention. After the upgrade is done,
+    the newly created <code class="filename">autoupg_updated.xml</code> file contains
+    these packages and patterns plus those that were selected or deselected
+    for any other reason.
+   </p></div><div class="sect2 " id="sec.update.auto.prep_autoyast.backup"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.prep_autoyast.backup"><span class="number">26.1.3 </span><span class="name">Backup Before Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.prep_autoyast.backup">#</a></h3></div></div></div><p>
+    The backup before upgrade options match these features in the upgrade
+    proposal.
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;backup&gt;
+  &lt;sysconfig config:type="boolean"&gt;true&lt;/sysconfig&gt;
+  &lt;modified config:type="boolean"&gt;true&lt;/modified&gt;
+  &lt;remove_old config:type="boolean"&gt;false&lt;/remove_old&gt;
+&lt;/backup&gt;</pre></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016699939888"><span class="term "><code class="literal">sysconfig</code>
+     </span></dt><dd><p>
+       defines whether to back up sysconfig before upgrading.
+      </p></dd><dt id="idm140016699937760"><span class="term "><code class="literal">modified</code>
+     </span></dt><dd><p>
+       defines whether to back up the modified configuration files before
+       upgrading.
+      </p></dd><dt id="idm140016699935600"><span class="term "><code class="literal">remove_old</code>
+     </span></dt><dd><p>
+       defines whether to remove old backups from previous upgrades.
+      </p></dd></dl></div></div></div><div class="sect1 " id="sec.update.auto.run"><div class="titlepage"><div><div><h2 class="title" id="sec.update.auto.run"><span class="number">26.2 </span><span class="name">Running the Automated Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.run">#</a></h2></div></div></div><p>
+   To start the automated upgrade, boot the installation media and pass the
+   AutoYaST profile to it. There are two ways to pass the profile to the
+   system:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Pass the profile to the kernel command line the same way as for the
+     AutoYaST installation (use the <code class="literal">autoupgrade=1</code>
+     <code class="filename">autoyast=http://host/path/profile.xml</code> parameter.
+     For z Systems, this is the only possibility.
+    </p></li><li class="listitem "><p>
+     Pass the <code class="literal">autoupgrade=1</code> parameter to the kernel
+     command line. Before you start the upgrade, copy the profile to
+     <code class="filename">/root/autoupg.xml</code>. Then there is no need for any
+     additional kernel parameter.
+    </p></li></ul></div><p>
+   The latter approach allows you to have a single installation kernel
+   command line for even different machines—just copy the
+   appropriate profile into its file system.
+  </p><p>
+   As long as you have only one SUSE Linux Enterprise system installed on your machine,
+   there are no package conflicts and you did not set the profile to stop on
+   the upgrade proposal, the complete process will be non-interactive. In
+   case you enter the upgrade proposal, you can modify its settings for the
+   upgrade.
+  </p><p>
+   After the upgrade finishes, YaST writes the
+   <code class="filename">/root/autoupg-updated.xml</code> file, which contains the
+   profile with applied software selection changes done in the proposal.
+   This is especially useful in case of mass upgrades of machines with the
+   same package selection. This way, conflict resolutions from one machine
+   can easily be applied on other machines, which consequently will get
+   these conflicts resolved automatically and the upgrade itself will be
+   non-interactive.
+  </p><p>
+   If there are more SUSE Linux Enterprise systems installed on the machine, you will
+   always be asked, which one to upgrade—there is no way to select
+   it in advance.
+  </p></div><div class="sect1 " id="sec.update.auto.grub"><div class="titlepage"><div><div><h2 class="title" id="sec.update.auto.grub"><span class="number">26.3 </span><span class="name">GRUB 2 Menu Section for Booting into the Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.grub">#</a></h2></div></div></div><p>
+   An alternate way to boot the system is to create an additional section in
+   the GRUB 2 menu (and similar for other boot loaders and other
+   architectures), which starts the installation. The following example
+   assumes that there is a separate <code class="filename">/boot</code> partition,
+   which is referred in GRUB 2 as <code class="literal">(hd0,0)</code>:
+  </p><div class="verbatim-wrap"><pre class="screen">title Upgrade
+    root (hd0,0)
+    kernel /upgrade/linux
+    install=<em class="replaceable ">inst_source_url</em> autoupgrade=1
+    autoyast=<em class="replaceable ">autoyast_profile_url</em> vga=0x314
+    initrd /upgrade/initrd</pre></div><p>
+   The above example assumes that the installation kernel and the
+   installation <code class="systemitem">initrd</code>
+
+   are located in the <code class="filename">/boot/upgrade</code> directory.
+  </p><p>
+   On z Systems, you must add the parameters to the PARM
+   file—proceed the same way as you do when performing an
+   AutoYaST-driven installation.
+  </p></div><div class="sect1 " id="sec.update.auto.2nd-stage"><div class="titlepage"><div><div><h2 class="title" id="sec.update.auto.2nd-stage"><span class="number">26.4 </span><span class="name">Second Stage of the Upgrade</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.2nd-stage">#</a></h2></div></div></div><p>
+   The automated upgrade by default does not perform configuration changes
+   during the second stage of the upgrade. The only exception is network
+   configuration, which needs to be set to be preserved in the AutoYaST
+   upgrade profile.
+  </p><p>
+   If configuration adjustment of some system areas is needed after the
+   upgrade (for example, configuring a new service), add the relevant
+   sections to the AutoYaST profile for the upgrade and the configuration of
+   the selected system areas will be saved during the upgrade.
+  </p><div id="idm140016699913072" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: AutoYaST Supplied Configuration Replaces Existing Configuration</h6><p>
+    Be warned that existing configuration of that system area will be
+    replaced and thus destroyed by the AutoYaST configuration.
+   </p></div><p>
+   Normally, the only configuration adjustment, which should be done in
+   the AutoYaST profile, is the registration of the system with Subscription Management Tool
+   (SMT) or SUSE Customer Center (SCC). If this is missing, the system will not get
+   the update repository and updates will not be possible—unless
+   configured later again.
+  </p></div><div class="sect1 " id="sec.update.auto.limitations"><div class="titlepage"><div><div><h2 class="title" id="sec.update.auto.limitations"><span class="number">26.5 </span><span class="name">Limitations and Hints</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.limitations">#</a></h2></div></div></div><div class="sect2 " id="sec.update.auto.limitations.nm"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.limitations.nm"><span class="number">26.5.1 </span><span class="name">NetworkManager and Registration</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.limitations.nm">#</a></h3></div></div></div><p>
+    In case of using NetworkManager for managing network devices and network
+    connections, network connection is not available during the second stage
+    of the upgrade. This prevents the system from performing the
+    registration.
+   </p></div><div class="sect2 " id="sec.update.auto.limitations.clean"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.limitations.clean"><span class="number">26.5.2 </span><span class="name">Cleaning Up Upgrade Setting</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.limitations.clean">#</a></h3></div></div></div><p>
+    If you do any changes in your system to trigger the upgrade
+    process (for example, adding a new section to the boot loader menu), you
+    probably want to remove it after the upgrade is done.
+   </p><p>
+    
+    You can do it automatically with a post-installation script. Find an
+    examples in <a class="xref" href="configuration.html#createprofile.scripts" title="4.31. Custom User Scripts">Section 4.31, “Custom User Scripts”</a>. A sample script
+    cleaning up GRUB 2's <code class="filename">menu.lst</code> is included in the
+    sample <code class="filename">autoupg.xml</code> file. Make sure that the script
+    matches your particular setup and that it does not remove more than you
+    actually want!
+   </p></div><div class="sect2 " id="sec.update.auto.limitations.info"><div class="titlepage"><div><div><h3 class="title" id="sec.update.auto.limitations.info"><span class="number">26.5.3 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.update.auto.html#sec.update.auto.limitations.info">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Linuxrc Documentation:
+      <a class="link" href="http://en.opensuse.org/SDB:Linuxrc" target="_blank">http://en.opensuse.org/SDB:Linuxrc</a>
+     </p></li></ul></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.autokiwi.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 27 </span>Automated Deployment of Preload Images</span></a><a class="nav-link" href="cha.deployment.autoinst.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 25 </span>Automated Installation</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
