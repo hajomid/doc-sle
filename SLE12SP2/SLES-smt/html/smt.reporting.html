@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>SMT Reports | Subscription Management Tool for SLES 12 SP2 | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Subscription Management Tool for SLES 12 SP2" /><meta name="chapter-title" content="Chapter 6. SMT Reports" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="index.html" title="Subscription Management Tool for SLES 12 SP2" /><link rel="prev" href="smt.registration.html" title="Chapter 5. Managing Client Machines with SMT" /><link rel="next" href="smt.tools.html" title="Chapter 7. SMT Tools and Configuration Files" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">SMT Guide</a><span> › </span><a class="crumb" href="smt.reporting.html">SMT Reports</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Subscription Management Tool for SLES 12 SP2</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="pre_smt.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="smt.installation.html"><span class="number">1 </span><span class="name">SMT Installation</span></a></li><li class="inactive"><a href="smt.server.html"><span class="number">2 </span><span class="name">SMT Server Configuration</span></a></li><li class="inactive"><a href="smt.mirroring.html"><span class="number">3 </span><span class="name">Mirroring Repositories on the SMT Server</span></a></li><li class="inactive"><a href="smt.management.html"><span class="number">4 </span><span class="name">Managing Repositories with YaST SMT Server Management</span></a></li><li class="inactive"><a href="smt.registration.html"><span class="number">5 </span><span class="name">Managing Client Machines with SMT</span></a></li><li class="inactive"><a href="smt.reporting.html"><span class="number">6 </span><span class="name">SMT Reports</span></a></li><li class="inactive"><a href="smt.tools.html"><span class="number">7 </span><span class="name">SMT Tools and Configuration Files</span></a></li><li class="inactive"><a href="smt.client.html"><span class="number">8 </span><span class="name">Configuring Clients to Use SMT</span></a></li><li class="inactive"><a href="smt.advanced.html"><span class="number">9 </span><span class="name">Advanced Topics</span></a></li><li class="inactive"><a href="smt.app.api.html"><span class="number">A </span><span class="name">SMT REST API</span></a></li><li class="inactive"><a href="app.smt.docupdates.html"><span class="number">B </span><span class="name">Documentation Updates</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 5. Managing Client Machines with SMT" href="smt.registration.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 7. SMT Tools and Configuration Files" href="smt.tools.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">SMT Guide</a><span> › </span><a class="crumb" href="smt.reporting.html">SMT Reports</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 5. Managing Client Machines with SMT" href="smt.registration.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 7. SMT Tools and Configuration Files" href="smt.tools.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="smt.reporting"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></div><div><h1 class="title"><span class="number">6 </span><span class="name">SMT Reports</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>smt_reporting.xml</li><li><span class="ds-label">ID: </span>smt.reporting</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="smt.reporting.html#idm139779356094992"><span class="number">6.1 </span><span class="name">Report Schedule and Recipients</span></a></span></dt><dt><span class="sect1"><a href="smt.reporting.html#idm139779357993520"><span class="number">6.2 </span><span class="name">Report Output Formats and Targets</span></a></span></dt></dl></div></div><p>
+  This chapter introduces reports generated based on the SMT and SUSE
+  Customer Center data. The reports generated contain statistics of all the
+  registered machines, products used and all active, expiring or missing
+  subscriptions.
+ </p><div id="idm139779356096608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Assignment of Reports</h6><p>
+   If you are using more than one SMT server in your environment,
+   generated reports may not represent all of the SMT servers or machines
+   in your environment. For the complete statistics of all your registered
+   machines, refer to the information in the SUSE Customer Center.
+  </p></div><div class="sect1 " id="idm139779356094992"><div class="titlepage"><div><div><h2 class="title" id="idm139779356094992"><span class="number">6.1 </span><span class="name">Report Schedule and Recipients</span> <a title="Permalink" class="permalink" href="smt.reporting.html#idm139779356094992">#</a></h2></div></div></div><p>
+   Generated SMT reports can be sent to a defined list of e-mail addresses
+   periodically. To create or edit this list, and to set the frequency of
+   the reports, use the YaST SMT Configuration module. How to configure
+   this list is described in <a class="xref" href="smt.server.html#smt.yast.reports" title="2.4. Setting E-mail Addresses to Receive Reports with YaST">Section 2.4, “Setting E-mail Addresses to Receive Reports with YaST”</a>.
+   Configuration of the report schedule is described in
+   <a class="xref" href="smt.server.html#smt.yast.scheduling" title="2.5. Setting the SMT Job Schedule with YaST">Section 2.5, “Setting the SMT Job Schedule with YaST”</a>.
+  </p><p>
+   The list can also be edited manually in the <code class="option">reportEmail</code>
+   option of the <code class="filename">/etc/smt.conf</code> configuration file. For
+   more information about editing the list of addresses directly, see
+   <a class="xref" href="smt.tools.html#smt.config.smtconf.report" title="7.2.1.6. [REPORT] Section of /etc/smt.conf">Section 7.2.1.6, “[REPORT] Section of /etc/smt.conf”</a>. To set the frequency of
+   reports manually, you can directly edit the
+   <code class="filename">smt-gen-report</code> lines of the crontab in
+   <code class="filename">/etc/cron.d/novell.com-smt</code>. For more information
+   about the crontab format, see <code class="command">man 5 crontab</code>.
+  </p><p>
+   Reports, including those created as a scheduled SMT job, are created by
+   the <code class="command">smt-report</code> command. This command has various
+   parameters. To edit parameters used with scheduled commands, edit the
+   <code class="filename">/etc/smt.d/smt-cron.conf</code> configuration file. For
+   more information, see <a class="xref" href="smt.tools.html#smt.config.cronconf" title="7.2.2. /etc/smt.d/smt-cron.conf">Section 7.2.2, “/etc/smt.d/smt-cron.conf”</a>.
+  </p></div><div class="sect1 " id="idm139779357993520"><div class="titlepage"><div><div><h2 class="title" id="idm139779357993520"><span class="number">6.2 </span><span class="name">Report Output Formats and Targets</span> <a title="Permalink" class="permalink" href="smt.reporting.html#idm139779357993520">#</a></h2></div></div></div><p>
+   SMT reports can be printed to the standard output, exported to one or
+   multiple files (in CSV format) and mailed to the defined list of
+   e-mail addresses. Use the following options for the
+   <code class="command">smt-report</code> command:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139779357991392"><span class="term "><code class="option">--quiet</code> or <code class="option">-q</code>
+    </span></dt><dd><p>
+      Suppress output to STDOUT and run <code class="command">smt-report</code> in
+      quiet mode.
+     </p></dd><dt id="idm139779357988368"><span class="term "><code class="option">--file</code> or <code class="option">-F</code>
+    </span></dt><dd><p>
+      Export report to one or several files. By default, the report will be
+      written to a single file, rendered as tables. Optionally, the file name
+      or whole path may be specified after the parameter: <code class="option">--file
+      <em class="replaceable ">filename</em></code>. If no file name is
+      specified, a default file name containing a time stamp is used. However,
+      SMT will not check if the file or files already exist.
+     </p><p>
+      In CSV (Comma-Separated Value) mode the report will be written to
+      multiple files, therefore the specified file name will expand to
+      <code class="filename"><em class="replaceable ">[path/]filename</em>-<em class="replaceable ">reportname</em>.<em class="replaceable ">extension</em></code>
+      for every report.
+     </p></dd><dt id="idm139779357982704"><span class="term "><code class="option">--csv</code> or <code class="option">-c</code>
+    </span></dt><dd><p> The report will be exported to multiple files in CSV format.
+            The first line of each *.csv file consists of the column
+            names, then the data starts on line two. It is recommended
+            to use the <code class="option">--csv</code> parameter together with
+            the <code class="option">--file</code> parameter. If the specified file
+            name contains a <code class="literal">.csv</code> extension, the
+            report format will be CSV (as if the <code class="option">--csv</code>
+            parameter was used). </p></dd><dt id="idm139779387064432"><span class="term "><code class="option">--mail</code> or <code class="option">-m</code>
+    </span></dt><dd><p>
+      Activate mailing of the report to the addresses configured with the
+      YaST SMT Configuration module and written in
+      <code class="filename">/etc/smt.conf</code>. The report will be rendered as
+      tables.
+     </p></dd><dt id="idm139779387061312"><span class="term "><code class="option">--attach</code> or <code class="option">-a</code>
+    </span></dt><dd><p>
+      Attach the report to the mails in CSV format. This option should only
+      be used together with the <code class="option">--mail</code> option.
+     </p></dd><dt id="idm139779387058240"><span class="term "><code class="option">--pdf</code>
+    </span></dt><dd><p>
+      The report will be exported to multiple files in pdf format.
+     </p></dd><dt id="idm139779387056096"><span class="term "><code class="option">--xml</code>
+    </span></dt><dd><p>
+      The report will be exported to multiple files in xml format.
+     </p></dd></dl></div><div id="idm139779385524640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Disabling Sending Attachments</h6><p>
+    If you want to disable sending CSV attachments with report mails, edit
+    the <code class="filename">/etc/smt.d/smt-cron.conf</code> configuration file as
+    follows: remove the <code class="option">--attach</code> option from the
+    <code class="literal">REPORT_PARAMS</code> value. The default line reads:
+    <code class="literal">REPORT_PARAMS="--mail --attach -L
+    /var/log/smt-report.log"</code>. To disable CSV attachments, change
+    it to: <code class="literal">REPORT_PARAMS="--mail -L
+    /var/log/smt-report.log"</code>.
+   </p><p>
+    If you have disabled CSV attachments but need them occasionally, you can
+    send them manually with the <code class="command">smt-report --mail --attach -L
+    /var/log/smt-report.log</code> command.
+   </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="smt.tools.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 7 </span>SMT Tools and Configuration Files</span></a><a class="nav-link" href="smt.registration.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 5 </span>Managing Client Machines with SMT</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Dockerizing Applications | Docker Guide | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Docker Guide" /><meta name="chapter-title" content="Chapter 6. Dockerizing Applications" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="book.sles.docker.html" title="Docker Guide" /><link rel="prev" href="docker.building.images.html" title="Chapter 5. Creating Custom Images" /><link rel="next" href="cha.working.with.containers.html" title="Chapter 7. Working with Containers" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="docker.dockerizing.application.html">Dockerizing Applications</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Docker Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="cha.docker.overview.html"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="cha.docker.installation.html"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="cha.sle2docker.installation.html"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="cha.registry.installation.html"><span class="number">4 </span><span class="name">Hosting Docker Images On-premise</span></a></li><li class="inactive"><a href="docker.building.images.html"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="docker.dockerizing.application.html"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="cha.working.with.containers.html"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="app.docker.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk11apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 5. Creating Custom Images" href="docker.building.images.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 7. Working with Containers" href="cha.working.with.containers.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="docker.dockerizing.application.html">Dockerizing Applications</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 5. Creating Custom Images" href="docker.building.images.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 7. Working with Containers" href="cha.working.with.containers.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="docker.dockerizing.application" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></div><div><h1 class="title"><span class="number">6 </span><span class="name">Dockerizing Applications</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>docker_dockerizing_application.xml</li><li><span class="ds-label">ID: </span>docker.dockerizing.application</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="docker.dockerizing.application.html#Application_with_specific_dependencies"><span class="number">6.1 </span><span class="name">Running an Application with Specific Package Versions</span></a></span></dt><dt><span class="sect1"><a href="docker.dockerizing.application.html#Applications_with_Configuration"><span class="number">6.2 </span><span class="name">Running Applications with Specific Configuration</span></a></span></dt><dt><span class="sect1"><a href="docker.dockerizing.application.html#Running_Application_with_Volumes"><span class="number">6.3 </span><span class="name">Sharing Data Between an Application and the Host System</span></a></span></dt><dt><span class="sect1"><a href="docker.dockerizing.application.html#docker_daemons"><span class="number">6.4 </span><span class="name">Applications Running in the Background</span></a></span></dt></dl></div></div><p>
+        Docker is a technology that can help you to minimize resources used to run or build your applications. There are several types of applications that are suitable to run inside a Docker container like daemons, Web pages or applications that expose ports for communication. You can use Docker for automation of building and deployment processes by adding the build process into a docker image, then building the image and then running containers based on that image.
+        </p><p>
+        Running your application inside a docker container provides you with the following advantages:
+        </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+                        You can minimize the runtime environment of the application as you can add to the docker image of the application just the required processes and applications.
+                        </p></li><li class="listitem "><p>
+                        The image with your application is portable across machines also with different Linux host systems.
+                        </p></li><li class="listitem "><p>
+                        You can share the image of your application by using a repository.
+                        </p></li><li class="listitem "><p>
+                        You can use different versions of required packages in the container than the host system uses without having problems with dependencies.
+                        </p></li><li class="listitem "><p>
+                        You can run several instances of the same application that are completely independent from each other.
+                        </p></li></ul></div><p>
+        Using Docker for building of applications provides the following features:
+        </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+                        You can prepare a complete building image.
+                        </p></li><li class="listitem "><p>
+                        Your build always runs in the same environment.
+                        </p></li><li class="listitem "><p>
+                        Your developers can test their code in the same environment as used in production.
+                        </p></li><li class="listitem "><p>
+                        You can set up an automated building process.
+                        </p></li></ul></div><p>
+        The following section provides you with examples and tips on how to dockerize your applications. Prior to reading further, make sure that you have activated your SLES base docker image as described in <a class="xref" href="docker.building.images.html#Building_Pre-build_Images" title="5.1. Obtaining Base SLES Images">Section 5.1, “Obtaining Base SLES Images”</a>.
+        </p><div class="sect1 " id="Application_with_specific_dependencies"><div class="titlepage"><div><div><h2 class="title" id="Application_with_specific_dependencies"><span class="number">6.1 </span><span class="name">Running an Application with Specific Package Versions</span> <a title="Permalink" class="permalink" href="docker.dockerizing.application.html#Application_with_specific_dependencies">#</a></h2></div></div></div><p>
+                You may face a problem that your application uses a specific version of a package that is different from the package installed on the system that should run your application. You can modify your application to work with another version or you may create a Docker image with that particular package version. The following example of a <code class="filename">Dockerfile</code> shows an image based on a current version of  SLES but with an older version of the <code class="literal">example</code> package
+                </p><div class="verbatim-wrap"><pre class="screen">                FROM suse/sles12sp2:latest
+                MAINTAINER Tux
+
+                RUN zypper ref &amp;&amp; zypper in -f example-1.0.0-0
+                COPY application.rpm /tmp/
+
+                RUN zypper --non-interactive in /tmp/application.rpm
+
+                ENTRYPOINT ["/etc/bin/application"]
+
+                CMD ["-i"]</pre></div><p>
+                Now you can build the image by running in the same directory as the <code class="filename">Dockerfile</code> resides:
+                </p><div class="verbatim-wrap"><pre class="screen">                docker build --tag tux_application:latest .</pre></div><p>
+                The <code class="filename">Dockerfile</code> examples shown above performs the following operations during the <code class="command">docker build</code>:
+                </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+                                Updates the SLES repositories.
+                                </p></li><li class="listitem "><p>
+                                Installs the desired version of the <code class="literal">example</code> package.
+                                </p></li><li class="listitem "><p>
+                                Copies your application package to the image. The source RPM must be placed in the build context.
+                                </p></li><li class="listitem "><p>
+                                Unpacks your application.
+                                </p></li><li class="listitem "><p>
+                                The last two steps run your application after a container is started.
+                                </p></li></ol></div><p>
+                After a successful build of the <code class="literal">tux_application</code> image, you can start a container based on your new image:
+                </p><div class="verbatim-wrap"><pre class="screen">                docker run -it --name application_instance tux_application:latest</pre></div><p>
+                You have created a container that runs a single instance of your application.
+                Bear in mind that after closing the application, the Docker container exits as well.
+                </p></div><div class="sect1 " id="Applications_with_Configuration"><div class="titlepage"><div><div><h2 class="title" id="Applications_with_Configuration"><span class="number">6.2 </span><span class="name">Running Applications with Specific Configuration</span> <a title="Permalink" class="permalink" href="docker.dockerizing.application.html#Applications_with_Configuration">#</a></h2></div></div></div><p>
+                You may need to run an application that is delivered in a standard package accessible through SLES repositories but you may need to use a different configuration or use specific environment variables. In case you would like to run several instances of the application with non-standard configuration, you can create your own image that will pass the custom configuration to the application.
+                </p><p>
+                An example with the <span class="emphasis"><em>example</em></span> application follows:
+                </p><div class="verbatim-wrap"><pre class="screen">                FROM suse/sles12sp2:latest
+
+                RUN zypper ref &amp;&amp; zypper --non-interactive in example
+
+                ENV BACKUP=/backup
+
+                RUN mkdir -p $BACKUP
+                COPY configuration_example /etc/example/
+
+                ENTRYPOINT ["/etc/bin/example"]</pre></div><p>
+                The above example <code class="filename">Dockerfile</code> results in the following operations:
+                </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+                                Refreshing of repositories and installation of the <span class="emphasis"><em>example</em></span>.
+                                </p></li><li class="listitem "><p>
+                                Sets a <code class="literal">BACKUP</code> environment variable (the variable persists to containers started from the image). You can always overwrite the value of the variable with a new one while running the container by specifying a new value.
+                                </p></li><li class="listitem "><p>
+                                Creates the directory <code class="literal">/backup</code>.
+                                </p></li><li class="listitem "><p>
+                                Copies the  <code class="filename">configuration_example</code> to the image.
+                                </p></li><li class="listitem "><p>
+                                Runs the <span class="emphasis"><em>example</em></span> application.
+                                </p></li></ol></div><p>
+                Now you can build the image and after a successful build, you can run a container based on your image.
+                </p></div><div class="sect1 " id="Running_Application_with_Volumes"><div class="titlepage"><div><div><h2 class="title" id="Running_Application_with_Volumes"><span class="number">6.3 </span><span class="name">Sharing Data Between an Application and the Host System</span> <a title="Permalink" class="permalink" href="docker.dockerizing.application.html#Running_Application_with_Volumes">#</a></h2></div></div></div><p>
+                You may run an application that needs to share data between the application's container and the host file system. Docker enables you to do data sharing by using volumes. You can declare a mount point directly in the <code class="filename">Dockerfile</code>. But you cannot specify a directory on the host system in the <code class="filename">Dockerfile</code> as the directory may not be accessible at the build time. You can find the mounted directory in the <code class="literal">/var/lib/docker/volumes/</code> directory on the host system.
+                </p><div id="idm139622511935616" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Discarding Changes to the Directory to Be Shared</h6><p>
+                After you declare a mount point by using the <code class="literal">VOLUME</code> instruction, all your changes performed (by using the <code class="literal">RUN</code> instruction) to the directory will be discarded. After the declaration, the volume is part of a temporary container that is then removed after a successful build. In case you need to e.g. change permissions, perform the change before you declare the directory as a mount point in the <code class="filename">Dockerfile</code>.
+                </p></div><p>
+                You can specify a particular mount point on the host system when running a container by using the <code class="literal">-v</code> option:
+                </p><div class="verbatim-wrap"><pre class="screen">                docker run -it --name testing -v /home/tux/data:/data sles12sp2:latest /bin/bash</pre></div><div id="idm139622508445408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+                Using the <code class="literal">-v</code> option overwrites the <code class="literal">VOLUME</code> instruction if you specify the same mount point in the container.
+                </p></div><p>
+                Now let's create an example image with a Web server that will read Web content from the host's file system. The <code class="filename">Dockerfile</code> could look as follows:
+                </p><div class="verbatim-wrap"><pre class="screen">                FROM suse/sles12sp2:latest
+
+                RUN zypper ref &amp;&amp; zypper --non-interactive in apache2
+
+                COPY apache2 /etc/sysconfig/
+
+                RUN chown -R admin /data
+
+                EXPOSE 80
+
+                VOLUME /data
+
+                ENTRYPOINT ["apache2ctl"]</pre></div><p>
+                The example above installs the Apache Web server to the image and copies all your configuration to the image. The <code class="literal">data</code> directory will be owned by the <span class="emphasis"><em>admin</em></span> user and will be used as a mount point to store your web pages.
+                </p></div><div class="sect1 " id="docker_daemons"><div class="titlepage"><div><div><h2 class="title" id="docker_daemons"><span class="number">6.4 </span><span class="name">Applications Running in the Background</span> <a title="Permalink" class="permalink" href="docker.dockerizing.application.html#docker_daemons">#</a></h2></div></div></div><p>
+                Your application may need to run in the background as a daemon or as an application exposing ports for communication. In that case a typical Docker container may be run in background. Do not run your application in the container in the background as it may cause exiting of the container. Run the container in the background instead. An example <code class="filename">Dockerfile</code> for an application exposing a port looks as follows:
+                </p><div class="verbatim-wrap"><pre class="screen">                FROM suse/sles12sp23:latest
+
+                RUN zypper ref &amp;&amp; zypper --non-interactive in postfix
+                RUN mkdir -p /var/spool/mail
+
+                COPY main.cf /etc/postfix/main.cf
+
+                EXPOSE 25 587
+
+                VOLUME ["/var/spool/mail"]
+                ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
+                Now you can build your image. Docker performs the following operations according to the instructions in the <code class="filename">Dockerfile</code>:
+                </p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>
+                                Docker refreshes repositories and installs the <span class="emphasis"><em>postfix</em></span> mail server as it is not installed by default in the SLES docker image.
+                                </p></li><li class="listitem "><p>
+                                The <code class="literal">/var/spool/mailboxes</code> directory is created in the file system of the image. The directory will store all mailboxes if you configure the mail server to store data in this directory.
+                                </p></li><li class="listitem "><p>
+                                Here you copy a configuration file to the particular directory. Make sure
+                                that the <code class="filename">main.cf</code> is located in the same directory as the <code class="filename">Dockerfile</code>. Bear in mind that the configuration will be the same for all instance run in the future. In case you need a different configuration for each container, you will need to edit it after running the container.
+                                </p></li><li class="listitem "><p>
+                                Each started container will expose the ports: <span class="emphasis"><em>25</em></span> and <span class="emphasis"><em>587</em></span>. In case you will run several instances of this image on the same machine, you should define a specific host name for each container.
+                                </p></li><li class="listitem "><p>
+                                The <code class="literal">VOLUME</code> instruction creates a mount point at the <code class="filename">/var/spool/mail</code> directory in the container.
+                                </p></li><li class="listitem "><p>
+                                The last instructions runs the <code class="literal">postfix</code> mail server in the started container.
+                                </p></li></ol></div><p>
+                After a successful build, you can run a container based on the image:
+                </p><div class="verbatim-wrap"><pre class="screen">                docker run -d --name mail_server -v /var/spool/mail:/var/spool/mail postfix:latest /bin/bash</pre></div><p>
+                The <code class="literal">-d</code> option runs the container in a detached mode and further communication by using the CLI will not be possible. To reattach the container run:
+                </p><div class="verbatim-wrap"><pre class="screen">                docker attach &lt;container identification&gt;</pre></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.working.with.containers.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 7 </span>Working with Containers</span></a><a class="nav-link" href="docker.building.images.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 5 </span>Creating Custom Images</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

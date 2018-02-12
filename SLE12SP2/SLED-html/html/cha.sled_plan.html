@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Planning for SUSE Linux Enterprise Desktop | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 1. Planning for SUSE Linux Enterprise Desktop" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="book.sle.deployment.html" title="Deployment Guide" /><link rel="prev" href="preface.deployment.html" title="About This Guide" /><link rel="next" href="part.prep.html" title="Part I. Installation Preparation" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="cha.sled_plan.html">Planning for SUSE Linux Enterprise Desktop</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">The Installation Workflow</span></a><ol><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">4 </span><span class="name">Setting Up the Server Holding the Installation Sources</span></a></li><li class="inactive"><a href="cha.deployment.prep_boot.html"><span class="number">5 </span><span class="name">Preparing the Boot of the Target System</span></a></li></ol></li><li class="inactive"><a href="part.remoteinstall.html"><span class="number">IV </span><span class="name">Remote Installation</span></a><ol><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">6 </span><span class="name">Remote Installation</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">V </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">8 </span><span class="name">Advanced Disk Setup</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">9 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">10 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">11 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">12 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">13 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">VI </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">14 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">15 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">16 </span><span class="name">Service Pack Migration</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">17 </span><span class="name">Backporting Source Code</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="About This Guide" href="preface.deployment.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part I. Installation Preparation" href="part.prep.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="cha.sled_plan.html">Planning for SUSE Linux Enterprise Desktop</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="About This Guide" href="preface.deployment.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part I. Installation Preparation" href="part.prep.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.sled_plan"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></div><div><h1 class="title"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>sled_planning.xml</li><li><span class="ds-label">ID: </span>cha.sled_plan</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.sled_plan.html#sec.sled_plan.hw"><span class="number">1.1 </span><span class="name">Hardware Requirements</span></a></span></dt><dt><span class="sect1"><a href="cha.sled_plan.html#sec.sled_plan.usage"><span class="number">1.2 </span><span class="name">Reasons to Use SUSE Linux Enterprise Desktop</span></a></span></dt></dl></div></div><p>
+  This chapter is addressed mainly to corporate system administrators who
+  face the task of having to deploy SUSE® Linux Enterprise Desktop at their site. Rolling out
+  SUSE Linux Enterprise Desktop to an entire site should involve careful planning and
+  consideration of the following questions:
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140076816905888"><span class="term ">For which purpose will the SUSE Linux Enterprise Desktop workstations be used?</span></dt><dd><p>
+     Determine the purpose for which SUSE Linux Enterprise Desktop should be used and make sure
+     that hardware and software with the ability to match these requirements
+     are used. Consider testing your setup on a single machine before
+     rolling it out to the entire site.
+    </p></dd><dt id="idm140076816903856"><span class="term ">How many workstations should be installed?</span></dt><dd><p>
+     Determine the scope of your deployment of SUSE Linux Enterprise Desktop. Depending on the
+     number of installations planned, consider different approaches to the
+     installation or even a mass installation using SUSE Linux Enterprises unique AutoYaST
+     or KIWI technology.
+     
+    </p></dd><dt id="idm140076816901744"><span class="term ">How do you get software updates for your deployment?</span></dt><dd><p>
+     All patches provided by SUSE for your product are available for
+     download to registered users at
+     <a class="link" href="http://download.suse.com/" target="_blank">http://download.suse.com/</a>.
+    </p></dd><dt id="idm140076816899248"><span class="term ">Do you need help for your local deployment?</span></dt><dd><p>
+     SUSE provides training, support, and consulting for all topics
+     pertaining to SUSE Linux Enterprise Desktop. Find more information about this at
+     <a class="link" href="http://www.suse.com/products/desktop/" target="_blank">http://www.suse.com/products/desktop/</a>.
+    </p></dd></dl></div><div class="sect1 " id="sec.sled_plan.hw"><div class="titlepage"><div><div><h2 class="title" id="sec.sled_plan.hw"><span class="number">1.1 </span><span class="name">Hardware Requirements</span> <a title="Permalink" class="permalink" href="cha.sled_plan.html#sec.sled_plan.hw">#</a></h2></div></div></div><p>
+   For a standard installation of SUSE Linux Enterprise Desktop, including the desktop
+   environment and a wealth of applications, the following configuration is
+   recommended:
+  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     Intel Pentium IV, 2.4 GHz or higher or any AMD64 or Intel 64
+     processor
+    </p></li><li class="listitem "><p>
+     1–2 physical CPUs
+    </p></li><li class="listitem "><p>
+     512 MB physical RAM or higher
+    </p></li><li class="listitem "><p>
+     3 GB of available disk space or more
+    </p></li><li class="listitem "><p>
+     1024 x 768 display resolution (or higher)
+    </p></li></ul></div></div><div class="sect1 " id="sec.sled_plan.usage"><div class="titlepage"><div><div><h2 class="title" id="sec.sled_plan.usage"><span class="number">1.2 </span><span class="name">Reasons to Use SUSE Linux Enterprise Desktop</span> <a title="Permalink" class="permalink" href="cha.sled_plan.html#sec.sled_plan.usage">#</a></h2></div></div></div><p>
+   Let the following items guide you in your selection of SUSE Linux Enterprise Desktop and
+   determining the purpose of the installed systems:
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140076816886992"><span class="term ">Wealth of Applications</span></dt><dd><p>
+      SUSE Linux Enterprise Desktop's broad offer of software makes it appeal to both
+      professional users in a corporate environment and to home users or
+      users in smaller networks.
+     </p></dd><dt id="idm140076816885024"><span class="term ">Ease of Use</span></dt><dd><p>
+      SUSE Linux Enterprise Desktop comes with the enterprise-ready desktop environment GNOME.
+      It enables users to comfortably adjust to a Linux system while
+      maintaining their efficiency and productivity. <span class="phrase">To
+      explore GNOME in detail, refer to the
+      <a class="xref" href="book.gnomeuser.html" title="GNOME User Guide"><em class="citetitle ">GNOME User Guide</em></a>.</span>
+     </p></dd><dt id="idm140076816881712"><span class="term ">Support for Mobile Users</span></dt><dd><p>
+      With the NetworkManager technology fully integrated into SUSE Linux Enterprise Desktop and
+      its two desktop environments, mobile users will enjoy the freedom of
+      easily joining and switching wired and wireless networks.
+     </p></dd><dt id="idm140076816879680"><span class="term ">Seamless Integration into Existing Networks</span></dt><dd><p>
+      SUSE Linux Enterprise Desktop was designed to be a versatile network citizen. It
+      cooperates with various different network types:
+     </p><p><span class="formalpara-title">Pure Linux Networks. </span>
+       SUSE Linux Enterprise Desktop is a complete Linux client and supports all the protocols
+       used in traditional Linux and Unix* environments. It integrates well
+       with networks consisting of other SUSE Linux or SUSE Linux Enterprise
+       machines. LDAP, NIS, and local authentication are supported.
+      </p><p><span class="formalpara-title">Windows Networks. </span>
+       SUSE Linux Enterprise Desktop supports Active Directory as an authentication source. It
+       offers you all the advantages of a secure and stable Linux operating
+       system plus convenient interaction with other Windows clients, as
+       well as the means to manipulate your Windows user data from a Linux
+       client. Explore this feature in detail in
+       <a class="xref" href="cha.security.ad.html" title="Chapter 6. Active Directory Support">Chapter 6, <em>Active Directory Support</em></a>.
+      </p><p><span class="formalpara-title">Windows and Novell Networks. </span>
+       
+       Being backed by Novell and their networking expertise, SUSE Linux Enterprise Desktop
+       naturally offers you support for Novell technologies, like GroupWise,
+       Novell Client for Linux,
+
+       and iPrint, and it also offers authentication support for Novell
+       eDirectory services.
+       
+      </p></dd><dt id="idm140076816871056"><span class="term ">Application Security with <span class="phrase">AppArmor</span></span></dt><dd><p>
+      SUSE Linux Enterprise Desktop enables you to secure your applications by enforcing
+      security profiles tailor-made for your applications. To learn more
+      about <span class="phrase">AppArmor</span>, refer to
+      <a class="link" href="http://www.suse.com/documentation/apparmor/" target="_blank">http://www.suse.com/documentation/apparmor/</a>.
+     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.prep.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part I </span>Installation Preparation</span></a><a class="nav-link" href="preface.deployment.html"><span class="prev-icon">←</span><span class="nav-label">About This Guide</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

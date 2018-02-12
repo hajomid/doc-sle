@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Documentation Updates | Deployment Guide | SUSE Linux Enterprise Desktop 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Appendix A. Documentation Updates" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="book.sle.deployment.html" title="Deployment Guide" /><link rel="prev" href="cha.update.backporting.html" title="Chapter 17. Backporting Source Code" /><link rel="next" href="bk02apb.html" title="Appendix B. GNU Licenses" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="app.deployment.docupdates.html">Documentation Updates</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li></ol></li><li class="inactive"><a href="part.mandeploy.html"><span class="number">II </span><span class="name">The Installation Workflow</span></a><ol><li class="inactive"><a href="cha.inst.html"><span class="number">3 </span><span class="name">Installation with YaST</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">4 </span><span class="name">Setting Up the Server Holding the Installation Sources</span></a></li><li class="inactive"><a href="cha.deployment.prep_boot.html"><span class="number">5 </span><span class="name">Preparing the Boot of the Target System</span></a></li></ol></li><li class="inactive"><a href="part.remoteinstall.html"><span class="number">IV </span><span class="name">Remote Installation</span></a><ol><li class="inactive"><a href="cha.deployment.remoteinst.html"><span class="number">6 </span><span class="name">Remote Installation</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">V </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.y2.hw.html"><span class="number">7 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">8 </span><span class="name">Advanced Disk Setup</span></a></li><li class="inactive"><a href="cha.y2.sw.html"><span class="number">9 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">10 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">11 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.y2.userman.html"><span class="number">12 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.y2.lang.html"><span class="number">13 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="part.update.html"><span class="number">VI </span><span class="name">Updating and Upgrading SUSE Linux Enterprise</span></a><ol><li class="inactive"><a href="cha.update.background.html"><span class="number">14 </span><span class="name">Life Cycle and Support</span></a></li><li class="inactive"><a href="cha.update.sle.html"><span class="number">15 </span><span class="name">Upgrading SUSE Linux Enterprise</span></a></li><li class="inactive"><a href="cha.update.spmigration.html"><span class="number">16 </span><span class="name">Service Pack Migration</span></a></li><li class="inactive"><a href="cha.update.backporting.html"><span class="number">17 </span><span class="name">Backporting Source Code</span></a></li></ol></li><li class="inactive"><a href="app.deployment.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 17. Backporting Source Code" href="cha.update.backporting.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix B. GNU Licenses" href="bk02apb.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="app.deployment.docupdates.html">Documentation Updates</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 17. Backporting Source Code" href="cha.update.backporting.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix B. GNU Licenses" href="bk02apb.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="app.deployment.docupdates"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></div><div><h1 class="title"><span class="number">A </span><span class="name">Documentation Updates</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_docupdates.xml</li><li><span class="ds-label">ID: </span>app.deployment.docupdates</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp2"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP2)</span></a></span></dt><dt><span class="sect1"><a href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp1_maint1"><span class="number">A.2 </span><span class="name">March 2016 (Maintenance Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP1)</span></a></span></dt><dt><span class="sect1"><a href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp1"><span class="number">A.3 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP1)</span></a></span></dt><dt><span class="sect1"><a href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_ga_maint1"><span class="number">A.4 </span><span class="name">February 2015 (Documentation Maintenance Update)</span></a></span></dt><dt><span class="sect1"><a href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_ga"><span class="number">A.5 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12)</span></a></span></dt></dl></div></div><p>
+  This chapter lists content changes for this document.
+ </p><p>
+  This manual was updated on the following dates:
+ </p><div class="sect1 " id="sec.deployment.docupdates.sle12_sp2"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.docupdates.sle12_sp2"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP2)</span> <a title="Permalink" class="permalink" href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp2">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955392128"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p> The e-mail address for documentation feedback has changed to
+       <code class="literal">doc-team@suse.com</code>. </p></li><li class="listitem "><p> The documentation for Docker has been enhanced and renamed to
+      <em class="citetitle ">Docker Guide</em>. </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955386976"><span class="term ">General Changes to this Guide</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        The complete guide has been revised, restructured, and flattened (Fate
+        #319115).
+       </p></li></ul></div></dd><dt id="idm140276955384176"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added a tip on how to access network storage to
+        <a class="xref" href="cha.inst.html#sec.i.yast2.network" title="3.6. Network Settings">Section 3.6, “Network Settings”</a>.
+       </p></li><li class="listitem "><p>
+        Dialog options for creating an encrypted LVM file system
+        (<a class="xref" href="cha.inst.html#sec.i.yast2.inst_mode.partitioning" title="3.9. Suggested Partitioning">Section 3.9, “Suggested Partitioning”</a>) have
+        changed (Fate #320418).
+       </p></li><li class="listitem "><p>
+        The <span class="guimenu">Receive System Mail</span> has been removed from the
+        <span class="guimenu">Add User</span> dialog (Fate #320448).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.inst.html#sec.i.yast.start.parameters.self_update" title="3.2.2.6. Enabling the Installer Self-Update">Section 3.2.2.6, “Enabling the Installer Self-Update”</a>.
+       </p></li></ul></div></dd><dt id="idm140276955375616"><span class="term "><a class="xref" href="cha.update.background.html" title="Chapter 14. Life Cycle and Support">Chapter 14, <em>Life Cycle and Support</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Updated list of modules <a class="xref" href="cha.update.background.html#sec.update.nmm.repositories" title="14.5. Repository Model">Section 14.5, “Repository Model”</a>
+        (Fate #320579).
+       </p></li></ul></div></dd><dt id="idm140276955371920"><span class="term "><a class="xref" href="cha.update.spmigration.html" title="Chapter 16. Service Pack Migration">Chapter 16, <em>Service Pack Migration</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added <a class="xref" href="cha.update.sle.html#sec.update.prep.ssl" title="15.1.8. Create Non-MD5 Server Certificates for Java Applications">Section 15.1.8, “Create Non-MD5 Server Certificates for Java Applications”</a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=970153" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=970153</a>).
+       </p></li><li class="listitem "><p>
+        Added a conceptual overview and mentioned additional migration
+        strategies
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=968195" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=968195</a>).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.update.sle.html#sec.update.reg.status.after.rollback" title="15.9. Updating Registration Status After Rollback">Section 15.9, “Updating Registration Status After Rollback”</a> (Fate
+        #319118).
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.update.sle.html#sec.update.prep.smt" title="15.1.9. Check the clientSetup4SMT.sh script on SMT clients">Section 15.1.9, “Check the <code class="command">clientSetup4SMT.sh</code> script on SMT clients”</a> (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=944342" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=944342</a>).
+       </p></li><li class="listitem "><p>
+        Implemented a notice to make sure a service pack migration is not
+        performed with insufficient disk space (Fate #317784, see
+        <a class="xref" href="cha.update.sle.html#sec.update.disk" title="15.2. Disk Space">Section 15.2, “Disk Space”</a>).
+       </p></li><li class="listitem "><p>
+        Mentioned that during installation, an installation resource is added
+        and removed afterward (Fate #320494).
+       </p></li></ul></div></dd><dt id="idm140276955359984"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Removed link
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=972355" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=972355</a>).
+       </p></li><li class="listitem "><p>
+        Added documentation for installing KVM guests on IBM z Systems
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=958733" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=958733</a>).
+       </p></li><li class="listitem "><p>
+        Added note about where to place <code class="filename">/boot</code> for an
+        LVM root file system
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=1000631" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=1000631</a>).
+       </p></li><li class="listitem "><p>
+        Added more information about rolling back a service pack
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=1001070" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=1001070</a>).
+       </p></li><li class="listitem "><p>
+        Added recommendations for the case of running an update from within
+        a GNOME session (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=1001684 " target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=1001684 </a>).
+       </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.deployment.docupdates.sle12_sp1_maint1"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.docupdates.sle12_sp1_maint1"><span class="number">A.2 </span><span class="name">March 2016 (Maintenance Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP1)</span> <a title="Permalink" class="permalink" href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp1_maint1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955346736"><span class="term "><a class="xref" href="cha.advdisk.html" title="Chapter 8. Advanced Disk Setup">Chapter 8, <em>Advanced Disk Setup</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Distinguished between remote and local repository more clearly
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=956058" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=956058</a>).
+       </p></li><li class="listitem "><p>
+        Added note about reformatting partitions with
+        <code class="command">mkswap</code>, because initrd image cannot boot up when
+        swap partition has changed
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=955822" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=955822</a>).
+       </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.deployment.docupdates.sle12_sp1"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.docupdates.sle12_sp1"><span class="number">A.3 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12 SP1)</span> <a title="Permalink" class="permalink" href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_sp1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955335184"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      <span class="intraxref">Book “Subscription Management Tool for SLES <span class="productnumber"><span class="phrase">12 SP2</span></span>”</span> is now part of the documentation for
+      <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>.
+     </p></li><li class="listitem "><p>
+      Add-ons provided by SUSE have been renamed as modules and extensions.
+      The manuals have been updated to reflect this change.
+     </p></li><li class="listitem "><p>
+      Numerous small fixes and additions to the documentation, based on
+      technical feedback.
+     </p></li><li class="listitem "><p>
+      The registration service has been changed from Novell Customer Center to
+      SUSE Customer Center.
+     </p></li><li class="listitem "><p>
+      In YaST, you will now reach <span class="guimenu">Network Settings</span> via the
+      <span class="guimenu">System</span> group. <span class="guimenu">Network Devices</span> is
+      gone
+      (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=867809" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=867809</a>).
+     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955324336"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added <a class="xref" href="cha.inst.html#sec.i.yast2.start.parameters.proxy" title="3.2.2.4. Using a Proxy During the Installation">Section 3.2.2.4, “Using a Proxy During the Installation”</a> (Fate
+        #318488).
+       </p></li><li class="listitem "><p>
+        Added a warning on using unsigned drivers in secure boot mode to
+        <a class="xref" href="cha.inst.html#sec.i.yast2.bootscreen_uefi" title="3.2.1.2. The Boot Screen on Machines Equipped with UEFI">Section 3.2.1.2, “The Boot Screen on Machines Equipped with UEFI”</a> (Fate #317593).
+       </p></li></ul></div></dd><dt id="idm140276955318288"><span class="term "><a class="xref" href="cha.y2.sw.html" title="Chapter 9. Installing or Removing Software">Chapter 9, <em>Installing or Removing Software</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added <a class="xref" href="cha.y2.sw.html#sec.y2.sw.deps.recommends" title="9.2.4.1. Handling of Package Recommendations">Section 9.2.4.1, “Handling of Package Recommendations”</a> (Fate #318099).
+       </p></li></ul></div></dd><dt id="idm140276955314336"><span class="term "><a class="xref" href="cha.add-ons.html" title="Chapter 10. Installing Modules, Extensions, and Third Party Add-On Products">Chapter 10, <em>Installing Modules, Extensions, and Third Party Add-On Products</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Updated chapter to reflect the software changes to the former YaST
+        <span class="guimenu">SUSE Customer Center Configuration</span> dialog (now called
+        <span class="guimenu">Product Registration</span>) and the YaST <span class="guimenu">Add-On
+        Products</span> module (Fate #318800).
+       </p></li></ul></div></dd><dt id="idm140276955308976"><span class="term "><a class="xref" href="cha.advdisk.html" title="Chapter 8. Advanced Disk Setup">Chapter 8, <em>Advanced Disk Setup</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Mentioned that subvolumes for <code class="filename">/var/lib/mariadb</code>,
+        <code class="filename">/var/lib/pgsql</code>, and
+        <code class="filename">/var/lib/libvirt/images</code> are created with the
+        option <code class="literal">no copy on write</code> by default to avoid
+        extensive fragmenting with Btrfs.
+       </p></li></ul></div></dd><dt id="idm140276955303744"><span class="term ">Subscription Management</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        The chapter about registering clients at a Subscription Management Tool server has been
+        replaced by <span class="intraxref">Book “Subscription Management Tool for SLES <span class="productnumber"><span class="phrase">12 SP2</span></span>”, Chapter 8 “Configuring Clients to Use SMT”</span>.
+       </p></li></ul></div></dd><dt id="idm140276955300128"><span class="term "><a class="xref" href="part.update.html" title="Part VI. Updating and Upgrading SUSE Linux Enterprise">Part VI, “Updating and Upgrading SUSE Linux Enterprise”</a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Split former update chapter into several independent chapters and
+        combined them under this new part.
+       </p></li><li class="listitem "><p>
+        Removed YaST Wagon chapter, as YaST Wagon is unsupported for
+        <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> <span class="productnumber"><span class="phrase">12 SP2</span></span>.
+       </p></li><li class="listitem "><p>
+        Added new chapter: <a class="xref" href="cha.update.spmigration.html" title="Chapter 16. Service Pack Migration">Chapter 16, <em>Service Pack Migration</em></a>.
+       </p></li><li class="listitem "><p>
+        Added <a class="xref" href="cha.update.sle.html#sec.update.prep.mariadb" title="15.1.6. Migrate your MySQL Database">Section 15.1.6, “Migrate your MySQL Database”</a> and
+        <a class="xref" href="cha.update.sle.html#sec.update.prep.postgresql" title="15.1.7. Migrate your PostgreSQL Database">Section 15.1.7, “Migrate your PostgreSQL Database”</a>.
+       </p></li><li class="listitem "><p>
+        Integrated various new features: Fate #315161, Fate #318636, Fate
+        #319128, Fate #319129, Fate #319138, Fate #319140.
+       </p></li></ul></div></dd><dt id="idm140276955288912"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Consistent use of <code class="command">yast</code>,
+        <code class="command">yast2.ssh</code>, <code class="command">yast.ssh</code> for SSH based
+        installation
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=956060" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=956060</a>).
+       </p></li><li class="listitem "><p>
+        Consistent spelling of boot parameters
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=956054" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=956054</a>).
+       </p></li><li class="listitem "><p>
+        PowerKVM: virt-install does not know about SLES12
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=880918" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=880918</a>).
+       </p></li><li class="listitem "><p>
+        IBM POWER: Starting an X-Server after an Upgrade
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=948980" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=948980</a>).
+       </p></li><li class="listitem "><p>
+        Added documentation on the boot process for IBM z Systems
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=942772" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=942772</a>).
+       </p></li><li class="listitem "><p>
+        Description of encrypted <code class="filename">/</code> and
+        <code class="filename">/boot</code> on Btrfs was missing. Added an important
+        note in <a class="xref" href="cha.inst.html#sec.i.yast2.inst_mode.partitioning" title="3.9. Suggested Partitioning">Section 3.9, “Suggested Partitioning”</a> and
+        <a class="xref" href="cha.advdisk.html#yast2.btrfs" title="8.1.2.1. Btrfs Partitioning">Section 8.1.2.1, “Btrfs Partitioning”</a>
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=926951" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=926951</a>).
+       </p></li><li class="listitem "><p>
+        Zypper multiversion kernels should be mentioned for SP2 Update
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=753809" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=753809</a>).
+       </p></li><li class="listitem "><p>
+        SLES 12 Deployment Guide errors for zPXE installations
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=944384" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=944384</a>).
+       </p></li><li class="listitem "><p>
+        AutoYaST hangs at "Configuring Bootloader ... 50%" with 512RAM
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=927237" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=927237</a>).
+       </p></li><li class="listitem "><p>
+        Netsetup Parameters Wrong
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=928792" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=928792</a>).
+       </p></li><li class="listitem "><p>
+        Documentation on not creating /usr as separate partition is missing
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=930267" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=930267</a>).
+       </p></li><li class="listitem "><p>
+        Document how to enable SELinux during install
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=928158" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=928158</a>).
+       </p></li><li class="listitem "><p>
+        YaST boot loader: supported scenarios needs updating clarification
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=939197" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=939197</a>).
+       </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.deployment.docupdates.sle12_ga_maint1"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.docupdates.sle12_ga_maint1"><span class="number">A.4 </span><span class="name">February 2015 (Documentation Maintenance Update)</span> <a title="Permalink" class="permalink" href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_ga_maint1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955261872"><span class="term "><a class="xref" href="cha.inst.html#sec.i.yast2.timezone" title="3.10. Clock and Time Zone">Section 3.10, “Clock and Time Zone”</a>
+    </span></dt><dd><p>
+      With NTP disabled it is recommended to avoid writing system time to the
+      hardware clock. Thus set <code class="literal">SYSTOHC=no</code>.
+     </p></dd><dt id="idm140276955258864"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Adjustments for SMT because of the switch from SUSE Customer Center to SUSE Customer Center
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=857639" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=857639</a>).
+       </p></li><li class="listitem "><p>
+        <a class="xref" href="cha.y2.userman.html#sec.y2.userman.adv.passw" title="12.3.2. Enforcing Password Policies">Section 12.3.2, “Enforcing Password Policies”</a>: Password Settings,
+        Expiration Date is expiring user accounts in YaST Users module
+        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=743874" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=743874</a>).
+       </p></li><li class="listitem "><p>
+        Various bugfixes for <a class="xref" href="cha.update.sle.html" title="Chapter 15. Upgrading SUSE Linux Enterprise">Chapter 15, <em>Upgrading SUSE Linux Enterprise</em></a>:
+       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+          The named upgrade path does not work, there is no working upgrade
+          path from SLES 11 SP3 to SLES 12 on Linux for System z (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=907648" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=907648</a>).
+         </p></li><li class="listitem "><p>
+          The Atomic Update
+          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=905330" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=905330</a>).
+         </p></li><li class="listitem "><p>
+          Upgrading to SLE 12
+          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=904188" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=904188</a>).
+         </p></li><li class="listitem "><p>
+          Intermediate step: Updating SLE 11 SP2 to SLE 11 SP3
+          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=904186" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=904186</a>).
+         </p></li><li class="listitem "><p>
+          Supported Upgrade Paths to SLE
+          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=904182" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=904182</a>).
+         </p></li><li class="listitem "><p>
+          Potentially misleading info around the 6-month overlap in support
+          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=902463" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=902463</a>).
+         </p></li></ul></div></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.deployment.docupdates.sle12_ga"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.docupdates.sle12_ga"><span class="number">A.5 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> 12)</span> <a title="Permalink" class="permalink" href="app.deployment.docupdates.html#sec.deployment.docupdates.sle12_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955236304"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      Removed all KDE documentation and references because KDE is no longer
+      shipped.
+     </p></li><li class="listitem "><p>
+      Removed all references to SuSEconfig, which is no longer supported (Fate
+      #100011).
+     </p></li><li class="listitem "><p>
+      Move from System V init to systemd (Fate #310421). Updated affected parts
+      of the documentation.
+     </p></li><li class="listitem "><p>
+      YaST Runlevel Editor has changed to Services Manager (Fate #312568).
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      Removed all references to ISDN support, as ISDN support has been removed
+      (Fate #314594).
+     </p></li><li class="listitem "><p>
+      Removed all references to the YaST DSL module as it is no longer
+      shipped (Fate #316264).
+     </p></li><li class="listitem "><p>
+      Removed all references to the YaST Modem module as it is no longer
+      shipped (Fate #316264).
+     </p></li><li class="listitem "><p>
+      Btrfs has become the default file system for the root partition (Fate
+      #315901). Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The <code class="command">dmesg</code> now provides human-readable time stamps in
+      <code class="literal">ctime()</code>-like format (Fate #316056). Updated affected
+      parts of the documentation.
+     </p></li><li class="listitem "><p>
+      syslog and syslog-ng have been replaced by rsyslog (Fate #316175).
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      MariaDB is now shipped as the relational database instead of MySQL (Fate
+      #313595). Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      SUSE-related products are no longer available from
+      <a class="link" href="http://download.novell.com" target="_blank">http://download.novell.com</a> but from
+      <a class="link" href="http://download.suse.com" target="_blank">http://download.suse.com</a>. Adjusted links
+      accordingly.
+     </p></li><li class="listitem "><p>
+      Novell Customer Center has been replaced with SUSE Customer Center. Updated affected
+      parts of the documentation.
+     </p></li><li class="listitem "><p>
+      <code class="filename">/var/run</code> is mounted as tmpfs (Fate #303793). Updated
+      affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The following architectures are no longer supported: IA64 and x86.
+      Updated affected parts of the documentation.
+     </p></li><li class="listitem "><p>
+      The traditional method for setting up the network with
+      <code class="systemitem">ifconfig</code> has been replaced by
+      <code class="systemitem">wicked</code>. Updated affected parts of the
+      documentation.
+     </p></li><li class="listitem "><p>
+      A lot of networking commands are deprecated and have been replaced by
+      newer commands (usually <code class="command">ip</code>). Updated affected parts of
+      the documentation.
+     </p><table border="0" summary="Simple list" class="simplelist "><tr><td><code class="command">arp</code>: <code class="command">ip neighbor</code>
+      </td></tr><tr><td><code class="command">ifconfig</code>: <code class="command">ip addr</code>, <code class="command">ip
+      link</code>
+      </td></tr><tr><td><code class="command">iptunnel</code>: <code class="command">ip tunnel</code>
+      </td></tr><tr><td><code class="command">iwconfig</code>: <code class="command">iw</code>
+      </td></tr><tr><td><code class="command">nameif</code>: <code class="command">ip link</code>,
+      <code class="command">ifrename</code>
+      </td></tr><tr><td><code class="command">netstat</code>: <code class="command">ss</code>,
+      <code class="command">ip route</code>,
+      <code class="command">ip -s link</code>,
+      <code class="command">ip maddr</code>
+      </td></tr><tr><td><code class="command">route</code>: <code class="command">ip route</code>
+      </td></tr></table></li><li class="listitem "><p>
+      Numerous small fixes and additions to the documentation, based on
+      technical feedback.
+     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140276955201136"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Completely rewrote the chapter because of the new installation
+        workflow.
+       </p></li><li class="listitem "><p>
+        The installation routine now supports setting up multiple network
+        devices during the installation (Fate #315680):
+        <a class="xref" href="cha.inst.html#sec.i.yast2.network" title="3.6. Network Settings">Section 3.6, “Network Settings”</a>.
+       </p></li><li class="listitem "><p>
+        The installation proposal contains a separate
+        <code class="filename">/home</code> partition formatted with XFS (Fate #316637
+        and Fate #316624): <a class="xref" href="cha.inst.html#sec.i.yast2.inst_mode.partitioning" title="3.9. Suggested Partitioning">Section 3.9, “Suggested Partitioning”</a>.
+       </p></li><li class="listitem "><p>
+        Removed occurrences of the YaST Repair module which has been dropped
+        (Fate #308670).
+       </p></li><li class="listitem "><p>
+        Update repositories are added after having registered with SUSE Customer Center and
+        can be used during installation (Fate #312012):
+        <a class="xref" href="cha.inst.html#sec.i.yast2.inst_mode.addon" title="3.8. Extension Selection">Section 3.8, “Extension Selection”</a>.
+       </p></li><li class="listitem "><p>
+        Extensions and modules can be added to the system during the
+        installation (Fate #316548):
+        <a class="xref" href="cha.inst.html#sec.i.yast2.conf.manual.cc" title="3.7. SUSE Customer Center Registration">Section 3.7, “SUSE Customer Center Registration”</a>.
+       </p></li><li class="listitem "><p>
+        SUSE Linux Enterprise Desktop can be installed as an add-on on top of SUSE Linux Enterprise Server (Fate #316436):
+        <a class="xref" href="cha.inst.html#sec.i.yast2.inst_mode.addon" title="3.8. Extension Selection">Section 3.8, “Extension Selection”</a>.
+       </p></li><li class="listitem "><p>
+        Automatically importing SSH keys from a previous installation can be
+        disabled (Fate #314982).
+       </p></li></ul></div></dd><dt id="idm140276955187616"><span class="term "><a class="xref" href="cha.update.sle.html" title="Chapter 15. Upgrading SUSE Linux Enterprise">Chapter 15, <em>Upgrading SUSE Linux Enterprise</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Added new section: <a class="xref" href="cha.update.sle.html#sec.update.sle12" title="15.4. Supported Methods for Upgrading SUSE Linux Enterprise">Section 15.4, “Supported Methods for Upgrading SUSE Linux Enterprise”</a>.
+       </p></li></ul></div></dd><dt id="idm140276955183952"><span class="term "><a class="xref" href="cha.y2.hw.html" title="Chapter 7. Setting Up Hardware Components with YaST">Chapter 7, <em>Setting Up Hardware Components with YaST</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Removed the following sections as the respective YaST modules are no
+        longer included: <em class="citetitle ">Hardware Information</em>,
+        <em class="citetitle ">Setting Up Graphics Card and Monitor</em>,
+        <em class="citetitle ">Mouse Model</em>, and <em class="citetitle ">Setting Up a
+        Scanner</em>.
+       </p></li><li class="listitem "><p>
+        Removed content about mouse setup and adjusted
+        <a class="xref" href="cha.y2.hw.html#cha.y2.hw.keym" title="7.1. Setting Up Your System Keyboard Layout">Section 7.1, “Setting Up Your System Keyboard Layout”</a>.
+       </p></li></ul></div></dd><dt id="idm140276955177456"><span class="term "><a class="xref" href="cha.y2.sw.html" title="Chapter 9. Installing or Removing Software">Chapter 9, <em>Installing or Removing Software</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Completely rewrote <a class="xref" href="cha.y2.sw.html#sec.updater" title="9.4. Keeping the System Up-to-date">Section 9.4, “Keeping the System Up-to-date”</a> because of changes in
+        the GNOME software updater.
+       </p></li></ul></div></dd><dt id="idm140276955173744"><span class="term "><a class="xref" href="cha.add-ons.html" title="Chapter 10. Installing Modules, Extensions, and Third Party Add-On Products">Chapter 10, <em>Installing Modules, Extensions, and Third Party Add-On Products</em></a>
+    </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Installing add-on products or software extensions is now also possible
+        without access to physical media. Added the following new sections:
+        <a class="xref" href="cha.update.sle.html#sec.update.registersystem" title="15.10. Registering Your System">Section 15.10, “Registering Your System”</a> and
+        <a class="xref" href="cha.add-ons.html#sec.add-ons.extensions" title="10.1. Installing Modules and Extensions from Online Channels">Section 10.1, “Installing Modules and Extensions from Online Channels”</a>. Modified
+        <a class="xref" href="cha.add-ons.html#sec.add-ons.install" title="10.2. Installing Extensions and Third Party Add-On Products from Media">Section 10.2, “Installing Extensions and Third Party Add-On Products from Media”</a> accordingly.
+       </p></li></ul></div></dd><dt id="idm140276955168816"><span class="term ">Subscription Management</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        For registering clients against an SMT server,
+        <code class="command">suse_register</code> has been replaced with
+        <code class="command">SUSEConnect</code> (Fate #316585).
+       </p></li></ul></div></dd><dt id="idm140276955165152"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        Updated section <a class="xref" href="cha.y2.sw.html#sec.updater" title="9.4. Keeping the System Up-to-date">Section 9.4, “Keeping the System Up-to-date”</a> according to
+        <a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=839692" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=839692</a>.
+       </p></li><li class="listitem "><p>
+        Removed section <em class="citetitle ">Using Fingerprint
+        Authentication</em>. Further minor corrections and additions
+        (<a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=857680" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=857680</a>).
+       </p></li><li class="listitem "><p>
+        Removed obsolete parameter <code class="literal">OsaMedium</code> from parmfile
+        and Cobbler examples
+        (<a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=860404" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=860404</a>).
+       </p></li><li class="listitem "><p>
+        Added instructions on how to add secondary languages during
+        installation
+        (<a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=870482" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=870482</a>).
+       </p></li><li class="listitem "><p>
+        Multiversion feature (more than one kernel installed) is enabled by
+        default
+        (<a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=891805" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=891805</a>).
+       </p></li><li class="listitem "><p>
+        Warn about incompatible Kernel Module Packages (KPMs)
+        (<a class="link" href="http://bugzilla.suse.com/show_bug.cgi?id=891805" target="_blank">http://bugzilla.suse.com/show_bug.cgi?id=891805</a>).
+       </p></li></ul></div></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="bk02apb.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Appendix B </span>GNU Licenses</span></a><a class="nav-link" href="cha.update.backporting.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 17 </span>Backporting Source Code</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
