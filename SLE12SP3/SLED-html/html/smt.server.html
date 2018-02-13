@@ -66,7 +66,7 @@ hljs.configure({
    </p><p>
     If you want to abort the configuration and cancel any changes, click
     <span class="guimenu">Cancel</span>.
-   </p><div id="idm140203875656032" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Check for Certificate</h6><p>
+   </p><div id="idm140438534188704" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Check for Certificate</h6><p>
      When the SMT Configuration applies changes, it checks whether the common
      server certificate exists. If the certificate
      does not exist, you will be asked whether the certificate should be created.
@@ -77,7 +77,7 @@ hljs.configure({
           SMT Configuration. </p></li><li class="step "><p>
      Activate the <span class="guimenu">Enable Subscription Management Tool service
      (SMT)</span> option.
-    </p><div id="idm140203875649744" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Organization Credentials</h6><p>
+    </p><div id="idm140438513402624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Organization Credentials</h6><p>
       Specify organization credentials before activating SMT. For more
       information on how to
       set organization credentials with YaST, see
@@ -186,16 +186,16 @@ hljs.configure({
   </p></div><div class="sect1 " id="smt.yast.scheduling"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.scheduling"><span class="number">2.5 </span><span class="name">Setting the SMT Job Schedule with YaST</span> <a title="Permalink" class="permalink" href="smt.server.html#smt.yast.scheduling">#</a></h2></div></div></div><p> The SMT Configuration module provides an interface to
       schedule recurring SMT jobs. YaST uses <code class="literal">cron</code>
       to schedule configured jobs. If needed, <code class="literal">cron</code>
-      can be used directly. There are five types of recurring jobs that can be set: </p><div class="variablelist "><dl class="variablelist"><dt id="idm140203896248624"><span class="term ">Synchronization of Updates</span></dt><dd><p>
+      can be used directly. There are five types of recurring jobs that can be set: </p><div class="variablelist "><dl class="variablelist"><dt id="idm140438513146160"><span class="term ">Synchronization of Updates</span></dt><dd><p>
       Synchronizes with SUSE Customer Center, updates repositories, and downloads new
       updates.
-     </p></dd><dt id="idm140203896246720"><span class="term ">Generation of Reports</span></dt><dd><p>
+     </p></dd><dt id="idm140438513144256"><span class="term ">Generation of Reports</span></dt><dd><p>
       Generates and sends SMT Subscription Reports to addresses defined in
       <a class="xref" href="smt.server.html#smt.yast.reports" title="2.4. Setting E-mail Addresses to Receive Reports with YaST">Section 2.4, “Setting E-mail Addresses to Receive Reports with YaST”</a>.
-     </p></dd><dt id="idm140203896244400"><span class="term ">SCC Registration</span></dt><dd><p>
+     </p></dd><dt id="idm140438513141936"><span class="term ">SCC Registration</span></dt><dd><p>
       Registers with SUSE Customer Center all clients that are not already registered or that
       changed their data since the last registration.
-     </p></dd><dt id="idm140203896242464"><span class="term ">Job Queue Cleanup</span></dt><dd><p>
+     </p></dd><dt id="idm140438513140000"><span class="term ">Job Queue Cleanup</span></dt><dd><p>
       Cleans up queued jobs. It removes finished or failed jobs from the
       job queue that are older than eight days. It also removes job artifacts that
       are left in the database as result of an error.
@@ -230,7 +230,7 @@ hljs.configure({
      frequency, time, or date), select the job in the table and click
      <span class="guimenu">Edit</span>. Then change the desired parameters and click
      <span class="guimenu">OK</span>.
-    </p><div class="figure" id="idm140203891706416"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt-yast-schedule.png"><img src="images/smt-yast-schedule.png" width="" alt="Setting Scheduled Job with YaST" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 2.4: </span><span class="name">Setting Scheduled Job with YaST </span><a title="Permalink" class="permalink" href="smt.server.html#idm140203891706416">#</a></h6></div></div></li><li class="step "><p>
+    </p><div class="figure" id="idm140438532238208"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt-yast-schedule.png"><img src="images/smt-yast-schedule.png" width="" alt="Setting Scheduled Job with YaST" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 2.4: </span><span class="name">Setting Scheduled Job with YaST </span><a title="Permalink" class="permalink" href="smt.server.html#idm140438532238208">#</a></h6></div></div></li><li class="step "><p>
      To cancel a scheduled job and delete it from the table,
      select the job in the table and click <span class="guimenu">Delete</span>.
     </p></li><li class="step "><p>
