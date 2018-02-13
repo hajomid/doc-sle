@@ -33,7 +33,7 @@ hljs.configure({
   reduces complexity in the data center by aiding network convergence. This
   helps to preserve your existing investments in a Fibre Channel storage
   infrastructure and to simplify network management.
- </p><div class="figure" id="idm140700784550400"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/fcoe_san_a.png"><img src="images/fcoe_san_a.png" width="" alt="Open Fibre Channel over Ethernet SAN" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 15.1: </span><span class="name">Open Fibre Channel over Ethernet SAN </span><a title="Permalink" class="permalink" href="cha.fcoe.html#idm140700784550400">#</a></h6></div></div><p>
+ </p><div class="figure" id="idm140295231616272"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/fcoe_san_a.png"><img src="images/fcoe_san_a.png" width="" alt="Open Fibre Channel over Ethernet SAN" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 15.1: </span><span class="name">Open Fibre Channel over Ethernet SAN </span><a title="Permalink" class="permalink" href="cha.fcoe.html#idm140295231616272">#</a></h6></div></div><p>
   Open-FCoE allows you to run the Fibre Channel protocols on the host, instead
   of on proprietary hardware on the host bus adapter. It is targeted for 10
   Gbps (gigabit per second) Ethernet adapters, but can work on any Ethernet
@@ -73,7 +73,7 @@ hljs.configure({
    select <span class="guimenu">Configure FCoE Interfaces</span> to access the FCoE
    configuration. For information about configuring the FCoE interfaces, see
    <a class="xref" href="cha.fcoe.html#sec.fcoe.yast" title="15.3. Managing FCoE Services with YaST">Section 15.3, “Managing FCoE Services with YaST”</a>.
-  </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/fcoe_inst_disk_activation_a.png"><img src="images/fcoe_inst_disk_activation_a.png" width="" /></a></div></div><div id="idm140700784528480" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mount Point Support</h6><p>FCoE devices will appear asynchronously during the
+  </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/fcoe_inst_disk_activation_a.png"><img src="images/fcoe_inst_disk_activation_a.png" width="" /></a></div></div><div id="idm140295231594352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mount Point Support</h6><p>FCoE devices will appear asynchronously during the
     boot process. While the initrd guarantees that those devices are
     set up correctly for the root file system, there are no such
     guarantees for any other file systems or mount points like
@@ -136,17 +136,17 @@ hljs.configure({
     </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/fcoe_notconfig_interface_a.png"><img src="images/fcoe_notconfig_interface_a.png" width="" /></a></div></div><p>
      Use the <span class="guimenu">FCoE VLAN Interface</span> column to determine whether
      FCoE is available or not:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140700784490256"><span class="term "><em class="replaceable ">Interface Name</em>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140295231556192"><span class="term "><em class="replaceable ">Interface Name</em>
       </span></dt><dd><p>
         If a name is assigned to the interface, such as
         <code class="filename">eth4.200</code>, FCoE is available on the switch, and the
         FCoE interface is activated for the adapter.
-       </p></dd><dt id="idm140700784487600"><span class="term ">Not Configured:</span></dt><dd><p>
+       </p></dd><dt id="idm140295231553536"><span class="term ">Not Configured:</span></dt><dd><p>
         If the status is <span class="guimenu">not configured</span>, FCoE is enabled on
         the switch, but an FCoE interface has not been activated for the
         adapter. Select the adapter, then click <span class="guimenu">Create FCoE VLAN
         Interface</span> to activate the interface on the adapter.
-       </p></dd><dt id="idm140700784484720"><span class="term ">Not Available:</span></dt><dd><p>
+       </p></dd><dt id="idm140295231550656"><span class="term ">Not Available:</span></dt><dd><p>
         If the status is <span class="guimenu">not available</span>, FCoE is not possible
         for the adapter because FCoE has not been enabled for that connection
         on the switch.
@@ -162,14 +162,14 @@ hljs.configure({
      it from the list, then click <span class="guimenu">Change Settings</span>.
     </p><p>
      The following options can be configured:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140700784477120"><span class="term "><span class="guimenu">FCoE Enable</span>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140295231543056"><span class="term "><span class="guimenu">FCoE Enable</span>
       </span></dt><dd><p>
         Enable or disable the creation of FCoE instances for the adapter.
-       </p></dd><dt id="idm140700784474976"><span class="term "><span class="guimenu">DCB Required</span>
+       </p></dd><dt id="idm140295231540912"><span class="term "><span class="guimenu">DCB Required</span>
       </span></dt><dd><p>
         Specifies whether Data Center Bridging is required for the adapter
         (usually this is the case).
-       </p></dd><dt id="idm140700784472800"><span class="term "><span class="guimenu">Auto VLAN</span>
+       </p></dd><dt id="idm140295231538736"><span class="term "><span class="guimenu">Auto VLAN</span>
       </span></dt><dd><p>
         Specifies whether the <code class="systemitem">fcoemon</code>
         daemon creates the VLAN interfaces automatically.
@@ -270,13 +270,13 @@ hljs.configure({
   [-v|--version]
   [-h|--help]</pre></div><p>
    Refer to <code class="command">man 8 fcoeadm</code> for details.
-  </p><div class="sect1 bridgehead"><h2 class="title" id="idm140700784417120"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.fcoe.html#idm140700784417120">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140700784416384"><span class="term "><code class="command">fcoeadm -c eth2.101</code>
+  </p><div class="sect1 bridgehead"><h2 class="title" id="idm140295231482992"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.fcoe.html#idm140295231482992">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140295231482256"><span class="term "><code class="command">fcoeadm -c eth2.101</code>
     </span></dt><dd><p>
       Create an FCoE instance on eth2.101.
-     </p></dd><dt id="idm140700784414272"><span class="term "><code class="command">fcoeadm -d eth2.101</code>
+     </p></dd><dt id="idm140295231480144"><span class="term "><code class="command">fcoeadm -d eth2.101</code>
     </span></dt><dd><p>
       Destroy an FCoE instance on eth2.101.
-     </p></dd><dt id="idm140700784412160"><span class="term "><code class="command">fcoeadm -i eth3</code>
+     </p></dd><dt id="idm140295231478032"><span class="term "><code class="command">fcoeadm -i eth3</code>
     </span></dt><dd><p>
       Show information about all of the FCoE instances on interface
       <code class="literal">eth3</code>. If no interface is specified, information for
@@ -299,21 +299,21 @@ hljs.configure({
       Supported Speed:   10 Gbit
       MaxFrameSize:      2112
       FC-ID (Port ID):   0x790003
-      State:             Online</pre></div></dd><dt id="idm140700784407776"><span class="term "><code class="command">fcoeadm -l eth3.101</code>
+      State:             Online</pre></div></dd><dt id="idm140295231473648"><span class="term "><code class="command">fcoeadm -l eth3.101</code>
     </span></dt><dd><p>
       Show detailed information about all of the LUNs discovered on connection
       eth3.101. If no connection is specified, information about all of the
       LUNs discovered on all FCoE connections will be shown.
-     </p></dd><dt id="idm140700784405488"><span class="term "><code class="command">fcoeadm -r eth2.101</code>
+     </p></dd><dt id="idm140295231471360"><span class="term "><code class="command">fcoeadm -r eth2.101</code>
     </span></dt><dd><p>
       Reset the FCoE instance on eth2.101.
-     </p></dd><dt id="idm140700784403376"><span class="term "><code class="command">fcoeadm -s eth3 3</code>
+     </p></dd><dt id="idm140295231469248"><span class="term "><code class="command">fcoeadm -s eth3 3</code>
     </span></dt><dd><p>
       Show statistical information about a specific eth3 port that has FCoE
       instances, at an interval of three seconds. The statistics are displayed
       one line per time interval. If no interval is given, the default of one
       second is used.
-     </p></dd><dt id="idm140700784401056"><span class="term "><code class="command">fcoeadm -t eth3</code>
+     </p></dd><dt id="idm140295231466928"><span class="term "><code class="command">fcoeadm -t eth3</code>
     </span></dt><dd><p>
       Show information about all of the discovered targets from a given eth3
       port having FCoE instances. After each discovered target, any associated
