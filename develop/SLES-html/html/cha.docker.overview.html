@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.docker.overview.html">Docker Overview</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Docker Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="cha.docker.overview.html"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="cha.docker.installation.html"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="cha.sle2docker.installation.html"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="cha.registry.installation.html"><span class="number">4 </span><span class="name">Storing Images</span></a></li><li class="inactive"><a href="docker.building.images.html"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="docker.dockerizing.application.html"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="cha.working.with.containers.html"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="bk11apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Docker Guide" href="book.sles.docker.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Docker Installation" href="cha.docker.installation.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.docker.overview.html">Docker Overview</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Docker Guide" href="book.sles.docker.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Docker Installation" href="cha.docker.installation.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.docker.overview" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h1 class="title"><span class="number">1 </span><span class="name">Docker Overview</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>docker_overview.xml</li><li><span class="ds-label">ID: </span>cha.docker.overview</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.docker.overview.html#Docker_Architecture"><span class="number">1.1 </span><span class="name">Docker Architecture</span></a></span></dt><dt><span class="sect1"><a href="cha.docker.overview.html#Docker_Used_Drivers"><span class="number">1.2 </span><span class="name">Docker Drivers</span></a></span></dt></dl></div></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.docker.overview.html">Docker Overview</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Docker Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="cha.docker.overview.html"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="cha.docker.installation.html"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="cha.sle2docker.installation.html"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="cha.registry.installation.html"><span class="number">4 </span><span class="name">Storing Images</span></a></li><li class="inactive"><a href="docker.building.images.html"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="docker.dockerizing.application.html"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="cha.working.with.containers.html"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="bk12apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Docker Guide" href="book.sles.docker.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Docker Installation" href="cha.docker.installation.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sles.docker.html">Docker Guide</a><span> › </span><a class="crumb" href="cha.docker.overview.html">Docker Overview</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Docker Guide" href="book.sles.docker.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Docker Installation" href="cha.docker.installation.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.docker.overview" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h1 class="title"><span class="number">1 </span><span class="name">Docker Overview</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>docker_overview.xml</li><li><span class="ds-label">ID: </span>cha.docker.overview</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.docker.overview.html#Docker_Architecture"><span class="number">1.1 </span><span class="name">Docker Architecture</span></a></span></dt><dt><span class="sect1"><a href="cha.docker.overview.html#Docker_Used_Drivers"><span class="number">1.2 </span><span class="name">Docker Drivers</span></a></span></dt></dl></div></div><p>
   Docker is a lightweight virtualization solution to run multiple virtual units
   (containers) simultaneously on a single control host. Containers are isolated
   with Kernel Control Groups (<a class="xref" href="cha.docker.overview.html#vle.docker.cgroup">
@@ -65,7 +65,7 @@ hljs.configure({
      <span class="emphasis"><em>dockerfile</em></span>. For more details see
      <a class="link" href="http://docs.docker.com/engine/reference/glossary#image" target="_blank">the
      official Docker documentation</a>.
-    </p></dd><dt id="idm140242132008304"><span class="term ">
+    </p></dd><dt id="idm140684889764176"><span class="term ">
     Dockerfile
    </span></dt><dd><p>
      A <span class="emphasis"><em>dockerfile</em></span> stores changes made on top of the base
@@ -74,14 +74,14 @@ hljs.configure({
    </a> reads instructions in the
      <span class="emphasis"><em>dockerfile</em></span> and builds a new image according to the
      instructions.
-    </p></dd><dt id="idm140242092602880"><span class="term ">
+    </p></dd><dt id="idm140684930126032"><span class="term ">
     Container
    </span></dt><dd><p>
      A <span class="emphasis"><em>container</em></span> is a running instance based on a
      particular Docker <a class="xref" href="cha.docker.overview.html#Docker_Image">Image</a>. Each
      <span class="emphasis"><em>container</em></span> can be distinguished by a unique container
      ID.
-    </p></dd><dt id="idm140242135652272"><span class="term ">
+    </p></dd><dt id="idm140684929232512"><span class="term ">
     Registry
    </span></dt><dd><p>
      A <span class="emphasis"><em>registry</em></span> is storage for already created images. It
@@ -94,7 +94,7 @@ hljs.configure({
       </p></li><li class="listitem "><p>
        private registry - these are accessible for particular users or from a
        particular private network.
-      </p></li></ul></div></dd><dt id="idm140242132600416"><span class="term ">
+      </p></li></ul></div></dd><dt id="idm140684906832608"><span class="term ">
     Repository
    </span></dt><dd><p>
      A <span class="emphasis"><em>repository</em></span> is storage in a
@@ -112,7 +112,7 @@ hljs.configure({
    </span></dt><dd><p>
      Docker uses <span class="emphasis"><em>namespaces</em></span> for its containers that
      isolates resources reserved for particular containers.
-    </p></dd><dt id="idm140242092911040"><span class="term ">Orchestration</span></dt><dd><p>
+    </p></dd><dt id="idm140684934833712"><span class="term ">Orchestration</span></dt><dd><p>
      In a production environment you typically need a cluster with many
      containers on each cluster node. The containers must cooperate and you
      need a framework that enables you to manage the containers automatically.
@@ -140,7 +140,7 @@ hljs.configure({
     Provides you with container orchestration.
    </p></li></ul></div><p>
   On the other hand, Docker has the following limitations:
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="cha.docker.overview.html#idm140242140312080">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="cha.docker.overview.html#idm140684907129408">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
     Containers run inside the host system's kernel and cannot use a different
     kernel.
    </p></li><li class="listitem "><p>
@@ -199,7 +199,7 @@ hljs.configure({
     For example, to force the usage of the
     <code class="systemitem">devicemapper</code> driver enter the
     following text:
-   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm140242131238096" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm140684933034928" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
      It is recommended to have <code class="filename">/var/lib/docker</code> mounted on
      a separate partition or volume to not affect the Docker host operating
      system in case of a file system corruption.
