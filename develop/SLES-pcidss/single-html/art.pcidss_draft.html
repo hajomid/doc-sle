@@ -23,14 +23,14 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.pcidss" accesskey="c"><span class="single-contents-icon"></span>Payment Card Industry Data Security Standard (PCI-DSS) Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.pcidss" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Payment Card Industry Data Security Standard (PCI-DSS) Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#sec.pcidss.what"><span class="number">1 </span><span class="name">What is the PCI-DSS?</span></a></li><li class="inactive"><a href="#sec.pcidss.os-relevant"><span class="number">2 </span><span class="name">Focus of This Document: Areas Relevant to the Operating System</span></a></li><li class="inactive"><a href="#sec.pcidss.requirement"><span class="number">3 </span><span class="name">Requirements in Detail</span></a></li><li class="inactive"><a href="#idm140638994587312"><span class="number">4 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.pcidss" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname">SUSE Linux Enterprise Server</span> <span class="productnumber">15</span></h6><div><h1 class="title">Payment Card Industry Data Security Standard (PCI-DSS) Guide <a title="Permalink" class="permalink" href="#art.pcidss">#</a></h1></div><div class="abstract "><p>
+</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.pcidss" accesskey="c"><span class="single-contents-icon"></span>Payment Card Industry Data Security Standard (PCI-DSS) Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.pcidss" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Payment Card Industry Data Security Standard (PCI-DSS) Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#sec.pcidss.what"><span class="number">1 </span><span class="name">What is the PCI-DSS?</span></a></li><li class="inactive"><a href="#sec.pcidss.os-relevant"><span class="number">2 </span><span class="name">Focus of This Document: Areas Relevant to the Operating System</span></a></li><li class="inactive"><a href="#sec.pcidss.requirement"><span class="number">3 </span><span class="name">Requirements in Detail</span></a></li><li class="inactive"><a href="#idm139771354374736"><span class="number">4 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.pcidss" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname">SUSE Linux Enterprise Server</span> <span class="productnumber">15</span></h6><div><h1 class="title">Payment Card Industry Data Security Standard (PCI-DSS) Guide <a title="Permalink" class="permalink" href="#art.pcidss">#</a></h1></div><div class="abstract "><p>
     To protect customers and the business itself, companies that handle
     credit card payments must keep data as safe and secure as possible.
     Following the Payment Card Industry Data Security Standard helps to secure all areas that are connected to
     payment processes and to implement security-relevant actions to keep the
     data and the computing environment safe.
    </p></div><div class="date"><span class="imprint-label">Publication Date: </span>February 15, 2018
-</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.pcidss.what"><span class="number">1 </span><span class="name">What is the PCI-DSS?</span></a></span></dt><dt><span class="sect1"><a href="#sec.pcidss.os-relevant"><span class="number">2 </span><span class="name">Focus of This Document: Areas Relevant to the Operating System</span></a></span></dt><dt><span class="sect1"><a href="#sec.pcidss.requirement"><span class="number">3 </span><span class="name">Requirements in Detail</span></a></span></dt><dt><span class="sect1"><a href="#idm140638994587312"><span class="number">4 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><p>
+</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.pcidss.what"><span class="number">1 </span><span class="name">What is the PCI-DSS?</span></a></span></dt><dt><span class="sect1"><a href="#sec.pcidss.os-relevant"><span class="number">2 </span><span class="name">Focus of This Document: Areas Relevant to the Operating System</span></a></span></dt><dt><span class="sect1"><a href="#sec.pcidss.requirement"><span class="number">3 </span><span class="name">Requirements in Detail</span></a></span></dt><dt><span class="sect1"><a href="#idm139771354374736"><span class="number">4 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><p>
   This document aims to provide a basic understanding of how
   <span class="phrase">SUSE Linux Enterprise Server</span> can be configured to comply with the Payment Card Industry Data Security Standard.
  </p><p>
@@ -57,32 +57,32 @@ hljs.configure({
    1.0 was released to address the growing thread of online credit card
    fraud. The current version, PCI-DSS version 3.2 has been available since
    April 2016.
-  </p><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Build and Maintain a Secure Network and Systems </span><a title="Permalink" class="permalink" href="#idm140638994985328">#</a></h6></div><ol class="orderedlist" type="1"><li class="listitem "><p>
+  </p><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Build and Maintain a Secure Network and Systems </span><a title="Permalink" class="permalink" href="#idm139771354772256">#</a></h6></div><ol class="orderedlist" type="1"><li class="listitem "><p>
      Install and maintain a firewall configuration to protect cardholder
      data
     </p></li><li class="listitem "><p>
      Do not use vendor-supplied defaults for system passwords and other
      security parameters
-    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Protect Cardholder Data </span><a title="Permalink" class="permalink" href="#idm140638994982560">#</a></h6></div><ol class="orderedlist" start="3" type="1"><li class="listitem "><p>
+    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Protect Cardholder Data </span><a title="Permalink" class="permalink" href="#idm139771354769488">#</a></h6></div><ol class="orderedlist" start="3" type="1"><li class="listitem "><p>
      Protect stored cardholder data
     </p></li><li class="listitem "><p>
      Encrypt transmission of cardholder data across open, public networks
-    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Maintain a Vulnerability Management Program </span><a title="Permalink" class="permalink" href="#idm140638994979600">#</a></h6></div><ol class="orderedlist" start="5" type="1"><li class="listitem "><p>
+    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Maintain a Vulnerability Management Program </span><a title="Permalink" class="permalink" href="#idm139771354766528">#</a></h6></div><ol class="orderedlist" start="5" type="1"><li class="listitem "><p>
      Protect all systems against malware and regularly update anti-virus
      software or programs
     </p></li><li class="listitem "><p>
      Develop and maintain secure systems and applications
-    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Implement Strong Access Control Measures </span><a title="Permalink" class="permalink" href="#idm140638994976544">#</a></h6></div><ol class="orderedlist" start="7" type="1"><li class="listitem "><p>
+    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Implement Strong Access Control Measures </span><a title="Permalink" class="permalink" href="#idm139771354763472">#</a></h6></div><ol class="orderedlist" start="7" type="1"><li class="listitem "><p>
      Restrict access to cardholder data by business need to know
     </p></li><li class="listitem "><p>
      Identify and authenticate access to system components
     </p></li><li class="listitem "><p>
      Restrict physical access to cardholder data
-    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Regularly Monitor and Test Networks </span><a title="Permalink" class="permalink" href="#idm140638994972528">#</a></h6></div><ol class="orderedlist" start="10" type="1"><li class="listitem "><p>
+    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Regularly Monitor and Test Networks </span><a title="Permalink" class="permalink" href="#idm139771354759456">#</a></h6></div><ol class="orderedlist" start="10" type="1"><li class="listitem "><p>
      Track and monitor all access to network resources and cardholder data
     </p></li><li class="listitem "><p>
      Regularly test security systems and processes
-    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Maintain an Information Security Policy </span><a title="Permalink" class="permalink" href="#idm140638994969488">#</a></h6></div><ol class="orderedlist" start="12" type="1"><li class="listitem "><p>
+    </p></li></ol></div><div class="orderedlist "><div class="orderedlist-title-wrap"><h6 class="orderedlist-title"><span class="name">Maintain an Information Security Policy </span><a title="Permalink" class="permalink" href="#idm139771354756464">#</a></h6></div><ol class="orderedlist" start="12" type="1"><li class="listitem "><p>
      Maintain a policy that addresses information security for all personnel
     </p></li></ol></div><p>
    Most requirements of PCI-DSS are organizational guidelines that
@@ -212,7 +212,7 @@ hljs.configure({
         defined inbound and outbound rules are really limiting the traffic
         between and within all network segments, like the DMZ and the
         Internet, to a needed minimum for full system operation.
-        </p></dd><dt id="idm140638994565552"><span class="term ">
+        </p></dd><dt id="idm139771354352352"><span class="term ">
        1.3.3 Implement anti-spoofing measures to detect and block forged
        source IP addresses from entering the network.
       </span></dt><dd><p>
@@ -231,7 +231,7 @@ hljs.configure({
           </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cat /proc/sys/net/ipv4/conf/all/rp_filter</pre></div><p>
           When enabled, this returns
           <code class="literal">1</code>.
-         </p></li></ul></div></dd><dt id="idm140638994555600"><span class="term ">
+         </p></li></ul></div></dd><dt id="idm139771354342400"><span class="term ">
        1.3.5 Permit only <span class="quote">“<span class="quote">established</span>”</span> connections into the
        network.
       </span></dt><dd><p>
@@ -250,7 +250,7 @@ hljs.configure({
         connections should never reach the DMZ network. However, simple
         firewall rules on <span class="phrase">SUSE Linux Enterprise Server</span> systems can help avoid
         misconfigurations and act as another line of defense.
-       </p></dd><dt id="idm140638994550448"><span class="term ">
+       </p></dd><dt id="idm139771354337248"><span class="term ">
        1.3.7 Do not disclose private IP addresses and routing information to
        unauthorized parties.
       </span></dt><dd><p>
@@ -274,7 +274,7 @@ hljs.configure({
      <span class="phrase"><em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Security Guide</em>
      and <em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Hardening Guide</em>.</span>
      
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140638994540448"><span class="term ">
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139771354327248"><span class="term ">
        2.1 Always change vendor-supplied defaults and remove or disable
        unnecessary default accounts before installing a system on the network.
       </span></dt><dd><p>
@@ -324,7 +324,7 @@ hljs.configure({
          </p></li><li class="listitem "><p>
           An exclamation mark (<code class="literal">!</code>) stands for a locked
           account and can stand all by itself or in front of a password hash.
-         </p></li></ul></div></dd><dt id="idm140638994519680"><span class="term ">
+         </p></li></ul></div></dd><dt id="idm139771354306480"><span class="term ">
        2.2 Develop configuration standards for all system components. Assure
        that these standards address all known security vulnerabilities and
        are consistent with industry-accepted system hardening standards.
@@ -340,7 +340,7 @@ hljs.configure({
         <span class="phrase"><em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Security Guide</em>
         and <em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Hardening Guide</em>.</span>
         
-       </p></dd><dt id="idm140638994510080"><span class="term ">
+       </p></dd><dt id="idm139771354296880"><span class="term ">
        2.2.1 Implement only one primary function per server to prevent
        functions that require different security levels from co-existing on
        the same server. (For example, web servers, database servers, and DNS
@@ -364,7 +364,7 @@ hljs.configure({
           
           <span class="phrase"><em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Docker
           Guide</em></span>. 
-         </p></li></ul></div></dd><dt id="idm140638994499376"><span class="term ">
+         </p></li></ul></div></dd><dt id="idm139771354286176"><span class="term ">
        2.2.2 Enable only necessary services, protocols, daemons, etc., as
        required for the function of the system.
       </span></dt><dd><p>
@@ -383,7 +383,7 @@ hljs.configure({
        </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>systemctl status <em class="replaceable ">SERVICE</em></pre></div></li><li class="listitem "><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> systemctl enable <em class="replaceable ">SERVICE</em></pre></div></li><li class="listitem "><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> systemctl disable <em class="replaceable ">SERVICE</em></pre></div></li></ul></div><p>
         To list all available services that are installed on the system and
         see their status, use the following command:
-       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>systemctl list-unit-files --type=service</pre></div></dd><dt id="idm140638994488800"><span class="term ">
+       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>systemctl list-unit-files --type=service</pre></div></dd><dt id="idm139771354275600"><span class="term ">
        2.2.3.a Inspect configuration settings to verify that security features
        are documented and implemented for all insecure services, daemons, or
        protocols.
@@ -408,7 +408,7 @@ hljs.configure({
           
           <span class="phrase"><em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Security Guide,
           Part Confining Privileges with <span class="phrase">AppArmor</span></em>.</span>
-         </p></li></ul></div></dd><dt id="idm140638994478384"><span class="term ">
+         </p></li></ul></div></dd><dt id="idm139771354265184"><span class="term ">
        2.2.5.a Select a sample of system components and inspect the
        configurations to verify that all unnecessary functionality (for
        example, scripts, drivers, features, subsystems, file systems, etc.)
@@ -444,7 +444,7 @@ hljs.configure({
         library itself. Even cases where deleting a file cleanly removes a
         functionality are problematic: If the file was installed from an RPM
         package, it will be reinstalled when the package is updated.
-       </p></dd><dt id="idm140638994468944"><span class="term ">
+       </p></dd><dt id="idm139771354255744"><span class="term ">
        2.3 Encrypt all non-console administrative access using strong
        cryptography. Use technologies such as SSH, VPN, or TLS for web-based
        management and other non-console administrative access.
@@ -514,7 +514,7 @@ hljs.configure({
        </p><p>
         LUKS in fully integrated into <span class="phrase">SUSE Linux Enterprise Server</span> and can be used via
         YaST to create new partitions.
-       </p></dd><dt id="idm140638994448352"><span class="term ">
+       </p></dd><dt id="idm139771354235152"><span class="term ">
        3.4.1.c Examine the configurations and observe the processes to verify
        that cardholder data on removable media is encrypted wherever stored.
       </span></dt><dd><p>
@@ -534,7 +534,7 @@ hljs.configure({
      networks. Ideally, encrypt all traffic, externally and internally. This
      makes it hard for attackers to gain inside information and privileged
      access to the cardholder data environment.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140638994443072"><span class="term ">
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139771354229872"><span class="term ">
        4.1 Use strong cryptography and security protocols (for example,
        TLS, IPSEC, SSH, etc.) to safeguard sensitive cardholder data during
        transmission over open, public networks, including the following: (1)
@@ -616,7 +616,7 @@ hljs.configure({
       </p><p>
        For information about SUSE Manager, see
        <a class="link" href="https://www.suse.com/documentation/suse-manager/" target="_blank">https://www.suse.com/documentation/suse-manager/</a>.
-      </p></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm140638994416176"><span class="term ">
+      </p></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm139771354202992"><span class="term ">
        6.2.a Examine policies and procedures related to security patch
        installation to verify processes are defined for: (1) Installation of
        applicable critical vendor-supplied security patches within one month
@@ -685,7 +685,7 @@ hljs.configure({
          
          <span class="phrase"><em class="citetitle "><span class="phrase">SUSE Linux Enterprise Server</span> Security Guide,
          Part Confining Privileges with <span class="phrase">AppArmor</span></em>.</span>
-        </p></li></ul></div></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm140638994384608"><span class="term ">
+        </p></li></ul></div></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm139771354171424"><span class="term ">
        7.1.2 Restrict access to privileged user IDs to least privileges
        necessary to perform job responsibilities.
       </span></dt><dd><p>
@@ -793,7 +793,7 @@ other::r--</pre></div><p>
         executed during login time and checks the recorded failed attempts
         since the last successful login. To check and reset the account
         status, use the tool <code class="command">pam_tally2</code>.
-       </p></dd><dt id="idm140638994347488"><span class="term ">
+       </p></dd><dt id="idm139771354134240"><span class="term ">
        8.1.7 Set the lockout duration to a minimum of 30 minutes or until an
        administrator enables the user ID.
       </span></dt><dd><p>
@@ -895,14 +895,14 @@ other::r--</pre></div><p>
     </p><p>
      All security policies should also be evaluated regularly and adjusted to
      keep the protection level as high as possible.
-    </p></div></div><div class="legal-section"><div class="sect1 " id="idm140638994587312"><div class="titlepage"><div><div><h2 class="title" id="idm140638994587312"><span class="number">4 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm140638994587312">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+    </p></div></div><div class="legal-section"><div class="sect1 " id="idm139771354374736"><div class="titlepage"><div><div><h2 class="title" id="idm139771354374736"><span class="number">4 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm139771354374736">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994265680"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354052416"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#idm140638994265680">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354052416">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -923,9 +923,9 @@ other::r--</pre></div><p>
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994262480"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354049216"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#idm140638994262480">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354049216">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -1004,9 +1004,9 @@ other::r--</pre></div><p>
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994252544"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354039280"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#idm140638994252544">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354039280">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -1018,9 +1018,9 @@ other::r--</pre></div><p>
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994314368"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354101104"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#idm140638994314368">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354101104">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -1052,9 +1052,9 @@ other::r--</pre></div><p>
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994309920"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354096656"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#idm140638994309920">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354096656">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
@@ -1148,9 +1148,9 @@ other::r--</pre></div><p>
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994287904"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354074640"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140638994287904">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354074640">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -1171,9 +1171,9 @@ other::r--</pre></div><p>
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994284608"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771354071344"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140638994284608">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771354071344">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -1184,9 +1184,9 @@ other::r--</pre></div><p>
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994212768"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771353999504"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#idm140638994212768">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771353999504">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -1201,9 +1201,9 @@ other::r--</pre></div><p>
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994210224"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771353996960"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#idm140638994210224">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771353996960">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -1219,18 +1219,18 @@ other::r--</pre></div><p>
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994207632"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771353994368"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#idm140638994207632">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771353994368">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994206032"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771353992800"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#idm140638994206032">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139771353992800">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -1244,9 +1244,9 @@ other::r--</pre></div><p>
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140638994202848"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139771353989936"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#idm140638994202848">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#idm139771353989936">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
