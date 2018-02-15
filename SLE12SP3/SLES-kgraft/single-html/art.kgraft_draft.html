@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Live Kernel Patching Using kGraft</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Live Kernel Patching Using kGraft</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></li><li class="inactive"><a href="#sec.kgraft.low-level"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></li><li class="inactive"><a href="#sec.kgraft.inst_patches"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></li><li class="inactive"><a href="#sec.kgraft.lifecycle"><span class="number">4 </span><span class="name">Patch Lifecycle</span></a></li><li class="inactive"><a href="#sec.kgraft.remove"><span class="number">5 </span><span class="name">Removing a kGraft Patch</span></a></li><li class="inactive"><a href="#sec.kgraft.exec_threads"><span class="number">6 </span><span class="name">Stuck Kernel Execution Threads</span></a></li><li class="inactive"><a href="#sec.kgraft.kgr"><span class="number">7 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></li><li class="inactive"><a href="#sec.kgraft.scope"><span class="number">8 </span><span class="name">Scope of kGraft Technology</span></a></li><li class="inactive"><a href="#sec.kgraft.scope_patching"><span class="number">9 </span><span class="name">Scope of SLE Live Patching</span></a></li><li class="inactive"><a href="#sec.kgraft.support_interaction"><span class="number">10 </span><span class="name">Interaction with the Support Processes</span></a></li><li class="inactive"><a href="#idm140511303477504"><span class="number">11 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.kgraft" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP3</span></span></span></h6><div><h1 class="title">Live Kernel Patching Using kGraft <a title="Permalink" class="permalink" href="#art.kgraft">#</a></h1></div><div><h3 class="subtitle"><em><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP3</span></span></em></h3></div><div class="abstract "><p>
+</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Live Kernel Patching Using kGraft</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Live Kernel Patching Using kGraft</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></li><li class="inactive"><a href="#sec.kgraft.low-level"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></li><li class="inactive"><a href="#sec.kgraft.inst_patches"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></li><li class="inactive"><a href="#sec.kgraft.lifecycle"><span class="number">4 </span><span class="name">Patch Lifecycle</span></a></li><li class="inactive"><a href="#sec.kgraft.remove"><span class="number">5 </span><span class="name">Removing a kGraft Patch</span></a></li><li class="inactive"><a href="#sec.kgraft.exec_threads"><span class="number">6 </span><span class="name">Stuck Kernel Execution Threads</span></a></li><li class="inactive"><a href="#sec.kgraft.kgr"><span class="number">7 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></li><li class="inactive"><a href="#sec.kgraft.scope"><span class="number">8 </span><span class="name">Scope of kGraft Technology</span></a></li><li class="inactive"><a href="#sec.kgraft.scope_patching"><span class="number">9 </span><span class="name">Scope of SLE Live Patching</span></a></li><li class="inactive"><a href="#sec.kgraft.support_interaction"><span class="number">10 </span><span class="name">Interaction with the Support Processes</span></a></li><li class="inactive"><a href="#idm140258866802544"><span class="number">11 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.kgraft" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP3</span></span></span></h6><div><h1 class="title">Live Kernel Patching Using kGraft <a title="Permalink" class="permalink" href="#art.kgraft">#</a></h1></div><div><h3 class="subtitle"><em><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP3</span></span></em></h3></div><div class="abstract "><p>
     This document describes the basic principles of the kGraft live
     patching technology and provides usage guidelines for the SLE Live
     Patching service.
@@ -44,7 +44,7 @@ hljs.configure({
     Enterprise Server maintenance. kGraft patches distributed through SLE
     Live Patching supplement regular SLES maintenance updates. Common update
     stack and procedures can be used for SLE Live Patching deployment.
-   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>02/14/2018</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.low-level"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.inst_patches"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.lifecycle"><span class="number">4 </span><span class="name">Patch Lifecycle</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.remove"><span class="number">5 </span><span class="name">Removing a kGraft Patch</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.exec_threads"><span class="number">6 </span><span class="name">Stuck Kernel Execution Threads</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.kgr"><span class="number">7 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.scope"><span class="number">8 </span><span class="name">Scope of kGraft Technology</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.scope_patching"><span class="number">9 </span><span class="name">Scope of SLE Live Patching</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.support_interaction"><span class="number">10 </span><span class="name">Interaction with the Support Processes</span></a></span></dt><dt><span class="sect1"><a href="#idm140511303477504"><span class="number">11 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.kgraft.advantages"><div class="titlepage"><div><div><h2 class="title" id="sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span> <a title="Permalink" class="permalink" href="#sec.kgraft.advantages">#</a></h2></div></div></div><p>
+   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>02/15/2018</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.low-level"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.inst_patches"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.lifecycle"><span class="number">4 </span><span class="name">Patch Lifecycle</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.remove"><span class="number">5 </span><span class="name">Removing a kGraft Patch</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.exec_threads"><span class="number">6 </span><span class="name">Stuck Kernel Execution Threads</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.kgr"><span class="number">7 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.scope"><span class="number">8 </span><span class="name">Scope of kGraft Technology</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.scope_patching"><span class="number">9 </span><span class="name">Scope of SLE Live Patching</span></a></span></dt><dt><span class="sect1"><a href="#sec.kgraft.support_interaction"><span class="number">10 </span><span class="name">Interaction with the Support Processes</span></a></span></dt><dt><span class="sect1"><a href="#idm140258866802544"><span class="number">11 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.kgraft.advantages"><div class="titlepage"><div><div><h2 class="title" id="sec.kgraft.advantages"><span class="number">1 </span><span class="name">Advantages of kGraft</span> <a title="Permalink" class="permalink" href="#sec.kgraft.advantages">#</a></h2></div></div></div><p>
    Live kernel patching using kGraft is especially useful for quick response in
    emergencies (when serious vulnerabilities are known and should be fixed when
    possible or there are serious system stability issues with a known fix). It
@@ -210,15 +210,15 @@ apache2-utils                            Now
   </p></div><div class="sect1 " id="sec.kgraft.kgr"><div class="titlepage"><div><div><h2 class="title" id="sec.kgraft.kgr"><span class="number">7 </span><span class="name">The <code class="command">kgr</code> Tool</span> <a title="Permalink" class="permalink" href="#sec.kgraft.kgr">#</a></h2></div></div></div><p>
    Several kGraft management tasks can be simplified with the
    <code class="command">kgr</code> tool. The available commands are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140511303493264"><span class="term "><code class="command">kgr status</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140258866823520"><span class="term "><code class="command">kgr status</code>
     </span></dt><dd><p>
       Displays the overall status of kGraft patching (<code class="literal">ready</code> or
       <code class="literal">in_progress</code>).
 
-     </p></dd><dt id="idm140511303490256"><span class="term "><code class="command">kgr patches</code>
+     </p></dd><dt id="idm140258866820512"><span class="term "><code class="command">kgr patches</code>
     </span></dt><dd><p>
       Displays the list of loaded kGraft patches.
-     </p></dd><dt id="idm140511303488128"><span class="term "><code class="command">kgr blocking</code>
+     </p></dd><dt id="idm140258866818384"><span class="term "><code class="command">kgr blocking</code>
     </span></dt><dd><p>
       Lists processes that are preventing kGraft patching from finishing. By
       default only the PIDs are listed. Specifying <code class="option">-v</code> prints
@@ -264,14 +264,14 @@ apache2-utils                            Now
   </p><p>
    PTFs for other packages in SLE Live Patching can be treated like regular
    PTFs with the usual guarantees.
-  </p></div><div class="legal-section"><div class="sect1 " id="idm140511303477504"><div class="titlepage"><div><div><h2 class="title" id="idm140511303477504"><span class="number">11 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm140511303477504">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+  </p></div><div class="legal-section"><div class="sect1 " id="idm140258866802544"><div class="titlepage"><div><div><h2 class="title" id="idm140258866802544"><span class="number">11 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm140258866802544">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303412368"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866742896"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#idm140511303412368">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866742896">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -292,9 +292,9 @@ apache2-utils                            Now
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303409168"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866739696"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#idm140511303409168">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866739696">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -373,9 +373,9 @@ apache2-utils                            Now
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303399232"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866729760"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#idm140511303399232">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866729760">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -387,9 +387,9 @@ apache2-utils                            Now
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303462336"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866792544"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#idm140511303462336">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866792544">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -421,9 +421,9 @@ apache2-utils                            Now
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303457952"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866788096"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#idm140511303457952">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866788096">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
@@ -517,9 +517,9 @@ apache2-utils                            Now
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303435936"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866766080"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140511303435936">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866766080">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -540,9 +540,9 @@ apache2-utils                            Now
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303432640"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866762784"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140511303432640">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866762784">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -553,9 +553,9 @@ apache2-utils                            Now
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303359488"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866689904"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#idm140511303359488">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866689904">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -570,9 +570,9 @@ apache2-utils                            Now
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303356912"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866687360"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#idm140511303356912">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866687360">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -588,18 +588,18 @@ apache2-utils                            Now
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303354320"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866684768"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#idm140511303354320">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866684768">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303352720"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866683168"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#idm140511303352720">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm140258866683168">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -613,9 +613,9 @@ apache2-utils                            Now
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140511303349536"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140258866679984"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#idm140511303349536">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#idm140258866679984">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
