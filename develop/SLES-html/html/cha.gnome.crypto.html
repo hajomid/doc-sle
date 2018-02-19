@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Passwords and Keys: Signing and Encrypting Data | GNOME User Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="GNOME User Guide" /><meta name="chapter-title" content="Chapter 8. Passwords and Keys: Signing and Encrypting Data" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.gnome.manage.html" title="Part II. Connectivity, Files and Resources" /><link rel="prev" href="cha.userbackup.html" title="Chapter 7. Backing Up User Data" /><link rel="next" href="cha.gnome.gftp.html" title="Chapter 9. gFTP: Transferring Data from the Internet" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Passwords and Keys: Signing and Encrypting Data | GNOME User Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="GNOME User Guide" /><meta name="chapter-title" content="Chapter 8. Passwords and Keys: Signing and Encrypting Data" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.gnome.manage.html" title="Part II. Connectivity, Files and Resources" /><link rel="prev" href="cha.userbackup.html" title="Chapter 7. Backing Up User Data" /><link rel="next" href="cha.gnome.gftp.html" title="Chapter 9. gFTP: Transferring Data from the Internet" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -30,7 +30,7 @@ hljs.configure({
   and keyring, and cache your passphrase.
  </p><p>
   Start the program by choosing <span class="guimenu">Applications</span> › <span class="guimenu">Utilities</span> › <span class="guimenu">Passwords and Keys</span>
- </p><div class="figure" id="idm140550868538064"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/seahorse_main.png"><img src="images/seahorse_main.png" width="" alt="Password and Keys Main Window" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">Password and Keys Main Window </span><a title="Permalink" class="permalink" href="cha.gnome.crypto.html#idm140550868538064">#</a></h6></div></div><div class="sect1 " id="sec.gnome.crypto.sign_encrypt"><div class="titlepage"><div><div><h2 class="title" id="sec.gnome.crypto.sign_encrypt"><span class="number">8.1 </span><span class="name">Signing and Encryption</span> <a title="Permalink" class="permalink" href="cha.gnome.crypto.html#sec.gnome.crypto.sign_encrypt">#</a></h2></div></div></div><p><span class="formalpara-title">Signing. </span>
+ </p><div class="figure" id="idm139970141329008"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/seahorse_main.png"><img src="images/seahorse_main.png" width="" alt="Password and Keys Main Window" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">Password and Keys Main Window </span><a title="Permalink" class="permalink" href="cha.gnome.crypto.html#idm139970141329008">#</a></h6></div></div><div class="sect1 " id="sec.gnome.crypto.sign_encrypt"><div class="titlepage"><div><div><h2 class="title" id="sec.gnome.crypto.sign_encrypt"><span class="number">8.1 </span><span class="name">Signing and Encryption</span> <a title="Permalink" class="permalink" href="cha.gnome.crypto.html#sec.gnome.crypto.sign_encrypt">#</a></h2></div></div></div><p><span class="formalpara-title">Signing. </span>
     Attaching electronic signatures to pieces of information, such as e-mail
     messages or software to prove its origin. To keep someone else from writing
     messages using your name, and to protect both you and the people you send
@@ -55,7 +55,7 @@ hljs.configure({
      </p></li><li class="listitem "><p><span class="formalpara-title">Private Key. </span>
       This key is used for decryption. Use it to make encrypted files or
       messages from others (or yourself) legible again.
-     </p></li></ul></div><div id="idm140550868521520" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Access to the Private Key</h6><p>
+     </p></li></ul></div><div id="idm139970141312400" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Access to the Private Key</h6><p>
     If others gain access to your private key, they can decrypt files and
     messages intended only for you. Never grant others access to your private
     key.
@@ -75,21 +75,21 @@ hljs.configure({
      </p></li><li class="step "><p>
       Click <span class="guimenu">Advanced key options</span> to specify the following
       advanced options for the key.
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140550868508784"><span class="term ">Comment</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139970141299664"><span class="term ">Comment</span></dt><dd><p>
          An optional comment.
-        </p></dd><dt id="idm140550868507024"><span class="term ">Encryption Type</span></dt><dd><p>
+        </p></dd><dt id="idm139970141297904"><span class="term ">Encryption Type</span></dt><dd><p>
          Specifies the encryption algorithms used to generate your keys.
          <span class="guimenu">DSA ElGamal</span> is the recommended choice because it
          lets you encrypt, decrypt, sign, and verify as needed. Both
          <span class="guimenu">DSA (sign only)</span> and <span class="guimenu">RSA (sign
          only)</span> allow only signing.
-        </p></dd><dt id="idm140550868503696"><span class="term ">Key Strength</span></dt><dd><p>
+        </p></dd><dt id="idm139970141294576"><span class="term ">Key Strength</span></dt><dd><p>
          Specifies the length of the key in bits. The longer the key, the more
          secure it is (provided a strong passphrase is used). Keep in mind that
          performing any operation with a longer key requires more time than it
          does with a shorter key. Acceptable values are between 1024 and 4096
          bits. At least 2048 bits are recommended.
-        </p></dd><dt id="idm140550868501536"><span class="term ">Expiration Date</span></dt><dd><p>
+        </p></dd><dt id="idm139970141292416"><span class="term ">Expiration Date</span></dt><dd><p>
          Specifies the date at which the key will cease to be usable for
          performing encryption or signing operations. You will need to either
          change the expiration date or generate a new key or subkey after this

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Getting Started | Security Guide | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 19. Getting Started" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.apparmor.html" title="Part IV. Confining Privileges with AppArmor" /><link rel="prev" href="cha.apparmor.intro.html" title="Chapter 18. Introducing AppArmor" /><link rel="next" href="cha.apparmor.concept.html" title="Chapter 20. Immunizing Programs" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Getting Started | Security Guide | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 19. Getting Started" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.apparmor.html" title="Part IV. Confining Privileges with AppArmor" /><link rel="prev" href="cha.apparmor.intro.html" title="Chapter 18. Introducing AppArmor" /><link rel="next" href="cha.apparmor.concept.html" title="Chapter 20. Immunizing Programs" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -58,7 +58,7 @@ hljs.configure({
      <code class="systemitem">perl-libapparmor</code>
     </p></li><li class="listitem "><p>
      <code class="systemitem">yast2-apparmor</code>
-    </p></li></ul></div><div id="idm140052646366064" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></li></ul></div><div id="idm140545282093712" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     If <span class="phrase">AppArmor</span> is not installed on your system, install the pattern
     <code class="systemitem">apparmor</code> for a complete
     <span class="phrase">AppArmor</span> installation. Either use the YaST Software Management
@@ -67,11 +67,11 @@ hljs.configure({
    <span class="phrase">AppArmor</span> is configured to run by default on any fresh installation of
 
    <span class="productname"><span class="phrase">openSUSE Leap</span></span>. There are two ways of toggling the status of <span class="phrase">AppArmor</span>:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140052646357872"><span class="term ">Using YaST Services Manager</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140545282085520"><span class="term ">Using YaST Services Manager</span></dt><dd><p>
       Disable or enable <span class="phrase">AppArmor</span> by removing or adding its boot script to the
       sequence of scripts executed on system boot. Status changes are
       applied on reboot.
-     </p></dd><dt id="idm140052646355520"><span class="term ">Using <span class="phrase">AppArmor</span> Configuration Window</span></dt><dd><p>
+     </p></dd><dt id="idm140545282083168"><span class="term ">Using <span class="phrase">AppArmor</span> Configuration Window</span></dt><dd><p>
       Toggle the status of <span class="phrase">AppArmor</span> in a running system by switching it off
       or on using the YaST <span class="phrase">AppArmor</span> Control Panel. Changes made here are
       applied instantaneously. The Control Panel triggers a stop or start
@@ -126,7 +126,7 @@ hljs.configure({
    Each of the processes in the above example labeled <code class="literal">not
    confined</code> might need a custom profile to confine it. Those
    labeled <code class="literal">confined by</code> are already protected by <span class="phrase">AppArmor</span>.
-  </p><div id="idm140052646322176" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
+  </p><div id="idm140545282049824" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
     For more information about choosing the right applications to profile,
     refer to <a class="xref" href="cha.apparmor.concept.html#sec.apparmor.concept.determine" title="20.2. Determining Programs to Immunize">Section 20.2, “Determining Programs to Immunize”</a>.
    </p></div></div><div class="sect1 " id="sec.apparmor.start.build"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.start.build"><span class="number">19.4 </span><span class="name">Building and Modifying Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.start.html#sec.apparmor.start.build">#</a></h2></div></div></div><p>
@@ -203,7 +203,7 @@ hljs.configure({
    application again as described in
    <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof" title="24.7.3.9. aa-logprof—Scanning the System Log">Section 24.7.3.9, “aa-logprof—Scanning the System Log”</a>.
    Determine the access rights or restrictions when prompted.
-  </p><div id="idm140052646285760" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
+  </p><div id="idm140545282013280" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
     For more information about profile building and modification, refer to
     <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>,
     <a class="xref" href="cha.apparmor.yast.html" title="Chapter 23. Building and Managing Profiles with YaST">Chapter 23, <em>Building and Managing Profiles with YaST</em></a>, and

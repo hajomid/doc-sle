@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Masquerading and Firewalls | Security Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 15. Masquerading and Firewalls" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.network_security.html" title="Part III. Network Security" /><link rel="prev" href="cha.ssh.html" title="Chapter 14. SSH: Secure Network Operations" /><link rel="next" href="cha.security.vpnserver.html" title="Chapter 16. Configuring a VPN Server" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Masquerading and Firewalls | Security Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 15. Masquerading and Firewalls" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.network_security.html" title="Part III. Network Security" /><link rel="prev" href="cha.ssh.html" title="Chapter 14. SSH: Secure Network Operations" /><link rel="next" href="cha.security.vpnserver.html" title="Chapter 16. Configuring a VPN Server" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -46,33 +46,33 @@ hljs.configure({
   </p><p>
    The Linux kernel maintains three tables, each for a particular category
    of functions of the packet filter:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948755587696"><span class="term ">filter</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140610656078736"><span class="term ">filter</span></dt><dd><p>
       This table holds the bulk of the filter rules, because it implements
       the <span class="emphasis"><em>packet filtering</em></span> mechanism in the stricter
       sense, which determines whether packets are let through
       (<code class="literal">ACCEPT</code>) or discarded (<code class="literal">DROP</code>),
       for example.
-     </p></dd><dt id="idm139948755584400"><span class="term ">nat</span></dt><dd><p>
+     </p></dd><dt id="idm140610656075440"><span class="term ">nat</span></dt><dd><p>
       This table defines any changes to the source and target addresses of
       packets. Using these functions also allows you to implement
       <span class="emphasis"><em>masquerading</em></span>, which is a special case of NAT used
       to link a private network with the Internet.
-     </p></dd><dt id="idm139948755581952"><span class="term ">mangle</span></dt><dd><p>
+     </p></dd><dt id="idm140610656072992"><span class="term ">mangle</span></dt><dd><p>
       The rules held in this table make it possible to manipulate values
       stored in IP headers (such as the type of service).
      </p></dd></dl></div><p>
    These tables contain several predefined chains to match packets:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948755579088"><span class="term ">PREROUTING</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140610656070128"><span class="term ">PREROUTING</span></dt><dd><p>
       This chain is applied to all incoming packets.
-     </p></dd><dt id="idm139948755577248"><span class="term ">INPUT</span></dt><dd><p>
+     </p></dd><dt id="idm140610656068288"><span class="term ">INPUT</span></dt><dd><p>
       This chain is applied to packets destined for the system's internal
       processes.
-     </p></dd><dt id="idm139948755575376"><span class="term ">FORWARD</span></dt><dd><p>
+     </p></dd><dt id="idm140610656066416"><span class="term ">FORWARD</span></dt><dd><p>
       This chain is applied to packets that are only routed through the
       system.
-     </p></dd><dt id="idm139948755573504"><span class="term ">OUTPUT</span></dt><dd><p>
+     </p></dd><dt id="idm140610656064544"><span class="term ">OUTPUT</span></dt><dd><p>
       This chain is applied to packets originating from the system itself.
-     </p></dd><dt id="idm139948755571648"><span class="term ">POSTROUTING</span></dt><dd><p>
+     </p></dd><dt id="idm140610656062688"><span class="term ">POSTROUTING</span></dt><dd><p>
       This chain is applied to all outgoing packets.
      </p></dd></dl></div><p>
    <a class="xref" href="cha.security.firewall.html#fig.fire.table" title="iptables: A Packet's Possible Paths">Figure 15.1, “iptables: A Packet's Possible Paths”</a> illustrates the paths along which a
@@ -107,7 +107,7 @@ hljs.configure({
    card (such as <code class="literal">eth0</code>) of the router, they can send any
    packets not destined for the local network to their default gateway or
    router.
-  </p><div id="idm139948755554480" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using the Correct Network Mask</h6><p>
+  </p><div id="idm140610656045456" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using the Correct Network Mask</h6><p>
     When configuring your network, make sure both the broadcast address and
     the netmask are the same for all local hosts. Failing to do so prevents
     packets from being routed properly.
@@ -199,7 +199,7 @@ hljs.configure({
    For more information about the predefined zones and their meaning in
    <code class="systemitem">firewalld</code> refer to its manual at
    <a class="link" href="http://www.firewalld.org/documentation/zone/predefined-zones.html" target="_blank">http://www.firewalld.org/documentation/zone/predefined-zones.html</a>.
-  </p><div id="idm139948755529824" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Zone Assigned Behavior</h6><p>
+  </p><div id="idm140610656020736" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Zone Assigned Behavior</h6><p>
      The initial state for network interfaces is to be assigned to no zone at
      all. In this case the network interface will be implicitly handled in the
      default zone which can be determined by calling <code class="command">firewall-cmd
@@ -233,11 +233,11 @@ hljs.configure({
     In the following section we will be looking at how to perform typical
     <code class="systemitem">firewalld</code> configuration tasks using <code class="command">firewall-cmd</code> on the
     command line.
-  </p><div class="sect2 " id="sec.security.firewall.firewalld.cmd"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.cmd"><span class="number">15.4.1 </span><span class="name">Configuring the Firewall on the Command Line</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd">#</a></h3></div></div></div><div class="sect3 " id="idm139948755516176"><div class="titlepage"><div><div><h4 class="title" id="idm139948755516176"><span class="number">15.4.1.1 </span><span class="name">Firewall Startup</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm139948755516176">#</a></h4></div></div></div><p>
+  </p><div class="sect2 " id="sec.security.firewall.firewalld.cmd"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.cmd"><span class="number">15.4.1 </span><span class="name">Configuring the Firewall on the Command Line</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd">#</a></h3></div></div></div><div class="sect3 " id="idm140610656007152"><div class="titlepage"><div><div><h4 class="title" id="idm140610656007152"><span class="number">15.4.1.1 </span><span class="name">Firewall Startup</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140610656007152">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> will be installed and enabled by default. It is a regular
      <code class="systemitem">systemd</code> service that can be configured via <code class="command">systemctl</code>
      or the YaST Services Manager.
-    </p><div id="idm139948755513056" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Automatic Firewall Configuration</h6><p> After the installation, YaST automatically starts
+    </p><div id="idm140610656004032" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Automatic Firewall Configuration</h6><p> After the installation, YaST automatically starts
       <code class="systemitem">firewalld</code> and leaves all interfaces in the default
       <code class="literal">public</code> zone. If a server application is configured
       and activated on the system, YaST can adjust the firewall
@@ -264,7 +264,7 @@ hljs.configure({
      about this you can also take the opposite approach to be on the safe side:
      Add new rules to the permanent configuration and reload <code class="systemitem">firewalld</code> to
      make them active.
-    </p><div id="idm139948755502352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+    </p><div id="idm140610655993328" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Some configuration items like the default zone are shared by both the
       runtime and permanent configuration. Changing them will reflect in both
       configurations at once.
@@ -277,7 +277,7 @@ hljs.configure({
      For brevity the examples in the following sections will always operate on
      the runtime configuration, if applicable. Adjust them accordingly if you
      want to make them permanent.
-    </p></div><div class="sect3 " id="idm139948755496144"><div class="titlepage"><div><div><h4 class="title" id="idm139948755496144"><span class="number">15.4.1.3 </span><span class="name">Assignment of Interfaces to Zones</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm139948755496144">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="idm140610655987120"><div class="titlepage"><div><div><h4 class="title" id="idm140610655987120"><span class="number">15.4.1.3 </span><span class="name">Assignment of Interfaces to Zones</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140610655987120">#</a></h4></div></div></div><p>
      You can list all network interfaces currently assigned to a zone like this:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public --list-interfaces</code>
 eth0</pre></div><p>
@@ -296,7 +296,7 @@ public</pre></div><p>
       for getting and setting the default zone assignment:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --get-default-zone</code>
 dmz
-<code class="prompt root">root # </code><code class="command">firewall-cmd --set-default-zone=public</code></pre></div><div id="idm139948755483888" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
+<code class="prompt root">root # </code><code class="command">firewall-cmd --set-default-zone=public</code></pre></div><div id="idm140610655974864" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
       Any network interfaces not explicitly assigned to a zone will be
       automatically part of the default zone. Changing the default zone will
       reassign all those network interfaces immediately for the permanent and
@@ -339,13 +339,13 @@ dhcp
      approach. This will open TCP port 8000 in the internal zone:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-port=8000/tcp --zone=internal</code></pre></div><p>
      For removal use the counterpart command <code class="literal">--remove-port</code>.
-    </p><div id="idm139948755468960" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Temporarily Opening a Service or Port</h6><p>
+    </p><div id="idm140610655960000" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Temporarily Opening a Service or Port</h6><p>
       <code class="systemitem">firewalld</code> supports a <code class="literal">--timeout</code> parameter that allows
       to open a service or port for a limited time duration. This can be helpful
       for quick testing and makes sure that closing the service or port will not
       be forgotten. To allow the <code class="literal">imap</code> service in the
       <code class="literal">internal</code> zone for 5 minutes, you would call
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-service=imap --zone=internal --timeout=5m</code></pre></div></div></div><div class="sect3 " id="idm139948755463952"><div class="titlepage"><div><div><h4 class="title" id="idm139948755463952"><span class="number">15.4.1.5 </span><span class="name">Lockdown Mode</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm139948755463952">#</a></h4></div></div></div><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-service=imap --zone=internal --timeout=5m</code></pre></div></div></div><div class="sect3 " id="idm140610655954992"><div class="titlepage"><div><div><h4 class="title" id="idm140610655954992"><span class="number">15.4.1.5 </span><span class="name">Lockdown Mode</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140610655954992">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> offers a <span class="emphasis"><em>lockdown mode</em></span> that prevents
      changes to the firewall rules while being active. Since applications can
      automatically change the firewall rules via the D-Bus interface and
@@ -360,7 +360,7 @@ dhcp
      currently implemented in <code class="systemitem">firewalld</code> provides no security against malicious
      intent as is pointed out in
      <a class="link" href="http://seclists.org/oss-sec/2017/q3/139" target="_blank">http://seclists.org/oss-sec/2017/q3/139</a>.
-    </p></div><div class="sect3 " id="idm139948755458448"><div class="titlepage"><div><div><h4 class="title" id="idm139948755458448"><span class="number">15.4.1.6 </span><span class="name">Adding Custom <code class="command">iptables</code> Rules</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm139948755458448">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="idm140610655949488"><div class="titlepage"><div><div><h4 class="title" id="idm140610655949488"><span class="number">15.4.1.6 </span><span class="name">Adding Custom <code class="command">iptables</code> Rules</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140610655949488">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> claims exclusive control over the host's
      <code class="systemitem">netfilter</code> rules. You should never modify
      firewall rules using other tools like <code class="command">iptables</code>. Doing
@@ -383,7 +383,7 @@ dhcp
      the following example drops all IPv4 packets originating from a certain
      source address:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" \
-    source address="192.168.2.4" drop'</code></pre></div></div><div class="sect3 " id="idm139948755445984"><div class="titlepage"><div><div><h4 class="title" id="idm139948755445984"><span class="number">15.4.1.7 </span><span class="name">Routing, Forwarding and Masquerading</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm139948755445984">#</a></h4></div></div></div><p>
+    source address="192.168.2.4" drop'</code></pre></div></div><div class="sect3 " id="idm140610655937024"><div class="titlepage"><div><div><h4 class="title" id="idm140610655937024"><span class="number">15.4.1.7 </span><span class="name">Routing, Forwarding and Masquerading</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140610655937024">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> is not designed to run as a fully fledged router. The
      basic functionality for typical home router setups is available. For a
      corporate production router you should not use <code class="systemitem">firewalld</code>, however, but
@@ -394,12 +394,160 @@ dhcp
        <a class="xref" href="cha.security.firewall.html#sec.security.firewall.masq" title="15.2. Masquerading Basics">Section 15.2, “Masquerading Basics”</a>.
       </p></li><li class="listitem "><p>
        To enable IPv4 masquerading, for example in the
-       <code class="literal">interal</code> zone, issue the following command
+       <code class="literal">internal</code> zone, issue the following command
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=internal --add-masquerade</code></pre></div></li><li class="listitem "><p>
        <code class="systemitem">firewalld</code> can also enable port forwarding. The following command will
        forward local TCP connections on port 80 to another host:
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public \
-    --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.1.10</code></pre></div></li></ul></div></div></div></div><div class="sect1 " id="sec.security.firewall.info"><div class="titlepage"><div><div><h2 class="title" id="sec.security.firewall.info"><span class="number">15.5 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.info">#</a></h2></div></div></div><p>
+    --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.1.10</code></pre></div></li></ul></div></div></div><div class="sect2 " id="sec.security.firewall.firewalld.rpcports"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.rpcports"><span class="number">15.4.2 </span><span class="name">Accessing Services Listening on Dynamic Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports">#</a></h3></div></div></div><p>
+    Some network services do not listen on predefined port numbers. Instead
+    they operate based on the <code class="literal">portmapper</code> or
+    <code class="literal">rpcbind</code> protocol. We will use the term
+    <code class="literal">rpcbind</code> from here on. When one of these services
+    starts, it chooses a random local port and talks to
+    <code class="literal">rpcbind</code> to make the port number known.
+    <code class="literal">rpcbind</code> itself is listening on a well known port.
+    Remote systems can then query <code class="literal">rpcbind</code> about the network
+    services it knows about and on which ports they are listening. Not many
+    programs use this approach any more today. Popular examples are
+    Network Information Services (NIS; <code class="command">ypserv</code> and
+    <code class="command">ypbind</code>) and the Network File System (NFS) version 3.
+   </p><div id="idm140610655919248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: About NFSv4</h6><p>
+     The newer NFSv4 only requires the single well known
+     TCP port 2049 any more. For protocol version 4.0 the kernel parameter
+     <code class="literal">fs.nfs.nfs_callback_tcpport</code> may need to be set
+     to a static port (see <a class="xref" href="cha.security.firewall.html#ex.security.firewall.nfscallback" title="callback port configuration for the nfs kernel module in /etc/modprobe.d/60-nfs.conf">Example 15.1, “callback port configuration for the <code class="literal">nfs</code> kernel module in <code class="filename">/etc/modprobe.d/60-nfs.conf</code>”</a>).
+     Starting with protocol version 4.1 this setting has also become
+     unnecessary.
+    </p></div><p>
+    The dynamic nature of the <code class="literal">rpcbind</code> protocol makes
+    it difficult to make the affected services behind the firewall accessible.
+    <code class="systemitem">firewalld</code> does not support these services by itself. In the following
+    section an approach to handle this case is discussed.
+   </p><div class="sect3 " id="sec.security.firewall.firewalld.rpcports.static"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.rpcports.static"><span class="number">15.4.2.1 </span><span class="name">Configuring Static Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports.static">#</a></h4></div></div></div><p>
+     One possibility is to configure all involved network services to use
+     fixed port numbers. Once this is done, the fixed ports can be opened in
+     <code class="systemitem">firewalld</code> and everything should work. The actual port numbers used are
+     at your discretion but should not clash with any well known port numbers
+     assigned to other services. See <a class="xref" href="cha.security.firewall.html#tab.security.firewall.sysconfigports" title="Important Sysconfig Variables for Static Port Configuration">Table 15.1, “Important Sysconfig Variables for Static Port Configuration”</a>
+     for a list of the available configuration items for NIS and NFSv3
+     services. Note that depending on your actual NIS or NFS configuration
+     not all of these ports may be required for your setup.
+    </p><div class="table" id="tab.security.firewall.sysconfigports"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 15.1: </span><span class="name">Important Sysconfig Variables for Static Port Configuration </span><a title="Permalink" class="permalink" href="cha.security.firewall.html#tab.security.firewall.sysconfigports">#</a></h6></div><div class="table-contents"><table summary="Important Sysconfig Variables for Static Port Configuration" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+         <p>
+          File Path
+         </p>
+        </th><th>
+         <p>
+          Variable Name
+         </p>
+        </th><th>
+         <p>
+          Example Value
+         </p>
+        </th></tr></thead><tbody><tr><td rowspan="5">
+         <code class="filename">
+          /etc/sysconfig/nfs
+         </code>
+        </td><td>
+         MOUNTD_PORT
+        </td><td>
+         21001
+        </td></tr><tr><td>
+         STATD_PORT
+        </td><td>
+         21002
+        </td></tr><tr><td>
+         LOCKD_TCPPORT
+        </td><td>
+         21003
+        </td></tr><tr><td>
+         LOCKD_UDPPORT
+        </td><td>
+         21003
+        </td></tr><tr><td>
+         RQUOTAD_PORT
+        </td><td>
+         21004
+        </td></tr><tr><td>
+         <code class="filename">
+          /etc/sysconfig/ypbind
+         </code>
+        </td><td>
+         YPBIND_OPTIONS
+        </td><td>
+         -p 24500
+        </td></tr><tr><td rowspan="3">
+         <code class="filename">
+          /etc/sysconfig/ypserv
+         </code>
+        </td><td>
+         YPXFRD_ARGS
+        </td><td>
+         -p 24501
+        </td></tr><tr><td>
+         YPSERV_ARGS
+        </td><td>
+         -p 24502
+        </td></tr><tr><td>
+         YPPASSWDD_ARGS
+        </td><td>
+         --port 24503
+        </td></tr></tbody></table></div></div><p>
+     You will need to restart any related services that are affected by these
+     static port configurations for the changes to take effect. You can see
+     the currently assigned rpcbind ports by using the command
+     <code class="command">rpcinfo -p</code>. On success only the statically configured
+     ports should show up there any more.
+    </p><p>
+     Apart from the port configuration for network services running in
+     userspace there are also ports that are used by the Linux kernel directly
+     when it comes to NFS. One of these ports is the
+     <code class="literal">nfs_callback_tcpport</code>. It is only required for the NFS
+     protocol older than version 4.1. There is a sysctl named
+     <code class="literal">fs.nfs.nfs_callback_tcpport</code> to configure this port.
+     This sysctl node only appears dynamically when NFS mounts are active.
+     Therefore it is best to configure the port via kernel module
+     parameters. This can be achieved by creating a file like shown in
+     <a class="xref" href="cha.security.firewall.html#ex.security.firewall.nfscallback" title="callback port configuration for the nfs kernel module in /etc/modprobe.d/60-nfs.conf">Example 15.1, “callback port configuration for the <code class="literal">nfs</code> kernel module in <code class="filename">/etc/modprobe.d/60-nfs.conf</code>”</a>.
+    </p><div class="example" id="ex.security.firewall.nfscallback"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 15.1: </span><span class="name">callback port configuration for the <code class="literal">nfs</code> kernel module in <code class="filename">/etc/modprobe.d/60-nfs.conf</code> </span><a title="Permalink" class="permalink" href="cha.security.firewall.html#ex.security.firewall.nfscallback">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">options nfs callback_tcpport=21005</pre></div></div></div><p>
+     To make this change effective it is easiest to reboot the machine.
+     Otherwise all NFS services need to be stopped and the
+     <code class="literal">nfs</code> kernel module needs to be reloaded. To verify the
+     active NFS callback port check the output of
+     <code class="command">cat /sys/module/nfs/parameters/callback_tcpport</code>.
+    </p><p>
+     For easy handling of the now statically configured RPC ports it is useful
+     to create a new <code class="systemitem">firewalld</code> service definition. This service definition
+     will group all related ports and for example makes it easy to make them
+     accessible in a specific zone. In
+     <a class="xref" href="cha.security.firewall.html#ex.security.firewall.newrpcservice" title="Commands to Define a new firewalld RPC Service for NFS">Example 15.2, “Commands to Define a new <code class="systemitem">firewalld</code> RPC Service for NFS”</a> this is done for the
+     NFS ports as they have been configured in the accompanying examples.
+    </p><div class="example" id="ex.security.firewall.newrpcservice"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 15.2: </span><span class="name">Commands to Define a new <code class="systemitem">firewalld</code> RPC Service for NFS </span><a title="Permalink" class="permalink" href="cha.security.firewall.html#ex.security.firewall.newrpcservice">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --permanent --new-service=nfs-rpc</code>
+<code class="prompt root">root # </code><code class="command">firewall-cmd --permanent --service=nfs-rpc --set-description="NFS related, statically configured RPC ports"</code>
+# add UDP and TCP ports for the given sequence
+<code class="prompt root">root # </code><code class="command">for port in 21001 21002 21003 21004; do
+    firewall-cmd --permanent --service=nfs-rpc --add-port ${port}/udp --add-port ${port}/tcp
+done</code>
+# the callback port is TCP only
+<code class="prompt root">root # </code><code class="command">firewall-cmd --permanent --service=nfs-rpc --add-port 21005/tcp</code>
+
+# show the complete definition of the new custom service
+<code class="prompt root">root # </code><code class="command">firewall-cmd --info-service=nfs-rpc --permanent -v</code>
+nfs-rpc
+  summary:
+  description: NFS and related, statically configured RPC ports
+  ports: 4711/tcp 21001/udp 21001/tcp 21002/udp 21002/tcp 21003/udp 21003/tcp 21004/udp 21004/tcp
+  protocols:
+  source-ports:
+  modules:
+  destination:
+
+# reload firewalld to make the new service definition available
+<code class="prompt root">root # </code><code class="command">firewall-cmd --reload</code>
+
+# the new service definition can now be used to open the ports e.g. in the internal zone
+<code class="prompt root">root # </code><code class="command">firewall-cmd --add-service=nfs-rpc --zone=internal</code></pre></div></div></div></div></div></div><div class="sect1 " id="sec.security.firewall.info"><div class="titlepage"><div><div><h2 class="title" id="sec.security.firewall.info"><span class="number">15.5 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.info">#</a></h2></div></div></div><p>
    The most up-to-date information and other documentation about <code class="systemitem">firewalld</code>
    package is found in <code class="filename">/usr/share/doc/packages/firewalld</code>.
    The home page of the netfilter and iptables project, <a class="link" href="http://www.netfilter.org" target="_blank">http://www.netfilter.org</a>, provides a large collection of
