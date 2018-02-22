@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Introducing an Audit Rule Set | Security Guide | SUSE Linux Enterprise Desktop 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 32. Introducing an Audit Rule Set" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.audit.html" title="Part V. The Linux Audit Framework" /><link rel="prev" href="cha.audit.setup.html" title="Chapter 31. Setting Up the Linux Audit Framework" /><link rel="next" href="cha.audit.moreinfo.html" title="Chapter 33. Useful Resources" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Introducing an Audit Rule Set | Security Guide | SUSE Linux Enterprise Desktop 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 32. Introducing an Audit Rule Set" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Desktop 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.audit.html" title="Part V. The Linux Audit Framework" /><link rel="prev" href="cha.audit.setup.html" title="Chapter 31. Setting Up the Linux Audit Framework" /><link rel="next" href="cha.audit.moreinfo.html" title="Chapter 33. Useful Resources" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -55,7 +55,7 @@ hljs.configure({
    </p></li><li class="step "><p>
     Adjust the file <code class="filename">/etc/audit/audit.rules</code> by adding
     rules from the examples below or by modifying existing rules.
-   </p></li></ol></div></div><div id="idm140298609640688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Adjusting the Level of Audit Logging</h6><p>
+   </p></li></ol></div></div><div id="idm139942060121456" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Adjusting the Level of Audit Logging</h6><p>
    Do not copy the example below into your audit setup without adjusting it
    to your needs. Determine what and to what extent to audit.
   </p></div><p>
@@ -86,7 +86,7 @@ hljs.configure({
    system is encountering critical errors. By shutting down the system on a
    critical error, audit makes sure that no process escapes from its control
    as it otherwise might if level 1 (<code class="option">printk</code>) were chosen.
-  </p><div id="idm140298609624880" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Choosing the Failure Flag</h6><p>
+  </p><div id="idm139942060105648" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Choosing the Failure Flag</h6><p>
     Before using your audit rule set on a live system, make sure that the
     setup has been thoroughly evaluated on test systems using the
     <span class="emphasis"><em>worst case production workload</em></span>. It is even more
@@ -99,7 +99,7 @@ hljs.configure({
    Adding watches on your audit configuration files and the log files
    themselves ensures that you can track any attempt to tamper with the
    configuration files or detect any attempted accesses to the log files.
-  </p><div id="idm140298609619792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Creating Directory and File Watches</h6><p>
+  </p><div id="idm139942060100560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Creating Directory and File Watches</h6><p>
     Creating watches on a directory is not necessarily sufficient if you
     need events for file access. Events on directory access are only
     triggered when the directory's inode is updated with metadata changes.
@@ -129,7 +129,7 @@ hljs.configure({
    determine whether that use is appropriate. By tracking mount and unmount
    operations, track the use of external resources (removable media, remote
    file systems, etc.).
-  </p><div id="idm140298609610848" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing System Calls</h6><p>
+  </p><div id="idm139942060091616" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing System Calls</h6><p>
     Auditing system calls results in a high logging activity. This activity,
     in turn, puts a heavy load on the kernel. With a kernel less responsive
     than usual, the system's backlog and rate limits might be exceeded.
@@ -322,7 +322,7 @@ w /etc/pam.d/
    multiplexed ones like socketcall or ipc. Whether system calls are
    multiplexed depends on the hardware architecture used. Both socketcall
    and ipc are not multiplexed on 64-bit architectures, such as AMD64/Intel 64.
-  </p><div id="idm140298609549680" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing System Calls</h6><p>
+  </p><div id="idm139942060030576" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing System Calls</h6><p>
     Auditing system calls results in high logging activity, which in turn
     puts a heavy load on the kernel. With a kernel less responsive than
     usual, the system's backlog and rate limits might well be exceeded.

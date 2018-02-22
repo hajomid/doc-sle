@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Web Based Enterprise Management Using SFCB | Administration Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 37. Web Based Enterprise Management Using SFCB" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.services.html" title="Part IV. Services" /><link rel="prev" href="cha.squid.html" title="Chapter 36. The Proxy Server Squid" /><link rel="next" href="part.trouble.html" title="Part V. Troubleshooting" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Web Based Enterprise Management Using SFCB | Administration Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 37. Web Based Enterprise Management Using SFCB" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.services.html" title="Part IV. Services" /><link rel="prev" href="cha.squid.html" title="Chapter 36. The Proxy Server Squid" /><link rel="next" href="part.trouble.html" title="Part V. Troubleshooting" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -105,28 +105,28 @@ hljs.configure({
    selected during <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> installation. Alternatively, select it as a
    component to install on a server that is already running. Make sure the
    following packages are installed on your system:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139835282957376"><span class="term ">cim-schema, Common Information Model (CIM) Schema</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139877327610272"><span class="term ">cim-schema, Common Information Model (CIM) Schema</span></dt><dd><p>
       Contains the Common Information Model (CIM). CIM is a model for
       describing overall management information in a network or enterprise
       environments. CIM consists of a specification and a schema. The
       specification defines the details for integration with other management
       models. The schema provides the actual model descriptions.
-     </p></dd><dt id="idm139835282955200"><span class="term ">python2-pywbem</span></dt><dd><p>
+     </p></dd><dt id="idm139877327608096"><span class="term ">python2-pywbem</span></dt><dd><p>
       Contains a Python module for making CIM operation calls through the WBEM
       protocol to query and update managed objects.
-     </p></dd><dt id="idm139835282953280"><span class="term ">cmpi-provider-register, CIMOM neutral provider registration
+     </p></dd><dt id="idm139877327606176"><span class="term ">cmpi-provider-register, CIMOM neutral provider registration
         utility</span></dt><dd><p>
       Contains a utility allowing CMPI provider packages to register with
       whatever CIMOM happens to be present on the system.
-     </p></dd><dt id="idm139835282951296"><span class="term ">sblim-sfcb, Small Footprint CIM Broker</span></dt><dd><p>
+     </p></dd><dt id="idm139877327604192"><span class="term ">sblim-sfcb, Small Footprint CIM Broker</span></dt><dd><p>
       Contains Small Footprint CIM Broker. It is a CIM server conforming to the
       CIM Operations over HTTP protocol. It is robust, with low resource
       consumption and, therefore, specifically suited for embedded and resource
       constrained environments. SFCB supports providers written against the
       Common Manageability Programming Interface (CMPI).
-     </p></dd><dt id="idm139835282949136"><span class="term ">sblim-sfcc</span></dt><dd><p>
+     </p></dd><dt id="idm139877327602032"><span class="term ">sblim-sfcc</span></dt><dd><p>
       Contains Small Footprint CIM Client library runtime libraries.
-     </p></dd><dt id="idm139835282947280"><span class="term ">sblim-wbemcli</span></dt><dd><p>
+     </p></dd><dt id="idm139877327600176"><span class="term ">sblim-wbemcli</span></dt><dd><p>
       Contains WBEM command line interface. It is a stand-alone command line
       WBEM client especially suited for basic systems management tasks.
      </p></dd></dl></div><div class="sect2 " id="sec.wbem.setting.daemon"><div class="titlepage"><div><div><h3 class="title" id="sec.wbem.setting.daemon"><span class="number">37.2.1 </span><span class="name">Starting, Stopping and Checking Status for SFCB</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.setting.daemon">#</a></h3></div></div></div><p>
@@ -185,7 +185,7 @@ hljs.configure({
      The default generated server certificate is in the following location:
     </p><p>
      <code class="filename">/etc/sfcb/server.pem</code>
-    </p><div id="idm139835282915200" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Paths to SSL Certificates</h6><p>
+    </p><div id="idm139877327568096" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Paths to SSL Certificates</h6><p>
       The default generated certificate files
       <code class="filename">servercert.pem</code> and <code class="filename">
       serverkey.pem</code> are stored under
@@ -226,7 +226,7 @@ WARNING: client.pem SSL Certificate trust store already exists.
      By default, SFCB is configured to accept all communications through the
      secure port 5989. The following paragraphs explain the communication port
      setup and recommended configuration.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139835282901392"><span class="term ">Port 5989 (secure)</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139877327554288"><span class="term ">Port 5989 (secure)</span></dt><dd><p>
         The secure port that SFCB communications use via HTTPS services. This
         is the default. With this setting, all communications between the CIMOM
         and client applications are encrypted when sent over the Internet
@@ -236,7 +236,7 @@ WARNING: client.pem SSL Certificate trust store already exists.
         applications, this port must be open on routers and firewalls if they
         are present between the client application and the nodes being
         monitored.
-       </p></dd><dt id="idm139835282898976"><span class="term ">Port 5988 (insecure)</span></dt><dd><p>
+       </p></dd><dt id="idm139877327551872"><span class="term ">Port 5988 (insecure)</span></dt><dd><p>
         The insecure port that SFCB communications use via HTTP services. This
         setting is disabled by default. With this setting, all communications
         between the CIMOM and client applications are open for review when sent
@@ -288,42 +288,42 @@ WARNING: client.pem SSL Certificate trust store already exists.
     Several environment variables directly affect the behavior of SFCB. You
     need to restart the SFCB daemon by <code class="command">systemctl restart
     sfcb</code> for these changes to take effect.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139835282878592"><span class="term "><code class="literal">PATH</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139877327531488"><span class="term "><code class="literal">PATH</code>
      </span></dt><dd><p>
        Specifies the path to the <code class="systemitem">sfcbd</code> daemon and
        utilities.
-      </p></dd><dt id="idm139835282876032"><span class="term "><code class="literal">LD_LIBRARY_PATH</code>
+      </p></dd><dt id="idm139877327528928"><span class="term "><code class="literal">LD_LIBRARY_PATH</code>
      </span></dt><dd><p>
        Specifies the path to the sfcb runtime libraries. Alternatively, you can
        add this path to the system-wide dynamic loader configuration file
        <code class="filename">/etc/ld.so.conf</code> .
-      </p></dd><dt id="idm139835282873360"><span class="term "><code class="literal">SFCB_PAUSE_PROVIDER</code>
+      </p></dd><dt id="idm139877327526256"><span class="term "><code class="literal">SFCB_PAUSE_PROVIDER</code>
      </span></dt><dd><p>
        Specifies the provider name. The SFCB server pauses after the provider
        is loaded for the first time. You can then attach a runtime debugger to
        the provider's process for debugging purposes.
-      </p></dd><dt id="idm139835282871072"><span class="term "><code class="literal">SFCB_PAUSE_CODEC</code>
+      </p></dd><dt id="idm139877327523968"><span class="term "><code class="literal">SFCB_PAUSE_CODEC</code>
      </span></dt><dd><p>
        Specifies the name of the SFCB codec (currently supports only
        <code class="literal">http</code>. The SFCB server pauses after the codec is
        loaded for the first time. You can then attach a runtime debugger to the
        process.
-      </p></dd><dt id="idm139835282868352"><span class="term "><code class="literal">SFCB_TRACE</code>
+      </p></dd><dt id="idm139877327521248"><span class="term "><code class="literal">SFCB_TRACE</code>
      </span></dt><dd><p>
        Specifies the level of debug messages for SFCB. Valid values are 0 (no
        debug messages), or 1 (key debug messages) to 4 (all debug messages).
        Default is 1.
-      </p></dd><dt id="idm139835282866112"><span class="term "><code class="literal">SFCB_TRACE_FILE</code>
+      </p></dd><dt id="idm139877327519008"><span class="term "><code class="literal">SFCB_TRACE_FILE</code>
      </span></dt><dd><p>
        By default, SFCB outputs its debug messages to standard error output
        (STDERR). Setting this variable causes the debug messages to be written
        to a specified file instead.
-      </p></dd><dt id="idm139835282863856"><span class="term "><code class="literal">SBLIM_TRACE</code>
+      </p></dd><dt id="idm139877327516752"><span class="term "><code class="literal">SBLIM_TRACE</code>
      </span></dt><dd><p>
        Specifies the level of debug messages for SBLIM providers. Valid values
        are 0 (no debug messages), or 1 (key debug messages) to 4 (all debug
        messages).
-      </p></dd><dt id="idm139835282861616"><span class="term "><code class="literal">SBLIM_TRACE_FILE</code>
+      </p></dd><dt id="idm139877327514512"><span class="term "><code class="literal">SBLIM_TRACE_FILE</code>
      </span></dt><dd><p>
        By default, SBLIM provider outputs its trace messages to STDERR. Setting
        this variable causes the trace messages to be written to a specified
@@ -332,29 +332,29 @@ WARNING: client.pem SSL Certificate trust store already exists.
     <code class="systemitem">sfcbd</code>, the SFCB daemon, has several command line
     options that switch particular runtime features on or off. Enter these
     options when SFCB daemon starts.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139835282856544"><span class="term "><code class="literal">-c, --config-file</code>=<em class="replaceable ">FILE</em>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139877327509440"><span class="term "><code class="literal">-c, --config-file</code>=<em class="replaceable ">FILE</em>
      </span></dt><dd><p>
        When SFCB daemon starts, it reads its configuration from
        <code class="filename">/etc/sfcb/sfcb.cfg</code> by default. With this option,
        you can specify an alternative configuration file.
-      </p></dd><dt id="idm139835282853424"><span class="term "><code class="literal">-d, --daemon</code>
+      </p></dd><dt id="idm139877327506320"><span class="term "><code class="literal">-d, --daemon</code>
      </span></dt><dd><p>
        Forces sfcbd and its child processes to run in the background.
-      </p></dd><dt id="idm139835282851280"><span class="term "><code class="literal">-s, --collect-stats</code>
+      </p></dd><dt id="idm139877327504176"><span class="term "><code class="literal">-s, --collect-stats</code>
      </span></dt><dd><p>
        Turns on runtime statistics collecting. Various sfcbd runtime statistics
        will be written to the <code class="filename">sfcbStat</code> file in the current
        working directory. By default, no statistics are collected.
-      </p></dd><dt id="idm139835282848576"><span class="term "><code class="literal">-l, --syslog-level</code>=<em class="replaceable ">LOGLEVEL</em>
+      </p></dd><dt id="idm139877327501472"><span class="term "><code class="literal">-l, --syslog-level</code>=<em class="replaceable ">LOGLEVEL</em>
      </span></dt><dd><p>
        Specifies the level of verbosity for the system logging facility.
        <em class="replaceable ">LOGLEVEL</em> can be one of LOG_INFO, LOG_DEBUG,
        or LOG_ERR, which is the default.
-      </p></dd><dt id="idm139835282845472"><span class="term "><code class="literal">-k, --color-trace</code>=<em class="replaceable ">LOGLEVEL</em>
+      </p></dd><dt id="idm139877327498368"><span class="term "><code class="literal">-k, --color-trace</code>=<em class="replaceable ">LOGLEVEL</em>
      </span></dt><dd><p>
        Prints trace output in a different color per process for easier
        debugging.
-      </p></dd><dt id="idm139835282842864"><span class="term "><code class="literal">-t, --trace-components</code>=<em class="replaceable ">NUM</em>
+      </p></dd><dt id="idm139877327495760"><span class="term "><code class="literal">-t, --trace-components</code>=<em class="replaceable ">NUM</em>
      </span></dt><dd><p>
        Activates component-level tracing messages, where
        <em class="replaceable ">NUM</em> is an OR-ed bitmask integer that defines
@@ -403,15 +403,15 @@ WARNING: client.pem SSL Certificate trust store already exists.
     <code class="filename">/etc/sfcb/sfcb.cfg</code> and
     <code class="filename">/usr/share/doc/packages/sblim-sfcb/README</code> for their
     complete list.
-   </p><div class="sect3 " id="sec.wbem.config.confile.1"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.1"><span class="number">37.3.3.1 </span><span class="name">httpPort</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.1">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282828272"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282828272">#</a></h2></div><p>
+   </p><div class="sect3 " id="sec.wbem.config.confile.1"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.1"><span class="number">37.3.3.1 </span><span class="name">httpPort</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.1">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327481232"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327481232">#</a></h2></div><p>
      Specifies the local port value that sfcbd should listen to receive HTTP
      (insecure) requests from CIM clients. Default is <code class="literal">5988</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282826816"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282826816">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327479776"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327479776">#</a></h2></div><p>
      <code class="literal">httpPort:</code> <em class="replaceable ">PORT_NUMBER</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.2"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.2"><span class="number">37.3.3.2 </span><span class="name">enableHttp</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.2">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282823664"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282823664">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.2"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.2"><span class="number">37.3.3.2 </span><span class="name">enableHttp</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.2">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327476624"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327476624">#</a></h2></div><p>
      Specifies whether SFCB should accept HTTP client connections. Default is
      <code class="literal">false</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282822256"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282822256">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327475216"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327475216">#</a></h2></div><p>
      <code class="literal">enableHttp:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -437,14 +437,14 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables HTTP connections.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.3"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3"><span class="number">37.3.3.3 </span><span class="name">httpProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282809648"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282809648">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.3"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3"><span class="number">37.3.3.3 </span><span class="name">httpProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327462608"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327462608">#</a></h2></div><p>
      Specifies the maximum number of simultaneous HTTP client connections
      before new incoming HTTP requests are blocked. Default is
      <code class="literal">8</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282808176"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282808176">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327461136"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327461136">#</a></h2></div><p>
      <code class="literal">httpProcs:</code>
      <em class="replaceable ">MAX_NUMBER_OF_CONNECTIONS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.3.5"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3.5"><span class="number">37.3.3.4 </span><span class="name">httpUserSFCB, httpUser</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3.5">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282805008"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282805008">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.3.5"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3.5"><span class="number">37.3.3.4 </span><span class="name">httpUserSFCB, httpUser</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3.5">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327457968"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327457968">#</a></h2></div><p>
      These options control what user the HTTP server will run under. If
      <code class="option">httpUserSFCB</code> is <code class="literal">true</code>, HTTP will run
      under the same user as the SFCB main process. If it is
@@ -453,22 +453,22 @@ WARNING: client.pem SSL Certificate trust store already exists.
      and HTTPS servers. <code class="option">httpUser</code> <span class="emphasis"><em>must</em></span> be
      specified if <code class="option">httpUserSFCB</code> is set to
      <code class="literal">false</code>. the default is <code class="literal">true</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282799920"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282799920">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327452880"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327452880">#</a></h2></div><p>
      <code class="literal">httpUserSFCB: true</code>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.3.8"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3.8"><span class="number">37.3.3.5 </span><span class="name">httpLocalOnly</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3.8">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282797168"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282797168">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.3.8"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.3.8"><span class="number">37.3.3.5 </span><span class="name">httpLocalOnly</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.3.8">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327450128"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327450128">#</a></h2></div><p>
      Specifies whether to limit HTTP requests to localhost only. Default is
      <code class="literal">false</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282795760"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282795760">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327448720"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327448720">#</a></h2></div><p>
      <code class="literal">httpLocalOnly: false</code>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.4"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.4"><span class="number">37.3.3.6 </span><span class="name">httpsPort</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.4">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282793056"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282793056">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.4"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.4"><span class="number">37.3.3.6 </span><span class="name">httpsPort</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.4">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327446016"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327446016">#</a></h2></div><p>
      Specifies the local port value where sfcbd listens for HTTPS requests from
      CIM clients. Default is <code class="literal">5989</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282791616"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282791616">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327444576"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327444576">#</a></h2></div><p>
      <code class="literal">httpsPort: port_number</code>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.5"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.5"><span class="number">37.3.3.7 </span><span class="name">enableHttps</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.5">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282788912"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282788912">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.5"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.5"><span class="number">37.3.3.7 </span><span class="name">enableHttps</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.5">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327441872"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327441872">#</a></h2></div><p>
      Specifies if SFCB will accept HTTPS client connections. Default is
      <code class="literal">true</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282787504"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282787504">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327440464"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327440464">#</a></h2></div><p>
      <code class="literal">enableHttps: option</code>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -494,16 +494,16 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables HTTPS connections.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.7"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.7"><span class="number">37.3.3.8 </span><span class="name">httpsProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.7">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282775344"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282775344">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.7"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.7"><span class="number">37.3.3.8 </span><span class="name">httpsProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.7">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327428288"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327428288">#</a></h2></div><p>
      Specifies the maximum number of simultaneous HTTPS client connections
      before new incoming HTTPS requests are blocked. Default is
      <code class="literal">8</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282773872"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282773872">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327426816"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327426816">#</a></h2></div><p>
      <code class="literal">httpsProcs:</code> <em class="replaceable ">MAX_NUMBER_OF_CONNECTIONS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.8"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.8"><span class="number">37.3.3.9 </span><span class="name">enableInterOp</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.8">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282770704"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282770704">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.8"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.8"><span class="number">37.3.3.9 </span><span class="name">enableInterOp</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.8">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327423648"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327423648">#</a></h2></div><p>
      Specifies if SFCB will provide the <span class="emphasis"><em>interop</em></span> namespace
      for indication support. Default is <code class="literal">true</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282768848"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282768848">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327421792"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327421792">#</a></h2></div><p>
      <code class="literal">enableInterOp:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -529,19 +529,19 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables interop namespace.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.9"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.9"><span class="number">37.3.3.10 </span><span class="name">provProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.9">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282756240"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282756240">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.9"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.9"><span class="number">37.3.3.10 </span><span class="name">provProcs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.9">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327409184"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327409184">#</a></h2></div><p>
      Specifies the maximum number of simultaneous provider processes. After
      this point, if a new incoming request requires loading a new provider,
      then one of the existing providers will first be automatically unloaded.
      Default is <code class="literal">32</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282754672"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282754672">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327407616"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327407616">#</a></h2></div><p>
      <code class="literal">provProcs:</code> <em class="replaceable ">MAX_NUMBER_OF_PROCS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.10"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.10"><span class="number">37.3.3.11 </span><span class="name">doBasicAuth</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.10">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282751552"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282751552">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.10"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.10"><span class="number">37.3.3.11 </span><span class="name">doBasicAuth</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.10">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327404464"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327404464">#</a></h2></div><p>
      Switches basic authentication on or off based on the client user
      identifier before it accepts the request. Default value is
      <code class="literal">true</code> which means that basic client authentication is
      performed.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282750032"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282750032">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327402944"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327402944">#</a></h2></div><p>
      <code class="literal">doBasicAuth:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -567,19 +567,19 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables basic authentication.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.11"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.11"><span class="number">37.3.3.12 </span><span class="name">basicAuthLib</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.11">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282737376"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282737376">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.11"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.11"><span class="number">37.3.3.12 </span><span class="name">basicAuthLib</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.11">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327390336"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327390336">#</a></h2></div><p>
      Specifies the local library name. The SFCB server loads the library to
      authenticate the client user identifier. Default is
      <code class="literal">sfcBasicPAMAuthentication</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282735936"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282735936">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327388896"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327388896">#</a></h2></div><p>
      <code class="literal">provProcs:</code> <em class="replaceable ">MAX_NUMBER_OF_PROCS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.12"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.12"><span class="number">37.3.3.13 </span><span class="name">useChunking</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.12">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282732736"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282732736">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.12"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.12"><span class="number">37.3.3.13 </span><span class="name">useChunking</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.12">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327385696"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327385696">#</a></h2></div><p>
      This option switches the use of HTTP/HTTPS <span class="quote">“<span class="quote">chunking</span>”</span> on or
      off. If switched on, the server will return large volumes of response data
      to the client in smaller <span class="quote">“<span class="quote">chunks</span>”</span>, rather than buffer the
      data and send it back all in one chunk. Default is <code class="literal">true</code>
      .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282730304"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282730304">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327383264"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327383264">#</a></h2></div><p>
      <code class="literal">useChunking:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -605,46 +605,46 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables HTTP/HTTPS data chunking.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.13"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.13"><span class="number">37.3.3.14 </span><span class="name">keepaliveTimeout</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.13">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282717696"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282717696">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.13"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.13"><span class="number">37.3.3.14 </span><span class="name">keepaliveTimeout</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.13">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327370656"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327370656">#</a></h2></div><p>
      Specifies the maximum time in seconds that SFCB HTTP process waits between
      two requests on one connection before it terminates. Setting it to
      <code class="literal">0</code> disables HTTP keep-alive. Default is
      <code class="literal">0</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282715728"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282715728">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327368688"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327368688">#</a></h2></div><p>
      <code class="literal">keepaliveTimeout:</code> <em class="replaceable ">SECS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.14"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.14"><span class="number">37.3.3.15 </span><span class="name">keepaliveMaxRequest</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.14">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282712576"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282712576">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.14"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.14"><span class="number">37.3.3.15 </span><span class="name">keepaliveMaxRequest</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.14">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327365536"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327365536">#</a></h2></div><p>
      Specifies the maximum number of consecutive requests on one connection.
      Setting it to <code class="literal">0</code> disables HTTP keep-alive. Default value
      is <code class="literal">10</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282710672"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282710672">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327363632"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327363632">#</a></h2></div><p>
      <code class="literal">keepaliveMaxRequest:</code> <em class="replaceable ">NUMBER_OF_CONNECTIONS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.15"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.15"><span class="number">37.3.3.16 </span><span class="name">registrationDir</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.15">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282707520"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282707520">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.15"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.15"><span class="number">37.3.3.16 </span><span class="name">registrationDir</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.15">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327360480"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327360480">#</a></h2></div><p>
      Specifies the registration directory, which contains the provider
      registration data, the staging area, and the static repository. Default is
      <code class="filename">/var/lib/sfcb/registration</code> .
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282706064"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282706064">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327359024"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327359024">#</a></h2></div><p>
      <code class="literal">registrationDir:</code> <em class="replaceable ">DIR</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.16"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.16"><span class="number">37.3.3.17 </span><span class="name">providerDirs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.16">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282702864"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282702864">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.16"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.16"><span class="number">37.3.3.17 </span><span class="name">providerDirs</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.16">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327355824"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327355824">#</a></h2></div><p>
      Specifies a space-separated list of directories where SFCB is searching
      for provider libraries. Default is <code class="filename">/usr/lib64 /usr/lib64
      /usr/lib64/cmpi</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282701392"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282701392">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327354352"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327354352">#</a></h2></div><p>
      <code class="literal">providerDirs:</code> <em class="replaceable ">DIR</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.17"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.17"><span class="number">37.3.3.18 </span><span class="name">providerSampleInterval</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.17">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282698240"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282698240">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.17"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.17"><span class="number">37.3.3.18 </span><span class="name">providerSampleInterval</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.17">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327351200"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327351200">#</a></h2></div><p>
      Specifies the interval in seconds at which the provider manager is
      checking for idle providers. Default is <code class="literal">30</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282696800"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282696800">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327349760"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327349760">#</a></h2></div><p>
      <code class="literal">providerSampleInterval:</code> <em class="replaceable ">SECS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.18"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.18"><span class="number">37.3.3.19 </span><span class="name">providerTimeoutInterval</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.18">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282693648"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282693648">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.18"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.18"><span class="number">37.3.3.19 </span><span class="name">providerTimeoutInterval</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.18">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327346608"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327346608">#</a></h2></div><p>
      Specifies the interval in seconds before an idle provider gets unloaded by
      the provider manager. Default is <code class="literal">60</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282692208"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282692208">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327345168"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327345168">#</a></h2></div><p>
      <code class="literal">providerTimeoutInterval:</code> <em class="replaceable ">SECS</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.19"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.19"><span class="number">37.3.3.20 </span><span class="name">providerAutoGroup</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.19">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282689040"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282689040">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.19"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.19"><span class="number">37.3.3.20 </span><span class="name">providerAutoGroup</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.19">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327342000"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327342000">#</a></h2></div><p>
      If the provider registration file does not specify any other group, and
      the option is set to <code class="literal">true</code>, all providers in the
      same shared library are executed in the same process.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282687536"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282687536">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327340496"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327340496">#</a></h2></div><p>
      <code class="literal">providerAutoGroup:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -670,31 +670,31 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Disables grouping of providers.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.20"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.20"><span class="number">37.3.3.21 </span><span class="name">sslCertificateFilePath</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.20">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282674928"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282674928">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.20"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.20"><span class="number">37.3.3.21 </span><span class="name">sslCertificateFilePath</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.20">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327327888"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327327888">#</a></h2></div><p>
      Specifies the name of the file that contains the server certificate. The
      file must be in PEM (Privacy Enhanced Mail, RFC 1421 and RFC 1424) format.
      This file is only required if <code class="literal">enableHttps</code> is set to
      <code class="literal">true</code>. Default is
      <code class="filename">/etc/sfcb/server.pem</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282672512"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282672512">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327325472"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327325472">#</a></h2></div><p>
      <code class="literal">sslCertificateFilePath:</code> <em class="replaceable ">PATH</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.21"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.21"><span class="number">37.3.3.22 </span><span class="name">sslKeyFilePath</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.21">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282669424"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282669424">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.21"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.21"><span class="number">37.3.3.22 </span><span class="name">sslKeyFilePath</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.21">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327322320"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327322320">#</a></h2></div><p>
      Specifies the name of the file that contains the private key for the
      server certificate. The file must be in PEM format and may not be
      protected by passphrase. This file is only required if
      <code class="literal">enableHttps</code> is set to <code class="literal">true</code>. Default
      is <code class="filename">/etc/sfcb/file.pem</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282666992"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282666992">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327319888"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327319888">#</a></h2></div><p>
      <code class="literal">sslKeyFilePath:</code> <em class="replaceable ">PATH</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.22"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.22"><span class="number">37.3.3.23 </span><span class="name">sslClientTrustStore</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.22">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282663904"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282663904">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.22"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.22"><span class="number">37.3.3.23 </span><span class="name">sslClientTrustStore</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.22">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327316736"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327316736">#</a></h2></div><p>
      Specifies the name of the file that contains either the CA or self-signed
      certificates of the clients. This file must be in PEM format and is only
      required if <code class="literal">sslClientCertificate</code> is set to
      <code class="literal">accept</code> or <code class="literal">require</code>. Default is
      <code class="filename">/etc/sfcb/client.pem</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282661056"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282661056">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327313888"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327313888">#</a></h2></div><p>
      <code class="literal">sslClientTrustStore:</code> <em class="replaceable ">PATH</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.23"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.23"><span class="number">37.3.3.24 </span><span class="name">sslClientCertificate</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.23">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282657904"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282657904">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.23"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.23"><span class="number">37.3.3.24 </span><span class="name">sslClientCertificate</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.23">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327310736"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327310736">#</a></h2></div><p>
      Specifies the way SFCB handles client certificate based authentication. If
      set to <code class="literal">ignore</code>, it will not request a certificate from
      the client. If set to <code class="literal">accept</code> it will request a
@@ -702,7 +702,7 @@ WARNING: client.pem SSL Certificate trust store already exists.
      present one. If set to <code class="literal">require</code>, it will refuse the
      client connection if the client does not present a certificate. Default
      value is <code class="literal">ignore</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282654880"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282654880">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327307712"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327307712">#</a></h2></div><p>
      <code class="literal">sslClientCertificate:</code> <em class="replaceable ">OPTION</em>
     </p><div class="informaltable"><table border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
@@ -739,31 +739,31 @@ WARNING: client.pem SSL Certificate trust store already exists.
          <p>
           Refuses the client connection without a valid certificate.
          </p>
-        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.24"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.24"><span class="number">37.3.3.25 </span><span class="name">certificateAuthLib</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.24">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282639424"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282639424">#</a></h2></div><p>
+        </td></tr></tbody></table></div></div><div class="sect3 " id="sec.wbem.config.confile.24"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.24"><span class="number">37.3.3.25 </span><span class="name">certificateAuthLib</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.24">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327292256"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327292256">#</a></h2></div><p>
      Specifies the name of the local library to request for the user
      authentication based on client certificate. This is only requested if
      <code class="literal">sslClientCertificate</code> is not set to
      <code class="literal">ignore</code>. Default value is
      <code class="filename">sfcCertificateAuthentication</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282637072"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282637072">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327289904"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327289904">#</a></h2></div><p>
      <code class="literal">certificateAuthLib:</code> <em class="replaceable ">FILE</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.25"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.25"><span class="number">37.3.3.26 </span><span class="name">traceLevel</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.25">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282633872"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282633872">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.25"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.25"><span class="number">37.3.3.26 </span><span class="name">traceLevel</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.25">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327286704"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327286704">#</a></h2></div><p>
      Specifies the trace level for SFCB. You can override it by setting
      environment variable <code class="literal">SFCB_TRACE_LEVEL</code>. Default value is
      <code class="literal">0</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282632032"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282632032">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327284864"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327284864">#</a></h2></div><p>
      <code class="literal">traceLevel:</code> <em class="replaceable ">NUM_LEVEL</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.26"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.26"><span class="number">37.3.3.27 </span><span class="name">traceMask</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.26">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282628832"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282628832">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.26"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.26"><span class="number">37.3.3.27 </span><span class="name">traceMask</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.26">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327281664"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327281664">#</a></h2></div><p>
      Specifies the trace mask for SFCB. you can override it by the command line
      option <code class="option">--trace-components</code>. Default value is
      <code class="literal">0</code>.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282626992"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282626992">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327279824"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327279824">#</a></h2></div><p>
      <code class="literal">traceMask:</code> <em class="replaceable ">MASK</em>
-    </p></div><div class="sect3 " id="sec.wbem.config.confile.27"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.27"><span class="number">37.3.3.28 </span><span class="name">traceFile</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.27">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139835282623792"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282623792">#</a></h2></div><p>
+    </p></div><div class="sect3 " id="sec.wbem.config.confile.27"><div class="titlepage"><div><div><h4 class="title" id="sec.wbem.config.confile.27"><span class="number">37.3.3.28 </span><span class="name">traceFile</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.config.confile.27">#</a></h4></div></div></div><div class="sect1 bridgehead"><h2 class="title" id="idm139877327276624"><span class="name">Purpose</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327276624">#</a></h2></div><p>
      Specifies the trace file for SFCB. You can override it by setting
      environment variable <code class="literal">SFCB_TRACE_FILE</code>. Default value is
      <code class="literal">stderr</code> (standard error output).
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139835282621936"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282621936">#</a></h2></div><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139877327274768"><span class="name">Syntax</span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327274768">#</a></h2></div><p>
      <code class="literal">traceFile:</code> <em class="replaceable ">OUTPUT</em>
     </p></div></div></div><div class="sect1 " id="sec.wbem.advanced"><div class="titlepage"><div><div><h2 class="title" id="sec.wbem.advanced"><span class="number">37.4 </span><span class="name">Advanced SFCB Tasks</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.advanced">#</a></h2></div></div></div><p>
    This chapter covers more advanced topics related to SFCB usage. To
@@ -896,7 +896,7 @@ RegisteredProfile.reg</pre></div><div class="verbatim-wrap"><pre class="screen">
    type: instance association
    namespace: root/interop</pre></div><p>
      SFCB uses a custom provider registration file for each provider.
-    </p><div id="idm139835282580272" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SBLIM Providers Registration Files</h6><p>
+    </p><div id="idm139877327233104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SBLIM Providers Registration Files</h6><p>
       All SBLIM providers on the SBLIM Web site already include a registration
       file that is used to generate the .reg file for SFCB.
      </p></div><p>
@@ -909,34 +909,34 @@ RegisteredProfile.reg</pre></div><div class="verbatim-wrap"><pre class="screen">
    unload: never
    namespace: &lt;namespace-for-class&gt; ...</pre></div><p>
      where:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139835282576928"><span class="term "><code class="literal">&lt;class-name&gt;</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139877327229760"><span class="term "><code class="literal">&lt;class-name&gt;</code>
       </span></dt><dd><p>
         The CIM class name (required)
-       </p></dd><dt id="idm139835282574816"><span class="term "><code class="literal">&lt;provider-name&gt;</code>
+       </p></dd><dt id="idm139877327227648"><span class="term "><code class="literal">&lt;provider-name&gt;</code>
       </span></dt><dd><p>
         The CMPI provider name (required)
-       </p></dd><dt id="idm139835282572704"><span class="term "><code class="literal">&lt;location-name&gt;</code>
+       </p></dd><dt id="idm139877327225536"><span class="term "><code class="literal">&lt;location-name&gt;</code>
       </span></dt><dd><p>
         The name of the provider library (required)
-       </p></dd><dt id="idm139835282570576"><span class="term "><code class="literal">type</code>
+       </p></dd><dt id="idm139877327223408"><span class="term "><code class="literal">type</code>
       </span></dt><dd><p>
         The type of the provider (required). This can be any combination of:
         <code class="literal">instance</code>, <code class="literal">association</code>,
         <code class="literal">method</code> or <code class="literal">indication</code>.
-       </p></dd><dt id="idm139835282566640"><span class="term "><code class="literal">&lt;group-name&gt;</code>
+       </p></dd><dt id="idm139877327219472"><span class="term "><code class="literal">&lt;group-name&gt;</code>
       </span></dt><dd><p>
         Multiple providers can be grouped together and run under a single
         process to further minimize runtime resources. All providers registered
         under the same &lt;group-name&gt; will be executed under the same
         process. By default each provider will be run as a separate process.
-       </p></dd><dt id="idm139835282564272"><span class="term "><code class="literal">unload</code>
+       </p></dd><dt id="idm139877327217104"><span class="term "><code class="literal">unload</code>
       </span></dt><dd><p>
         Specifies the unload policy for the provider. Currently the only
         supported option is <code class="option">never</code>, which specifies that the
         provider will not be monitored for idle times and will never be
         unloaded. By default each provider will be unloaded when its idle times
         exceed the value specified in the configuration file.
-       </p></dd><dt id="idm139835282561424"><span class="term "><code class="literal">namespace</code>
+       </p></dd><dt id="idm139877327214256"><span class="term "><code class="literal">namespace</code>
       </span></dt><dd><p>
         List of namespaces for which this provider can be executed. This is
         required, although for most providers this will be
@@ -1124,22 +1124,22 @@ localhost:5988/root/cimv2:Linux_Ext4FileSystem FSReservedCapacity=, \
     ,CommunicationStatus=,EnabledState=,OtherEnabledState=,RequestedState= \
     ,EnabledDefault=,TimeOfLastStateChange=,AvailableRequestedStates=, \
     TransitioningToState=,PercentageSpaceUse=
-    [..]</pre></div></div></div><div class="sect1 " id="sec.wbem.moreinfo"><div class="titlepage"><div><div><h2 class="title" id="sec.wbem.moreinfo"><span class="number">37.5 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.moreinfo">#</a></h2></div></div></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">For more details about WBEM and SFCB, see the following sources: </span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139835282526880">#</a></h6></div><dl class="variablelist"><dt id="idm139835282526096"><span class="term "><a class="link" href="http://www.dmtf.org" target="_blank">http://www.dmtf.org</a>
+    [..]</pre></div></div></div><div class="sect1 " id="sec.wbem.moreinfo"><div class="titlepage"><div><div><h2 class="title" id="sec.wbem.moreinfo"><span class="number">37.5 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.wbem.html#sec.wbem.moreinfo">#</a></h2></div></div></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">For more details about WBEM and SFCB, see the following sources: </span><a title="Permalink" class="permalink" href="cha.wbem.html#idm139877327179712">#</a></h6></div><dl class="variablelist"><dt id="idm139877327178928"><span class="term "><a class="link" href="http://www.dmtf.org" target="_blank">http://www.dmtf.org</a>
     </span></dt><dd><p>
       Distributed Management Task Force Web site
-     </p></dd><dt id="idm139835282523872"><span class="term "><a class="link" href="http://www.dmtf.org/standards/wbem/" target="_blank">http://www.dmtf.org/standards/wbem/</a>
+     </p></dd><dt id="idm139877327176704"><span class="term "><a class="link" href="http://www.dmtf.org/standards/wbem/" target="_blank">http://www.dmtf.org/standards/wbem/</a>
     </span></dt><dd><p>
       Web-Based Enterprise Management (WBEM) Web site
-     </p></dd><dt id="idm139835282521616"><span class="term "><a class="link" href="http://www.dmtf.org/standards/cim/" target="_blank">http://www.dmtf.org/standards/cim/</a>
+     </p></dd><dt id="idm139877327174448"><span class="term "><a class="link" href="http://www.dmtf.org/standards/cim/" target="_blank">http://www.dmtf.org/standards/cim/</a>
     </span></dt><dd><p>
       Common Information Model (CIM) Web site
-     </p></dd><dt id="idm139835282519376"><span class="term "><a class="link" href="http://sblim.wiki.sourceforge.net/" target="_blank">http://sblim.wiki.sourceforge.net/</a>
+     </p></dd><dt id="idm139877327172208"><span class="term "><a class="link" href="http://sblim.wiki.sourceforge.net/" target="_blank">http://sblim.wiki.sourceforge.net/</a>
     </span></dt><dd><p>
       Standards Based Linux Instrumentation (SBLIM) Web site
-     </p></dd><dt id="idm139835282517120"><span class="term "><a class="link" href="http://sblim.sourceforge.net/wiki/index.php/Sfcb" target="_blank">http://sblim.sourceforge.net/wiki/index.php/Sfcb</a>
+     </p></dd><dt id="idm139877327169952"><span class="term "><a class="link" href="http://sblim.sourceforge.net/wiki/index.php/Sfcb" target="_blank">http://sblim.sourceforge.net/wiki/index.php/Sfcb</a>
     </span></dt><dd><p>
       Small Footprint CIM Broker (SFCB) Web site
-     </p></dd><dt id="idm139835282514864"><span class="term "><a class="link" href="http://sblim.sourceforge.net/wiki/index.php/Providers" target="_blank">http://sblim.sourceforge.net/wiki/index.php/Providers</a>
+     </p></dd><dt id="idm139877327167696"><span class="term "><a class="link" href="http://sblim.sourceforge.net/wiki/index.php/Providers" target="_blank">http://sblim.sourceforge.net/wiki/index.php/Providers</a>
     </span></dt><dd><p>
       SBLIM providers packages
      </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.trouble.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part V </span>Troubleshooting</span></a><a class="nav-link" href="cha.squid.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 36 </span>The Proxy Server Squid</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©

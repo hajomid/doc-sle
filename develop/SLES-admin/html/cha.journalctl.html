@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>journalctl: Query the systemd Journal | Administration Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 15. journalctl: Query the systemd Journal" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.system.html" title="Part III. System" /><link rel="prev" href="cha.64bit.html" title="Chapter 14. 32-Bit and 64-Bit Applications in a 64-Bit System Environment" /><link rel="next" href="cha.update-alternative.html" title="Chapter 16. update-alternatives: Managing Multiple Versions of Commands and Files" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>journalctl: Query the systemd Journal | Administration Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 15. journalctl: Query the systemd Journal" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.system.html" title="Part III. System" /><link rel="prev" href="cha.64bit.html" title="Chapter 14. 32-Bit and 64-Bit Applications in a 64-Bit System Environment" /><link rel="next" href="cha.update-alternative.html" title="Chapter 16. update-alternatives: Managing Multiple Versions of Commands and Files" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -70,23 +70,23 @@ Storage=persistent
    <code class="command">journalctl</code> behavior. All switches are described in the
    <code class="command">journalctl</code> manual page, <code class="command">man 1
    journalctl</code>.
-  </p><div id="idm140415446424384" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
+  </p><div id="idm140160137896304" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
     To show all journal messages related to a specific executable, specify the
     full path to the executable:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140415446421584"><span class="term ">-f</span></dt><dd><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140160137893504"><span class="term ">-f</span></dt><dd><p>
       Shows only the most recent journal messages, and prints new log entries
       as they are added to the journal.
-     </p></dd><dt id="idm140415446419680"><span class="term ">-e</span></dt><dd><p>
+     </p></dd><dt id="idm140160137891600"><span class="term ">-e</span></dt><dd><p>
       Prints the messages and jumps to the end of the journal, so that the
       latest entries are visible within the pager.
-     </p></dd><dt id="idm140415446417776"><span class="term ">-r</span></dt><dd><p>
+     </p></dd><dt id="idm140160137889696"><span class="term ">-r</span></dt><dd><p>
       Prints the messages of the journal in reverse order, so that the latest
       entries are listed first.
-     </p></dd><dt id="idm140415446415888"><span class="term ">-k</span></dt><dd><p>
+     </p></dd><dt id="idm140160137887808"><span class="term ">-k</span></dt><dd><p>
       Shows only kernel messages. This is equivalent to the field match
       <code class="literal">_TRANSPORT=kernel</code> (see
       <a class="xref" href="cha.journalctl.html#sec.journalctl.filter.fields" title="15.3.3. Filtering Based on Fields">Section 15.3.3, “Filtering Based on Fields”</a>).
-     </p></dd><dt id="idm140415446413008"><span class="term ">-u</span></dt><dd><p>
+     </p></dd><dt id="idm140160137884928"><span class="term ">-u</span></dt><dd><p>
       Shows only messages for the specified <code class="systemitem">systemd</code> unit. This is equivalent
       to the field match
       <code class="literal">_SYSTEMD_UNIT=<em class="replaceable ">UNIT</em></code> (see
