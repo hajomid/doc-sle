@@ -32,7 +32,7 @@ hljs.configure({
    Loader</span>. Click the <span class="guimenu">Bootloader
    Options</span> tab and select the line containing the Xen kernel
    as the <span class="guimenu">Default Boot Section</span>.
-  </p><div class="figure" id="idm140650629684224"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/xen_bootloader.png"><img src="images/xen_bootloader.png" width="" alt="Boot Loader Settings" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 22.1: </span><span class="name">Boot Loader Settings </span><a title="Permalink" class="permalink" href="cha.xen.admin.html#idm140650629684224">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm139974698220880"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/xen_bootloader.png"><img src="images/xen_bootloader.png" width="" alt="Boot Loader Settings" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 22.1: </span><span class="name">Boot Loader Settings </span><a title="Permalink" class="permalink" href="cha.xen.admin.html#idm139974698220880">#</a></h6></div></div><p>
    Confirm with <span class="guimenu">OK</span>. Next time you boot the host, it will
    be ready to provide the Xen virtualization environment.
   </p><p>
@@ -69,7 +69,7 @@ hljs.configure({
   </p><p>
    To increase the available space of a sparse image file, first increase
    the file size and then the file system.
-  </p><div id="idm140650629666384" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Back Up Before Resizing</h6><p>
+  </p><div id="idm139974698202992" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Back Up Before Resizing</h6><p>
     Touching the sizes of partitions or sparse files always bears the risk
     of data failure. Do not work without a backup.
    </p></div><p>
@@ -79,7 +79,7 @@ hljs.configure({
    For example, to increase the file
    <code class="filename">/var/lib/xen/images/sles/disk0</code> to a size of 16GB,
    use the command:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> dd if=/dev/zero of=/var/lib/xen/images/sles/disk0 count=0 bs=1M seek=16000</pre></div><div id="idm140650629661216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Increasing Non-Sparse Images</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> dd if=/dev/zero of=/var/lib/xen/images/sles/disk0 count=0 bs=1M seek=16000</pre></div><div id="idm139974698197824" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Increasing Non-Sparse Images</h6><p>
     It is also possible to increase the image files of devices that are not
     sparse files. However, you must know exactly where the previous image
     ends. Use the seek parameter to point to the end of the image file and
@@ -172,7 +172,7 @@ hljs.configure({
    check the sanity of all the different VM Guest systems is
    indispensable. Xen offers several tools besides the system tools to
    gather information about the system.
-  </p><div id="idm140650629625360" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Monitoring the VM Host Server</h6><p>
+  </p><div id="idm139974698162032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Monitoring the VM Host Server</h6><p>
     Basic monitoring of the VM Host Server (I/O and CPU) is available via the
     Virtual Machine Manager. Refer to
     <a class="xref" href="cha.libvirt.managing.html#cha.libvirt.admin.monitor.virt-manager" title="9.8.1. Monitoring with Virtual Machine Manager">Section 9.8.1, “Monitoring with Virtual Machine Manager”</a> for details.
@@ -185,18 +185,18 @@ hljs.configure({
     <code class="command">xentop</code> has several command keys that can give you
     more information about the system that is monitored. Some of the more
     important are:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140650629619472"><span class="term ">D</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139974698156144"><span class="term ">D</span></dt><dd><p>
        Change the delay between the refreshes of the screen.
-      </p></dd><dt id="idm140650629617632"><span class="term ">N</span></dt><dd><p>
+      </p></dd><dt id="idm139974698154304"><span class="term ">N</span></dt><dd><p>
        Also display network statistics. Note, that only standard
        configurations will be displayed. If you use a special configuration
        like a routed network, no network will be displayed.
-      </p></dd><dt id="idm140650629615648"><span class="term ">B</span></dt><dd><p>
+      </p></dd><dt id="idm139974698152320"><span class="term ">B</span></dt><dd><p>
        Display the respective block devices and their cumulated usage count.
       </p></dd></dl></div><p>
     For more information about <code class="command">xentop</code> see the manual page
     <code class="command">man 1 xentop</code>.
-   </p><div id="idm140650629612256" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: <code class="command">virt-top</code></h6><p>
+   </p><div id="idm139974698148928" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: <code class="command">virt-top</code></h6><p>
      libvirt offers the hypervisor-agnostic tool <code class="command">virt-top</code>,
      which is recommended for monitoring VM Guests. See <a class="xref" href="cha.libvirt.managing.html#cha.libvirt.admin.monitor.virt-top" title="9.8.2. Monitoring with virt-top">Section 9.8.2, “Monitoring with <code class="command">virt-top</code>”</a> for details.
     </p></div></div><div class="sect2 " id="sec.xen.monitor.tools"><div class="titlepage"><div><div><h3 class="title" id="sec.xen.monitor.tools"><span class="number">22.4.2 </span><span class="name">Additional Tools</span> <a title="Permalink" class="permalink" href="cha.xen.admin.html#sec.xen.monitor.tools">#</a></h3></div></div></div><p>
@@ -204,13 +204,13 @@ hljs.configure({
     running <span class="phrase">openSUSE</span> system. Many of these are covered in
     <span class="intraxref">Book “<em class="citetitle ">System Analysis and Tuning Guide</em>”, Chapter 2 “System Monitoring Utilities”</span>. Especially useful for monitoring a
     virtualization environment are the following tools:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140650629606224"><span class="term ">ip</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139974698142832"><span class="term ">ip</span></dt><dd><p>
        The command line utility <code class="command">ip</code> may be used to monitor
        arbitrary network interfaces. This is especially useful if you have
        set up a network that is routed or applied a masqueraded network. To
        monitor a network interface with the name
        <code class="literal">alice.0</code>, run the following command:
-      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>watch ip -s link show alice.0</pre></div></dd><dt id="idm140650629602544"><span class="term ">bridge</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>watch ip -s link show alice.0</pre></div></dd><dt id="idm139974698139152"><span class="term ">bridge</span></dt><dd><p>
        In a standard setup, all the Xen VM Guest systems are
        attached to a virtual network bridge. <code class="command">bridge</code> allows
        you to determine the connection between the bridge and the virtual
@@ -222,7 +222,7 @@ hljs.configure({
        This shows that there are two virtual bridges defined on the system.  One
        is connected to the physical Ethernet device <code class="literal">eth0</code>, the
        other one is connected to a VLAN interface <code class="literal">vnet0</code>.
-      </p></dd><dt id="idm140650629597488"><span class="term ">iptables-save</span></dt><dd><p>
+      </p></dd><dt id="idm139974698134096"><span class="term ">iptables-save</span></dt><dd><p>
        Especially when using masquerade networks, or if several Ethernet
        interfaces are set up together with a firewall setup, it may be
        helpful to check the current firewall rules.

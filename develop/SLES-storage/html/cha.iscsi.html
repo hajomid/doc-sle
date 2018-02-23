@@ -30,7 +30,7 @@ hljs.configure({
   alternative to Fibre Channel that can leverage commodity servers and Ethernet
   networking equipment. Linux iSCSI provides iSCSI initiator and iSCSI LIO
   target software for connecting Linux servers to central storage systems.
- </p><div class="figure" id="idm140271811714432"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/iscsi_san_a.png"><img src="images/iscsi_san_a.png" width="" alt="iSCSI SAN with an iSNS Server" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 14.1: </span><span class="name">iSCSI SAN with an iSNS Server </span><a title="Permalink" class="permalink" href="cha.iscsi.html#idm140271811714432">#</a></h6></div></div><div id="idm140271811709424" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: LIO</h6><p>
+ </p><div class="figure" id="idm140289171385408"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/iscsi_san_a.png"><img src="images/iscsi_san_a.png" width="" alt="iSCSI SAN with an iSNS Server" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 14.1: </span><span class="name">iSCSI SAN with an iSNS Server </span><a title="Permalink" class="permalink" href="cha.iscsi.html#idm140289171385408">#</a></h6></div></div><div id="idm140289171380400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: LIO</h6><p>
    LIO (<a class="link" href="http://linux-iscsi.org" target="_blank">http://linux-iscsi.org</a>) is the standard open
    source multiprotocol SCSI target for Linux. LIO replaced the STGT (SCSI
    Target) framework as the standard unified storage target in Linux with Linux
@@ -66,7 +66,7 @@ hljs.configure({
    <code class="systemitem">open-iscsi</code> and
    <code class="systemitem">yast2-iscsi-client</code>), the iSCSI LIO
    target packages need to be installed manually.
-  </p><div id="idm140271811698064" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Initiator and Target may not Run on the Same Server</h6><p>
+  </p><div id="idm140289171369040" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Initiator and Target may not Run on the Same Server</h6><p>
     It is not supported to run iSCSI target software and iSCSI initiator
     software on the same server in a production environment.
    </p></div><p>
@@ -154,7 +154,7 @@ hljs.configure({
     The password needs to be different for incoming and outgoing discovery. If
     authentication for discovery is enabled, its settings apply to all iSCSI
     LIO target groups.
-   </p><div id="idm140271811658416" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Security</h6><p>
+   </p><div id="idm140289171329328" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Security</h6><p>
      We recommend that you use authentication for target and initiator
      discovery in production environments for security reasons.
     </p></div><p>
@@ -185,7 +185,7 @@ hljs.configure({
     partitions. Refer to <span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”, Chapter 15 “Advanced Disk Setup”, Section 15.1 “Using the YaST Partitioner”</span> for
     details. iSCSI LIO targets can use unformatted partitions with Linux, Linux
     LVM, or Linux RAID file system IDs.
-   </p><div id="idm140271811639776" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Do Not Mount iSCSI Target Devices</h6><p>
+   </p><div id="idm140289171310624" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Do Not Mount iSCSI Target Devices</h6><p>
      After you set up a device or partition for use as an iSCSI target, you
      never access it directly via its local path. Do not mount the partitions
      on the target server.
@@ -218,7 +218,7 @@ hljs.configure({
     provided by the <code class="command">lio-utils</code> software. iSCSI LIO targets
     can use unformatted partitions with Linux, Linux LVM, or Linux RAID file
     system IDs.
-   </p><div id="idm140271811629392" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Partitions</h6><p>
+   </p><div id="idm140289171300240" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Partitions</h6><p>
      Before you begin, create the unformatted partitions that you want to use
      as iSCSI LIO targets as described in
      <a class="xref" href="cha.iscsi.html#sec.iscsi.target.storage" title="14.2.3. Preparing the Storage Space">Section 14.2.3, “Preparing the Storage Space”</a>.
@@ -421,17 +421,17 @@ hljs.configure({
    with YaST.
   </p><div class="sect2 " id="sec.iscsi.initiator.yast"><div class="titlepage"><div><div><h3 class="title" id="sec.iscsi.initiator.yast"><span class="number">14.3.1 </span><span class="name">Using YaST for the iSCSI Initiator Configuration</span> <a title="Permalink" class="permalink" href="cha.iscsi.html#sec.iscsi.initiator.yast">#</a></h3></div></div></div><p>
     The iSCSI Initiator Overview in YaST is divided into three tabs:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140271811519776"><span class="term ">Service:</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140289171190688"><span class="term ">Service:</span></dt><dd><p>
        The <span class="guimenu">Service</span> tab can be used to enable the iSCSI
        initiator at boot time. It also offers to set a unique
        <span class="guimenu">Initiator Name</span> and an iSNS server to use for the
        discovery.
-      </p></dd><dt id="idm140271811516944"><span class="term ">Connected Targets:</span></dt><dd><p>
+      </p></dd><dt id="idm140289171187856"><span class="term ">Connected Targets:</span></dt><dd><p>
        The <span class="guimenu">Connected Targets</span> tab gives an overview of the
        currently connected iSCSI targets. Like the <span class="guimenu">Discovered
        Targets</span> tab, it also gives the option to add new targets to
        the system.
-      </p></dd><dt id="idm140271811514160"><span class="term ">Discovered Targets:</span></dt><dd><p>
+      </p></dd><dt id="idm140289171185072"><span class="term ">Discovered Targets:</span></dt><dd><p>
        The <span class="guimenu">Discovered Targets</span> tab provides the possibility
        of manually discovering iSCSI targets in the network.
       </p></dd></dl></div><div class="sect3 " id="sec.iscsi.initiator.yast.configuration"><div class="titlepage"><div><div><h4 class="title" id="sec.iscsi.initiator.yast.configuration"><span class="number">14.3.1.1 </span><span class="name">Configuring the iSCSI Initiator</span> <a title="Permalink" class="permalink" href="cha.iscsi.html#sec.iscsi.initiator.yast.configuration">#</a></h4></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -626,7 +626,7 @@ node.session.iscsi.ImmediateData = Yes
     the target <code class="literal">iqn.2006-02.com.example.iserv:systems</code> is no
     longer a valid record, delete this record with the following command:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> iscsiadm -m node -n iqn.2006-02.com.example.iserv:systems \
--p ip:port --op=delete</pre></div><div id="idm140271811414784" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: No Confirmation</h6><p>
+-p ip:port --op=delete</pre></div><div id="idm140289171085568" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: No Confirmation</h6><p>
      Use this option with caution because it deletes the record without any
      additional confirmation prompt.
     </p></div><p>
@@ -642,7 +642,7 @@ node.session.iscsi.ImmediateData = Yes
    During installation, an additional screen appears that provides the option
    to attach iSCSI disks to the system and use them in the installation
    process.
-  </p><div id="idm140271811408800" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mount Point Support</h6><p>iSCSI devices will appear asynchronously during the
+  </p><div id="idm140289171079520" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mount Point Support</h6><p>iSCSI devices will appear asynchronously during the
     boot process. While the initrd guarantees that those devices are
     set up correctly for the root file system, there are no such
     guarantees for any other file systems or mount points like
@@ -711,13 +711,13 @@ mptscsih,scsi_transport_spi</pre></div></div><div class="sect2 " id="sec.iscsi.t
     <code class="literal">node.startup = manual</code> in the
     <code class="filename">/etc/iscsi/nodes/<em class="replaceable ">TARGET_NAME</em>/<em class="replaceable ">IP_ADDRESS</em>,<em class="replaceable ">PORT</em>/default
     </code>files.
-   </p></div></div><div class="sect1 " id="sec.iscsi.terminology"><div class="titlepage"><div><div><h2 class="title" id="sec.iscsi.terminology"><span class="number">14.6 </span><span class="name">iSCSI LIO Target Terminology</span> <a title="Permalink" class="permalink" href="cha.iscsi.html#sec.iscsi.terminology">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140271811373264"><span class="term ">backstore</span></dt><dd><p>
+   </p></div></div><div class="sect1 " id="sec.iscsi.terminology"><div class="titlepage"><div><div><h2 class="title" id="sec.iscsi.terminology"><span class="number">14.6 </span><span class="name">iSCSI LIO Target Terminology</span> <a title="Permalink" class="permalink" href="cha.iscsi.html#sec.iscsi.terminology">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140289171044112"><span class="term ">backstore</span></dt><dd><p>
       A physical storage object that provides the actual storage underlying an
       iSCSI endpoint.
-     </p></dd><dt id="idm140271811371376"><span class="term ">CDB (command descriptor block)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171042224"><span class="term ">CDB (command descriptor block)</span></dt><dd><p>
       The standard format for SCSI commands. CDBs are commonly 6, 10, or 12
       bytes long, though they can be 16 bytes or of variable length.
-     </p></dd><dt id="idm140271811369440"><span class="term ">CHAP (Challenge Handshake Authentication Protocol)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171040288"><span class="term ">CHAP (Challenge Handshake Authentication Protocol)</span></dt><dd><p>
       A point-to-point protocol (PPP) authentication method used to confirm the
       identity of one computer to another. After the Link Control Protocol
       (LCP) connects the two computers, and the CHAP method is negotiated, the
@@ -727,59 +727,59 @@ mptscsih,scsi_transport_spi</pre></div></div><div class="sect2 " id="sec.iscsi.t
       own calculation of the expected hash value, and either acknowledges the
       authentication or terminates the connection. CHAP is defined in the RFC
       1994.
-     </p></dd><dt id="idm140271811366992"><span class="term ">CID (connection identifier)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171037840"><span class="term ">CID (connection identifier)</span></dt><dd><p>
       A 16‐bit number, generated by the initiator, that uniquely identifies a
       connection between two iSCSI devices. This number is presented during the
       login phase.
-     </p></dd><dt id="idm140271811365008"><span class="term ">endpoint</span></dt><dd><p>
+     </p></dd><dt id="idm140289171035856"><span class="term ">endpoint</span></dt><dd><p>
       The combination of an iSCSI Target Name with an iSCSI TPG (IQN + Tag).
-     </p></dd><dt id="idm140271811363152"><span class="term ">EUI (extended unique identifier)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171034000"><span class="term ">EUI (extended unique identifier)</span></dt><dd><p>
       A 64‐bit number that uniquely identifies every device in the world. The
       format consists of 24 bits that are unique to a given company, and 40
       bits assigned by the company to each device it builds.
-     </p></dd><dt id="idm140271811361136"><span class="term ">initiator</span></dt><dd><p>
+     </p></dd><dt id="idm140289171031984"><span class="term ">initiator</span></dt><dd><p>
       The originating end of an SCSI session. Typically a controlling device
       such as a computer.
-     </p></dd><dt id="idm140271811359248"><span class="term ">IPS (Internet Protocol storage)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171030096"><span class="term ">IPS (Internet Protocol storage)</span></dt><dd><p>
       The class of protocols or devices that use the IP protocol to move data
       in a storage network. FCIP (Fibre Channel over Internet Protocol), iFCP
       (Internet Fibre Channel Protocol), and iSCSI (Internet SCSI) are all
       examples of IPS protocols.
-     </p></dd><dt id="idm140271811357184"><span class="term ">IQN (iSCSI qualified name)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171028032"><span class="term ">IQN (iSCSI qualified name)</span></dt><dd><p>
       A name format for iSCSI that uniquely identifies every device in the
       world (for example:
       <code class="filename">iqn.5886.com.acme.tapedrive.sn‐a12345678</code>).
-     </p></dd><dt id="idm140271811354800"><span class="term ">ISID (initiator session identifier)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171025648"><span class="term ">ISID (initiator session identifier)</span></dt><dd><p>
       A 48‐bit number, generated by the initiator, that uniquely identifies a
       session between the initiator and the target. This value is created
       during the login process, and is sent to the target with a Login PDU.
-     </p></dd><dt id="idm140271811352768"><span class="term ">MCS (multiple connections per session)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171023616"><span class="term ">MCS (multiple connections per session)</span></dt><dd><p>
       A part of the iSCSI specification that allows multiple TCP/IP connections
       between an initiator and a target.
-     </p></dd><dt id="idm140271811350848"><span class="term ">MPIO (multipath I/O)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171021696"><span class="term ">MPIO (multipath I/O)</span></dt><dd><p>
       A method by which data can take multiple redundant paths between a server
       and storage.
-     </p></dd><dt id="idm140271811348960"><span class="term ">network portal</span></dt><dd><p>
+     </p></dd><dt id="idm140289171019808"><span class="term ">network portal</span></dt><dd><p>
       The combination of an iSCSI endpoint with an IP address plus a TCP
       (Transmission Control Protocol) port. TCP port 3260 is the port number
       for the iSCSI protocol, as defined by IANA (Internet Assigned Numbers
       Authority).
-     </p></dd><dt id="idm140271811346928"><span class="term ">SAM (SCSI architectural model)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171017776"><span class="term ">SAM (SCSI architectural model)</span></dt><dd><p>
       A document that describes the behavior of SCSI in general terms, allowing
       for different types of devices communicating over various media.
-     </p></dd><dt id="idm140271811344976"><span class="term ">target</span></dt><dd><p>
+     </p></dd><dt id="idm140289171015824"><span class="term ">target</span></dt><dd><p>
       The receiving end of an SCSI session, typically a device such as a disk
       drive, tape drive, or scanner.
-     </p></dd><dt id="idm140271811343072"><span class="term ">target group (TG)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171013920"><span class="term ">target group (TG)</span></dt><dd><p>
       A list of SCSI target ports that are all treated the same when creating
       views. Creating a view can help simplify LUN (logical unit number)
       mapping. Each view entry specifies a target group, host group, and a LUN.
-     </p></dd><dt id="idm140271811341056"><span class="term ">target port</span></dt><dd><p>
+     </p></dd><dt id="idm140289171011904"><span class="term ">target port</span></dt><dd><p>
       The combination of an iSCSI endpoint with one or more LUNs.
-     </p></dd><dt id="idm140271811339200"><span class="term ">target port group (TPG)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171010048"><span class="term ">target port group (TPG)</span></dt><dd><p>
       A list of IP addresses and TCP port numbers that determines which
       interfaces a specific iSCSI target will listen to.
-     </p></dd><dt id="idm140271811337296"><span class="term ">target session identifier (TSID)</span></dt><dd><p>
+     </p></dd><dt id="idm140289171008144"><span class="term ">target session identifier (TSID)</span></dt><dd><p>
       A 16‐bit number, generated by the target, that uniquely identifies a
       session between the initiator and the target. This value is created
       during the login process, and is sent to the initiator with a Login
