@@ -29,7 +29,7 @@ hljs.configure({
   console, it is possible to inspect the running operating system, change
   removable media, take screenshots or audio grabs and control
   other aspects of the virtual machine.
- </p><div id="idm140464806874080" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+ </p><div id="idm140032057065584" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
    The following sections list selected useful QEMU monitor commands
    and their purpose. To get the full list, enter <code class="command">help</code> in
    the QEMU monitor command line.
@@ -53,118 +53,118 @@ hljs.configure({
    <code class="command">info</code>. If used without any option, the list of possible
    options is printed. Options determine which part of the system will be
    analyzed:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140464806860736"><span class="term "><code class="command">info version</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140032057052176"><span class="term "><code class="command">info version</code>
     </span></dt><dd><p>
       Shows the version of QEMU.
-     </p></dd><dt id="idm140464806858640"><span class="term "><code class="command">info commands</code>
+     </p></dd><dt id="idm140032057050080"><span class="term "><code class="command">info commands</code>
     </span></dt><dd><p>
       Lists available QMP commands.
-     </p></dd><dt id="idm140464806856528"><span class="term "><code class="command">info network</code>
+     </p></dd><dt id="idm140032057047968"><span class="term "><code class="command">info network</code>
     </span></dt><dd><p>
       Shows the network state.
-     </p></dd><dt id="idm140464806854432"><span class="term "><code class="command">info chardev</code>
+     </p></dd><dt id="idm140032057045872"><span class="term "><code class="command">info chardev</code>
     </span></dt><dd><p>
       Shows the character devices.
-     </p></dd><dt id="idm140464806852320"><span class="term "><code class="command">info block</code>
+     </p></dd><dt id="idm140032057043760"><span class="term "><code class="command">info block</code>
     </span></dt><dd><p>
       Information about block devices, such as hard disks, floppy drives,
       or CD-ROMs.
-     </p></dd><dt id="idm140464806850160"><span class="term "><code class="command">info blockstats</code>
+     </p></dd><dt id="idm140032057041600"><span class="term "><code class="command">info blockstats</code>
     </span></dt><dd><p>
       Read and write statistics on block devices.
-     </p></dd><dt id="idm140464806848032"><span class="term "><code class="command">info registers</code>
+     </p></dd><dt id="idm140032057039472"><span class="term "><code class="command">info registers</code>
     </span></dt><dd><p>
       Shows the CPU registers.
-     </p></dd><dt id="idm140464806845936"><span class="term "><code class="command">info cpus</code>
+     </p></dd><dt id="idm140032057037376"><span class="term "><code class="command">info cpus</code>
     </span></dt><dd><p>
       Shows information about available CPUs.
-     </p></dd><dt id="idm140464806843824"><span class="term "><code class="command">info history</code>
+     </p></dd><dt id="idm140032057035264"><span class="term "><code class="command">info history</code>
     </span></dt><dd><p>
       Shows the command line history.
-     </p></dd><dt id="idm140464806841712"><span class="term "><code class="command">info irq</code>
+     </p></dd><dt id="idm140032057033152"><span class="term "><code class="command">info irq</code>
     </span></dt><dd><p>
       Shows the interrupt statistics.
-     </p></dd><dt id="idm140464806839600"><span class="term "><code class="command">info pic</code>
+     </p></dd><dt id="idm140032057031040"><span class="term "><code class="command">info pic</code>
     </span></dt><dd><p>
       Shows the i8259 (PIC) state.
-     </p></dd><dt id="idm140464806837488"><span class="term "><code class="command">info pci</code>
+     </p></dd><dt id="idm140032057028928"><span class="term "><code class="command">info pci</code>
     </span></dt><dd><p>
       Shows the PCI information.
-     </p></dd><dt id="idm140464806835392"><span class="term "><code class="command">info tlb</code>
+     </p></dd><dt id="idm140032057026832"><span class="term "><code class="command">info tlb</code>
     </span></dt><dd><p>
       Shows virtual to physical memory mappings.
-     </p></dd><dt id="idm140464806833280"><span class="term "><code class="command">info mem</code>
+     </p></dd><dt id="idm140032057024720"><span class="term "><code class="command">info mem</code>
     </span></dt><dd><p>
       Shows the active virtual memory mappings.
-     </p></dd><dt id="idm140464806831168"><span class="term "><code class="command">info jit</code>
+     </p></dd><dt id="idm140032057022608"><span class="term "><code class="command">info jit</code>
     </span></dt><dd><p>
       Shows dynamic compiler information.
-     </p></dd><dt id="idm140464806829056"><span class="term "><code class="command">info kvm</code>
+     </p></dd><dt id="idm140032057020496"><span class="term "><code class="command">info kvm</code>
     </span></dt><dd><p>
       Shows the KVM information.
-     </p></dd><dt id="idm140464806826960"><span class="term "><code class="command">info numa</code>
+     </p></dd><dt id="idm140032057018400"><span class="term "><code class="command">info numa</code>
     </span></dt><dd><p>
       Shows the NUMA information.
-     </p></dd><dt id="idm140464806824848"><span class="term "><code class="command">info usb</code>
+     </p></dd><dt id="idm140032057016288"><span class="term "><code class="command">info usb</code>
     </span></dt><dd><p>
       Shows the guest USB devices.
-     </p></dd><dt id="idm140464806822736"><span class="term "><code class="command">info usbhost</code>
+     </p></dd><dt id="idm140032057014176"><span class="term "><code class="command">info usbhost</code>
     </span></dt><dd><p>
       Shows the host USB devices.
-     </p></dd><dt id="idm140464806820624"><span class="term "><code class="command">info profile</code>
+     </p></dd><dt id="idm140032057012064"><span class="term "><code class="command">info profile</code>
     </span></dt><dd><p>
       Shows the profiling information.
-     </p></dd><dt id="idm140464806818512"><span class="term "><code class="command">info capture</code>
+     </p></dd><dt id="idm140032057009952"><span class="term "><code class="command">info capture</code>
     </span></dt><dd><p>
       Shows the capture (audio grab) information.
-     </p></dd><dt id="idm140464806816384"><span class="term "><code class="command">info snapshots</code>
+     </p></dd><dt id="idm140032057007824"><span class="term "><code class="command">info snapshots</code>
     </span></dt><dd><p>
       Shows the currently saved virtual machine snapshots.
-     </p></dd><dt id="idm140464806814256"><span class="term "><code class="command">info status</code>
+     </p></dd><dt id="idm140032057005696"><span class="term "><code class="command">info status</code>
     </span></dt><dd><p>
       Shows the current virtual machine status.
-     </p></dd><dt id="idm140464806812144"><span class="term "><code class="command">info mice</code>
+     </p></dd><dt id="idm140032057003584"><span class="term "><code class="command">info mice</code>
     </span></dt><dd><p>
       Shows which guest mice are receiving events.
-     </p></dd><dt id="idm140464806810016"><span class="term "><code class="command">info vnc</code>
+     </p></dd><dt id="idm140032057001456"><span class="term "><code class="command">info vnc</code>
     </span></dt><dd><p>
       Shows the VNC server status.
-     </p></dd><dt id="idm140464806807904"><span class="term "><code class="command">info name</code>
+     </p></dd><dt id="idm140032056999344"><span class="term "><code class="command">info name</code>
     </span></dt><dd><p>
       Shows the current virtual machine name.
-     </p></dd><dt id="idm140464806805792"><span class="term "><code class="command">info uuid</code>
+     </p></dd><dt id="idm140032056997232"><span class="term "><code class="command">info uuid</code>
     </span></dt><dd><p>
       Shows the current virtual machine UUID.
-     </p></dd><dt id="idm140464806803680"><span class="term "><code class="command">info usernet</code>
+     </p></dd><dt id="idm140032056995120"><span class="term "><code class="command">info usernet</code>
     </span></dt><dd><p>
       Shows the user network stack connection states.
-     </p></dd><dt id="idm140464806801552"><span class="term "><code class="command">info migrate</code>
+     </p></dd><dt id="idm140032056992992"><span class="term "><code class="command">info migrate</code>
     </span></dt><dd><p>
       Shows the migration status.
-     </p></dd><dt id="idm140464806799440"><span class="term "><code class="command">info balloon</code>
+     </p></dd><dt id="idm140032056990880"><span class="term "><code class="command">info balloon</code>
     </span></dt><dd><p>
       Shows the balloon device information.
-     </p></dd><dt id="idm140464806797328"><span class="term "><code class="command">info qtree</code>
+     </p></dd><dt id="idm140032056988768"><span class="term "><code class="command">info qtree</code>
     </span></dt><dd><p>
       Shows the device tree.
-     </p></dd><dt id="idm140464806795232"><span class="term "><code class="command">info qdm</code>
+     </p></dd><dt id="idm140032056986672"><span class="term "><code class="command">info qdm</code>
     </span></dt><dd><p>
       Shows the qdev device model list.
-     </p></dd><dt id="idm140464806793120"><span class="term "><code class="command">info roms</code>
+     </p></dd><dt id="idm140032056984560"><span class="term "><code class="command">info roms</code>
     </span></dt><dd><p>
       Shows the ROMs.
-     </p></dd><dt id="idm140464806791024"><span class="term "><code class="command">info migrate_cache_size</code>
+     </p></dd><dt id="idm140032056982464"><span class="term "><code class="command">info migrate_cache_size</code>
     </span></dt><dd><p>
       Shows the current migration xbzrle (<span class="quote">“<span class="quote">Xor Based Zero Run Length
       Encoding</span>”</span>) cache size.
-     </p></dd><dt id="idm140464806788432"><span class="term "><code class="command">info migrate_capabilities</code>
+     </p></dd><dt id="idm140032056979872"><span class="term "><code class="command">info migrate_capabilities</code>
     </span></dt><dd><p>
       Shows the status of the various migration capabilities, such as xbzrle
       compression.
-     </p></dd><dt id="idm140464806786256"><span class="term "><code class="command">info mtree</code>
+     </p></dd><dt id="idm140032056977696"><span class="term "><code class="command">info mtree</code>
     </span></dt><dd><p>
       Shows the VM Guest memory hierarchy.
-     </p></dd><dt id="idm140464806784144"><span class="term "><code class="command">info trace-events</code>
+     </p></dd><dt id="idm140032056975584"><span class="term "><code class="command">info trace-events</code>
     </span></dt><dd><p>
       Shows available trace-events and their status.
      </p></dd></dl></div></div><div class="sect1 " id="sec.qemu.monitor.vnc_pw"><div class="titlepage"><div><div><h2 class="title" id="sec.qemu.monitor.vnc_pw"><span class="number">30.3 </span><span class="name">Changing VNC Password</span> <a title="Permalink" class="permalink" href="cha.qemu.monitor.html#sec.qemu.monitor.vnc_pw">#</a></h2></div></div></div><p>
@@ -202,7 +202,7 @@ Bus  0, device   4, function 0:
       IRQ 0.
       BAR0: I/O at 0xffffffffffffffff [0x003e].
       BAR1: 32 bit memory at 0xffffffffffffffff [0x00000ffe].
-      id "myvirtio1"</pre></div><div id="idm140464806770544" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+      id "myvirtio1"</pre></div><div id="idm140032056961984" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     Devices added with the <code class="command">device_add</code> command can be
     removed from the guest with <code class="command">device_del</code>. Enter
     <code class="command">help device_del</code> on the QEMU monitor command line
@@ -229,14 +229,14 @@ ide1-cd0: type=cdrom removable=1 locked=0 file=/dev/sr0 ro=1 drv=host_device
    enter <code class="command">sendkey</code> and press <span class="keycap">→|</span>.
   </p><p>
    To control the mouse, the following commands can be used:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140464806754960"><span class="term "><code class="command">mouse_move</code> <em class="replaceable ">DX</em> <em class="replaceable ">dy</em> [<em class="replaceable ">DZ</em>]
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140032056946400"><span class="term "><code class="command">mouse_move</code> <em class="replaceable ">DX</em> <em class="replaceable ">dy</em> [<em class="replaceable ">DZ</em>]
     </span></dt><dd><p>
       Move the active mouse pointer to the specified coordinates dx, dy with
       the optional scroll axis dz.
-     </p></dd><dt id="idm140464806751440"><span class="term "><code class="command">mouse_button</code> <em class="replaceable ">VAL</em>
+     </p></dd><dt id="idm140032056942880"><span class="term "><code class="command">mouse_button</code> <em class="replaceable ">VAL</em>
     </span></dt><dd><p>
       Change the state of the mouse buttons (1=left, 2=middle, 4=right).
-     </p></dd><dt id="idm140464806748848"><span class="term "><code class="command">mouse_set</code> <em class="replaceable ">INDEX</em>
+     </p></dd><dt id="idm140032056940288"><span class="term "><code class="command">mouse_set</code> <em class="replaceable ">INDEX</em>
     </span></dt><dd><p>
       Set which mouse device receives events. Device index numbers can be
       obtained with the <code class="command">info mice</code> command.
@@ -257,17 +257,17 @@ ide1-cd0: type=cdrom removable=1 locked=0 file=/dev/sr0 ro=1 drv=host_device
   </p><div class="verbatim-wrap"><pre class="screen">(qemu) balloon 400</pre></div></div><div class="sect1 " id="sec.qemu.monitor.virt_memory"><div class="titlepage"><div><div><h2 class="title" id="sec.qemu.monitor.virt_memory"><span class="number">30.7 </span><span class="name">Dumping Virtual Machine Memory</span> <a title="Permalink" class="permalink" href="cha.qemu.monitor.html#sec.qemu.monitor.virt_memory">#</a></h2></div></div></div><p>
    To save the content of the virtual machine memory to a disk or console
    output, use the following commands:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140464806737152"><span class="term "><code class="command">memsave</code><em class="replaceable ">ADDR</em><em class="replaceable ">SIZE</em><em class="replaceable ">FILENAME</em>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140032056928528"><span class="term "><code class="command">memsave</code><em class="replaceable ">ADDR</em><em class="replaceable ">SIZE</em><em class="replaceable ">FILENAME</em>
     </span></dt><dd><p>
       Saves virtual memory dump starting at <em class="replaceable ">ADDR</em>
       of size <em class="replaceable ">SIZE</em> to file
       <em class="replaceable ">FILENAME</em>
-     </p></dd><dt id="idm140464806732832"><span class="term "><code class="command">pmemsave</code><em class="replaceable ">ADDR</em><em class="replaceable ">SIZE</em><em class="replaceable ">FILENAME</em>
+     </p></dd><dt id="idm140032056924208"><span class="term "><code class="command">pmemsave</code><em class="replaceable ">ADDR</em><em class="replaceable ">SIZE</em><em class="replaceable ">FILENAME</em>
     </span></dt><dd><p>
       Saves physical memory dump starting at <em class="replaceable ">ADDR</em>
       of size <em class="replaceable ">SIZE</em> to file
       <em class="replaceable ">FILENAME</em>-
-     </p></dd><dt id="idm140464806728512"><span class="term ">x /<em class="replaceable ">FMT</em><em class="replaceable ">ADDR</em>
+     </p></dd><dt id="idm140032056919888"><span class="term ">x /<em class="replaceable ">FMT</em><em class="replaceable ">ADDR</em>
     </span></dt><dd><p>
       Makes a virtual memory dump starting at address
       <em class="replaceable ">ADDR</em> and formatted according to the
@@ -289,7 +289,7 @@ ide1-cd0: type=cdrom removable=1 locked=0 file=/dev/sr0 ro=1 drv=host_device
       x86, <code class="literal">h</code> or <code class="literal">w</code> can be specified
       with the <code class="literal">i</code> format to respectively select 16 or
       32-bit code instruction size.
-     </p></dd><dt id="idm140464806714688"><span class="term ">xp /<em class="replaceable ">FMT</em><em class="replaceable ">ADDR</em>
+     </p></dd><dt id="idm140032056906064"><span class="term ">xp /<em class="replaceable ">FMT</em><em class="replaceable ">ADDR</em>
     </span></dt><dd><p>
       Makes a physical memory dump starting at address
       <em class="replaceable ">ADDR</em> and formatted according to the
@@ -333,18 +333,18 @@ ide1-cd0: type=cdrom removable=1 locked=0 file=/dev/sr0 ro=1 drv=host_device
   </p><p>
    The following commands are available for managing snapshots in QEMU
    monitor:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140464806694704"><span class="term "><code class="command">savevm</code><em class="replaceable ">NAME</em>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140032056886080"><span class="term "><code class="command">savevm</code><em class="replaceable ">NAME</em>
     </span></dt><dd><p>
       Creates a new virtual machine snapshot under the tag
       <em class="replaceable ">NAME</em> or replaces an existing snapshot.
-     </p></dd><dt id="idm140464806691808"><span class="term "><code class="command">loadvm</code><em class="replaceable ">NAME</em>
+     </p></dd><dt id="idm140032056883184"><span class="term "><code class="command">loadvm</code><em class="replaceable ">NAME</em>
     </span></dt><dd><p>
       Loads a virtual machine snapshot tagged
       <em class="replaceable ">NAME</em>.
-     </p></dd><dt id="idm140464806688960"><span class="term "><code class="command">delvm</code>
+     </p></dd><dt id="idm140032056880336"><span class="term "><code class="command">delvm</code>
     </span></dt><dd><p>
       Deletes a virtual machine snapshot.
-     </p></dd><dt id="idm140464806686848"><span class="term "><code class="command">info snapshots</code>
+     </p></dd><dt id="idm140032056878224"><span class="term "><code class="command">info snapshots</code>
     </span></dt><dd><p>
       Prints information about available snapshots.
      </p><div class="verbatim-wrap"><pre class="screen">(qemu) info snapshots
@@ -369,23 +369,23 @@ ID<span id="co.qemu_monitor.snapshot.l.id"></span><span class="callout">1</span>
        </p></td></tr></table></div></dd></dl></div></div><div class="sect1 " id="sec.qemu.monitor.suspend"><div class="titlepage"><div><div><h2 class="title" id="sec.qemu.monitor.suspend"><span class="number">30.9 </span><span class="name">Suspending and Resuming Virtual Machine Execution</span> <a title="Permalink" class="permalink" href="cha.qemu.monitor.html#sec.qemu.monitor.suspend">#</a></h2></div></div></div><p>
    The following commands are available for suspending and resuming virtual
    machines:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140464806671136"><span class="term "><code class="command">stop</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140032056862384"><span class="term "><code class="command">stop</code>
     </span></dt><dd><p>
       Suspends the execution of the virtual machine.
-     </p></dd><dt id="idm140464806669040"><span class="term "><code class="command">cont</code>
+     </p></dd><dt id="idm140032056860256"><span class="term "><code class="command">cont</code>
     </span></dt><dd><p>
       Resumes the execution of the virtual machine.
-     </p></dd><dt id="idm140464806666912"><span class="term "><code class="command">system_reset</code>
+     </p></dd><dt id="idm140032056858128"><span class="term "><code class="command">system_reset</code>
     </span></dt><dd><p>
       Resets the virtual machine. The effect is similar to the reset button
       on a physical machine. This may leave the file system in an unclean
       state.
-     </p></dd><dt id="idm140464806664672"><span class="term "><code class="command">system_powerdown</code>
+     </p></dd><dt id="idm140032056855888"><span class="term "><code class="command">system_powerdown</code>
     </span></dt><dd><p>
       Sends an <a class="xref" href="gloss.vt.glossary.html#gloss.vt.acpi" title="ACPI">ACPI</a> shutdown request to the
       machine. The effect is similar to the power button on a physical
       machine.
-     </p></dd><dt id="idm140464806661936"><span class="term "><code class="command">q</code> or <code class="command">quit</code>
+     </p></dd><dt id="idm140032056853152"><span class="term "><code class="command">q</code> or <code class="command">quit</code>
     </span></dt><dd><p>
       Terminates QEMU immediately.
      </p></dd></dl></div></div><div class="sect1 " id="sec.qemu.monitor.migrate"><div class="titlepage"><div><div><h2 class="title" id="sec.qemu.monitor.migrate"><span class="number">30.10 </span><span class="name">Live Migration</span> <a title="Permalink" class="permalink" href="cha.qemu.monitor.html#sec.qemu.monitor.migrate">#</a></h2></div></div></div><p>
@@ -414,7 +414,7 @@ ID<span id="co.qemu_monitor.snapshot.l.id"></span><span class="callout">1</span>
      <code class="option">-snapshot</code> qemu command line option should not be used
      for migration (and this <code class="command">qemu</code> command line option is
      not supported).
-    </p></li></ul></div><div id="idm140464806647840" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Support Status</h6><p>
+    </p></li></ul></div><div id="idm140032056839104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Support Status</h6><p>
     The <code class="literal">postcopy</code> mode is not yet supported in
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>.  It is released as a technology preview only.  For
     more information about <code class="literal">postcopy</code>, see <a class="link" href="http://wiki.qemu.org/Features/PostCopyLiveMigration" target="_blank">http://wiki.qemu.org/Features/PostCopyLiveMigration</a>.
@@ -574,7 +574,7 @@ QEMU waiting for connection on: unix:./qmp-sock,server</pre></div><p>
     In the above example, we ran the simple command
     <code class="command">query-kvm</code> which checks if the host is capable of
     running KVM and if KVM is enabled.
-   </p><div id="idm140464806597312" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Generating Human-Readable Output</h6><p>
+   </p><div id="idm140032056788576" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Generating Human-Readable Output</h6><p>
      To use the standard human-readable output format of QEMU
      instead of the JSON format, use the <code class="option">--hmp</code>
      option:
