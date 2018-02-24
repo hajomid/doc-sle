@@ -44,91 +44,91 @@ hljs.configure({
    below are <span class="quote">“<span class="quote">placeholders</span>”</span> and are only used, when the
    corresponding application is installed. Most log files are only visible
    for the user <code class="systemitem">root</code>.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139821281256048"><span class="term "><code class="filename">apparmor/</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139871202858608"><span class="term "><code class="filename">apparmor/</code>
     </span></dt><dd><p>
       <span class="phrase">AppArmor</span> log files. For more information about <span class="phrase">AppArmor</span>, see
       <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”</span>.
-     </p></dd><dt id="idm139821281252496"><span class="term "><code class="filename">audit/</code>
+     </p></dd><dt id="idm139871202855056"><span class="term "><code class="filename">audit/</code>
     </span></dt><dd><p>
       Logs from the audit framework. See <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”</span> for
       details.
-     </p></dd><dt id="idm139821281249808"><span class="term "><code class="filename">ConsoleKit/</code>
+     </p></dd><dt id="idm139871202852368"><span class="term "><code class="filename">ConsoleKit/</code>
     </span></dt><dd><p>
       Logs of the <code class="systemitem">ConsoleKit</code> daemon
       (daemon for tracking what users are logged in and how they interact
       with the computer).
-     </p></dd><dt id="idm139821281246912"><span class="term "><code class="filename">cups/</code>
+     </p></dd><dt id="idm139871202849472"><span class="term "><code class="filename">cups/</code>
     </span></dt><dd><p>
       Access and error logs of the Common Unix Printing System
       (<code class="systemitem">cups</code>).
-     </p></dd><dt id="idm139821281244064"><span class="term "><code class="filename">firewall</code>
+     </p></dd><dt id="idm139871202846624"><span class="term "><code class="filename">firewall</code>
     </span></dt><dd><p>
       Firewall logs.
-     </p></dd><dt id="idm139821281241968"><span class="term "><code class="filename">gdm/</code>
+     </p></dd><dt id="idm139871202844528"><span class="term "><code class="filename">gdm/</code>
     </span></dt><dd><p>
       Log files from the GNOME display manager.
-     </p></dd><dt id="idm139821281239856"><span class="term "><code class="filename">krb5/</code>
+     </p></dd><dt id="idm139871202842416"><span class="term "><code class="filename">krb5/</code>
     </span></dt><dd><p>
       Log files from the Kerberos network authentication system.
-     </p></dd><dt id="idm139821281237728"><span class="term "><code class="filename">lastlog</code>
+     </p></dd><dt id="idm139871202840288"><span class="term "><code class="filename">lastlog</code>
     </span></dt><dd><p>
       A database containing information on the last login of each user. Use
       the command <code class="command">lastlog</code> to view. See <code class="command">man 8
       lastlog</code> for more information.
-     </p></dd><dt id="idm139821281234656"><span class="term "><code class="filename">localmessages</code>
+     </p></dd><dt id="idm139871202837216"><span class="term "><code class="filename">localmessages</code>
     </span></dt><dd><p>
       Log messages of some boot scripts, for example the log of the DHCP
       client.
-     </p></dd><dt id="idm139821281232496"><span class="term "><code class="filename">mail*</code>
+     </p></dd><dt id="idm139871202835056"><span class="term "><code class="filename">mail*</code>
     </span></dt><dd><p>
       Mail server (<code class="systemitem">postfix</code>,
       <code class="systemitem">sendmail</code>) logs.
-     </p></dd><dt id="idm139821281228976"><span class="term "><code class="filename">messages</code>
+     </p></dd><dt id="idm139871202831536"><span class="term "><code class="filename">messages</code>
     </span></dt><dd><p>
       This is the default place where all kernel and system log messages go
       and should be the first place (along with
       <code class="filename">/var/log/warn</code>) to look at in case of problems.
-     </p></dd><dt id="idm139821281226320"><span class="term "><code class="filename">NetworkManager</code>
+     </p></dd><dt id="idm139871202828880"><span class="term "><code class="filename">NetworkManager</code>
     </span></dt><dd><p>
       NetworkManager log files.
-     </p></dd><dt id="idm139821281224224"><span class="term "><code class="filename">news/</code>
+     </p></dd><dt id="idm139871202826784"><span class="term "><code class="filename">news/</code>
     </span></dt><dd><p>
       Log messages from a news server.
-     </p></dd><dt id="idm139821281222112"><span class="term "><code class="filename">chrony/</code>
+     </p></dd><dt id="idm139871200056288"><span class="term "><code class="filename">chrony/</code>
     </span></dt><dd><p>
       Logs from the Network Time Protocol daemon
       (<code class="systemitem">chrony</code>).
-     </p></dd><dt id="idm139821281219264"><span class="term "><code class="filename">pk_backend_zypp*</code>
+     </p></dd><dt id="idm139871200053440"><span class="term "><code class="filename">pk_backend_zypp*</code>
     </span></dt><dd><p>
       PackageKit (with <code class="systemitem">libzypp</code>
       back-end) log files.
-     </p></dd><dt id="idm139821281216432"><span class="term "><code class="filename">samba/</code>
+     </p></dd><dt id="idm139871200050608"><span class="term "><code class="filename">samba/</code>
     </span></dt><dd><p>
       Log files from Samba, the Windows SMB/CIFS file server.
-     </p></dd><dt id="idm139821281214304"><span class="term "><code class="filename">warn</code>
+     </p></dd><dt id="idm139871200048480"><span class="term "><code class="filename">warn</code>
     </span></dt><dd><p>
       Log of all system warnings and errors. This should be the first place
       (along with the output of the <code class="systemitem">systemd</code> journal) to look in case of
       problems.
-     </p></dd><dt id="idm139821281211376"><span class="term "><code class="filename">wtmp</code>
+     </p></dd><dt id="idm139871200045552"><span class="term "><code class="filename">wtmp</code>
     </span></dt><dd><p>
       Database of all login/logout activities,
       
       and remote connections. Use the command <code class="command">last</code> to
       view. See <code class="command">man 1 last</code> for more information.
-     </p></dd><dt id="idm139821277012432"><span class="term "><code class="filename">Xorg.0.log</code>
+     </p></dd><dt id="idm139871200041920"><span class="term "><code class="filename">Xorg.0.log</code>
     </span></dt><dd><p>
       X.Org start-up log file. Refer to this in case you have
       problems starting X.Org. Copies from previous X.Org
       starts are numbered Xorg.<em class="replaceable ">?</em>.log.
-     </p></dd><dt id="idm139821277009760"><span class="term "><code class="filename">YaST2/</code>
+     </p></dd><dt id="idm139871200039248"><span class="term "><code class="filename">YaST2/</code>
     </span></dt><dd><p>
       All YaST log files.
-     </p></dd><dt id="idm139821277007664"><span class="term "><code class="filename">zypp/</code>
+     </p></dd><dt id="idm139871200037152"><span class="term "><code class="filename">zypp/</code>
     </span></dt><dd><p>
       <code class="systemitem">libzypp</code> log files. Refer to
       these files for the package installation history.
-     </p></dd><dt id="idm139821277004800"><span class="term "><code class="filename">zypper.log</code>
+     </p></dd><dt id="idm139871200034384"><span class="term "><code class="filename">zypper.log</code>
     </span></dt><dd><p>
       Logs from the command line installer <code class="command">zypper</code>.
      </p></dd></dl></div></div><div class="sect1 " id="sec.tuning.logfiles.view"><div class="titlepage"><div><div><h2 class="title" id="sec.tuning.logfiles.view"><span class="number">3.2 </span><span class="name">Viewing and Parsing Log Files</span> <a title="Permalink" class="permalink" href="cha.tuning.logfiles.html#sec.tuning.logfiles.view">#</a></h2></div></div></div><p>
@@ -193,7 +193,7 @@ compresscmd /usr/bin/bzip2
 uncompresscmd /usr/bin/bunzip2
 
 # RPM packages drop log rotation information into this directory
-include /etc/logrotate.d</pre></div></div></div></div><div id="idm139821276979104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Avoid Permission Conflicts</h6><p>
+include /etc/logrotate.d</pre></div></div></div></div><div id="idm139871200008688" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Avoid Permission Conflicts</h6><p>
     The <code class="systemitem">create</code> option pays heed to the modes and
     ownerships of files specified in <code class="filename">/etc/permissions*</code>.
     If you modify these settings, make sure no conflicts arise.
@@ -237,20 +237,20 @@ logwatch --service smartd --range 'between 5/5/2005 and 5/7/2005' \
    detailed HOWTO on customizing <code class="command">logwatch</code> is available at
    <code class="filename">/usr/share/doc/packages/logwatch/HOWTO-Customize-LogWatch</code>.
    The following configuration files exist:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139821276962400"><span class="term "><code class="filename">logwatch.conf</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139871199992048"><span class="term "><code class="filename">logwatch.conf</code>
     </span></dt><dd><p>
       The main configuration file. The default version is extensively
       commented. Each configuration option can be overwritten on the command
       line.
-     </p></dd><dt id="idm139821276960176"><span class="term "><code class="filename">ignore.conf</code>
+     </p></dd><dt id="idm139871199989824"><span class="term "><code class="filename">ignore.conf</code>
     </span></dt><dd><p>
       Filter for all lines that should globally be ignored by
       <code class="command">logwatch</code>.
-     </p></dd><dt id="idm139821276957600"><span class="term "><code class="filename">services/*.conf</code>
+     </p></dd><dt id="idm139871199987248"><span class="term "><code class="filename">services/*.conf</code>
     </span></dt><dd><p>
       The service directory holds configuration files for each service you
       can generate a report for.
-     </p></dd><dt id="idm139821276955424"><span class="term "><code class="filename">logfiles/*.conf</code>
+     </p></dd><dt id="idm139871199985072"><span class="term "><code class="filename">logfiles/*.conf</code>
     </span></dt><dd><p>
       Specifications on which log files should be parsed for each service.
      </p></dd></dl></div></div><div class="sect1 " id="sec.tuning.logfiles.logger"><div class="titlepage"><div><div><h2 class="title" id="sec.tuning.logfiles.logger"><span class="number">3.5 </span><span class="name">Using <code class="command">logger</code> to Make System Log Entries</span> <a title="Permalink" class="permalink" href="cha.tuning.logfiles.html#sec.tuning.logfiles.logger">#</a></h2></div></div></div><p>

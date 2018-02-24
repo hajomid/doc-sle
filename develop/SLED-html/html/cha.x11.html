@@ -39,7 +39,7 @@ hljs.configure({
   <code class="filename">/etc/X11/xorg.conf.d/</code>.
  </p><div class="sect1 " id="sec.x11.fontsys"><div class="titlepage"><div><div><h2 class="title" id="sec.x11.fontsys"><span class="number">20.1 </span><span class="name">Installing and Configuring Fonts</span> <a title="Permalink" class="permalink" href="cha.x11.html#sec.x11.fontsys">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>x11_fonts.xml</li><li><span class="ds-label">ID: </span>sec.x11.fontsys</li></ul></div></div></div></div><p>
   Fonts in Linux can be categorized into two parts:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm139839481811328"><span class="term ">Outline or Vector Fonts</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140467295200544"><span class="term ">Outline or Vector Fonts</span></dt><dd><p>
      Contains a mathematical description as drawing instructions about the
      shape of a glyph. As such, each glyph can be scaled to arbitrary sizes
      without loss of quality. Before such a font (or glyph) can be used, the
@@ -51,7 +51,7 @@ hljs.configure({
     </p><p>
      Common formats under Linux are PostScript Type 1 and Type 2, TrueType, and
      OpenType.
-    </p></dd><dt id="idm139839481807632"><span class="term ">Bitmap or Raster Fonts</span></dt><dd><p>
+    </p></dd><dt id="idm140467295196848"><span class="term ">Bitmap or Raster Fonts</span></dt><dd><p>
      Consists of an array of pixels designed for a specific font size. Bitmap
      fonts are extremely fast and simple to render. However, compared to vector
      fonts, bitmap fonts cannot be scaled without losing quality. As such,
@@ -93,7 +93,7 @@ hljs.configure({
    commands <code class="command">rpm</code> or <code class="command">fc-list</code>. Both will
    give you a good answer, but may return a different list depending on system
    and user configuration:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139839481792752"><span class="term "><code class="command">rpm</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140467295181968"><span class="term "><code class="command">rpm</code>
     </span></dt><dd><p>
       Invoke <code class="command">rpm</code> to see which software packages containing
       fonts are installed on your system:
@@ -101,12 +101,12 @@ hljs.configure({
       Every font package should satisfy this expression. However, the command
       may return some false positives like <code class="literal">fonts-config</code>
       (which is neither a font nor does it contain fonts).
-     </p></dd><dt id="idm139839481788352"><span class="term "><code class="command">fc-list</code>
+     </p></dd><dt id="idm140467295177568"><span class="term "><code class="command">fc-list</code>
     </span></dt><dd><p>
       Invoke <code class="command">fc-list</code> to get an overview about what font
       families can be accessed, whether they are installed on the system or in
       your home:
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>fc-list ':' family</pre></div><div id="idm139839481785280" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Command <code class="command">fc-list</code></h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>fc-list ':' family</pre></div><div id="idm140467295174496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Command <code class="command">fc-list</code></h6><p>
        The command <code class="command">fc-list</code> is a wrapper to the Fontconfig
        library. It is possible to query a lot of interesting information from
        Fontconfig—or, to be more precise, from its cache. See
@@ -146,7 +146,7 @@ DejaVuSans.ttf: "DejaVu Sans" "Book"
 DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
    The result may vary on your system, depending on which fonts are currently
    installed.
-  </p><div id="idm139839481767024" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Similarity Rules according to Fontconfig</h6><p>
+  </p><div id="idm140467295156240" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Similarity Rules according to Fontconfig</h6><p>
     Fontconfig <span class="emphasis"><em>always</em></span> returns a real family (if at least
     one is installed) according to the given request, as similar as possible.
     <span class="quote">“<span class="quote">Similarity</span>”</span> depends on Fontconfig's internal metrics and on
@@ -183,7 +183,7 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
    anti-aliasing (grayscale smoothing), hinting (fitting to the grid), or
    subpixel rendering (tripling resolution in one direction). These algorithms
    can also differ from one font format to another.
-  </p><div id="idm139839481748864" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Patent Issues with Subpixel Rendering</h6><p>
+  </p><div id="idm140467295138016" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Patent Issues with Subpixel Rendering</h6><p>
     Subpixel rendering is not used in SUSE distributions.
     Although FreeType2 has support for this algorithm, it is covered by several
     patents expiring at the end of the year 2019. Therefore, setting subpixel
@@ -218,13 +218,13 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
     There are several sysconfig variables which can be altered. See
     <code class="command">man 1 fonts-config</code> or the help page of the YaST
     sysconfig module. The following variables are examples:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139839481733648"><span class="term ">Usage of Rendering Algorithms</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140467295122800"><span class="term ">Usage of Rendering Algorithms</span></dt><dd><p>
        Consider <code class="varname">FORCE_HINTSTYLE</code>,
        <code class="varname">FORCE_AUTOHINT</code>, <code class="varname">FORCE_BW</code>,
        <code class="varname">FORCE_BW_MONOSPACE</code>,
        <code class="varname">USE_EMBEDDED_BITMAPS</code> and
        <code class="varname">EMBEDDED_BITMAP_LANGAGES</code>
-      </p></dd><dt id="idm139839481729136"><span class="term ">Preference Lists of Generic Aliases</span></dt><dd><p>
+      </p></dd><dt id="idm140467295118288"><span class="term ">Preference Lists of Generic Aliases</span></dt><dd><p>
        Use <code class="varname">PREFER_SANS_FAMILIES</code>,
        <code class="varname">PREFER_SERIF_FAMILIES</code>,
        <code class="varname">PREFER_MONO_FAMILIES</code> and
@@ -290,7 +290,7 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
        <code class="filename">~/.config/fontconfig/conf.d/</code> directory.
       </p></li></ol></div><p>
     User-specific changes overwrite any system-wide settings.
-   </p><div id="idm139839481689376" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Deprecated User Configuration File</h6><p>
+   </p><div id="idm140467295078592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Deprecated User Configuration File</h6><p>
      The file <code class="filename">~/.fonts.conf</code> is marked as deprecated and
      should not be used anymore. Use
      <code class="filename">~/.config/fontconfig/fonts.conf</code> instead.
@@ -351,18 +351,18 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
     The rules from <a class="xref" href="cha.x11.html#ex.x11.fontsys.fontconfig.aliases1" title="Aliases and Family Name Substitutions">Example 20.2, “Aliases and Family Name Substitutions”</a> create
     a <span class="emphasis"><em>prioritized family list</em></span> (PFL). Depending on the
     element, different actions are performed:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139839481666816"><span class="term "><code class="literal">&lt;default&gt;</code> from
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140467295056096"><span class="term "><code class="literal">&lt;default&gt;</code> from
      <a class="xref" href="cha.x11.html#vle.x11.fontsys.example.alias.default">Rule 1</a>
      </span></dt><dd><p>
        This rule adds a <code class="literal">serif</code> family name <span class="emphasis"><em>at the
        end</em></span> of the PFL.
-      </p></dd><dt id="idm139839481663248"><span class="term "><code class="literal">&lt;prefer&gt;</code> from
+      </p></dd><dt id="idm140467295052528"><span class="term "><code class="literal">&lt;prefer&gt;</code> from
      <a class="xref" href="cha.x11.html#vle.x11.fontsys.example.alias.prefer">Rule 2</a>
      </span></dt><dd><p>
        This rule adds <span class="quote">“<span class="quote">Droid Serif</span>”</span> <span class="emphasis"><em>just
        before</em></span> the first occurrence of <code class="literal">serif</code> in
        the PFL, whenever <code class="literal">Alegreya SC</code> is in PFL.
-      </p></dd><dt id="idm139839481658768"><span class="term "><code class="literal">&lt;accept&gt;</code> from <a class="xref" href="cha.x11.html#vle.x11.fontsys.example.alias.accept">Rule 3</a>
+      </p></dd><dt id="idm140467295048048"><span class="term "><code class="literal">&lt;accept&gt;</code> from <a class="xref" href="cha.x11.html#vle.x11.fontsys.example.alias.accept">Rule 3</a>
      </span></dt><dd><p>
        This rule adds a <span class="quote">“<span class="quote">STIXGeneral</span>”</span> family name <span class="emphasis"><em>just
        after</em></span> the first occurrence of the <code class="literal">serif</code>
@@ -487,7 +487,7 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
          <code class="literal">Alegreya SC</code> present in PFL, substitution is
          performed
         </p>
-       </td></tr></tbody></table></div></div><div id="idm139839481602784" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Implication</h6><p>
+       </td></tr></tbody></table></div></div><div id="idm140467294992064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Implication</h6><p>
      Think of the <code class="literal">&lt;default&gt;</code> alias as a classification
      or inclusion of this group (if not installed). As the example shows,
      <code class="literal">&lt;default&gt;</code> should always precede the
@@ -611,7 +611,7 @@ DejaVuSansMono.ttf: "DejaVu Sans Mono" "Book"</pre></div><p>
          <code class="literal">DejaVu Serif</code>, <code class="literal">serif</code>,
          <code class="literal">Liberation Serif</code>, <code class="literal">STIXGeneral</code>
         </p>
-       </td></tr></tbody></table></div></div><div id="idm139839481551552" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Implications.</h6><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       </td></tr></tbody></table></div></div><div id="idm140467294940768" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Implications.</h6><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
        In case multiple <code class="literal">&lt;accept&gt;</code> declarations for the
        same generic name exist, the declaration that is parsed last
        <span class="quote">“<span class="quote">wins</span>”</span>. If possible, do not use
