@@ -33,7 +33,7 @@ hljs.configure({
   simplifies the automated discovery, management, and configuration of iSCSI
   devices on a TCP/IP network. iSNS provides intelligent storage discovery and
   management services comparable to those found in Fibre Channel networks.
- </p><div id="idm140162475205632" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Security Considerations</h6><p>
+ </p><div id="idm139712743504752" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Security Considerations</h6><p>
    iSNS should be used only in secure internal networks.
   </p></div><div class="sect1 " id="sec.isns.overview"><div class="titlepage"><div><div><h2 class="title" id="sec.isns.overview"><span class="number">13.1 </span><span class="name">How iSNS Works</span> <a title="Permalink" class="permalink" href="cha.isns.html#sec.isns.overview">#</a></h2></div></div></div><p>
    For an iSCSI initiator to discover iSCSI targets, it needs to identify which
@@ -49,7 +49,7 @@ hljs.configure({
    limiting the amount of time each host spends establishing discovery
    relationships. This lets you control and simplify the number of targets and
    initiators that must be discovered.
-  </p><div class="figure" id="idm140162475201328"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/isns_a.png"><img src="images/isns_a.png" width="" alt="iSNS Discovery Domains" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 13.1: </span><span class="name">iSNS Discovery Domains </span><a title="Permalink" class="permalink" href="cha.isns.html#idm140162475201328">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm139712743500448"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/isns_a.png"><img src="images/isns_a.png" width="" alt="iSNS Discovery Domains" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 13.1: </span><span class="name">iSNS Discovery Domains </span><a title="Permalink" class="permalink" href="cha.isns.html#idm139712743500448">#</a></h6></div></div><p>
    Both iSCSI targets and iSCSI initiators use iSNS clients to initiate
    transactions with iSNS servers by using the iSNS protocol. They then
    register device attribute information in a common discovery domain, download
@@ -91,7 +91,7 @@ hljs.configure({
    or configured by default. You need to install the package
    <code class="systemitem">open-isns</code> and configure the iSNS
    service.
-  </p><div id="idm140162475183200" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: iSNS and iSCSI on the Same Server</h6><p>
+  </p><div id="idm139712743482320" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: iSNS and iSCSI on the Same Server</h6><p>
     iSNS can be installed on the same server where iSCSI target or iSCSI
     initiator software is installed. Installing both the iSCSI target software
     and iSCSI initiator software on the same server is not supported.
@@ -133,7 +133,7 @@ hljs.configure({
     </p></li></ol></div></div></div><div class="sect1 " id="sec.isns.domains"><div class="titlepage"><div><div><h2 class="title" id="sec.isns.domains"><span class="number">13.3 </span><span class="name">Configuring iSNS Discovery Domains</span> <a title="Permalink" class="permalink" href="cha.isns.html#sec.isns.domains">#</a></h2></div></div></div><p>
    For iSCSI initiators and targets to use the iSNS service, they must belong
    to a discovery domain.
-  </p><div id="idm140162475152336" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: The iSNS Service Must be Active</h6><p>
+  </p><div id="idm139712743451456" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: The iSNS Service Must be Active</h6><p>
     The iSNS service must be installed and running to configure iSNS discovery
     domains. For information, see
     <a class="xref" href="cha.isns.html#sec.isns.start" title="13.4. Starting the iSNS Service">Section 13.4, “Starting the iSNS Service”</a>.
