@@ -27,7 +27,7 @@ hljs.configure({
   For creating your custom image you need a base docker image of SLES. You
   can use any of the pre-built SLES images that you can obtain as described
   in <a class="xref" href="docker.building.images.html#Customizing_Pre-build_Images" title="5.2. Customizing SLES Docker Images">Section 5.2, “Customizing SLES Docker Images”</a>.
- </p><div id="idm140507631706640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No SLES Images in Docker Hub</h6><p>
+ </p><div id="idm139817471239248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No SLES Images in Docker Hub</h6><p>
    Usually you can pull a variety of base docker images from the
    <a class="link" href="https://hub.docker.com/" target="_blank">docker hub</a> but that does
    not apply for SLES. Currently we cannot distribute SLES images for
@@ -43,7 +43,7 @@ hljs.configure({
   For more information about <code class="literal">docker build</code> options, see the
   <a class="link" href="https://docs.docker.com/engine/reference/commandline/build/" target="_blank">official
   Docker documentation</a>.
- </p><div id="idm140507678971328" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Dockerizing Your Applications</h6><p>
+ </p><div id="idm139817470040704" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Dockerizing Your Applications</h6><p>
    You may want to write a dockerfile for your own application that should be
    run inside a docker container. For a procedure refer to
    <a class="xref" href="docker.dockerizing.application.html" title="Chapter 6. Dockerizing Applications">Chapter 6, <em>Dockerizing Applications</em></a>.
@@ -80,7 +80,7 @@ hljs.configure({
    <code class="literal">/run/secrets</code> directory. The same applies to the
    <code class="filename">/etc/SUSEConnect</code> file of the host system, which is
    automatically injected into the <code class="filename">/run/secrets</code> directory.
-  </p><div id="idm140507673602416" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Credentials and Security</h6><p>
+  </p><div id="idm139817471157952" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Credentials and Security</h6><p>
     The contents of the <code class="filename">/run/secrets</code> directory are never
     committed to a Docker image, hence there is no risk of your credentials
     leaking.
@@ -146,7 +146,7 @@ RUN zypper -n in vim</pre></div></div><div class="sect2 " id="sec.docker.sle_ima
     You may have subscriptions to SLE extensions or modules that you would like
     to use in your custom image. To add them to the Docker image, proceed as
     follows:
-   </p><div class="procedure " id="idm140507669437280"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Adding Extension and Modules </span><a title="Permalink" class="permalink" href="docker.building.images.html#idm140507669437280">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm139817431886608"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Adding Extension and Modules </span><a title="Permalink" class="permalink" href="docker.building.images.html#idm139817431886608">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Add the following into your <code class="filename">Dockerfile</code>:
      </p><div class="verbatim-wrap"><pre class="screen">ADD *.repo /etc/zypp/repos.d/
 ADD *.service /etc/zypp/services.d

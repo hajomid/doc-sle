@@ -31,7 +31,7 @@ hljs.configure({
    Linuxrc is designed to be as small as possible. Therefore, all needed
    programs are linked directly into one binary. So there is no need for
    shared libraries in the init disk.
-  </p><div id="idm140150858608480" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Running Linuxrc on an Installed System</h6><p>
+  </p><div id="idm140674783920496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Running Linuxrc on an Installed System</h6><p>
     If you run Linuxrc on an installed system, it will work slightly
     differently so as not to destroy your installation. As a consequence you
     cannot test all features this way.
@@ -67,7 +67,7 @@ hljs.configure({
    </p><p>
     The table below lists important keys and example values. For a complete
     list of linuxrc parameters refer to <a class="link" href="https://en.opensuse.org/SDB:Linuxrc" target="_blank">https://en.opensuse.org/SDB:Linuxrc</a>.
-   </p><div class="table" id="idm140150858593280"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.1: </span><span class="name"> </span><a title="Permalink" class="permalink" href="appendix.linuxrc.html#idm140150858593280">#</a></h6></div><div class="table-contents"><table summary="" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th></th><th></th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table></div></div><div class="table" id="idm140150858586160"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.2: </span><span class="name">Advanced linuxrc keywords </span><a title="Permalink" class="permalink" href="appendix.linuxrc.html#idm140150858586160">#</a></h6></div><div class="table-contents"><table summary="Advanced linuxrc keywords" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140674783905360"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.1: </span><span class="name"> </span><a title="Permalink" class="permalink" href="appendix.linuxrc.html#idm140674783905360">#</a></h6></div><div class="table-contents"><table summary="" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th></th><th></th></tr></thead><tbody><tr><td></td><td></td></tr></tbody></table></div></div><div class="table" id="idm140674783898240"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.2: </span><span class="name">Advanced linuxrc keywords </span><a title="Permalink" class="permalink" href="appendix.linuxrc.html#idm140674783898240">#</a></h6></div><div class="table-contents"><table summary="Advanced linuxrc keywords" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Keyword: Example Value
         </p>
@@ -304,7 +304,7 @@ hljs.configure({
     available. It offers more configuration options, for example configuring
     more than one interface. <code class="literal">ifcfg</code> directly controls the
     content of the <code class="filename">/etc/sysconfig/network/ifcfg-*</code> files.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140150858494816"><span class="term ">DHCP Network Configuration</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140674783806960"><span class="term ">DHCP Network Configuration</span></dt><dd><p>
        The general syntax to configure DHCP is
       </p><div class="verbatim-wrap"><pre class="screen"> ifcfg=<em class="replaceable ">INTERFACE</em>=<em class="replaceable ">DHCP*</em>,<em class="replaceable ">OPTION1</em>=<em class="replaceable ">VALUE1</em>,<em class="replaceable ">OPTION2</em>=<em class="replaceable ">VALUE2</em></pre></div><p>
        where <em class="replaceable ">INTERFACE</em> is the interface name, for
@@ -316,7 +316,7 @@ hljs.configure({
        To set up DHCP for <code class="literal">eth0</code> use:
       </p><div class="verbatim-wrap"><pre class="screen">ifcfg=eth0=dhcp</pre></div><p>
        To set up DHCP on all interfaces use:
-      </p><div class="verbatim-wrap"><pre class="screen">ifcfg=eth*=dhcp</pre></div></dd><dt id="idm140150858484080"><span class="term ">Static Network Configuration</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">ifcfg=eth*=dhcp</pre></div></dd><dt id="idm140674783796224"><span class="term ">Static Network Configuration</span></dt><dd><p>
        The general syntax to configure a static network is
       </p><div class="verbatim-wrap"><pre class="screen">ifcfg=<em class="replaceable ">INTERFACE</em>=<em class="replaceable ">IP_LIST</em>,<em class="replaceable ">GATEWAY_LIST</em>,<em class="replaceable ">NAMESERVER_LIST</em>,<em class="replaceable ">DOMAINSEARCH_LIST</em>,\
 <em class="replaceable ">OPTION1=value1</em>,...</pre></div><p>

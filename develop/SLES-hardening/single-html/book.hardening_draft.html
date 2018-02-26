@@ -29,8 +29,8 @@ hljs.configure({
      required to further secure and harden that installation. Supports the
      administrator with security-related choices and decisions.
    </p></div><div class="date"><span class="imprint-label">Publication Date: </span>
-February 24, 2018
-</div></div></div><div class="toc"><dl><dt><span class="preface"><a href="#pre.hardening.about"><span class="name">About This Guide</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#pre.hardening.about.assumptions"><span class="name">Assumptions and Scope</span></a></span></dt><dt><span class="sect1"><a href="#sec.content_hardening"><span class="name">Contents of this Book</span></a></span></dt><dt><span class="sect1"><a href="#idm139630499928400"><span class="name">Available Documentation</span></a></span></dt><dt><span class="sect1"><a href="#idm139630506132608"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm139630500165248"><span class="name">Documentation Conventions</span></a></span></dt></dl></dd><dt><span class="part"><a href="#part.setup_for_eal"><span class="number">I </span><span class="name">Common Criteria</span></a></span></dt><dd><dl><dt><span class="chapter"><a href="#cha.setup_for_eal.intro"><span class="number">1 </span><span class="name">Overview and rationale</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span></a></span></dt><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.principals"><span class="number">1.2 </span><span class="name">Generic Guiding Principles</span></a></span></dt></dl></dd></dl></dd><dt><span class="part"><a href="#part.sec_prot"><span class="number">II </span><span class="name">General System Security and Service Protection Methods</span></a></span></dt><dd><dl><dt><span class="chapter"><a href="#cha.sec_prot.intro"><span class="number">2 </span><span class="name">Introduction</span></a></span></dt><dt><span class="chapter"><a href="#cha.sec_prot.general"><span class="number">3 </span><span class="name">Linux Security in General</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.sec_prot.general.physical"><span class="number">3.1 </span><span class="name">Physical Security</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.bootloader"><span class="number">3.3 </span><span class="name">Security via the Boot Loaders</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.seccheck"><span class="number">3.4 </span><span class="name">Verifying Security Action with <code class="command">seccheck</code></span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.retiring"><span class="number">3.5 </span><span class="name">Retiring Linux Servers with Sensitive Data</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.backups"><span class="number">3.6 </span><span class="name">Backups</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.partitions"><span class="number">3.7 </span><span class="name">Disk Partitions</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.firewall"><span class="number">3.8 </span><span class="name">Firewall (iptables)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.kernel"><span class="number">3.9 </span><span class="name">Security Features in the Kernel</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.aa"><span class="number">3.10 </span><span class="name"><span class="phrase">AppArmor</span></span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.selinux"><span class="number">3.11 </span><span class="name">SELinux</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.remote"><span class="number">3.12 </span><span class="name">FTP, <code class="command">telnet</code>, and <code class="command">rlogin</code> (rsh)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.remove_packs"><span class="number">3.13 </span><span class="name">Removing Unnecessary Software Packages (RPMs)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.patching"><span class="number">3.14 </span><span class="name">Patching Linux Systems</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.ports"><span class="number">3.15 </span><span class="name">Securing the Network—Open Network Ports Detection</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.postfix"><span class="number">3.16 </span><span class="name">Securing Postfix</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.nfs"><span class="number">3.17 </span><span class="name">File Systems: Securing NFS</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.scp"><span class="number">3.18 </span><span class="name">Copying Files Using SSH Without Providing Login Prompts</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.check_perms"><span class="number">3.19 </span><span class="name">Checking File Permissions and Ownership</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.umask"><span class="number">3.20 </span><span class="name">Default umask</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.s-bit"><span class="number">3.21 </span><span class="name">SUID/SGID Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.filepermissions"><span class="number">3.22 </span><span class="name">World-Writable Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.orphaned"><span class="number">3.23 </span><span class="name">Orphaned or Unowned Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.removable_media"><span class="number">3.24 </span><span class="name">Restricting Access to Removable Media</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.accounts"><span class="number">3.25 </span><span class="name">Various Account Checks</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pw_aging"><span class="number">3.26 </span><span class="name">Enabling Password Aging</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pw_strength"><span class="number">3.27 </span><span class="name">Stronger Password Enforcement</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pam"><span class="number">3.28 </span><span class="name">Leveraging an Effective PAM stack</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.dos"><span class="number">3.29 </span><span class="name">Preventing Accidental Denial of Service</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.banners"><span class="number">3.30 </span><span class="name">Displaying Login Banners</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.misc"><span class="number">3.31 </span><span class="name">Miscellaneous</span></a></span></dt></dl></dd></dl></dd><dt><span class="appendix"><a href="#app.hardening.docupdates"><span class="number">A </span><span class="name">Documentation Updates</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_sp2_ga"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_sp1"><span class="number">A.2 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_ga_maint1"><span class="number">A.3 </span><span class="name">February 2015 (Documentation Maintenance Update)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_ga"><span class="number">A.4 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span></a></span></dt></dl></dd></dl></div><div class="list-of-tables"><div class="toc-title">List of Tables</div><dl><dt><span class="table"><a href="#idm139630470301200"><span class="number">3.1 </span><span class="name">Sample rules/constraints for password enforcement</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm139630509212048"><p>
+February 26, 2018
+</div></div></div><div class="toc"><dl><dt><span class="preface"><a href="#pre.hardening.about"><span class="name">About This Guide</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#pre.hardening.about.assumptions"><span class="name">Assumptions and Scope</span></a></span></dt><dt><span class="sect1"><a href="#sec.content_hardening"><span class="name">Contents of this Book</span></a></span></dt><dt><span class="sect1"><a href="#idm140055860709248"><span class="name">Available Documentation</span></a></span></dt><dt><span class="sect1"><a href="#idm140055857097088"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm140055838362816"><span class="name">Documentation Conventions</span></a></span></dt></dl></dd><dt><span class="part"><a href="#part.setup_for_eal"><span class="number">I </span><span class="name">Common Criteria</span></a></span></dt><dd><dl><dt><span class="chapter"><a href="#cha.setup_for_eal.intro"><span class="number">1 </span><span class="name">Overview and rationale</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span></a></span></dt><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.principals"><span class="number">1.2 </span><span class="name">Generic Guiding Principles</span></a></span></dt></dl></dd></dl></dd><dt><span class="part"><a href="#part.sec_prot"><span class="number">II </span><span class="name">General System Security and Service Protection Methods</span></a></span></dt><dd><dl><dt><span class="chapter"><a href="#cha.sec_prot.intro"><span class="number">2 </span><span class="name">Introduction</span></a></span></dt><dt><span class="chapter"><a href="#cha.sec_prot.general"><span class="number">3 </span><span class="name">Linux Security in General</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.sec_prot.general.physical"><span class="number">3.1 </span><span class="name">Physical Security</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.bootloader"><span class="number">3.3 </span><span class="name">Security via the Boot Loaders</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.seccheck"><span class="number">3.4 </span><span class="name">Verifying Security Action with <code class="command">seccheck</code></span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.retiring"><span class="number">3.5 </span><span class="name">Retiring Linux Servers with Sensitive Data</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.backups"><span class="number">3.6 </span><span class="name">Backups</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.partitions"><span class="number">3.7 </span><span class="name">Disk Partitions</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.firewall"><span class="number">3.8 </span><span class="name">Firewall (iptables)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.kernel"><span class="number">3.9 </span><span class="name">Security Features in the Kernel</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.aa"><span class="number">3.10 </span><span class="name"><span class="phrase">AppArmor</span></span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.selinux"><span class="number">3.11 </span><span class="name">SELinux</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.remote"><span class="number">3.12 </span><span class="name">FTP, <code class="command">telnet</code>, and <code class="command">rlogin</code> (rsh)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.remove_packs"><span class="number">3.13 </span><span class="name">Removing Unnecessary Software Packages (RPMs)</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.patching"><span class="number">3.14 </span><span class="name">Patching Linux Systems</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.ports"><span class="number">3.15 </span><span class="name">Securing the Network—Open Network Ports Detection</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.postfix"><span class="number">3.16 </span><span class="name">Securing Postfix</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.nfs"><span class="number">3.17 </span><span class="name">File Systems: Securing NFS</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.scp"><span class="number">3.18 </span><span class="name">Copying Files Using SSH Without Providing Login Prompts</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.check_perms"><span class="number">3.19 </span><span class="name">Checking File Permissions and Ownership</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.umask"><span class="number">3.20 </span><span class="name">Default umask</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.s-bit"><span class="number">3.21 </span><span class="name">SUID/SGID Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.filepermissions"><span class="number">3.22 </span><span class="name">World-Writable Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.orphaned"><span class="number">3.23 </span><span class="name">Orphaned or Unowned Files</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.removable_media"><span class="number">3.24 </span><span class="name">Restricting Access to Removable Media</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.accounts"><span class="number">3.25 </span><span class="name">Various Account Checks</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pw_aging"><span class="number">3.26 </span><span class="name">Enabling Password Aging</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pw_strength"><span class="number">3.27 </span><span class="name">Stronger Password Enforcement</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.general.pam"><span class="number">3.28 </span><span class="name">Leveraging an Effective PAM stack</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.dos"><span class="number">3.29 </span><span class="name">Preventing Accidental Denial of Service</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.banners"><span class="number">3.30 </span><span class="name">Displaying Login Banners</span></a></span></dt><dt><span class="sect1"><a href="#sec.sec_prot.misc"><span class="number">3.31 </span><span class="name">Miscellaneous</span></a></span></dt></dl></dd></dl></dd><dt><span class="appendix"><a href="#app.hardening.docupdates"><span class="number">A </span><span class="name">Documentation Updates</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_sp2_ga"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_sp1"><span class="number">A.2 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_ga_maint1"><span class="number">A.3 </span><span class="name">February 2015 (Documentation Maintenance Update)</span></a></span></dt><dt><span class="sect1"><a href="#sec.hardening.docupdates.sle12_ga"><span class="number">A.4 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span></a></span></dt></dl></dd></dl></div><div class="list-of-tables"><div class="toc-title">List of Tables</div><dl><dt><span class="table"><a href="#idm140055825736928"><span class="number">3.1 </span><span class="name">Sample rules/constraints for password enforcement</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm140055866540992"><p>
   Copyright © 2006–
 2018
 
@@ -52,7 +52,7 @@ February 24, 2018
   detail. However, this does not guarantee complete accuracy. Neither SUSE LLC,
   its affiliates, the authors nor the translators shall be held liable for
   possible errors or the consequences thereof.
- </p></div></div><div class="preface " id="pre.hardening.about"><div class="titlepage"><div><div><h1 class="title"><span class="number"> </span><span class="name">About This Guide</span> <a title="Permalink" class="permalink" href="#pre.hardening.about">#</a></h1></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#pre.hardening.about.assumptions"><span class="name">Assumptions and Scope</span></a></span></dt><dt><span class="sect1"><a href="#sec.content_hardening"><span class="name">Contents of this Book</span></a></span></dt><dt><span class="sect1"><a href="#idm139630499928400"><span class="name">Available Documentation</span></a></span></dt><dt><span class="sect1"><a href="#idm139630506132608"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm139630500165248"><span class="name">Documentation Conventions</span></a></span></dt></dl></div></div><p>
+ </p></div></div><div class="preface " id="pre.hardening.about"><div class="titlepage"><div><div><h1 class="title"><span class="number"> </span><span class="name">About This Guide</span> <a title="Permalink" class="permalink" href="#pre.hardening.about">#</a></h1></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#pre.hardening.about.assumptions"><span class="name">Assumptions and Scope</span></a></span></dt><dt><span class="sect1"><a href="#sec.content_hardening"><span class="name">Contents of this Book</span></a></span></dt><dt><span class="sect1"><a href="#idm140055860709248"><span class="name">Available Documentation</span></a></span></dt><dt><span class="sect1"><a href="#idm140055857097088"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm140055838362816"><span class="name">Documentation Conventions</span></a></span></dt></dl></div></div><p>
    The <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Security and Hardening Guide deals with the particulars of
    installation and set up of a secure <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> and additional
    post-install processes required to further secure and harden that
@@ -189,7 +189,7 @@ February 24, 2018
     the server. Physical security must be ensured and physical access must be
     controlled. Otherwise, all assumptions about at least the availability of
     these systems are void.
-   </p><div id="idm139630506336976" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Cryptography</h6><p>
+   </p><div id="idm140055861693232" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Cryptography</h6><p>
      The use of cryptography to protect the confidentiality of transactions
      with the services that your system provides is generally encouraged. The
      need to implement cryptographic enhancements is strongly dependent on the
@@ -199,16 +199,16 @@ February 24, 2018
      delivered automatically by turning on the <span class="quote">“<span class="quote">encrypt</span>”</span> option of
      your service (if you can enjoy the idyllic situation where encryption is
      available as a button to check):
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139630509976272"><span class="term ">Confidentiality</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140055856888528"><span class="term ">Confidentiality</span></dt><dd><p>
         Protection against reading the content of a transaction
-       </p></dd><dt id="idm139630509974512"><span class="term ">Privacy</span></dt><dd><p>
+       </p></dd><dt id="idm140055856886768"><span class="term ">Privacy</span></dt><dd><p>
         Protection against knowing that a transaction exists, and some
         properties that it may have, such as size, identities of involved
         parties, their presence, etc.
-       </p></dd><dt id="idm139630506232320"><span class="term ">Integrity</span></dt><dd><p>
+       </p></dd><dt id="idm140055865403472"><span class="term ">Integrity</span></dt><dd><p>
         Protection against alteration of content. Be aware that cryptography
         does not automatically provide this kind of protection.
-       </p></dd><dt id="idm139630506230400"><span class="term ">Authenticity</span></dt><dd><p>
+       </p></dd><dt id="idm140055865401552"><span class="term ">Authenticity</span></dt><dd><p>
         Protection against identity fraud. Cryptography that does not know
         about identities of participating entities cannot deliver this value.
        </p></dd></dl></div><p>
@@ -230,7 +230,7 @@ February 24, 2018
     domain can provide an adequate means of control; ultimately, the access
     controls to these systems, both for end users and for other systems, need
     to be carefully designed, configured, inspected and monitored.
-   </p><div id="idm139630503939120" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Trusting Data</h6><p>
+   </p><div id="idm140055861543728" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Trusting Data</h6><p>
      Data can only be trusted to the degree that is associated with the domain
      it comes from. If data leaves the domain in which security policies can be
      enforced, it should consequently be associated with the trust of the
@@ -257,7 +257,7 @@ February 24, 2018
     <a class="xref" href="#part.setup_for_eal" title="Part I. Common Criteria">Part I, “Common Criteria”</a> contains a reference to Common
     Criteria and <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. <a class="xref" href="#part.sec_prot" title="Part II. General System Security and Service Protection Methods">Part II, “General System Security and Service Protection Methods”</a> contains more
     general system security and service protection schemes.
-   </p></div><div class="sect1 " id="idm139630499928400"><div class="titlepage"><div><div><h2 class="title" id="idm139630499928400"><span class="number">3 </span><span class="name">Available Documentation</span> <a title="Permalink" class="permalink" href="#idm139630499928400">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_available_doc_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><div id="idm139630507628656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Online Documentation and Latest Updates</h6><p>
+   </p></div><div class="sect1 " id="idm140055860709248"><div class="titlepage"><div><div><h2 class="title" id="idm140055860709248"><span class="number">3 </span><span class="name">Available Documentation</span> <a title="Permalink" class="permalink" href="#idm140055860709248">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_available_doc_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><div id="idm140055866523248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Online Documentation and Latest Updates</h6><p>
    Documentation for our products is available at
    <span class="phrase"><a class="link" href="http://www.suse.com/documentation/" target="_blank">http://www.suse.com/documentation/</a></span>, where you can also
    find the latest updates, and browse or download the documentation in various formats.
@@ -268,11 +268,11 @@ February 24, 2018
   <code class="filename">/usr/share/doc/manual</code>.
  </p><p>
   The following documentation is available for this product:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm139630502205312"><span class="term "><span class="intraxref">Article “<em class="citetitle ">Installation Quick Start</em>”</span>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140055866519216"><span class="term "><span class="intraxref">Article “<em class="citetitle ">Installation Quick Start</em>”</span>
    </span></dt><dd><p>
      This Quick Start guides you step-by-step
      through the installation of <span class="productname"><span class="phrase">SUSE® Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">15</span></span>.
-    </p></dd><dt id="idm139630509519552"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”</span>
+    </p></dd><dt id="idm140055837474592"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”</span>
    </span></dt><dd><p>
      
      Shows how to install single or multiple systems
@@ -281,61 +281,61 @@ February 24, 2018
      installation or a network installation server to a mass deployment using
      a remote-controlled, highly-customized, and automated installation
      technique.
-    </p></dd><dt id="idm139630503240064"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”</span>
+    </p></dd><dt id="idm140055837360432"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”</span>
    </span></dt><dd><p>
      Covers system administration tasks like maintaining,
      monitoring and customizing an initially installed system.
-    </p></dd><dt id="idm139630503237488"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Virtualization Guide</em>”</span>
+    </p></dd><dt id="idm140055837357856"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Virtualization Guide</em>”</span>
    </span></dt><dd><p>
      Describes virtualization technology in
     general, and introduces libvirt—the unified interface to
     virtualization—and detailed information on specific
     hypervisors.
-    </p></dd><dt id="idm139630506081488"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Storage Administration Guide</em>”</span>
+    </p></dd><dt id="idm140055858688960"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Storage Administration Guide</em>”</span>
    </span></dt><dd><p>
      Provides information about how to manage storage
     devices on a SUSE Linux Enterprise Server.
-    </p></dd><dt id="idm139630504306384"><span class="term "><span class="intraxref">Book “AutoYaST”</span>
+    </p></dd><dt id="idm140055858686400"><span class="term "><span class="intraxref">Book “AutoYaST”</span>
    </span></dt><dd><p>
      AutoYaST is a system for unattended mass deployment <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
      systems using an AutoYaST
      profile containing installation and configuration data. The manual
      guides you through the basic steps of auto-installation: preparation,
      installation, and configuration.
-    </p></dd><dt id="idm139630504302720"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”</span>
+    </p></dd><dt id="idm140055864422480"><span class="term "><span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”</span>
    </span></dt><dd><p>
      Introduces basic concepts of system security,
      covering both local and network security aspects. Shows how to use
      the product inherent security software like <span class="phrase">AppArmor</span> or the auditing system
      that reliably collects information about any
      security-relevant events.
-    </p></dd><dt id="idm139630499508304"><span class="term "><a class="xref" href="#book.hardening" title="Security and Hardening Guide">Security and Hardening Guide</a>
+    </p></dd><dt id="idm140055864419584"><span class="term "><a class="xref" href="#book.hardening" title="Security and Hardening Guide">Security and Hardening Guide</a>
    </span></dt><dd><p>
      Deals with the particulars of installing and
      setting up a secure SUSE Linux Enterprise Server, and additional post-installation processes
      required to further secure and harden that installation. Supports the
      administrator with security-related choices and decisions.
-    </p></dd><dt id="idm139630505438864"><span class="term "><span class="intraxref">Book “<em class="citetitle ">System Analysis and Tuning Guide</em>”</span>
+    </p></dd><dt id="idm140055858541760"><span class="term "><span class="intraxref">Book “<em class="citetitle ">System Analysis and Tuning Guide</em>”</span>
    </span></dt><dd><p>
      An administrator's guide for problem detection,
      resolution and optimization. Find how to inspect and optimize your system
      by means of monitoring tools and how to efficiently manage
      resources. Also contains an overview of common problems and solutions and
      of additional help and documentation resources.
-    </p></dd><dt id="idm139630505436352"><span class="term "><span class="intraxref">Book “Subscription Management Tool for SLES <span class="productnumber"><span class="phrase">15</span></span>”</span>
+    </p></dd><dt id="idm140055858539248"><span class="term "><span class="intraxref">Book “Subscription Management Tool for SLES <span class="productnumber"><span class="phrase">15</span></span>”</span>
    </span></dt><dd><p>
      An administrator's guide to Subscription Management Tool—a proxy system
    for SUSE Customer Center with repository and registration targets. Learn how to install and
    configure a local SMT server, mirror and manage repositories, manage client machines, and configure clients to use SMT.
-    </p></dd><dt id="idm139630499561200"><span class="term "><span class="intraxref">Book “<em class="citetitle ">GNOME User Guide</em>”</span>
+    </p></dd><dt id="idm140055857101200"><span class="term "><span class="intraxref">Book “<em class="citetitle ">GNOME User Guide</em>”</span>
    </span></dt><dd><p>
      Introduces the GNOME desktop of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. It
      guides you through using and configuring the desktop and helps you
      perform key tasks. It is intended mainly for end users who want to make
      efficient use of GNOME as their default desktop.
-    </p></dd></dl></div></div><div class="sect1 " id="idm139630506132608"><div class="titlepage"><div><div><h2 class="title" id="idm139630506132608"><span class="number">4 </span><span class="name">Feedback</span> <a title="Permalink" class="permalink" href="#idm139630506132608">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_feedback_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+    </p></dd></dl></div></div><div class="sect1 " id="idm140055857097088"><div class="titlepage"><div><div><h2 class="title" id="idm140055857097088"><span class="number">4 </span><span class="name">Feedback</span> <a title="Permalink" class="permalink" href="#idm140055857097088">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_feedback_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Several feedback channels are available:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm139630481800112"><span class="term ">Bugs and Enhancement Requests</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140055858792848"><span class="term ">Bugs and Enhancement Requests</span></dt><dd><p>
      For services and support options available for your product, refer to
      <a class="link" href="http://www.suse.com/support/" target="_blank">http://www.suse.com/support/</a>.
     </p><p>
@@ -345,20 +345,20 @@ February 24, 2018
      To report bugs for a product component, go to
      <a class="link" href="https://scc.suse.com/support/requests" target="_blank">https://scc.suse.com/support/requests</a>, log in, and
      click <span class="guimenu">Create New</span>.
-    </p></dd><dt id="idm139630509772256"><span class="term ">User Comments</span></dt><dd><p>
+    </p></dd><dt id="idm140055861888272"><span class="term ">User Comments</span></dt><dd><p>
      We want to hear your comments about and suggestions for this manual and
      the other documentation included with this product. Use the User Comments
      feature at the bottom of each page in the online documentation or go to
      <a class="link" href="http://www.suse.com/documentation/feedback.html" target="_blank">http://www.suse.com/documentation/feedback.html</a> and
      enter your comments there.
-    </p></dd><dt id="idm139630509769344"><span class="term ">Mail</span></dt><dd><p>
+    </p></dd><dt id="idm140055838365984"><span class="term ">Mail</span></dt><dd><p>
      For feedback on the documentation of this product, you can also send a
      mail to <code class="literal">doc-team@suse.com</code>. Make sure to include the
      document title, the product version and the publication date of the
      documentation. To report errors or suggest enhancements, provide a concise
      description of the problem and refer to the respective section number and
      page (or URL).
-    </p></dd></dl></div></div><div class="sect1 " id="idm139630500165248"><div class="titlepage"><div><div><h2 class="title" id="idm139630500165248"><span class="number">5 </span><span class="name">Documentation Conventions</span> <a title="Permalink" class="permalink" href="#idm139630500165248">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_typografie_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+    </p></dd></dl></div></div><div class="sect1 " id="idm140055838362816"><div class="titlepage"><div><div><h2 class="title" id="idm140055838362816"><span class="number">5 </span><span class="name">Documentation Conventions</span> <a title="Permalink" class="permalink" href="#idm140055838362816">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_typografie_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   The following notices and typographical conventions are used in this
   documentation:
  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -402,18 +402,18 @@ February 24, 2018
     Commands that can be run by non-privileged users.
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">command</code></pre></div></li><li class="listitem "><p>
     Notices
-   </p><div id="idm139630502043664" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Warning Notice</h6><p>
+   </p><div id="idm140055857718240" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Warning Notice</h6><p>
      Vital information you must be aware of before proceeding. Warns you about
      security issues, potential loss of data, damage to hardware, or physical
      hazards.
-    </p></div><div id="idm139630502042160" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Important Notice</h6><p>
+    </p></div><div id="idm140055856869472" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Important Notice</h6><p>
      Important information you should be aware of before proceeding.
-    </p></div><div id="idm139630502040848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Note Notice</h6><p>
+    </p></div><div id="idm140055856868160" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Note Notice</h6><p>
      Additional information, for example about differences in software
      versions.
-    </p></div><div id="idm139630502039424" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Tip Notice</h6><p>
+    </p></div><div id="idm140055856866736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Tip Notice</h6><p>
      Helpful information, like a guideline or a piece of practical advice.
-    </p></div></li></ul></div></div></div><div class="part" id="part.setup_for_eal"><div class="titlepage"><div><div><h1 class="title"><span class="number">Part I </span><span class="name">Common Criteria </span><a title="Permalink" class="permalink" href="#part.setup_for_eal">#</a></h1></div></div></div><div class="toc"><dl><dt><span class="chapter"><a href="#cha.setup_for_eal.intro"><span class="number">1 </span><span class="name">Overview and rationale</span></a></span></dt><dd class="toc-abstract"></dd></dl></div><div class="chapter " id="cha.setup_for_eal.intro"><div class="titlepage"><div><div><h2 class="title"><span class="number">1 </span><span class="name">Overview and rationale</span> <a title="Permalink" class="permalink" href="#cha.setup_for_eal.intro">#</a></h2></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="#idm139630506084992">#</a></h6></div></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span></a></span></dt><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.principals"><span class="number">1.2 </span><span class="name">Generic Guiding Principles</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.setup_for_eal.intro.generic"><div class="titlepage"><div><div><h2 class="title" id="sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span> <a title="Permalink" class="permalink" href="#sec.setup_for_eal.intro.generic">#</a></h2></div></div></div><p>
+    </p></div></li></ul></div></div></div><div class="part" id="part.setup_for_eal"><div class="titlepage"><div><div><h1 class="title"><span class="number">Part I </span><span class="name">Common Criteria </span><a title="Permalink" class="permalink" href="#part.setup_for_eal">#</a></h1></div></div></div><div class="toc"><dl><dt><span class="chapter"><a href="#cha.setup_for_eal.intro"><span class="number">1 </span><span class="name">Overview and rationale</span></a></span></dt><dd class="toc-abstract"></dd></dl></div><div class="chapter " id="cha.setup_for_eal.intro"><div class="titlepage"><div><div><h2 class="title"><span class="number">1 </span><span class="name">Overview and rationale</span> <a title="Permalink" class="permalink" href="#cha.setup_for_eal.intro">#</a></h2></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="#idm140055860714944">#</a></h6></div></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span></a></span></dt><dt><span class="sect1"><a href="#sec.setup_for_eal.intro.principals"><span class="number">1.2 </span><span class="name">Generic Guiding Principles</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.setup_for_eal.intro.generic"><div class="titlepage"><div><div><h2 class="title" id="sec.setup_for_eal.intro.generic"><span class="number">1.1 </span><span class="name">What is the Common Criteria Certification?</span> <a title="Permalink" class="permalink" href="#sec.setup_for_eal.intro.generic">#</a></h2></div></div></div><p>
      Common Criteria is the best known and most widely used methodology to
      evaluate and measure the security value of an IT product. The methodology
      aims to be independent, as an independent laboratory conducts the
@@ -532,7 +532,7 @@ February 24, 2018
      The following guiding principles motivate much of the advice in this
      guide, and security processes in general, and should also influence any
      configuration decisions that are not explicitly covered.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139630499871072"><span class="term ">Use Data Encryption Whenever Possible</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140055866507296"><span class="term ">Use Data Encryption Whenever Possible</span></dt><dd><p>
         Refer to the <a class="xref" href="#pre.hardening.about" title="About This Guide">About This Guide</a> section of this
         guide. In <a class="xref" href="#pre.hardening.about.assumptions" title="1. Assumptions and Scope">Section 1, “Assumptions and Scope”</a>, the
         limitations of cryptography are briefly outlined.
@@ -558,7 +558,7 @@ February 24, 2018
           (<code class="literal">dm-crypt</code>, <code class="command">cryptsetup</code>)
          </p></li><li class="listitem "><p>
           VPN (<code class="command">ipsec</code>, <code class="command">openvpn</code>)
-         </p></li></ul></div></dd><dt id="idm139630505626080"><span class="term ">Minimal Package Installation</span></dt><dd><p>
+         </p></li></ul></div></dd><dt id="idm140055862937952"><span class="term ">Minimal Package Installation</span></dt><dd><p>
         Generally, an RPM software package consists of the package's meta data
         that is written to the RPM database upon installation, the package's
         files and directories and scripts that are being executed before and
@@ -594,7 +594,7 @@ February 24, 2018
         the system's dependency tree more flexibly. You should be safe if you
         chose the minimal system, and build the dependency tree from there with
         your (leaf) package selection.
-       </p></dd><dt id="idm139630501334000"><span class="term ">Service Isolation—Run Different Services on Separate
+       </p></dd><dt id="idm140055859342752"><span class="term ">Service Isolation—Run Different Services on Separate
       Systems</span></dt><dd><p>
         Whenever possible, a server should be dedicated to serving exactly one
         service or application. This limits the number of other services that
@@ -620,11 +620,11 @@ February 24, 2018
         processes and their address spaces. The granularity at which
         virtualization technology tackles separation may however come with its
         benefits, being resource-hungry and somewhat clumsy on the other hand.
-       </p><div id="idm139630506208768" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+       </p><div id="idm140055862201424" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
          Virtualization technology cannot match or substitute the separation
          strength that is given by running services on different physical
          machines!
-        </p></div></dd><dt id="idm139630506207392"><span class="term ">
+        </p></div></dd><dt id="idm140055862200048"><span class="term ">
        System fingerprinting and backups
       </span></dt><dd><p>
         In the case of the suspicion of an attack against the system, nothing
@@ -648,12 +648,12 @@ February 24, 2018
         initialization, creates a hash database of all files in the system that
         are listed in its configuration file. This allows to verify the
         integrity of all cataloged files at a later time.
-       </p><div id="idm139630499154720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+       </p><div id="idm140055861433328" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
          You need to copy the hash database that AIDE creates to a place that
          is inaccessible for potential attackers. Otherwise, the attacker may
          modify the integrity database after planting a backdoor, thereby
          defeating the purpose of the integrity measurement.
-        </p></div><div id="idm139630499153536" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p></div><div id="idm140055861432144" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
          An attacker may have planted a backdoor in the kernel. This has an
          entire variety of consequences: Apart from being very hard to detect,
          the kernel-based backdoor can effectively remove all traces of the
@@ -661,7 +661,7 @@ February 24, 2018
          invisible. By consequence, an integrity check needs to be done from a
          rescue system (or any other system where an independent system runs,
          and the target system's file systems are mounted manually).
-        </p></div><div id="idm139630505611312" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p></div><div id="idm140055861430720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
          Security is a lively process. Essentially, in this context, this means
          that the application of security updates invalidates the integrity
          database. <code class="command">rpm</code> <code class="option">-qlv packagename</code>
@@ -681,7 +681,7 @@ February 24, 2018
         <code class="option">--queryformat='%{INSTALLTIME} %{NAME}\n'</code>
         <em class="replaceable ">PACKAGE NAME</em>) must correspond to the changed
         files in the backup log files.
-       </p><div id="idm139630507274400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+       </p><div id="idm140055863026240" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
          Make it an integral part of your security routine to verify that your
          backups work.
         </p></div></dd></dl></div></div></div></div><div class="part" id="part.sec_prot"><div class="titlepage"><div><div><h1 class="title"><span class="number">Part II </span><span class="name">General System Security and Service Protection Methods </span><a title="Permalink" class="permalink" href="#part.sec_prot">#</a></h1></div></div></div><div class="toc"><dl><dt><span class="chapter"><a href="#cha.sec_prot.intro"><span class="number">2 </span><span class="name">Introduction</span></a></span></dt><dd class="toc-abstract"><p>In Part I, “Common Criteria” we mentioned the Common Criteria EAL 4+ certified installation and setup that was sponsored by IBM for a select subset of hardware. This certified build is a great first step for customers wanting to build a secure and hardened base system, yet might not address all of t…</p></dd><dt><span class="chapter"><a href="#cha.sec_prot.general"><span class="number">3 </span><span class="name">Linux Security in General</span></a></span></dt><dd class="toc-abstract"><p>
@@ -782,7 +782,7 @@ February 24, 2018
       plug in or unplug keyboards or mice. While locks are sometimes a useful
       feature, they are usually lower quality and easily defeated by attackers
       with ill intent.
-     </p></div></div><div class="sect1 " id="sec.sec_prot.general.bios"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span> <a title="Permalink" class="permalink" href="#sec.sec_prot.general.bios">#</a></h2></div></div></div><div id="idm139630507752080" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Secure Boot</h6><p>
+     </p></div></div><div class="sect1 " id="sec.sec_prot.general.bios"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span> <a title="Permalink" class="permalink" href="#sec.sec_prot.general.bios">#</a></h2></div></div></div><div id="idm140055861459488" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Secure Boot</h6><p>
       This section describes only basic methods to secure the boot process. To
       find out about more advanced boot protection using UEFI and the
       secure boot feature, see <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 11 “UEFI (Unified Extensible Firmware Interface)”, Section 11.1 “Secure Boot”</span>.
@@ -812,11 +812,11 @@ February 24, 2018
      Many BIOS firmwares have various other security related settings. Check
      with the system vendor, the system documentation or examine the BIOS
      during a system boot to find out more.
-    </p><div id="idm139630507747120" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Booting when a BIOS Boot Password is Set</h6><p>
+    </p><div id="idm140055861454528" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Booting when a BIOS Boot Password is Set</h6><p>
       If a system has been set up with a boot password, the host will not boot
       up unattended (for example in case of a system reboot or power failure).
       This is a trade-off.
-     </p></div><div id="idm139630505103328" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Losing the BIOS Admin Password</h6><p>
+     </p></div><div id="idm140055863301680" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Losing the BIOS Admin Password</h6><p>
       Once a system is setup the first time, the BIOS admin password will not
       be required often. Don't forget the password or you will need to clear
       the BIOS memory via hardware manipulation to get access again.
@@ -1056,7 +1056,7 @@ February 24, 2018
       Additional monthly checks are also run, however the key difference is
       mainly that the monthly file is not a diff like the daily/weekly ones but
       the full reports in one file.
-     </p><div id="idm139630507537648" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing Passwords with <code class="command">john</code></h6><p>
+     </p><div id="idm140055860775104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing Passwords with <code class="command">john</code></h6><p>
        To enable password auditing, it is necessary to first install the
        package <span class="package">john</span>. The package is available on the openSUSE Build Service at
        <a class="link" href="https://build.opensuse.org/package/show/security/john" target="_blank">https://build.opensuse.org/package/show/security/john</a>.
@@ -1072,7 +1072,7 @@ February 24, 2018
       limiting maximum idle times specific to users, groups, TTY devices and
       SSH sessions. <code class="filename">/etc/security/autologout.conf</code> also
       includes several configuration examples.
-     </p><div id="idm139630478374224" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+     </p><div id="idm140055858558240" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
        The automatic logout feature is not enabled by default. To enable it,
        edit <code class="filename">/etc/cron.d/autologout</code> and uncomment the
        example cron line.
@@ -1093,7 +1093,7 @@ February 24, 2018
      U.S. Department of Defense (DoD) standards. Note that many government
      agencies specify their own standards for data security. Some standards are
      stronger than others, yet may require more time to implement.
-    </p><div id="idm139630505561024" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wiping Wear Leveling Devices</h6><p>
+    </p><div id="idm140055858552880" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wiping Wear Leveling Devices</h6><p>
       Some devices, like SSDs, use wear leveling and do not necessarily write
       new data in the same physical locations. Such devices usually provide
       their own erasing functionality.
@@ -1103,50 +1103,50 @@ February 24, 2018
       devices more difficult. It operates in three basic modes: on a character
       or block device, on a file, or on a directory specified. For more
       information, set the manual page <code class="command">man 1 scrub</code>.
-     </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported Scrub Methods </span><a title="Permalink" class="permalink" href="#idm139630505556672">#</a></h6></div><dl class="variablelist"><dt id="idm139630503236752"><span class="term ">nnsa</span></dt><dd><p>
+     </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported Scrub Methods </span><a title="Permalink" class="permalink" href="#idm140055857297552">#</a></h6></div><dl class="variablelist"><dt id="idm140055857296816"><span class="term ">nnsa</span></dt><dd><p>
          4-pass NNSA Policy Letter NAP-14.1-C (XVI-8) for sanitizing removable
          and non-removable hard disks, which requires overwriting all locations
          with a pseudo random pattern twice and then with a known pattern: ran-
          dom(x2), 0x00, verify.
-        </p></dd><dt id="idm139630503234688"><span class="term ">dod</span></dt><dd><p>
+        </p></dd><dt id="idm140055857294752"><span class="term ">dod</span></dt><dd><p>
          4-pass DoD 5220.22-M section 8-306 procedure (d) for sanitizing
          removable and non-removable rigid disks which requires overwriting all
          addressable locations with a character, its complement, a random
          character, then verify. NOTE: scrub performs the random pass first to
          make verification easier: random, 0x00, 0xff, verify.
-        </p></dd><dt id="idm139630503232528"><span class="term ">bsi</span></dt><dd><p>
+        </p></dd><dt id="idm140055857292592"><span class="term ">bsi</span></dt><dd><p>
          9-pass method recommended by the German Center of Security in
          Information Technologies
          (<a class="link" href="http://www.bsi.bund.de" target="_blank">http://www.bsi.bund.de</a>): 0xff, 0xfe, 0xfd, 0xfb,
          0xf7, 0xef, 0xdf, 0xbf, 0x7f.
-        </p></dd><dt id="idm139630480996608"><span class="term ">gutmann</span></dt><dd><p>
+        </p></dd><dt id="idm140055835288080"><span class="term ">gutmann</span></dt><dd><p>
          The canonical 35-pass sequence described in Gutmann's paper cited
          below.
-        </p></dd><dt id="idm139630480994848"><span class="term ">schneier</span></dt><dd><p>
+        </p></dd><dt id="idm140055835286208"><span class="term ">schneier</span></dt><dd><p>
          7-pass method described by Bruce Schneier in "Applied Cryptography"
          (1996): 0x00, 0xff, random(x5)
-        </p></dd><dt id="idm139630480992944"><span class="term ">pfitzner7</span></dt><dd><p>
+        </p></dd><dt id="idm140055835284304"><span class="term ">pfitzner7</span></dt><dd><p>
          Roy Pfitzner's 7-random-pass method: random(x7).
-        </p></dd><dt id="idm139630480991184"><span class="term ">pfitzner33</span></dt><dd><p>
+        </p></dd><dt id="idm140055835282464"><span class="term ">pfitzner33</span></dt><dd><p>
          Roy Pfitzner's 33-random-pass method: random(x33).
-        </p></dd><dt id="idm139630506222128"><span class="term ">usarmy</span></dt><dd><p>
+        </p></dd><dt id="idm140055860704384"><span class="term ">usarmy</span></dt><dd><p>
          US Army AR380-19 method: 0x00, 0xff, random. (Note: identical to DoD
          522.22-M section 8-306 procedure (e) for sanitizing magnetic core
          memory).
-        </p></dd><dt id="idm139630506220176"><span class="term ">fillzero</span></dt><dd><p>
+        </p></dd><dt id="idm140055860702432"><span class="term ">fillzero</span></dt><dd><p>
          1-pass pattern: 0x00.
-        </p></dd><dt id="idm139630506218352"><span class="term ">fillff</span></dt><dd><p>
+        </p></dd><dt id="idm140055860700608"><span class="term ">fillff</span></dt><dd><p>
          1-pass pattern: 0xff.
-        </p></dd><dt id="idm139630506216528"><span class="term ">random</span></dt><dd><p>
+        </p></dd><dt id="idm140055860698784"><span class="term ">random</span></dt><dd><p>
          1-pass pattern: random(x1).
-        </p></dd><dt id="idm139630470160960"><span class="term ">random2</span></dt><dd><p>
+        </p></dd><dt id="idm140055825717232"><span class="term ">random2</span></dt><dd><p>
          2-pass pattern: random(x2).
-        </p></dd><dt id="idm139630470159136"><span class="term ">old</span></dt><dd><p>
+        </p></dd><dt id="idm140055825715408"><span class="term ">old</span></dt><dd><p>
          6-pass pre-version 1.7 scrub method: 0x00, 0xff, 0xaa, 0x00, 0x55,
          verify.
-        </p></dd><dt id="idm139630470157264"><span class="term ">fastold</span></dt><dd><p>
+        </p></dd><dt id="idm140055825713536"><span class="term ">fastold</span></dt><dd><p>
          5-pass pattern: 0x00, 0xff, 0xaa, 0x55, verify.
-        </p></dd><dt id="idm139630470155504"><span class="term ">custom=string</span></dt><dd><p>
+        </p></dd><dt id="idm140055825711696"><span class="term ">custom=string</span></dt><dd><p>
          1-pass custom pattern. String may contain C-style numerical escapes:
          \nnn (octal) or \xnn (hex).
         </p></dd></dl></div></div></div><div class="sect1 " id="sec.sec_prot.general.backups"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.backups"><span class="number">3.6 </span><span class="name">Backups</span> <a title="Permalink" class="permalink" href="#sec.sec_prot.general.backups">#</a></h2></div></div></div><p>
@@ -1293,7 +1293,7 @@ February 24, 2018
       potentially subject to this attack. To enable TCP SYN Cookie Protection,
       edit the <code class="filename">/etc/sysctl.conf</code> file and ensure the
       following line and value exists:
-     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.tcp_syncookies = 1</pre></div><div id="idm139630508005376" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.tcp_syncookies = 1</pre></div><div id="idm140055837449440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        Despite the name of the configuration option, it applies to IP version 6
        as well.
       </p></div></div><div class="sect2 " id="sec.sec_prot.general.route"><div class="titlepage"><div><div><h3 class="title" id="sec.sec_prot.general.route"><span class="number">3.9.2 </span><span class="name">Disable IP Source Routing (default in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">15</span></span>)</span> <a title="Permalink" class="permalink" href="#sec.sec_prot.general.route">#</a></h3></div></div></div><p>
@@ -1336,7 +1336,7 @@ February 24, 2018
       To turn on logging for Spoofed Packets, Source Routed Packets, and
       Redirect Packets, edit the <code class="filename">/etc/sysctl.conf</code> file and
       add the following line:
-     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.conf.all.log_martians = 1</pre></div><div id="idm139630510667808" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.conf.all.log_martians = 1</pre></div><div id="idm140055837419104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        Because of the way <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is set up (with rsyslog) for network
        event tracking, keep in mind that this can cause a large amount of
        messages to be logged.
@@ -1500,7 +1500,7 @@ February 24, 2018
      packages or desktop software packages (for example, an X Server) on
      production servers. If you do not need them, you should also not install,
      for example, the Apache Web server or Samba file sharing server.
-    </p><div id="idm139630480953104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Requirements of Third-party Installers</h6><p>
+    </p><div id="idm140055865092400" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Requirements of Third-party Installers</h6><p>
       Many third-party vendors like Oracle and IBM require a desktop
       environment and development libraries to run installers. To avoid this
       from having an impact on the security of their production servers, many
@@ -1519,7 +1519,7 @@ February 24, 2018
      purposes. A good approach is to start with a minimum list of RPMs and then
      add packages as needed. This process is time-consuming but usually worth
      the effort.
-    </p><div id="idm139630503954400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Just Enough Operating System (JeOS)</h6><p>
+    </p><div id="idm140055865086992" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Just Enough Operating System (JeOS)</h6><p>
       The SUSE Appliance Program includes a component called JeOS (Just
       Enough Operating System). JeOS has a very small footprint and can be
       customized to fit the specific needs of a system developer. Main uses of
@@ -1540,7 +1540,7 @@ February 24, 2018
      This can be very useful, as running the removal command without a test can
      often yield a lot of complaints and require manual recursive dependency
      hunting.
-    </p><div id="idm139630498880624" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Removal of Essential System Packages</h6><p>
+    </p><div id="idm140055858626736" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Removal of Essential System Packages</h6><p>
       When removing packages, be careful not to remove any essential system
       packages. This could put your system into a broken state in which it can
       no longer be booted or repaired. If you are uncertain about this, then it
@@ -1706,7 +1706,7 @@ tcp   0      0      *:22             *.*             LISTEN  2317/sshd</pre></di
      running it is a designated as a mail or relay server. Running a port scan
      from another server can confirm that, but make sure to obtain proper
      permissions to scan/probe a machine on a production network.
-    </p><div id="idm139630481882784" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
+    </p><div id="idm140055860196480" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
       Some organizations consider port scans without permission a security
       offense.
      </p></div><p>
@@ -1789,7 +1789,7 @@ inet_interfaces = localhost</pre></div><p>
      Verify that Postfix is not listening for network requests (incoming) by
      running one of these commands from another host:
     </p><div class="verbatim-wrap"><pre class="screen">nmap -sT -p 25 <em class="replaceable ">REMOTE_HOST</em>
-telnet &lt;remote_host&gt; 25</pre></div><div id="idm139630479790400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+telnet &lt;remote_host&gt; 25</pre></div><div id="idm140055837214176" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Running these commands on the local host will provide inaccurate results
       because Postfix is supposed to accept connections from the local node.
       Use an external host for correct results.
@@ -2112,7 +2112,7 @@ polkit.addRule(function(action, subject) {
       return polkit.Result.NO;
     }
   }
-});</pre></div><div id="idm139630470203216" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Naming of the Rules File</h6><p>
+});</pre></div><div id="idm140055825773680" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Naming of the Rules File</h6><p>
         Rules files are processed in alphabetical order. Functions are called
         in the order they were added until one of the functions returns a
         value. Hence, to add an authorization rule that is processed before
@@ -2260,7 +2260,7 @@ polkit.addRule(function(action, subject) {
          <p>
           Account expiration date in the format YYYY-MM-DD.
          </p>
-        </td></tr></tbody></table></div><div id="idm139630470332640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </td></tr></tbody></table></div><div id="idm140055826634224" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Users created prior to these modifications will not be affected.
      </p></div><p>
      Ensure that the above parameters are changed in the
@@ -2343,7 +2343,7 @@ Account Expires: Never</pre></div></div><div class="sect1 " id="sec.sec_prot.gen
       The PAM libraries follow a defined flow. The best way to design the
       perfect stack usually is to consider all of the requirements and
       policies and draw out a flow chart.
-     </p><div class="table" id="idm139630470301200"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3.1: </span><span class="name">Sample rules/constraints for password enforcement </span><a title="Permalink" class="permalink" href="#idm139630470301200">#</a></h6></div><div class="table-contents"><table summary="Sample rules/constraints for password enforcement" border="1"><colgroup><col /><col /><col /></colgroup><tbody><tr><td>
+     </p><div class="table" id="idm140055825736928"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3.1: </span><span class="name">Sample rules/constraints for password enforcement </span><a title="Permalink" class="permalink" href="#idm140055825736928">#</a></h6></div><div class="table-contents"><table summary="Sample rules/constraints for password enforcement" border="1"><colgroup><col /><col /><col /></colgroup><tbody><tr><td>
           <p>
            <code class="systemitem">pam_cracklib.so</code>
           </p>
@@ -2442,7 +2442,7 @@ password  optional   pam_gnome_keyring.so    use_authtok
 password  required   pam_unix.so     use_authtok nullok shadow try_first_pass
 session   required   pam_limits.so
 session   required   pam_unix.so     try_first_pass
-session   optional   pam_umask.so</pre></div><div id="idm139630470146192" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+session   optional   pam_umask.so</pre></div><div id="idm140055825661552" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
        Editing the PAM configuration files directly is not recommended. Use
        the <code class="command">pam-config</code> command as shown above to fine-tune
        PAM. For more information see <code class="command">man 8 pam-config</code>.
@@ -2515,8 +2515,8 @@ oracle     0        Fri Dec 10 23:57:55 -0600 2005 on unknown</pre></div><p>
       <code class="command">ssh</code> and <code class="command">su</code>, and make sure
       the <code class="systemitem">root</code> id does not get locked! To lock or unlock accounts
       manually, run one of the following commands:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139630470121616"><span class="term ">Locking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -l <em class="replaceable ">USER</em>
-usermod -L <em class="replaceable ">USER</em></pre></div></dd><dt id="idm139630470119088"><span class="term ">Unlocking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -u <em class="replaceable ">USER</em>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140055825890192"><span class="term ">Locking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -l <em class="replaceable ">USER</em>
+usermod -L <em class="replaceable ">USER</em></pre></div></dd><dt id="idm140055825887664"><span class="term ">Unlocking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -u <em class="replaceable ">USER</em>
 usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div></div><div class="sect1 " id="sec.sec_prot.dos"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.dos"><span class="number">3.29 </span><span class="name">Preventing Accidental Denial of Service</span> <a title="Permalink" class="permalink" href="#sec.sec_prot.dos">#</a></h2></div></div></div><p>
      Linux allows you to set limits on the amount of system resources that
      users and groups can consume. This is also very handy if bugs in programs
@@ -2543,7 +2543,7 @@ usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div><
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>ulimit -a</pre></div><p>
       For more information on <code class="command">ulimit</code> for the Bash shell,
       examine the Bash man pages.
-     </p><div id="idm139630471118336" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Setting Limits for SSH Sessions</h6><p>
+     </p><div id="idm140055825876592" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Setting Limits for SSH Sessions</h6><p>
        Setting "hard" and "soft" limits might not behave as expected when using
        an SSH session. To see valid behavior it may be necessary to login as
        root and then su to the id with limits (for example,
@@ -2555,7 +2555,7 @@ usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div><
        daemon (<code class="command">systemctl restart sshd</code>) if it seems that the
        changes to resource limits are not working (via SSH). However this is
        not generally recommended – as it weakens a systems security.
-      </p></div><div id="idm139630471114688" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Disabling Password Logins via <code class="command">ssh</code></h6><p>
+      </p></div><div id="idm140055825872880" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Disabling Password Logins via <code class="command">ssh</code></h6><p>
        You can add some extra security to your server by disabling password
        authentication for SSH. Remember that you need to have SSH keys
        configured, otherwise you cannot access the server. To disable password
@@ -2579,7 +2579,7 @@ oracle           hard    nofile          63536</pre></div><p>
       example up to the hard limit (in this example 63536) by executing:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>ulimit -n 63536</pre></div><p>
       You can set the soft and hard limits higher if necessary.
-     </p><div id="idm139630471106064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div id="idm140055825864352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        It is important to be judicious with the usage of ulimits. Allowing a
        "hard" limit for <span class="quote">“<span class="quote">nofile</span>”</span> for a user that equals the kernel
        limit (<code class="filename">/proc/sys/fs/file-max</code>) is very bad! If the
@@ -2634,7 +2634,7 @@ EOF</pre></div></div></div><div class="sect1 " id="sec.sec_prot.banners"><div cl
      message of the day). The file exists by default on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>, but
      it is empty. Simply add content to the file that is applicable/required
      by the organization.
-    </p><div id="idm139630471080512" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Banner Length</h6><p>
+    </p><div id="idm140055826601280" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Banner Length</h6><p>
       Try to keep the login banner content to a single terminal page (or
       less), as it will scroll the screen if it does not fit, making it more
       difficult to read.
@@ -2745,34 +2745,34 @@ fi</pre></div><p>
      <a class="xref" href="#sec.hardening.docupdates.sle12_ga_maint1" title="A.3. February 2015 (Documentation Maintenance Update)">Section A.3, “February 2015 (Documentation Maintenance Update)”</a>
     </p></li><li class="listitem "><p>
      <a class="xref" href="#sec.hardening.docupdates.sle12_ga" title="A.4. October 2014 (Initial Release of SUSE Linux Enterprise Server 12)">Section A.4, “October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)”</a>
-    </p></li></ul></div><div class="sect1 " id="sec.hardening.docupdates.sle12_sp2_ga"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_sp2_ga"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_sp2_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478851760"><span class="term ">All sections</span></dt><dd><p>
+    </p></li></ul></div><div class="sect1 " id="sec.hardening.docupdates.sle12_sp2_ga"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_sp2_ga"><span class="number">A.1 </span><span class="name">November 2016 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_sp2_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055825826032"><span class="term ">All sections</span></dt><dd><p>
        Unified input line style.
-      </p></dd><dt id="idm139630478849936"><span class="term "><a class="xref" href="#sec.sec_prot.general.scp" title="3.18. Copying Files Using SSH Without Providing Login Prompts">Section 3.18, “Copying Files Using SSH Without Providing Login Prompts”</a>
+      </p></dd><dt id="idm140055825824208"><span class="term "><a class="xref" href="#sec.sec_prot.general.scp" title="3.18. Copying Files Using SSH Without Providing Login Prompts">Section 3.18, “Copying Files Using SSH Without Providing Login Prompts”</a>
      </span></dt><dd><p>
        Replaced depricated ~/.ssh/authorized_keys2 and rsa-dss
-      </p></dd><dt id="idm139630478847680"><span class="term "><a class="xref" href="#sec.sec_prot.general.bios" title="3.2. Locking Down the BIOS">Section 3.2, “Locking Down the BIOS”</a>
+      </p></dd><dt id="idm140055825821952"><span class="term "><a class="xref" href="#sec.sec_prot.general.bios" title="3.2. Locking Down the BIOS">Section 3.2, “Locking Down the BIOS”</a>
      </span></dt><dd><p>
        Referenced UEFI
-      </p></dd><dt id="idm139630478845456"><span class="term "><a class="xref" href="#sec.sec_prot.general.pam.pw_previous" title="3.28.2. Restricting Use of Previous Passwords">Section 3.28.2, “Restricting Use of Previous Passwords”</a>
+      </p></dd><dt id="idm140055825819728"><span class="term "><a class="xref" href="#sec.sec_prot.general.pam.pw_previous" title="3.28.2. Restricting Use of Previous Passwords">Section 3.28.2, “Restricting Use of Previous Passwords”</a>
      </span></dt><dd><p>
        Fix configuration description
        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=977984" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=977984</a>).
-      </p></dd><dt id="idm139630478842624"><span class="term "><a class="xref" href="#sec.sec_prot.general.removable_media" title="3.24. Restricting Access to Removable Media">Section 3.24, “Restricting Access to Removable Media”</a>
+      </p></dd><dt id="idm140055825816896"><span class="term "><a class="xref" href="#sec.sec_prot.general.removable_media" title="3.24. Restricting Access to Removable Media">Section 3.24, “Restricting Access to Removable Media”</a>
      </span></dt><dd><p>
        Name of rules files must start with a digit (Doc comment #29432).
-      </p></dd><dt id="idm139630478840352"><span class="term "><a class="xref" href="#sec.sec_prot.general.retiring" title="3.5. Retiring Linux Servers with Sensitive Data">Section 3.5, “Retiring Linux Servers with Sensitive Data”</a>
+      </p></dd><dt id="idm140055825814624"><span class="term "><a class="xref" href="#sec.sec_prot.general.retiring" title="3.5. Retiring Linux Servers with Sensitive Data">Section 3.5, “Retiring Linux Servers with Sensitive Data”</a>
      </span></dt><dd><p>
        More information about wiping files, wear leveling devices
-      </p></dd><dt id="idm139630478838080"><span class="term "><a class="xref" href="#sec.sec_prot.general.add_random" title="3.9.9. Buffer Overflow Attack Mitigation">Section 3.9.9, “Buffer Overflow Attack Mitigation”</a>
+      </p></dd><dt id="idm140055825812352"><span class="term "><a class="xref" href="#sec.sec_prot.general.add_random" title="3.9.9. Buffer Overflow Attack Mitigation">Section 3.9.9, “Buffer Overflow Attack Mitigation”</a>
      </span></dt><dd><p>
        Address Space Layout Randomization and No Execute bit do not prevent
        buffer overflows but buffer overflow attacks.
-      </p></dd><dt id="idm139630478835744"><span class="term ">Bugfixes</span></dt><dd><p>
+      </p></dd><dt id="idm140055825810016"><span class="term ">Bugfixes</span></dt><dd><p>
        PAM related fixes
        (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=978001" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=978001</a>,
        <a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=977984" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=977984</a>,
        <a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=977988" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=977988</a>).
-      </p></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_sp1"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_sp1"><span class="number">A.2 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_sp1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478826336"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      </p></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_sp1"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_sp1"><span class="number">A.2 </span><span class="name">December 2015 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP1)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_sp1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055825800608"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       <span class="intraxref">Book “Subscription Management Tool for SLES <span class="productnumber"><span class="phrase">15</span></span>”</span> is now part of the documentation for
       <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>.
      </p></li><li class="listitem "><p>
@@ -2789,18 +2789,18 @@ fi</pre></div><p>
       <span class="guimenu">System</span> group. <span class="guimenu">Network Devices</span> is
       gone
       (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=867809" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=867809</a>).
-     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478815488"><span class="term "></span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055834356320"><span class="term "></span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Added <a class="xref" href="#sec.sec_prot.general.patching.suma" title="3.14.4. SUSE Manager">Section 3.14.4, “SUSE Manager”</a> (Doc
          comment #26206).
         </p></li><li class="listitem "><p>
          Added <a class="xref" href="#sec.sec_prot.general.devmem" title="3.9.12. Filter access to /dev/mem (default in SUSE Linux Enterprise Server 12)">Section 3.9.12, “Filter access to <code class="filename">/dev/mem</code> (default in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)”</a> (Fate #315172).
-        </p></li></ul></div></dd><dt id="idm139630478810864"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        </p></li></ul></div></dd><dt id="idm140055834351696"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Access to Removable Media Cannot be Restricted as Described
          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=929918" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=929918</a>).
-        </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_ga_maint1"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_ga_maint1"><span class="number">A.3 </span><span class="name">February 2015 (Documentation Maintenance Update)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_ga_maint1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478805648"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_ga_maint1"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_ga_maint1"><span class="number">A.3 </span><span class="name">February 2015 (Documentation Maintenance Update)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_ga_maint1">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055834346480"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          SLES hardening documentation wrong/incomplete—password strength
          (<a class="link" href="https://bugzilla.suse.com/show_bug.cgi?id=907754" target="_blank">https://bugzilla.suse.com/show_bug.cgi?id=907754</a>).
-        </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_ga"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_ga"><span class="number">A.4 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478796544"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        </p></li></ul></div></dd></dl></div></div><div class="sect1 " id="sec.hardening.docupdates.sle12_ga"><div class="titlepage"><div><div><h2 class="title" id="sec.hardening.docupdates.sle12_ga"><span class="number">A.4 </span><span class="name">October 2014 (Initial Release of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12)</span> <a title="Permalink" class="permalink" href="#sec.hardening.docupdates.sle12_ga">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055834337312"><span class="term ">General</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Removed all KDE documentation and references because KDE is no longer
       shipped.
      </p></li><li class="listitem "><p>
@@ -2872,18 +2872,18 @@ fi</pre></div><p>
       </td></tr></table></li><li class="listitem "><p>
       Numerous small fixes and additions to the documentation, based on
       technical feedback.
-     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm139630478761376"><span class="term "><a class="xref" href="#sec.sec_prot.general.retiring" title="3.5. Retiring Linux Servers with Sensitive Data">Section 3.5, “Retiring Linux Servers with Sensitive Data”</a>
+     </p></li></ul></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140055834302144"><span class="term "><a class="xref" href="#sec.sec_prot.general.retiring" title="3.5. Retiring Linux Servers with Sensitive Data">Section 3.5, “Retiring Linux Servers with Sensitive Data”</a>
      </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Added <a class="xref" href="#sec.sec_prot.general.retiring.scrub" title="3.5.1. scrub: Disk Overwrite Utility">Section 3.5.1, “scrub: Disk Overwrite Utility”</a> (Fate
          #315530).
-        </p></li></ul></div></dd><dt id="idm139630478757136"><span class="term "><a class="xref" href="#sec.sec_prot.general.add_random" title="3.9.9. Buffer Overflow Attack Mitigation">Section 3.9.9, “Buffer Overflow Attack Mitigation”</a>
+        </p></li></ul></div></dd><dt id="idm140055834297904"><span class="term "><a class="xref" href="#sec.sec_prot.general.add_random" title="3.9.9. Buffer Overflow Attack Mitigation">Section 3.9.9, “Buffer Overflow Attack Mitigation”</a>
      </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Added <a class="xref" href="#sec.sec_prot.general.dmesg" title="3.9.11. Increased dmesg Restrictions">Section 3.9.11, “Increased <code class="command">dmesg</code> Restrictions”</a> (Fate #315175).
-        </p></li></ul></div></dd><dt id="idm139630478752896"><span class="term "><a class="xref" href="#sec.sec_prot.general.seccheck" title="3.4. Verifying Security Action with seccheck">Section 3.4, “Verifying Security Action with <code class="command">seccheck</code>”</a>
+        </p></li></ul></div></dd><dt id="idm140055834293664"><span class="term "><a class="xref" href="#sec.sec_prot.general.seccheck" title="3.4. Verifying Security Action with seccheck">Section 3.4, “Verifying Security Action with <code class="command">seccheck</code>”</a>
      </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Added <a class="xref" href="#sec.sec_prot.general.seccheck.config" title="3.4.1. Seccheck Configuration">Section 3.4.1, “Seccheck Configuration”</a> (Fate
          #312303).
-        </p></li></ul></div></dd><dt id="idm139630478748656"><span class="term ">Obsolete Content</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "></li></ul></div></dd><dt id="idm139630478745584"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+        </p></li></ul></div></dd><dt id="idm140055834289424"><span class="term ">Obsolete Content</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "></li></ul></div></dd><dt id="idm140055834286352"><span class="term ">Bugfixes</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Removed all content about or references to ZENworks Linux Management.
         </p></li></ul></div></dd></dl></div></div></div></div></div><div class="page-bottom"><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
