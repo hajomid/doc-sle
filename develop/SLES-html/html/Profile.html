@@ -28,7 +28,7 @@ hljs.configure({
     system. It consists of sets of resources with properties including
     support for complex structures such as lists, records, trees and large
     embedded or referenced objects.
-   </p><div id="idm139676830747232" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Control Files from Previous Releases are Incompatible</h6><p>
+   </p><div id="idm140174417623008" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Control Files from Previous Releases are Incompatible</h6><p>
      A lot of major changes were introduced with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">15</span></span> (the
      switch to systemd and GRUB 2 for example). These changes also
      required fundamental changes in AutoYaST, therefore you cannot use
@@ -49,7 +49,7 @@ hljs.configure({
     (see  <a class="xref" href="CreateProfile.html#CreateProfile.Manual" title="3.3. Creating/Editing a Control File Manually">Section 3.3, “Creating/Editing a Control File Manually”</a>).
    </p><p>
     The following example shows a control file in XML format:
-   </p><div class="example" id="idm139676830664368"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.1: </span><span class="name">AutoYaST Control File (Profile) </span><a title="Permalink" class="permalink" href="Profile.html#idm139676830664368">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+   </p><div class="example" id="idm140174411328400"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.1: </span><span class="name">AutoYaST Control File (Profile) </span><a title="Permalink" class="permalink" href="Profile.html#idm140174411328400">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE profile&gt;
 &lt;profile
   xmlns="http://www.suse.com/1.0/yast2ns"
@@ -91,7 +91,7 @@ exit 0
 &lt;/profile&gt;</pre></div></div></div></div><div class="sect1 " id="Profile.Structure"><div class="titlepage"><div><div><h2 class="title" id="Profile.Structure"><span class="number">2.3 </span><span class="name">Structure</span> <a title="Permalink" class="permalink" href="Profile.html#Profile.Structure">#</a></h2></div></div></div><p>
     Below is an example of a basic control file container, the actual
     content of which is explained later on in this chapter.
-   </p><div class="example" id="idm139676830650768"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.2: </span><span class="name">Control file container </span><a title="Permalink" class="permalink" href="Profile.html#idm139676830650768">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+   </p><div class="example" id="idm140174420116672"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.2: </span><span class="name">Control file container </span><a title="Permalink" class="permalink" href="Profile.html#idm140174420116672">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE profile&gt;
 &lt;profile
   xmlns="http://www.suse.com/1.0/yast2ns"
@@ -118,7 +118,7 @@ exit 0
     </p></div><div class="sect2 " id="Profile.Format.ressources_nested"><div class="titlepage"><div><div><h3 class="title" id="Profile.Format.ressources_nested"><span class="number">2.3.2 </span><span class="name">Nested Resources</span> <a title="Permalink" class="permalink" href="Profile.html#Profile.Format.ressources_nested">#</a></h3></div></div></div><p>
      Nested resource elements allow a tree-like structure of configuration
      components to be built to any level.
-    </p><div class="example" id="idm139676830643184"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.3: </span><span class="name">Nested Resources </span><a title="Permalink" class="permalink" href="Profile.html#idm139676830643184">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
+    </p><div class="example" id="idm140174420108864"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.3: </span><span class="name">Nested Resources </span><a title="Permalink" class="permalink" href="Profile.html#idm140174420108864">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
 &lt;drive&gt;
   &lt;device&gt;/dev/sda&lt;/device&gt;
   &lt;partitions&gt; &lt;!-- this is wrong, explanation below --&gt;
@@ -147,7 +147,7 @@ exit 0
      result in undefined behavior, as YaST will incorrectly interpret the
      partitions resource as a property. The example below illustrates this
      use case.
-    </p><div class="example" id="idm139676830639456"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.4: </span><span class="name">Nested Resources with Type Attributes </span><a title="Permalink" class="permalink" href="Profile.html#idm139676830639456">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
+    </p><div class="example" id="idm140174420105136"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.4: </span><span class="name">Nested Resources with Type Attributes </span><a title="Permalink" class="permalink" href="Profile.html#idm140174420105136">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
 &lt;drive&gt;
   &lt;device&gt;/dev/sda&lt;/device&gt;
   &lt;partitions config:type="list"&gt;
