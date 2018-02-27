@@ -58,7 +58,7 @@ hljs.configure({
     the repositories is necessary if you are using repository staging and
     want to restore the snapshots of the repositories (see
     <a class="xref" href="smt.mirroring.html#smt.staging" title="3.6. Testing and Filtering Update Repositories with Staging">Section 3.6, “Testing and Filtering Update Repositories with Staging”</a>).
-   </p><div id="idm140174388917136" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
+   </p><div id="idm140385611467392" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
      The software repositories can be significant in size, and you will need to
      transfer them from the update server.
     </p></div><p>
@@ -82,7 +82,7 @@ hljs.configure({
    You need an external SMT server that mirrors the repositories
    from SUSE Customer Center. Then you can transfer these repositories to the SMT servers on
    the isolated network using the external storage device.
-  </p><div class="figure" id="idm140174388907808"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="SMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 9.1: </span><span class="name">SMT Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140174388907808">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm140385611458064"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="SMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 9.1: </span><span class="name">SMT Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140385611458064">#</a></h6></div></div><p>
    Although the initial setup of this solution requires additional
    configuration, the regular update synchronization with SUSE Customer Center and
    distribution to isolated servers is simple. The steps required during the
@@ -113,7 +113,7 @@ hljs.configure({
      internal SMT server
     </p></li></ul></div><p>
    Below is a detailed description of the individual steps.
-  </p><div class="procedure " id="idm140174388891632"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.1: </span><span class="name">External SMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140174388891632">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140385611441888"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.1: </span><span class="name">External SMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140385611441888">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Install and configure SMT as described in
      <a class="xref" href="smt.installation.html" title="Chapter 1. SMT Installation">Chapter 1, <em>SMT Installation</em></a>.
     </p></li><li class="step "><p>
@@ -138,7 +138,7 @@ hljs.configure({
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>mkdir <em class="replaceable ">/path/to/repository/on/storage/device</em>
 <code class="prompt user">tux &gt; </code>chmod o+w <em class="replaceable ">/path/to/repository/on/storage/device</em></pre></div></li><li class="step "><p>
      Unmount and detach the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm140174388875040"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.2: </span><span class="name">Internal SMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140174388875040">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140385611425296"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.2: </span><span class="name">Internal SMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140385611425296">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Ensure you have a working SUSE Linux Enterprise Server installation source.
     </p></li><li class="step "><p>
      Install SMT the same way as on the external server with the following
@@ -182,7 +182,7 @@ hljs.configure({
    complete. However, the update repository is still empty. After you run the
    following daily operation routines for the first time, the repository will
    be synchronized, and the internal SMT server will be ready to serve clients.
-  </p><div class="procedure " id="idm140174388850528"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.3: </span><span class="name">Daily External SMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140174388850528">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140385611400784"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.3: </span><span class="name">Daily External SMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140385611400784">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect an external storage device and mount it.
     </p></li><li class="step "><p>
      Perform a mirror to a directory on the storage device based on the file
@@ -196,7 +196,7 @@ hljs.configure({
      Optionally, scan the storage device for viruses and other unwanted content.
     </p></li><li class="step "><p>
      Unmount and disconnect the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm140174388841456"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.4: </span><span class="name">Daily Internal SMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140174388841456">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140385611391712"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.4: </span><span class="name">Daily Internal SMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140385611391712">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect a storage device and mount it.
     </p></li><li class="step "><p>
      Update the SUSE Customer Center data on the server:
