@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Guest Installation | Virtualization Guide | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="Virtualization Guide" /><meta name="chapter-title" content="Chapter 8. Guest Installation" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.virt.libvirt.html" title="Part II. Managing Virtual Machines with libvirt" /><link rel="prev" href="cha.libvirt.overview.html" title="Chapter 7. Starting and Stopping libvirtd" /><link rel="next" href="cha.libvirt.managing.html" title="Chapter 9. Basic VM Guest Management" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Guest Installation | Virtualization Guide | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="Virtualization Guide" /><meta name="chapter-title" content="Chapter 8. Guest Installation" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.virt.libvirt.html" title="Part II. Managing Virtual Machines with libvirt" /><link rel="prev" href="cha.libvirt.overview.html" title="Chapter 7. Starting and Stopping libvirtd" /><link rel="next" href="cha.libvirt.managing.html" title="Chapter 9. Basic VM Guest Management" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -60,7 +60,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Depending on your choice in the previous step, you need to provide the
      following data:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769330819584"><span class="term "><span class="guimenu">Local Installation Media (ISO image or CDROM)</span>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140221573256016"><span class="term "><span class="guimenu">Local Installation Media (ISO image or CDROM)</span>
       </span></dt><dd><p>
         Specify the path on the VM Host Server to an iso image containing the
         installation data. If it is available as a volume in a libvirt storage
@@ -69,7 +69,7 @@ hljs.configure({
        </p><p>
         Alternatively, choose a physical CD-ROM or DVD inserted in the optical
         drive of the VM Host Server.
-       </p></dd><dt id="idm139769330815696"><span class="term "><span class="guimenu">Network Installation (HTTP, FTP, or NFS)</span>
+       </p></dd><dt id="idm140221573252128"><span class="term "><span class="guimenu">Network Installation (HTTP, FTP, or NFS)</span>
       </span></dt><dd><p>
         Provide the <span class="guimenu">URL</span> pointing to the installation source.
         Valid URL prefixes are, for example, <code class="literal">ftp://</code>,
@@ -83,11 +83,11 @@ hljs.configure({
         <span class="guimenu">Automatically Detect Operating System Based on
         Install-Media</span> and manually select the <span class="guimenu">OS
         Type</span> and <span class="guimenu">Version</span>.
-       </p></dd><dt id="idm139769330808912"><span class="term "><span class="guimenu">Network Boot (PXE)</span>
+       </p></dd><dt id="idm140221573245344"><span class="term "><span class="guimenu">Network Boot (PXE)</span>
       </span></dt><dd><p>
         When booting via PXE, you only need to provide the <span class="guimenu">OS
         Type</span> and the <span class="guimenu">Version</span>.
-       </p></dd><dt id="idm139769330805968"><span class="term "><span class="guimenu">Import Existing Disk Image</span>
+       </p></dd><dt id="idm140221573242400"><span class="term "><span class="guimenu">Import Existing Disk Image</span>
       </span></dt><dd><p>
         To set up the VM Guest from an existing image, you need to specify the
         path on the VM Host Server to the image. If it is available as a volume in a
@@ -151,7 +151,7 @@ hljs.configure({
    <code class="command">virt-install</code> is a complex script with a lot of command
    line switches. The following are required. For more information, see the man
    page of <code class="command">virt-install</code> (1).
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769330772048"><span class="term ">General Options</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140221573208416"><span class="term ">General Options</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="option">--name <em class="replaceable ">VM_GUEST_NAME</em></code>:
         Specify the name of the new virtual machine. The name must be unique
         across all guests known to the hypervisor on the same connection. It is
@@ -167,7 +167,7 @@ hljs.configure({
         Specify the number of virtual CPUs. For best performance, the number of
         virtual processors should be less than or equal to the number of
         physical processors.
-       </p></li></ul></div></dd><dt id="idm139769330763344"><span class="term ">Virtualization Type</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       </p></li></ul></div></dd><dt id="idm140221573199712"><span class="term ">Virtualization Type</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="option">--paravirt</code>: Set up a paravirtualized guest. This is
         the default if the VM Host Server supports paravirtualization and full
         virtualization.
@@ -177,7 +177,7 @@ hljs.configure({
         <code class="option">--virt-type <em class="replaceable ">HYPERVISOR</em></code>:
         Specify the hypervisor. Supported values are <code class="literal">kvm</code>,
         <code class="literal">xen</code>, or <code class="literal">lxc</code>.
-       </p></li></ul></div></dd><dt id="idm139769330755136"><span class="term ">Guest Storage</span></dt><dd><p>
+       </p></li></ul></div></dd><dt id="idm140221573191504"><span class="term ">Guest Storage</span></dt><dd><p>
       Specify one of <code class="option">--disk</code>, <code class="option">--filesystem</code> or
       <code class="option">--nodisks</code> the type of the storage for the new virtual
       machine. For example, <code class="option">--disk size=10</code> creates 10 GB disk
@@ -187,11 +187,11 @@ hljs.configure({
       directory on the VM Host Server to be exported to the guest. And
       <code class="option">--nodisks</code> sets up a VM Guest without a local storage
       (good for Live CDs).
-     </p></dd><dt id="idm139769330750256"><span class="term ">Installation Method</span></dt><dd><p>
+     </p></dd><dt id="idm140221573186624"><span class="term ">Installation Method</span></dt><dd><p>
       Specify the installation method using one of <code class="option">--location</code>,
       <code class="option">--cdrom</code>, <code class="option">--pxe</code>,
       <code class="option">--import</code>, or <code class="option">--boot </code>.
-     </p></dd><dt id="idm139769330746192"><span class="term ">Accessing the Installation</span></dt><dd><p>
+     </p></dd><dt id="idm140221573182560"><span class="term ">Accessing the Installation</span></dt><dd><p>
       Use the <code class="option">--graphics <em class="replaceable ">VALUE</em></code>
       option to specify how to access the installation. <span class="productname"><span class="phrase">openSUSE Leap</span></span> supports
       the values <code class="literal">vnc</code> or <code class="literal">none</code>.
@@ -208,7 +208,7 @@ hljs.configure({
       the VM Guest through operating system supported services, such as SSH or
       VNC. Refer to the operating system installation manual on how to set up
       these services in the installation system.
-     </p></dd><dt id="idm139769330737424"><span class="term ">Enabling the Console</span></dt><dd><p>
+     </p></dd><dt id="idm140221573173792"><span class="term ">Enabling the Console</span></dt><dd><p>
       By default, the console is not enabled for new virtual machines installed
       using <code class="command">virt-install</code>. To enable it, use
       <code class="option">--extra-args="console=ttyS0 textmode=1"</code> as in the
@@ -226,9 +226,9 @@ hljs.configure({
     qcow2 disk image as a storage, the source installation media being the host
     CD-ROM drive. It will use VNC graphics, and it will auto-launch the
     graphical client.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769330728624"><span class="term ">KVM</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect qemu:///system --virt-type kvm  --name sled12 \
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140221573165056"><span class="term ">KVM</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect qemu:///system --virt-type kvm  --name sled12 \
 --memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \
---os-variant sled12</pre></div></dd><dt id="idm139769330726400"><span class="term ">Xen</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect xen:// --virt-type xen  --name sled12 \
+--os-variant sled12</pre></div></dd><dt id="idm140221573162832"><span class="term ">Xen</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect xen:// --virt-type xen  --name sled12 \
 --memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \
 --os-variant sled12</pre></div></dd></dl></div></div></div></div></div><div class="sect1 " id="sec.libvirt.inst.advanced"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.inst.advanced"><span class="number">8.3 </span><span class="name">Advanced Guest Installation Scenarios</span> <a title="Permalink" class="permalink" href="cha.kvm.inst.html#sec.libvirt.inst.advanced">#</a></h2></div></div></div><p>
    This section provides instructions for operations exceeding the scope of a
@@ -255,6 +255,6 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --name sles12+sdk --memory 1024 --disk size=10 \
 --disk /virt/iso/SLES12.iso,device=cdrom \
 --disk /virt/iso/SLES12_SDK.iso,device=cdrom \
---graphics vnc --os-variant sles12</pre></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.libvirt.managing.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 9 </span>Basic VM Guest Management</span></a><a class="nav-link" href="cha.libvirt.overview.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 7 </span>Starting and Stopping <code class="systemitem">libvirtd</code></span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+--graphics vnc --os-variant sles12</pre></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.libvirt.managing.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 9 </span>Basic VM Guest Management</span></a><a class="nav-link" href="cha.libvirt.overview.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 7 </span>Starting and Stopping <code class="systemitem">libvirtd</code></span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>

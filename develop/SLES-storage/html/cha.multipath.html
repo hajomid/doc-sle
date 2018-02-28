@@ -93,7 +93,7 @@ hljs.configure({
     more extensive support. Therefore, the Device Mapper Multipath service has
     hooks for hardware handlers. For example, one such handler for the EMC
     CLARiiON CX family of arrays is already provided.
-   </p><div id="idm139668447892672" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: For More Information</h6><p>
+   </p><div id="idm139795999300960" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: For More Information</h6><p>
      Consult the hardware vendor’s documentation to determine if its hardware
      handler must be installed for Device Mapper Multipath.
     </p></div><p>
@@ -103,7 +103,7 @@ hljs.configure({
     arrays. It lists only those arrays that require special handling and that
     the <code class="filename">multipath-tools</code> developers had access to during
     the tool development.
-   </p><div id="idm139668447889552" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exceptions</h6><p>
+   </p><div id="idm139795999297840" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exceptions</h6><p>
      Arrays with true active/active multipath support do not require special
      handling, so they are not listed for the <code class="command">multipath -t</code>
      command.
@@ -235,14 +235,14 @@ hljs.configure({
     switch has a connection to the storage processor that owns the LUNs you
     want to access. On most disk arrays, all LUNs belong to both storage
     processors, so both connections are active.
-   </p><div id="idm139668447838896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Storage Processors</h6><p>
+   </p><div id="idm139795999247104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Storage Processors</h6><p>
      On some disk arrays, the storage array manages the traffic through storage
      processors so that it presents only one storage processor at a time. One
      processor is active and the other one is passive until there is a failure.
      If you are connected to the wrong storage processor (the one with the
      passive path) you might not see the expected LUNs, or you might see the
      LUNs but get errors when you try to access them.
-    </p></div><div class="table" id="idm139668447837120"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.1: </span><span class="name">Multipath I/O Features of Storage Arrays </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447837120">#</a></h6></div><div class="table-contents"><table summary="Multipath I/O Features of Storage Arrays" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+    </p></div><div class="table" id="idm139795999245328"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.1: </span><span class="name">Multipath I/O Features of Storage Arrays </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795999245328">#</a></h6></div><div class="table-contents"><table summary="Multipath I/O Features of Storage Arrays" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Features of Storage Arrays
         </p>
@@ -341,7 +341,7 @@ hljs.configure({
     path periodically, so that a previously failed path is automatically
     reinstated when it becomes healthy again. This minimizes the need for
     administrator attention in a production environment.
-   </p><div class="table" id="idm139668447802800"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.2: </span><span class="name">Tools in the multipath-tools Package </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447802800">#</a></h6></div><div class="table-contents"><table summary="Tools in the multipath-tools Package" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm139795999211072"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.2: </span><span class="name">Tools in the multipath-tools Package </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795999211072">#</a></h6></div><div class="table-contents"><table summary="Tools in the multipath-tools Package" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Tool
         </p>
@@ -405,9 +405,9 @@ hljs.configure({
     the following:
    </p><div class="verbatim-wrap"><pre class="screen">multipath [-v verbosity_level] [-b bindings_file] [-d] [-h|-l|-ll|-f|-F|-B|-c|-q|-r|-w|-W|-t] [-p failover|multibus|group_by_serial|group_by_prio|group_by_node_name] [<em class="replaceable ">DEVICENAME</em>]</pre></div><p>
     Refer to <code class="command">man 8 multipath</code> for details.
-   </p><div class="sect1 bridgehead"><h2 class="title" id="idm139668447774032"><span class="name">General Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447774032">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139668447773296"><span class="term ">multipath</span></dt><dd><p>
+   </p><div class="sect1 bridgehead"><h2 class="title" id="idm139795999182240"><span class="name">General Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795999182240">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139795999181504"><span class="term ">multipath</span></dt><dd><p>
        Configures all multipath devices.
-      </p></dd><dt id="idm139668447771472"><span class="term ">multipath <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm139795999179680"><span class="term ">multipath <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific multipath device.
       </p><p>
@@ -415,13 +415,13 @@ hljs.configure({
        such as <code class="filename">/dev/sdb</code> (as shown by udev in the $DEVNAME
        variable), or in the <code class="literal">major:minor</code> format. The device
        may alternatively be a multipath map name.
-      </p></dd><dt id="idm139668447767264"><span class="term ">multipath -f</span></dt><dd><p>
+      </p></dd><dt id="idm139795999175472"><span class="term ">multipath -f</span></dt><dd><p>
        Selectively suppresses a multipath map, and its device-mapped
        partitions.
-      </p></dd><dt id="idm139668447765392"><span class="term ">multipath -d</span></dt><dd><p>
+      </p></dd><dt id="idm139795999173600"><span class="term ">multipath -d</span></dt><dd><p>
        Dry run. Displays potential multipath devices, but does not create any
        devices and does not update device maps.
-      </p></dd><dt id="idm139668447763488"><span class="term ">multipath -v2 -d</span></dt><dd><p>
+      </p></dd><dt id="idm139795999171696"><span class="term ">multipath -v2 -d</span></dt><dd><p>
        Displays multipath map information for potential multipath devices in a
        dry run. The -v2 option shows only local disks. This verbosity level
        prints the created or updated multipath names only for use to feed other
@@ -430,7 +430,7 @@ hljs.configure({
        There is no output if the device already exists and there are no
        changes. Use <code class="command">multipath -ll</code> to see the status of
        configured multipath devices.
-      </p></dd><dt id="idm139668447760416"><span class="term ">multipath -v2 <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm139795999168624"><span class="term ">multipath -v2 <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific potential multipath device and displays multipath
        map information for it. This verbosity level prints only the created or
@@ -446,12 +446,12 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm139668447754128"><span class="term ">multipath -v3</span></dt><dd><p>
+      </p></dd><dt id="idm139795999162336"><span class="term ">multipath -v3</span></dt><dd><p>
        Configures potential multipath devices and displays multipath map
        information for them. This verbosity level prints all detected paths,
        multipaths, and device maps. Both WWID and <code class="literal">devnode</code>
        blacklisted devices are displayed.
-      </p></dd><dt id="idm139668447751664"><span class="term ">multipath -v3 <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm139795999159872"><span class="term ">multipath -v3 <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific potential multipath device and displays
        information for it. The -v3 option shows the full path list. This
@@ -464,9 +464,9 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm139668447746352"><span class="term ">multipath -ll</span></dt><dd><p>
+      </p></dd><dt id="idm139795999154560"><span class="term ">multipath -ll</span></dt><dd><p>
        Displays the status of all multipath devices.
-      </p></dd><dt id="idm139668447744512"><span class="term ">multipath -ll <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm139795999152752"><span class="term ">multipath -ll <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Displays the status of a specified multipath device.
       </p><p>
@@ -475,10 +475,10 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm139668447739856"><span class="term ">multipath -F</span></dt><dd><p>
+      </p></dd><dt id="idm139795999148096"><span class="term ">multipath -F</span></dt><dd><p>
        Flushes all unused multipath device maps. This unresolves the multiple
        paths; it does not delete the devices.
-      </p></dd><dt id="idm139668447737952"><span class="term ">multipath -F <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm139795999146192"><span class="term ">multipath -F <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Flushes unused multipath device maps for a specified multipath device.
        This unresolves the multiple paths; it does not delete the device.
@@ -488,10 +488,10 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm139668447733200"><span class="term ">multipath -p [ failover | multibus | group_by_serial | group_by_prio | group_by_node_name ]</span></dt><dd><p>
+      </p></dd><dt id="idm139795999141440"><span class="term ">multipath -p [ failover | multibus | group_by_serial | group_by_prio | group_by_node_name ]</span></dt><dd><p>
        Sets the group policy by specifying one of the group policy options that
        are described in the following table:
-      </p><div class="table" id="idm139668447731536"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.3: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447731536">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+      </p><div class="table" id="idm139795999139776"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.3: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795999139776">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
            <p>
             Policy Option
            </p>
@@ -547,7 +547,7 @@ hljs.configure({
             fetched in the<code class="filename">
             /sys/class/fc_transport/target*/node_name</code> location.
            </p>
-          </td></tr></tbody></table></div></div></dd><dt id="idm139668447711376"><span class="term ">multipath -t</span></dt><dd><p>
+          </td></tr></tbody></table></div></div></dd><dt id="idm139795999119568"><span class="term ">multipath -t</span></dt><dd><p>
        Shows internal hardware table and active configuration of
        multipath. Refer to <code class="command">man multipath</code> for details
        about the configuration parameters.
@@ -581,16 +581,16 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> systemctl restart multipathd</pre></div><p>
     After it is set up, you can specify the reservation key in the
     <code class="command">mpathpersist</code> commands.
-   </p><div class="sect1 bridgehead"><h2 class="title" id="idm139668447696464"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447696464">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139668447695728"><span class="term ">mpathpersist --out --register --param-sark=123abc --prout-type=5 -d /dev/mapper/mpath9</span></dt><dd><p>
+   </p><div class="sect1 bridgehead"><h2 class="title" id="idm139795999104656"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795999104656">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139795999103920"><span class="term ">mpathpersist --out --register --param-sark=123abc --prout-type=5 -d /dev/mapper/mpath9</span></dt><dd><p>
        Register the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm139668447693376"><span class="term ">mpathpersist -i -k -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm139795999101568"><span class="term ">mpathpersist -i -k -d /dev/mapper/mpath9</span></dt><dd><p>
        Read the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm139668447691056"><span class="term ">mpathpersist --out --reserve --param-sark=123abc --prout-type=8 -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm139795999099248"><span class="term ">mpathpersist --out --reserve --param-sark=123abc --prout-type=8 -d /dev/mapper/mpath9</span></dt><dd><p>
        Reserve the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm139668447688704"><span class="term ">mpathpersist -i -s -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm139795999096896"><span class="term ">mpathpersist -i -s -d /dev/mapper/mpath9</span></dt><dd><p>
        Read the reservation status of the
        <code class="filename">/dev/mapper/mpath9</code> device.
       </p></dd></dl></div></div></div><div class="sect1 " id="sec.multipath.config"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.config"><span class="number">16.5 </span><span class="name">Configuring the System for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.config">#</a></h2></div></div></div><div class="sect2 " id="sec.multipath.configuration.start"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.start"><span class="number">16.5.1 </span><span class="name">Enabling, Disabling, Starting and Stopping Multipath I/O Services</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.start">#</a></h3></div></div></div><p>
@@ -633,7 +633,7 @@ hljs.configure({
       automatically scans the HBA to discover any SAN devices that have
       permissions for the host. It presents them to the host for further
       configuration.
-     </p><div id="idm139668447664944" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Native Multipathing</h6><p>
+     </p><div id="idm139795999073072" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Native Multipathing</h6><p>
        Make sure that the HBA driver you are using does not have native
        multipathing enabled.
       </p></div><p>
@@ -687,7 +687,7 @@ hljs.configure({
    create it. Default multipath device settings are applied automatically when
    the <code class="command">multipathd</code> daemon runs unless you create the
    multipath configuration file and personalize the settings.
-  </p><div id="idm139668447649120" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
+  </p><div id="idm139795999057248" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
     Testing and Permanently Applying Changes from
     <code class="filename">/etc/multipath.conf</code>
    </h6><p>
@@ -726,12 +726,12 @@ hljs.configure({
     The <code class="filename">/etc/multipath.conf</code> file is organized into the
     following sections. See <code class="command">man 5 multipath.conf</code> for
     details.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668447627664"><span class="term ">defaults</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139795999035728"><span class="term ">defaults</span></dt><dd><p>
        General default settings for multipath I/0. These values are used if no
        values are given in the appropriate device or multipath sections. For
        information, see
        <a class="xref" href="cha.multipath.html#sec.multipath.policies_default" title="16.7. Configuring Default Policies for Polling, Queuing, and Failback">Section 16.7, “Configuring Default Policies for Polling, Queuing, and Failback”</a>.
-      </p></dd><dt id="idm139668447624896"><span class="term ">blacklist</span></dt><dd><p>
+      </p></dd><dt id="idm139795999032960"><span class="term ">blacklist</span></dt><dd><p>
        Lists the device names to discard as not multipath candidates. Devices
        can be identified by their device node name
        (<code class="literal">devnode</code>), their WWID (<code class="literal">wwid</code>), or
@@ -743,7 +743,7 @@ hljs.configure({
        <code class="literal">raw</code>, <code class="literal">loop</code>.
        For more information and examples, see
        <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a>.
-      </p></dd><dt id="idm139668447615744"><span class="term ">blacklist_exceptions</span></dt><dd><p>
+      </p></dd><dt id="idm139795999023808"><span class="term ">blacklist_exceptions</span></dt><dd><p>
        Lists the device names of devices to be treated as multipath candidates
        even if they are on the blacklist. Devices can be identified by their
        device node name (<code class="literal">devnode</code>), their WWID
@@ -757,12 +757,12 @@ hljs.configure({
        exclude some of them by using the <code class="literal">wwid</code> keyword. For
        more information and examples, see
        <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a>.
-      </p></dd><dt id="idm139668447609408"><span class="term ">multipaths</span></dt><dd><p>
+      </p></dd><dt id="idm139795999017472"><span class="term ">multipaths</span></dt><dd><p>
        Specifies settings for individual multipath devices. Except for settings
        that do not support individual settings, these values overwrite what is
        specified in the <code class="literal">defaults</code> and
        <code class="literal">devices</code> sections of the configuration file.
-      </p></dd><dt id="idm139668447606512"><span class="term ">devices</span></dt><dd><p>
+      </p></dd><dt id="idm139795999014576"><span class="term ">devices</span></dt><dd><p>
        Specifies settings for individual storage controllers. These values
        overwrite values specified in the <code class="filename">defaults</code> section
        of the configuration file. If you use a storage array that is not
@@ -979,14 +979,14 @@ sdf: state = 2
    <code class="literal">blacklist_exceptions</code> section to enable multipath for some
    devices that are blacklisted by the regular expressions used in the
    <code class="literal">blacklist</code> section.
-  </p><div id="idm139668447543440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
+  </p><div id="idm139795998951568" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
     Preferred Blacklisting Methods
    </h6><p>
     The preferred method for blacklisting devices is by <span class="emphasis"><em>WWID</em></span>
     or by <span class="emphasis"><em>vendor and product</em></span>. Blacklisting by
     <span class="emphasis"><em>devnode</em></span> is not recommended, because device nodes
     can change and thus are not useful for persistent device identification.
-   </p></div><div id="idm139668447540576" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Regular Expressions in multipath.conf</h6><p>Regular expressions in the <code class="filename">/etc/multipath.conf</code> do
+   </p></div><div id="idm139795998948704" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Regular Expressions in multipath.conf</h6><p>Regular expressions in the <code class="filename">/etc/multipath.conf</code> do
     <span class="emphasis"><em>not</em></span> work in general. They only work if they are
     matched against common strings. However, the standard configuration
     of multipath already contains regular expressions for many devices
@@ -1003,7 +1003,7 @@ sdf: state = 2
    disks do not have multiple paths. If you want
    <code class="command">multipath</code> to ignore single-path devices, put them in the
    <code class="command">blacklist</code> section.
-  </p><div id="idm139668447531088" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Compatibility</h6><p>
+  </p><div id="idm139795998939216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Compatibility</h6><p>
     The keyword <code class="literal">devnode_blacklist</code> has been deprecated and
     replaced with the keyword <code class="literal">blacklist</code>.
    </p><p>
@@ -1083,7 +1083,7 @@ blacklist_exceptions {
   </p><p>
    Following the reboot, the local devices should no longer be listed in the
    multipath maps when you issue the <code class="command">multipath -ll</code> command.
-  </p><div id="idm139668447509200" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using the <code class="literal">find_multipaths</code> Option</h6><p>
+  </p><div id="idm139795998917328" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using the <code class="literal">find_multipaths</code> Option</h6><p>
     Starting with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2, the multipath tools support the option
     <code class="literal">find_multipaths</code> in the <code class="literal">defaults</code>
     section of <code class="filename">/etc/multipath.conf</code>. Simply put, this
@@ -1123,7 +1123,7 @@ blacklist_exceptions {
    on reboot and might be assigned to different devices each time. A device’s
    WWID, user-friendly name, and alias name persist across reboots, and are the
    preferred way to identify the device.
-  </p><div id="idm139668447494912" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using Persistent Names is Recommended</h6><p>
+  </p><div id="idm139795998903040" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using Persistent Names is Recommended</h6><p>
     Because device node names in the form of <code class="filename">/dev/sdn</code> and
     <code class="filename">/dev/dm-n</code> can change on reboot, referring to multipath
     devices by their WWID is preferred. You can also use a user-friendly name
@@ -1135,7 +1135,7 @@ blacklist_exceptions {
    example of <code class="filename">multipath.conf</code> settings, see the
    <code class="filename">/usr/share/doc/packages/multipath-tools/multipath.conf.synthetic</code>
    file.
-  </p><div class="table" id="idm139668447490480"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.4: </span><span class="name">Comparison of Multipath Device Name Types </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447490480">#</a></h6></div><div class="table-contents"><table summary="Comparison of Multipath Device Name Types" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm139795998898608"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.4: </span><span class="name">Comparison of Multipath Device Name Types </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795998898608">#</a></h6></div><div class="table-contents"><table summary="Comparison of Multipath Device Name Types" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
        <p>
         Name Types
        </p>
@@ -1212,7 +1212,7 @@ blacklist_exceptions {
   </p><p>
    Using the <code class="literal">user_friendly_names</code> option can be problematic
    in the following situations:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668447462176"><span class="term ">Root Device Is Using Multipath:</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139795998870304"><span class="term ">Root Device Is Using Multipath:</span></dt><dd><p>
       If the system root device is using multipath and you use the
       <code class="literal">user_friendly_names</code> option, the user-friendly settings
       in the <code class="filename">/var/lib/multipath/bindings</code> file are included
@@ -1220,7 +1220,7 @@ blacklist_exceptions {
       setup, such as by adding or removing devices, there is a mismatch between
       the bindings setting inside the <code class="filename">initrd</code> and the
       bindings settings in <code class="filename">/var/lib/multipath/bindings</code>.
-     </p><div id="idm139668447458144" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Binding Mismatches</h6><p>
+     </p><div id="idm139795998866272" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Binding Mismatches</h6><p>
        A bindings mismatch between <code class="filename">initrd</code> and
        <code class="filename">/var/lib/multipath/bindings</code> can lead to a wrong
        assignment of mount points to devices, which can result in file system
@@ -1231,7 +1231,7 @@ blacklist_exceptions {
       system root device. Because the device name would differ, using an alias
       causes you to lose the ability to seamlessly switch off multipathing via
       the kernel command line.
-     </p></dd><dt id="idm139668447454640"><span class="term ">Mounting /var from Another Partition:</span></dt><dd><p>
+     </p></dd><dt id="idm139795998862768"><span class="term ">Mounting /var from Another Partition:</span></dt><dd><p>
       The default location of the <code class="literal">user_friendly_names</code>
       configuration file is <code class="filename">/var/lib/multipath/bindings</code>.
       If the <code class="filename">/var</code> data is not located on the system root
@@ -1253,7 +1253,7 @@ blacklist_exceptions {
        </p><div class="verbatim-wrap"><pre class="screen">defaults {
                user_friendly_names yes
                bindings_file "/etc/multipath/bindings"
-}</pre></div></li></ol></div></dd><dt id="idm139668447444480"><span class="term ">Multipath Is in the initrd:</span></dt><dd><p>
+}</pre></div></li></ol></div></dd><dt id="idm139795998852608"><span class="term ">Multipath Is in the initrd:</span></dt><dd><p>
       Even if the system root device is not on multipath, it is possible for
       multipath to be included in the <code class="filename">initrd</code>. For example,
       this can happen if the system root device is on LVM. If you use the
@@ -1265,7 +1265,7 @@ blacklist_exceptions {
       system boots. After the system boots, the
       <code class="filename">boot.multipath</code> and <code class="filename">multipathd</code>
       boot scripts can activate multipathing.
-     </p></dd><dt id="idm139668447438736"><span class="term ">Multipathing in HA Clusters:</span></dt><dd><p>
+     </p></dd><dt id="idm139795998846864"><span class="term ">Multipathing in HA Clusters:</span></dt><dd><p>
       See <a class="xref" href="cha.multipath.html#sec.multipath.names.ha" title="16.9.1. Multipath Device Names in HA Clusters">Section 16.9.1, “Multipath Device Names in HA Clusters”</a> for details.
      </p></dd></dl></div><p>
    To enable user-friendly names or to specify aliases:
@@ -1326,7 +1326,7 @@ multipaths {
                wwid           36006048000028350131253594d303334
                alias             yellow2
        }
-}</pre></div><div id="idm139668447417504" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: WWWID Compared to WWN</h6><p>
+}</pre></div><div id="idm139795998825632" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: WWWID Compared to WWN</h6><p>
       When you define device aliases in the
       <code class="filename">/etc/multipath.conf</code> file, ensure that you use each
       device’s WWID (such as
@@ -1375,7 +1375,7 @@ multipaths {
       <code class="literal">no</code> to disable it. A user-friendly name is unique to a
       node, but a device might not be assigned the same user-friendly name on
       every node in the cluster.
-     </p></li></ul></div><div id="idm139668447394400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: User-Friendly Names</h6><p>
+     </p></li></ul></div><div id="idm139795998802464" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: User-Friendly Names</h6><p>
      If you really need to use user-friendly names, you can force the
      system-defined user-friendly names to be consistent across all nodes in
      the cluster by doing the following:
@@ -1439,7 +1439,7 @@ multipaths {
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> multipath <em class="replaceable ">DEVICENAME</em> -p <em class="replaceable ">POLICY</em></pre></div><p>
     Replace <em class="replaceable ">POLICY</em> with one of the following policy
     options:
-   </p><div class="table" id="idm139668447361552"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.5: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447361552">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm139795998769616"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.5: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795998769616">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Policy Option
         </p>
@@ -1523,7 +1523,7 @@ multipaths {
      <code class="literal">prio</code> line specifies the prioritizer. If the prioritizer
      requires an argument, you specify the argument by using the
      <code class="literal">prio_args</code> keyword on a second line.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139668447329568"><span class="name">PRIO Settings for the Defaults or Devices Sections</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447329568">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139668447328800"><span class="term ">prio</span></dt><dd><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm139795998737632"><span class="name">PRIO Settings for the Defaults or Devices Sections</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795998737632">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm139795998736864"><span class="term ">prio</span></dt><dd><p>
         Specifies the prioritizer program to call to obtain a path priority
         value. Weights are summed for each path group to determine the next
         path group to use in case of failure.
@@ -1638,7 +1638,7 @@ prio_args "hbtl 1:.:.:. 2 4:.:.:. 4"</pre></div>
             </p>
 <div class="verbatim-wrap"><pre class="screen">prio "weightedpath"
 prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
-           </td></tr></tbody></table></div></dd><dt id="idm139668447284512"><span class="term "><code class="literal">prio_args</code>
+           </td></tr></tbody></table></div></dd><dt id="idm139795998692576"><span class="term "><code class="literal">prio_args</code>
       </span></dt><dd><p>
         Specifies the arguments for the specified prioritizer program that
         requires arguments. Most <code class="literal">prio</code> programs do not need
@@ -1646,13 +1646,13 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
        </p><p>
         There is no default. The value depends on the <code class="literal">prio</code>
         setting and whether the prioritizer requires arguments.
-       </p></dd></dl></div><div class="sect1 bridgehead"><h2 class="title" id="idm139668447280704"><span class="name">Multipath Attributes</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139668447280704">#</a></h2></div><p>
+       </p></dd></dl></div><div class="sect1 bridgehead"><h2 class="title" id="idm139795998688768"><span class="name">Multipath Attributes</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm139795998688768">#</a></h2></div><p>
      Multipath attributes are used to control the behavior of multipath I/O for
      devices. You can specify attributes as defaults for all multipath devices.
      You can also specify attributes that apply only to a given multipath
      device by creating an entry for that device in the
      <code class="literal">multipaths</code> section of the multipath configuration file.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668447278752"><span class="term "><code class="literal">user_friendly_names</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139795998686816"><span class="term "><code class="literal">user_friendly_names</code>
       </span></dt><dd><p>
         Specifies whether to use world-wide IDs (WWIDs) or to use the
         <code class="filename">/var/lib/multipath/bindings</code> file to assign a
@@ -1745,7 +1745,7 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
         We recommend failback setting of <code class="literal">manual</code> for
         multipath in cluster environments to prevent multipath failover
         ping-pong.
-       </p><div class="verbatim-wrap"><pre class="screen">failback "manual"</pre></div><div id="idm139668447238368" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
+       </p><div class="verbatim-wrap"><pre class="screen">failback "manual"</pre></div><div id="idm139795998646368" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
          Make sure that you verify the failback setting with your storage
          system vendor. Different storage systems can require different
          settings.
@@ -1797,10 +1797,10 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
         when the connection is lost to storage. Otherwise, the messages queue
         and the resource failover cannot occur.
        </p><div class="verbatim-wrap"><pre class="screen">no_path_retry "fail"
-no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
+no_path_retry "0"</pre></div><div id="idm139795998623808" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
          Make sure that you verify the retry settings with your storage system
          vendor. Different storage systems can require different settings.
-        </p></div></dd><dt id="idm139668447214000"><span class="term "><code class="literal">path_checker</code>
+        </p></div></dd><dt id="idm139795998622000"><span class="term "><code class="literal">path_checker</code>
       </span></dt><dd><p>
         Determines the state of the path.
        </p><div class="informaltable"><table border="1"><colgroup><col width="30%" class="1" /><col width="70%" class="2" /></colgroup><thead><tr><th>
@@ -1851,7 +1851,7 @@ no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition impo
                 Checks the path state for the LSI/Engenio RDAC storage
                 controller.
                </p></li></ul></div>
-           </td></tr></tbody></table></div></dd><dt id="idm139668447185184"><span class="term "><code class="literal">path_grouping_policy</code>
+           </td></tr></tbody></table></div></dd><dt id="idm139795998593184"><span class="term "><code class="literal">path_grouping_policy</code>
       </span></dt><dd><p>
         Specifies the path grouping policy for a multipath device hosted by a
         given controller.
@@ -1910,7 +1910,7 @@ no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition impo
              names are fetched in
              <code class="filename">/sys/class/fc_transport/target*/node_name</code>.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm139668447161888"><span class="term "><code class="literal">path_selector</code>
+           </td></tr></tbody></table></div></dd><dt id="idm139795998569888"><span class="term "><code class="literal">path_selector</code>
       </span></dt><dd><p>
         Specifies the path-selector algorithm to use for load balancing.
        </p><div class="informaltable"><table border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
@@ -1948,7 +1948,7 @@ no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition impo
              (Default) A service-time oriented load balancer that balances I/O
              on paths according to the latency.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm139668447144752"><span class="term ">pg_timeout</span></dt><dd><p>
+           </td></tr></tbody></table></div></dd><dt id="idm139795998552752"><span class="term ">pg_timeout</span></dt><dd><p>
         Specifies path group timeout handling. No value can be specified; an
         internal default is set.
        </p></dd><dt id="polling_interval"><span class="term "><code class="literal">polling_interval</code>
@@ -1960,14 +1960,14 @@ no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition impo
         sure that you verify the polling_interval setting with your storage
         system vendor. Different storage systems can require different
         settings.
-       </p></dd><dt id="idm139668447139536"><span class="term "><code class="literal">rr_min_io_rq</code>
+       </p></dd><dt id="idm139795998547536"><span class="term "><code class="literal">rr_min_io_rq</code>
       </span></dt><dd><p>
         Specifies the number of I/O requests to route to a path before
         switching to the next path in the current path group, using
         request-based device-mapper-multipath.
        </p><p>
         Specify an integer value greater than 0. The default value is 1.
-       </p><div class="verbatim-wrap"><pre class="screen">rr_min_io_rq "1"</pre></div></dd><dt id="idm139668447136320"><span class="term "><code class="literal">rr_weight</code>
+       </p><div class="verbatim-wrap"><pre class="screen">rr_min_io_rq "1"</pre></div></dd><dt id="idm139795998544320"><span class="term "><code class="literal">rr_weight</code>
       </span></dt><dd><p>
         Specifies the weighting method to use for paths.
        </p><div class="informaltable"><table border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
@@ -1995,7 +1995,7 @@ no_path_retry "0"</pre></div><div id="idm139668447215808" class="admonition impo
              Each path’s weight is determined by the path’s priority times
              the rr_min_io_rq setting.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm139668447122096"><span class="term "><code class="literal">uid_attribute</code>
+           </td></tr></tbody></table></div></dd><dt id="idm139795998530096"><span class="term "><code class="literal">uid_attribute</code>
       </span></dt><dd><p>
         A udev attribute that provides a unique path identifier. The default
         value is <code class="literal">ID_SERIAL</code>.
@@ -2182,7 +2182,7 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
     </p></li><li class="listitem "><p>
      If you grow your system by adding new HBA adapters to the server or
      expanding the storage subsystem in your SAN.
-    </p></li></ul></div><div id="idm139668447015664" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Assumptions</h6><p>
+    </p></li></ul></div><div id="idm139795998423408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Assumptions</h6><p>
     The following instructions assume the software RAID device is
     <code class="filename">/dev/mapper/mpath0</code>, which is its device name as
     recognized by the kernel. It assumes you have enabled user-friendly names
@@ -2244,7 +2244,7 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
      </td></tr><tr><td><code class="literal">0 253 0 0 active sync /dev/dm-0</code>
      </td></tr><tr><td><code class="literal">1 253 1 1 active sync /dev/dm-1</code>
      </td></tr><tr><td><code class="literal">2 253 2 2 active sync /dev/dm-2</code>
-     </td></tr></table></li></ol></div></div><div id="idm139668446975728" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using mdadm with Multipath Devices</h6><p>
+     </td></tr></table></li></ol></div></div><div id="idm139795998383472" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using mdadm with Multipath Devices</h6><p>
     The <code class="command">mdadm</code> tool requires that the devices be accessed by
     the ID rather than by the device node path. Refer to
     <a class="xref" href="cha.multipath.html#sec.multipath.mpiotools.mdadm" title="16.4.3. Using MDADM for Multipathed Devices">Section 16.4.3, “Using MDADM for Multipathed Devices”</a> for details.
@@ -2271,7 +2271,7 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
     For most storage subsystems, the script can be run successfully without
     options. However, some special cases might need to use one or more options.
     Run <code class="command">rescan-scsi-bus.sh --help</code> for details.
-   </p><div id="idm139668446963712" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
+   </p><div id="idm139795998371584" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
      In EMC PowerPath environments, do not use the
      <code class="filename">rescan-scsi-bus.sh</code> utility provided with the
      operating system or the HBA vendor scripts for scanning the SCSI buses. To
@@ -2319,7 +2319,7 @@ Feb 14 01:03 multipathd: mpath5: remaining active paths: 1
      </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.scanpart"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.scanpart"><span class="number">16.14.2 </span><span class="name">Scanning for New Partitioned Devices without Rebooting</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.scanpart">#</a></h3></div></div></div><p>
     Use the example in this section to detect a newly added multipathed LUN
     without rebooting.
-   </p><div id="idm139668446944752" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
+   </p><div id="idm139795998352624" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
      In EMC PowerPath environments, do not use the
      <code class="filename">rescan-scsi-bus.sh</code> utility provided with the
      operating system or the HBA vendor scripts for scanning the SCSI buses. To
