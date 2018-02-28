@@ -57,40 +57,40 @@ hljs.configure({
     </p></li><li class="listitem "><p>
      <code class="filename">/tool</code> - stores general information about various
      tools.
-    </p></li></ul></div><div id="idm140056223084176" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></li></ul></div><div id="idm139769327417552" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     Each VM Guest has two different ID numbers. The <span class="emphasis"><em>universal
     unique identifier</em></span> (UUID) remains the same even if the
     VM Guest is migrated to another machine. The <span class="emphasis"><em>domain
     identifier</em></span> (DOMID) is an identification number that
     represents a particular running instance. It typically changes when the
     VM Guest is migrated to another machine.
-   </p></div><div class="sect2 " id="idm140056223082128"><div class="titlepage"><div><div><h3 class="title" id="idm140056223082128"><span class="number">23.2.1 </span><span class="name">XenStore Commands</span> <a title="Permalink" class="permalink" href="cha.xen.xenstore.html#idm140056223082128">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm139769327415504"><div class="titlepage"><div><div><h3 class="title" id="idm139769327415504"><span class="number">23.2.1 </span><span class="name">XenStore Commands</span> <a title="Permalink" class="permalink" href="cha.xen.xenstore.html#idm139769327415504">#</a></h3></div></div></div><p>
     The file system structure of the XenStore database can be operated
     with the following commands:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140056223080560"><span class="term "><code class="command">xenstore-ls</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769327413936"><span class="term "><code class="command">xenstore-ls</code>
      </span></dt><dd><p>
        Displays the full dump of the XenStore database.
-      </p></dd><dt id="idm140056223078432"><span class="term "><code class="command">xenstore-read</code><code class="option">path_to_xenstore_entry</code>
+      </p></dd><dt id="idm139769327411808"><span class="term "><code class="command">xenstore-read</code><code class="option">path_to_xenstore_entry</code>
      </span></dt><dd><p>
        Displays the value of the specified XenStore entry.
-      </p></dd><dt id="idm140056223076016"><span class="term "><code class="command">xenstore-exists</code><code class="option">xenstore_path</code>
+      </p></dd><dt id="idm139769327409392"><span class="term "><code class="command">xenstore-exists</code><code class="option">xenstore_path</code>
      </span></dt><dd><p>
        Reports whether the specified XenStore path exists.
-      </p></dd><dt id="idm140056223073600"><span class="term "><code class="command">xenstore-list</code><code class="option">xenstore_path</code>
+      </p></dd><dt id="idm139769327406976"><span class="term "><code class="command">xenstore-list</code><code class="option">xenstore_path</code>
      </span></dt><dd><p>
        Displays all the children entries of the specified XenStore
        path.
-      </p></dd><dt id="idm140056223071168"><span class="term "><code class="command">xenstore-write</code><code class="option">path_to_xenstore_entry</code>
+      </p></dd><dt id="idm139769327404544"><span class="term "><code class="command">xenstore-write</code><code class="option">path_to_xenstore_entry</code>
      </span></dt><dd><p>
        Updates the value of the specified XenStore entry.
-      </p></dd><dt id="idm140056223068752"><span class="term "><code class="command">xenstore-rm</code><code class="option">xenstore_path</code>
+      </p></dd><dt id="idm139769327402128"><span class="term "><code class="command">xenstore-rm</code><code class="option">xenstore_path</code>
      </span></dt><dd><p>
        Removes the specified XenStore entry or directory.
-      </p></dd><dt id="idm140056223066336"><span class="term "><code class="command">xenstore-chmod</code><code class="option">xenstore_path</code><code class="option">mode</code>
+      </p></dd><dt id="idm139769327399712"><span class="term "><code class="command">xenstore-chmod</code><code class="option">xenstore_path</code><code class="option">mode</code>
      </span></dt><dd><p>
        Updates the read/write permission on the specified XenStore
        path.
-      </p></dd><dt id="idm140056223063616"><span class="term "><code class="command">xenstore-control</code>
+      </p></dd><dt id="idm139769327396992"><span class="term "><code class="command">xenstore-control</code>
      </span></dt><dd><p>
        Sends a command to the <code class="systemitem">xenstored</code> back-end,
        such as triggering an integrity check.
@@ -129,31 +129,31 @@ name</pre></div><p>
 1</pre></div><p>
     A list of selected <code class="filename">/vm/&lt;uuid&gt;</code> entries
     follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140056223051200"><span class="term "><code class="literal">uuid</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769327384576"><span class="term "><code class="literal">uuid</code>
      </span></dt><dd><p>
        UUID of the VM Guest. It does not change during the migration
        process.
-      </p></dd><dt id="idm140056223049040"><span class="term "><code class="literal">on_reboot</code>
+      </p></dd><dt id="idm139769327382416"><span class="term "><code class="literal">on_reboot</code>
      </span></dt><dd><p>
        Specifies whether to destroy or restart the VM Guest in response
        to a reboot request.
-      </p></dd><dt id="idm140056223046864"><span class="term "><code class="literal">on_poweroff</code>
+      </p></dd><dt id="idm139769327380240"><span class="term "><code class="literal">on_poweroff</code>
      </span></dt><dd><p>
        Specifies whether to destroy or restart the VM Guest in response
        to a halt request.
-      </p></dd><dt id="idm140056223044688"><span class="term "><code class="literal">on_crash</code>
+      </p></dd><dt id="idm139769327378064"><span class="term "><code class="literal">on_crash</code>
      </span></dt><dd><p>
        Specifies whether to destroy or restart the VM Guest in response
        to a crash.
-      </p></dd><dt id="idm140056223042528"><span class="term "><code class="literal">vcpus</code>
+      </p></dd><dt id="idm139769327375904"><span class="term "><code class="literal">vcpus</code>
      </span></dt><dd><p>
        Number of virtual CPUs allocated to the VM Guest.
-      </p></dd><dt id="idm140056223040400"><span class="term "><code class="literal">vcpu_avail</code>
+      </p></dd><dt id="idm139769327373776"><span class="term "><code class="literal">vcpu_avail</code>
      </span></dt><dd><p>
        Bitmask of active virtual CPUs for the VM Guest. The bitmask has
        several bits equal to the value of <code class="literal">vcpus</code>, with
        a bit set for each online virtual CPU.
-      </p></dd><dt id="idm140056223037728"><span class="term "><code class="literal">name</code>
+      </p></dd><dt id="idm139769327371104"><span class="term "><code class="literal">name</code>
      </span></dt><dd><p>
        The name of the VM Guest.
       </p></dd></dl></div><p>
@@ -168,43 +168,43 @@ dmargs
 device-model
 display</pre></div><p>
     An explanation of the used entries follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140056223032624"><span class="term "><code class="literal">ostype</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769327366000"><span class="term "><code class="literal">ostype</code>
      </span></dt><dd><p>
        The OS type of the VM Guest.
-      </p></dd><dt id="idm140056223030512"><span class="term "><code class="literal">kernel</code>
+      </p></dd><dt id="idm139769327363888"><span class="term "><code class="literal">kernel</code>
      </span></dt><dd><p>
        The path on Dom0 to the kernel for the VM Guest.
-      </p></dd><dt id="idm140056223028384"><span class="term "><code class="literal">cmdline</code>
+      </p></dd><dt id="idm139769327361760"><span class="term "><code class="literal">cmdline</code>
      </span></dt><dd><p>
        The kernel command line for the VM Guest used when booting.
-      </p></dd><dt id="idm140056223026240"><span class="term "><code class="literal">ramdisk</code>
+      </p></dd><dt id="idm139769327359616"><span class="term "><code class="literal">ramdisk</code>
      </span></dt><dd><p>
        The path on Dom0 to the RAM disk for the VM Guest.
-      </p></dd><dt id="idm140056223024112"><span class="term "><code class="literal">dmargs</code>
+      </p></dd><dt id="idm139769327357488"><span class="term "><code class="literal">dmargs</code>
      </span></dt><dd><p>
        Shows arguments passed to the QEMU process. If you look at the
        QEMU process with <code class="command">ps</code>, you should see the same
        arguments as in
        <code class="filename">/vm/&lt;uuid&gt;/image/dmargs</code>.
-      </p></dd></dl></div></div><div class="sect2 " id="idm140056223020688"><div class="titlepage"><div><div><h3 class="title" id="idm140056223020688"><span class="number">23.2.3 </span><span class="name"><code class="filename">/local/domain/&lt;domid&gt;</code></span> <a title="Permalink" class="permalink" href="cha.xen.xenstore.html#idm140056223020688">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect2 " id="idm139769327354064"><div class="titlepage"><div><div><h3 class="title" id="idm139769327354064"><span class="number">23.2.3 </span><span class="name"><code class="filename">/local/domain/&lt;domid&gt;</code></span> <a title="Permalink" class="permalink" href="cha.xen.xenstore.html#idm139769327354064">#</a></h3></div></div></div><p>
     This path is indexed by the running domain (VM Guest) ID, and
     contains information about the running VM Guest. Remember that the
     domain ID changes during VM Guest migration. The following entries
     are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140056223018880"><span class="term "><code class="literal">vm</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769327352256"><span class="term "><code class="literal">vm</code>
      </span></dt><dd><p>
        The path of the <code class="filename">/vm</code> directory for this
        VM Guest.
-      </p></dd><dt id="idm140056223016304"><span class="term "><code class="literal">on_reboot, on_poweroff, on_crash, name</code>
+      </p></dd><dt id="idm139769327349680"><span class="term "><code class="literal">on_reboot, on_poweroff, on_crash, name</code>
      </span></dt><dd><p>
        See identical options in <a class="xref" href="cha.xen.xenstore.html#xenstore.vm" title="23.2.2. /vm">Section 23.2.2, “<code class="filename">/vm</code>”</a>
-      </p></dd><dt id="idm140056223013632"><span class="term "><code class="literal">domid</code>
+      </p></dd><dt id="idm139769327347008"><span class="term "><code class="literal">domid</code>
      </span></dt><dd><p>
        Domain identifier for the VM Guest.
-      </p></dd><dt id="idm140056223011520"><span class="term "><code class="literal">cpu</code>
+      </p></dd><dt id="idm139769327344896"><span class="term "><code class="literal">cpu</code>
      </span></dt><dd><p>
        The current CPU to which the VM Guest is pinned.
-      </p></dd><dt id="idm140056223009392"><span class="term "><code class="literal">cpu_weight</code>
+      </p></dd><dt id="idm139769327342768"><span class="term "><code class="literal">cpu_weight</code>
      </span></dt><dd><p>
        The weight assigned to the VM Guest for scheduling purposes.
        Higher weights use the physical CPUs more often.
@@ -215,26 +215,26 @@ display</pre></div><p>
     entries. To see all entries available, refer to
     <a class="link" href="http://wiki.xen.org/wiki/XenStore_Reference" target="_blank">XenStore
     Reference</a>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140056223004944"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/memory</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769327338320"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/memory</code>
      </span></dt><dd><p>
        Contains memory information.
        <code class="literal">/local/domain/&lt;domid&gt;/memory/target</code>
        contains target memory size for the VM Guest (in kilobytes).
-      </p></dd><dt id="idm140056223002288"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/console</code>
+      </p></dd><dt id="idm139769327335664"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/console</code>
      </span></dt><dd><p>
        Contains information about a console used by the VM Guest.
-      </p></dd><dt id="idm140056223000128"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/backend</code>
+      </p></dd><dt id="idm139769327333504"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/backend</code>
      </span></dt><dd><p>
        Contains information about all back-end devices used by the
        VM Guest. The path has subdirectories of its own.
-      </p></dd><dt id="idm140056222997920"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/device</code>
+      </p></dd><dt id="idm139769327331296"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/device</code>
      </span></dt><dd><p>
        Contains information about the front-end devices for the
        VM Guest.
-      </p></dd><dt id="idm140056222995744"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/device-misc</code>
+      </p></dd><dt id="idm139769327329120"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/device-misc</code>
      </span></dt><dd><p>
        Contains miscellaneous information about devices.
-      </p></dd><dt id="idm140056222993600"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/store</code>
+      </p></dd><dt id="idm139769327326976"><span class="term "><code class="literal">/local/domain/&lt;domid&gt;/store</code>
      </span></dt><dd><p>
        Contains information about the VM Guest's store.
       </p></dd></dl></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.xen.ha.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 24 </span>Xen as a High-Availability Virtualization Host</span></a><a class="nav-link" href="cha.xen.admin.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 22 </span>Administrative Tasks</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
