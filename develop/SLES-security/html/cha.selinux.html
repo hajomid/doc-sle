@@ -247,13 +247,13 @@ system_u:object_r:var_t var</pre></div></div></div><p>
    the <span class="guimenu">Optional Kernel Command Line Parameters</span>:
   </p><div class="verbatim-wrap"><pre class="screen">security=selinux selinux=1 enforcing=0</pre></div><p>
    These options are used for the following purposes:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140300007683696"><span class="term "><code class="literal">security=selinux</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139738564254784"><span class="term "><code class="literal">security=selinux</code>
     </span></dt><dd><p>
       This option tells the kernel to use SELinux and not <span class="phrase">AppArmor</span>
-     </p></dd><dt id="idm140300007681120"><span class="term "><code class="literal">selinux=1</code>
+     </p></dd><dt id="idm139738564252208"><span class="term "><code class="literal">selinux=1</code>
     </span></dt><dd><p>
       This option switches on SELinux
-     </p></dd><dt id="idm140300007679008"><span class="term "><code class="literal">enforcing=0</code>
+     </p></dd><dt id="idm139738564250096"><span class="term "><code class="literal">enforcing=0</code>
     </span></dt><dd><p>
       This option puts SELinux in permissive mode. In this mode, SELinux is
       fully functional, but does not enforce any of the security settings in
@@ -270,7 +270,7 @@ system_u:object_r:var_t var</pre></div></div></div><p>
    includes the <span class="emphasis"><em>minimum</em></span> SELinux reference policy in the
    package <span class="package">selinux-policy-minimum</span>. The examples in
    this chapter refer to this policy if not stated otherwise.
-  </p><div id="idm140300007669520" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div id="idm139738564240608" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     To install a different policy, you need to download it from
     <a class="link" href="https://build.opensuse.org/package/binaries/security:SELinux/selinux-policy?repository=SLE_12" target="_blank">https://build.opensuse.org/package/binaries/security:SELinux/selinux-policy?repository=SLE_12</a>
     and install:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> zypper in selinux-policy-targeted-<em class="replaceable ">VERSION_NUMBER</em>.noarch.rpm</pre></div></div><p>
@@ -299,7 +299,7 @@ system_u:object_r:var_t var</pre></div></div></div><p>
    fully understand how context type is applied to files and directories. Do
    not forget to make a backup of the <code class="filename">file_contexts</code>
    file before starting.
-  </p><div id="idm140300007655424" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The User <code class="systemitem">nobody</code></h6><p>
+  </p><div id="idm139738564226512" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The User <code class="systemitem">nobody</code></h6><p>
     While using <code class="command">semanage</code>, you may get a message that
     complains about the home directory of
     <code class="systemitem">nobody</code>. In this case, change
@@ -484,15 +484,15 @@ system_u:system_r:fsdaemon_t    root      3437  0.0  0.0  16468  1040 ?        S
 system_u:system_r:sysadm_t      root      3441  0.0  0.0  66916  2152 ?        Ss   05:32   0:00 login -- root
 system_u:system_r:sysadm_t      root      3442  0.0  0.0   4596   800 tty2     Ss+  05:32   0:00 /sbin/mingetty tty2</pre></div></div></div></div><div class="sect2 " id="sec.selinux.selectmode"><div class="titlepage"><div><div><h3 class="title" id="sec.selinux.selectmode"><span class="number">30.6.2 </span><span class="name">Selecting the SELinux Mode</span> <a title="Permalink" class="permalink" href="cha.selinux.html#sec.selinux.selectmode">#</a></h3></div></div></div><p>
     In SELinux, three different modes can be used:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140300007606720"><span class="term ">Enforcing:</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139738564177872"><span class="term ">Enforcing:</span></dt><dd><p>
        This is the default mode. SELinux protects your server according to
        the rules in the policy, and SELinux logs all of its activity to the
        audit log.
-      </p></dd><dt id="idm140300007604768"><span class="term ">Permissive:</span></dt><dd><p>
+      </p></dd><dt id="idm139738564175920"><span class="term ">Permissive:</span></dt><dd><p>
        This mode is useful for troubleshooting. If set to Permissive,
        SELinux does not protect your server, but it still logs everything
        that happens to the log files.
-      </p></dd><dt id="idm140300007602800"><span class="term ">Disabled:</span></dt><dd><p>
+      </p></dd><dt id="idm139738564173952"><span class="term ">Disabled:</span></dt><dd><p>
        In this mode, SELinux is switched off completely and no logging
        occurs. The file system labels however are not removed from the file
        system.
@@ -699,32 +699,32 @@ type=AVC msg=audit(1348173901.309:300): avc:  denied  { append } for  pid=1316</
    to read. However, on closer examination they are not that hard to
    understand. Every line can be broken down into sections. For example, the
    sections in the last line are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140300007505008"><span class="term "><code class="literal">type=AVC</code>:</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139738564076096"><span class="term "><code class="literal">type=AVC</code>:</span></dt><dd><p>
       every SELinux-related audit log line starts with the type
       identification <code class="literal">type=AVC</code>
-     </p></dd><dt id="idm140300007502416"><span class="term "><code class="literal">msg=audit(1348173901.309:300)</code>: </span></dt><dd><p>
+     </p></dd><dt id="idm139738564073504"><span class="term "><code class="literal">msg=audit(1348173901.309:300)</code>: </span></dt><dd><p>
       This is the time stamp, which unfortunately is written in epoch time,
       the number of seconds that have passed since Jan 1, 1970. You can use
       <code class="command">date -d</code> on the part up to the dot in the epoch time
       notation to find out when the event has happened:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>date -d @1348173901
-Thu Sep 20 16:45:01 EDT 2012</pre></div></dd><dt id="idm140300007498864"><span class="term "><code class="literal">avc: denied { append }</code>:</span></dt><dd><p>
+Thu Sep 20 16:45:01 EDT 2012</pre></div></dd><dt id="idm139738564069952"><span class="term "><code class="literal">avc: denied { append }</code>:</span></dt><dd><p>
       the specific action that was denied. In this case the system has
       denied the appending of data to a file. While browsing through the
       audit log file, you can see other system actions, such as write open,
       getattr and more.
-     </p></dd><dt id="idm140300007496544"><span class="term "><code class="literal">for pid=1316</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564067632"><span class="term "><code class="literal">for pid=1316</code>:</span></dt><dd><p>
       the process ID of the command or process that initiated the action
-     </p></dd><dt id="idm140300007494400"><span class="term "><code class="literal">comm="rsyslogd"</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564065488"><span class="term "><code class="literal">comm="rsyslogd"</code>:</span></dt><dd><p>
       the specific command that was associated with that PID
-     </p></dd><dt id="idm140300007492272"><span class="term "><code class="literal">name="smartmontools"</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564063360"><span class="term "><code class="literal">name="smartmontools"</code>:</span></dt><dd><p>
       the name of the subject of the action
-     </p></dd><dt id="idm140300007490160"><span class="term "><code class="literal">dev=sda6 ino=582296</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564061248"><span class="term "><code class="literal">dev=sda6 ino=582296</code>:</span></dt><dd><p>
       the block device and inode number of the file that was involved
-     </p></dd><dt id="idm140300007488016"><span class="term "><code class="literal">scontext=system_u:system_r:syslogd_t</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564059104"><span class="term "><code class="literal">scontext=system_u:system_r:syslogd_t</code>:</span></dt><dd><p>
       the source context, which is the context of the initiator of the
       action
-     </p></dd><dt id="idm140300007485840"><span class="term "><code class="literal">tclass=file</code>:</span></dt><dd><p>
+     </p></dd><dt id="idm139738564056928"><span class="term "><code class="literal">tclass=file</code>:</span></dt><dd><p>
       a class identification of the subject
      </p></dd></dl></div><p>
    Instead of interpreting the events in audit.log yourself, there is
@@ -737,10 +737,10 @@ Thu Sep 20 16:45:01 EDT 2012</pre></div></dd><dt id="idm140300007498864"><span c
    -a</code> by default works on the audit.log file. If you want to
    analyze a specific message in the audit.log file, copy it to a temporary
    file and analyze the file with:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -w -i <em class="replaceable ">FILENAME</em></pre></div><div class="example" id="idm140300007479552"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.9: </span><span class="name">Analyzing Audit Messages </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm140300007479552">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -w -i testfile
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -w -i <em class="replaceable ">FILENAME</em></pre></div><div class="example" id="idm139738564050640"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.9: </span><span class="name">Analyzing Audit Messages </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm139738564050640">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -w -i testfile
 type=AVC msg=audit(1348173901.309:300): avc:  denied  { append } for  pid=1316
 comm="rsyslogd" name="acpid" dev=sda6 ino=582296
-scontext=system_u:system_r:syslogd_t tcontext=system_u:object_r:apmd_log_t tclass=file</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140300007477104"><span class="term ">This was caused by:</span></dt><dd><p>
+scontext=system_u:system_r:syslogd_t tcontext=system_u:object_r:apmd_log_t tclass=file</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139738564048192"><span class="term ">This was caused by:</span></dt><dd><p>
       Missing type enforcement (TE) allow rule.
      </p><p>
       To generate a loadable module to allow this access, run
@@ -750,7 +750,7 @@ scontext=system_u:system_r:syslogd_t tcontext=system_u:object_r:apmd_log_t tclas
    events that were logged to the <code class="filename">audit.log </code> file, or
    <code class="command">audit2allow -i <em class="replaceable ">FILENAME</em></code> to
    show it for messages that you have stored in a specific file:
-  </p><div class="example" id="idm140300007471360"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.10: </span><span class="name">Viewing Which Lines Deny Access </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm140300007471360">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -i testfile
+  </p><div class="example" id="idm139738564042448"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.10: </span><span class="name">Viewing Which Lines Deny Access </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm139738564042448">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -i testfile
 #============= syslogd_t ==============
 allow syslogd_t apmd_log_t:file append;</pre></div></div></div><p>
    To create an SELinux module with the name <code class="literal">mymodule</code>
@@ -760,7 +760,7 @@ allow syslogd_t apmd_log_t:file append;</pre></div></div></div><p>
    audit.log, use the <code class="option">-a -M</code> command arguments. To do it
    only for specific messages that are in a specific file, use <code class="option">-i
    -M</code> as in the example below:
-  </p><div class="example" id="idm140300007465776"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.11: </span><span class="name">Creating a Policy Module Allowing an Action Previously Denied </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm140300007465776">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -i testfile -M example
+  </p><div class="example" id="idm139738564036864"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 30.11: </span><span class="name">Creating a Policy Module Allowing an Action Previously Denied </span><a title="Permalink" class="permalink" href="cha.selinux.html#idm139738564036864">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> audit2allow -i testfile -M example
 ******************** IMPORTANT ***********************
 To make this policy package active, execute:
 
