@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.x86.html">Installation on AMD64 and Intel 64</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li></ol></li><li class="inactive"><a href="part.deployment.html"><span class="number">II </span><span class="name">The Installation Workflow</span></a><ol><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">3 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">4 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.remote_installation.html"><span class="number">5 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.deployment.clone_image.html"><span class="number">6 </span><span class="name">Cloning Disk Images</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">7 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting Up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">8 </span><span class="name">Setting Up a Network Installation Source</span></a></li><li class="inactive"><a href="cha.deployment.prep_pxe.html"><span class="number">9 </span><span class="name">Preparing Network Boot Environment</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">IV </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.yast.hw.html"><span class="number">10 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li><li class="inactive"><a href="cha.yast.sw.html"><span class="number">12 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">13 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">14 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.yast.userman.html"><span class="number">15 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">16 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="app.create-os-image.html"><span class="number">A </span><span class="name">Imaging and Creating Products</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 1. Planning for SUSE Linux Enterprise Desktop" href="cha.sled_plan.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. The Installation Workflow" href="part.deployment.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.x86.html">Installation on AMD64 and Intel 64</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 1. Planning for SUSE Linux Enterprise Desktop" href="cha.sled_plan.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. The Installation Workflow" href="part.deployment.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.x86"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_x86.xml</li><li><span class="ds-label">ID: </span>cha.x86</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.x86.html#idm140015905190752">#</a></h6></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.x86.html">Installation on AMD64 and Intel 64</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.sled_plan.html"><span class="number">1 </span><span class="name">Planning for SUSE Linux Enterprise Desktop</span></a></li><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li></ol></li><li class="inactive"><a href="part.deployment.html"><span class="number">II </span><span class="name">The Installation Workflow</span></a><ol><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">3 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">4 </span><span class="name">Installation with YaST</span></a></li><li class="inactive"><a href="cha.remote_installation.html"><span class="number">5 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.deployment.clone_image.html"><span class="number">6 </span><span class="name">Cloning Disk Images</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">7 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting Up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">8 </span><span class="name">Setting Up a Network Installation Source</span></a></li><li class="inactive"><a href="cha.deployment.prep_pxe.html"><span class="number">9 </span><span class="name">Preparing Network Boot Environment</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">IV </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.yast.hw.html"><span class="number">10 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.advdisk.html"><span class="number">11 </span><span class="name">Advanced Disk Setup</span></a></li><li class="inactive"><a href="cha.yast.sw.html"><span class="number">12 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">13 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">14 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.yast.userman.html"><span class="number">15 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">16 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="app.create-os-image.html"><span class="number">A </span><span class="name">Imaging and Creating Products</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 1. Planning for SUSE Linux Enterprise Desktop" href="cha.sled_plan.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. The Installation Workflow" href="part.deployment.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.x86.html">Installation on AMD64 and Intel 64</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 1. Planning for SUSE Linux Enterprise Desktop" href="cha.sled_plan.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part II. The Installation Workflow" href="part.deployment.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.x86"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_x86.xml</li><li><span class="ds-label">ID: </span>cha.x86</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.x86.html#idm139770836509104">#</a></h6></div><p>
     This chapter describes the steps necessary to prepare for the installation
     of <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> on AMD64 and Intel 64 computers. It introduces the
     steps required to prepare for various installation methods. The list of
@@ -44,14 +44,14 @@ hljs.configure({
   The Intel 64 and AMD64 architectures support the simple migration of
   x86 software to 64 bits. Like the x86 architecture, they constitute a
   value-for-money alternative.
- </p><div class="variablelist " id="l.x86.sysreqs.hw"><dl class="variablelist"><dt id="idm140015905179568"><span class="term ">CPU</span></dt><dd><p>
+ </p><div class="variablelist " id="l.x86.sysreqs.hw"><dl class="variablelist"><dt id="idm139770836497920"><span class="term ">CPU</span></dt><dd><p>
      All CPUs available on the market to date are supported.
-    </p></dd><dt id="idm140015905177808"><span class="term ">Maximum Number of CPUs</span></dt><dd><p>
+    </p></dd><dt id="idm139770838958544"><span class="term ">Maximum Number of CPUs</span></dt><dd><p>
      The maximum number of CPUs supported by software design is 8192 for
      Intel 64 and AMD64. If you plan to use such a large system, verify
      with our hardware system certification Web page for supported devices,
      see <a class="link" href="https://www.suse.com/yessearch/" target="_blank">https://www.suse.com/yessearch/</a>.
-    </p></dd><dt id="idm140015905175216"><span class="term ">Memory Requirements</span></dt><dd><p>
+    </p></dd><dt id="idm139770838955952"><span class="term ">Memory Requirements</span></dt><dd><p>
 
      A minimum of 512 MB of memory is required for a minimal installation.
      However, the minimum recommended is 1024 MB or 512 MB per CPU on
@@ -110,7 +110,7 @@ hljs.configure({
          <p>
           min. 8 GB
          </p>
-        </td></tr></tbody></table></div></dd><dt id="idm140015907757616"><span class="term ">Boot Methods</span></dt><dd><p>
+        </td></tr></tbody></table></div></dd><dt id="idm139770838935360"><span class="term ">Boot Methods</span></dt><dd><p>
      The computer can be booted from a CD or a network. A special boot server
      is required to boot over the network. This can be set up with SUSE Linux Enterprise Server.
     </p></dd></dl></div></div><div class="sect1 " id="sec.x86.prep.considerations"><div class="titlepage"><div><div><h2 class="title" id="sec.x86.prep.considerations"><span class="number">2.2 </span><span class="name">Installation Considerations</span> <a title="Permalink" class="permalink" href="cha.x86.html#sec.x86.prep.considerations">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_x86_choose.xml</li><li><span class="ds-label">ID: </span>sec.x86.prep.considerations</li></ul></div></div></div></div><p>
@@ -173,13 +173,13 @@ hljs.configure({
   </p><div class="sect2 " id="sec.x86.media.boot"><div class="titlepage"><div><div><h3 class="title" id="sec.x86.media.boot"><span class="number">2.4.1 </span><span class="name">Boot Media</span> <a title="Permalink" class="permalink" href="cha.x86.html#sec.x86.media.boot">#</a></h3></div></div></div><p>
     Booting a computer depends on the capabilities of the hardware used and the
     availability of media for the respective boot option.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140015907712144"><span class="term ">Booting from DVD</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139770838889824"><span class="term ">Booting from DVD</span></dt><dd><p>
        This is the most common possibility of booting a system. It is
        straightforward for most computer users, but requires a lot of
        interaction for every installation process. If you did not receive
        a DVD, get the ISO image from the SUSE homepage and burn it to a
        DVD. The DVD also contains the data required for the basic installation.
-      </p></dd><dt id="idm140015907710000"><span class="term ">Booting from a USB Flash Drive</span></dt><dd><p>
+      </p></dd><dt id="idm139770838887680"><span class="term ">Booting from a USB Flash Drive</span></dt><dd><p>
        In case your machine is not equipped with an optical drive, you can
        boot the installation image from a flash disk. To create a bootable
        flash disk, you need to copy either the DVD or the Mini CD ISO image
@@ -187,7 +187,7 @@ hljs.configure({
        must not be mounted, all data on the device will be erased):
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">dd</code> if=<em class="replaceable ">PATH_TO_ISO_IMAGE</em> of=<em class="replaceable ">USB_STORAGE_DEVICE</em> bs=4M</pre></div><p>
        The ISO image also contains the data required for the basic installation.
-      </p></dd><dt id="idm140015907704704"><span class="term ">Booting from the Network</span></dt><dd><p>
+      </p></dd><dt id="idm139770838882384"><span class="term ">Booting from the Network</span></dt><dd><p>
        You can only boot a computer directly from the network if this is
        supported by the computer's firmware or BIOS. This booting method
        requires a boot server that provides the needed boot images over the
@@ -200,15 +200,15 @@ hljs.configure({
     available to the installation system after booting for installation. Several
     possibilities for providing the installation media to the system are
     available with <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140015907696064"><span class="term ">Installation from DVD</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139770838873744"><span class="term ">Installation from DVD</span></dt><dd><p>
        All necessary data is delivered on the boot media. Depending on the
        selected installation, a network connection or add-on media may be
        necessary.
-      </p></dd><dt id="idm140015907694112"><span class="term ">Installation from USB Flash Drive</span></dt><dd><p>
+      </p></dd><dt id="idm139770838871792"><span class="term ">Installation from USB Flash Drive</span></dt><dd><p>
        All necessary data is delivered on the boot media. Depending on the
        selected installation, a network connection or add-on media may be
        necessary.
-      </p></dd><dt id="idm140015907692144"><span class="term ">Networked Installation</span></dt><dd><p>
+      </p></dd><dt id="idm139770838869824"><span class="term ">Networked Installation</span></dt><dd><p>
        If you plan to install several systems, providing the installation media
        over the network makes things a lot easier. It is possible to install
        from many common protocols, such as NFS, HTTP, FTP, or SMB. For more
@@ -223,20 +223,20 @@ hljs.configure({
    <a class="xref" href="cha.remote_installation.html" title="Chapter 5. Remote Installation">Chapter 5, <em>Remote Installation</em></a>.
   </p><p>
    A brief overview of the different methods:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140015907680400"><span class="term ">Local with Monitor and Keyboard</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139770838858080"><span class="term ">Local with Monitor and Keyboard</span></dt><dd><p>
       This is the method most frequently used to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>. This
       also requires the smallest preparation effort but requires a lot of
       direct interaction.
-     </p></dd><dt id="idm140015907677392"><span class="term ">Remote via SSH</span></dt><dd><p>
+     </p></dd><dt id="idm139770838855072"><span class="term ">Remote via SSH</span></dt><dd><p>
       You can control the installation via SSH either in text mode or use
       X-forwarding for a graphical installation. For details refer to
       <a class="xref" href="cha.remote_installation.html#sec.remote_installation.monitor_ssh" title="5.4. Monitoring Installation via SSH">Section 5.4, “Monitoring Installation via SSH”</a>.
-     </p></dd><dt id="idm140015907674896"><span class="term ">Remote via Serial Console</span></dt><dd><p>
+     </p></dd><dt id="idm139770838852576"><span class="term ">Remote via Serial Console</span></dt><dd><p>
       For this installation method you need a second computer connected by a
       <span class="emphasis"><em>null modem</em></span> cable to the computer on which to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>.
       The installation then proceeds in text mode. For details refer to
       <a class="xref" href="cha.remote_installation.html#sec.remote_installation.monitor_serial" title="5.5. Monitoring Installation via Serial Console">Section 5.5, “Monitoring Installation via Serial Console”</a>.
-     </p></dd><dt id="idm140015907670960"><span class="term ">Remote via VNC</span></dt><dd><p>
+     </p></dd><dt id="idm139770838848640"><span class="term ">Remote via VNC</span></dt><dd><p>
       Use this method if you want a graphical installation without direct access
       to the target machine. For details refer to
       <a class="xref" href="cha.remote_installation.html#sec.remote_installation.monitor_vnc" title="5.3. Monitoring Installation via VNC">Section 5.3, “Monitoring Installation via VNC”</a>.
@@ -248,10 +248,10 @@ hljs.configure({
    Boot problems may prevent the YaST installer from starting on your system.
    Another symptom is when your system does not boot after the installation has
    been completed.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140015907660080"><span class="term ">Installed System Boots, Not Media</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139770838837760"><span class="term ">Installed System Boots, Not Media</span></dt><dd><p>
       Change your computer's firmware or BIOS so that the boot sequence is
       correct. To do this, consult the manual for your hardware.
-     </p></dd><dt id="idm140015907658144"><span class="term ">The Computer Hangs</span></dt><dd><p>
+     </p></dd><dt id="idm139770838835824"><span class="term ">The Computer Hangs</span></dt><dd><p>
       Change the console on your computer so that the kernel outputs are
       visible. Be sure to check the last outputs. This is normally done by
       pressing
@@ -259,12 +259,12 @@ hljs.configure({
       If you cannot resolve the problem, consult the <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> support
       staff. To log all system messages at boot time, use a serial connection
       as described in <a class="xref" href="cha.x86.html#sec.x86.prep.installation_methods" title="2.5. Controlling the Installation">Section 2.5, “Controlling the Installation”</a>.
-     </p></dd><dt id="idm140015907652976"><span class="term ">Boot Disk</span></dt><dd><p>
+     </p></dd><dt id="idm139770838830656"><span class="term ">Boot Disk</span></dt><dd><p>
       The boot disk is a useful interim solution if you have difficulties
       setting the other configurations or if you want to postpone the decision
       regarding the final boot mechanism. For more details on
       creating boot disks, see <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 13 “The Boot Loader GRUB 2” grub2-mkrescue</span>.
-     </p></dd><dt id="idm140015907650400"><span class="term ">Virus Warning after Installation</span></dt><dd><p>
+     </p></dd><dt id="idm139770838828080"><span class="term ">Virus Warning after Installation</span></dt><dd><p>
       There are BIOS variants that check the structure of the boot sector (MBR)
       and erroneously display a virus warning after the installation of GRUB 2.
       Solve this problem by entering the BIOS and looking for corresponding
