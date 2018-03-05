@@ -182,21 +182,21 @@ time_stamping         software
     <code class="command">ptp4l</code> measures time delay in two different ways:
     <span class="emphasis"><em>peer-to-peer</em></span> (P2P) or
     <span class="emphasis"><em>end-to-end</em></span> (E2E).
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139814066367584"><span class="term ">P2P</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139856229772512"><span class="term ">P2P</span></dt><dd><p>
        This method is specified with <code class="option">-P</code>.
       </p><p>
        It reacts to changes in the network environment faster and is more
        accurate in measuring the delay. It is only used in networks where
        each port exchanges PTP messages with one other port. P2P needs to be
        supported by all hardware on the communication path.
-      </p></dd><dt id="idm139814066364656"><span class="term ">E2E</span></dt><dd><p>
+      </p></dd><dt id="idm139856229769584"><span class="term ">E2E</span></dt><dd><p>
        This method is specified with <code class="option">-E</code>. This is the
        default.
-      </p></dd><dt id="idm139814066362384"><span class="term ">Automatic method selection</span></dt><dd><p>
+      </p></dd><dt id="idm139856229767312"><span class="term ">Automatic method selection</span></dt><dd><p>
        This method is specified with <code class="option">-A</code>. The automatic
        option starts <code class="command">ptp4l</code> in E2E mode, and changes to
        P2P mode if a peer delay request is received.
-      </p></dd></dl></div><div id="idm139814066359408" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Common Measurement Method</h6><p>
+      </p></dd></dl></div><div id="idm139856229764336" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Common Measurement Method</h6><p>
      All clocks on a single PTP communication path must use the same method
      to measure the time delay. A warning will be printed if either a peer
      delay request is received on a port using the E2E mechanism, or an E2E
@@ -232,18 +232,18 @@ sending: GET TIME_STATUS_NP
     <code class="command">ptp4l</code> instance. Increasing the value will retrieve
     the messages also from PTP nodes that are further from the local
     instance. The returned information may include:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139814066348192"><span class="term ">stepsRemoved</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139856229753184"><span class="term ">stepsRemoved</span></dt><dd><p>
        The number of communication nodes to the grandmaster clock.
-      </p></dd><dt id="idm139814066346336"><span class="term ">offsetFromMaster, master_offset</span></dt><dd><p>
+      </p></dd><dt id="idm139856229751328"><span class="term ">offsetFromMaster, master_offset</span></dt><dd><p>
        The last measured offset of the clock from the master clock
        (nanoseconds).
-      </p></dd><dt id="idm139814066344448"><span class="term ">meanPathDelay</span></dt><dd><p>
+      </p></dd><dt id="idm139856229749440"><span class="term ">meanPathDelay</span></dt><dd><p>
        The estimated delay of the synchronization messages sent from the
        master clock (nanoseconds).
-      </p></dd><dt id="idm139814066342560"><span class="term ">gmPresent</span></dt><dd><p>
+      </p></dd><dt id="idm139856229747552"><span class="term ">gmPresent</span></dt><dd><p>
        If <code class="literal">true</code>, the PTP clock is synchronized to the
        master clock; the local clock is not the grandmaster clock.
-      </p></dd><dt id="idm139814066340224"><span class="term ">gmIdentity</span></dt><dd><p>
+      </p></dd><dt id="idm139856229745216"><span class="term ">gmIdentity</span></dt><dd><p>
        This is the grandmaster's identity.
       </p></dd></dl></div><p>
     For a complete list of <code class="command">pmc</code> command line options, see
@@ -318,25 +318,25 @@ phc2sys[646.630]: phc offset       194 s2 freq  -36999 delay   2749</pre></div><
    a minimal list of changes to be made to the specific files. The string
    <em class="replaceable ">ethX</em> stands for the actual network interface
    name in your setup.
-  </p><div class="complex-example"><div class="example" id="idm139814066307200"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.1: </span><span class="name">Slave clock using software time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139814066307200">#</a></h6></div><div class="example-contents"><p>
+  </p><div class="complex-example"><div class="example" id="idm139856229712192"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.1: </span><span class="name">Slave clock using software time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139856229712192">#</a></h6></div><div class="example-contents"><p>
     <code class="filename">/etc/sysconfig/ptp4l</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-f /etc/ptp4l.conf -i ethX”</pre></div><p>
     No changes made to the distribution
     <code class="filename">/etc/ptp4l.conf</code>.
-   </p></div></div></div><div class="complex-example"><div class="example" id="idm139814066303968"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.2: </span><span class="name">Slave clock using hardware time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139814066303968">#</a></h6></div><div class="example-contents"><p>
+   </p></div></div></div><div class="complex-example"><div class="example" id="idm139856229708960"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.2: </span><span class="name">Slave clock using hardware time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139856229708960">#</a></h6></div><div class="example-contents"><p>
     <code class="filename">/etc/sysconfig/ptp4l</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-f /etc/ptp4l.conf -i ethX”</pre></div><p>
     <code class="filename">/etc/sysconfig/phc2sys</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-s ethX -w”</pre></div><p>
     No changes made to the distribution
     <code class="filename">/etc/ptp4l.conf</code>.
-   </p></div></div></div><div class="complex-example"><div class="example" id="idm139814066299376"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.3: </span><span class="name">Master clock using hardware time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139814066299376">#</a></h6></div><div class="example-contents"><p>
+   </p></div></div></div><div class="complex-example"><div class="example" id="idm139856229704368"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.3: </span><span class="name">Master clock using hardware time stamping </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139856229704368">#</a></h6></div><div class="example-contents"><p>
     <code class="filename">/etc/sysconfig/ptp4l</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-f /etc/ptp4l.conf -i ethX”</pre></div><p>
     <code class="filename">/etc/sysconfig/phc2sys</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-s CLOCK_REALTIME -c ethX -w”</pre></div><p>
     <code class="filename">/etc/ptp4l.conf</code>:
-   </p><div class="verbatim-wrap"><pre class="screen">priority1 127</pre></div></div></div></div><div class="complex-example"><div class="example" id="idm139814066294352"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.4: </span><span class="name">Master clock using software time stamping (not generally recommended) </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139814066294352">#</a></h6></div><div class="example-contents"><p>
+   </p><div class="verbatim-wrap"><pre class="screen">priority1 127</pre></div></div></div></div><div class="complex-example"><div class="example" id="idm139856229699344"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.4: </span><span class="name">Master clock using software time stamping (not generally recommended) </span><a title="Permalink" class="permalink" href="cha.tuning.ptp.html#idm139856229699344">#</a></h6></div><div class="example-contents"><p>
     <code class="filename">/etc/sysconfig/ptp4l</code>:
    </p><div class="verbatim-wrap"><pre class="screen">OPTIONS=”-f /etc/ptp4l.conf -i ethX”</pre></div><p>
     <code class="filename">/etc/ptp4l.conf</code>:
@@ -365,7 +365,7 @@ priority1 127
     not specify any remote NTP servers in
     <code class="filename">/etc/ntp.conf</code>:
    </p><div class="verbatim-wrap"><pre class="screen">server   127.127.1.0
-fudge    127.127.1.0 stratum 0</pre></div><div id="idm139814066276880" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: NTP and DHCP</h6><p>
+fudge    127.127.1.0 stratum 0</pre></div><div id="idm139856229681808" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: NTP and DHCP</h6><p>
      When the DHCP client command <code class="command">dhclient</code> receives a
      list of NTP servers, it adds them to NTP configuration by default. To
      prevent this behavior, set
