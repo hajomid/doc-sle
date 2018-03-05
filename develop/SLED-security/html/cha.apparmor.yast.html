@@ -66,12 +66,12 @@ hljs.configure({
      <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.edit.del" title="23.2.3. Deleting an Entry">Section 23.2.3, “Deleting an Entry”</a>.
     </p></li><li class="step "><p>
      When finished, click <span class="guimenu">Done</span>.
-    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.yast.edit"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.yast.edit"><span class="number">23.2 </span><span class="name">Editing Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.yast.html#sec.apparmor.yast.edit">#</a></h2></div></div></div><div id="idm139959504222544" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.yast.edit"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.yast.edit"><span class="number">23.2 </span><span class="name">Editing Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.yast.html#sec.apparmor.yast.edit">#</a></h2></div></div></div><div id="idm140155823384064" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     YaST offers basic manipulation for <span class="phrase">AppArmor</span> profiles, such
     as creating or editing. However, the most straightforward way
     to edit an <span class="phrase">AppArmor</span>
     profile is to use a text editor such as <code class="command">vi</code>:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> vi /etc/apparmor.d/usr.sbin.httpd2-prefork</pre></div></div><div id="idm139959504219104" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> vi /etc/apparmor.d/usr.sbin.httpd2-prefork</pre></div></div><div id="idm140155823380624" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     The <code class="command">vi</code> editor also includes syntax (error)
     highlighting and syntax error highlighting, which visually warns you
     when the syntax of the edited <span class="phrase">AppArmor</span> profile is wrong.
@@ -99,7 +99,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      In the pop-up that appears, click <span class="guimenu">Yes</span> to confirm
      your changes to the profile and reload the <span class="phrase">AppArmor</span> profile set.
-    </p></li></ol></div></div><div id="idm139959504191312" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Syntax Checking in <span class="phrase">AppArmor</span></h6><p>
+    </p></li></ol></div></div><div id="idm140155823352832" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Syntax Checking in <span class="phrase">AppArmor</span></h6><p>
     <span class="phrase">AppArmor</span> contains a syntax check that notifies you of any syntax errors
     in profiles you are trying to process with the YaST <span class="phrase">AppArmor</span> tools.
     If an error occurs, edit the profile manually as <code class="systemitem">root</code> and
@@ -111,7 +111,7 @@ hljs.configure({
     <span class="phrase">AppArmor</span> profile.
    </p><p>
     From the list, select one of the following:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139959504183296"><span class="term ">File</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140155823344816"><span class="term ">File</span></dt><dd><p>
        In the pop-up window, specify the absolute path of a file, including
        the type of access permitted. When finished, click
        <span class="guimenu">OK</span>.
@@ -120,7 +120,7 @@ hljs.configure({
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
        For file access permission information, refer to
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_file.png"><img src="images/add_2_addentry_file.png" width="" alt="Select a file to add" /></a></div></div></dd><dt id="idm139959504173168"><span class="term ">Directory</span></dt><dd><p>
+      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_file.png"><img src="images/add_2_addentry_file.png" width="" alt="Select a file to add" /></a></div></div></dd><dt id="idm140155823334688"><span class="term ">Directory</span></dt><dd><p>
        In the pop-up window, specify the absolute path of a directory,
        including the type of access permitted. You can use globbing if
        necessary. When finished, click <span class="guimenu">OK</span>.
@@ -129,22 +129,22 @@ hljs.configure({
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
        For file access permission information, refer to
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_file.png"><img src="images/add_2_addentry_file.png" width="" alt="Select a directory to add" /></a></div></div></dd><dt id="idm139959504162976"><span class="term ">Network Rule</span></dt><dd><p>
+      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_file.png"><img src="images/add_2_addentry_file.png" width="" alt="Select a directory to add" /></a></div></div></dd><dt id="idm140155823324496"><span class="term ">Network Rule</span></dt><dd><p>
        In the pop-up window, select the appropriate network family and the
        socket type. For more information, refer to
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.nac" title="21.5. Network Access Control">Section 21.5, “Network Access Control”</a>.
-      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_network.png"><img src="images/add_2_addentry_network.png" width="" alt="Select capabilities" /></a></div></div></dd><dt id="idm139959504154640"><span class="term ">Capability</span></dt><dd><p>
+      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_network.png"><img src="images/add_2_addentry_network.png" width="" alt="Select capabilities" /></a></div></div></dd><dt id="idm140155823316160"><span class="term ">Capability</span></dt><dd><p>
        In the pop-up window, select the appropriate capabilities. These are
        statements that enable each of the 32 POSIX.1e capabilities. Refer to
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.capabilities" title="21.4. Capability Entries (POSIX.1e)">Section 21.4, “Capability Entries (POSIX.1e)”</a>
        for more information about capabilities. When finished making your
        selections, click <span class="guimenu">OK</span>.
-      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_capability.png"><img src="images/add_2_addentry_capability.png" width="" alt="Select capabilities" /></a></div></div></dd><dt id="idm139959504146016"><span class="term ">Include File</span></dt><dd><p>
+      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/add_2_addentry_capability.png"><img src="images/add_2_addentry_capability.png" width="" alt="Select capabilities" /></a></div></div></dd><dt id="idm140155823307536"><span class="term ">Include File</span></dt><dd><p>
        In the pop-up window, browse to the files to use as includes.
        Includes are directives that pull in components of other <span class="phrase">AppArmor</span>
        profiles to simplify profiles. For more information, refer to
        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.includes" title="21.3. Include Statements">Section 21.3, “Include Statements”</a>.
-      </p></dd><dt id="idm139959504142752"><span class="term ">Hat</span></dt><dd><p>
+      </p></dd><dt id="idm140155823304272"><span class="term ">Hat</span></dt><dd><p>
        In the pop-up window, specify the name of the subprofile
        (<span class="emphasis"><em>hat</em></span>) to add to your current profile and click
        <span class="guimenu">Create Hat</span>. For more information, refer to
@@ -200,7 +200,7 @@ hljs.configure({
      </p></li><li class="step "><p>
       Click <span class="guimenu">Done</span> in the <span class="guimenu"><span class="phrase">AppArmor</span>
       Configuration</span> window.
-     </p></li></ol></div></div><div id="idm139959504093200" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+     </p></li></ol></div></div><div id="idm140155823254784" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
      You always need to restart running programs to apply the profiles to
      them.
     </p></div></div><div class="sect2 " id="sec.apparmor.yast.manage.profmodes"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.yast.manage.profmodes"><span class="number">23.4.2 </span><span class="name">Changing the Mode of Individual Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes">#</a></h3></div></div></div><p>
@@ -243,7 +243,7 @@ hljs.configure({
      </p></li></ol></div></div><p>
     To change the mode of all profiles, use <span class="guimenu">Set All to
     Enforce</span> or <span class="guimenu">Set All to Complain</span>.
-   </p><div id="idm139959504072592" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Listing the Profiles Available</h6><p>
+   </p><div id="idm140155823234112" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Listing the Profiles Available</h6><p>
      By default, only active profiles are listed (any profile that has a
      matching application installed on your system). To set up a profile
      before installing the respective application, click <span class="guimenu">Show All
