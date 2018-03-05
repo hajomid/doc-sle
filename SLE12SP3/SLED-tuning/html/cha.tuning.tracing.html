@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tracing Tools | System Analysis and Tuning Guide | SUSE Linux Enterprise Desktop 12 SP3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP3" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 16. Tracing Tools" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><link rel="prev" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><link rel="next" href="cha.tuning.kexec.html" title="Chapter 17. Kexec and Kdump" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tracing Tools | System Analysis and Tuning Guide | SUSE Linux Enterprise Desktop 12 SP3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP3" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 16. Tracing Tools" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><link rel="prev" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><link rel="next" href="cha.tuning.kexec.html" title="Chapter 17. Kexec and Kdump" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -31,7 +31,7 @@ hljs.configure({
   find out what system resources it uses. <span class="phrase">Most of the
   tools are part of the installation media. In some cases, they need to be
   installed from the SUSE Software Development Kit, which is a separate download.</span>
- </p><div id="idm140415194990032" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Tracing and Impact on Performance</h6><p>
+ </p><div id="idm139622059807440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Tracing and Impact on Performance</h6><p>
    While a running process is being monitored for system or library calls,
    the performance of the process is heavily reduced. You are advised to use
    tracing tools only for the time you need to collect the data.
@@ -300,32 +300,32 @@ clock_gettime(1, 0x7fff4b5c34c0, 0xffffffffff600180, -1, 0) = 0
     .bashrc
    </p><p>
     A list of standard Valgrind tools with a brief description follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140415194922480"><span class="term "><code class="systemitem">memcheck</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622059739888"><span class="term "><code class="systemitem">memcheck</code>
      </span></dt><dd><p>
        Detects memory errors. It helps you tune your programs to behave
        correctly.
-      </p></dd><dt id="idm140415194920320"><span class="term "><code class="systemitem">cachegrind</code>
+      </p></dd><dt id="idm139622059737728"><span class="term "><code class="systemitem">cachegrind</code>
      </span></dt><dd><p>
        Profiles cache prediction. It helps you tune your programs to run
        faster.
-      </p></dd><dt id="idm140415194918160"><span class="term "><code class="systemitem">callgrind</code>
+      </p></dd><dt id="idm139622059735568"><span class="term "><code class="systemitem">callgrind</code>
      </span></dt><dd><p>
        Works in a similar way to <code class="systemitem">cachegrind</code> but
        also gathers additional cache-profiling information.
-      </p></dd><dt id="idm140415194915568"><span class="term "><code class="systemitem">exp-drd</code>
+      </p></dd><dt id="idm139622059732976"><span class="term "><code class="systemitem">exp-drd</code>
      </span></dt><dd><p>
        Detects thread errors. It helps you tune your multi-threaded programs
        to behave correctly.
-      </p></dd><dt id="idm140415194913392"><span class="term "><code class="systemitem">helgrind</code>
+      </p></dd><dt id="idm139622059730800"><span class="term "><code class="systemitem">helgrind</code>
      </span></dt><dd><p>
        Another thread error detector. Similar to
        <code class="systemitem">exp-drd</code> but uses different techniques for
        problem analysis.
-      </p></dd><dt id="idm140415194910768"><span class="term "><code class="systemitem">massif</code>
+      </p></dd><dt id="idm139622059728176"><span class="term "><code class="systemitem">massif</code>
      </span></dt><dd><p>
        A heap profiler. Heap is an area of memory used for dynamic memory
        allocation. This tool helps you tune your program to use less memory.
-      </p></dd><dt id="idm140415194908544"><span class="term "><code class="systemitem">lackey</code>
+      </p></dd><dt id="idm139622059725952"><span class="term "><code class="systemitem">lackey</code>
      </span></dt><dd><p>
        An example tool showing instrumentation basics.
       </p></dd></dl></div></div><div class="sect2 " id="sec.tuning.tracing.valgrind.defopts"><div class="titlepage"><div><div><h3 class="title" id="sec.tuning.tracing.valgrind.defopts"><span class="number">16.3.4 </span><span class="name">Default Options</span> <a title="Permalink" class="permalink" href="cha.tuning.tracing.html#sec.tuning.tracing.valgrind.defopts">#</a></h3></div></div></div><p>
