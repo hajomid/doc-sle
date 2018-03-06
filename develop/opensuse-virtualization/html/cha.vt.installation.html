@@ -61,7 +61,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      After the setup has been finished, you need to reboot the machine with
      the <span class="emphasis"><em>Xen kernel</em></span>.
-    </p><div id="idm140310735651008" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Default Boot Kernel</h6><p>
+    </p><div id="idm140092617941152" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Default Boot Kernel</h6><p>
       If everything works as expected, change the default boot kernel with YaST and make the Xen-enabled kernel the default.
       For more information about changing the default kernel, see <span class="intraxref">Book “<em class="citetitle ">Reference</em>”, Chapter 12 “The Boot Loader GRUB 2”, Section 12.3 “Configuring the Boot Loader with YaST”</span>.
      </p></div></li></ol></div></div></div><div class="sect1 " id="sec.vt.installation.containers"><div class="titlepage"><div><div><h2 class="title" id="sec.vt.installation.containers"><span class="number">6.3 </span><span class="name">Installing Containers</span> <a title="Permalink" class="permalink" href="cha.vt.installation.html#sec.vt.installation.containers">#</a></h2></div></div></div><p>
@@ -76,19 +76,19 @@ hljs.configure({
    It is possible using Zypper and patterns to install virtualization
    packages. Run the command <code class="command">zypper in -t pattern</code>
    <em class="replaceable ">PATTERN</em>. Available patterns are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140310735639328"><span class="term ">KVM</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140092617929472"><span class="term ">KVM</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="systemitem">kvm_server</code>: sets up the
         KVM VM Host Server with QEMU tools for management
        </p></li><li class="listitem "><p>
         <code class="systemitem">kvm_tools</code>: installs the
         <code class="systemitem">libvirt</code> tools for managing and monitoring VM Guests
-       </p></li></ul></div></dd><dt id="idm140310735633040"><span class="term ">Xen</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       </p></li></ul></div></dd><dt id="idm140092617923184"><span class="term ">Xen</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="systemitem">xen_server</code>: sets up the
         Xen VM Host Server with Xen tools for management
        </p></li><li class="listitem "><p>
         <code class="systemitem">xen_tools</code>: installs the
         libvirt tools for managing and monitoring VM Guests
-       </p></li></ul></div></dd><dt id="idm140310735627536"><span class="term ">Containers</span></dt><dd><p>
+       </p></li></ul></div></dd><dt id="idm140092617917680"><span class="term ">Containers</span></dt><dd><p>
       There is no pattern for containers; install the
       <span class="emphasis"><em>libvirt-daemon-lxc</em></span> package.
      </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.virt.libvirt.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part II </span>Managing Virtual Machines with <code class="systemitem">libvirt</code></span></a><a class="nav-link" href="cha.tools.intro.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 5 </span>Virtualization Tools</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©

@@ -139,36 +139,36 @@ hljs.configure({
    probe handlers. For a more detailed description of these functions and
    their arguments, see the information sources in
    <a class="xref" href="cha.tuning.kprobes.html#cha.tuning.kprobes.moreinfo" title="5.5. For More Information">Section 5.5, “For More Information”</a>.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140237916408864"><span class="term "><code class="systemitem">register_kprobe()</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139983451770656"><span class="term "><code class="systemitem">register_kprobe()</code>
     </span></dt><dd><p>
       Inserts a break-point on a specified address. When the break-point is
       hit, the <code class="systemitem">pre_handler</code> and
       <code class="systemitem">post_handler</code> are called.
-     </p></dd><dt id="idm140237916405808"><span class="term "><code class="systemitem">register_jprobe()</code>
+     </p></dd><dt id="idm139983451767600"><span class="term "><code class="systemitem">register_jprobe()</code>
     </span></dt><dd><p>
       Inserts a break-point in the specified address. The address needs to
       be the address of the first instruction of the probed function. When
       the break-point is hit, the specified handler is run. The handler
       should have the same argument list and return type as the probed.
-     </p></dd><dt id="idm140237916403440"><span class="term "><code class="systemitem">register_kretprobe()</code>
+     </p></dd><dt id="idm139983451765232"><span class="term "><code class="systemitem">register_kretprobe()</code>
     </span></dt><dd><p>
       Inserts a return probe for the specified function. When the probed
       function returns, a specified handler is run. This function returns 0
       on success, or a negative error number on failure.
-     </p></dd><dt id="idm140237916401168"><span class="term "><code class="systemitem">unregister_kprobe()</code>, <code class="systemitem">unregister_jprobe()</code>, <code class="systemitem">unregister_kretprobe()</code>
+     </p></dd><dt id="idm139983451762960"><span class="term "><code class="systemitem">unregister_kprobe()</code>, <code class="systemitem">unregister_jprobe()</code>, <code class="systemitem">unregister_kretprobe()</code>
     </span></dt><dd><p>
       Removes the specified probe. You can use it any time after the probe
       has been registered.
-     </p></dd><dt id="idm140237916398096"><span class="term "><code class="systemitem">register_kprobes()</code>, <code class="systemitem">register_jprobes()</code>, <code class="systemitem">register_kretprobes()</code>
+     </p></dd><dt id="idm139983451759888"><span class="term "><code class="systemitem">register_kprobes()</code>, <code class="systemitem">register_jprobes()</code>, <code class="systemitem">register_kretprobes()</code>
     </span></dt><dd><p>
       Inserts each of the probes in the specified array.
-     </p></dd><dt id="idm140237916395072"><span class="term "><code class="systemitem">unregister_kprobes()</code>, <code class="systemitem">unregister_jprobes()</code>, <code class="systemitem">unregister_kretprobes()</code>
+     </p></dd><dt id="idm139983451756864"><span class="term "><code class="systemitem">unregister_kprobes()</code>, <code class="systemitem">unregister_jprobes()</code>, <code class="systemitem">unregister_kretprobes()</code>
     </span></dt><dd><p>
       Removes each of the probes in the specified array.
-     </p></dd><dt id="idm140237916392048"><span class="term "><code class="systemitem">disable_kprobe()</code>, <code class="systemitem">disable_jprobe()</code>, <code class="systemitem">disable_kretprobe()</code>
+     </p></dd><dt id="idm139983451753840"><span class="term "><code class="systemitem">disable_kprobe()</code>, <code class="systemitem">disable_jprobe()</code>, <code class="systemitem">disable_kretprobe()</code>
     </span></dt><dd><p>
       Disables the specified probe temporarily.
-     </p></dd><dt id="idm140237916389040"><span class="term "><code class="systemitem">enable_kprobe()</code>, <code class="systemitem">enable_jprobe()</code>, <code class="systemitem">enable_kretprobe()</code>
+     </p></dd><dt id="idm139983451750832"><span class="term "><code class="systemitem">enable_kprobe()</code>, <code class="systemitem">enable_jprobe()</code>, <code class="systemitem">enable_kretprobe()</code>
     </span></dt><dd><p>
       Temporarily enables disabled probes.
      </p></dd></dl></div></div><div class="sect1 " id="cha.tuning.kprobes.debugfs"><div class="titlepage"><div><div><h2 class="title" id="cha.tuning.kprobes.debugfs"><span class="number">5.4 </span><span class="name"><code class="systemitem">debugfs</code> Interface</span> <a title="Permalink" class="permalink" href="cha.tuning.kprobes.html#cha.tuning.kprobes.debugfs">#</a></h2></div></div></div><p>
