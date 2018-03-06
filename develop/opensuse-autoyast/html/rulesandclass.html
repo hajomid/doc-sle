@@ -31,7 +31,7 @@ hljs.configure({
     </p></li><li class="listitem "><p>
      Classes represent configurations for groups of target systems. Classes
      can be assigned to systems.
-    </p></li></ul></div><div id="idm139668996514320" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use <code class="literal">autoyast</code> Boot Option Only</h6><p>
+    </p></li></ul></div><div id="idm139869486803120" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use <code class="literal">autoyast</code> Boot Option Only</h6><p>
      Rules and classes are only supported by the boot option
      <code class="literal">autoyast=<em class="replaceable ">URL</em></code>.
     </p><p>
@@ -80,7 +80,7 @@ autoyast=http://10.10.0.1/profile/rules/rules.xml</pre></div><p>
     system installation proceeds in the standard way by using the
     supplied control file or by searching for the control file depending on
     the MAC or the IP address of the system.
-   </p><div class="sect2 " id="rulesfile"><div class="titlepage"><div><div><h3 class="title" id="rulesfile"><span class="number">5.1.1 </span><span class="name">Rules File Explained</span> <a title="Permalink" class="permalink" href="rulesandclass.html#rulesfile">#</a></h3></div></div></div><div class="complex-example"><div class="example" id="idm139668996496112"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.1: </span><span class="name">Simple Rules File </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139668996496112">#</a></h6></div><div class="example-contents"><p>
+   </p><div class="sect2 " id="rulesfile"><div class="titlepage"><div><div><h3 class="title" id="rulesfile"><span class="number">5.1.1 </span><span class="name">Rules File Explained</span> <a title="Permalink" class="permalink" href="rulesandclass.html#rulesfile">#</a></h3></div></div></div><div class="complex-example"><div class="example" id="idm139869486784976"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.1: </span><span class="name">Simple Rules File </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139869486784976">#</a></h6></div><div class="example-contents"><p>
       The following simple example illustrates how the rules file is used to
       retrieve the configuration for a client with known hardware.
      </p><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
@@ -131,7 +131,7 @@ autoyast=http://10.10.0.1/profile/rules/rules.xml</pre></div><p>
      A rule must have at least one attribute to be matched. If you need to
      check more attributes, such as memory or architectures, you can add
      more attributes in the rule resource as shown in the next example.
-    </p><div class="complex-example"><div class="example" id="idm139668996487888"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.2: </span><span class="name">Simple Rules File </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139668996487888">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm139869486776752"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.2: </span><span class="name">Simple Rules File </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139869486776752">#</a></h6></div><div class="example-contents"><p>
       The following example illustrates how the rules file is used to
       retrieve the configuration for a client with known hardware.
      </p><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
@@ -274,7 +274,7 @@ fi;
      this command will not work while another YaST process that
      requires a lock (for example the installer) is running. Therefore you
      cannot run it during the installation.
-    </p><div class="table" id="idm139668996444576"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.1: </span><span class="name">System Attributes </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139668996444576">#</a></h6></div><div class="table-contents"><table summary="System Attributes" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm139869486733440"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 5.1: </span><span class="name">System Attributes </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139869486733440">#</a></h6></div><div class="table-contents"><table summary="System Attributes" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Attribute
          </p>
@@ -755,7 +755,7 @@ echo -n 100
      </p></li><li class="listitem "><p>
       Order: order (or priority) of the class in the stack of migration
       
-     </p></li></ul></div><div class="figure" id="idm139668985362640"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/cms-class-definitions_kde.png"><img src="images/cms-class-definitions_kde.png" width="" alt="Defining Classes" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 5.2: </span><span class="name">Defining Classes </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139668985362640">#</a></h6></div></div><p>
+     </p></li></ul></div><div class="figure" id="idm139869475652112"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/cms-class-definitions_kde.png"><img src="images/cms-class-definitions_kde.png" width="" alt="Defining Classes" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 5.2: </span><span class="name">Defining Classes </span><a title="Permalink" class="permalink" href="rulesandclass.html#idm139869475652112">#</a></h6></div></div><p>
     You can create as many classes as you need, however it is recommended to
     keep the set of classes as small as possible to keep the configuration
     system concise. For example, the following sets of classes can be used:

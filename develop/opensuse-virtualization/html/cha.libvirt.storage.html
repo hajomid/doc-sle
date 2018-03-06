@@ -30,32 +30,32 @@ hljs.configure({
   managing VM Guests from a remote host. For this reason, <code class="systemitem">libvirt</code> supports
   so called <span class="quote">“<span class="quote">Storage Pools</span>”</span>, which can be accessed from remote
   machines.
- </p><div id="idm140569670432768" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: CD/DVD ISO images</h6><p>
+ </p><div id="idm140583682511392" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: CD/DVD ISO images</h6><p>
    To be able to access CD/DVD ISO images on the VM Host Server from remote, they
    also need to be placed in a storage pool.
   </p></div><p>
   <code class="systemitem">libvirt</code> knows two different types of storage: volumes and pools.
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670429808"><span class="term ">Storage Volume</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682508432"><span class="term ">Storage Volume</span></dt><dd><p>
      A storage volume is a storage device that can be assigned to a
      guest—a virtual disk or a CD/DVD/floppy image. Physically (on the
      VM Host Server) it can be a block device (a partition, a logical volume, etc.)
      or a file.
-    </p></dd><dt id="idm140569670427792"><span class="term ">Storage Pool</span></dt><dd><p>
+    </p></dd><dt id="idm140583682506416"><span class="term ">Storage Pool</span></dt><dd><p>
      A storage pool is a storage resource on the VM Host Server that can be used for
      storing volumes, similar to network storage for a desktop machine.
      Physically it can be one of the following types:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670425824"><span class="term ">File System Directory (<span class="guimenu">dir</span>)</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682504448"><span class="term ">File System Directory (<span class="guimenu">dir</span>)</span></dt><dd><p>
         A directory for hosting image files. The files can be either one of the
         supported disk formats (raw, qcow2, or qed), or ISO images.
-       </p></dd><dt id="idm140569670423440"><span class="term ">Physical Disk Device (<span class="guimenu">disk</span>)</span></dt><dd><p>
+       </p></dd><dt id="idm140583682502064"><span class="term ">Physical Disk Device (<span class="guimenu">disk</span>)</span></dt><dd><p>
         Use a complete physical disk as storage. A partition is created for
         each volume that is added to the pool.
-       </p></dd><dt id="idm140569670421088"><span class="term ">Pre-Formatted Block Device (<span class="guimenu">fs</span>)</span></dt><dd><p>
+       </p></dd><dt id="idm140583682499712"><span class="term ">Pre-Formatted Block Device (<span class="guimenu">fs</span>)</span></dt><dd><p>
         Specify a partition to be used in the same way as a file system
         directory pool (a directory for hosting image files). The only
         difference to using a file system directory is that <code class="systemitem">libvirt</code> takes
         care of mounting the device.
-       </p></dd><dt id="idm140569670417888"><span class="term ">iSCSI Target (iscsi)</span></dt><dd><p>
+       </p></dd><dt id="idm140583682496512"><span class="term ">iSCSI Target (iscsi)</span></dt><dd><p>
         Set up a pool on an iSCSI target. You need to have been logged in to
         the volume once before, to use it with <code class="systemitem">libvirt</code>. Use the YaST
         <span class="guimenu">iSCSI Initiator</span> to detect and log in to a
@@ -77,25 +77,25 @@ Command (m for help): w
 The partition table has been altered!
 
 Calling ioctl() to re-read partition table.
-Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">LVM Volume Group (logical)</span></dt><dd><p>
+Syncing disks.</pre></div></dd><dt id="idm140583682491680"><span class="term ">LVM Volume Group (logical)</span></dt><dd><p>
         Use an LVM volume group as a pool. You may either use a predefined
         volume group, or create a group by specifying the devices to use.
         Storage volumes are created as partitions on the volume.
-       </p><div id="idm140569670411360" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Deleting the LVM-Based Pool</h6><p>
+       </p><div id="idm140583682489984" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Deleting the LVM-Based Pool</h6><p>
          When the LVM-based pool is deleted in the Storage Manager, the volume
          group is deleted as well. This results in a non-recoverable loss of
          all data stored on the pool!
-        </p></div></dd><dt id="idm140569670409488"><span class="term ">Multipath Devices (<span class="guimenu">mpath</span>)</span></dt><dd><p>
+        </p></div></dd><dt id="idm140583682488112"><span class="term ">Multipath Devices (<span class="guimenu">mpath</span>)</span></dt><dd><p>
         At the moment, multipathing support is limited to assigning existing
         devices to the guests. Volume creation or configuring multipathing from
         within <code class="systemitem">libvirt</code> is not supported.
-       </p></dd><dt id="idm140569670406352"><span class="term ">Network Exported Directory (<span class="guimenu">netfs</span>)</span></dt><dd><p>
+       </p></dd><dt id="idm140583682484976"><span class="term ">Network Exported Directory (<span class="guimenu">netfs</span>)</span></dt><dd><p>
         Specify a network directory to be used in the same way as a file system
         directory pool (a directory for hosting image files). The only
         difference to using a file system directory is that <code class="systemitem">libvirt</code> takes
         care of mounting the directory. Supported protocols are NFS and
         GlusterFS.
-       </p></dd><dt id="idm140569670403088"><span class="term ">SCSI Host Adapter (<span class="guimenu">scsi</span>)</span></dt><dd><p>
+       </p></dd><dt id="idm140583682481712"><span class="term ">SCSI Host Adapter (<span class="guimenu">scsi</span>)</span></dt><dd><p>
         Use an SCSI host adapter in almost the same way as an iSCSI target. We
         recommend to use a device name from
         <code class="filename">/dev/disk/by-*</code> rather than
@@ -103,7 +103,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
         latter can change (for example, when adding or removing hard disks).
         Volume creation on iSCSI pools is not supported. Instead, each existing
         LUN (Logical Unit Number) represents a volume.
-       </p></dd></dl></div></dd></dl></div><div id="idm140569670398704" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Security Considerations</h6><p>
+       </p></dd></dl></div></dd></dl></div><div id="idm140583682477328" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Security Considerations</h6><p>
    To avoid data loss or data corruption, do not attempt to use resources such
    as LVM volume groups, iSCSI targets, etc., that are also used to build
    storage pools on the VM Host Server. There is no need to connect to these
@@ -131,10 +131,10 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
      </p><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/virt_virt-manager_storage_add.png"><img src="images/virt_virt-manager_storage_add.png" width="" /></a></div></div></li><li class="step "><p>
       Specify the required details in the following window. The data that needs
       to be entered depends on the type of pool you are creating:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670374816"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">dir</span>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682453376"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">dir</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: Specify an existing directory.
-          </p></li></ul></div></dd><dt id="idm140569670370256"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">disk</span>
+          </p></li></ul></div></dd><dt id="idm140583682448816"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">disk</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: The directory that hosts the
            devices. The default value <code class="filename">/dev</code> should usually
@@ -155,7 +155,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
           </p></li><li class="listitem "><p>
            <span class="guimenu">Build Pool</span>: Activating this option formats the
            device. Use with care—all data on the device will be lost!
-          </p></li></ul></div></dd><dt id="idm140569670358096"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">fs</span>
+          </p></li></ul></div></dd><dt id="idm140583682436656"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">fs</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: Mount point on the VM Host Server file
            system.
@@ -169,7 +169,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
            <code class="filename">/dev/sd<em class="replaceable ">X</em></code>, because
            the latter can change (for example, when adding or removing hard
            disks).
-          </p></li></ul></div></dd><dt id="idm140569670348944"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">iscsi</span>
+          </p></li></ul></div></dd><dt id="idm140583682427504"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">iscsi</span>
        </span></dt><dd><p>
          Get the necessary data by running the following command on the
          VM Host Server:
@@ -185,7 +185,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
            server.
           </p></li><li class="listitem "><p>
            <span class="guimenu">Source Path</span>: The iSCSI target name (IQN).
-          </p></li></ul></div></dd><dt id="idm140569670336992"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">logical</span>
+          </p></li></ul></div></dd><dt id="idm140583682415552"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">logical</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: In case you use an existing volume
            group, specify the existing device path. When building a new LVM
@@ -197,13 +197,13 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
           </p></li><li class="listitem "><p>
            <span class="guimenu">Build Pool</span>: Only activate when creating a new
            volume group.
-          </p></li></ul></div></dd><dt id="idm140569670328976"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">mpath</span>
+          </p></li></ul></div></dd><dt id="idm140583682407536"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">mpath</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: Support for multipathing is
            currently limited to making all multipath devices available.
            Therefore, specify an arbitrary string here that will then be
            ignored. The path is required, otherwise the XML parser will fail.
-          </p></li></ul></div></dd><dt id="idm140569670324208"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">netfs</span>
+          </p></li></ul></div></dd><dt id="idm140583682402768"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">netfs</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: Mount point on the VM Host Server file
            system.
@@ -213,14 +213,14 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
           </p></li><li class="listitem "><p>
            <span class="guimenu">Source Path</span>: Directory on the server that is
            being exported.
-          </p></li></ul></div></dd><dt id="idm140569670316816"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">scsi</span>
+          </p></li></ul></div></dd><dt id="idm140583682395376"><span class="term "><span class="bold"><strong>Type</strong></span><span class="guimenu">scsi</span>
        </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
            <span class="guimenu">Target Path</span>: The directory containing the device
            file. Use <code class="literal">/dev/disk/by-path</code> (default) or
            <code class="literal">/dev/disk/by-id</code>.
           </p></li><li class="listitem "><p>
            <span class="guimenu">Source Path</span>: Name of the SCSI adapter.
-          </p></li></ul></div></dd></dl></div><div id="idm140569670309808" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: File Browsing</h6><p>
+          </p></li></ul></div></dd></dl></div><div id="idm140583682388368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: File Browsing</h6><p>
        Using the file browser by clicking <span class="guimenu">Browse</span> is not
        possible when operating from remote.
       </p></div></li><li class="step "><p>
@@ -241,7 +241,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
     </p><p>
      To start an inactive pool and make it available from remote again, click
      <span class="guimenu">Start</span> in the bottom left corner of the Storage Manager.
-    </p><div id="idm140569670299808" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: A Pool's State Does not Affect Attached Volumes</h6><p>
+    </p><div id="idm140583682378432" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: A Pool's State Does not Affect Attached Volumes</h6><p>
       Volumes from a pool attached to VM Guests are always available,
       regardless of the pool's state (<span class="guimenu">Active</span> (stopped) or
       <span class="guimenu">Inactive</span> (started)). The state of the pool solely
@@ -306,7 +306,7 @@ Syncing disks.</pre></div></dd><dt id="idm140569670413056"><span class="term ">L
      Deleting a volume can only be done from the Storage Manager, by selecting
      a volume and clicking <span class="guimenu">Delete Volume</span>. Confirm with
      <span class="guimenu">Yes</span>.
-    </p><div id="idm140569670274912" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Volumes Can Be Deleted Even While in Use</h6><p>
+    </p><div id="idm140583682353520" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Volumes Can Be Deleted Even While in Use</h6><p>
       Volumes can be deleted even if they are currently used in an active or
       inactive VM Guest. There is no way to recover a deleted volume.
      </p><p>
@@ -363,18 +363,18 @@ done</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.libvirt.
     Use the <code class="command">virsh</code> pool subcommands to start, stop or delete
     a pool. Replace <em class="replaceable ">POOL</em> with the pool's name or its
     UUID in the following examples:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670250352"><span class="term ">Stopping a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-destroy <em class="replaceable ">POOL</em></pre></div><div id="idm140569670248304" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: A Pool's State Does not Affect Attached Volumes</h6><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682328912"><span class="term ">Stopping a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-destroy <em class="replaceable ">POOL</em></pre></div><div id="idm140583682326864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: A Pool's State Does not Affect Attached Volumes</h6><p>
         Volumes from a pool attached to VM Guests are always available,
         regardless of the pool's state (<span class="guimenu">Active</span> (stopped) or
         <span class="guimenu">Inactive</span> (started)). The state of the pool solely
         affects the ability to attach volumes to a VM Guest via remote
         management.
-       </p></div></dd><dt id="idm140569670245488"><span class="term ">Deleting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-delete <em class="replaceable ">POOL</em></pre></div><div id="idm140569670243440" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Deleting Storage Pools</h6><p>
+       </p></div></dd><dt id="idm140583682324048"><span class="term ">Deleting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-delete <em class="replaceable ">POOL</em></pre></div><div id="idm140583682322000" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Deleting Storage Pools</h6><p>
         See <a class="xref" href="cha.libvirt.storage.html#deleting.storage.pools" title="Warning: Deleting Storage Pools">Warning: Deleting Storage Pools</a>
-       </p></div></dd><dt id="idm140569670241216"><span class="term ">Starting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-start <em class="replaceable ">POOL</em></pre></div></dd><dt id="idm140569670238848"><span class="term ">Enable Autostarting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-autostart <em class="replaceable ">POOL</em></pre></div><p>
+       </p></div></dd><dt id="idm140583682319776"><span class="term ">Starting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-start <em class="replaceable ">POOL</em></pre></div></dd><dt id="idm140583682317408"><span class="term ">Enable Autostarting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-autostart <em class="replaceable ">POOL</em></pre></div><p>
        Only pools that are marked to autostart will automatically be started if
        the VM Host Server reboots.
-      </p></dd><dt id="idm140569670235904"><span class="term ">Disable Autostarting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-autostart <em class="replaceable ">POOL</em> --disable</pre></div></dd></dl></div></div><div class="sect2 " id="sec.libvirt.storage.virsh.add_volumes"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.storage.virsh.add_volumes"><span class="number">11.2.3 </span><span class="name">Adding Volumes to a Storage Pool</span> <a title="Permalink" class="permalink" href="cha.libvirt.storage.html#sec.libvirt.storage.virsh.add_volumes">#</a></h3></div></div></div><p>
+      </p></dd><dt id="idm140583682314464"><span class="term ">Disable Autostarting a Pool</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh pool-autostart <em class="replaceable ">POOL</em> --disable</pre></div></dd></dl></div></div><div class="sect2 " id="sec.libvirt.storage.virsh.add_volumes"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.storage.virsh.add_volumes"><span class="number">11.2.3 </span><span class="name">Adding Volumes to a Storage Pool</span> <a title="Permalink" class="permalink" href="cha.libvirt.storage.html#sec.libvirt.storage.virsh.add_volumes">#</a></h3></div></div></div><p>
     <code class="command">virsh</code> offers two ways to add volumes to storage pools:
     either from an XML definition with <code class="literal">vol-create</code> and
     <code class="literal">vol-create-from</code> or via command line arguments with
@@ -420,7 +420,7 @@ done</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.libvirt.
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh vol-delete <em class="replaceable ">NAME</em> --pool <em class="replaceable ">POOL</em></pre></div><p>
     <code class="option">--pool</code> is optional. <code class="systemitem">libvirt</code> tries to locate the volume
     automatically. If that fails, specify this parameter.
-   </p><div id="idm140569670198352" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: No Checks Upon Volume Deletion</h6><p>
+   </p><div id="idm140583682276912" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: No Checks Upon Volume Deletion</h6><p>
      A volume will be deleted in any case, regardless of whether it is
      currently used in an active or inactive VM Guest. There is no way to
      recover a deleted volume.
@@ -447,23 +447,23 @@ done</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.libvirt.
  &lt;alias name='scsi0-0-0'/&gt;
  &lt;address type='drive' controller='0' bus='0' target='0' unit='0'/&gt;
 &lt;/disk&gt;
-[...]</pre></div><div class="sect3 " id="idm140569670187808"><div class="titlepage"><div><div><h4 class="title" id="idm140569670187808"><span class="number">11.2.5.1 </span><span class="name">Hotplug or Persistent Change</span> <a title="Permalink" class="permalink" href="cha.libvirt.storage.html#idm140569670187808">#</a></h4></div></div></div><p>
+[...]</pre></div><div class="sect3 " id="idm140583682266368"><div class="titlepage"><div><div><h4 class="title" id="idm140583682266368"><span class="number">11.2.5.1 </span><span class="name">Hotplug or Persistent Change</span> <a title="Permalink" class="permalink" href="cha.libvirt.storage.html#idm140583682266368">#</a></h4></div></div></div><p>
      You can attach disks to both active and inactive domains. The attachment
      is controlled by the <code class="option">--live</code> and <code class="option">--config</code>
      options:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670185328"><span class="term "><code class="option">--live</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682263888"><span class="term "><code class="option">--live</code>
       </span></dt><dd><p>
         Hotplugs the disk to an active domain. The attachment is not saved in
         the domain configuration. Using <code class="option">--live</code> on an inactive
         domain is an error.
-       </p></dd><dt id="idm140569670182672"><span class="term "><code class="option">--config</code>
+       </p></dd><dt id="idm140583682261232"><span class="term "><code class="option">--config</code>
       </span></dt><dd><p>
         Changes the domain configuration persistently. The attached disk is
         then available after the next domain start.
-       </p></dd><dt id="idm140569670180464"><span class="term "><code class="option">--live</code><code class="option">--config</code>
+       </p></dd><dt id="idm140583682259024"><span class="term "><code class="option">--live</code><code class="option">--config</code>
       </span></dt><dd><p>
         Hotplugs the disk and adds it to the persistent domain configuration.
-       </p></dd></dl></div><div id="idm140569670177872" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: <code class="command">virsh attach-device</code></h6><p>
+       </p></dd></dl></div><div id="idm140583682256432" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: <code class="command">virsh attach-device</code></h6><p>
       <code class="command">virsh attach-device</code> is the more generic form of
       <code class="command">virsh attach-disk</code>. You can use it to attach other
       types of devices to a domain.
@@ -524,7 +524,7 @@ done</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.libvirt.
     detailed comments with further information. Make sure to activate
     configuration changes by reloading
     <code class="systemitem">virtlockd</code>:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> systemctl reload virtlockd</pre></div><div id="idm140569670138352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Locking Currently Only Available for All Disks</h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> systemctl reload virtlockd</pre></div><div id="idm140583682216976" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Locking Currently Only Available for All Disks</h6><p>
 
      Currently, locking can only be activated globally, so that all virtual
      disks are locked. Support for locking selected disks is planned for future
@@ -561,7 +561,7 @@ iscsi_lockspace_dir = "<em class="replaceable ">/MY_LOCKSPACE_DIRECTORY</em>"</p
    the <a class="xref" href="chap.guestfs.html#sec.guestfs.tools" title="16.3. Guestfs Tools">Section 16.3, “Guestfs Tools”</a> package) as the service provided by
    the guest is not interrupted by the resizing process. To resize a VM Guest
    disk, follow these steps:
-  </p><div class="procedure " id="idm140569670122336"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11.2: </span><span class="name">Online Resizing of Guest Disk </span><a title="Permalink" class="permalink" href="cha.libvirt.storage.html#idm140569670122336">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140583682201088"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11.2: </span><span class="name">Online Resizing of Guest Disk </span><a title="Permalink" class="permalink" href="cha.libvirt.storage.html#idm140583682201088">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Inside the guest system, check the current size of the disk (for example
      <code class="filename">/dev/vda</code>).
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>fdisk -l /dev/vda
@@ -591,7 +591,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes</pre></div></li></ol></div></d
    file system pass-through (also called VirtFS) feature. Such a directory can
    be also be accessed by several VM Guests at once and therefore be used to
    exchange files between VM Guests.
-  </p><div id="idm140569670108080" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Windows Guests and File System Pass-Through</h6><p>
+  </p><div id="idm140583682186896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Windows Guests and File System Pass-Through</h6><p>
     Note that sharing directories between VM Host Server and Windows guests via File
     System Pass-Through does not work, because Windows lacks the drivers
     required to mount the shared directory.
@@ -609,16 +609,16 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes</pre></div></li></ol></div></d
      default setting is <span class="guimenu">Path</span>. <span class="guimenu">Mode</span> lets
      you choose the security model, which influences the way file permissions
      are set on the host. Three options are available:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140569670098048"><span class="term "><span class="guimenu">Passthrough</span> (Default)</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140583682176864"><span class="term "><span class="guimenu">Passthrough</span> (Default)</span></dt><dd><p>
         Files on the file system are directly created with the client-user's
         credentials. This is very similar to what NFSv3 is using.
-       </p></dd><dt id="idm140569670095840"><span class="term "><span class="guimenu">Squash</span>
+       </p></dd><dt id="idm140583682174656"><span class="term "><span class="guimenu">Squash</span>
       </span></dt><dd><p>
         Same as <span class="guimenu">Passthrough</span>, but failure of privileged
         operations like <code class="command">chown</code> are ignored. This is required
         when KVM is not run with
         <code class="systemitem">root</code> privileges.
-       </p></dd><dt id="idm140569670092048"><span class="term "><span class="guimenu">Mapped</span>
+       </p></dd><dt id="idm140583682170864"><span class="term "><span class="guimenu">Mapped</span>
       </span></dt><dd><p>
         Files are created with the file server's credentials
         (<code class="literal">qemu.qemu</code>). The user credentials and the
