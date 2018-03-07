@@ -32,7 +32,7 @@ hljs.configure({
   prerequisites for that method and the other illustrating the basic procedure.
   More detail is then provided for all the techniques used in these
   installation scenarios.
- </p><div id="idm139856253290720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
+ </p><div id="idm140669233314000" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
    In the following sections, the system to hold your new <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>
    installation is called <span class="emphasis"><em>target system</em></span> or
    <span class="emphasis"><em>installation target</em></span>. The term
@@ -268,7 +268,7 @@ hljs.configure({
     the target system to boot for installation and determine the IP address of
     the installation target. The installation is controlled
     from a remote workstation using SSH , but configuration does require user interaction.
-   </p><div id="idm139856253188400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Avoid Lost Connections After the Second Step (Installation)</h6><p>
+   </p><div id="idm140669224424048" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Avoid Lost Connections After the Second Step (Installation)</h6><p>
      In the network settings dialog, check the <span class="guimenu">Traditional Method with
      ifup</span> and avoid NetworkManager. If not, your SSH connection will be lost
      during installation. Reset the settings to <span class="guimenu">User Controlled with
@@ -412,13 +412,13 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen">install=<em class="replaceable ">XXX</em> netdevice<em class="replaceable ">=XXX</em> hostip=<em class="replaceable ">XXX</em> netmask=<em class="replaceable ">XXX</em> vnc=<em class="replaceable ">XXX</em> VNCPassword=<em class="replaceable ">XXX</em></pre></div><p>
     Replace all the values <em class="replaceable ">XXX</em> in this command with
     the values appropriate for your setup.
-   </p><div class="variablelist " id="tab.deployment.remoteinst.bootinst.custom"><dl class="variablelist"><dt id="idm139856253123728"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
+   </p><div class="variablelist " id="tab.deployment.remoteinst.bootinst.custom"><dl class="variablelist"><dt id="idm140669224362032"><span class="term "><a class="xref" href="cha.inst.html" title="Chapter 3. Installation with YaST">Chapter 3, <em>Installation with YaST</em></a>
      </span></dt><dd><p><span class="formalpara-title">Parameters Needed for Booting. </span>
         None
        </p><p><span class="formalpara-title">Boot Options. </span>
         None needed
-       </p></dd><dt id="idm139856253119264"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat" title="7.1.1. Simple Remote Installation via VNC—Static Network Configuration">Section 7.1.1, “Simple Remote Installation via VNC—Static Network Configuration”</a>
-     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253117872">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+       </p></dd><dt id="idm140669224357568"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncstat" title="7.1.1. Simple Remote Installation via VNC—Static Network Configuration">Section 7.1.1, “Simple Remote Installation via VNC—Static Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224356176">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
          Network device
@@ -432,7 +432,7 @@ hljs.configure({
          VNC enablement
         </p></li><li class="listitem "><p>
          VNC password
-        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253110016">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224348384">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">PATH_TO_INSTMEDIA</em></code>
         </p></li><li class="listitem "><p>
          <code class="filename">netdevice=<em class="replaceable ">NETDEVICE</em></code>
@@ -448,22 +448,22 @@ hljs.configure({
         </p></li><li class="listitem "><p>
          <code class="filename">VNCPassword=<em class="replaceable ">PASSWORD</em>
          </code>
-        </p></li></ul></div></dd><dt id="idm139856253096400"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncdyn" title="7.1.2. Simple Remote Installation via VNC—Dynamic Network Configuration">Section 7.1.2, “Simple Remote Installation via VNC—Dynamic Network Configuration”</a>
-     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253094944">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div></dd><dt id="idm140669224334768"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncdyn" title="7.1.2. Simple Remote Installation via VNC—Dynamic Network Configuration">Section 7.1.2, “Simple Remote Installation via VNC—Dynamic Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224333376">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
          VNC enablement
         </p></li><li class="listitem "><p>
          VNC password
-        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253090736">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224329232">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">PATH_TO_INSTMEDIA</em></code>
         </p></li><li class="listitem "><p>
          <code class="literal">vnc=1</code>
         </p></li><li class="listitem "><p>
          <code class="filename">VNCPassword=<em class="replaceable ">PASSWORD</em>
          </code>
-        </p></li></ul></div></dd><dt id="idm139856253084192"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe" title="7.1.3. Remote Installation via VNC—PXE Boot and Wake on LAN">Section 7.1.3, “Remote Installation via VNC—PXE Boot and Wake on LAN”</a>
-     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253082736">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div></dd><dt id="idm140669224322688"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.vncpxe" title="7.1.3. Remote Installation via VNC—PXE Boot and Wake on LAN">Section 7.1.3, “Remote Installation via VNC—PXE Boot and Wake on LAN”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224321296">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
          Location of the TFTP server
@@ -473,8 +473,8 @@ hljs.configure({
          VNC password
         </p></li></ul></div><p><span class="formalpara-title">Boot Options. </span>
         Not applicable; process managed through PXE and DHCP
-       </p></dd><dt id="idm139856253075888"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshstat" title="7.1.4. Simple Remote Installation via SSH—Static Network Configuration">Section 7.1.4, “Simple Remote Installation via SSH—Static Network Configuration”</a>
-     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253074432">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+       </p></dd><dt id="idm140669224314576"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshstat" title="7.1.4. Simple Remote Installation via SSH—Static Network Configuration">Section 7.1.4, “Simple Remote Installation via SSH—Static Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224313184">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
          Network device
@@ -488,7 +488,7 @@ hljs.configure({
          SSH enablement
         </p></li><li class="listitem "><p>
          SSH password
-        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253066576">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224305392">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">PATH_TO_INSTMEDIA</em></code>
         </p></li><li class="listitem "><p>
          <code class="filename">netdevice=<em class="replaceable ">NETDEVICE</em></code>
@@ -504,21 +504,21 @@ hljs.configure({
         </p></li><li class="listitem "><p>
          <code class="filename">ssh.password=<em class="replaceable ">PASSWORD</em>
          </code>
-        </p></li></ul></div></dd><dt id="idm139856253052960"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshdyn" title="7.1.5. Simple Remote Installation via SSH—Dynamic Network Configuration">Section 7.1.5, “Simple Remote Installation via SSH—Dynamic Network Configuration”</a>
-     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253051504">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div></dd><dt id="idm140669224291776"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshdyn" title="7.1.5. Simple Remote Installation via SSH—Dynamic Network Configuration">Section 7.1.5, “Simple Remote Installation via SSH—Dynamic Network Configuration”</a>
+     </span></dt><dd><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Parameters Needed for Booting </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224290384">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
          SSH enablement
         </p></li><li class="listitem "><p>
          SSH password
-        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm139856253047296">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
+        </p></li></ul></div><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Boot Options </span><a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#idm140669224286240">#</a></h6></div><ul class="itemizedlist compact"><li class="listitem "><p>
          <code class="filename">install=(nfs,http,​ftp,smb)://<em class="replaceable ">PATH_TO_INSTMEDIA</em></code>
         </p></li><li class="listitem "><p>
          <code class="filename">ssh=1</code>
         </p></li><li class="listitem "><p>
          <code class="filename">ssh.password=<em class="replaceable ">PASSWORD</em>
          </code>
-        </p></li></ul></div></dd><dt id="idm139856253040752"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshpxe" title="7.1.6. Remote Installation via SSH—PXE Boot and Wake on LAN">Section 7.1.6, “Remote Installation via SSH—PXE Boot and Wake on LAN”</a>
+        </p></li></ul></div></dd><dt id="idm140669224279696"><span class="term "><a class="xref" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.scenario.sshpxe" title="7.1.6. Remote Installation via SSH—PXE Boot and Wake on LAN">Section 7.1.6, “Remote Installation via SSH—PXE Boot and Wake on LAN”</a>
      </span></dt><dd><div class="itemizedlist "><ul class="itemizedlist compact"><li class="listitem "><p>
          Location of the installation server
         </p></li><li class="listitem "><p>
@@ -529,7 +529,7 @@ hljs.configure({
          SSH password
         </p></li></ul></div><p><span class="formalpara-title">Boot Options. </span>
         Not applicable; process managed through PXE and DHCP
-       </p></dd></dl></div><div id="idm139856253032752" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: More Information about linuxrc Boot Options</h6><p>
+       </p></dd></dl></div><div id="idm140669224271888" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: More Information about linuxrc Boot Options</h6><p>
      Find more information about the linuxrc boot options used for booting a
      Linux system at <a class="link" href="http://en.opensuse.org/SDB:Linuxrc" target="_blank">http://en.opensuse.org/SDB:Linuxrc</a>.
     </p></div><div class="sect3 " id="sec.deployment.remoteinst.bootinst.custom.addon"><div class="titlepage"><div><div><h4 class="title" id="sec.deployment.remoteinst.bootinst.custom.addon"><span class="number">7.2.2.1 </span><span class="name">Installing Add-On Products and Driver Updates</span> <a title="Permalink" class="permalink" href="cha.deployment.remoteinst.html#sec.deployment.remoteinst.bootinst.custom.addon">#</a></h4></div></div></div><p>
@@ -542,7 +542,7 @@ hljs.configure({
      <em class="replaceable ">REPOSITORY</em> needs to be a hosted repository that
      can be read by YaST (YaST2 or YUM (rpm-md)). ISO images are currently
      not supported.
-    </p><div id="idm139856253024704" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Driver Updates</h6><p>
+    </p><div id="idm140669224264224" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Driver Updates</h6><p>
       Driver Updates can be found at
       <a class="link" href="http://drivers.suse.com/" target="_blank">http://drivers.suse.com/</a>. Not all driver updates are
       provided as repositories—some are only available as ISO images and

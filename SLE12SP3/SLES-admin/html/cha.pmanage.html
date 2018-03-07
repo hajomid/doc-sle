@@ -39,9 +39,9 @@ hljs.configure({
    Power saving functions are not only significant for the mobile use of
    laptops, but also for desktop systems. The main functions and their use in
    ACPI are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140611812311120"><span class="term ">Standby</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140119993428352"><span class="term ">Standby</span></dt><dd><p>
       not supported.
-     </p></dd><dt id="idm140611812309312"><span class="term ">Suspend (to memory)</span></dt><dd><p>
+     </p></dd><dt id="idm140119993426544"><span class="term ">Suspend (to memory)</span></dt><dd><p>
       This mode writes the entire system state to the RAM. Subsequently, the
       entire system except the RAM is put to sleep. In this state, the computer
       consumes very little power. The advantage of this state is the
@@ -49,7 +49,7 @@ hljs.configure({
       without having to boot and restart applications. This function
       corresponds to the ACPI state <code class="literal">S3</code>.
 
-     </p></dd><dt id="idm140611812306688"><span class="term ">Hibernation (suspend to disk)<a id="idm140611812306096" class="indexterm"></a>
+     </p></dd><dt id="idm140119993423920"><span class="term ">Hibernation (suspend to disk)<a id="idm140119993423328" class="indexterm"></a>
     </span></dt><dd><p>
       In this operating mode, the entire system state is written to the hard
       disk and the system is powered off. There must be a swap partition at
@@ -59,21 +59,21 @@ hljs.configure({
       mode, such as RediSafe in IBM Thinkpads. The corresponding ACPI state is
       <code class="literal">S4</code>. In Linux, suspend to disk is performed by kernel
       routines that are independent from ACPI.
-     </p><div id="idm140611812303040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changed UUID for Swap Partitions when Formatting via <code class="command">mkswap</code></h6><p>Do not reformat existing swap partitions with <code class="command">mkswap</code>
+     </p><div id="idm140119993420272" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changed UUID for Swap Partitions when Formatting via <code class="command">mkswap</code></h6><p>Do not reformat existing swap partitions with <code class="command">mkswap</code>
      if possible. Reformatting with <code class="command">mkswap</code> will change
      the UUID value of the swap partition. Either reformat via YaST (will
      update <code class="filename">/etc/fstab</code>) or adjust
      <code class="filename">/etc/fstab</code> manually.
-  </p></div></dd><dt id="idm140611812299136"><span class="term ">Battery Monitor<a id="idm140611812298560" class="indexterm"></a>
+  </p></div></dd><dt id="idm140119993416368"><span class="term ">Battery Monitor<a id="idm140119993415792" class="indexterm"></a>
     </span></dt><dd><p>
       ACPI checks the battery charge status and provides information about it.
       Additionally, it coordinates actions to perform when a critical charge
       status is reached.
-     </p></dd><dt id="idm140611812295984"><span class="term ">Automatic Power-Off</span></dt><dd><p>
+     </p></dd><dt id="idm140119993413216"><span class="term ">Automatic Power-Off</span></dt><dd><p>
       Following a shutdown, the computer is powered off. This is especially
       important when an automatic shutdown is performed shortly before the
       battery is empty.
-     </p></dd><dt id="idm140611812294032"><span class="term ">Processor Speed Control</span></dt><dd><p>
+     </p></dd><dt id="idm140119993411264"><span class="term ">Processor Speed Control</span></dt><dd><p>
       In connection with the CPU, energy can be saved in three different ways:
       frequency and voltage scaling (also known as
       <span class="productname">PowerNow!</span> or
@@ -136,14 +136,14 @@ hljs.configure({
     The first thing to do when problems are encountered is to update the BIOS.
     If the computer does not boot, one of the following boot parameters may be
     helpful:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140611812271568"><span class="term ">pci=noacpi</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140119993388800"><span class="term ">pci=noacpi</span></dt><dd><p>
        Do not use ACPI for configuring the PCI devices.
-      </p></dd><dt id="idm140611812269728"><span class="term ">acpi=ht</span></dt><dd><p>
+      </p></dd><dt id="idm140119993386960"><span class="term ">acpi=ht</span></dt><dd><p>
        Only perform a simple resource configuration. Do not use ACPI for other
        purposes.
-      </p></dd><dt id="idm140611812267856"><span class="term ">acpi=off</span></dt><dd><p>
+      </p></dd><dt id="idm140119993385088"><span class="term ">acpi=off</span></dt><dd><p>
        Disable ACPI.
-      </p></dd></dl></div><div id="idm140611812265888" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Problems Booting without ACPI</h6><p>
+      </p></dd></dl></div><div id="idm140119993383120" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Problems Booting without ACPI</h6><p>
      Some newer machines (especially SMP systems and AMD64 systems) need ACPI
      for configuring the hardware correctly. On these machines, disabling ACPI
      can cause problems.
@@ -179,7 +179,7 @@ hljs.configure({
       </p></li><li class="listitem "><p>
        <a class="link" href="http://acpi.sourceforge.net/dsdt/index.php" target="_blank">http://acpi.sourceforge.net/dsdt/index.php</a> (DSDT
        patches by Bruno Ducrot)
-      </p></li></ul></div><a id="idm140611812253152" class="indexterm"></a></div></div></div><div class="sect1 " id="sec.pmanage.silenthd"><div class="titlepage"><div><div><h2 class="title" id="sec.pmanage.silenthd"><span class="number">37.3 </span><span class="name">Rest for the Hard Disk</span> <a title="Permalink" class="permalink" href="cha.pmanage.html#sec.pmanage.silenthd">#</a></h2></div></div></div><p>
+      </p></li></ul></div><a id="idm140119993370320" class="indexterm"></a></div></div></div><div class="sect1 " id="sec.pmanage.silenthd"><div class="titlepage"><div><div><h2 class="title" id="sec.pmanage.silenthd"><span class="number">37.3 </span><span class="name">Rest for the Hard Disk</span> <a title="Permalink" class="permalink" href="cha.pmanage.html#sec.pmanage.silenthd">#</a></h2></div></div></div><p>
    In Linux, the hard disk can be put to sleep entirely if it is not needed or
    it can be run in a more economic or quieter mode. On modern laptops, you do
    not need to switch off the hard disks manually, because they automatically
@@ -216,24 +216,24 @@ hljs.configure({
    By default, pdflush is set to short intervals to achieve maximum data
    integrity. It checks the buffer every 5 seconds and writes the data to the
    hard disk. The following variables are interesting:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140611812238176"><span class="term "><code class="filename">/proc/sys/vm/dirty_writeback_centisecs</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140119993355280"><span class="term "><code class="filename">/proc/sys/vm/dirty_writeback_centisecs</code>
     </span></dt><dd><p>
       Contains the delay until a pdflush thread wakes up (in hundredths of a
       second).
-     </p></dd><dt id="idm140611812236000"><span class="term "><code class="filename">/proc/sys/vm/dirty_expire_centisecs</code>
+     </p></dd><dt id="idm140119993353104"><span class="term "><code class="filename">/proc/sys/vm/dirty_expire_centisecs</code>
     </span></dt><dd><p>
       Defines after which timeframe a dirty page should be written out latest.
       Default is <code class="literal">3000</code>, which means 30 seconds.
-     </p></dd><dt id="idm140611812233360"><span class="term "><code class="filename">/proc/sys/vm/dirty_background_ratio</code>
+     </p></dd><dt id="idm140119993350464"><span class="term "><code class="filename">/proc/sys/vm/dirty_background_ratio</code>
     </span></dt><dd><p>
       Maximum percentage of dirty pages until pdflush begins to write them.
       Default is <code class="literal">5</code>%.
-     </p></dd><dt id="idm140611812230736"><span class="term "><code class="filename">/proc/sys/vm/dirty_ratio</code>
+     </p></dd><dt id="idm140119993347840"><span class="term "><code class="filename">/proc/sys/vm/dirty_ratio</code>
     </span></dt><dd><p>
       When the dirty page exceeds this percentage of the total memory,
       processes are forced to write dirty buffers during their time slice
       instead of continuing to write.
-     </p></dd></dl></div><div id="idm140611812228304" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Impairment of the Data Integrity</h6><p>
+     </p></dd></dl></div><div id="idm140119993345408" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Impairment of the Data Integrity</h6><p>
     Changes to the <code class="systemitem">pdflush</code> daemon
     settings endanger the data integrity.
    </p></div><p>

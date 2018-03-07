@@ -295,7 +295,7 @@ hljs.configure({
          Location of the update repository to use during YaST self-update.
          Check out the <em class="citetitle ">Deployment Guide</em> to find further information about this feature.
          </p>
-         <div id="idm139967443952128" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Installer Self-Update Repository Only</h6><p>
+         <div id="idm140093572775664" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Installer Self-Update Repository Only</h6><p>
            The <code class="option">self_update_url</code> parameter expects only the
            installer self-update repository URL.  Do not supply any other
            repository URL—for example the URL of the software update
@@ -326,7 +326,7 @@ hljs.configure({
     installation and can be found in the file
     <code class="filename">control.xml</code> in the root directory of the
     installation media.
-   </p><div class="example" id="idm139967447341472"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.1: </span><span class="name">General Options </span><a title="Permalink" class="permalink" href="configuration.html#idm139967447341472">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;general&gt;
+   </p><div class="example" id="idm140093572766528"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.1: </span><span class="name">General Options </span><a title="Permalink" class="permalink" href="configuration.html#idm140093572766528">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;general&gt;
   &lt;signature-handling&gt;
     &lt;accept_unsigned_file config:type="boolean"&gt;true&lt;/accept_unsigned_file&gt;
     &lt;accept_file_without_checksum config:type="boolean"&gt;true&lt;/accept_file_without_checksum&gt;
@@ -400,7 +400,7 @@ hljs.configure({
    </p><p>
     To blacklist devices, use the flag <code class="literal">cio_ignore</code>.
     This option is available on IBM z Systems <span class="emphasis"><em>only</em></span>.
-   </p><div id="idm139967447334368" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Enabling Multipath for the Installation</h6><p>
+   </p><div id="idm140093571283776" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Enabling Multipath for the Installation</h6><p>
      When installing on a network storage that is accessed via multiple
      paths, you need to enable multipath for the installation with the
      <code class="literal">start_multipath</code> parameter. This parameter must be placed
@@ -412,7 +412,7 @@ hljs.configure({
 &lt;/general&gt;</pre></div><p>
      Alternatively, you can pass the following parameter to linuxrc:
      <code class="literal">LIBSTORAGE_MULTIPATH_AUTOSTART=ON</code>
-    </p></div><div id="idm139967447331040" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Handling Installer Self-Update Signatures</h6><p>
+    </p></div><div id="idm140093571280448" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Handling Installer Self-Update Signatures</h6><p>
        Installer updates are delivered using a dedicated repository, so the same
        security checks that are applied to other repositories and packages are
        performed on these updates.
@@ -432,7 +432,7 @@ hljs.configure({
       warning pop-ups (if something might go wrong),
      </p></li><li class="listitem "><p>
       error pop-ups (in case an error occurs).
-     </p></li></ul></div><div class="example" id="idm139967447322016"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.2: </span><span class="name">Reporting Behavior </span><a title="Permalink" class="permalink" href="configuration.html#idm139967447322016">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;report&gt;
+     </p></li></ul></div><div class="example" id="idm140093571271424"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.2: </span><span class="name">Reporting Behavior </span><a title="Permalink" class="permalink" href="configuration.html#idm140093571271424">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;report&gt;
   &lt;errors&gt;
     &lt;show config:type="boolean"&gt;true&lt;/show&gt;
     &lt;timeout config:type="integer"&gt;0&lt;/timeout&gt;
@@ -462,7 +462,7 @@ hljs.configure({
     The default setting in auto-installation mode is to show errors
     without timeout and to show all warnings/messages with a timeout
     of 10 seconds.
-   </p><div id="idm139967447318336" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Critical System Messages</h6><p>
+   </p><div id="idm140093571267744" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Critical System Messages</h6><p>
      Note that not all messages during installation are controlled by the
      <code class="literal">report</code> resource. Some critical messages concerning
      package installation and partitioning will show up ignoring your
@@ -491,7 +491,7 @@ hljs.configure({
  &lt;semi-automatic config:type="list"&gt;
    &lt;semi-automatic_entry&gt;scc&lt;/semi-automatic_entry&gt;
  &lt;/semi-automatic&gt;
-&lt;/general&gt;</pre></div><div id="idm139967447309360" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using the Installation Network Settings</h6><p>
+&lt;/general&gt;</pre></div><div id="idm140093571258768" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using the Installation Network Settings</h6><p>
      In case you need to use the same network settings that were used for
      the installation, AutoYaST needs to run the network setup in stage 1
      right before the registration is started:
@@ -688,7 +688,7 @@ hljs.configure({
          added to the installation repositories. See
          <a class="xref" href="configuration.html#CreateProfile.Register.Extension" title="4.3.1. Extensions">Section 4.3.1, “Extensions”</a> for details.
         </p>
-       </td></tr></tbody></table></div><div id="idm139967446308816" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Creating Own Server Certificate Fingerprint</h6><p>
+       </td></tr></tbody></table></div><div id="idm140093568792480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Creating Own Server Certificate Fingerprint</h6><p>
      In order to generate a new Server Certificate Fingerprint for
      the entry <code class="literal">reg_server_cert_fingerprint</code> you can use the
      following command:
@@ -710,7 +710,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
      <code class="literal">addons</code> property within the
      <code class="literal">suse_register</code> block.
      
-    </p><div id="idm139967447116496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability of Extensions</h6><p>
+    </p><div id="idm140093568783536" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability of Extensions</h6><p>
       The availability of extensions is product and architecture dependent.
       
       Not all extensions are available on other architectures.  The only
@@ -1775,25 +1775,25 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
      Depending on the initial status of the drive and how it was previously
      partitioned, it is possible to create the default partitioning in the
      following ways:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139967447243200"><span class="term ">Use Free Space</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140093567967968"><span class="term ">Use Free Space</span></dt><dd><p>
         If the drive is already partitioned, it is possible to create the
         new partitions using the free space on the hard disk. This requires
         the availability of sufficient space for all selected packages in
         addition to swap.
-       </p></dd><dt id="idm139967447241168"><span class="term ">Reuse all available space</span></dt><dd><p>
+       </p></dd><dt id="idm140093567965936"><span class="term ">Reuse all available space</span></dt><dd><p>
         Use this option to delete all existing partitions (Linux and
         non-Linux).
-       </p></dd><dt id="idm139967447239280"><span class="term ">Reuse all available Linux partitions</span></dt><dd><p>
+       </p></dd><dt id="idm140093567964048"><span class="term ">Reuse all available Linux partitions</span></dt><dd><p>
         This option deletes all existing Linux partitions. Other partitions
         (for example Windows partitions) remain untouched. Note that this
         works only if the Linux partitions are at the end of the device.
-       </p></dd><dt id="idm139967447237264"><span class="term ">Reuse only specified partitions</span></dt><dd><p>
+       </p></dd><dt id="idm140093567962032"><span class="term ">Reuse only specified partitions</span></dt><dd><p>
         This option allows you to select specific partitions to delete.
         Start the selection with the last available partition.
        </p></dd></dl></div><p>
      Repartitioning only works if the selected partitions are neighbors and
      located at the end of the device.
-    </p><div id="idm139967447234608" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Beware of Data Loss</h6><p>
+    </p><div id="idm140093567959376" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Beware of Data Loss</h6><p>
       The value provided in the <code class="literal">use</code> property determines
       how existing data and partitions are treated. The value
       <code class="literal">all</code> means that the entire disk will be erased. Make
@@ -1819,7 +1819,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
      <code class="literal">1GB</code>, <code class="literal">1G</code>,
      <code class="literal">1000MB</code>, or <code class="literal">1000M</code> will all create a
      partition of the size 1 Gigabyte.
-    </p><div class="complex-example"><div class="example" id="idm139967420292592"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.3: </span><span class="name">Automated Partitioning </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420292592">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm140093545640016"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.3: </span><span class="name">Automated Partitioning </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545640016">#</a></h6></div><div class="example-contents"><p>
       The following is an example of a single drive system, which is not
       pre-partitioned and should be automatically partitioned according to
       the described pre-defined partition plan. If you do not specify the
@@ -1832,7 +1832,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
 &lt;/partitioning&gt;</pre></div></div></div></div><p>
      A more detailed example shows how existing partitions and multiple
      drives are handled.
-    </p><div class="example" id="idm139967420289904"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.4: </span><span class="name">Detailed Automated Partitioning </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420289904">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning  config:type="list"&gt;
+    </p><div class="example" id="idm140093545637328"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.4: </span><span class="name">Detailed Automated Partitioning </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545637328">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning  config:type="list"&gt;
   &lt;drive&gt;
     &lt;device&gt;/dev/sda&lt;/device&gt;
     &lt;partitions config:type="list"&gt;
@@ -1897,34 +1897,34 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
       Add any valid mount option in the fourth field of
       <code class="filename">/etc/fstab</code>. Multiple options are separated by
       commas. Possible fstab options:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139967420270640"><span class="term ">Mount read-only (<code class="literal">ro</code>)</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140093545617936"><span class="term ">Mount read-only (<code class="literal">ro</code>)</span></dt><dd><p>
          No write access to the file system. Default is
          <code class="literal">false</code>.
-        </p></dd><dt id="idm139967420267904"><span class="term ">No access time (<code class="literal">noatime</code>)</span></dt><dd><p>
+        </p></dd><dt id="idm140093545615200"><span class="term ">No access time (<code class="literal">noatime</code>)</span></dt><dd><p>
          Access times are not updated when a file is read. Default is
          <code class="literal">false</code>.
-        </p></dd><dt id="idm139967420265152"><span class="term ">Mountable by User (<code class="literal">user</code>)</span></dt><dd><p>
+        </p></dd><dt id="idm140093545612448"><span class="term ">Mountable by User (<code class="literal">user</code>)</span></dt><dd><p>
          The file system can be mounted by a normal user. Default is
          <code class="literal">false</code>.
-        </p></dd><dt id="idm139967420262400"><span class="term ">
+        </p></dd><dt id="idm140093545609696"><span class="term ">
         Data Journaling Mode (<code class="literal">ordered</code>,
         <code class="literal">journal</code>, <code class="literal">writeback</code>)
-       </span></dt><dd><div class="variablelist "><dl class="variablelist"><dt id="idm139967420259728"><span class="term "><code class="literal">journal</code>
+       </span></dt><dd><div class="variablelist "><dl class="variablelist"><dt id="idm140093545607024"><span class="term "><code class="literal">journal</code>
           </span></dt><dd><p>
             All data is committed to the journal prior to being written to
             the main file system.
-           </p></dd><dt id="idm139967420257536"><span class="term "><code class="literal">ordered</code>
+           </p></dd><dt id="idm140093545604832"><span class="term "><code class="literal">ordered</code>
           </span></dt><dd><p>
             All data is directly written to the main file system before its
             metadata is committed to the journal.
-           </p></dd><dt id="idm139967420255328"><span class="term "><code class="literal">writeback</code>
+           </p></dd><dt id="idm140093545602624"><span class="term "><code class="literal">writeback</code>
           </span></dt><dd><p>
             Data ordering is not preserved.
-           </p></dd></dl></div></dd><dt id="idm139967420252720"><span class="term ">Access Control List (<code class="literal">acl</code>)</span></dt><dd><p>
+           </p></dd></dl></div></dd><dt id="idm140093545600016"><span class="term ">Access Control List (<code class="literal">acl</code>)</span></dt><dd><p>
          Enable access control lists on the file system.
-        </p></dd><dt id="idm139967420250432"><span class="term ">Extended User Attributes (<code class="literal">user_xattr</code>)</span></dt><dd><p>
+        </p></dd><dt id="idm140093545597728"><span class="term ">Extended User Attributes (<code class="literal">user_xattr</code>)</span></dt><dd><p>
          Allow extended user attributes on the file system.
-        </p></dd></dl></div><div class="example" id="idm139967420247968"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.5: </span><span class="name">Mount Options </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420247968">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitions config:type="list"&gt;
+        </p></dd></dl></div><div class="example" id="idm140093545595264"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.5: </span><span class="name">Mount Options </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545595264">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitions config:type="list"&gt;
   &lt;partition&gt;
     &lt;filesystem config:type="symbol"&gt;reiser&lt;/filesystem&gt;
     &lt;format config:type="boolean"&gt;true&lt;/format&gt;
@@ -1951,7 +1951,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
       partition 6 to create two new partitions. All remaining partitions
       will only be formatted.
       
-     </p><div class="example" id="idm139967420242080"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.6: </span><span class="name">Keeping partitions </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420242080">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
+     </p><div class="example" id="idm140093545589376"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.6: </span><span class="name">Keeping partitions </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545589376">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
   &lt;drive&gt;
     &lt;device&gt;/dev/sdc&lt;/device&gt;
       &lt;partitions config:type="list"&gt;
@@ -2003,7 +2003,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
       points and the partition types (additional configuration data can be
       provided, for example file system options, encryption and file system
       type).
-     </p><div class="example" id="idm139967420232608"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.7: </span><span class="name">Auto-detection of partitions to be kept. </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420232608">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
+     </p><div class="example" id="idm140093545579904"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.7: </span><span class="name">Auto-detection of partitions to be kept. </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545579904">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
   &lt;drive&gt;
     &lt;partitions config:type="list"&gt;
       &lt;partition&gt;
@@ -2021,7 +2021,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
       &lt;/partition&gt;
     &lt;/partitions&gt;
   &lt;/drive&gt;
-&lt;/partitioning&gt;</pre></div></div></div></div></div><div class="sect2 " id="ay.partition_fstab"><div class="titlepage"><div><div><h3 class="title" id="ay.partition_fstab"><span class="number">4.5.7 </span><span class="name">Using an Existing Mount Table (fstab)</span> <a title="Permalink" class="permalink" href="configuration.html#ay.partition_fstab">#</a></h3></div></div></div><div id="idm139967420229104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
+&lt;/partitioning&gt;</pre></div></div></div></div></div><div class="sect2 " id="ay.partition_fstab"><div class="titlepage"><div><div><h3 class="title" id="ay.partition_fstab"><span class="number">4.5.7 </span><span class="name">Using an Existing Mount Table (fstab)</span> <a title="Permalink" class="permalink" href="configuration.html#ay.partition_fstab">#</a></h3></div></div></div><div id="idm140093545576400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
       Cannot Be Combined with <code class="literal">partitioning</code> Section
      </h6><p>
       This section will be ignored if you have defined your own
@@ -2040,7 +2040,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
      <code class="filename">fstab</code> files, the installation will abort, unless
      the root partition is configured in the control file. The following
      example illustrates how this option can be used:
-    </p><div class="example" id="idm139967420223888"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.8: </span><span class="name">Reading an Existing <code class="filename">/etc/fstab</code> </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420223888">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning_advanced&gt;
+    </p><div class="example" id="idm140093545571184"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.8: </span><span class="name">Reading an Existing <code class="filename">/etc/fstab</code> </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545571184">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning_advanced&gt;
   &lt;fstab&gt;
     &lt;!-- Read data from existing fstab. If multiple root partitions are
             found, use the one specified below. Otherwise the first root
@@ -2060,7 +2060,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
 &lt;/partitioning_advanced&gt;</pre></div></div></div></div><div class="sect2 " id="ay.partition_lvm"><div class="titlepage"><div><div><h3 class="title" id="ay.partition_lvm"><span class="number">4.5.8 </span><span class="name">Logical Volume Manager (LVM)</span> <a title="Permalink" class="permalink" href="configuration.html#ay.partition_lvm">#</a></h3></div></div></div><p>
      To configure LVM, first create a physical volume using the normal
      partitioning method described above.
-    </p><div class="complex-example"><div class="example" id="idm139967420219664"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.9: </span><span class="name">Create LVM Physical Volume </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420219664">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm140093545567024"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.9: </span><span class="name">Create LVM Physical Volume </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545567024">#</a></h6></div><div class="example-contents"><p>
       The following example shows how to prepare for LVM in the
       <code class="literal">partitioning</code> resource. A non-formatted partition is
       created on device <code class="filename">/dev/sda1</code> of the type
@@ -2082,7 +2082,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
     &lt;/partitions&gt;
     &lt;use&gt;all&lt;/use&gt;
   &lt;/drive&gt;
-&lt;/partitioning&gt;</pre></div></div></div></div><div class="example" id="idm139967420215424"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.10: </span><span class="name">LVM Logical Volumes </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420215424">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
+&lt;/partitioning&gt;</pre></div></div></div></div><div class="example" id="idm140093545562784"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.10: </span><span class="name">LVM Logical Volumes </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545562784">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
   &lt;drive&gt;
     &lt;device&gt;/dev/sda&lt;/device&gt;
     &lt;partitions config:type="list"&gt;
@@ -2128,22 +2128,22 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
     </p></div><div class="sect2 " id="ay.partition_sw_raid"><div class="titlepage"><div><div><h3 class="title" id="ay.partition_sw_raid"><span class="number">4.5.9 </span><span class="name">Software RAID</span> <a title="Permalink" class="permalink" href="configuration.html#ay.partition_sw_raid">#</a></h3></div></div></div><p>
      Using AutoYaST, you can create and assemble software RAID devices. The
      supported RAID levels are the following:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139967420208416"><span class="term ">RAID 0</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140093545555840"><span class="term ">RAID 0</span></dt><dd><p>
         This level increases your disk performance. There is
         <span class="emphasis"><em>no</em></span> redundancy in this mode. If one of the
         drives crashes, data recovery will not be possible.
-       </p></dd><dt id="idm139967420206032"><span class="term ">RAID 1</span></dt><dd><p>
+       </p></dd><dt id="idm140093545553456"><span class="term ">RAID 1</span></dt><dd><p>
         This mode offers the best redundancy. It can be used with two or
         more disks. An exact copy of all data is maintained on all disks. As
         long as at least one disk is still working, no data is lost. The
         partitions used for this type of RAID should have approximately the
         same size.
-       </p></dd><dt id="idm139967420203936"><span class="term ">RAID 5</span></dt><dd><p>
+       </p></dd><dt id="idm140093545551360"><span class="term ">RAID 5</span></dt><dd><p>
         This mode combines management of a larger number of disks and still
         maintains some redundancy. This mode can be used on three disks or
         more. If one disk fails, all data is still intact. If two disks fail
         simultaneously, all data is lost.
-       </p></dd><dt id="idm139967420201888"><span class="term ">Multipath</span></dt><dd><p>
+       </p></dd><dt id="idm140093545549312"><span class="term ">Multipath</span></dt><dd><p>
         This mode allows access to the same physical device via multiple
         controllers for redundancy against a fault in a controller card.
         This mode can be used with at least two devices.
@@ -2154,7 +2154,7 @@ openssl x509 -noout -fingerprint -sha256</pre></div><p>
      RAID or if it should be a Spare device.
     </p><p>
      The following example shows a simple RAID1 configuration:
-    </p><div class="example" id="idm139967420198544"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.11: </span><span class="name">RAID1 configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420198544">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
+    </p><div class="example" id="idm140093545545968"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.11: </span><span class="name">RAID1 configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545545968">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partitioning config:type="list"&gt;
   &lt;drive&gt;
     &lt;device&gt;/dev/sda&lt;/device&gt;
     &lt;partitions config:type="list"&gt;
@@ -2331,7 +2331,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
          </td></tr></tbody></table></div></div></div></div><div class="sect1 " id="CreateProfile.Iscsi_client"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.Iscsi_client"><span class="number">4.6 </span><span class="name">iSCSI Initiator Overview</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Iscsi_client">#</a></h2></div></div></div><p>
     Using the <code class="literal">iscsi-client</code> resource, you can configure
     the target machine as an iSCSI client.
-   </p><div class="example" id="idm139967420147168"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.12: </span><span class="name">iSCSI client </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420147168">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;iscsi-client&gt;
+   </p><div class="example" id="idm140093545494592"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.12: </span><span class="name">iSCSI client </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545494592">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;iscsi-client&gt;
     &lt;initiatorname&gt;iqn.2013-02.de.suse:01:e229358d2dea&lt;/initiatorname&gt;
     &lt;targets config:type="list"&gt;
       &lt;listentry&gt;
@@ -2395,7 +2395,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
          </td></tr></tbody></table></div></div><div class="sect1 " id="CreateProfile.fcoe_client"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.fcoe_client"><span class="number">4.7 </span><span class="name">Fibre Channel over Ethernet Configuration (FCoE)</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.fcoe_client">#</a></h2></div></div></div><p>
     Using the <code class="literal">fcoe_cfg</code> resource, you can configure
     a Fibre Channel over Ethernet (FCoE).
-   </p><div class="example" id="idm139967420126192"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.13: </span><span class="name">FCoE configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420126192">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;fcoe-client&gt;
+   </p><div class="example" id="idm140093545473616"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.13: </span><span class="name">FCoE configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545473616">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;fcoe-client&gt;
     &lt;fcoe_cfg&gt;
       &lt;DEBUG&gt;no&lt;/DEBUG&gt;
       &lt;USE_SYSLOG&gt;yes&lt;/USE_SYSLOG&gt;
@@ -2483,7 +2483,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
           </p>
          </td></tr></tbody></table></div></div><div class="sect1 " id="CreateProfile.Country"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.Country"><span class="number">4.8 </span><span class="name">Country Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Country">#</a></h2></div></div></div><p>
     Language, timezone, and keyboard settings.
-   </p><div class="example" id="idm139967420104560"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.14: </span><span class="name">Language </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420104560">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;language&gt;
+   </p><div class="example" id="idm140093545452000"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.14: </span><span class="name">Language </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545452000">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;language&gt;
          &lt;language&gt;en_GB&lt;/language&gt;
          &lt;languages&gt;de_DE,en_US&lt;/languages&gt;
        &lt;/language&gt;</pre></div></div></div><div class="informaltable"><table border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
@@ -2527,7 +2527,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
          </td></tr></tbody></table></div><p>
     If the configured value for the primary language is unknown, it will be reset
     to the default, <code class="literal">en_US</code>.
-   </p><div class="example" id="idm139967420088592"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.15: </span><span class="name">Timezone </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420088592">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;timezone&gt;
+   </p><div class="example" id="idm140093545436032"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.15: </span><span class="name">Timezone </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545436032">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;timezone&gt;
          &lt;hwclock&gt;UTC&lt;/hwclock&gt;
          &lt;timezone&gt;Europe/Berlin&lt;/timezone&gt;
        &lt;/timezone&gt;</pre></div></div></div><div class="informaltable"><table border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
@@ -2567,7 +2567,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
            A list of available timezones can be found under
            <code class="literal">/usr/share/YaST2/data/timezone_raw.ycp</code>
           </p>
-         </td></tr></tbody></table></div><div class="example" id="idm139967420074976"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.16: </span><span class="name">Keyboard </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420074976">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;keyboard&gt;
+         </td></tr></tbody></table></div><div class="example" id="idm140093545422416"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.16: </span><span class="name">Keyboard </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545422416">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">       &lt;keyboard&gt;
          &lt;keymap&gt;german&lt;/keymap&gt;
        &lt;/keyboard&gt;</pre></div></div></div><div class="informaltable"><table border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
         <p>
@@ -2598,7 +2598,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
     
    </p><div class="sect2 " id="Software.Selections.sles10"><div class="titlepage"><div><div><h3 class="title" id="Software.Selections.sles10"><span class="number">4.9.1 </span><span class="name">Package Selection with Patterns</span> <a title="Permalink" class="permalink" href="configuration.html#Software.Selections.sles10">#</a></h3></div></div></div><p>
      Patterns are configured like this:
-    </p><div class="example" id="idm139967420060512"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.17: </span><span class="name">Package Selection in the Control File with Patterns </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420060512">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
+    </p><div class="example" id="idm140093545407952"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.17: </span><span class="name">Package Selection in the Control File with Patterns </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545407952">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
   &lt;patterns config:type="list"&gt;
     &lt;pattern&gt;directory_server&lt;/pattern&gt;
   &lt;/patterns&gt;
@@ -2623,7 +2623,7 @@ config:type="boolean"&gt;true&lt;/diag&gt;</pre></div>
      <code class="command">/usr/bin/create_package_descr</code>. It can be found in
      the <code class="literal">inst-source-utils</code> package in the openSUSE Build Service.
      When creating the database, all languages will be reset to English.
-    </p><div class="complex-example"><div class="example" id="idm139967420054416"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.18: </span><span class="name">Creating a Package Database With the Additional Package inst-source-utils.rpm </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420054416">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm140093545401920"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.18: </span><span class="name">Creating a Package Database With the Additional Package inst-source-utils.rpm </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545401920">#</a></h6></div><div class="example-contents"><p>
      The unpacked DVD is located in <code class="literal">/usr/local/DVDs/LATEST</code>.
      </p><div class="verbatim-wrap"><pre class="screen">cp /tmp/inst-source-utils-2016.7.26-1.2.noarch.rpm /usr/local/DVDs/LATEST/suse/noarch
 cd /usr/local/DVDs/LATEST/suse
@@ -2645,8 +2645,8 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
      The following example shows how the SDK module can be added to the base product
      repository. The complete SDK repository will be stored in the directory
      <code class="filename">/sdk</code>.
-    </p><div class="complex-example"><div class="example" id="idm139967420047280"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.19: </span><span class="name"><code class="filename">add_on_products.xml</code>
-      </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420047280">#</a></h6></div><div class="example-contents"><p>This file describes an SDK module included in the base product.</p><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+    </p><div class="complex-example"><div class="example" id="idm140093545394784"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.19: </span><span class="name"><code class="filename">add_on_products.xml</code>
+      </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545394784">#</a></h6></div><div class="example-contents"><p>This file describes an SDK module included in the base product.</p><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;add_on_products xmlns="http://www.suse.com/1.0/yast2ns"
    xmlns:config="http://www.suse.com/1.0/configns"&gt;
    &lt;product_items config:type="list"&gt;
@@ -2667,7 +2667,7 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
     </p><p>
      Besides this special case all other modules, extensions and add-on products can be
      added from almost every other locations while an AutoYaST installation.
-    </p><div class="example" id="idm139967420042800"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.20: </span><span class="name">Adding SDK product auto AutoYaST configuration file </span><a title="Permalink" class="permalink" href="configuration.html#idm139967420042800">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;add-on&gt;
+    </p><div class="example" id="idm140093545390304"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.20: </span><span class="name">Adding SDK product auto AutoYaST configuration file </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545390304">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;add-on&gt;
   &lt;add_on_products config:type="list"&gt;
     &lt;listentry&gt;
       &lt;media_url&gt;cd:///sdk&lt;/media_url&gt;
@@ -2977,7 +2977,7 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
      <code class="literal">kernel</code> property. The following is an example of
      forcing the installation of the default kernel. This kernel will be
      installed even if an SMP or other kernel is required.
-    </p><div class="example" id="idm139967419944416"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.21: </span><span class="name">Kernel Selection in the Control File </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419944416">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
+    </p><div class="example" id="idm140093545291984"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.21: </span><span class="name">Kernel Selection in the Control File </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545291984">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
   &lt;kernel&gt;kernel-default&lt;/kernel&gt;
   ...
 &lt;/software&gt;</pre></div></div></div></div><div class="sect2 " id="Software.Selections.remove_packs"><div class="titlepage"><div><div><h3 class="title" id="Software.Selections.remove_packs"><span class="number">4.9.4 </span><span class="name">Removing Automatically Selected Packages</span> <a title="Permalink" class="permalink" href="configuration.html#Software.Selections.remove_packs">#</a></h3></div></div></div><p>
@@ -2993,14 +2993,14 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
      in the software resource. However, note that sendmail is not shipped
      with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. The following example shows how this can be
      done:
-    </p><div class="example" id="idm139967419938176"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.22: </span><span class="name">Package Selection in Control File </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419938176">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
+    </p><div class="example" id="idm140093545285680"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.22: </span><span class="name">Package Selection in Control File </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545285680">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
   &lt;packages  config:type="list"&gt;
     &lt;package&gt;sendmail&lt;/package&gt;
   &lt;/packages&gt;
   &lt;remove-packages  config:type="list"&gt;
     &lt;package&gt;postfix&lt;/package&gt;
   &lt;/remove-packages&gt;
-&lt;/software&gt;</pre></div></div></div><div id="idm139967419936640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Package Removal Failure</h6><p>
+&lt;/software&gt;</pre></div></div></div><div id="idm140093545284144" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Package Removal Failure</h6><p>
       Note that it is not possible to remove a package, that is part of a
       pattern (see <a class="xref" href="configuration.html#Software.Selections.sles10" title="4.9.1. Package Selection with Patterns">Section 4.9.1, “Package Selection with Patterns”</a>).  When
       specifying such a package for removal, the installation will fail with
@@ -3065,7 +3065,7 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
       <code class="literal">suse_register</code> Running registration process.
      </p></li></ul></div><p>
     To control the upgrade process the following sections can be defined:
-   </p><div class="example" id="idm139967419906144"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.23: </span><span class="name">Upgrade and Backup </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419906144">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;upgrade&gt;
+   </p><div class="example" id="idm140093545253648"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.23: </span><span class="name">Upgrade and Backup </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545253648">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;upgrade&gt;
     &lt;stop_on_solver_conflict config:type="boolean"&gt;true&lt;/stop_on_solver_conflict&gt;
   &lt;/upgrade&gt;
   &lt;backup&gt;
@@ -3124,7 +3124,7 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
          </p>
         </td><td>
          
-        </td></tr></tbody></table></div><div id="idm139967419886688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Starting AutoYaST in upgrade mode</h6><p>
+        </td></tr></tbody></table></div><div id="idm140093545234192" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Starting AutoYaST in upgrade mode</h6><p>
      To start the AutoYaST upgrade mode while booting the system, you
      need to select the <code class="literal">Installation</code> menu item and use the
      following boot parameters:
@@ -3140,7 +3140,7 @@ create_package_descr -d /usr/local/CDs/LATEST/suse</pre></div></div></div></div>
    </p><p>
     The &lt;enable config:type="list"&gt; and &lt;disable
     config:type="list"&gt; let you explicitly enable or disable services.
-   </p><div class="example" id="idm139967419878656"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.24: </span><span class="name">Configuring Services and Targets </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419878656">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;services-manager&gt;
+   </p><div class="example" id="idm140093545226160"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.24: </span><span class="name">Configuring Services and Targets </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545226160">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;services-manager&gt;
   &lt;default_target&gt;multi-user&lt;/default_target&gt;
   &lt;services&gt;
     &lt;disable config:type="list"&gt;
@@ -3279,7 +3279,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     &lt;bootproto&gt;none&lt;/bootproto&gt;
     &lt;startmode&gt;hotplug&lt;/startmode&gt;
   &lt;/interface&gt;
-&lt;/interfaces&gt;</pre></div></div></div><div id="idm139967419863168" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: IPv6 Address Support</h6><p>
+&lt;/interfaces&gt;</pre></div></div></div><div id="idm140093545210736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: IPv6 Address Support</h6><p>
      Using IPv6 addresses in AutoYaST is fully supported. To disable IPv6
      Address Support, set &lt;ipv6
      config:type="boolean"&gt;false&lt;/ipv6&gt;
@@ -3427,7 +3427,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      <code class="literal">no_proxy</code> (space separated values). If you are using
      a proxy server with authorization, fill in
      <code class="literal">proxy_user</code> and <code class="literal">proxy_password</code>,
-    </p><div class="example" id="idm139967419810016"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.27: </span><span class="name">Network configuration: Proxy </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419810016">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;proxy&gt;
+    </p><div class="example" id="idm140093545157584"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.27: </span><span class="name">Network configuration: Proxy </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545157584">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;proxy&gt;
   &lt;enabled config:type="boolean"&gt;true&lt;/enabled&gt;
   &lt;ftp_proxy&gt;http://192.168.1.240:3128&lt;/ftp_proxy&gt;
   &lt;http_proxy&gt;http://192.168.1.240:3128&lt;/http_proxy&gt;
@@ -3455,7 +3455,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      name is taken from <span class="emphasis"><em>server_args</em></span>. After that, the
      basename of the first whitespace-separated word is taken and these
      values are compared.
-    </p><div class="example" id="idm139967419801296"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.28: </span><span class="name">Inetd Example </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419801296">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;profile&gt;
+    </p><div class="example" id="idm140093545148864"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.28: </span><span class="name">Inetd Example </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545148864">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;profile&gt;
   &lt;inetd&gt;
     &lt;netd_service config:type="symbol"&gt;xinetd&lt;/netd_service&gt;
     &lt;netd_status config:type="integer"&gt;0&lt;/netd_status&gt;
@@ -3481,7 +3481,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     Using the <code class="literal">nis</code> resource, you can configure the target
     machine as a NIS client. The following example shows a detailed
     configuration using multiple domains.
-   </p><div class="example" id="idm139967419796736"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.29: </span><span class="name">Network configuration: NIS </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419796736">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"> &lt;nis&gt;
+   </p><div class="example" id="idm140093545144368"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.29: </span><span class="name">Network configuration: NIS </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545144368">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"> &lt;nis&gt;
   &lt;nis_broadcast config:type="boolean"&gt;true&lt;/nis_broadcast&gt;
   &lt;nis_broken_server config:type="boolean"&gt;true&lt;/nis_broken_server&gt;
   &lt;nis_by_dhcp config:type="boolean"&gt;false&lt;/nis_by_dhcp&gt;
@@ -3505,7 +3505,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
 &lt;/nis&gt;</pre></div></div></div></div><div class="sect1 " id="Configuration.Network.NIS_Server"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.NIS_Server"><span class="number">4.14 </span><span class="name">NIS Server</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.NIS_Server">#</a></h2></div></div></div><p>
     You can configure the target machine as a NIS server.
     NIS Master Server and NIS Slave Server and a combination of both are available.
-   </p><div class="example" id="idm139967419792608"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.30: </span><span class="name">NIS Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419792608">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;nis_server&gt;
+   </p><div class="example" id="idm140093545140304"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.30: </span><span class="name">NIS Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545140304">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;nis_server&gt;
     &lt;domain&gt;mydomain.de&lt;/domain&gt;
     &lt;maps_to_serve config:type="list"&gt;
       &lt;nis_map&gt;auto.master&lt;/nis_map&gt;
@@ -3726,7 +3726,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     Using the <code class="literal">auth-server</code> resource, you can configure the
     target machine as an LDAP server. The following example shows a detailed
     configuration.
-   </p><div class="example" id="idm139967419725520"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.31: </span><span class="name">LDAP configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419725520">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;auth-server&gt;
+   </p><div class="example" id="idm140093545073216"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.31: </span><span class="name">LDAP configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545073216">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;auth-server&gt;
     &lt;daemon&gt;
       &lt;listeners config:type="list"&gt;
         &lt;listentry&gt;ldap&lt;/listentry&gt;
@@ -3908,7 +3908,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
   &lt;/auth-server&gt;</pre></div></div></div></div><div class="sect1 " id="Configuration.Network.Samba_client"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.Samba_client"><span class="number">4.16 </span><span class="name">Windows Domain Membership</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.Samba_client">#</a></h2></div></div></div><p>
     Using the <code class="literal">samba-client</code> resource, you can configure a
     membership of a workgroup, NT domain, or Active Directory domain.
-   </p><div class="example" id="idm139967419716944"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.32: </span><span class="name">Samba Client configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419716944">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;samba-client&gt;
+   </p><div class="example" id="idm140093545064576"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.32: </span><span class="name">Samba Client configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545064576">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;samba-client&gt;
     &lt;disable_dhcp_hostname config:type="boolean"&gt;true&lt;/disable_dhcp_hostname&gt;
     &lt;global&gt;
       &lt;security&gt;domain&lt;/security&gt;
@@ -4001,7 +4001,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
         </p>
        </td></tr></tbody></table></div></div><div class="sect1 " id="Configuration.Network.Samba_server"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.Samba_server"><span class="number">4.17 </span><span class="name">Samba Server</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.Samba_server">#</a></h2></div></div></div><p>
     Configuration of a simple Samba server.
-   </p><div class="example" id="idm139967419685840"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.33: </span><span class="name">Samba Server configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419685840">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;samba-server&gt;
+   </p><div class="example" id="idm140093545033472"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.33: </span><span class="name">Samba Server configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545033472">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;samba-server&gt;
     &lt;accounts config:type="list"/&gt;
     &lt;backend/&gt;
     &lt;config config:type="list"&gt;
@@ -4106,7 +4106,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     the name of the search base (base DN, for example,
     <code class="literal">dc=mydomain,dc=com</code>) and the IP address of the LDAP
     server.
-   </p><div class="example" id="idm139967419652608"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.34: </span><span class="name">Network configuration: Authentication Client </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419652608">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;auth-client&gt;
+   </p><div class="example" id="idm140093545000240"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.34: </span><span class="name">Network configuration: Authentication Client </span><a title="Permalink" class="permalink" href="configuration.html#idm140093545000240">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;auth-client&gt;
   &lt;sssd&gt;yes&lt;/sssd&gt;
   &lt;nssldap&gt;no&lt;/nssldap&gt;
   &lt;sssd_conf&gt;
@@ -4125,7 +4125,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
       &lt;/domain&gt;
     &lt;/auth_domains&gt;
   &lt;/sssd_conf&gt;
-&lt;/auth-client&gt;</pre></div></div></div><div id="idm139967419650672" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using ldaps://</h6><p>
+&lt;/auth-client&gt;</pre></div></div></div><div id="idm140093544998304" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using ldaps://</h6><p>
      To use LDAP with native SSL (rather than TLS), add the
      <code class="literal">ldaps</code> resource:
     </p><div class="verbatim-wrap"><pre class="screen">&lt;auth-client&gt;
@@ -4149,7 +4149,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     structure is not compatible with the new one and the control files with
     an NFS section created on older releases will not work with newer
     products.
-   </p><div class="example" id="idm139967419642416"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.35: </span><span class="name">Network Configuration: NFS Client </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419642416">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;nfs&gt;
+   </p><div class="example" id="idm140093544990032"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.35: </span><span class="name">Network Configuration: NFS Client </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544990032">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;nfs&gt;
   &lt;enable_nfs4 config:type="boolean"&gt;true&lt;/enable_nfs4&gt;
   &lt;idmapd_domain&gt;suse.cz&lt;/idmapd_domain&gt;
   &lt;nfs_entries config:type="list"&gt;
@@ -4172,7 +4172,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
       &lt;vfstype&gt;nfs&lt;/vfstype&gt;
     &lt;/nfs_entry&gt;
   &lt;/nfs_entries&gt;
-&lt;/nfs&gt;</pre></div></div></div><div class="example" id="idm139967419640304"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.36: </span><span class="name">Network Configuration: NFS Server </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419640304">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;nfs_server&gt;
+&lt;/nfs&gt;</pre></div></div></div><div class="example" id="idm140093544987920"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.36: </span><span class="name">Network Configuration: NFS Server </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544987920">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;nfs_server&gt;
   &lt;nfs_exports config:type="list"&gt;
     &lt;nfs_export&gt;
       &lt;allowed config:type="list"&gt;
@@ -4198,7 +4198,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     local clocks, and NTP broadcasting, add the appropriate entry to the
     control file. An example of various configuration options is shown
     below.
-   </p><div class="example" id="idm139967419635280"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.37: </span><span class="name">Network configuration: NTP Client </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419635280">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;ntp-client&gt;
+   </p><div class="example" id="idm140093544982896"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.37: </span><span class="name">Network configuration: NTP Client </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544982896">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;ntp-client&gt;
   &lt;configure_dhcp config:type="boolean"&gt;false&lt;/configure_dhcp&gt;
   &lt;peers config:type="list"&gt;
     &lt;peer&gt;
@@ -4213,7 +4213,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     For the mail configuration of the client, this module lets you create a
     detailed mail configuration. The module contains various options. We
     recommended you use it at least for the initial configuration.
-   </p><div class="example" id="idm139967419631552"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.38: </span><span class="name">Mail Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419631552">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;mail&gt;
+   </p><div class="example" id="idm140093544979168"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.38: </span><span class="name">Mail Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544979168">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;mail&gt;
   &lt;aliases config:type="list"&gt;
     &lt;alias&gt;
       &lt;alias&gt;root&lt;/alias&gt;
@@ -4295,7 +4295,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     select the <code class="literal">HTTP server</code> YaST module and clone the
     Apache settings. These settings can be exported via the menu
     <code class="literal">File</code>.
-   </p><div class="example" id="idm139967419623824"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.39: </span><span class="name">HTTP Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419623824">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;http-server&gt;
+   </p><div class="example" id="idm140093544971376"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.39: </span><span class="name">HTTP Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544971376">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;http-server&gt;
     &lt;Listen config:type="list"&gt;
       &lt;listentry&gt;
         &lt;ADDRESS/&gt;
@@ -4784,12 +4784,12 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
          <p>
          Optional. Default: false
          </p>
-        </td></tr></tbody></table></div><div id="idm139967419558112" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Firewall</h6><p>
+        </td></tr></tbody></table></div><div id="idm140093544905664" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Firewall</h6><p>
       To run an Apache server correctly, make sure the firewall is configured
       appropriately.
       </p></div></div><div class="sect1 " id="Configuration.Network.Squid"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.Squid"><span class="number">4.23 </span><span class="name">Squid Server</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.Squid">#</a></h2></div></div></div><p>
     Squid is a caching and forwarding Web proxy.
-   </p><div class="example" id="idm139967419554784"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.40: </span><span class="name">Squid Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419554784">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;squid&gt;
+   </p><div class="example" id="idm140093544902336"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.40: </span><span class="name">Squid Server Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544902336">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;squid&gt;
     &lt;acls config:type="list"&gt;
       &lt;listentry&gt;
         &lt;name&gt;QUERY&lt;/name&gt;
@@ -5162,7 +5162,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
         </p>
        </td></tr></tbody></table></div></div><div class="sect1 " id="Configuration.Network.Ftp"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.Ftp"><span class="number">4.24 </span><span class="name">FTP Server</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.Ftp">#</a></h2></div></div></div><p>
      Configure your FTP Internet server settings.
-    </p><div class="example" id="idm139967419511584"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.41: </span><span class="name">FTP server configuration: </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419511584">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;ftp-server&gt;
+    </p><div class="example" id="idm140093544859200"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.41: </span><span class="name">FTP server configuration: </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544859200">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;ftp-server&gt;
     &lt;AnonAuthen&gt;2&lt;/AnonAuthen&gt;
     &lt;AnonCreatDirs&gt;NO&lt;/AnonCreatDirs&gt;
     &lt;AnonMaxRate&gt;0&lt;/AnonMaxRate&gt;
@@ -5575,7 +5575,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
          <p>
           Value: YES/NO
          </p>
-        </td></tr></tbody></table></div><div id="idm139967419401840" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Firewall</h6><p>
+        </td></tr></tbody></table></div><div id="idm140093544749456" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Firewall</h6><p>
       Proper Firewall setting will be required for the FTP server to run correctly.
       </p></div></div><div class="sect1 " id="Configuration.Network.Tftp"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Network.Tftp"><span class="number">4.25 </span><span class="name">TFTP Server</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Network.Tftp">#</a></h2></div></div></div><p>
      Configure your TFTP Internet server settings.
@@ -5583,7 +5583,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      Use this to enable a server for TFTP (trivial file transfer protocol). The server will be started using xinetd.
     </p><p>
      Note that TFTP and FTP are not the same.
-    </p><div class="example" id="idm139967419397472"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.42: </span><span class="name">TFTP server configuration: </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419397472">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;tftp-server&gt;
+    </p><div class="example" id="idm140093544745088"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.42: </span><span class="name">TFTP server configuration: </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544745088">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;tftp-server&gt;
     &lt;start_tftpd config:type="boolean"&gt;true&lt;/start_tftpd&gt;
     &lt;tftp_directory&gt;/tftpboot&lt;/tftp_directory&gt;
   &lt;/tftp-server&gt;</pre></div></div></div><div class="informaltable"><table border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
@@ -5632,7 +5632,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     are then guided through a series of steps that allow for easier
     configuration of their desktops. YaST firstboot does not run by default
     and needs to be configured to run.
-    </p><div class="example" id="idm139967419382032"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.43: </span><span class="name">Enabling Firstboot Workflow </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419382032">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">      &lt;firstboot&gt;
+    </p><div class="example" id="idm140093544729584"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.43: </span><span class="name">Enabling Firstboot Workflow </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544729584">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">      &lt;firstboot&gt;
         &lt;firstboot_enabled config:type="boolean"&gt;true&lt;/firstboot_enabled&gt;
       &lt;/firstboot&gt;</pre></div></div></div></div><div class="sect1 " id="CreateProfile.Security"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.Security"><span class="number">4.27 </span><span class="name">Security Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Security">#</a></h2></div></div></div><p>
     Using the features of this module, you can to change the local security
@@ -5643,7 +5643,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     Configuring the security settings automatically is similar to the
     <code class="literal">Custom Settings</code> in the security module available in
     the running system. This allows you create a customized configuration.
-   </p><div class="complex-example"><div class="example" id="idm139967419377552"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.44: </span><span class="name">Security configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419377552">#</a></h6></div><div class="example-contents"><p>
+   </p><div class="complex-example"><div class="example" id="idm140093544725104"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.44: </span><span class="name">Security configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544725104">#</a></h6></div><div class="example-contents"><p>
      See the reference for the meaning and the possible values of the
      settings in the following example.
     </p><div class="verbatim-wrap"><pre class="screen">&lt;security&gt;
@@ -5685,14 +5685,14 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      plausibility and length etc.
     </p></div><div class="sect2 " id="CreateProfile.Security.boot"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.Security.boot"><span class="number">4.27.2 </span><span class="name">Boot Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Security.boot">#</a></h3></div></div></div><p>
      Use the security resource, to change various boot settings.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139967419366944"><span class="term ">
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140093544714496"><span class="term ">
        How to interpret <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">Alt</span><span class="key-connector">–</span><span class="keycap">Del</span>?
       </span></dt><dd><p>
         When someone at the console has pressed the
         <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">Alt</span><span class="key-connector">–</span><span class="keycap">Del</span> key combination, the system
         usually reboots. Sometimes it is desirable to ignore this event, for
         example, when the system serves as both workstation and server.
-       </p></dd><dt id="idm139967419361664"><span class="term ">Shutdown behavior of GDM</span></dt><dd><p>
+       </p></dd><dt id="idm140093544709216"><span class="term ">Shutdown behavior of GDM</span></dt><dd><p>
         Configure a list of users allowed to shut down the machine from GDM.
        </p></dd></dl></div></div><div class="sect2 " id="CreateProfile.Security.login"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.Security.login"><span class="number">4.27.3 </span><span class="name">Login Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Security.login">#</a></h3></div></div></div><p>
      Change various login settings. These settings are mainly stored in the
@@ -5702,7 +5702,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
     </p></div></div><div class="sect1 " id="CreateProfile.Security.laf"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.Security.laf"><span class="number">4.28 </span><span class="name">Linux Audit Framework (LAF)</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Security.laf">#</a></h2></div></div></div><p>
     This module allows the configuration of the audit daemon and to add
     rules for the audit subsystem.
-   </p><div class="example" id="idm139967419352992"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.45: </span><span class="name">LAF configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419352992">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;audit-laf&gt;
+   </p><div class="example" id="idm140093544700544"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.45: </span><span class="name">LAF configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544700544">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">  &lt;audit-laf&gt;
     &lt;auditd&gt;
       &lt;flush&gt;INCREMENTAL&lt;/flush&gt;
       &lt;freq&gt;20&lt;/freq&gt;
@@ -5851,22 +5851,22 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
        </td></tr></tbody></table></div></div><div class="sect1 " id="Configuration.Security.users_and_groups"><div class="titlepage"><div><div><h2 class="title" id="Configuration.Security.users_and_groups"><span class="number">4.29 </span><span class="name">Users and Groups</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Security.users_and_groups">#</a></h2></div></div></div><p>
     AutoYaST supports defining local users, groups, special login settings and even
     default options for new users. Those settings are defined in the following sections:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139967419300784"><span class="term ">users</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140093544648272"><span class="term ">users</span></dt><dd><p>
        List of users
-      </p></dd><dt id="idm139967419299024"><span class="term ">user_defaults</span></dt><dd><p>
+      </p></dd><dt id="idm140093544646512"><span class="term ">user_defaults</span></dt><dd><p>
        Default options for new users
-      </p></dd><dt id="idm139967419297200"><span class="term ">groups</span></dt><dd><p>
+      </p></dd><dt id="idm140093544644688"><span class="term ">groups</span></dt><dd><p>
        List of groups
-      </p></dd><dt id="idm139967419295392"><span class="term ">login_settings</span></dt><dd><p>
+      </p></dd><dt id="idm140093544642880"><span class="term ">login_settings</span></dt><dd><p>
        Special login settings like password-less login or autologin
-      </p></dd></dl></div><div id="idm139967419293376" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Users and groups set up during the first stage</h6><p>
+      </p></dd></dl></div><div id="idm140093544640864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Users and groups set up during the first stage</h6><p>
      Users and groups are set up during the first stage, so you can set up a
      usable system without running the second stage.
     </p></div><div class="sect2 " id="Configuration.Security.users"><div class="titlepage"><div><div><h3 class="title" id="Configuration.Security.users"><span class="number">4.29.1 </span><span class="name">Users</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Security.users">#</a></h3></div></div></div><p>
      A list of users can be defined in the <code class="literal">&lt;users&gt;</code>
      section.  Take into account that at least the <code class="systemitem">root</code> users should be
      set up so you can log in after the installation is finished.
-    </p><div class="example" id="idm139967419288896"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.46: </span><span class="name">Minimal User Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419288896">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;users config:type="list"&gt;
+    </p><div class="example" id="idm140093544636384"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.46: </span><span class="name">Minimal User Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544636384">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;users config:type="list"&gt;
   &lt;user&gt;
     &lt;username&gt;root&lt;/username&gt;
     &lt;user_password&gt;password&lt;/user_password&gt;
@@ -5881,7 +5881,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      The following example shows a more complex scenario. System wide default
      setting from <code class="filename">/etc/default/useradd</code>, such as the
      shell or the parent directory for the home directory, are applied.
-    </p><div class="example" id="idm139967419286208"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.47: </span><span class="name">Complex User Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419286208">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;users config:type="list"&gt;
+    </p><div class="example" id="idm140093544633696"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.47: </span><span class="name">Complex User Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544633696">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;users config:type="list"&gt;
   &lt;user&gt;
     &lt;username&gt;root&lt;/username&gt;
     &lt;user_password&gt;password&lt;/user_password&gt;
@@ -5906,7 +5906,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
       &lt;inact&gt;5&lt;/inact&gt;
     &lt;/password_settings&gt;
   &lt;/user&gt;
-&lt;/users&gt;</pre></div></div></div><div id="idm139967419283744" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="literal">authorized_keys</code> File will be overwritten</h6><p>
+&lt;/users&gt;</pre></div></div></div><div id="idm140093544631232" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="literal">authorized_keys</code> File will be overwritten</h6><p>
       If the profile defines a set of SSH authorized keys for a user in the
       <code class="literal">authorized_keys</code> section, an existing
       <code class="literal">$HOME/.ssh/authorized_keys</code> file will be overwritten.
@@ -6268,7 +6268,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
         </td></tr></tbody></table></div></div><div class="sect2 " id="Configuration.Security.groups"><div class="titlepage"><div><div><h3 class="title" id="Configuration.Security.groups"><span class="number">4.29.3 </span><span class="name">Groups</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Security.groups">#</a></h3></div></div></div><p>
      A list of groups can be defined in <code class="literal">&lt;groups&gt;</code>
      as shown in the example.
-    </p><div class="example" id="idm139967419159904"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.48: </span><span class="name">Group Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419159904">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;groups&gt;
+    </p><div class="example" id="idm140093544507456"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.48: </span><span class="name">Group Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544507456">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;groups&gt;
   &lt;group&gt;
     &lt;gid&gt;100&lt;gid&gt;
     &lt;groupname&gt;users&lt;/groupname&gt;
@@ -6355,7 +6355,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
           Optional. A list of users who belong to the group. User names must be separated by commas.
          </p>
         </td></tr></tbody></table></div></div><div class="sect2 " id="Configuration.Security.login_settings"><div class="titlepage"><div><div><h3 class="title" id="Configuration.Security.login_settings"><span class="number">4.29.4 </span><span class="name">Login Settings</span> <a title="Permalink" class="permalink" href="configuration.html#Configuration.Security.login_settings">#</a></h3></div></div></div><p>Two special login settings can be enabled through an AutoYaST profile:
-    autologin and password-less login. Both of them are disabled by default.</p><div class="example" id="idm139967419129584"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.49: </span><span class="name">Enabling autologin and password-less login </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419129584">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;login_settings&gt;
+    autologin and password-less login. Both of them are disabled by default.</p><div class="example" id="idm140093544477072"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.49: </span><span class="name">Enabling autologin and password-less login </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544477072">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;login_settings&gt;
   &lt;autologin_user&gt;vagrant&lt;/autologin_user&gt;
   &lt;password_less_login config:type="boolean"&gt;true&lt;/password_less_login&gt;
 &lt;/login_settings&gt;</pre></div></div></div><div class="informaltable"><table border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
@@ -6433,12 +6433,12 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      modified file after the pre-script finishes.
     </p><p>
      It is also possible to change the partitioning in your pre-script.
-    </p><div id="idm139967419099200" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Pre-Install Scripts with Confirmation</h6><p>
+    </p><div id="idm140093544446624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Pre-Install Scripts with Confirmation</h6><p>
       Pre-scripts are executed at an early stage of the installation. This
       means if you have requested to confirm the installation, the
       pre-scripts will be executed before the confirmation screen shows up
       (<code class="literal">profile/install/general/mode/confirm</code>).
-     </p></div><div id="idm139967419097168" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Pre-Install and Zypper</h6><p>
+     </p></div><div id="idm140093544444592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Pre-Install and Zypper</h6><p>
       To call <span class="emphasis"><em>zypper</em></span> in the pre-install
       script you will need to set the environment variable <span class="emphasis"><em>ZYPP_LOCKFILE_ROOT="/var/run/autoyast"</em></span>
       to prevent conflicts with the running YaST process.
@@ -6506,7 +6506,7 @@ config:type="boolean"&gt;true&lt;/keep_install_network&gt;</pre></div><p>
      config:type="list"&gt;&lt;script&gt; ...
      &lt;/script&gt;&lt;/init-scripts&gt;...&lt;/scripts&gt;
      tags
-    </p><div class="table" id="idm139967419078768"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.1: </span><span class="name">Init script XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419078768">#</a></h6></div><div class="table-contents"><table summary="Init script XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140093544426064"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.1: </span><span class="name">Init script XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544426064">#</a></h6></div><div class="table-contents"><table summary="Init script XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -6599,7 +6599,7 @@ echo "Testing the init script" &gt;
      <code class="literal">chrooted</code> and
      <code class="literal">network_needed</code>—they are only valid for
      chroot and post-install scripts.
-    </p><div class="table" id="idm139967419050096"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.2: </span><span class="name">Script XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967419050096">#</a></h6></div><div class="table-contents"><table summary="Script XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140093544397392"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.2: </span><span class="name">Script XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544397392">#</a></h6></div><div class="table-contents"><table summary="Script XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -6817,7 +6817,7 @@ echo "Testing the pre script" &gt; /tmp/pre-script_out.txt
           Optional, default is <code class="literal">false</code>. This option is only
           available for post-install scripts.
          </p>
-        </td></tr></tbody></table></div></div></div><div class="sect2 " id="script_examples"><div class="titlepage"><div><div><h3 class="title" id="script_examples"><span class="number">4.30.7 </span><span class="name">Script Example</span> <a title="Permalink" class="permalink" href="configuration.html#script_examples">#</a></h3></div></div></div><div class="example" id="idm139967418977536"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.50: </span><span class="name">Script Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418977536">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+        </td></tr></tbody></table></div></div></div><div class="sect2 " id="script_examples"><div class="titlepage"><div><div><h3 class="title" id="script_examples"><span class="number">4.30.7 </span><span class="name">Script Example</span> <a title="Permalink" class="permalink" href="configuration.html#script_examples">#</a></h3></div></div></div><div class="example" id="idm140093544324768"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.50: </span><span class="name">Script Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544324768">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE profile&gt;
 &lt;profile xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns"&gt;
 &lt;scripts&gt;
@@ -6918,7 +6918,7 @@ echo Hi
    </p><p>
     The following example shows how a variable can be set using the
     sysconfig resource.
-   </p><div class="complex-example"><div class="example" id="idm139967418967152"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.51: </span><span class="name">Sysconfig Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418967152">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;sysconfig config:type="list" &gt;
+   </p><div class="complex-example"><div class="example" id="idm140093544314448"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.51: </span><span class="name">Sysconfig Configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544314448">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;sysconfig config:type="list" &gt;
   &lt;sysconfig_entry&gt;
     &lt;sysconfig_key&gt;XNTPD_INITIAL_NTPDATE&lt;/sysconfig_key&gt;
     &lt;sysconfig_path&gt;/etc/sysconfig/xntp&lt;/sysconfig_path&gt;
@@ -6959,7 +6959,7 @@ echo Hi
    </p><p>
     You can create directories by specifying a <code class="literal">file_path</code>
     that ends with a slash.
-   </p><div class="example" id="idm139967418957520"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.52: </span><span class="name">Dumping files into the installed system </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418957520">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;files config:type="list"&gt;
+   </p><div class="example" id="idm140093544304816"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.52: </span><span class="name">Dumping files into the installed system </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544304816">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;files config:type="list"&gt;
   &lt;file&gt;
     &lt;file_path&gt;/etc/apache2/httpd.conf&lt;/file_path&gt;
     &lt;file_contents&gt;
@@ -6979,7 +6979,7 @@ some content
     change the permissions and ownership of the file. After the file has
     been copied to the system, a script is executed. This can be used to
     modify the file and prepare it for the client's environment.
-   </p><div class="example" id="idm139967418954720"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.53: </span><span class="name">Dumping files into the installed system </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418954720">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;files config:type="list"&gt;
+   </p><div class="example" id="idm140093544302016"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.53: </span><span class="name">Dumping files into the installed system </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544302016">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;files config:type="list"&gt;
   &lt;file&gt;
     &lt;file_path&gt;/etc/someconf.conf&lt;/file_path&gt;
     &lt;file_contents&gt;
@@ -7023,7 +7023,7 @@ ls
       ...
     &lt;/ask&gt;
   &lt;/ask-list&gt;
-&lt;/general&gt;</pre></div><div class="table" id="idm139967418949232"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.3: </span><span class="name">Ask the User for Values: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418949232">#</a></h6></div><div class="table-contents"><table summary="Ask the User for Values: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+&lt;/general&gt;</pre></div><div class="table" id="idm140093544296528"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.3: </span><span class="name">Ask the User for Values: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544296528">#</a></h6></div><div class="table-contents"><table summary="Ask the User for Values: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
         <p>
          Element
         </p>
@@ -7428,7 +7428,7 @@ ls
       &lt;/default_value_script&gt;
     &lt;/ask&gt;
   &lt;/ask-list&gt;
-&lt;/general&gt;</pre></div><div class="table" id="idm139967418830032"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.4: </span><span class="name">Default Value Scripts: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418830032">#</a></h6></div><div class="table-contents"><table summary="Default Value Scripts: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+&lt;/general&gt;</pre></div><div class="table" id="idm140093544177392"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.4: </span><span class="name">Default Value Scripts: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544177392">#</a></h6></div><div class="table-contents"><table summary="Default Value Scripts: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -7486,7 +7486,7 @@ ls
       &lt;/script&gt;
     &lt;/ask&gt;
   &lt;/ask-list&gt;
-&lt;/general&gt;</pre></div><div class="table" id="idm139967418810192"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.5: </span><span class="name">Scripts: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418810192">#</a></h6></div><div class="table-contents"><table summary="Scripts: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+&lt;/general&gt;</pre></div><div class="table" id="idm140093544157552"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.5: </span><span class="name">Scripts: XML representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544157552">#</a></h6></div><div class="table-contents"><table summary="Scripts: XML representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -7714,7 +7714,7 @@ exit 0
       &lt;default&gt;enter your hostname here&lt;/default&gt;
     &lt;/ask&gt;
   &lt;/ask-list&gt;
-&lt;/general&gt;</pre></div></div></div><div class="sect1 " id="CreateProfile.kdump"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.kdump"><span class="number">4.34 </span><span class="name">Kernel Dumps</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump">#</a></h2></div></div></div><div id="idm139967418766368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability</h6><p>
+&lt;/general&gt;</pre></div></div></div><div class="sect1 " id="CreateProfile.kdump"><div class="titlepage"><div><div><h2 class="title" id="CreateProfile.kdump"><span class="number">4.34 </span><span class="name">Kernel Dumps</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump">#</a></h2></div></div></div><div id="idm140093544113728" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability</h6><p>
      This feature is not available on the IBM z Systems (s390x)
      architecture.
     </p></div><p>
@@ -7733,7 +7733,7 @@ exit 0
     page.
    </p><p>
     The following example shows a general Kdump configuration.
-   </p><div class="example" id="idm139967418762384"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.54: </span><span class="name">Kdump configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418762384">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;kdump&gt;
+   </p><div class="example" id="idm140093544109744"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.54: </span><span class="name">Kdump configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544109744">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;kdump&gt;
   &lt;!-- memory reservation --&gt;
   &lt;add_crash_kernel config:type="boolean"&gt;true&lt;/add_crash_kernel&gt;
   &lt;crash_kernel&gt;256M-:64M&lt;/crash_kernel&gt;
@@ -7805,7 +7805,7 @@ exit 0
      crashkernel parameter. For example, when you need to reserve different
      segments of low and high memory, use values like
      <code class="literal">72M,low</code> and <code class="literal">256M,high</code>:
-    </p><div class="example" id="idm139967418747840"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.55: </span><span class="name">Kdump memory reservation with multiple values </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418747840">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;kdump&gt;
+    </p><div class="example" id="idm140093544095264"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.55: </span><span class="name">Kdump memory reservation with multiple values </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544095264">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;kdump&gt;
   &lt;!-- memory reservation (high and low) --&gt;
   &lt;add_crash_kernel config:type="boolean"&gt;true&lt;/add_crash_kernel&gt;
   &lt;crash_kernel config:type="list"&gt;
@@ -7814,7 +7814,7 @@ exit 0
   &lt;/crash_kernel&gt;
 &lt;/kdump&gt;</pre></div></div></div><p>
      The following table shows the settings necessary to reserve memory:
-    </p><div class="table" id="idm139967418745712"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.6: </span><span class="name">Kdump Memory Reservation Settings:XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418745712">#</a></h6></div><div class="table-contents"><table summary="Kdump Memory Reservation Settings:XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140093544093136"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.6: </span><span class="name">Kdump Memory Reservation Settings:XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544093136">#</a></h6></div><div class="table-contents"><table summary="Kdump Memory Reservation Settings:XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -7910,7 +7910,7 @@ exit 0
       <code class="literal">KDUMP_DUMPLEVEL</code>. 0 produces a full dump and 31 is
       the smallest dump. The manual pages kdump(5) and makedumpfile(8) list
       for each value which pages will be saved.
-     </p></div><div class="sect3 " id="CreateProfile.kdump.saving.summary"><div class="titlepage"><div><div><h4 class="title" id="CreateProfile.kdump.saving.summary"><span class="number">4.34.2.3 </span><span class="name">Summary</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump.saving.summary">#</a></h4></div></div></div><div class="table" id="idm139967418706912"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.7: </span><span class="name">Dump Target Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418706912">#</a></h6></div><div class="table-contents"><table summary="Dump Target Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+     </p></div><div class="sect3 " id="CreateProfile.kdump.saving.summary"><div class="titlepage"><div><div><h4 class="title" id="CreateProfile.kdump.saving.summary"><span class="number">4.34.2.3 </span><span class="name">Summary</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump.saving.summary">#</a></h4></div></div></div><div class="table" id="idm140093544054400"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.7: </span><span class="name">Dump Target Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544054400">#</a></h6></div><div class="table-contents"><table summary="Dump Target Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
           <p>
            Element
           </p>
@@ -7999,7 +7999,7 @@ exit 0
      authentication) <code class="literal">KDUMP_SMTP_USER</code> and
      <code class="literal">KDUMP_SMTP_PASSWORD</code>. Support for TLS/SSL is not
      available but may be added in the future.
-    </p><div class="table" id="idm139967418676896"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.8: </span><span class="name">E-Mail Notification Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418676896">#</a></h6></div><div class="table-contents"><table summary="E-Mail Notification Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140093544024384"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.8: </span><span class="name">E-Mail Notification Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093544024384">#</a></h6></div><div class="table-contents"><table summary="E-Mail Notification Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -8105,7 +8105,7 @@ exit 0
      specify additional parameters, use <code class="literal">KDUMP_COMMANDLINE_APPEND</code>. If you
      know what you are doing and you want to specify the entire command line,
      set <code class="literal">KDUMP_COMMANDLINE</code>.
-    </p><div class="table" id="idm139967418641472"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.9: </span><span class="name">Kernel Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418641472">#</a></h6></div><div class="table-contents"><table summary="Kernel Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140093543988960"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.9: </span><span class="name">Kernel Settings: XML Representation </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543988960">#</a></h6></div><div class="table-contents"><table summary="Kernel Settings: XML Representation" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -8162,7 +8162,7 @@ exit 0
          <p>
           optional
          </p>
-        </td></tr></tbody></table></div></div></div><div class="sect2 " id="CreateProfile.kdump.expert"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.kdump.expert"><span class="number">4.34.5 </span><span class="name">Expert Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump.expert">#</a></h3></div></div></div><div class="table" id="idm139967418621264"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.10: </span><span class="name">Expert Settings: XML Representations </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418621264">#</a></h6></div><div class="table-contents"><table summary="Expert Settings: XML Representations" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
+        </td></tr></tbody></table></div></div></div><div class="sect2 " id="CreateProfile.kdump.expert"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.kdump.expert"><span class="number">4.34.5 </span><span class="name">Expert Settings</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.kdump.expert">#</a></h3></div></div></div><div class="table" id="idm140093543968816"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4.10: </span><span class="name">Expert Settings: XML Representations </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543968816">#</a></h6></div><div class="table-contents"><table summary="Expert Settings: XML Representations" border="1"><colgroup><col /><col /><col /></colgroup><thead><tr><th>
          <p>
           Element
          </p>
@@ -8271,7 +8271,7 @@ exit 0
           <p>
            Store the settings in LDAP instead of native configuration files.
           </p>
-         </td></tr></tbody></table></div><div class="example" id="idm139967418583344"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.56: </span><span class="name">Basic DNS server settings </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418583344">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dns-server&gt;
+         </td></tr></tbody></table></div><div class="example" id="idm140093543930896"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.56: </span><span class="name">Basic DNS server settings </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543930896">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dns-server&gt;
   &lt;chroot&gt;0&lt;/chroot&gt;
   &lt;start_service&gt;1&lt;/start_service&gt;
   &lt;use_ldap&gt;0&lt;/use_ldap&gt;
@@ -8312,7 +8312,7 @@ exit 0
          List of DNS zones known by the server, including all the settings,
          records and SOA records.
         </p>
-       </td></tr></tbody></table></div><div class="example" id="idm139967418568672"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.57: </span><span class="name">Configuring DNS server zones and advanced settings </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418568672">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dns-server&gt;
+       </td></tr></tbody></table></div><div class="example" id="idm140093543916224"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.57: </span><span class="name">Configuring DNS server zones and advanced settings </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543916224">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dns-server&gt;
   &lt;logging config:type="list"&gt;
     &lt;listentry&gt;
       &lt;key&gt;channel&lt;/key&gt;
@@ -8462,7 +8462,7 @@ exit 0
          <code class="literal">parent_type</code> properties are used to represent that
          nesting. See the example below for the exact format.
         </p>
-       </td></tr></tbody></table></div><div class="example" id="idm139967418534400"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.58: </span><span class="name">Example dhcp-server section </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418534400">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dhcp-server&gt;
+       </td></tr></tbody></table></div><div class="example" id="idm140093543881952"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.58: </span><span class="name">Example dhcp-server section </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543881952">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;dhcp-server&gt;
   &lt;allowed_interfaces config:type="list"&gt;
     &lt;allowed_interface&gt;eth0&lt;/allowed_interface&gt;
   &lt;/allowed_interfaces&gt;
@@ -8901,7 +8901,7 @@ exit 0
         </td></tr></tbody></table></div></div><div class="sect2 " id="CreateProfile.firewall.example"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.firewall.example"><span class="number">4.37.3 </span><span class="name">A Full Example</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.firewall.example">#</a></h3></div></div></div><p>
      A full example of the firewall section, including general and zone specific
      properties could look like this.
-    </p><div class="example" id="idm139967418414352"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.59: </span><span class="name">Example firewall section </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418414352">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+    </p><div class="example" id="idm140093543761840"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.59: </span><span class="name">Example firewall section </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543761840">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
   &lt;FW_ALLOW_FW_BROADCAST_DMZ&gt;no&lt;/FW_ALLOW_FW_BROADCAST_DMZ&gt;
   &lt;FW_ALLOW_FW_BROADCAST_EXT&gt;no&lt;/FW_ALLOW_FW_BROADCAST_EXT&gt;
   &lt;FW_ALLOW_FW_BROADCAST_INT&gt;no&lt;/FW_ALLOW_FW_BROADCAST_INT&gt;
@@ -8985,7 +8985,7 @@ exit 0
 ... verbatim content of /etc/cups/cupsd.conf ...
 ]]&gt;&lt;/file_contents&gt;
     &lt;/cupsd_conf_content&gt;
-  &lt;/printer&gt;</pre></div></div></div><div id="idm139967418394848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="filename">/etc/cups/cups-files.conf</code></h6><p>
+  &lt;/printer&gt;</pre></div></div></div><div id="idm140093543742272" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="filename">/etc/cups/cups-files.conf</code></h6><p>
       With release 1.6 the CUPS configuration file has been split into two
       files: <code class="filename">cupsd.conf</code> and
       <code class="filename">cups-files.conf</code>. As of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP3</span></span>,
@@ -8995,7 +8995,7 @@ exit 0
      </p></div></div><div class="sect2 " id="CreateProfile.Hardware.Sound"><div class="titlepage"><div><div><h3 class="title" id="CreateProfile.Hardware.Sound"><span class="number">4.38.2 </span><span class="name">Sound devices</span> <a title="Permalink" class="permalink" href="configuration.html#CreateProfile.Hardware.Sound">#</a></h3></div></div></div><p>
      An example of the sound configuration created using the configuration
      system is shown below.
-    </p><div class="example" id="idm139967418387200"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.61: </span><span class="name">Sound configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm139967418387200">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;sound&gt;
+    </p><div class="example" id="idm140093543734624"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.61: </span><span class="name">Sound configuration </span><a title="Permalink" class="permalink" href="configuration.html#idm140093543734624">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;sound&gt;
   &lt;autoinstall config:type="boolean"&gt;true&lt;/autoinstall&gt;
   &lt;modules_conf config:type="list"&gt;
     &lt;module_conf&gt;
