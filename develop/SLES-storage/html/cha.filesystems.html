@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.filesystems.html">File Systems and Mounting</a><span> › </span><a class="crumb" href="cha.filesystems.html">Overview of File Systems in Linux</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">16 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">17 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="bk09apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Part I. File Systems and Mounting" href="part.filesystems.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Resizing File Systems" href="cha.resize_fs.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.filesystems.html">File Systems and Mounting</a><span> › </span><a class="crumb" href="cha.filesystems.html">Overview of File Systems in Linux</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Part I. File Systems and Mounting" href="part.filesystems.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Resizing File Systems" href="cha.resize_fs.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.filesystems" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_filesystems.xml</li><li><span class="ds-label">ID: </span>cha.filesystems</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.filesystems.html#idm140483355964832">#</a></h6></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.filesystems.html">File Systems and Mounting</a><span> › </span><a class="crumb" href="cha.filesystems.html">Overview of File Systems in Linux</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">16 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">17 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="bk09apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Part I. File Systems and Mounting" href="part.filesystems.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Resizing File Systems" href="cha.resize_fs.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.filesystems.html">File Systems and Mounting</a><span> › </span><a class="crumb" href="cha.filesystems.html">Overview of File Systems in Linux</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Part I. File Systems and Mounting" href="part.filesystems.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 2. Resizing File Systems" href="cha.resize_fs.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.filesystems" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_filesystems.xml</li><li><span class="ds-label">ID: </span>cha.filesystems</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.filesystems.html#idm140370660005440">#</a></h6></div><p>
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> ships with different file systems from which to choose,
     including Btrfs, Ext4, Ext3, Ext2 and XFS. Each file system has
     its own advantages and disadvantages. For a side-by-side feature comparison
@@ -62,7 +62,7 @@ hljs.configure({
   change partitions and file systems can be performed by using the YaST
   Partitioner (which is also strongly recommended). For information, see
   <span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”, Chapter 9 “Expert Partitioner”</span>.
- </p><div class="sect1 " id="sec.filesystems.glossary"><div class="titlepage"><div><div><h2 class="title" id="sec.filesystems.glossary"><span class="number">1.1 </span><span class="name">Terminology</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.glossary">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140483357331424"><span class="term ">metadata</span></dt><dd><p>
+ </p><div class="sect1 " id="sec.filesystems.glossary"><div class="titlepage"><div><div><h2 class="title" id="sec.filesystems.glossary"><span class="number">1.1 </span><span class="name">Terminology</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.glossary">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140370659719552"><span class="term ">metadata</span></dt><dd><p>
       A data structure that is internal to the file system. It ensures that all
       of the on-disk data is properly organized and accessible. Essentially, it
       is <span class="quote">“<span class="quote">data about the data.</span>”</span> Almost every file system has its
@@ -70,12 +70,12 @@ hljs.configure({
       different performance characteristics. It is extremely important to
       maintain metadata intact, because otherwise all data on the file system
       could become inaccessible.
-     </p></dd><dt id="idm140483356747760"><span class="term ">inode</span></dt><dd><p>
+     </p></dd><dt id="idm140370659716864"><span class="term ">inode</span></dt><dd><p>
       A data structure on a file system that contains a variety of information
       about a file, including size, number of links, pointers to the disk
       blocks where the file contents are actually stored, and date and time of
       creation, modification, and access.
-     </p></dd><dt id="idm140483356745696"><span class="term ">journal</span></dt><dd><p>
+     </p></dd><dt id="idm140370660521136"><span class="term ">journal</span></dt><dd><p>
       In the context of a file system, a journal is an on-disk structure
       containing a type of log in which the file system stores what it is about
       to change in the file system’s metadata. Journaling greatly reduces the
@@ -143,7 +143,7 @@ hljs.configure({
     from snapshots. The default root file system setup on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> as
     proposed by YaST during the installation contains the following
     subvolumes. They are excluded from snapshots for the reasons given below.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140483357350000"><span class="term "><code class="filename">/boot/grub2/i386-pc</code>,
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140370661048720"><span class="term "><code class="filename">/boot/grub2/i386-pc</code>,
    <code class="filename">/boot/grub2/x86_64-efi</code>,
    <code class="filename">/boot/grub2/powerpc-ieee1275</code>,
    <code class="filename">/boot/grub2/s390x-emu</code>
@@ -152,55 +152,55 @@ hljs.configure({
     directories listed above are architecture-specific. The first two
     directories are present on AMD64/Intel 64 machines, the latter two on IBM
     POWER and on IBM z Systems, respectively.
-   </p></dd><dt id="idm140483357346304"><span class="term "><code class="filename">/home</code>
+   </p></dd><dt id="idm140370661045024"><span class="term "><code class="filename">/home</code>
   </span></dt><dd><p>
     If <code class="filename">/home</code> does not reside on a separate partition, it
     is excluded to avoid data loss on rollbacks.
-   </p></dd><dt id="idm140483355937232"><span class="term "><code class="filename">/opt</code>, <code class="filename">/var/opt</code>
+   </p></dd><dt id="idm140370661042416"><span class="term "><code class="filename">/opt</code>, <code class="filename">/var/opt</code>
   </span></dt><dd><p>
     Third-party products usually get installed to <code class="filename">/opt</code>. It
     is excluded to avoid uninstalling these applications on rollbacks.
-   </p></dd><dt id="idm140483355934256"><span class="term "><code class="filename">/srv</code>
+   </p></dd><dt id="idm140370661039440"><span class="term "><code class="filename">/srv</code>
   </span></dt><dd><p>
     Contains data for Web and FTP servers. It is excluded to avoid data loss on
     rollbacks.
-   </p></dd><dt id="idm140483355932096"><span class="term "><code class="filename">/tmp</code>, <code class="filename">/var/tmp</code>,
+   </p></dd><dt id="idm140370659674496"><span class="term "><code class="filename">/tmp</code>, <code class="filename">/var/tmp</code>,
    <code class="filename">/var/cache</code>, <code class="filename">/var/crash</code>
   </span></dt><dd><p>
     All directories containing temporary files and caches are excluded from
     snapshots.
-   </p></dd><dt id="idm140483355928592"><span class="term "><code class="filename">/usr/local</code>
+   </p></dd><dt id="idm140370659670992"><span class="term "><code class="filename">/usr/local</code>
   </span></dt><dd><p>
     This directory is used when manually installing software. It is excluded to
     avoid uninstalling these installations on rollbacks.
-   </p></dd><dt id="idm140483355926384"><span class="term "><code class="filename">/var/lib/libvirt/images</code>
+   </p></dd><dt id="idm140370659668784"><span class="term "><code class="filename">/var/lib/libvirt/images</code>
   </span></dt><dd><p>
     The default location for virtual machine images managed with libvirt.
     Excluded to ensure virtual machine images are not replaced with older
     versions during a rollback. By default, this subvolume is created with the
     option <code class="literal">no copy on write</code>.
-   </p></dd><dt id="idm140483356710208"><span class="term "><code class="filename">/var/lib/mailman</code>, <code class="filename">/var/spool</code>
+   </p></dd><dt id="idm140370659666032"><span class="term "><code class="filename">/var/lib/mailman</code>, <code class="filename">/var/spool</code>
   </span></dt><dd><p>
     Directories containing mails or mail queues are excluded to avoid a loss of
     mails after a rollback.
-   </p></dd><dt id="idm140483356707584"><span class="term "><code class="filename">/var/lib/named</code>
+   </p></dd><dt id="idm140370661264208"><span class="term "><code class="filename">/var/lib/named</code>
   </span></dt><dd><p>
     Contains zone data for the DNS server. Excluded from snapshots to ensure a
     name server can operate after a rollback.
-   </p></dd><dt id="idm140483356705392"><span class="term "><code class="filename">/var/lib/mariadb</code>,
+   </p></dd><dt id="idm140370661262016"><span class="term "><code class="filename">/var/lib/mariadb</code>,
    <code class="filename">/var/lib/mysql</code>, <code class="filename">/var/lib/pgqsl</code>
   </span></dt><dd><p>
     These directories contain database data. By default, these subvolumes are
     created with the option <code class="literal">no copy on write</code>.
-   </p></dd><dt id="idm140483356701872"><span class="term "><code class="filename">/var/log</code>
+   </p></dd><dt id="idm140370661258496"><span class="term "><code class="filename">/var/log</code>
   </span></dt><dd><p>
     Log file location. Excluded from snapshots to allow log file analysis after
     the rollback of a broken system.
-   </p></dd></dl></div><div id="idm140483356699392" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Support for Rollbacks</h6><p>
+   </p></dd></dl></div><div id="idm140370661256016" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Support for Rollbacks</h6><p>
      Rollbacks are only supported by the SUSE support if you do not remove
      any of the preconfigured subvolumes. You may, however, add additional
      subvolumes using the YaST Partitioner.
-    </p></div><div class="sect3 " id="sec.filesystems.major.btrfs.compress"><div class="titlepage"><div><div><h4 class="title" id="sec.filesystems.major.btrfs.compress"><span class="number">1.2.2.1 </span><span class="name">Mounting Compressed Btrfs File Systems</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.major.btrfs.compress">#</a></h4></div></div></div><div id="idm140483356854624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: GRUB 2 and LZO Compressed Root</h6><p>
+    </p></div><div class="sect3 " id="sec.filesystems.major.btrfs.compress"><div class="titlepage"><div><div><h4 class="title" id="sec.filesystems.major.btrfs.compress"><span class="number">1.2.2.1 </span><span class="name">Mounting Compressed Btrfs File Systems</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.major.btrfs.compress">#</a></h4></div></div></div><div id="idm140370661252816" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: GRUB 2 and LZO Compressed Root</h6><p>
       GRUB 2 cannot read an lzo compressed root. You need a separate
       <code class="filename">/boot</code> partition to use compression.
      </p></div><p>
@@ -267,7 +267,7 @@ Label: 'Test-Btrfs'  uuid: 62f0c378-e93e-4aa1-9532-93c6b780749d
      it seems that plenty of space is still available. In that case, all space
      allocated for the metadata is used up. Use the following commands to check
      for used and available space on a Btrfs file system:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140483356604512"><span class="term "><code class="command">btrfs filesystem show</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140370659705648"><span class="term "><code class="command">btrfs filesystem show</code>
       </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs filesystem show /
 Label: 'ROOT'  uuid: 52011c5e-5711-42d8-8c50-718a005ec4b3
         Total devices 1 FS bytes used 10.02GiB
@@ -275,7 +275,7 @@ Label: 'ROOT'  uuid: 52011c5e-5711-42d8-8c50-718a005ec4b3
         Shows the total size of the file system and its usage. If these two
         values in the last line match, all space on the file system has been
         allocated.
-       </p></dd><dt id="idm140483356636192"><span class="term "><code class="command">btrfs filesystem df</code>
+       </p></dd><dt id="idm140370659702208"><span class="term "><code class="command">btrfs filesystem df</code>
       </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs filesystem df /
 Data, single: total=13.00GiB, used=9.61GiB
 System, single: total=32.00MiB, used=16.00KiB
@@ -285,7 +285,7 @@ GlobalReserve, single: total=144.00MiB, used=0.00B</pre></div><p>
         the file system. If the values for <code class="literal">total</code> and
         <code class="literal">used</code> for the metadata are almost equal, all space
         for metadata has been allocated.
-       </p></dd><dt id="idm140483356631536"><span class="term "><code class="command">btrfs filesystem usage</code>
+       </p></dd><dt id="idm140370659697552"><span class="term "><code class="command">btrfs filesystem usage</code>
       </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs filesystem usage /
 Overall:
     Device size:                  20.02GiB
@@ -327,7 +327,7 @@ Id Path      single   single    single   Unallocated
     packing and are larger than about 2KiB in size.
    </p><p>
     To convert the original file system to the Btrfs file system, run:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>btrfs-convert /path/to/device</pre></div><div id="idm140483356620704" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Check <code class="filename">/etc/fstab</code></h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>btrfs-convert /path/to/device</pre></div><div id="idm140370660446496" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Check <code class="filename">/etc/fstab</code></h6><p>
      After the conversion, you need to ensure that any references to the
      original file system in <code class="filename">/etc/fstab</code> have been adjusted
      to indicate that the device contains a Btrfs file system.
@@ -343,7 +343,7 @@ Id Path      single   single    single   Unallocated
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>btrfs subvolume delete <em class="replaceable ">fs_root</em>/reiserfs_saved&gt;</pre></div><p>
     To revert the file system back to the original one, use the following
     command:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>btrfs-convert -r /path/to/device</pre></div><div id="idm140483356678912" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Lost Changes</h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>btrfs-convert -r /path/to/device</pre></div><div id="idm140370659995392" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Lost Changes</h6><p>
      Any changes you made to the file system while it was mounted as a Btrfs file
      system will be lost. A balance operation must not have been performed in
      the interim, or the file system will not be restored correctly.
@@ -388,7 +388,7 @@ Id Path      single   single    single   Unallocated
      </p></li><li class="step "><p>
       To list the existing quotas, use the following command. The column
       <code class="literal">max_rfer</code> shows the quota in bytes.
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs qgroup show -r /</pre></div></li></ol></div></div><div id="idm140483356729488" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Nullifying a Quota</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs qgroup show -r /</pre></div></li></ol></div></div><div id="idm140370660645232" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Nullifying a Quota</h6><p>
      In case you want to nullify an existing quota, set a quota size of
      <code class="literal">none</code>:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> btrfs qgroup limit none /var/tmp</pre></div><p>
@@ -432,7 +432,7 @@ Id Path      single   single    single   Unallocated
      the example of creating incremental backups of <code class="filename">/data</code>
      (source side) in <code class="filename">/backup/data</code> (target side).
      <code class="filename">/data</code> needs to be a subvolume.
-    </p><div class="procedure " id="idm140483356413648"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1.1: </span><span class="name">Initial Setup </span><a title="Permalink" class="permalink" href="cha.filesystems.html#idm140483356413648">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p><div class="procedure " id="idm140370661194960"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1.1: </span><span class="name">Initial Setup </span><a title="Permalink" class="permalink" href="cha.filesystems.html#idm140370661194960">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
        Create the initial snapshot (called <code class="literal">snapshot_0</code> in
        this example) on the source side and make sure it is written to the
        disk:
@@ -457,7 +457,7 @@ sync</pre></div><p>
        Send the differences to the target side.
       </p></li><li class="listitem "><p>
        Optional: Rename and/or clean up snapshots on both sides.
-      </p></li></ol></div><div class="procedure " id="idm140483356402320"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1.2: </span><span class="name">Performing an Incremental Backup </span><a title="Permalink" class="permalink" href="cha.filesystems.html#idm140483356402320">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      </p></li></ol></div><div class="procedure " id="idm140370661183680"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 1.2: </span><span class="name">Performing an Incremental Backup </span><a title="Permalink" class="permalink" href="cha.filesystems.html#idm140370661183680">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
        Create a new snapshot on the source side and make sure it is written to
        the disk. In the following example the snapshot is named
        bkp_data_<em class="replaceable ">CURRENT_DATE</em>:
@@ -522,7 +522,7 @@ sync</pre></div><p>
          command renames the current backup snapshot to
          <code class="filename">/backup/bkp_data</code>. This ensures that the latest
          backup snapshot is always named <code class="filename">/backup/bkp_data</code>.
-        </p></li></ol></li></ol></div></div><div id="idm140483356643616" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Sending to a Remote Target Side</h6><p>
+        </p></li></ol></li></ol></div></div><div id="idm140370660416144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Sending to a Remote Target Side</h6><p>
       To send the snapshots to a remote machine, use SSH:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>btrfs send /data/bkp_data | ssh root@jupiter.example.com 'btrfs receive /backup'</pre></div></div></div></div><div class="sect2 " id="sec.filesystems.major.btrfs.deduplication"><div class="titlepage"><div><div><h3 class="title" id="sec.filesystems.major.btrfs.deduplication"><span class="number">1.2.7 </span><span class="name">Data Deduplication Support</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.major.btrfs.deduplication">#</a></h3></div></div></div><p>
     Btrfs supports data deduplication by replacing identical blocks in the file
@@ -534,7 +534,7 @@ sync</pre></div><p>
     available, install the package
     <span class="package">duperemove</span>
     .
-   </p><div id="idm140483355923952" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use Cases</h6><p>
+   </p><div id="idm140370660409216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use Cases</h6><p>
      As of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">15</span></span> duperemove is not suited to
      deduplicate the entire file system. It is intended to be used to
      deduplicate a set of 10 to 50 large files that possibly have lots of
@@ -596,7 +596,7 @@ sync</pre></div><p>
     file. Thus, file system fragmentation is greatly reduced. Performance is
     increased because the contents of a file are not distributed all over the
     file system.
-   </p><div id="idm140483355900320" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The new XFS On-disk Format</h6><p>
+   </p><div id="idm140370660526928" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The new XFS On-disk Format</h6><p>
      Starting with version 12, <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> supports the new <span class="quote">“<span class="quote">on-disk
      format</span>”</span> (v5) of the XFS file system. XFS file systems created by
      YaST will use this new format. The main advantages of this format are
@@ -625,7 +625,7 @@ sync</pre></div><p>
    A brief summary of Ext2’s strengths might help understand why it
    was—and in some areas still is—the favorite Linux file system of
    many Linux users.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140483355891280"><span class="term ">Solidity and Speed</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140370660482480"><span class="term ">Solidity and Speed</span></dt><dd><p>
       Being an <span class="quote">“<span class="quote">old-timer</span>”</span>, Ext2 underwent many improvements and
       was heavily tested. This might be the reason people often refer to it as
       rock-solid. After a system outage when the file system could not be
@@ -640,7 +640,7 @@ sync</pre></div><p>
       to choose Ext2 for any server that needs high availability. However,
       because Ext2 does not maintain a journal and uses less memory, it is
       sometimes faster than other file systems.
-     </p></dd><dt id="idm140483355887664"><span class="term ">Easy Upgradability</span></dt><dd><p>
+     </p></dd><dt id="idm140370660478864"><span class="term ">Easy Upgradability</span></dt><dd><p>
       Because Ext3 is based on the Ext2 code and shares its on-disk format and
       its metadata format, upgrades from Ext2 to Ext3 are very easy.
      </p></dd></dl></div></div><div class="sect1 " id="sec.filesystems.major.ext3"><div class="titlepage"><div><div><h2 class="title" id="sec.filesystems.major.ext3"><span class="number">1.5 </span><span class="name">Ext3</span> <a title="Permalink" class="permalink" href="cha.filesystems.html#sec.filesystems.major.ext3">#</a></h2></div></div></div><p>
@@ -741,7 +741,7 @@ sync</pre></div><p>
     doubled ratio means that the number of files that can be created is
     one-half of the number of files possible for an Ext3 file system on SLES
     10.
-   </p><div id="idm140483356121328" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Changing the Inode Size of an Existing Ext3 File System</h6><p>
+   </p><div id="idm140370659764240" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Changing the Inode Size of an Existing Ext3 File System</h6><p>
      After the inodes are allocated, you cannot change the settings for the
      inode size or bytes-per-inode ratio. No new inodes are possible without
      re-creating the file system with different settings, or unless the file
@@ -999,7 +999,7 @@ inode_ratio = 8192</pre></div></li><li class="listitem "><p><span class="formalp
    block sizes, the results are different. The maximum file sizes in
    <a class="xref" href="cha.filesystems.html#tab.filesystems.maxsize" title="Maximum Sizes of Files and File Systems (On-Disk Format, 4 KiB Block Size)">Table 1.2, “Maximum Sizes of Files and File Systems (On-Disk Format, 4 KiB Block Size)”</a> can be
    larger than the file system's actual size when using sparse blocks.
-  </p><div id="idm140483356334496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Binary Multiples</h6><p>
+  </p><div id="idm140370660255984" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Binary Multiples</h6><p>
     In this document: 1024 Bytes = 1 KiB; 1024 KiB = 1 MiB; 1024 MiB = 1 GiB;
     1024 GiB = 1 TiB; 1024 TiB = 1 PiB; 1024 PiB = 1 EiB (see also
     <a class="link" href="http://physics.nist.gov/cuu/Units/binary.html" target="_blank"><em class="citetitle ">NIST:
@@ -1101,15 +1101,15 @@ inode_ratio = 8192</pre></div></li><li class="listitem "><p><span class="formalp
        <p>
         8 EiB
        </p>
-      </td></tr></tbody></table></div></div><div id="idm140483356179744" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Limitations</h6><p>
+      </td></tr></tbody></table></div></div><div id="idm140370659982224" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Limitations</h6><p>
     <a class="xref" href="cha.filesystems.html#tab.filesystems.maxsize" title="Maximum Sizes of Files and File Systems (On-Disk Format, 4 KiB Block Size)">Table 1.2, “Maximum Sizes of Files and File Systems (On-Disk Format, 4 KiB Block Size)”</a> describes
     the limitations regarding the on-disk format. The Linux kernel imposes its
     own limits on the size of files and file systems handled by it. These are
     as follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140483356177264"><span class="term ">File Size</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140370659979744"><span class="term ">File Size</span></dt><dd><p>
        On 32-bit systems, files cannot exceed 2 TiB
        (2<sup>41</sup> bytes).
-      </p></dd><dt id="idm140483356175056"><span class="term ">File System Size</span></dt><dd><p>
+      </p></dd><dt id="idm140370659977456"><span class="term ">File System Size</span></dt><dd><p>
        File systems can be up to 2<sup>73</sup> bytes in size.
        However, this limit is still out of reach for the currently available
        hardware.
@@ -1254,7 +1254,7 @@ Label: none uuid: 40123456-cb2c-4678-8b3d-d014d1c78c78
     trimming frequency is once a week. Mounting a file system with <code class="option">-o
      discard</code> comes with a performance penalty and may negatively affect
     the lifetime of SSDs and is not recommended.
-   </p><div id="idm140483356023680" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Do Not Use <code class="command">wiper.sh</code> on Btrfs</h6><p>
+   </p><div id="idm140370659892624" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Do Not Use <code class="command">wiper.sh</code> on Btrfs</h6><p>
      The <code class="command">wiper.sh</code> script trims read-write mounted ext4 and
      xfs file systems, and for read-only mounted/unmounted ext2, ext3, ext4, and
      xfs file systems. Do <span class="emphasis"><em>not</em></span> use
