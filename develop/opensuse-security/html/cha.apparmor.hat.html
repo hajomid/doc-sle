@@ -78,7 +78,7 @@ hljs.configure({
   Similar approaches can be used with any application server by providing an
   application module similar to the <code class="literal">mod_apparmor</code> described next in
   <a class="xref" href="cha.apparmor.hat.html#sec.apparmor.hat.config.directives" title="25.1.2. Location and Directory Directives">Section 25.1.2, “Location and Directory Directives”</a>.
- </p><div id="idm140292287374928" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
+ </p><div id="idm140107869346560" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
    For more information, see the <code class="command">change_hat</code> man page.
   </p></div><div class="sect1 " id="sec.apparmor.hat.config"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.hat.config"><span class="number">25.1 </span><span class="name">Configuring Apache for <code class="systemitem">mod_apparmor</code></span> <a title="Permalink" class="permalink" href="cha.apparmor.hat.html#sec.apparmor.hat.config">#</a></h2></div></div></div><p>
    <span class="phrase">AppArmor</span> provides a <code class="literal">mod_apparmor</code> module (package <code class="systemitem">apache2-mod-apparmor</code>) for the Apache
@@ -95,7 +95,7 @@ hljs.configure({
      <code class="literal">DEFAULT_URI</code>
     </p></li><li class="listitem "><p>
      <code class="literal">HANDLING_UNTRUSTED_INPUT</code>
-    </p></li></ul></div><div id="idm140292287363088" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Apache Configuration</h6><p>
+    </p></li></ul></div><div id="idm140107869334720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Apache Configuration</h6><p>
     If you install
     <code class="systemitem">apache2-mod-apparmor</code>, make
     sure the module is enabled, and then restart Apache by executing the
@@ -161,7 +161,7 @@ hljs.configure({
    application, and using <span class="phrase">AppArmor</span>'s change_hat feature to secure it.
    Note that this chapter focuses on <span class="phrase">AppArmor</span>'s command line tools, as
    YaST's <span class="phrase">AppArmor</span> module has limited functionality.
-  </p><div class="sect2 " id="idm140292287338640"><div class="titlepage"><div><div><h3 class="title" id="idm140292287338640"><span class="number">25.2.1 </span><span class="name">With <span class="phrase">AppArmor</span>'s Command Line Tools</span> <a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287338640">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="idm140107869310272"><div class="titlepage"><div><div><h3 class="title" id="idm140107869310272"><span class="number">25.2.1 </span><span class="name">With <span class="phrase">AppArmor</span>'s Command Line Tools</span> <a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869310272">#</a></h3></div></div></div><p>
    For illustration purposes, let us choose the Web application called
    <span class="emphasis"><em>Adminer</em></span>
    (<a class="link" href="http://www.adminer.org/en/" target="_blank">http://www.adminer.org/en/</a>). It is a full-featured
@@ -172,7 +172,7 @@ hljs.configure({
    packages with
   </p><div class="verbatim-wrap"><pre class="screen">zypper in apache2 apache2-mod_apparmor apache2-mod_php5 php5 php5-mysql</pre></div><p>
    To set up the Web environment for running Adminer, follow these steps:
-  </p><div class="procedure " id="idm140292287334576"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.1: </span><span class="name">Setting Up a Web Server Environment </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287334576">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140107869306208"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.1: </span><span class="name">Setting Up a Web Server Environment </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869306208">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Make sure <code class="literal">apparmor</code> and <code class="literal">php5</code>
      modules are enabled for Apache. To enable the modules in any case, use:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>a2enmod apparmor php5</pre></div><p>
@@ -189,7 +189,7 @@ hljs.configure({
      <code class="literal">http://localhost/adminer/adminer.php</code> in its URI
      address field. If you installed Adminer to a remote server, replace
      <code class="literal">localhost</code> with the real host name of the server.
-    </p><div class="figure" id="idm140292287322416"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa_changehat_adminer.png"><img src="images/aa_changehat_adminer.png" width="" alt="Adminer Login Page" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 25.1: </span><span class="name">Adminer Login Page </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287322416">#</a></h6></div></div><div id="idm140292287317392" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p> If you encounter problems viewing the Adminer login page,
+    </p><div class="figure" id="idm140107869294048"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa_changehat_adminer.png"><img src="images/aa_changehat_adminer.png" width="" alt="Adminer Login Page" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 25.1: </span><span class="name">Adminer Login Page </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869294048">#</a></h6></div></div><div id="idm140107869289024" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p> If you encounter problems viewing the Adminer login page,
             try to look for help in the Apache error log
               <code class="filename">/var/log/apache2/error.log</code>. Another
             reason you cannot access the Web page may be
@@ -200,7 +200,7 @@ hljs.configure({
    After the Web environment for Adminer is ready, you need to configure
    Apache's <code class="literal">mod_apparmor</code>, so that <span class="phrase">AppArmor</span> can detect accesses to Adminer and
    change to the specific <span class="quote">“<span class="quote">hat</span>”</span>.
-  </p><div class="procedure " id="idm140292287311088"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.2: </span><span class="name">Configuring <code class="literal">mod_apparmor</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287311088">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140107869282720"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.2: </span><span class="name">Configuring <code class="literal">mod_apparmor</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869282720">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Apache has several configuration files under
      <code class="filename">/etc/apache2/</code> and
      <code class="filename">/etc/apache2/conf.d/</code>. Choose your preferred one
@@ -225,7 +225,7 @@ hljs.configure({
    before proceeding. Remember that if your Apache's main binary is
    <code class="filename">/usr/sbin/httpd2-prefork</code>, then the related profile
    is named <code class="filename">/etc/apparmor.d/usr.sbin.httpd2-prefork</code>.
-  </p><div class="procedure " id="idm140292287297664"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.3: </span><span class="name">Creating a Hat for Adminer </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287297664">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140107869269296"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.3: </span><span class="name">Creating a Hat for Adminer </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869269296">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open (or create one if it does not exist) the file
      <code class="filename">/etc/apparmor.d/usr.sbin.httpd2-prefork</code> in a text
      editor. Its contents should be similar to the following:
@@ -292,7 +292,7 @@ apparmor module is loaded.
    requirements of <code class="filename">adminer.php</code> as we use it via the Web
    browser. <code class="command">aa-logprof</code> then helps us with creating the
    hat's profile.
-  </p><div class="procedure " id="idm140292287281552"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.4: </span><span class="name">Generating Rules for the <code class="systemitem">adminer</code> Hat </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140292287281552">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140107869253184"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 25.4: </span><span class="name">Generating Rules for the <code class="systemitem">adminer</code> Hat </span><a title="Permalink" class="permalink" href="cha.apparmor.hat.html#idm140107869253184">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open Adminer in the Web browser. If you installed it locally, then the
      URI is <code class="literal">http://localhost/adminer/adminer.php</code>.
     </p></li><li class="step "><p>
@@ -329,7 +329,7 @@ Severity: 3
      on working with the <code class="command">aa-genprof</code> and
      <code class="command">aa-logprof</code> interface, see
      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.genprof" title="24.7.3.8. aa-genprof—Generating Profiles">Section 24.7.3.8, “aa-genprof—Generating Profiles”</a>.
-    </p><div id="idm140292287270144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm140107869241776" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       <code class="command">aa-logprof</code> usually offers several valid rules for
       the examined event. Some are
       <span class="emphasis"><em>abstractions</em></span>—predefined sets of rules
@@ -368,7 +368,7 @@ apparmor module is loaded.
      previously did not work well, and update the profile with
      <code class="command">aa-logprof</code> until you are satisfied with the
      application's functionality.
-    </p></li></ol></div></div><div id="idm140292287255408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Hat and Parent Profile Relationship</h6><p>
+    </p></li></ol></div></div><div id="idm140107869227040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Hat and Parent Profile Relationship</h6><p>
     The profile <code class="filename">^adminer</code> is only available in the
     context of a process running under the parent profile
     <code class="filename">usr.sbin.httpd2-prefork</code>.
