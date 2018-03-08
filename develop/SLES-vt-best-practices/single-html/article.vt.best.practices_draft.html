@@ -105,7 +105,7 @@ hljs.configure({
      2 MB or 1 GB), check the <code class="literal">flags</code> line in the output of
      <code class="filename">/proc/cpuinfo</code> for occurrences of
      <code class="literal">pse</code> and/or <code class="literal">pdpe1gb</code>.
-    </p><div class="table" id="idm140016511242032"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 1: </span><span class="name">Determine the Available Huge Pages Size </span><a title="Permalink" class="permalink" href="#idm140016511242032">#</a></h6></div><div class="table-contents"><table summary="Determine the Available Huge Pages Size" border="1"><colgroup><col width="30%" class="1" /><col width="70%" class="2" /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140272415664240"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 1: </span><span class="name">Determine the Available Huge Pages Size </span><a title="Permalink" class="permalink" href="#idm140272415664240">#</a></h6></div><div class="table-contents"><table summary="Determine the Available Huge Pages Size" border="1"><colgroup><col width="30%" class="1" /><col width="70%" class="2" /></colgroup><thead><tr><th>
          <p>
           CPU flag
          </p>
@@ -145,18 +145,18 @@ hljs.configure({
      system, activate it at boot time with <code class="option">hugepages=1</code>,
      and—optionally—add the huge pages size with, for example,
      <code class="option">hugepagesz=2MB</code>.
-    </p><div id="idm140016511226240" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 1 GB huge pages</h6><p>
+    </p><div id="idm140272415648448" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 1 GB huge pages</h6><p>
       1 GB pages can only be allocated at boot time and cannot be freed
       afterward.
      </p></div><p>
      To allocate and use the huge page table (HugeTlbPage) you need to mount
      <code class="filename">hugetlbfs</code> with correct permissions.
-    </p><div id="idm140016511223936" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Restrictions of Huge Pages</h6><p>
+    </p><div id="idm140272415646144" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Restrictions of Huge Pages</h6><p>
       Even if huge pages provide the best performance, they do come with
       some drawbacks. You lose features such as Memory ballooning (see
       <a class="xref" href="#sec.vt.best.vmguests.virtio.balloon" title="6.1.3. virtio balloon">Section 6.1.3, “virtio balloon”</a>), KSM (see
       <a class="xref" href="#sec.vt.best.perf.ksm" title="4.1.4. KSM and Page Sharing">Section 4.1.4, “KSM and Page Sharing”</a>), and huge pages cannot be swapped.
-     </p></div><div class="procedure " id="idm140016511221280"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2: </span><span class="name">Configuring the use of huge pages </span><a title="Permalink" class="permalink" href="#idm140016511221280">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></div><div class="procedure " id="idm140272415643488"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2: </span><span class="name">Configuring the use of huge pages </span><a title="Permalink" class="permalink" href="#idm140272415643488">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
        Mount <code class="literal">hugetlbfs</code> to
        <code class="filename">/dev/hugepages</code>:
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> mount -t hugetlbfs hugetlbfs /dev/hugepages</pre></div></li><li class="step "><p>
@@ -210,7 +210,7 @@ HugePages_Surp:<span id="co.hp.surp"></span><span class="callout">4</span>      
 always madvise [never]</pre></div><p>
       If disabled, the value <code class="literal">never</code> is shown in square
       brackets like in the example above.
-     </p><div id="idm140016511193904" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Xen</h6><p>
+     </p><div id="idm140272415615984" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Xen</h6><p>
        THP is not available under Xen.
       </p></div></div><div class="sect3 " id="sec.vt.best.mem.xen"><div class="titlepage"><div><div><h4 class="title" id="sec.vt.best.mem.xen"><span class="number">4.1.3 </span><span class="name">Xen-specific Memory Notes</span> <a title="Permalink" class="permalink" href="#sec.vt.best.mem.xen">#</a></h4></div></div></div><div class="sect4 " id="sec.vt.best.mem.xen.dom-0"><div class="titlepage"><div><div><h5 class="title" id="sec.vt.best.mem.xen.dom-0"><span class="number">4.1.3.1 </span><span class="name">Managing Domain-0 Memory</span> <a title="Permalink" class="permalink" href="#sec.vt.best.mem.xen.dom-0">#</a></h5></div></div></div><p>
       When using the Xen hypervisor, by default a small percentage of
@@ -322,7 +322,7 @@ always madvise [never]</pre></div><p>
        <code class="literal">merge_across_nodes</code>: By default the system merges
        pages across NUMA nodes. Set this option to <code class="literal">0</code> to
        disable this behavior.
-      </p></li></ul></div><div id="idm140016511362320" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use Cases</h6><p>
+      </p></li></ul></div><div id="idm140272417744640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Use Cases</h6><p>
       KSM is a good technique to over-commit host memory when running
       multiple instances of the same application or VM Guest. When
       applications and VM Guest are heterogeneous and do not share any
@@ -333,12 +333,12 @@ always madvise [never]</pre></div><p>
       guest's XML configuration:
      </p><div class="verbatim-wrap"><pre class="screen">&lt;memoryBacking&gt;
    &lt;nosharepages/&gt;
-&lt;/memoryBacking&gt;</pre></div></div><div id="idm140016511359568" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Avoid Out-of-Memory Conditions</h6><p>
+&lt;/memoryBacking&gt;</pre></div></div><div id="idm140272417741888" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Avoid Out-of-Memory Conditions</h6><p>
       KSM can free up some memory on the host system, but the administrator
       should reserve enough swap to avoid out-of-memory conditions if
       that shareable memory decreases. If the amount of
       shareable memory decreases, the use of physical memory is increased.
-     </p></div><div id="idm140016511357936" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Memory Access Latencies</h6><p>
+     </p></div><div id="idm140272417740256" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Memory Access Latencies</h6><p>
       By default, KSM will merge common pages across NUMA nodes. If the merged,
       common page is now located on a distant NUMA node (relative to the node
       running the VM Guest vCPUs), this may degrade VM Guest performance.
@@ -447,7 +447,7 @@ Swap:      6171644          0    6171644</pre></div><p>
     To get better performance in host and VM Guest, use <code class="literal">noop</code>
     in the VM Guest (disable the I/O scheduler) and the
     <code class="literal">deadline</code> scheduler for a virtualization host.
-   </p><div class="procedure " id="idm140016511303472"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 3: </span><span class="name">Checking and Changing the I/O Scheduler at Runtime </span><a title="Permalink" class="permalink" href="#idm140016511303472">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm140272417685536"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 3: </span><span class="name">Checking and Changing the I/O Scheduler at Runtime </span><a title="Permalink" class="permalink" href="#idm140272417685536">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       To check your current I/O scheduler for your disk (replace
       <em class="replaceable ">sdX</em> by the disk you want to check), run:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cat /sys/block/<em class="replaceable ">sdX</em>/queue/scheduler
@@ -477,7 +477,7 @@ w /sys/block/sdb/queue/scheduler - - - - noop</pre></div></div><div class="sect3
     VM Guests using virtual disks serviced by Linux Asynchronous I/O.
     When running large numbers of VM Guests on a VM Host Server, consider
     increasing /proc/sys/fs/aio-max-nr.
-   </p><div class="procedure " id="idm140016511523584"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 4: </span><span class="name">Checking and Changing aio-max-nr at Runtime </span><a title="Permalink" class="permalink" href="#idm140016511523584">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm140272417670480"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 4: </span><span class="name">Checking and Changing aio-max-nr at Runtime </span><a title="Permalink" class="permalink" href="#idm140272417670480">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       To check your current aio-max-nr setting run:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cat /proc/sys/fs/aio-max-nr
 65536</pre></div></li><li class="step "><p>
@@ -491,7 +491,7 @@ w /sys/block/sdb/queue/scheduler - - - - noop</pre></div></div><div class="sect3
      more information about I/O in virtualization refer to the <a class="link" href="https://www.suse.com/documentation/sles-12/book_virt/data/sec_vt_io.html" target="_blank">I/O
      in Virtualization</a> chapter in the <em class="citetitle "><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
      <span class="productnumber"><span class="phrase">15</span></span> Virtualization Guide</em>.
-    </p><div class="table" id="idm140016511512144"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 2: </span><span class="name">I/O Virtualization Solutions </span><a title="Permalink" class="permalink" href="#idm140016511512144">#</a></h6></div><div class="table-contents"><table summary="I/O Virtualization Solutions" border="1"><colgroup><col width="20%" class="1" /><col width="40%" class="2" /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140272417659040"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 2: </span><span class="name">I/O Virtualization Solutions </span><a title="Permalink" class="permalink" href="#idm140272417659040">#</a></h6></div><div class="table-contents"><table summary="I/O Virtualization Solutions" border="1"><colgroup><col width="20%" class="1" /><col width="40%" class="2" /><col /></colgroup><thead><tr><th>
          <p>
           Technology
          </p>
@@ -585,7 +585,7 @@ w /sys/block/sdb/queue/scheduler - - - - noop</pre></div></div><div class="sect3
        </td></tr></tbody></table></div></div></div></div><div class="sect2 " id="sec.vt.best.fs"><div class="titlepage"><div><div><h3 class="title" id="sec.vt.best.fs"><span class="number">4.4 </span><span class="name">Storage and File System</span> <a title="Permalink" class="permalink" href="#sec.vt.best.fs">#</a></h3></div></div></div><p>
     Storage space for VM Guests can either be a block device (for example, a
     partition on a physical disk), or an image file on the file system:
-   </p><div class="table" id="idm140016511477424"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3: </span><span class="name">Block Devices Compared to Disk Images </span><a title="Permalink" class="permalink" href="#idm140016511477424">#</a></h6></div><div class="table-contents"><table summary="Block Devices Compared to Disk Images" border="1"><colgroup><col width="10%" class="1" /><col width="" class="2" /><col /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140272417284816"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3: </span><span class="name">Block Devices Compared to Disk Images </span><a title="Permalink" class="permalink" href="#idm140272417284816">#</a></h6></div><div class="table-contents"><table summary="Block Devices Compared to Disk Images" border="1"><colgroup><col width="10%" class="1" /><col width="" class="2" /><col /></colgroup><thead><tr><th>
         <p>
          Technology
         </p>
@@ -754,7 +754,7 @@ calls      retrans    authrefrsh
      &lt;qemu:arg value='host,migratable=off,+invtsc'/&gt;
      &lt;/qemu:commandline&gt;
      ...
-     &lt;/domain&gt;</pre></div><div id="idm140016508651072" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The <code class="literal">host-passthrough</code> Mode</h6><p>
+     &lt;/domain&gt;</pre></div><div id="idm140272417206768" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: The <code class="literal">host-passthrough</code> Mode</h6><p>
        Since <code class="literal">host-passthrough</code> exposes the physical
        CPU details to the virtual CPU, migration to dissimilar hardware
        is not possible. See
@@ -779,12 +779,12 @@ VCPU: CPU Affinity
       The last command generates the following entry in the XML configuration:
      </p><div class="verbatim-wrap"><pre class="screen">&lt;cputune&gt;
    &lt;vcpupin vcpu='0' cpuset='0'/&gt;
-&lt;/cputune&gt;</pre></div><div id="idm140016508640624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Virtual CPU Pinning on NUMA Nodes</h6><p>
+&lt;/cputune&gt;</pre></div><div id="idm140272417196320" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Virtual CPU Pinning on NUMA Nodes</h6><p>
        To confine a VM Guest's CPUs and its memory to a NUMA node, you can use
        virtual CPU pinning and memory allocation policies on a NUMA system.
        See <a class="xref" href="#sec.vt.best.perf.numa" title="4.6. NUMA Tuning">Section 4.6, “NUMA Tuning”</a> for more information
        related to NUMA tuning.
-      </p></div><div id="idm140016508638512" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Virtual CPU Pinning and Live Migration</h6><p>
+      </p></div><div id="idm140272417194208" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Virtual CPU Pinning and Live Migration</h6><p>
        Even though <code class="literal">vcpupin</code> can improve performance, it can
        complicate live migration. See
        <a class="xref" href="#sec.vt.best.perf.cpu.guests.vcpumigration" title="4.5.2.3. Virtual CPU Migration Considerations">Section 4.5.2.3, “Virtual CPU Migration Considerations”</a> for more
@@ -901,7 +901,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
      The main goal of automatic NUMA balancing is either to reschedule tasks on
      the same node's memory (so the CPU follows the memory), or to copy the
      memory's pages to the same node (so the memory follows the CPU).
-    </p><div id="idm140016508599712" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Task Placement</h6><p>
+    </p><div id="idm140272417155344" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Task Placement</h6><p>
       There are no rules to define the best place to run a task, because
       tasks could share memory with other tasks. For best performance, it is
       recommended to group tasks sharing memory on the same node. Check NUMA
@@ -932,7 +932,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>migratepages <em class="replaceable ">PID</em> <em class="replaceable ">FROM-NODE</em> <em class="replaceable ">TO-NODE</em></pre></div><p>
      To check everything is fine. use: <code class="command">cat
      /proc/<em class="replaceable ">PID</em>/status | grep Cpus</code>.
-    </p><div id="idm140016508583152" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Kernel NUMA/cpuset memory policy</h6><p>
+    </p><div id="idm140272424723776" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Kernel NUMA/cpuset memory policy</h6><p>
       For more information see
       <a class="link" href="https://www.kernel.org/doc/Documentation/vm/numa_memory_policy.txt" target="_blank">Kernel
       NUMA memory policy</a> and
@@ -980,7 +980,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
       /proc/<em class="replaceable ">PID</em>/numa_maps</code> and
       <code class="command">cat
       /sys/fs/cgroup/memory/sysdefault/libvirt/qemu/<em class="replaceable ">KVM_NAME</em>/memory.numa_stat</code>.
-     </p><div id="idm140016508556128" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: NUMA specification</h6><p>
+     </p><div id="idm140272424696816" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: NUMA specification</h6><p>
        The <code class="systemitem">libvirt</code> VM Guest NUMA specification is currently only available
        for QEMU/KVM.
       </p></div></div><div class="sect4 " id="sec.vt.best.perf.numa.vmguest.alloc_libvirt"><div class="titlepage"><div><div><h5 class="title" id="sec.vt.best.perf.numa.vmguest.alloc_libvirt"><span class="number">4.6.3.2 </span><span class="name">Memory Allocation Control with <code class="systemitem">libvirt</code></span> <a title="Permalink" class="permalink" href="#sec.vt.best.perf.numa.vmguest.alloc_libvirt">#</a></h5></div></div></div><p>
@@ -1019,7 +1019,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
        requirements cannot be fulfilled, starting the VM Guest will fail.
        <code class="command">virt-install</code> also supports this configuration with
        the <code class="option">--numatune</code> option.
-      </p></div><div id="idm140016508531424" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Memory and CPU across NUMA Nodes</h6><p>
+      </p></div><div id="idm140272424672112" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Memory and CPU across NUMA Nodes</h6><p>
        You should avoid allocating VM Guest memory across NUMA nodes, and
        prevent virtual CPUs from floating across NUMA nodes.
       </p></div></div></div></div></div><div class="sect1 " id="sec.vt.best.img"><div class="titlepage"><div><div><h2 class="title" id="sec.vt.best.img"><span class="number">5 </span><span class="name">VM Guest Images</span> <a title="Permalink" class="permalink" href="#sec.vt.best.img">#</a></h2></div></div></div><p>
@@ -1043,10 +1043,10 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
     Use <code class="command">qemu-img info <em class="replaceable ">VMGUEST.IMG</em></code>
     to get information about an existing image, such as: the format, the
     virtual size, the physical size, snapshots if available.
-   </p><div id="idm140016511062832" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Performance</h6><p>
+   </p><div id="idm140272424661712" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Performance</h6><p>
      It is recommended to convert the disk images to either raw or qcow2 to
      achieve good performance.
-    </p></div><div id="idm140016511061392" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Encrypted Images Cannot Be Compressed</h6><p>
+    </p></div><div id="idm140272424660272" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Encrypted Images Cannot Be Compressed</h6><p>
      When you create an image, you cannot use compression (<code class="option">-c</code>)
      in the output file together with the encryption option
      (<code class="option">-e</code>).
@@ -1083,7 +1083,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
        Supports consistency checks.
       </p></li><li class="listitem "><p>
        Less performance than raw format.
-      </p></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm140016511040064"><span class="term ">l2-cache-size</span></dt><dd><p>
+      </p></li></ul></div><div class="variablelist "><dl class="variablelist"><dt id="idm140272424638880"><span class="term ">l2-cache-size</span></dt><dd><p>
         qcow2 can provide the same performance for random read/write access as
         raw format, but it needs a well-sized cache size. By default cache size
         is set to 1 MB. This will give good performance up to a disk size of 8
@@ -1091,15 +1091,15 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
         size. For a disk size of 64 GB (64*1024 = 65536), you need 65536 /
         8192B = 8 MB of cache (<code class="option">-drive
         format=qcow2,l2-cache-size=8M</code>).
-       </p></dd><dt id="idm140016511037392"><span class="term ">Cluster Size</span></dt><dd><p>
+       </p></dd><dt id="idm140272424636208"><span class="term ">Cluster Size</span></dt><dd><p>
         The qcow2 format offers the capability to change the cluster size. The
         value must be between 512 KB and 2 MB. Smaller cluster sizes
         can improve the image file size whereas larger cluster sizes generally
         provide better performance.
-       </p></dd><dt id="idm140016511035344"><span class="term ">Preallocation</span></dt><dd><p>
+       </p></dd><dt id="idm140272424634160"><span class="term ">Preallocation</span></dt><dd><p>
         An image with preallocated metadata is initially larger but can
         improve performance when the image needs to grow.
-       </p></dd><dt id="idm140016511033424"><span class="term ">Lazy Refcounts</span></dt><dd><p>
+       </p></dd><dt id="idm140272424632240"><span class="term ">Lazy Refcounts</span></dt><dd><p>
         Reference count updates are postponed with the goal of avoiding
         metadata I/O and improving performance. This is particularly beneficial
         with <code class="option">cache=writethrough</code>. This option does not batch metadata
@@ -1150,7 +1150,7 @@ kernel.numa_balancing_scan_size_mb = 256<span id="co.numa.size"></span><span cla
       </p></td></tr><tr><td width="5%" valign="top" align="left"><p><a href="#co.1.imagename"><span class="callout">5</span></a> </p></td><td valign="top" align="left"><p>
        Image name of the VM Guest, it will only record the differences from
        the backing file.
-      </p></td></tr></table></div><div id="idm140016511004352" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Backing Image Path</h6><p>
+      </p></td></tr></table></div><div id="idm140272424603104" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Backing Image Path</h6><p>
       You should not change the path to the backing image, otherwise you
       will need to adjust it. The path is stored in the overlay image file.
       To update the path, you should make a symbolic link from
@@ -1245,7 +1245,7 @@ lazy refcounts: true</pre></div><div class="figure" id="fig.qemu-img.overlay"><d
   accessing an untrusted or unknown VM Guest's image system because this
   can lead to security issues (for more information, read <a class="link" href="https://www.berrange.com/posts/2013/02/20/a-reminder-why-you-should-never-mount-guest-disk-images-on-the-host-os/" target="_blank">D.
   Berrangé's post</a>).
- </p><div class="sect3 " id="sec.vt.best.img.open_img.raw"><div class="titlepage"><div><div><h4 class="title" id="sec.vt.best.img.open_img.raw"><span class="number">5.3.1 </span><span class="name">Opening a Raw Image</span> <a title="Permalink" class="permalink" href="#sec.vt.best.img.open_img.raw">#</a></h4></div></div></div><div class="procedure " id="idm140016510967584"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5: </span><span class="name">Mounting a Raw Image </span><a title="Permalink" class="permalink" href="#idm140016510967584">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+ </p><div class="sect3 " id="sec.vt.best.img.open_img.raw"><div class="titlepage"><div><div><h4 class="title" id="sec.vt.best.img.open_img.raw"><span class="number">5.3.1 </span><span class="name">Opening a Raw Image</span> <a title="Permalink" class="permalink" href="#sec.vt.best.img.open_img.raw">#</a></h4></div></div></div><div class="procedure " id="idm140272424566272"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5: </span><span class="name">Mounting a Raw Image </span><a title="Permalink" class="permalink" href="#idm140272424566272">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      To be able to mount the image, find a free loop device. The following
      command displays the first unused loop device,
      <code class="filename">/dev/loop1</code> in this example.
@@ -1269,17 +1269,17 @@ add map loop1p1 (254:1): 0 29358080 linear /dev/loop1 2048</pre></div><div class
      Now mount the image partition(s) (to <code class="filename">/mnt/sle12mount</code>
      in the following example):
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>mkdir /mnt/sle12mount
-<code class="prompt root">root # </code>mount /dev/mapper/loop1p1 /mnt/sle12mount</pre></div></li></ol></div></div><div id="idm140016510949840" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Raw image with LVM</h6><p>
+<code class="prompt root">root # </code>mount /dev/mapper/loop1p1 /mnt/sle12mount</pre></div></li></ol></div></div><div id="idm140272424548528" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Raw image with LVM</h6><p>
     If your raw image contains an LVM volume group you should use LVM
     tools to mount the partition. Refer to
     <a class="xref" href="#sec.lvm.found" title="5.3.3. Opening Images Containing LVM">Section 5.3.3, “Opening Images Containing LVM”</a>.
-   </p></div><div class="procedure " id="idm140016510947840"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 6: </span><span class="name">Unmounting a Raw Image </span><a title="Permalink" class="permalink" href="#idm140016510947840">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></div><div class="procedure " id="idm140272424546528"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 6: </span><span class="name">Unmounting a Raw Image </span><a title="Permalink" class="permalink" href="#idm140272424546528">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Unmount all mounted partitions of the image, for example:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>umount /mnt/sle12mount</pre></div></li><li class="step " id="st.umount.raw"><p>
      Delete partition device mappings with <code class="command">kpartx</code>:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>kpartx -d /dev/loop1</pre></div></li><li class="step "><p>
      Detach the devices with <code class="command">losetup</code>
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>losetup -d /dev/loop1</pre></div></li></ol></div></div></div><div class="sect3 " id="sec.vt.best.img.open_img.qcow2"><div class="titlepage"><div><div><h4 class="title" id="sec.vt.best.img.open_img.qcow2"><span class="number">5.3.2 </span><span class="name">Opening a qcow2 Image</span> <a title="Permalink" class="permalink" href="#sec.vt.best.img.open_img.qcow2">#</a></h4></div></div></div><div class="procedure " id="idm140016510938464"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 7: </span><span class="name">Mounting a qcow2 Image </span><a title="Permalink" class="permalink" href="#idm140016510938464">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>losetup -d /dev/loop1</pre></div></li></ol></div></div></div><div class="sect3 " id="sec.vt.best.img.open_img.qcow2"><div class="titlepage"><div><div><h4 class="title" id="sec.vt.best.img.open_img.qcow2"><span class="number">5.3.2 </span><span class="name">Opening a qcow2 Image</span> <a title="Permalink" class="permalink" href="#sec.vt.best.img.open_img.qcow2">#</a></h4></div></div></div><div class="procedure " id="idm140272432684928"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 7: </span><span class="name">Mounting a qcow2 Image </span><a title="Permalink" class="permalink" href="#idm140272432684928">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      First you need to load the <code class="literal">nbd</code> (network block
      devices) module. The following example loads it with support for 16 block
      devices (<code class="option">max_part=16</code>). Check with
@@ -1298,7 +1298,7 @@ add map loop1p1 (254:1): 0 29358080 linear /dev/loop1 2048</pre></div><div class
        NBD device to use
       </p></td></tr><tr><td width="5%" valign="top" align="left"><p><a href="#co.qemunbd.image"><span class="callout">3</span></a> </p></td><td valign="top" align="left"><p>
        VM Guest image to use
-      </p></td></tr></table></div><div id="idm140016516297552" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Checking for a free NBD Device</h6><p>
+      </p></td></tr></table></div><div id="idm140272432669968" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Checking for a free NBD Device</h6><p>
        To check whether an NBD device is free, run the following command:
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>lsof /dev/nbd0
 COMMAND    PID USER   FD   TYPE DEVICE SIZE/OFF  NODE NAME
@@ -1329,11 +1329,11 @@ qemu-nbd 15149 root   10u   BLK   43,0      0t0 47347 /dev/nbd0</pre></div><p>
 # mount /dev/nbd0p1 /mnt/nbd0p2</pre></div><p>
      Refer to <a class="xref" href="#sec.lvm.found" title="5.3.3. Opening Images Containing LVM">Section 5.3.3, “Opening Images Containing LVM”</a> for information on how to
      handle LVM volumes.
-    </p></li></ol></div></div><div class="procedure " id="idm140016516282928"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8: </span><span class="name">Unmounting a qcow2 Image </span><a title="Permalink" class="permalink" href="#idm140016516282928">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140272432655344"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8: </span><span class="name">Unmounting a qcow2 Image </span><a title="Permalink" class="permalink" href="#idm140272432655344">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Unmount all mounted partitions of the image, for example:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>umount /mnt/nbd0p2</pre></div></li><li class="step " id="st.umount.qcow2"><p>
      Disconnect the image from the <code class="filename">/dev/nbd0</code> device.
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>qemu-nbd -d /dev/nbd0</pre></div></li></ol></div></div></div><div class="sect3 " id="sec.lvm.found"><div class="titlepage"><div><div><h4 class="title" id="sec.lvm.found"><span class="number">5.3.3 </span><span class="name">Opening Images Containing LVM</span> <a title="Permalink" class="permalink" href="#sec.lvm.found">#</a></h4></div></div></div><div class="procedure " id="idm140016516275984"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9: </span><span class="name">Mounting Images Containing LVM </span><a title="Permalink" class="permalink" href="#idm140016516275984">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>qemu-nbd -d /dev/nbd0</pre></div></li></ol></div></div></div><div class="sect3 " id="sec.lvm.found"><div class="titlepage"><div><div><h4 class="title" id="sec.lvm.found"><span class="number">5.3.3 </span><span class="name">Opening Images Containing LVM</span> <a title="Permalink" class="permalink" href="#sec.lvm.found">#</a></h4></div></div></div><div class="procedure " id="idm140272432648336"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9: </span><span class="name">Mounting Images Containing LVM </span><a title="Permalink" class="permalink" href="#idm140272432648336">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      To check images for LVM groups, use <code class="command">vgscan -v</code>. If an
      image contains LVM groups, the output of the command looks like the
      following:
@@ -1385,7 +1385,7 @@ Activated 3 logical volumes in volume group system
 
 <code class="prompt root">root # </code>ls /mnt/system-root/
 bin   dev  home  lib64       mnt  proc        root  sbin     srv  tmp  var
-boot  etc  lib   lost+found  opt  read-write  run   selinux  sys  usr</pre></div></li></ol></div></div><div class="procedure " id="idm140016516262096"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 10: </span><span class="name">Unmounting Images Containing LVM </span><a title="Permalink" class="permalink" href="#idm140016516262096">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+boot  etc  lib   lost+found  opt  read-write  run   selinux  sys  usr</pre></div></li></ol></div></div><div class="procedure " id="idm140272432634448"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 10: </span><span class="name">Unmounting Images Containing LVM </span><a title="Permalink" class="permalink" href="#idm140272432634448">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Unmount all partitions (with <code class="command">umount</code>)
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>umount /mnt/system-root</pre></div></li><li class="step "><p>
      Deactivate the LVM volume group (with <code class="command">vgchange -an
@@ -1410,7 +1410,7 @@ Deactivated 3 logical volumes in volume group system
        In case of a raw image, proceeds as described in
        <a class="xref" href="#st.umount.raw" title="Step 2">Step 2</a> (<code class="command">kpartx -d
        /dev/loop1</code>; <code class="command">losetup -d /dev/loop1</code>).
-      </p></li></ul></div><div id="idm140016516250368" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Check for a Successful Unmount</h6><p>
+      </p></li></ul></div><div id="idm140272432622720" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Check for a Successful Unmount</h6><p>
       You should double-check that umounting succeeded by using a system
       command like <code class="command">losetup</code>, <code class="command">qemu-nbd</code>,
       <code class="command">mount</code> or <code class="command">vgscan</code>. If this is not the
@@ -1466,7 +1466,7 @@ Deactivated 3 logical volumes in volume group system
     </p><div class="verbatim-wrap"><pre class="screen">&lt;disk type='....' device='disk'&gt;
     ....
     &lt;target dev='vda' bus='virtio'/&gt;
-&lt;/disk&gt;</pre></div><div id="idm140016516215648" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Disk Device Names</h6><p>
+&lt;/disk&gt;</pre></div><div id="idm140272432587936" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Disk Device Names</h6><p>
       <code class="literal">virtio</code> disk devices are named
       <code class="literal">/dev/vd[a-z][1-9]</code>. If you migrate a Linux guest from a
       non-virtio disk you need to adjust the <code class="literal">root=</code> parameter
@@ -1474,7 +1474,7 @@ Deactivated 3 logical volumes in volume group system
       file. Otherwise the system cannot boot. On VM Guests with other
       operating systems, the boot loader may need to be adjusted or reinstalled
       accordingly, too.
-     </p></div><div id="idm140016516212272" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
+     </p></div><div id="idm140272432584560" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
       Using <code class="literal">virtio</code> Disks with
       <code class="command">qemu-system-ARCH</code>
      </h6><p>
@@ -1552,7 +1552,7 @@ virtio-net-pci.any_layout=on/off
 .....</pre></div></div></div><div class="sect2 " id="sec.vt.best.perf.cirrus"><div class="titlepage"><div><div><h3 class="title" id="sec.vt.best.perf.cirrus"><span class="number">6.2 </span><span class="name">Cirrus Video Driver</span> <a title="Permalink" class="permalink" href="#sec.vt.best.perf.cirrus">#</a></h3></div></div></div><p>
     To get 16-bit color, high compatibility and better performance it is
     recommended to use the <code class="literal">cirrus</code> video driver.
-   </p><div id="idm140016516180736" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code></h6><p>
+   </p><div id="idm140272432552960" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code></h6><p>
      <code class="systemitem">libvirt</code> ignores the <code class="literal">vram</code> value because video size has
      been hardcoded in QEMU.
     </p></div><div class="verbatim-wrap"><pre class="screen">&lt;video&gt;
@@ -1661,7 +1661,7 @@ virtio_rng.0</pre></div><p>
     or backup of the guest—in case Windows* has issues with
     the changes it detects and subsequently the user decides to revert to
     the original machine type the guest was created with.
-   </p><div id="idm140016518494064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changing the machine type</h6><p>
+   </p><div id="idm140272432511744" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changing the machine type</h6><p>
      Refer to the Virtualization guide section
      <a class="link" href="https://www.suse.com/documentation/sles-12/singlehtml/book_virt/book_virt.html#sec.libvirt.config.mahcinetype.virsh" target="_blank">Change
      Machine Type</a> for documentation.
@@ -1767,7 +1767,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
    </p><div class="verbatim-wrap"><pre class="screen">&lt;qemu:commandline&gt;
     &lt;qemu:arg value='-device'/&gt;
     &lt;qemu:arg value='virtio-balloon-pci,id=balloon0'/&gt;
-&lt;/qemu:commandline&gt;</pre></div></div></div><div class="sect1 " id="sec.vt.best.hypervisors_containers"><div class="titlepage"><div><div><h2 class="title" id="sec.vt.best.hypervisors_containers"><span class="number">8 </span><span class="name">Hypervisors Compared to Containers</span> <a title="Permalink" class="permalink" href="#sec.vt.best.hypervisors_containers">#</a></h2></div></div></div><div class="table" id="idm140016518443648"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4: </span><span class="name">Hypervisors Compared to Containers </span><a title="Permalink" class="permalink" href="#idm140016518443648">#</a></h6></div><div class="table-contents"><table summary="Hypervisors Compared to Containers" border="1"><colgroup><col width="20%" /><col width="30%" /><col width="30%" /></colgroup><thead><tr><th>
+&lt;/qemu:commandline&gt;</pre></div></div></div><div class="sect1 " id="sec.vt.best.hypervisors_containers"><div class="titlepage"><div><div><h2 class="title" id="sec.vt.best.hypervisors_containers"><span class="number">8 </span><span class="name">Hypervisors Compared to Containers</span> <a title="Permalink" class="permalink" href="#sec.vt.best.hypervisors_containers">#</a></h2></div></div></div><div class="table" id="idm140272413482864"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 4: </span><span class="name">Hypervisors Compared to Containers </span><a title="Permalink" class="permalink" href="#idm140272413482864">#</a></h6></div><div class="table-contents"><table summary="Hypervisors Compared to Containers" border="1"><colgroup><col width="20%" /><col width="30%" /><col width="30%" /></colgroup><thead><tr><th>
        <p>
         Features
        </p>
@@ -1836,7 +1836,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         Strong
        </p>
       </td><td>
-       <div id="idm140016518420704" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
+       <div id="idm140272413459920" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
          Security is very low
         </p></div>
       </td></tr><tr><td>
@@ -1848,7 +1848,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         Full isolation
        </p>
       </td><td>
-       <div id="idm140016518416800" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
+       <div id="idm140272413456016" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
          Host kernel (OS must be compatible with kernel version)
         </p></div>
       </td></tr><tr><td>
@@ -1916,7 +1916,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         Sharing with host
        </p>
       </td><td>
-       <div id="idm140016518397792" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
+       <div id="idm140272413437008" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
          Complex because of isolation
         </p></div>
       </td><td>
@@ -1933,7 +1933,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         Supports migration (live mode)
        </p>
       </td><td>
-       <div id="idm140016518392880" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
+       <div id="idm140272413432096" class="admonition warning compact"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><p>
          Not possible
         </p></div>
       </td></tr></tbody></table></div></div><div class="sect2 " id="sec.vt.best.hypervisors_containers.both"><div class="titlepage"><div><div><h3 class="title" id="sec.vt.best.hypervisors_containers.both"><span class="number">8.1 </span><span class="name">Getting the Best of Both Worlds</span> <a title="Permalink" class="permalink" href="#sec.vt.best.hypervisors_containers.both">#</a></h3></div></div></div><p>
@@ -1983,7 +1983,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
         repository and install the <code class="literal">Minimal</code> pattern in the
         disk image. Any additional package or configuration change should be
         performed in this step.
-       </p><div id="idm140016518363408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using backing chains</h6><p>
+       </p><div id="idm140272413402560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using backing chains</h6><p>
          To share the root file system between several sandboxes, create qcow2
          images with a common disk image as backing chain as described in
          <a class="xref" href="#sec.vt.best.img.overlay" title="5.2. Overlay Disk Images">Section 5.2, “Overlay Disk Images”</a>.
@@ -2025,7 +2025,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
        </p></td></tr></table></div></li></ol></div></div></div></div><div class="sect1 " id="sec.vt.best.xen_pv_fv"><div class="titlepage"><div><div><h2 class="title" id="sec.vt.best.xen_pv_fv"><span class="number">9 </span><span class="name">Xen: Converting a Paravirtual (PV) Guest to a Fully Virtual (FV/HVM) Guest</span> <a title="Permalink" class="permalink" href="#sec.vt.best.xen_pv_fv">#</a></h2></div></div></div><p>
    This chapter explains how to convert a Xen paravirtual machine into a
    Xen fully virtualized machine.
-  </p><div class="procedure " id="idm140016518341008"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11: </span><span class="name">Guest Side </span><a title="Permalink" class="permalink" href="#idm140016518341008">#</a></h6></div><div class="procedure-contents"><p>
+  </p><div class="procedure " id="idm140272413380160"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 11: </span><span class="name">Guest Side </span><a title="Permalink" class="permalink" href="#idm140272413380160">#</a></h6></div><div class="procedure-contents"><p>
       In order to start the guest in FV mode, you have to run the following steps inside the guest.
     </p><ol class="procedure" type="1"><li class="step "><p>
 	Prior to converting the guest, apply all pending patches and reboot the guest.
@@ -2037,7 +2037,7 @@ LC_ALL=C PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin \
 	PV machines typically use disk names such as <code class="literal">vda*</code>. These names
 	must be changed to the FV <code class="literal">hd*</code> syntax. This change must be done
 	in the following files:
-      </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><code class="filename">/etc/fstab</code></p></li><li class="listitem "><p><code class="filename">/boot/grub/menu.lst</code> (SLES11 only)</p></li><li class="listitem "><p><code class="filename">/boot/grub*/device.map</code></p></li><li class="listitem "><p><code class="filename">/etc/sysconfig/bootloader</code></p></li><li class="listitem "><p><code class="filename">/etc/default/grub</code> (SLES12 only)</p></li></ul></div><div id="idm140016518330208" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Prefer UUIDs</h6><p>
+      </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><code class="filename">/etc/fstab</code></p></li><li class="listitem "><p><code class="filename">/boot/grub/menu.lst</code> (SLES11 only)</p></li><li class="listitem "><p><code class="filename">/boot/grub*/device.map</code></p></li><li class="listitem "><p><code class="filename">/etc/sysconfig/bootloader</code></p></li><li class="listitem "><p><code class="filename">/etc/default/grub</code> (SLES12 only)</p></li></ul></div><div id="idm140272413369360" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Prefer UUIDs</h6><p>
 	  You should use UUIDs or logical volumes within your
       <code class="filename">/etc/fstab</code>. Using UUID simplifies using attached network
       storage, multipathing, and virtualization. To find the UUID of your disk use the command
@@ -2054,7 +2054,7 @@ ln -sf /dev/xvda1 /dev/hda1
 	These are the only PV drivers for a fully virtualized VM Guest. All other modules,
 	such as <code class="literal">ata_piix</code>, <code class="literal">ata_generic</code> and
 	<code class="literal">libata</code>, should be added automatically.
-      </p><div id="idm140016518321600" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Adding Modules to the initrd</h6><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      </p><div id="idm140272413360752" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Adding Modules to the initrd</h6><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
 	      On SLES 11, you can add modules to the
 	      <code class="literal">INITRD_MODULES</code> line in the
 	      <code class="filename">/etc/sysconfig/kernel</code> file. For example:
@@ -2069,7 +2069,7 @@ ln -sf /dev/xvda1 /dev/hda1
 	      Run <code class="command">dracut -f --kver [KERNEL_VERSION]-default</code> to build a
 	      new initrd (for the -default version of the kernel) which contains the required
 	      modules.
-	    </p><div id="idm140016518314096" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Find your Kernel version</h6><p>Use the <code class="command">uname -r</code> command to get the current version used on your system.</p></div></li></ul></div></div></li><li class="step "><p>
+	    </p><div id="idm140272413353248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Find your Kernel version</h6><p>Use the <code class="command">uname -r</code> command to get the current version used on your system.</p></div></li></ul></div></div></li><li class="step "><p>
 	Before shutting down the guest, set the default boot option to the
 	<code class="literal">-default</code> kernel using <code class="command">yast bootloader</code>.
       </p></li><li class="step "><p>Under <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 11, if you have an X server running on your guest, you need to
@@ -2078,9 +2078,9 @@ adjust the <code class="filename">/etc/X11/xorg.conf</code> file to adjust the X
       </p><div class="verbatim-wrap"><pre class="screen">Section "Device"
           Driver       "cirrus"
           ......
-          EndSection</pre></div><div id="idm140016526453648" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 and Xorg</h6><p>Under <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12, Xorg will automatically adjust the driver needed to be able to get a working X server.</p></div></li><li class="step "><p>
+          EndSection</pre></div><div id="idm140272413345568" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 and Xorg</h6><p>Under <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12, Xorg will automatically adjust the driver needed to be able to get a working X server.</p></div></li><li class="step "><p>
 	Shut down the guest.
-      </p></li></ol></div></div><div class="procedure " id="idm140016526449360"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 12: </span><span class="name">Host Side </span><a title="Permalink" class="permalink" href="#idm140016526449360">#</a></h6></div><div class="procedure-contents"><p>
+      </p></li></ol></div></div><div class="procedure " id="idm140272413341280"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 12: </span><span class="name">Host Side </span><a title="Permalink" class="permalink" href="#idm140272413341280">#</a></h6></div><div class="procedure-contents"><p>
       The following steps explain the action you have to do on the host.
     </p><ol class="procedure" type="1"><li class="step "><p>
 	To start the guest in FV mode, the configuration of the VM must be modified
@@ -2123,7 +2123,7 @@ adjust the <code class="filename">/etc/X11/xorg.conf</code> file to adjust the X
 	Start the guest (using <code class="command">virsh</code> or <code class="command">virt-manager</code>). If the guest
 	is running kernel-default (as verified through <code class="command">uname -a</code>), the machine is running
 	in Fully Virtual mode.
-      </p></li></ol></div></div><div id="idm140016526422480" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: guestfs-tools</h6><p>
+      </p></li></ol></div></div><div id="idm140272413314400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: guestfs-tools</h6><p>
       To script this process, or work on disk images directly, you
       can use the <a class="link" href="https://www.suse.com/documentation/sles-12/book_virt/data/sec_guestfs_tools.html" target="_blank">guestfs-tools</a>
       suite. Numerous tools exist there to help modify disk images.
