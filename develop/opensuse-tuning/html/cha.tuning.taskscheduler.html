@@ -84,13 +84,13 @@ hljs.configure({
   </p><p>
    One approach is to classify a process either
    <span class="emphasis"><em>I/O-bound</em></span> or <span class="emphasis"><em>processor-bound</em></span>.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334423377040"><span class="term ">I/O-bound</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359765905920"><span class="term ">I/O-bound</span></dt><dd><p>
       I/O stands for Input/Output devices, such as keyboards, mice, or
       optical and hard disks. <span class="emphasis"><em>I/O-bound processes</em></span> spend
       the majority of time submitting and waiting for requests. They are run
       very frequently, but for short time intervals, not to block other
       processes waiting for I/O requests.
-     </p></dd><dt id="idm140334423374528"><span class="term ">processor-bound</span></dt><dd><p>
+     </p></dd><dt id="idm140359765903408"><span class="term ">processor-bound</span></dt><dd><p>
       On the other hand, <span class="emphasis"><em>processor-bound</em></span> tasks use
       their time to execute a code, and usually run until they are preempted
       by the scheduler. They do not block processes waiting for I/O
@@ -125,15 +125,15 @@ hljs.configure({
    to <span class="productname"><span class="phrase">openSUSE Leap</span></span> with kernel version 2.6.32 and higher (including 3.x
    kernels). The scheduler environment was divided into several parts, and
    three main new features were introduced:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334423360560"><span class="term ">Modular Scheduler Core</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359765889440"><span class="term ">Modular Scheduler Core</span></dt><dd><p>
       The core of the scheduler was enhanced with <span class="emphasis"><em>scheduling
       classes</em></span>. These classes are modular and represent scheduling
       policies.
-     </p></dd><dt id="idm140334423358208"><span class="term ">Completely Fair Scheduler</span></dt><dd><p>
+     </p></dd><dt id="idm140359765887088"><span class="term ">Completely Fair Scheduler</span></dt><dd><p>
       Introduced in kernel 2.6.23 and extended in 2.6.24, CFS tries to
       assure that each process obtains its <span class="quote">“<span class="quote">fair</span>”</span> share of the
       processor time.
-     </p></dd><dt id="idm140334423355824"><span class="term ">Group Scheduling</span></dt><dd><p>
+     </p></dd><dt id="idm140359765884704"><span class="term ">Group Scheduling</span></dt><dd><p>
       For example, if you split processes into groups according to which
       user is running them, CFS tries to provide each of these groups with
       the same amount of processor time.
@@ -177,7 +177,7 @@ hljs.configure({
     kernel compilation process. Because kernel compilation process is a
     complex task and out of this document's scope, refer to relevant source
     of information.
-   </p><div id="idm140334423341856" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Kernel Compilation</h6><p>
+   </p><div id="idm140359765870672" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Kernel Compilation</h6><p>
      If you run <span class="productname"><span class="phrase">openSUSE Leap</span></span> on a kernel that was not shipped with it,
      for example on a self-compiled kernel, you lose the entire support
      entitlement.
@@ -185,10 +185,10 @@ hljs.configure({
     Documents regarding task scheduling policy often use several technical
     terms which you need to know to understand the information correctly.
     Here are some:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334423337024"><span class="term ">Latency</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359765865840"><span class="term ">Latency</span></dt><dd><p>
        Delay between the time a process is scheduled to run and the actual
        process execution.
-      </p></dd><dt id="idm140334423335136"><span class="term ">Granularity</span></dt><dd><p>
+      </p></dd><dt id="idm140359765863952"><span class="term ">Granularity</span></dt><dd><p>
        The relation between granularity and latency can be expressed by the
        following equation:
       </p><div class="verbatim-wrap"><pre class="screen">gran = ( lat / rtasks ) - ( lat / rtasks / rtasks )</pre></div><p>
@@ -197,18 +197,18 @@ hljs.configure({
        <span class="emphasis"><em>rtasks</em></span> is the number of running tasks.
       </p></dd></dl></div><div class="sect3 " id="kernel.tasksched.policies"><div class="titlepage"><div><div><h4 class="title" id="kernel.tasksched.policies"><span class="number">13.3.4.1 </span><span class="name">Scheduling Policies</span> <a title="Permalink" class="permalink" href="cha.tuning.taskscheduler.html#kernel.tasksched.policies">#</a></h4></div></div></div><p>
      The Linux kernel supports the following scheduling policies:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334423328848"><span class="term ">SCHED_FIFO</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359765857600"><span class="term ">SCHED_FIFO</span></dt><dd><p>
         Scheduling policy designed for special time-critical applications.
         It uses the First In-First Out scheduling algorithm.
-       </p></dd><dt id="idm140334423326928"><span class="term ">SCHED_BATCH</span></dt><dd><p>
+       </p></dd><dt id="idm140359765855680"><span class="term ">SCHED_BATCH</span></dt><dd><p>
         Scheduling policy designed for CPU-intensive tasks.
-       </p></dd><dt id="idm140334423325088"><span class="term ">SCHED_IDLE</span></dt><dd><p>
+       </p></dd><dt id="idm140359765853840"><span class="term ">SCHED_IDLE</span></dt><dd><p>
         Scheduling policy intended for <span class="emphasis"><em>very</em></span> low
         prioritized tasks.
-       </p></dd><dt id="idm140334423322848"><span class="term ">SCHED_OTHER</span></dt><dd><p>
+       </p></dd><dt id="idm140359765851600"><span class="term ">SCHED_OTHER</span></dt><dd><p>
         Default Linux time-sharing scheduling policy used by the majority of
         processes.
-       </p></dd><dt id="idm140334423320960"><span class="term ">SCHED_RR</span></dt><dd><p>
+       </p></dd><dt id="idm140359765849712"><span class="term ">SCHED_RR</span></dt><dd><p>
         Similar to <code class="systemitem">SCHED_FIFO</code>, but uses the Round
         Robin scheduling algorithm.
        </p></dd></dl></div></div></div><div class="sect2 " id="sec.tuning.taskscheduler.cfs.chrt"><div class="titlepage"><div><div><h3 class="title" id="sec.tuning.taskscheduler.cfs.chrt"><span class="number">13.3.5 </span><span class="name">Changing Real-time Attributes of Processes with <code class="command">chrt</code></span> <a title="Permalink" class="permalink" href="cha.tuning.taskscheduler.html#sec.tuning.taskscheduler.cfs.chrt">#</a></h3></div></div></div><p>
@@ -279,7 +279,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
     A list of the most important task scheduler <code class="command">sysctl</code>
     tuning variables (located at <code class="filename">/proc/sys/kernel/</code>)
     with a short description follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334423289904"><span class="term "><code class="systemitem">sched_cfs_bandwidth_slice_us</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359765818656"><span class="term "><code class="systemitem">sched_cfs_bandwidth_slice_us</code>
      </span></dt><dd><p>
        When CFS bandwidth control is in use, this parameter controls
        the amount of run-time (bandwidth) transferred to a run queue from the
@@ -287,7 +287,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        bandwidth to be shared in a fine-grained manner among tasks, larger
        values reduce transfer overhead. See
        <a class="link" href="https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt" target="_blank">https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt</a>.
-      </p></dd><dt id="idm140334423286864"><span class="term "><code class="systemitem">sched_child_runs_first</code>
+      </p></dd><dt id="idm140359765815616"><span class="term "><code class="systemitem">sched_child_runs_first</code>
      </span></dt><dd><p>
        A freshly forked child runs before the parent continues execution.
        Setting this parameter to <code class="literal">1</code> is beneficial for an
@@ -296,7 +296,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        <code class="option">-j<em class="replaceable ">&lt;NO_CPUS&gt;</em></code>
        performs better when sched_child_runs_first is turned off. The
        default value is <code class="literal">0</code>.
-      </p></dd><dt id="idm140334423282432"><span class="term "><code class="systemitem">sched_compat_yield</code>
+      </p></dd><dt id="idm140359765811184"><span class="term "><code class="systemitem">sched_compat_yield</code>
      </span></dt><dd><p>
        Enables the aggressive CPU yielding behavior of the old
        <span class="emphasis"><em>O(1)</em></span> scheduler by moving the relinquishing task to
@@ -308,7 +308,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        context switching, misusing the call can hurt the workload. Only use it
        when you see a drop in performance. The default value is
        <code class="literal">0</code>.
-      </p></dd><dt id="idm140334436242800"><span class="term "><code class="systemitem">sched_migration_cost_ns</code>
+      </p></dd><dt id="idm140359765807200"><span class="term "><code class="systemitem">sched_migration_cost_ns</code>
      </span></dt><dd><p>
        Amount of time after the last execution that a task is considered to
        be <span class="quote">“<span class="quote">cache hot</span>”</span> in migration decisions. A
@@ -319,7 +319,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        If the CPU idle time is higher than expected when there are runnable
        processes, try reducing this value. If tasks bounce between CPUs or
        nodes too often, try increasing it.
-      </p></dd><dt id="idm140334436238528"><span class="term "><code class="systemitem">sched_latency_ns</code>
+      </p></dd><dt id="idm140359765802928"><span class="term "><code class="systemitem">sched_latency_ns</code>
      </span></dt><dd><p>
        Targeted preemption latency for CPU bound tasks. Increasing this
        variable increases a CPU bound task's timeslice. A task's timeslice
@@ -346,12 +346,12 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        waking task may consume before being preempted, thus increasing
        scheduler latency for CPU bound tasks. The default value is
        <code class="literal">6000000</code> (ns).
-      </p></dd><dt id="idm140334436231328"><span class="term "><code class="systemitem">sched_min_granularity_ns</code>
+      </p></dd><dt id="idm140359765795728"><span class="term "><code class="systemitem">sched_min_granularity_ns</code>
      </span></dt><dd><p>
        Minimal preemption granularity for CPU bound tasks. See
        <code class="systemitem">sched_latency_ns</code> for details. The default
        value is <code class="literal">4000000</code> (ns).
-      </p></dd><dt id="idm140334436228256"><span class="term "><code class="systemitem">sched_wakeup_granularity_ns</code>
+      </p></dd><dt id="idm140359765792656"><span class="term "><code class="systemitem">sched_wakeup_granularity_ns</code>
      </span></dt><dd><p>
        The wake-up preemption granularity. Increasing this variable reduces
        wake-up preemption, reducing disturbance of compute bound tasks.
@@ -359,27 +359,27 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        critical tasks, particularly when a short duty cycle load component
        must compete with CPU bound components. The default value is
        <code class="literal">2500000</code> (ns).
-      </p><div id="idm140334436225680" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Setting the Right Wake-up Granularity Value</h6><p>
+      </p><div id="idm140359765790080" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Setting the Right Wake-up Granularity Value</h6><p>
         Settings larger than half of
         <code class="systemitem">sched_latency_ns</code> will result in no wake-up
         preemption. Short duty cycle tasks will be unable to compete with
         CPU hogs effectively.
-       </p></div></dd><dt id="idm140334436223376"><span class="term "><code class="systemitem">sched_rr_timeslice_ms</code>
+       </p></div></dd><dt id="idm140359765787776"><span class="term "><code class="systemitem">sched_rr_timeslice_ms</code>
      </span></dt><dd><p>
        Quantum that SCHED_RR tasks are allowed to run before they are
        preempted and put to the end of the task list.
-      </p></dd><dt id="idm140334436221184"><span class="term "><code class="systemitem">sched_rt_period_us</code>
+      </p></dd><dt id="idm140359765785584"><span class="term "><code class="systemitem">sched_rt_period_us</code>
      </span></dt><dd><p>
        Period over which real-time task bandwidth enforcement is measured.
        The default value is <code class="literal">1000000</code> (µs).
-      </p></dd><dt id="idm140334436218560"><span class="term "><code class="systemitem">sched_rt_runtime_us</code>
+      </p></dd><dt id="idm140359778810080"><span class="term "><code class="systemitem">sched_rt_runtime_us</code>
      </span></dt><dd><p>
        Quantum allocated to real-time tasks during sched_rt_period_us.
        Setting to -1 disables RT bandwidth enforcement. By default, RT tasks
        may consume 95%CPU/sec, thus leaving 5%CPU/sec or 0.05s to be used by
        SCHED_OTHER tasks. The default value is <code class="literal">950000</code>
        (µs).
-      </p></dd><dt id="idm140334436215776"><span class="term "><code class="systemitem">sched_nr_migrate</code>
+      </p></dd><dt id="idm140359778807296"><span class="term "><code class="systemitem">sched_nr_migrate</code>
      </span></dt><dd><p>
        Controls how many tasks can be migrated across processors for
        load-balancing purposes. Because balancing iterates the runqueue
@@ -388,7 +388,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
        may give a performance boost to large SCHED_OTHER threads at the
        expense of increased irq-latencies for real-time tasks. The default
        value is <code class="literal">32</code>.
-      </p></dd><dt id="idm140334436212816"><span class="term "><code class="systemitem">sched_time_avg_ms</code>
+      </p></dd><dt id="idm140359778804336"><span class="term "><code class="systemitem">sched_time_avg_ms</code>
      </span></dt><dd><p>
       This parameter sets the period over which the time spent running
       real-time tasks is averaged. That average assists CFS in making
@@ -405,7 +405,7 @@ kernel.sched_wakeup_granularity_ns = 10000000</pre></div><p>
     with the <code class="command">cat</code> or <code class="command">less</code> command. A
     list of the related <code class="filename">/proc</code> files follows with their
     short description:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140334436205552"><span class="term "><code class="filename">/proc/sched_debug</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140359778797136"><span class="term "><code class="filename">/proc/sched_debug</code>
      </span></dt><dd><p>
        Contains the current values of all tunable variables (see <a class="xref" href="cha.tuning.taskscheduler.html#sec.tuning.taskscheduler.cfs.tuning" title="13.3.6. Runtime Tuning with sysctl">Section 13.3.6, “Runtime Tuning with <code class="command">sysctl</code>”</a>) that affect the task
        scheduler behavior, CFS statistics, and information about the run queues
@@ -462,7 +462,7 @@ dl_rq[0]:
 
   task   PID         tree-key  switches  prio     wait-time        [...]
 ------------------------------------------------------------------------
-R  cc1 63477     98876.717832       197   120      0.000000         ...</pre></div></dd><dt id="idm140334436196912"><span class="term "><code class="filename">/proc/schedstat</code>
+R  cc1 63477     98876.717832       197   120      0.000000         ...</pre></div></dd><dt id="idm140359778788496"><span class="term "><code class="filename">/proc/schedstat</code>
      </span></dt><dd><p>
        Displays statistics relevant to the current run queue. Also
        domain-specific statistics for SMP systems are displayed for all
@@ -470,7 +470,7 @@ R  cc1 63477     98876.717832       197   120      0.000000         ...</pre></d
        read the contents of
        <code class="filename">/usr/src/linux/Documentation/scheduler/sched-stats.txt</code>
        for more information.
-      </p></dd><dt id="idm140334436194096"><span class="term "><code class="filename">/proc/<em class="replaceable ">PID</em>/sched</code>
+      </p></dd><dt id="idm140359778785680"><span class="term "><code class="filename">/proc/<em class="replaceable ">PID</em>/sched</code>
      </span></dt><dd><p>
        Displays scheduling information on the process with id
        <em class="replaceable ">PID</em>.
