@@ -65,7 +65,7 @@ hljs.configure({
      <span class="emphasis"><em>dockerfile</em></span>. For more details see
      <a class="link" href="http://docs.docker.com/engine/reference/glossary#image" target="_blank">the
      official Docker documentation</a>.
-    </p></dd><dt id="idm140471271997152"><span class="term ">
+    </p></dd><dt id="idm140572882812864"><span class="term ">
     Dockerfile
    </span></dt><dd><p>
      A <span class="emphasis"><em>dockerfile</em></span> stores changes made on top of the base
@@ -74,14 +74,14 @@ hljs.configure({
    </a> reads instructions in the
      <span class="emphasis"><em>dockerfile</em></span> and builds a new image according to the
      instructions.
-    </p></dd><dt id="idm140471300831104"><span class="term ">
+    </p></dd><dt id="idm140572891919520"><span class="term ">
     Container
    </span></dt><dd><p>
      A <span class="emphasis"><em>container</em></span> is a running instance based on a
      particular Docker <a class="xref" href="cha.docker.overview.html#Docker_Image">Image</a>. Each
      <span class="emphasis"><em>container</em></span> can be distinguished by a unique container
      ID.
-    </p></dd><dt id="idm140471298193680"><span class="term ">
+    </p></dd><dt id="idm140572929866112"><span class="term ">
     Registry
    </span></dt><dd><p>
      A <span class="emphasis"><em>registry</em></span> is storage for already created images. It
@@ -94,7 +94,7 @@ hljs.configure({
       </p></li><li class="listitem "><p>
        private registry - these are accessible for particular users or from a
        particular private network.
-      </p></li></ul></div></dd><dt id="idm140471293839776"><span class="term ">
+      </p></li></ul></div></dd><dt id="idm140572920602976"><span class="term ">
     Repository
    </span></dt><dd><p>
      A <span class="emphasis"><em>repository</em></span> is storage in a
@@ -112,7 +112,7 @@ hljs.configure({
    </span></dt><dd><p>
      Docker uses <span class="emphasis"><em>namespaces</em></span> for its containers that
      isolates resources reserved for particular containers.
-    </p></dd><dt id="idm140471300811856"><span class="term ">Orchestration</span></dt><dd><p>
+    </p></dd><dt id="idm140572922344816"><span class="term ">Orchestration</span></dt><dd><p>
      In a production environment you typically need a cluster with many
      containers on each cluster node. The containers must cooperate and you
      need a framework that enables you to manage the containers automatically.
@@ -140,7 +140,7 @@ hljs.configure({
     Provides you with container orchestration.
    </p></li></ul></div><p>
   On the other hand, Docker has the following limitations:
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="cha.docker.overview.html#idm140471256240960">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="cha.docker.overview.html#idm140572922558528">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
     Containers run inside the host system's kernel and cannot use a different
     kernel.
    </p></li><li class="listitem "><p>
@@ -199,7 +199,7 @@ hljs.configure({
     For example, to force the usage of the
     <code class="systemitem">devicemapper</code> driver enter the
     following text:
-   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm140471274312624" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm140572931070832" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
      It is recommended to have <code class="filename">/var/lib/docker</code> mounted on
      a separate partition or volume to not affect the Docker host operating
      system in case of a file system corruption.
