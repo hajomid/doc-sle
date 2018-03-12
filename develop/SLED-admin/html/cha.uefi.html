@@ -80,14 +80,14 @@ hljs.configure({
 
   </p><div class="sect2 " id="sec.uefi.secboot.sle"><div class="titlepage"><div><div><h3 class="title" id="sec.uefi.secboot.sle"><span class="number">12.1.1 </span><span class="name">Implementation on <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <a title="Permalink" class="permalink" href="cha.uefi.html#sec.uefi.secboot.sle">#</a></h3></div></div></div><p>
     Microsoft’s Key Exchange Key (KEK) is installed by default.
-   </p><div id="idm140592540016032" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: GUID Partitioning Table (GPT) Required</h6><p>
+   </p><div id="idm140051017143104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: GUID Partitioning Table (GPT) Required</h6><p>
      The Secure Boot feature is enabled by default on UEFI/x86_64
      installations. You can find the <span class="guimenu">Enable Secure Boot
      Support</span> option in the <span class="guimenu">Boot Code Options</span> tab
      of the <span class="guimenu">Boot Loader Settings</span> dialog. It supports booting
      when the secure boot is activated in the firmware, while making it
      possible to boot when it is deactivated.
-    </p><div class="figure" id="idm140592540013248"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_bootloader_boot_code_efi.png"><img src="images/yast2_bootloader_boot_code_efi.png" width="" alt="Secure Boot Support" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 12.1: </span><span class="name">Secure Boot Support </span><a title="Permalink" class="permalink" href="cha.uefi.html#idm140592540013248">#</a></h6></div></div><p>
+    </p><div class="figure" id="idm140051017140320"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_bootloader_boot_code_efi.png"><img src="images/yast2_bootloader_boot_code_efi.png" width="" alt="Secure Boot Support" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 12.1: </span><span class="name">Secure Boot Support </span><a title="Permalink" class="permalink" href="cha.uefi.html#idm140051017140320">#</a></h6></div></div><p>
      The Secure Boot feature requires that a GUID Partitioning Table (GPT)
      replaces the old partitioning with a Master Boot Record (MBR). If YaST
      detects EFI mode during the installation, it will try to create a GPT
