@@ -69,23 +69,23 @@ Storage=persistent
    <code class="command">journalctl</code> behavior. All switches are described in the
    <code class="command">journalctl</code> manual page, <code class="command">man 1
    journalctl</code>.
-  </p><div id="idm139924910373008" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
+  </p><div id="idm140634400779776" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
     To show all journal messages related to a specific executable, specify the
     full path to the executable:
-   </p><div class="verbatim-wrap"><pre class="screen">journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139924910370784"><span class="term ">-f</span></dt><dd><p>
+   </p><div class="verbatim-wrap"><pre class="screen">journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140634400777552"><span class="term ">-f</span></dt><dd><p>
       Shows only the most recent journal messages, and prints new log entries
       as they are added to the journal.
-     </p></dd><dt id="idm139924910368880"><span class="term ">-e</span></dt><dd><p>
+     </p></dd><dt id="idm140634400775648"><span class="term ">-e</span></dt><dd><p>
       Prints the messages and jumps to the end of the journal, so that the
       latest entries are visible within the pager.
-     </p></dd><dt id="idm139924910366976"><span class="term ">-r</span></dt><dd><p>
+     </p></dd><dt id="idm140634400773744"><span class="term ">-r</span></dt><dd><p>
       Prints the messages of the journal in reverse order, so that the latest
       entries are listed first.
-     </p></dd><dt id="idm139924910365088"><span class="term ">-k</span></dt><dd><p>
+     </p></dd><dt id="idm140634400771856"><span class="term ">-k</span></dt><dd><p>
       Shows only kernel messages. This is equivalent to the field match
       <code class="literal">_TRANSPORT=kernel</code> (see
       <a class="xref" href="cha.journalctl.html#journalctl.filtering.fields" title="11.3.3. Filtering Based on Fields">Section 11.3.3, “Filtering Based on Fields”</a>).
-     </p></dd><dt id="idm139924910362208"><span class="term ">-u</span></dt><dd><p>
+     </p></dd><dt id="idm140634400768976"><span class="term ">-u</span></dt><dd><p>
       Shows only messages for the specified <code class="systemitem">systemd</code> unit. This is equivalent
       to the field match
       <code class="literal">_SYSTEMD_UNIT=<em class="replaceable ">UNIT</em></code> (see
