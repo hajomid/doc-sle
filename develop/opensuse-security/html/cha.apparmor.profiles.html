@@ -40,29 +40,29 @@ hljs.configure({
   profile. To do so, it is important to understand the components and syntax
   of profiles. <span class="phrase">AppArmor</span> profiles contain several building blocks that help
   build simple and reusable profile code:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140269919725072"><span class="term ">Include Files</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140621734595616"><span class="term ">Include Files</span></dt><dd><p>
      Include statements are used to pull in parts of other <span class="phrase">AppArmor</span> profiles
      to simplify the structure of new profiles.
-    </p></dd><dt id="idm140269919722736"><span class="term ">Abstractions</span></dt><dd><p>
+    </p></dd><dt id="idm140621734593280"><span class="term ">Abstractions</span></dt><dd><p>
      Abstractions are include statements grouped by common application
      tasks.
-    </p></dd><dt id="idm140269919720864"><span class="term ">Program Chunks</span></dt><dd><p>
+    </p></dd><dt id="idm140621734591408"><span class="term ">Program Chunks</span></dt><dd><p>
      Program chunks are include statements that contain chunks of profiles
      that are specific to program suites.
-    </p></dd><dt id="idm140269919718960"><span class="term ">Capability Entries</span></dt><dd><p>
+    </p></dd><dt id="idm140621734589504"><span class="term ">Capability Entries</span></dt><dd><p>
      Capability entries are profile entries for any of the POSIX.1e
      <a class="link" href="http://en.wikipedia.org/wiki/POSIX#POSIX.1" target="_blank">http://en.wikipedia.org/wiki/POSIX#POSIX.1</a> Linux
      capabilities allowing a fine-grained control over what a confined
      process is allowed to do through system calls that require privileges.
-    </p></dd><dt id="idm140269919716368"><span class="term ">Network Access Control Entries</span></dt><dd><p>
+    </p></dd><dt id="idm140621734586912"><span class="term ">Network Access Control Entries</span></dt><dd><p>
      Network Access Control Entries mediate network access based on the
      address type and family.
-    </p></dd><dt id="idm140269919714464"><span class="term ">Local Variable Definitions</span></dt><dd><p>
+    </p></dd><dt id="idm140621734585008"><span class="term ">Local Variable Definitions</span></dt><dd><p>
      Local variables define shortcuts for paths.
-    </p></dd><dt id="idm140269919712624"><span class="term ">File Access Control Entries</span></dt><dd><p>
+    </p></dd><dt id="idm140621734583168"><span class="term ">File Access Control Entries</span></dt><dd><p>
      File Access Control Entries specify the set of files an application can
      access.
-    </p></dd><dt id="idm140269919710736"><span class="term ">rlimit Entries</span></dt><dd><p>
+    </p></dd><dt id="idm140621734581280"><span class="term ">rlimit Entries</span></dt><dd><p>
      rlimit entries set and control an application's resource limits.
     </p></dd></dl></div><p>
   For help determining the programs to profile, refer to
@@ -302,7 +302,7 @@ hljs.configure({
     access to the open files with buffering, the accesses to these files
     might not be seen by the kernel and hence not restricted by the new
     profile.
-   </p><div id="idm140269919617280" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Safety of Domain Transitions</h6><p>
+   </p><div id="idm140621734487888" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Safety of Domain Transitions</h6><p>
      The <code class="literal">change_hat</code> and <code class="literal">change_profile</code>
      domain transitions are less secure than a domain transition done
      through an exec because they do not affect a process's memory mappings,
@@ -326,7 +326,7 @@ hljs.configure({
    <code class="literal">#</code>.
   </p><div class="verbatim-wrap"><pre class="screen">include "/etc/apparmor.d/abstractions/foo"</pre></div><p>
    is the same as using
-  </p><div class="verbatim-wrap"><pre class="screen">#include "/etc/apparmor.d/abstractions/foo"</pre></div><div id="idm140269919606016" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Trailing ','</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">#include "/etc/apparmor.d/abstractions/foo"</pre></div><div id="idm140621734476560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Trailing ','</h6><p>
     Note that because includes follow the C pre-processor syntax, they do
     not have a trailing ',' like most <span class="phrase">AppArmor</span> rules.
    </p></div><p>
@@ -357,7 +357,7 @@ include "abstractions/foo"   # relative path to the directory of current file</p
    will try <code class="filename">/etc/apparmor.d/abstractions/foo</code>, and if
    that file does not exist, the next try is
    <code class="filename">/usr/share/apparmor/abstractions/foo</code>.
-  </p><div id="idm140269919593104" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div id="idm140621734463648" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     The default include path can be overridden manually by passing
     <code class="option">-I</code> to the <code class="command">apparmor_parser</code>, or by
     setting the include paths in
@@ -475,23 +475,23 @@ network tcp<span id="co.apparmor.profiles.nac.tcp"></span><span class="callout">
    <span class="phrase">AppArmor</span> explicitly distinguishes directory path names from file path
    names. Use a trailing <code class="literal">/</code> for any directory path that
    needs to be explicitly distinguished:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140269919522016"><span class="term "><code class="filename">/some/random/example/* r</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140621734392768"><span class="term "><code class="filename">/some/random/example/* r</code>
     </span></dt><dd><p>
       Allow read access to files in the
       <code class="filename">/some/random/example</code> directory.
-     </p></dd><dt id="idm140269919519440"><span class="term "><code class="filename">/some/random/example/ r</code>
+     </p></dd><dt id="idm140621734390192"><span class="term "><code class="filename">/some/random/example/ r</code>
     </span></dt><dd><p>
       Allow read access to the directory only.
-     </p></dd><dt id="idm140269919517328"><span class="term "><code class="filename">/some/**/ r</code>
+     </p></dd><dt id="idm140621734388080"><span class="term "><code class="filename">/some/**/ r</code>
     </span></dt><dd><p>
       Give read access to any directories below <code class="filename">/some</code>
       (but not /some/ itself).
-     </p></dd><dt id="idm140269919514752"><span class="term "><code class="filename">/some/random/example/** r</code>
+     </p></dd><dt id="idm140621734385504"><span class="term "><code class="filename">/some/random/example/** r</code>
     </span></dt><dd><p>
       Give read access to files and directories under
       <code class="filename">/some/random/example</code> (but not
       /some/random/example/ itself).
-     </p></dd><dt id="idm140269919512128"><span class="term "><code class="filename">/some/random/example/**[^/] r</code>
+     </p></dd><dt id="idm140621734382880"><span class="term "><code class="filename">/some/random/example/**[^/] r</code>
     </span></dt><dd><p>
       Give read access to files under
       <code class="filename">/some/random/example</code>. Explicitly exclude
@@ -594,7 +594,7 @@ network tcp<span id="co.apparmor.profiles.nac.tcp"></span><span class="callout">
     <span class="emphasis"><em>Mode</em></span> flag is <code class="literal">complain</code> (illegal
     accesses are allowed and logged). If it is omitted, the profile is in
     <code class="literal">enforce</code> mode (enforces the policy).
-   </p><div id="idm140269919468928" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+   </p><div id="idm140621734339680" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
      A more flexible way of setting the whole profile into complain mode is
      to create a symbolic link from the profile file inside the
      <code class="filename">/etc/apparmor.d/force-complain/</code> directory.
@@ -645,7 +645,7 @@ network tcp<span id="co.apparmor.profiles.nac.tcp"></span><span class="callout">
    </p><div class="verbatim-wrap"><pre class="screen">@{HOMEDIRS}=/home/
 @{HOME}=@{HOMEDIRS}/*/ /root/
 [...]
-@{HOMEDIRS}+=/srv/nfs/home/ /mnt/home/</pre></div><div id="idm140269919454480" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+@{HOMEDIRS}+=/srv/nfs/home/ /mnt/home/</pre></div><div id="idm140621734325296" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
      With the current <span class="phrase">AppArmor</span> tools, variables can only be used when
      manually editing and maintaining a profile.
     </p></div></div><div class="sect2 " id="sec.apparmor.profiles.pattern_matching"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.profiles.pattern_matching"><span class="number">21.6.3 </span><span class="name">Pattern Matching</span> <a title="Permalink" class="permalink" href="cha.apparmor.profiles.html#sec.apparmor.profiles.pattern_matching">#</a></h3></div></div></div><p>
@@ -717,10 +717,10 @@ network tcp<span id="co.apparmor.profiles.nac.tcp"></span><span class="callout">
     With the <code class="literal">alias</code> rule, you can point to multiple
     targets at the same time.
    </p><div class="verbatim-wrap"><pre class="screen">alias /home/ -&gt; /usr/home/
-alias /home/ -&gt; /mnt/home/</pre></div><div id="idm140269919422640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+alias /home/ -&gt; /mnt/home/</pre></div><div id="idm140621734293456" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
      With the current <span class="phrase">AppArmor</span> tools, alias rules can only be used when
      manually editing and maintaining a profile.
-    </p></div><div id="idm140269919421216" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></div><div id="idm140621734292032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
      Insert global alias definitions in the file
      <code class="filename">/etc/apparmor.d/tunables/alias</code>.
     </p></div></div></div><div class="sect1 " id="sec.apparmor.profiles.perm"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.profiles.perm"><span class="number">21.7 </span><span class="name">File Permission Access Modes</span> <a title="Permalink" class="permalink" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm">#</a></h2></div></div></div><p>
@@ -815,7 +815,7 @@ alias /home/ -&gt; /mnt/home/</pre></div><div id="idm140269919422640" class="adm
     To force the rule to require the test, the <code class="literal">subset</code>
     keyword is used. The following rules are equivalent:
    </p><div class="verbatim-wrap"><pre class="screen">/var/www/index.html l,
-link subset /var/www/index.html -&gt; /**,</pre></div><div id="idm140269919380640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+link subset /var/www/index.html -&gt; /**,</pre></div><div id="idm140621734251584" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
      Currently link pair rules are not supported by YaST and the
      command line tools. Manually edit your profiles to use them. Updating
      such profiles using the tools is safe, because the link pair entries
@@ -855,7 +855,7 @@ allow file rw /path, # optional 'allow' keyword added</pre></div></div><div clas
     When using file ownership conditions with link rules the ownership test
     is done against the target file so the user must own the file to be able
     to link to it.
-   </p><div id="idm140269919364880" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Precedence of Regular File Rules</h6><p>
+   </p><div id="idm140621734235760" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Precedence of Regular File Rules</h6><p>
      Owner conditional rules are considered a subset of regular file rules.
      If a regular file rule overlaps with an owner conditional file rule,
      the rules are merged. Consider the following example.
@@ -863,7 +863,7 @@ allow file rw /path, # optional 'allow' keyword added</pre></div></div><div clas
 owner /foo rw,  # or w,</pre></div><p>
      The rules are merged—it results in <code class="literal">r</code> for
      everybody, and <code class="literal">w</code> for the owner only.
-    </p></div><div id="idm140269919361504" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></div><div id="idm140621734232384" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
      To address everybody <span class="emphasis"><em>but</em></span> the owner of the file,
      use the keyword <code class="literal">other</code>.
     </p><div class="verbatim-wrap"><pre class="screen">owner /foo rw,
@@ -946,7 +946,7 @@ owner /home/*/** rw,</pre></div><p>
     set, <code class="literal">Cx</code> only searches the local profiles of the
     current profile. This profile transition provides a way for an
     application to have alternate profiles for helper applications.
-   </p><div id="idm140269919328576" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Limitations of the Discrete Local Profile Execute Mode (Cx)</h6><p>
+   </p><div id="idm140621734199392" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Limitations of the Discrete Local Profile Execute Mode (Cx)</h6><p>
      Currently, Cx transitions are limited to top level profiles and cannot
      be used in hats and children profiles. This restriction will be removed
      in the future.
@@ -1025,7 +1025,7 @@ owner /home/*/** rw,</pre></div><p>
   {
     ...
   }
-}</pre></div><div id="idm140269919293712" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Difference Between Normal and Named Transitions</h6><p>
+}</pre></div><div id="idm140621734164464" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Difference Between Normal and Named Transitions</h6><p>
      When used with globbing, normal transitions provide a <span class="quote">“<span class="quote">one to
      many</span>”</span> relationship—<code class="literal">/bin/** px</code> will
      transition to <code class="filename">/bin/ping</code>,
@@ -1166,21 +1166,21 @@ unsafe Px /example_rule,</pre></div><p>
    where <em class="replaceable ">RESOURCE</em> and
    <em class="replaceable ">VALUE</em> are to be replaced with the following
    values:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140269919219104"><span class="term "><code class="literal">cpu</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140621734089792"><span class="term "><code class="literal">cpu</code>
     </span></dt><dd><p>
       CPU time limit in seconds.
-     </p></dd><dt id="idm140269919217056"><span class="term "><code class="literal">fsize</code>, <code class="literal">data</code>, <code class="literal">stack</code>,
+     </p></dd><dt id="idm140621734087744"><span class="term "><code class="literal">fsize</code>, <code class="literal">data</code>, <code class="literal">stack</code>,
       <code class="literal">core</code>, <code class="literal">rss</code>, <code class="literal">as</code>,
       <code class="literal">memlock</code>, <code class="literal">msgqueue</code>
     </span></dt><dd><p>
       a number in bytes, or a number with a suffix where the suffix can be
       K/KB (kilobytes), M/MB (megabytes), G/GB (gigabytes), for example
-     </p><div class="verbatim-wrap"><pre class="screen">rlimit data &lt;= 100M,</pre></div></dd><dt id="idm140269919211248"><span class="term "><code class="literal">fsize</code>, <code class="literal">nofile</code>, <code class="literal">locks</code>,
+     </p><div class="verbatim-wrap"><pre class="screen">rlimit data &lt;= 100M,</pre></div></dd><dt id="idm140621734081936"><span class="term "><code class="literal">fsize</code>, <code class="literal">nofile</code>, <code class="literal">locks</code>,
       <code class="literal">sigpending</code>, <code class="literal">nproc</code><sup>*</sup>,
       <code class="literal">rtprio</code>
     </span></dt><dd><p>
       a number greater or equal to 0
-     </p></dd><dt id="idm140269919206608"><span class="term "><code class="literal">nice</code>
+     </p></dd><dt id="idm140621734077296"><span class="term "><code class="literal">nice</code>
     </span></dt><dd><p>
       a value between -20 and 19
      </p></dd></dl></div><p>
@@ -1190,7 +1190,7 @@ unsafe Px /example_rule,</pre></div><p>
    profile at any time. When the limit is exceeded the creation of new
    processes under the profile will fail until the number of currently
    running processes is reduced.
-  </p><div id="idm140269919203104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+  </p><div id="idm140621734073792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     Currently the tools cannot be used to add rlimit rules to profiles. The
     only way to add rlimit controls to a profile is to manually edit the
     profile with a text editor. The tools will still work with profiles
@@ -1206,7 +1206,7 @@ unsafe Px /example_rule,</pre></div><p>
    into two rules. The following example will result in audit messages when
    files are opened for writing, but not when they are opened for reading:
   </p><div class="verbatim-wrap"><pre class="screen">audit /etc/foo/*  w,
-/etc/foo/*        r,</pre></div><div id="idm140269919197440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+/etc/foo/*        r,</pre></div><div id="idm140621734068064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     Audit messages are not generated for every read or write of a file but
     only when a file is opened for reading or writing.
    </p></div><p>
