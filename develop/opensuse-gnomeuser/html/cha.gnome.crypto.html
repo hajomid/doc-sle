@@ -30,7 +30,7 @@ hljs.configure({
   and keyring, and cache your passphrase.
  </p><p>
   Start the program by choosing <span class="guimenu">Applications</span> › <span class="guimenu">Utilities</span> › <span class="guimenu">Passwords and Keys</span>
- </p><div class="figure" id="idm140646421155776"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/seahorse_main.png"><img src="images/seahorse_main.png" width="" alt="Password and Keys Main Window" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">Password and Keys Main Window </span><a title="Permalink" class="permalink" href="cha.gnome.crypto.html#idm140646421155776">#</a></h6></div></div><div class="sect1 " id="sec.gnome.crypto.sign_encrypt"><div class="titlepage"><div><div><h2 class="title" id="sec.gnome.crypto.sign_encrypt"><span class="number">8.1 </span><span class="name">Signing and Encryption</span> <a title="Permalink" class="permalink" href="cha.gnome.crypto.html#sec.gnome.crypto.sign_encrypt">#</a></h2></div></div></div><p><span class="formalpara-title">Signing. </span>
+ </p><div class="figure" id="idm139759881738640"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/seahorse_main.png"><img src="images/seahorse_main.png" width="" alt="Password and Keys Main Window" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">Password and Keys Main Window </span><a title="Permalink" class="permalink" href="cha.gnome.crypto.html#idm139759881738640">#</a></h6></div></div><div class="sect1 " id="sec.gnome.crypto.sign_encrypt"><div class="titlepage"><div><div><h2 class="title" id="sec.gnome.crypto.sign_encrypt"><span class="number">8.1 </span><span class="name">Signing and Encryption</span> <a title="Permalink" class="permalink" href="cha.gnome.crypto.html#sec.gnome.crypto.sign_encrypt">#</a></h2></div></div></div><p><span class="formalpara-title">Signing. </span>
     Attaching electronic signatures to pieces of information, such as e-mail
     messages or software to prove its origin. To keep someone else from writing
     messages using your name, and to protect both you and the people you send
@@ -55,7 +55,7 @@ hljs.configure({
      </p></li><li class="listitem "><p><span class="formalpara-title">Private Key. </span>
       This key is used for decryption. Use it to make encrypted files or
       messages from others (or yourself) legible again.
-     </p></li></ul></div><div id="idm140646421139168" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Access to the Private Key</h6><p>
+     </p></li></ul></div><div id="idm139759881722032" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Access to the Private Key</h6><p>
     If others gain access to your private key, they can decrypt files and
     messages intended only for you. Never grant others access to your private
     key.
@@ -75,21 +75,21 @@ hljs.configure({
      </p></li><li class="step "><p>
       Click <span class="guimenu">Advanced key options</span> to specify the following
       advanced options for the key.
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140646421126432"><span class="term ">Comment</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139759881709360"><span class="term ">Comment</span></dt><dd><p>
          An optional comment.
-        </p></dd><dt id="idm140646421124672"><span class="term ">Encryption Type</span></dt><dd><p>
+        </p></dd><dt id="idm139759881707600"><span class="term ">Encryption Type</span></dt><dd><p>
          Specifies the encryption algorithms used to generate your keys.
          <span class="guimenu">DSA ElGamal</span> is the recommended choice because it
          lets you encrypt, decrypt, sign, and verify as needed. Both
          <span class="guimenu">DSA (sign only)</span> and <span class="guimenu">RSA (sign
          only)</span> allow only signing.
-        </p></dd><dt id="idm140646421121344"><span class="term ">Key Strength</span></dt><dd><p>
+        </p></dd><dt id="idm139759881704272"><span class="term ">Key Strength</span></dt><dd><p>
          Specifies the length of the key in bits. The longer the key, the more
          secure it is (provided a strong passphrase is used). Keep in mind that
          performing any operation with a longer key requires more time than it
          does with a shorter key. Acceptable values are between 1024 and 4096
          bits. At least 2048 bits are recommended.
-        </p></dd><dt id="idm140646421119184"><span class="term ">Expiration Date</span></dt><dd><p>
+        </p></dd><dt id="idm139759881702112"><span class="term ">Expiration Date</span></dt><dd><p>
          Specifies the date at which the key will cease to be usable for
          performing encryption or signing operations. You will need to either
          change the expiration date or generate a new key or subkey after this
@@ -381,7 +381,7 @@ hljs.configure({
    Passwords and Keys integrates with GNOME Files. You can encrypt, decrypt,
    sign, verify files, and import public keys from the file manager window
    without launching <span class="guimenu">Passwords and Keys</span>.
-  </p><div id="idm140646418909792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling File Manager Integration</h6><p>
+  </p><div id="idm139759885585088" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling File Manager Integration</h6><p>
     The package <code class="systemitem">nautilus-extension-seahorse</code> has to be
     installed to enable file manager integration.
    </p></div><div class="sect2 " id="cha.gnome.crypto.nautilus.encrypt"><div class="titlepage"><div><div><h3 class="title" id="cha.gnome.crypto.nautilus.encrypt"><span class="number">8.7.1 </span><span class="name">Encrypting Files From GNOME Files</span> <a title="Permalink" class="permalink" href="cha.gnome.crypto.html#cha.gnome.crypto.nautilus.encrypt">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
