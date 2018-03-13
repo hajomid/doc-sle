@@ -279,24 +279,24 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
     of key you want to create. Match keys will normally be used to find a value
     that either matches or explicitly mismatches the search value. Match keys
     contain either of the following operators:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449588528"><span class="term "><code class="literal">==</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109533037664"><span class="term "><code class="literal">==</code>
      </span></dt><dd><p>
        Compare for equality. If the key contains a search pattern, all results
        matching this pattern are valid.
-      </p></dd><dt id="idm139769449586336"><span class="term "><code class="literal">!=</code>
+      </p></dd><dt id="idm140109533035472"><span class="term "><code class="literal">!=</code>
      </span></dt><dd><p>
        Compare for non-equality. If the key contains a search pattern, all
        results matching this pattern are valid.
       </p></dd></dl></div><p>
     Any of the following operators can be used with assign keys:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449583200"><span class="term "><code class="literal">=</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109533032336"><span class="term "><code class="literal">=</code>
      </span></dt><dd><p>
        Assign a value to a key. If the key previously consisted of a list of
        values, the key resets and only the single value is assigned.
-      </p></dd><dt id="idm139769449580976"><span class="term "><code class="literal">+=</code>
+      </p></dd><dt id="idm140109533030112"><span class="term "><code class="literal">+=</code>
      </span></dt><dd><p>
        Add a value to a key that contains a list of entries.
-      </p></dd><dt id="idm139769449578848"><span class="term "><code class="literal">:=</code>
+      </p></dd><dt id="idm140109533027984"><span class="term "><code class="literal">:=</code>
      </span></dt><dd><p>
        Assign a final value. Disallow any later change by later rules.
       </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.subst"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.subst"><span class="number">22.6.2 </span><span class="name">Using Substitutions in <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.subst">#</a></h3></div></div></div><p>
@@ -304,101 +304,101 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
     placeholders and substitutions. Use them in a similar fashion as you would
     do in any other scripts. The following substitutions can be used with
     <code class="systemitem">udev</code> rules:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449572160"><span class="term "><code class="literal">%r</code>, <code class="literal">$root</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109533021296"><span class="term "><code class="literal">%r</code>, <code class="literal">$root</code>
      </span></dt><dd><p>
        The device directory, <code class="filename">/dev</code> by default.
-      </p></dd><dt id="idm139769449569168"><span class="term "><code class="literal">%p</code>, <code class="literal">$devpath</code>
+      </p></dd><dt id="idm140109533018304"><span class="term "><code class="literal">%p</code>, <code class="literal">$devpath</code>
      </span></dt><dd><p>
        The value of <code class="envar">DEVPATH</code>.
-      </p></dd><dt id="idm139769449566192"><span class="term "><code class="literal">%k</code>, <code class="literal">$kernel</code>
+      </p></dd><dt id="idm140109533015328"><span class="term "><code class="literal">%k</code>, <code class="literal">$kernel</code>
      </span></dt><dd><p>
        The value of <code class="envar">KERNEL</code> or the internal device name.
-      </p></dd><dt id="idm139769449563200"><span class="term "><code class="literal">%n</code>, <code class="literal">$number</code>
+      </p></dd><dt id="idm140109533012336"><span class="term "><code class="literal">%n</code>, <code class="literal">$number</code>
      </span></dt><dd><p>
        The device number.
-      </p></dd><dt id="idm139769449560656"><span class="term "><code class="literal">%N</code>, <code class="literal">$tempnode</code>
+      </p></dd><dt id="idm140109533009792"><span class="term "><code class="literal">%N</code>, <code class="literal">$tempnode</code>
      </span></dt><dd><p>
        The temporary name of the device file.
-      </p></dd><dt id="idm139769449558096"><span class="term "><code class="literal">%M</code>, <code class="literal">$major</code>
+      </p></dd><dt id="idm140109533007232"><span class="term "><code class="literal">%M</code>, <code class="literal">$major</code>
      </span></dt><dd><p>
        The major number of the device.
-      </p></dd><dt id="idm139769449555536"><span class="term "><code class="literal">%m</code>, <code class="literal">$minor</code>
+      </p></dd><dt id="idm140109533004672"><span class="term "><code class="literal">%m</code>, <code class="literal">$minor</code>
      </span></dt><dd><p>
        The minor number of the device.
-      </p></dd><dt id="idm139769449552976"><span class="term "><code class="literal">%s{<em class="replaceable ">ATTRIBUTE</em>}</code>,
+      </p></dd><dt id="idm140109533002112"><span class="term "><code class="literal">%s{<em class="replaceable ">ATTRIBUTE</em>}</code>,
      <code class="literal">$attr{<em class="replaceable ">ATTRIBUTE</em>}</code>
      </span></dt><dd><p>
        The value of a <code class="filename">sysfs</code> attribute (specified by
        <em class="replaceable ">ATTRIBUTE</em>).
-      </p></dd><dt id="idm139769449548640"><span class="term "><code class="literal">%E{<em class="replaceable ">VARIABLE</em>}</code>,
+      </p></dd><dt id="idm140109532997776"><span class="term "><code class="literal">%E{<em class="replaceable ">VARIABLE</em>}</code>,
      <code class="literal">$env{<em class="replaceable ">VARIABLE</em>}</code>
      </span></dt><dd><p>
        The value of an environment variable (specified by
        <em class="replaceable ">VARIABLE</em>).
-      </p></dd><dt id="idm139769449544720"><span class="term "><code class="literal">%c</code>, <code class="literal">$result</code>
+      </p></dd><dt id="idm140109532993856"><span class="term "><code class="literal">%c</code>, <code class="literal">$result</code>
      </span></dt><dd><p>
        The output of <code class="envar">PROGRAM</code>.
-      </p></dd><dt id="idm139769449541744"><span class="term "><code class="literal">%%</code>
+      </p></dd><dt id="idm140109532990880"><span class="term "><code class="literal">%%</code>
      </span></dt><dd><p>
        The <code class="literal">%</code> character.
-      </p></dd><dt id="idm139769449539216"><span class="term "><code class="literal">$$</code>
+      </p></dd><dt id="idm140109532988352"><span class="term "><code class="literal">$$</code>
      </span></dt><dd><p>
        The <code class="literal">$</code> character.
       </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.match"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.match"><span class="number">22.6.3 </span><span class="name">Using <code class="systemitem">udev</code> Match Keys</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.match">#</a></h3></div></div></div><p>
     Match keys describe conditions that must be met before a
     <code class="systemitem">udev</code> rule can be applied. The
     following match keys are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449532928"><span class="term "><code class="literal">ACTION</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109532982128"><span class="term "><code class="literal">ACTION</code>
      </span></dt><dd><p>
        The name of the event action, for example, <code class="literal">add</code> or
        <code class="literal">remove</code> when adding or removing a device.
-      </p></dd><dt id="idm139769449529888"><span class="term "><code class="literal">DEVPATH</code>
+      </p></dd><dt id="idm140109532979088"><span class="term "><code class="literal">DEVPATH</code>
      </span></dt><dd><p>
        The device path of the event device, for example,
        <code class="literal">DEVPATH=/bus/pci/drivers/ipw3945</code> to search for all
        events related to the ipw3945 driver.
-      </p></dd><dt id="idm139769449527248"><span class="term "><code class="literal">KERNEL</code>
+      </p></dd><dt id="idm140109532976448"><span class="term "><code class="literal">KERNEL</code>
      </span></dt><dd><p>
        The internal (kernel) name of the event device.
-      </p></dd><dt id="idm139769449525120"><span class="term "><code class="literal">SUBSYSTEM</code>
+      </p></dd><dt id="idm140109532974320"><span class="term "><code class="literal">SUBSYSTEM</code>
      </span></dt><dd><p>
        The subsystem of the event device, for example,
        <code class="literal">SUBSYSTEM=usb</code> for all events related to USB devices.
-      </p></dd><dt id="idm139769449522512"><span class="term "><code class="literal">ATTR{<em class="replaceable ">FILENAME</em>}</code>
+      </p></dd><dt id="idm140109532971712"><span class="term "><code class="literal">ATTR{<em class="replaceable ">FILENAME</em>}</code>
      </span></dt><dd><p>
        <code class="systemitem">sysfs</code> attributes of the
        event device. To match a string contained in the
        <code class="filename">vendor</code> attribute file name, you could use
        <code class="literal">ATTR{vendor}=="On[sS]tream"</code>, for example.
-      </p></dd><dt id="idm139769449518256"><span class="term "><code class="literal">KERNELS</code>
+      </p></dd><dt id="idm140109532967456"><span class="term "><code class="literal">KERNELS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upwards for a matching device name.
-      </p></dd><dt id="idm139769449515392"><span class="term "><code class="literal">SUBSYSTEMS</code>
+      </p></dd><dt id="idm140109532964592"><span class="term "><code class="literal">SUBSYSTEMS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upwards for a matching device subsystem name.
-      </p></dd><dt id="idm139769449512528"><span class="term "><code class="literal">DRIVERS</code>
+      </p></dd><dt id="idm140109532961728"><span class="term "><code class="literal">DRIVERS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upwards for a matching device driver name.
-      </p></dd><dt id="idm139769449509664"><span class="term "><code class="literal">ATTRS{<em class="replaceable ">FILENAME</em>}</code>
+      </p></dd><dt id="idm140109532958864"><span class="term "><code class="literal">ATTRS{<em class="replaceable ">FILENAME</em>}</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upwards for a device with matching
        <code class="systemitem">sysfs</code> attribute values.
-      </p></dd><dt id="idm139769449505616"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm140109532954816"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        The value of an environment variable, for example,
        <code class="literal">ENV{ID_BUS}="ieee1394</code> to search for all events
        related to the FireWire bus ID.
-      </p></dd><dt id="idm139769449502544"><span class="term "><code class="literal">PROGRAM</code>
+      </p></dd><dt id="idm140109532951744"><span class="term "><code class="literal">PROGRAM</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> execute an external
        program. To be successful, the program must return with exit code zero.
        The program's output, printed to STDOUT, is available to the
        <code class="literal">RESULT</code> key.
-      </p></dd><dt id="idm139769449499136"><span class="term "><code class="literal">RESULT</code>
+      </p></dd><dt id="idm140109532948336"><span class="term "><code class="literal">RESULT</code>
      </span></dt><dd><p>
        Match the output string of the last <code class="literal">PROGRAM</code> call.
        Either include this key in the same rule as the
@@ -407,48 +407,48 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
     In contrast to the match keys described above, assign keys do not describe
     conditions that must be met. They assign values, names and actions to the
     device nodes maintained by <code class="systemitem">udev</code>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449492288"><span class="term "><code class="literal">NAME</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109532941424"><span class="term "><code class="literal">NAME</code>
      </span></dt><dd><p>
        The name of the device node to be created. After a rule has set a node
        name, all other rules with a <code class="literal">NAME</code> key for this node
        are ignored.
-      </p></dd><dt id="idm139769449489632"><span class="term "><code class="literal">SYMLINK</code>
+      </p></dd><dt id="idm140109532938768"><span class="term "><code class="literal">SYMLINK</code>
      </span></dt><dd><p>
        The name of a symbolic link related to the node to be created. Multiple
        matching rules can add symbolic links to be created with the device
        node. You can also specify multiple symbolic links for one node in one
        rule using the space character to separate the symbolic link names.
-      </p></dd><dt id="idm139769449487248"><span class="term "><code class="literal">OWNER, GROUP, MODE</code>
+      </p></dd><dt id="idm140109532936384"><span class="term "><code class="literal">OWNER, GROUP, MODE</code>
      </span></dt><dd><p>
        The permissions for the new device node. Values specified here overwrite
        anything that has been compiled in.
-      </p></dd><dt id="idm139769449485056"><span class="term "><code class="literal">ATTR{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm140109532934192"><span class="term "><code class="literal">ATTR{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        Specify a value to be written to a
        <code class="systemitem">sysfs</code> attribute of the event
        device. If the <code class="literal">==</code> operator is used, this key is also
        used to match against the value of a
        <code class="systemitem">sysfs</code> attribute.
-      </p></dd><dt id="idm139769449480512"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm140109532929648"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to export a variable
        to the environment. If the <code class="literal">==</code> operator is used, this
        key is also used to match against an environment variable.
-      </p></dd><dt id="idm139769449476688"><span class="term "><code class="literal">RUN</code>
+      </p></dd><dt id="idm140109532925824"><span class="term "><code class="literal">RUN</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to add a program to
        the list of programs to be executed for this device. Keep in mind to
        restrict this to very short tasks to avoid blocking further events for
        this device.
-      </p></dd><dt id="idm139769449473696"><span class="term "><code class="literal">LABEL</code>
+      </p></dd><dt id="idm140109532922832"><span class="term "><code class="literal">LABEL</code>
      </span></dt><dd><p>
        Add a label where a <code class="literal">GOTO</code> can jump to.
-      </p></dd><dt id="idm139769449471152"><span class="term "><code class="literal">GOTO</code>
+      </p></dd><dt id="idm140109532920288"><span class="term "><code class="literal">GOTO</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to skip several
        rules and continue with the one that carries the label referenced by the
        <code class="literal">GOTO</code> key.
-      </p></dd><dt id="idm139769449467808"><span class="term "><code class="literal">IMPORT{<em class="replaceable ">TYPE</em>}</code>
+      </p></dd><dt id="idm140109532916944"><span class="term "><code class="literal">IMPORT{<em class="replaceable ">TYPE</em>}</code>
      </span></dt><dd><p>
        Load variables into the event environment such as the output of an
        external program. <code class="systemitem">udev</code> imports
@@ -466,7 +466,7 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
          <code class="literal">parent</code> tells
          <code class="systemitem">udev</code> to import the stored
          keys from the parent device.
-        </p></li></ul></div></dd><dt id="idm139769449456304"><span class="term "><code class="literal">WAIT_FOR_SYSFS</code>
+        </p></li></ul></div></dd><dt id="idm140109532905440"><span class="term "><code class="literal">WAIT_FOR_SYSFS</code>
      </span></dt><dd><p>
        Tells <code class="systemitem">udev</code> to wait for the
        specified <code class="systemitem">sysfs</code> file to be
@@ -474,7 +474,7 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
        <code class="literal">WAIT_FOR_SYSFS="ioerr_cnt"</code> informs
        <code class="systemitem">udev</code> to wait until the
        <code class="filename">ioerr_cnt</code> file has been created.
-      </p></dd><dt id="idm139769449451056"><span class="term "><code class="literal">OPTIONS</code>
+      </p></dd><dt id="idm140109532900192"><span class="term "><code class="literal">OPTIONS</code>
      </span></dt><dd><p>
        The <code class="literal">OPTION</code> key may have several values:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -526,13 +526,13 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
 `-- by-uuid
     |-- 159a47a4-e6e6-40be-a757-a629991479ae -&gt; ../../sda7
     |-- 3e999973-00c9-4917-9442-b7633bd95b9e -&gt; ../../sda6
-    `-- 4210-8F8C -&gt; ../../sdd1</pre></div></div><div class="sect1 " id="sec.udev.files"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.files"><span class="number">22.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.files">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139769449431408"><span class="term "><code class="filename">/sys/*</code>
+    `-- 4210-8F8C -&gt; ../../sdd1</pre></div></div><div class="sect1 " id="sec.udev.files"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.files"><span class="number">22.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.files">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140109532880608"><span class="term "><code class="filename">/sys/*</code>
     </span></dt><dd><p>
       Virtual file system provided by the Linux kernel, exporting all currently
       known devices. This information is used by
       <code class="systemitem">udev</code> to create device nodes in
       <code class="filename">/dev</code>
-     </p></dd><dt id="idm139769449428016"><span class="term "><code class="filename">/dev/*</code>
+     </p></dd><dt id="idm140109532877216"><span class="term "><code class="filename">/dev/*</code>
     </span></dt><dd><p>
       Dynamically created device nodes and static content created with
       systemd-tmpfiles; for more information, see the
@@ -540,33 +540,33 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
      </p></dd></dl></div><p>
    The following files and directories contain the crucial elements of the
    <code class="systemitem">udev</code> infrastructure:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449423696"><span class="term "><code class="filename">/etc/udev/udev.conf</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109532872896"><span class="term "><code class="filename">/etc/udev/udev.conf</code>
     </span></dt><dd><p>
       Main <code class="systemitem">udev</code> configuration file.
-     </p></dd><dt id="idm139769449420880"><span class="term "><code class="filename">/etc/udev/rules.d/*</code>
+     </p></dd><dt id="idm140109532870080"><span class="term "><code class="filename">/etc/udev/rules.d/*</code>
     </span></dt><dd><p>
       <code class="systemitem">udev</code> event matching rules.
-     </p></dd><dt id="idm139769449418064"><span class="term "><code class="filename">/usr/lib/tmpfiles.d/</code> and
+     </p></dd><dt id="idm140109532867264"><span class="term "><code class="filename">/usr/lib/tmpfiles.d/</code> and
     <code class="filename">/etc/tmpfiles.d/</code>
     </span></dt><dd><p>
       Responsible for static <code class="filename">/dev</code> content.
-     </p></dd><dt id="idm139769449415072"><span class="term "><code class="filename">/usr/lib/udev/*</code>
+     </p></dd><dt id="idm140109532864272"><span class="term "><code class="filename">/usr/lib/udev/*</code>
     </span></dt><dd><p>
       Helper programs called from <code class="systemitem">udev</code>
       rules.
      </p></dd></dl></div></div><div class="sect1 " id="sec.udev.moreinfo"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.moreinfo"><span class="number">22.9 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.moreinfo">#</a></h2></div></div></div><p>
    For more information about the <code class="systemitem">udev</code>
    infrastructure, refer to the following man pages:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139769449409312"><span class="term "><code class="systemitem">udev</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140109532858448"><span class="term "><code class="systemitem">udev</code>
     </span></dt><dd><p>
       General information about <code class="systemitem">udev</code>,
       keys, rules and other important configuration issues.
-     </p></dd><dt id="idm139769449406176"><span class="term "><code class="command">udevadm</code>
+     </p></dd><dt id="idm140109532855312"><span class="term "><code class="command">udevadm</code>
     </span></dt><dd><p>
       <code class="command">udevadm</code> can be used to control the runtime behavior of
       <code class="systemitem">udev</code>, request kernel events,
       manage the event queue and provide simple debugging mechanisms.
-     </p></dd><dt id="idm139769449402816"><span class="term "><code class="systemitem">udevd</code>
+     </p></dd><dt id="idm140109532851952"><span class="term "><code class="systemitem">udevd</code>
     </span></dt><dd><p>
       Information about the <code class="systemitem">udev</code> event
       managing daemon.

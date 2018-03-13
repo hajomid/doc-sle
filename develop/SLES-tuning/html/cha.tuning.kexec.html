@@ -140,7 +140,7 @@ hljs.configure({
    The allocation size also depends on the hardware architecture of your
    computer.
    Make sure to follow the procedure intended for your system architecture.
-  </p><div class="procedure " id="idm140081029333200"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.1: </span><span class="name">Allocation Size on AMD64/Intel 64 </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm140081029333200">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139857997719520"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.1: </span><span class="name">Allocation Size on AMD64/Intel 64 </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm139857997719520">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      To find out the base value for the computer, run the following in a
      terminal:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">kdumptool</code> calibrate</pre></div><p>
@@ -149,7 +149,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Write down the values of <code class="literal">Low</code> and
      <code class="literal">High</code>.
-    </p><div id="idm140081029328048" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
+    </p><div id="idm139857997714368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
       Significance of <code class="literal">Low</code> and <code class="literal">High</code> Values
      </h6><p>
       On AMD64/Intel 64 computers, the <code class="literal">High</code> value stands
@@ -181,7 +181,7 @@ hljs.configure({
          on the computer.
          Exclude multipath devices from this number, as these are
          ignored.
-        </p></li></ul></div><div id="idm140081029310208" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Adjust for Large Amounts of RAM</h6><p>
+        </p></li></ul></div><div id="idm139857997696528" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Adjust for Large Amounts of RAM</h6><p>
        For machines that have multiple terabytes (!) of RAM, such as many
        servers running SAP HANA, you need to additionally adjust the
        amount of both Kdump High and Low Memory.
@@ -198,7 +198,7 @@ hljs.configure({
       <code class="command">kdumptool calibrate</code>.
      </p></li><li class="step "><p>
       The values now need to be set in the correct location.
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140081029300496"><span class="term ">If you are changing the kernel command line directly</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139857997686816"><span class="term ">If you are changing the kernel command line directly</span></dt><dd><p>
          Append the following kernel option to your boot loader
          configuration:
         </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">SIZE_HIGH</em>,high crashkernel=<em class="replaceable ">SIZE_LOW</em>,low</pre></div><p>
@@ -208,20 +208,20 @@ hljs.configure({
          (for megabytes).
         </p><p>
          As an example, the following is valid:
-        </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">36M</em>,high crashkernel=<em class="replaceable ">72M</em>,low</pre></div></dd><dt id="idm140081029293520"><span class="term ">If you are using the YaST GUI:</span></dt><dd><p>
+        </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">36M</em>,high crashkernel=<em class="replaceable ">72M</em>,low</pre></div></dd><dt id="idm139857997679840"><span class="term ">If you are using the YaST GUI:</span></dt><dd><p>
          Set <span class="guimenu">Kdump Low Memory</span> to the determined
          <code class="literal">Low</code> value.
         </p><p>
          Set <span class="guimenu">Kdump High Memory</span> to the determined
          <code class="literal">High</code> value.
-        </p></dd><dt id="idm140081029289440"><span class="term ">If you are using the YaST command line interface:</span></dt><dd><p>
+        </p></dd><dt id="idm139857997675760"><span class="term ">If you are using the YaST command line interface:</span></dt><dd><p>
          Use the following command:
         </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>yast kdump startup enable alloc_mem=<em class="replaceable ">LOW</em>,<em class="replaceable ">HIGH</em></pre></div><p>
          Replace <em class="replaceable ">LOW</em> with the determined
          <code class="literal">Low</code> value. Replace
          <em class="replaceable ">HIGH</em> with the determined
          <code class="literal">HIGH</code> value.
-        </p></dd></dl></div></li></ol></div></div><div class="procedure " id="idm140081029283056"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.2: </span><span class="name">Allocation Size on POWER and z Systems </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm140081029283056">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+        </p></dd></dl></div></li></ol></div></div><div class="procedure " id="idm139857997669376"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.2: </span><span class="name">Allocation Size on POWER and z Systems </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm139857997669376">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      To find out the basis value for the computer, run the following in a
      terminal:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">kdumptool</code> calibrate</pre></div><p>
@@ -248,7 +248,7 @@ hljs.configure({
         ignored.
        </p></li></ul></div></li><li class="step "><p>
      The values now need to be set in the correct location.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140081029266320"><span class="term ">If you are working on the command line</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139857997652640"><span class="term ">If you are working on the command line</span></dt><dd><p>
         Append the following kernel option to your boot loader
         configuration:
        </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">SIZE_LOW</em></pre></div><p>
@@ -257,10 +257,10 @@ hljs.configure({
         <code class="literal">M</code> (for megabytes).
        </p><p>
         As an example, the following is valid:
-       </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">108M</em></pre></div></dd><dt id="idm140081029261024"><span class="term ">If you are working in YaST</span></dt><dd><p>
+       </p><div class="verbatim-wrap"><pre class="screen">crashkernel=<em class="replaceable ">108M</em></pre></div></dd><dt id="idm139857997647344"><span class="term ">If you are working in YaST</span></dt><dd><p>
         Set <span class="guimenu">Kdump Memory</span> to the determined
         <code class="literal">Low</code> value.
-       </p></dd></dl></div></li></ol></div></div><div id="idm140081029257824" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Excluding Unused and Inactive CCW Devices on IBM z Systems</h6><p>
+       </p></dd></dl></div></li></ol></div></div><div id="idm139857997644144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Excluding Unused and Inactive CCW Devices on IBM z Systems</h6><p>
     Depending on the number of available devices the calculated amount of
     memory specified by the <code class="option">crashkernel</code> kernel parameter may
     not be sufficient. Instead of increasing the value, you may alternatively
@@ -305,7 +305,7 @@ cio_ignore=all,!da5d,!f500-f502</pre></div><p>
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">kexec</code> -l <em class="replaceable ">/boot/vmlinuz</em> --append=<em class="replaceable ">"$(cat /proc/cmdline)"</em> \
 --initrd=<em class="replaceable ">/boot/initrd</em></pre></div></li><li class="step "><p>
      Unmount all mounted file systems except the root file system with:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="command">umount</code> <code class="option">-a</code></pre></div><div id="idm140081029233568" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Unmounting the Root File System</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="command">umount</code> <code class="option">-a</code></pre></div><div id="idm139857997619888" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Unmounting the Root File System</h6><p>
       Unmounting all file systems will most likely produce a <code class="literal">device
       is busy</code> warning message. The root file system cannot be
       unmounted if the system is running. Ignore the warning.
@@ -350,7 +350,7 @@ cio_ignore=all,!da5d,!f500-f502</pre></div><p>
    you still have access to the memory space of the crashed production
    kernel. You can save the memory snapshot of the crashed kernel in the
    environment of the Kdump kernel.
-  </p><div id="idm140081029216864" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Dumps over Network</h6><p>
+  </p><div id="idm139857997603248" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Dumps over Network</h6><p>
     In environments with limited local storage, you need to set up kernel
     dumps over the network. Kdump supports configuring the specified
     network interface and bringing it up via
@@ -358,7 +358,7 @@ cio_ignore=all,!da5d,!f500-f502</pre></div><p>
     supported. Specify the network interface and the mode (DHCP or static)
     either with YaST, or using the <code class="option">KDUMP_NETCONFIG</code>
     option in the <code class="filename">/etc/sysconfig/kdump</code> file.
-   </p></div><div id="idm140081029213872" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Target File System for Kdump Must Be Mounted During Configuration</h6><p>
+   </p></div><div id="idm139857997600256" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Target File System for Kdump Must Be Mounted During Configuration</h6><p>
     When configuring Kdump, you can specify a location to which the
     dumped images will be saved (default: <code class="filename">/var/crash</code>).
     This location must be mounted when configuring Kdump, otherwise the
@@ -400,7 +400,7 @@ cio_ignore=all,!da5d,!f500-f502</pre></div><p>
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">mount</code> -o remount,ro /</pre></div></li><li class="step "><p>
       Invoke a <span class="quote">“<span class="quote">kernel panic</span>”</span> with the <code class="literal">procfs</code>
       interface to Magic SysRq keys:
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">echo</code> c &gt; /proc/sysrq-trigger</pre></div></li></ol></div></div><div id="idm140081029188304" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Size of Kernel Dumps</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">echo</code> c &gt; /proc/sysrq-trigger</pre></div></li></ol></div></div><div id="idm139857997574752" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Size of Kernel Dumps</h6><p>
      The <code class="literal">KDUMP_KEEP_OLD_DUMPS</code> option controls the number
      of preserved kernel dumps (default is 5). Without compression, the size
      of the dump can take up to the size of the physical RAM memory. Make
@@ -420,7 +420,7 @@ cio_ignore=all,!da5d,!f500-f502</pre></div><p>
      network device, you need to add the network configuration to the
      <code class="envar">KDUMP_COMMANDLINE_APPEND</code> variable in
      <code class="filename">/etc/sysconfig/kdump</code>.
-    </p><div class="complex-example"><div class="example" id="idm140081029180208"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 17.1: </span><span class="name">Kdump: Example Configuration Using a Static IP Setup </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm140081029180208">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm139857997566720"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 17.1: </span><span class="name">Kdump: Example Configuration Using a Static IP Setup </span><a title="Permalink" class="permalink" href="cha.tuning.kexec.html#idm139857997566720">#</a></h6></div><div class="example-contents"><p>
       The following setup has been configured:
      </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         eth0 has been configured with the static IP address <code class="systemitem">192.168.1.1/24</code>
@@ -462,7 +462,7 @@ KDUMP_NET_TIMEOUT=30</pre></div></li></ul></div><p>
     However, that does not mean that they are always sufficient.
     To set the right values, follow the instructions in
     <a class="xref" href="cha.tuning.kexec.html#sec.tuning.kexec.crashkernel" title="17.4. Calculating crashkernel Allocation Size">Section 17.4, “Calculating <code class="option">crashkernel</code> Allocation Size”</a>.
-   </p><div id="idm140081029152352" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
+   </p><div id="idm139857997538928" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
      After Hardware Changes, Set <span class="guimenu">Kdump Memory</span> Values Again
     </h6><p>
      If you have set up Kdump on a computer and later decide to change the
@@ -489,7 +489,7 @@ KDUMP_NET_TIMEOUT=30</pre></div></li></ul></div><p>
     dump target and the URL where you want to save the dump. If you selected
     a network protocol, such as FTP or SSH, you need to enter relevant
     access information as well.
-   </p><div id="idm140081029142480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Sharing the Dump Directory with Other Applications</h6><p>
+   </p><div id="idm139857997529056" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Sharing the Dump Directory with Other Applications</h6><p>
      It is possible to specify a path for saving Kdump dumps where
      other applications also save their dumps. When cleaning its old dump
      files, Kdump will safely ignore other applications' dump files.
@@ -522,7 +522,7 @@ KDUMP_NET_TIMEOUT=30</pre></div></li></ul></div><p>
    If you want to debug the Linux kernel, you need to install its debugging
    information package in addition. Check if the package is installed on
    your system with:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">zypper</code> se kernel | <code class="command">grep</code> debug</pre></div><div id="idm140081029129344" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Repository for Packages with Debugging Information</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">zypper</code> se kernel | <code class="command">grep</code> debug</pre></div><div id="idm139857997515856" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Repository for Packages with Debugging Information</h6><p>
     If you subscribed your system for online updates, you can find
     <span class="quote">“<span class="quote">debuginfo</span>”</span> packages in the
     <code class="literal">*-Debuginfo-Updates</code> online installation repository
@@ -536,7 +536,7 @@ KDUMP_NET_TIMEOUT=30</pre></div></li></ul></div><p>
    The first parameter represents the kernel image. The second parameter is
    the dump file captured by Kdump. You can find this file under
    <code class="filename">/var/crash</code> by default.
-  </p><div id="idm140081029121200" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Getting Basic Information from a Kernel Crash Dump</h6><p>
+  </p><div id="idm139857997507712" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Getting Basic Information from a Kernel Crash Dump</h6><p>
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> ships with the utility <code class="command">kdumpid</code>
     (included in a package with the same name) for identifying unknown
     kernel dumps. It can be used to extract basic information such as
@@ -746,7 +746,7 @@ PID: 9446   TASK: ffff88003a57c3c0  CPU: 1   COMMAND: "bash"
    <code class="option">KDUMP_DUMPFORMAT</code> set to <code class="literal">compressed</code>. The
    <code class="command">crash</code> utility supports dynamic decompression of the
    compressed dumps.
-  </p><div id="idm140081029054752" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Changes to the Kdump Configuration File</h6><p>
+  </p><div id="idm139857997441200" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Changes to the Kdump Configuration File</h6><p>
     You always need to execute <code class="command">systemctl restart kdump</code>
     after you make manual changes to
     <code class="filename">/etc/sysconfig/kdump</code>. Otherwise, these changes will

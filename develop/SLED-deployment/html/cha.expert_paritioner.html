@@ -40,7 +40,7 @@ hljs.configure({
   <a class="xref" href="cha.expert_paritioner.html#fig.expert_paritioner.overview" title="The YaST Partitioner">Figure 5.1, “The YaST Partitioner”</a>, manually modify the partitioning
   of one or several hard disks. You can add, delete, resize, and edit
   partitions, or access the soft RAID, and LVM configuration.
- </p><div id="idm139948941361360" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Repartitioning the Running System</h6><p>
+ </p><div id="idm139995193464288" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Repartitioning the Running System</h6><p>
    Although it is possible to repartition your system while it is running, the
    risk of making a mistake that causes data loss is very high. Try to avoid
    repartitioning your installed system and always create a complete backup of your
@@ -156,7 +156,7 @@ hljs.configure({
     The root file system is the default subvolume and it is not listed in the
     list of created subvolumes. As a default Btrfs subvolume, it can be mounted
     as a normal file system.
-   </p><div id="idm139948941301904" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Btrfs on an Encrypted Root Partition</h6><p>
+   </p><div id="idm139995193404832" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Btrfs on an Encrypted Root Partition</h6><p>
      The default partitioning setup suggests the root partition as Btrfs with
      <code class="filename">/boot</code> being a directory. To encrypt the root
      partition encrypted, make sure to use the GPT partition
@@ -174,7 +174,7 @@ hljs.configure({
     the <span class="emphasis"><em>root</em></span> file system by default, it makes sense to
     exclude specific directories from being included into snapshots. This is the reason
     YaST suggests creating the following separate subvolumes.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948941293024"><span class="term "><code class="filename">/boot/grub2/i386-pc</code>,
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139995195743776"><span class="term "><code class="filename">/boot/grub2/i386-pc</code>,
    <code class="filename">/boot/grub2/x86_64-efi</code>,
    <code class="filename">/boot/grub2/powerpc-ieee1275</code>,
    <code class="filename">/boot/grub2/s390x-emu</code>
@@ -183,51 +183,51 @@ hljs.configure({
     directories listed above are architecture-specific. The first two
     directories are present on AMD64/Intel 64 machines, the latter two on IBM
     POWER and on IBM z Systems, respectively.
-   </p></dd><dt id="idm139948941289328"><span class="term "><code class="filename">/home</code>
+   </p></dd><dt id="idm139995195740080"><span class="term "><code class="filename">/home</code>
   </span></dt><dd><p>
     If <code class="filename">/home</code> does not reside on a separate partition, it
     is excluded to avoid data loss on rollbacks.
-   </p></dd><dt id="idm139948941286720"><span class="term "><code class="filename">/opt</code>, <code class="filename">/var/opt</code>
+   </p></dd><dt id="idm139995195737472"><span class="term "><code class="filename">/opt</code>, <code class="filename">/var/opt</code>
   </span></dt><dd><p>
     Third-party products usually get installed to <code class="filename">/opt</code>. It
     is excluded to avoid uninstalling these applications on rollbacks.
-   </p></dd><dt id="idm139948941283648"><span class="term "><code class="filename">/srv</code>
+   </p></dd><dt id="idm139995195734400"><span class="term "><code class="filename">/srv</code>
   </span></dt><dd><p>
     Contains data for Web and FTP servers. It is excluded to avoid data loss on
     rollbacks.
-   </p></dd><dt id="idm139948941281488"><span class="term "><code class="filename">/tmp</code>, <code class="filename">/var/tmp</code>,
+   </p></dd><dt id="idm139995195732240"><span class="term "><code class="filename">/tmp</code>, <code class="filename">/var/tmp</code>,
    <code class="filename">/var/cache</code>, <code class="filename">/var/crash</code>
   </span></dt><dd><p>
     All directories containing temporary files and caches are excluded from
     snapshots.
-   </p></dd><dt id="idm139948941277984"><span class="term "><code class="filename">/usr/local</code>
+   </p></dd><dt id="idm139995195728736"><span class="term "><code class="filename">/usr/local</code>
   </span></dt><dd><p>
     This directory is used when manually installing software. It is excluded to
     avoid uninstalling these installations on rollbacks.
-   </p></dd><dt id="idm139948941275776"><span class="term "><code class="filename">/var/lib/libvirt/images</code>
+   </p></dd><dt id="idm139995195726528"><span class="term "><code class="filename">/var/lib/libvirt/images</code>
   </span></dt><dd><p>
     The default location for virtual machine images managed with libvirt.
     Excluded to ensure virtual machine images are not replaced with older
     versions during a rollback. By default, this subvolume is created with the
     option <code class="literal">no copy on write</code>.
-   </p></dd><dt id="idm139948941273024"><span class="term "><code class="filename">/var/lib/mailman</code>, <code class="filename">/var/spool</code>
+   </p></dd><dt id="idm139995195723776"><span class="term "><code class="filename">/var/lib/mailman</code>, <code class="filename">/var/spool</code>
   </span></dt><dd><p>
     Directories containing mails or mail queues are excluded to avoid a loss of
     mails after a rollback.
-   </p></dd><dt id="idm139948941270400"><span class="term "><code class="filename">/var/lib/named</code>
+   </p></dd><dt id="idm139995195721152"><span class="term "><code class="filename">/var/lib/named</code>
   </span></dt><dd><p>
     Contains zone data for the DNS server. Excluded from snapshots to ensure a
     name server can operate after a rollback.
-   </p></dd><dt id="idm139948941268208"><span class="term "><code class="filename">/var/lib/mariadb</code>,
+   </p></dd><dt id="idm139995195718960"><span class="term "><code class="filename">/var/lib/mariadb</code>,
    <code class="filename">/var/lib/mysql</code>, <code class="filename">/var/lib/pgqsl</code>
   </span></dt><dd><p>
     These directories contain database data. By default, these subvolumes are
     created with the option <code class="literal">no copy on write</code>.
-   </p></dd><dt id="idm139948941264688"><span class="term "><code class="filename">/var/log</code>
+   </p></dd><dt id="idm139995195715440"><span class="term "><code class="filename">/var/log</code>
   </span></dt><dd><p>
     Log file location. Excluded from snapshots to allow log file analysis after
     the rollback of a broken system.
-   </p></dd></dl></div><div id="idm139948941262208" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Size of Btrfs Partition</h6><p>
+   </p></dd></dl></div><div id="idm139995195712960" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Size of Btrfs Partition</h6><p>
      Since saved snapshots require more disk space, it is recommended to
      reserve enough space for Btrfs. Suggested size for a root Btrfs partition
      with default subvolumes is 20GB.
@@ -235,7 +235,7 @@ hljs.configure({
     Subvolumes of a Btrfs partition can be now managed with the YaST
     <span class="guimenu">Expert partitioner</span> module. You can add new or remove
     existing subvolumes.
-   </p><div class="procedure " id="idm139948941258304"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Btrfs Subvolumes with YaST </span><a title="Permalink" class="permalink" href="cha.expert_paritioner.html#idm139948941258304">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm139995195709056"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Btrfs Subvolumes with YaST </span><a title="Permalink" class="permalink" href="cha.expert_paritioner.html#idm139995195709056">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Start the YaST <span class="guimenu">Expert Partitioner</span> with
       <span class="guimenu">System</span> › <span class="guimenu">Partitioner</span>.
      </p></li><li class="step "><p>
@@ -272,13 +272,13 @@ hljs.configure({
     </p></li><li class="step "><p>
      Click <span class="guimenu">Edit</span> to edit the partition and set the
      parameters:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948941230992"><span class="term ">File System ID</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139995195681744"><span class="term ">File System ID</span></dt><dd><p>
          Even if you do not want to format the partition at this
         stage, assign it a file system ID to ensure that the partition is
         registered correctly. Typical values are <span class="guimenu">Linux</span>,
         <span class="guimenu">Linux swap</span>, <span class="guimenu">Linux LVM</span>, and
         <span class="guimenu">Linux RAID</span>.
-       </p></dd><dt id="idm139948941227232"><span class="term ">
+       </p></dd><dt id="idm139995195677984"><span class="term ">
        File System
       </span></dt><dd><p>
         To change the partition file system, click <span class="guimenu">Format
@@ -302,12 +302,12 @@ hljs.configure({
         virtual memory. Create a swap partition of at least 256 MB.
         However, if you use up your swap space, consider adding more memory to
         your system instead of adding more swap space.
-       </p><div id="idm139948941221264" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Changing the File System</h6><p>
+       </p><div id="idm139995195672016" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Changing the File System</h6><p>
          Changing the file system and reformatting partitions irreversibly
          deletes all data from the partition.
         </p></div><p>
         For details on the various file systems, refer to <em class="citetitle ">Storage Administration Guide</em>.
-       </p></dd><dt id="idm139948936408240"><span class="term ">
+       </p></dd><dt id="idm139995195669264"><span class="term ">
        Encrypt Device
       </span></dt><dd><p>
         If you activate the encryption, all data is written to the hard disk in
@@ -315,12 +315,12 @@ hljs.configure({
         reduces the system speed, as the encryption takes some time to process.
         More information about the encryption of file systems is provided in
         <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”, Chapter 11 “Encrypting Partitions and Files”</span>.
-       </p></dd><dt id="idm139948936405680"><span class="term ">
+       </p></dd><dt id="idm139995195666592"><span class="term ">
        Mount Point
       </span></dt><dd><p>
         Specify the directory where the partition should be mounted in the file
         system tree. Select from YaST suggestions or enter any other name.
-       </p></dd><dt id="idm139948936403728"><span class="term ">
+       </p></dd><dt id="idm139995195664640"><span class="term ">
        Fstab Options
       </span></dt><dd><p>
         Specify various parameters contained in the global file system
@@ -347,7 +347,7 @@ hljs.configure({
         <a class="xref" href="cha.yast.userman.html#sec.yast.userman.adv.quota" title="15.3.3. Managing Quotas">Section 15.3.3, “Managing Quotas”</a>.
        </p></dd></dl></div></li><li class="step "><p>
      Select <span class="guimenu">Finish</span> to save the changes.
-    </p></li></ol></div></div><div id="idm139948936391776" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Resize File Systems</h6><p>
+    </p></li></ol></div></div><div id="idm139995195652688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Resize File Systems</h6><p>
     To resize an existing file system, select the partition and use
     <span class="guimenu">Resize</span>. Note, that it is not possible to resize
     partitions while mounted. To resize partitions, unmount the relevant
@@ -358,13 +358,13 @@ hljs.configure({
    <span class="guimenu">Expert</span> menu in the lower right part of the
    <span class="guimenu">Expert Partitioner</span> window. The menu contains the
    following commands:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948936385760"><span class="term ">Create New Partition Table</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139995195646672"><span class="term ">Create New Partition Table</span></dt><dd><p>
       This option helps you create a new partition table on the selected
       device.
-     </p><div id="idm139948936384192" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Creating a New Partition Table</h6><p>
+     </p><div id="idm139995195645104" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Creating a New Partition Table</h6><p>
        Creating a new partition table on a device irreversibly removes all the
        partitions and their data from that device.
-      </p></div></dd><dt id="idm139948936382384"><span class="term ">Clone This Disk</span></dt><dd><p>
+      </p></div></dd><dt id="idm139995195643296"><span class="term ">Clone This Disk</span></dt><dd><p>
       This option helps you clone the device partition layout (but not the
       data) to other available disk devices.
      </p></dd></dl></div></div><div class="sect2 " id="sec.expert_partitioner.configure_options"><div class="titlepage"><div><div><h3 class="title" id="sec.expert_partitioner.configure_options"><span class="number">5.1.5 </span><span class="name">Advanced Options</span> <a title="Permalink" class="permalink" href="cha.expert_paritioner.html#sec.expert_partitioner.configure_options">#</a></h3></div></div></div><p>
@@ -373,11 +373,11 @@ hljs.configure({
    <span class="guimenu">Configure</span> menu in the lower right part of the
    <span class="guimenu">Expert Partitioner</span> window. The menu contains the
    following commands:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948936376672"><span class="term ">Configure iSCSI</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139995195637584"><span class="term ">Configure iSCSI</span></dt><dd><p>
       To access SCSI over IP block devices, you first need to configure iSCSI.
       This results in additionally available devices in the main partition
       list.
-     </p></dd><dt id="idm139948936374720"><span class="term ">Configure Multipath</span></dt><dd><p>
+     </p></dd><dt id="idm139995195635632"><span class="term ">Configure Multipath</span></dt><dd><p>
       Selecting this option helps you configure the multipath enhancement to
       the supported mass storage devices.
      </p></dd></dl></div></div><div class="sect2 " id="sec.expert_partitioner.info"><div class="titlepage"><div><div><h3 class="title" id="sec.expert_partitioner.info"><span class="number">5.1.6 </span><span class="name">More Partitioning Tips</span> <a title="Permalink" class="permalink" href="cha.expert_paritioner.html#sec.expert_partitioner.info">#</a></h3></div></div></div><p>
@@ -401,12 +401,12 @@ hljs.configure({
    </p><p>
     If an application tries to allocate the maximum allowed memory, problems
     with swap can arise. There are three major scenarios to look at:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139948936363568"><span class="term ">System with no swap</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139995195624480"><span class="term ">System with no swap</span></dt><dd><p>
        The application gets the maximum allowed memory. All caches are freed,
        and thus all other running applications are slowed. After a few minutes,
        the kernel's out-of-memory kill mechanism activates and kills the
        process.
-      </p></dd><dt id="idm139948936361536"><span class="term ">System with medium sized swap (128 MB–512 MB)</span></dt><dd><p>
+      </p></dd><dt id="idm139995195622448"><span class="term ">System with medium sized swap (128 MB–512 MB)</span></dt><dd><p>
        At first, the system slows like a system without swap. After all
        physical RAM has been allocated, swap space is used as well. At this
        point, the system becomes very slow and it becomes impossible to run
@@ -417,7 +417,7 @@ hljs.configure({
        perform a <span class="quote">“<span class="quote">suspend to disk</span>”</span>. In that case, the swap size
        should be large enough to contain the necessary data from memory (512
        MB–1GB).
-      </p></dd><dt id="idm139948936358608"><span class="term ">System with lots of swap (several GB)</span></dt><dd><p>
+      </p></dd><dt id="idm139995195619520"><span class="term ">System with lots of swap (several GB)</span></dt><dd><p>
        It is better to not have an application that is out of control and
        swapping excessively in this case. If you use such application, the
        system will need many hours to recover. In the process, it is likely
@@ -436,7 +436,7 @@ hljs.configure({
     partition available, you can also use a swap file to extend the swap. Swap
     files are generally slower than partitions, but compared to physical RAM,
     both are extremely slow so the actual difference is negligible.
-   </p><div class="procedure " id="idm139948936354976"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.2: </span><span class="name">Adding a Swap File Manually </span><a title="Permalink" class="permalink" href="cha.expert_paritioner.html#idm139948936354976">#</a></h6></div><div class="procedure-contents"><p>
+   </p><div class="procedure " id="idm139995195615888"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.2: </span><span class="name">Adding a Swap File Manually </span><a title="Permalink" class="permalink" href="cha.expert_paritioner.html#idm139995195615888">#</a></h6></div><div class="procedure-contents"><p>
      To add a swap file in the running system, proceed as follows:
     </p><ol class="procedure" type="1"><li class="step "><p>
       Create an empty file in your system. For example, to add a
@@ -445,7 +445,7 @@ hljs.configure({
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> mkdir -p /var/lib/swap
 <code class="prompt user">tux &gt; </code><code class="command">sudo</code> dd if=/dev/zero of=/var/lib/swap/swapfile bs=1M count=128</pre></div></li><li class="step "><p>
       Initialize this swap file with the command
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> mkswap /var/lib/swap/swapfile</pre></div><div id="idm139948936348624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changed UUID for Swap Partitions when Formatting via <code class="command">mkswap</code></h6><p>Do not reformat existing swap partitions with <code class="command">mkswap</code>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> mkswap /var/lib/swap/swapfile</pre></div><div id="idm139995195609536" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changed UUID for Swap Partitions when Formatting via <code class="command">mkswap</code></h6><p>Do not reformat existing swap partitions with <code class="command">mkswap</code>
      if possible. Reformatting with <code class="command">mkswap</code> will change
      the UUID value of the swap partition. Either reformat via YaST (will
      update <code class="filename">/etc/fstab</code>) or adjust
@@ -482,7 +482,7 @@ hljs.configure({
    <code class="filename">/dev/sda2</code>, do this with the command
    <code class="command">dd</code> <code class="option">if=/dev/zero of=/dev/sda2 bs=512
    count=1</code>.
-  </p><div id="idm139948936330656" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: File System for Booting</h6><p>
+  </p><div id="idm139995195591568" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: File System for Booting</h6><p>
     The file system used for booting (the root file system or
     <code class="filename">/boot</code>) must not be stored on an LVM logical volume.
     Instead, store it on a normal physical partition.
@@ -493,7 +493,7 @@ hljs.configure({
   </p></div></div><div class="sect1 " id="sec.yast.system.lvm"><div class="titlepage"><div><div><h2 class="title" id="sec.yast.system.lvm"><span class="number">5.2 </span><span class="name">LVM Configuration</span> <a title="Permalink" class="permalink" href="cha.expert_paritioner.html#sec.yast.system.lvm">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_expert_partitioner_lvm.xml</li><li><span class="ds-label">ID: </span>sec.yast.system.lvm</li></ul></div></div></div></div><p>
   This section explains specific steps to take when configuring LVM.
   
- </p><div id="idm139948936321824" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Back up Your Data</h6><p>
+ </p><div id="idm139995195582736" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Back up Your Data</h6><p>
    Using LVM is sometimes associated with increased risk such as data loss.
    Risks also include application crashes, power failures, and faulty commands.
    Save your data before implementing LVM or reconfiguring volumes. Never work
@@ -577,7 +577,7 @@ hljs.configure({
    volume. The maximum number of stripes equals to the number of PVs, where
    Stripe "1" means "no striping". Striping only makes sense with PVs on
    different hard disks, otherwise performance will decrease.
-  </p><div id="idm139948936272320" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Striping</h6><p>
+  </p><div id="idm139995195533232" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Striping</h6><p>
     YaST cannot, at this point, verify the correctness of your entries
     concerning striping. Any mistake made here is apparent only later when the
     LVM is implemented on disk.
@@ -625,7 +625,7 @@ hljs.configure({
    select all partitions with either the <span class="quote">“<span class="quote">Linux RAID</span>”</span> or
    <span class="quote">“<span class="quote">Linux native</span>”</span> type that should be used by the RAID system. No
    swap or DOS partitions are shown.
-  </p><div id="idm139948936250624" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Classify Disks</h6><p>
+  </p><div id="idm139995195511536" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Classify Disks</h6><p>
     For RAID types where the order of added disks matters, you can mark
     individual disks with one of the letters A to E. Click the
     <span class="guimenu">Classify</span> button, select the disk and click of the
