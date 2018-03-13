@@ -41,7 +41,7 @@ hljs.configure({
   support means that you can continue to use your preferred 32-bit applications
   without waiting for a corresponding 64-bit port to become
   available.
- </p><div class="sect1 " id="sec.64bit.runt"><div class="titlepage"><div><div><h2 class="title" id="sec.64bit.runt"><span class="number">8.1 </span><span class="name">Runtime Support</span> <a title="Permalink" class="permalink" href="cha.64bit.html#sec.64bit.runt">#</a></h2></div></div></div><div id="idm139970153926320" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Conflicts Between Application Versions</h6><p>
+ </p><div class="sect1 " id="sec.64bit.runt"><div class="titlepage"><div><div><h2 class="title" id="sec.64bit.runt"><span class="number">8.1 </span><span class="name">Runtime Support</span> <a title="Permalink" class="permalink" href="cha.64bit.html#sec.64bit.runt">#</a></h2></div></div></div><div id="idm139766495697952" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Conflicts Between Application Versions</h6><p>
     If an application is available both for 32-bit and 64-bit environments,
     parallel installation of both versions is bound to lead to problems. In
     such cases, decide on one of the two versions and install and use this.
@@ -113,13 +113,13 @@ hljs.configure({
    For example, to compile a program that uses <code class="command">libaio</code> on a
    system with a 32-bit second architecture (x86_64), you need the following
    RPMs:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139970153902528"><span class="term ">libaio-32bit</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139766495674160"><span class="term ">libaio-32bit</span></dt><dd><p>
       32-bit runtime package
-     </p></dd><dt id="idm139970153900720"><span class="term ">libaio-devel-32bit</span></dt><dd><p>
+     </p></dd><dt id="idm139766495672352"><span class="term ">libaio-devel-32bit</span></dt><dd><p>
       Headers and libraries for 32-bit development
-     </p></dd><dt id="idm139970153898880"><span class="term ">libaio</span></dt><dd><p>
+     </p></dd><dt id="idm139766495670512"><span class="term ">libaio</span></dt><dd><p>
       64-bit runtime package
-     </p></dd><dt id="idm139970153897072"><span class="term ">libaio-devel</span></dt><dd><p>
+     </p></dd><dt id="idm139766495668704"><span class="term ">libaio-devel</span></dt><dd><p>
       64-bit development headers and libraries
      </p></dd></dl></div><p>
    Most open source programs use an <code class="command">autoconf</code>-based program
@@ -169,7 +169,7 @@ make install</pre></div></div><div class="sect1 " id="sec.64bit.kernel"><div cla
   </p><p>
    A 64-bit kernel can only load 64-bit kernel modules that have been specially
    compiled for this kernel. It is not possible to use 32-bit kernel modules.
-  </p><div id="idm139970153876512" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Kernel-loadable Modules</h6><p>
+  </p><div id="idm139766495648144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Kernel-loadable Modules</h6><p>
     Some applications require separate kernel-loadable modules. If you intend
     to use such a 32-bit application in a 64-bit system environment, contact
     the provider of this application and SUSE to make sure that the 64-bit
