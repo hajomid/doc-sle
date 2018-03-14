@@ -53,7 +53,7 @@ hljs.configure({
    disk image format, image placement, or storage sub-system is best. The user
    should plan each guest's configuration carefully and experiment with
    various configurations to determine the optimal performance.
-  </p></div><div class="sect1 " id="cachemodes.descr"><div class="titlepage"><div><div><h2 class="title" id="cachemodes.descr"><span class="number">14.2 </span><span class="name">Description of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#cachemodes.descr">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139945802803008"><span class="term ">cache mode unspecified</span></dt><dd><p>
+  </p></div><div class="sect1 " id="cachemodes.descr"><div class="titlepage"><div><div><h2 class="title" id="cachemodes.descr"><span class="number">14.2 </span><span class="name">Description of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#cachemodes.descr">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140161884501360"><span class="term ">cache mode unspecified</span></dt><dd><p>
       In older QEMU versions, not specifying a cache mode meant that
       <span class="emphasis"><em>writethrough</em></span> would be used as the default. With
       modern versions—as shipped with <span class="productname"><span class="phrase">openSUSE Leap</span></span>—the various
@@ -116,7 +116,7 @@ hljs.configure({
       not send flushes when needed. It was the last cache mode added,
       completing the possible combinations of caching and direct access
       semantics.
-     </p></dd></dl></div></div><div class="sect1 " id="qemu.cachemodes.data_integrity"><div class="titlepage"><div><div><h2 class="title" id="qemu.cachemodes.data_integrity"><span class="number">14.3 </span><span class="name">Data Integrity Implications of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#qemu.cachemodes.data_integrity">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139945802776080"><span class="term ">writethrough, none, directsync</span></dt><dd><p>
+     </p></dd></dl></div></div><div class="sect1 " id="qemu.cachemodes.data_integrity"><div class="titlepage"><div><div><h2 class="title" id="qemu.cachemodes.data_integrity"><span class="number">14.3 </span><span class="name">Data Integrity Implications of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#qemu.cachemodes.data_integrity">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140161884474496"><span class="term ">writethrough, none, directsync</span></dt><dd><p>
       These are the safest modes, and considered equally safe, given that
       the guest operating system is <span class="quote">“<span class="quote">modern and well behaved</span>”</span>,
       which means that it uses flushes as needed. If you have a suspect
@@ -125,7 +125,7 @@ hljs.configure({
       compatible with <code class="literal">none</code> or
       <code class="literal">directsync</code>, as they do not support O_DIRECT,
       which these cache modes rely on.
-     </p></dd><dt id="idm139945802771792"><span class="term ">writeback</span></dt><dd><p>
+     </p></dd><dt id="idm140161884470208"><span class="term ">writeback</span></dt><dd><p>
       This mode informs the guest of the presence of a write cache, and
       relies on the guest to send flush commands as needed to maintain data
       integrity within its disk image. This is a common storage design which
@@ -134,7 +134,7 @@ hljs.configure({
       because there is a window of time between the time a
       write is reported as completed, and that write being committed to the
       storage device.
-     </p></dd><dt id="idm139945802769472"><span class="term ">unsafe</span></dt><dd><p>
+     </p></dd><dt id="idm140161884467888"><span class="term ">unsafe</span></dt><dd><p>
       This mode is similar to <span class="emphasis"><em>writeback</em></span> caching except for
       the following: the guest flush
       commands are ignored, nullifying the data integrity control of these
@@ -172,7 +172,7 @@ hljs.configure({
    However, this restriction can be overridden with the
    <span class="quote">“<span class="quote">unsafe</span>”</span> option to the migration APIs, which is also
    supported by <code class="command">virsh</code>, as for example in
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live --unsafe</pre></div><div id="idm139945802754384" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live --unsafe</pre></div><div id="idm140161884452928" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     The cache mode <code class="literal">none</code> is required for the AIO mode setting
     <code class="literal">native</code>. If another cache mode is used, then the
     AIO mode will silently be switched back to the default <code class="literal">threads</code>. The
