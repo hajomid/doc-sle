@@ -31,7 +31,7 @@ hljs.configure({
  </p><p>
   The examples use NFS for serving the installation data. If you want to use
   FTP, SMB or HTTP, see <a class="xref" href="cha.deployment.instserver.html" title="Chapter 8. Setting Up the Server Holding the Installation Sources">Chapter 8, <em>Setting Up the Server Holding the Installation Sources</em></a>.
- </p><div id="idm140074530065152" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
+ </p><div id="idm140230963625136" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
    In the following sections, the system to hold your new <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
    installation is called <span class="emphasis"><em>target system</em></span> or
    <span class="emphasis"><em>installation target</em></span>. The term
@@ -274,18 +274,18 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
      </p></li></ol></div></div></div></div><div class="sect1 " id="sec.deployment.prep_boot.pxeopts"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.prep_boot.pxeopts"><span class="number">9.4 </span><span class="name">PXELINUX Configuration Options</span> <a title="Permalink" class="permalink" href="cha.deployment.prep_boot.html#sec.deployment.prep_boot.pxeopts">#</a></h2></div></div></div><p>
    The options listed here are a subset of all the options available for the
    PXELINUX configuration file.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140074529939600"><span class="term "><code class="option">APPEND <em class="replaceable ">OPTIONS</em></code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140230963499712"><span class="term "><code class="option">APPEND <em class="replaceable ">OPTIONS</em></code>
     </span></dt><dd><p>
       Add one or more options to the kernel command line. These are added for
       both automatic and manual boots. The options are added at the very
       beginning of the kernel command line, usually permitting explicitly
       entered kernel options to override them.
-     </p></dd><dt id="idm140074529936976"><span class="term "><code class="option">APPEND -</code>
+     </p></dd><dt id="idm140230963497088"><span class="term "><code class="option">APPEND -</code>
     </span></dt><dd><p>
       Append nothing. <code class="option">APPEND</code> with a single hyphen as argument
       in a <code class="option">LABEL</code> section can be used to override a global
       <code class="option">APPEND</code>.
-     </p></dd><dt id="idm140074529933488"><span class="term "><code class="option">DEFAULT <em class="replaceable ">KERNEL_OPTIONS</em>...</code>
+     </p></dd><dt id="idm140230963493600"><span class="term "><code class="option">DEFAULT <em class="replaceable ">KERNEL_OPTIONS</em>...</code>
     </span></dt><dd><p>
       Sets the default kernel command line. If PXELINUX boots automatically, it
       acts as if the entries after DEFAULT had been typed in at the boot
@@ -295,7 +295,7 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
       If no configuration file exists or no DEFAULT entry is defined in the
       configuration file, the default is the kernel name <span class="quote">“<span class="quote">linux</span>”</span>
       with no options.
-     </p></dd><dt id="idm140074529929696"><span class="term "><code class="option">IFAPPEND <em class="replaceable ">FLAG</em></code>
+     </p></dd><dt id="idm140230963489808"><span class="term "><code class="option">IFAPPEND <em class="replaceable ">FLAG</em></code>
     </span></dt><dd><p>
       Adds a specific option to the kernel command line depending on the
       <em class="replaceable ">FLAG</em> value. The <code class="option">IFAPPEND</code>
@@ -349,7 +349,7 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
            Adds UUIDs in lowercase hexadecimals, see
            <code class="filename">/usr/share/doc/packages/syslinux/pxelinux.txt</code>
           </p>
-         </td></tr></tbody></table></div></div></dd><dt id="idm140074529905008"><span class="term "><code class="option">LABEL <em class="replaceable ">LABEL</em> KERNEL <em class="replaceable ">IMAGE</em>
+         </td></tr></tbody></table></div></div></dd><dt id="idm140230963465120"><span class="term "><code class="option">LABEL <em class="replaceable ">LABEL</em> KERNEL <em class="replaceable ">IMAGE</em>
        APPEND <em class="replaceable ">OPTIONS</em>...</code>
     </span></dt><dd><p>
       Indicates that if <em class="replaceable ">LABEL</em> is entered as the
@@ -374,7 +374,7 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
      </p><p>
       The kernel does not need to be a Linux kernel. It can also be a boot
       sector or a COMBOOT file.
-     </p></dd><dt id="idm140074529893520"><span class="term "><code class="option">LOCALBOOT <em class="replaceable ">TYPE</em></code>
+     </p></dd><dt id="idm140230963453632"><span class="term "><code class="option">LOCALBOOT <em class="replaceable ">TYPE</em></code>
     </span></dt><dd><p>
       On PXELINUX, specifying <code class="option">LOCALBOOT 0</code> instead of a
       <code class="option">KERNEL</code> option means invoking this particular label and
@@ -416,7 +416,7 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
          </td></tr></tbody></table></div><p>
       All other values are undefined. If you do not know what the UNDI or PXE
       stacks are, specify <code class="literal">0</code>.
-     </p></dd><dt id="idm140074529875936"><span class="term "><code class="option">TIMEOUT <em class="replaceable ">TIME-OUT</em></code>
+     </p></dd><dt id="idm140230963436048"><span class="term "><code class="option">TIMEOUT <em class="replaceable ">TIME-OUT</em></code>
     </span></dt><dd><p>
       Indicates how long to wait at the boot prompt until booting
       automatically, in units of 1/10 second. The time-out is canceled when the
@@ -424,7 +424,7 @@ menuentry 'Install <em class="replaceable ">OS_version</em> <em class="replaceab
       command begun. A time-out of zero disables the time-out completely (this
       is also the default). The maximum possible time-out value is 35996 (just
       less than one hour).
-     </p></dd><dt id="idm140074529873168"><span class="term "><code class="option">PROMPT<em class="replaceable "> flag_val</em></code>
+     </p></dd><dt id="idm140230963433280"><span class="term "><code class="option">PROMPT<em class="replaceable "> flag_val</em></code>
     </span></dt><dd><p>
       If <code class="option">flag_val</code> is 0, displays the boot prompt only if
       <span class="keycap">Shift</span> or <span class="keycap">Alt</span> is pressed or
@@ -445,7 +445,7 @@ F10 <em class="replaceable ">FILENAME</em></pre></div><p>
      </p></dd></dl></div></div><div class="sect1 " id="sec.deployment.prep_boot.pxeprep"><div class="titlepage"><div><div><h2 class="title" id="sec.deployment.prep_boot.pxeprep"><span class="number">9.5 </span><span class="name">Preparing the Target System for PXE Boot</span> <a title="Permalink" class="permalink" href="cha.deployment.prep_boot.html#sec.deployment.prep_boot.pxeprep">#</a></h2></div></div></div><p>
    Prepare the system's BIOS for PXE boot by including the PXE option in the
    BIOS boot order.
-  </p><div id="idm140074529658608" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: BIOS Boot Order</h6><p>
+  </p><div id="idm140230963421200" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: BIOS Boot Order</h6><p>
     Do not place the PXE option ahead of the hard disk boot option in the BIOS.
     Otherwise this system would try to re-install itself every time you boot
     it.
@@ -458,7 +458,7 @@ F10 <em class="replaceable ">FILENAME</em></pre></div><p>
    containing the machine's MAC address. Because every machine in the world has
    a unique MAC identifier, you do not need to worry about accidentally turning
    on the wrong machine.
-  </p><div id="idm140074529653072" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wake on LAN across Different Network Segments</h6><p>
+  </p><div id="idm140230963415600" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wake on LAN across Different Network Segments</h6><p>
     If the controlling machine is not located on the same network segment as
     the installation target that should be awakened, either configure the WOL
     requests to be sent as multicasts or remotely control a machine on that

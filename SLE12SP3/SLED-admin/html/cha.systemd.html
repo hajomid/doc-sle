@@ -111,7 +111,7 @@ hljs.configure({
    <code class="command">zypper</code>:
   </p><div class="verbatim-wrap"><pre class="screen">systemctl <em class="replaceable ">GENERAL OPTIONS</em> <em class="replaceable ">SUBCOMMAND</em> <em class="replaceable ">SUBCOMMAND OPTIONS</em></pre></div><p>
    See <code class="command">man 1 systemctl</code> for a complete manual.
-  </p><div id="idm140339637666192" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Terminal Output and Bash Completion</h6><p>
+  </p><div id="idm140543169219184" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Terminal Output and Bash Completion</h6><p>
     If the output goes to a terminal (and not to a pipe or a file, for example)
     systemd commands send long output to a pager by default. Use the
     <code class="option">--no-pager</code> option to turn off paging mode.
@@ -125,7 +125,7 @@ hljs.configure({
     Subcommands for managing services are the same as for managing a service
     with System V init (<code class="command">start</code>, <code class="command">stop</code>,
     ...). The general syntax for service management commands is as follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637658912"><span class="term ">systemd</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl reload|restart|start|status|stop|<em class="replaceable ">...</em> <em class="replaceable ">MY_SERVICE(S)</em></pre></div></dd><dt id="idm140339637656352"><span class="term ">System V init</span></dt><dd><div class="verbatim-wrap"><pre class="screen">rc<em class="replaceable ">MY_SERVICE(S)</em> reload|restart|start|status|stop|<em class="replaceable ">...</em></pre></div></dd></dl></div><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543169211840"><span class="term ">systemd</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl reload|restart|start|status|stop|<em class="replaceable ">...</em> <em class="replaceable ">MY_SERVICE(S)</em></pre></div></dd><dt id="idm140543169209280"><span class="term ">System V init</span></dt><dd><div class="verbatim-wrap"><pre class="screen">rc<em class="replaceable ">MY_SERVICE(S)</em> reload|restart|start|status|stop|<em class="replaceable ">...</em></pre></div></dd></dl></div><p>
     systemd allows you to manage several services in one go. Instead of
     executing init scripts one after the other as with System V init, execute a
     command like the following:
@@ -134,7 +134,7 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen">systemctl list-unit-files --type=service</pre></div><p>
     The following table lists the most important service management commands
     for systemd and System V init:
-   </p><div class="table" id="idm140339637650336"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.1: </span><span class="name">Service Management Commands </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637650336">#</a></h6></div><div class="table-contents"><table summary="Service Management Commands" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140543169203264"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.1: </span><span class="name">Service Management Commands </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543169203264">#</a></h6></div><div class="table-contents"><table summary="Service Management Commands" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
         <p>
          Task
         </p>
@@ -235,14 +235,14 @@ hljs.configure({
    </p><div class="sect3 " id="sec.boot.systemd.basics.services_enabling.cmd"><div class="titlepage"><div><div><h4 class="title" id="sec.boot.systemd.basics.services_enabling.cmd"><span class="number">14.2.2.1 </span><span class="name">Enabling/Disabling Services on the Command Line</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.basics.services_enabling.cmd">#</a></h4></div></div></div><p>
      The following table lists enabling and disabling commands for systemd and
      System V init:
-    </p><div id="idm140339637590064" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Service Start</h6><p>
+    </p><div id="idm140543169143056" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Service Start</h6><p>
       When enabling a service on the command line, it is not started
       automatically. It is scheduled to be started with the next system
       start-up or runlevel/target change. To immediately start a service after
       having enabled it, explicitly run <code class="command">systemctl start
       <em class="replaceable ">MY_SERVICE</em></code> or <code class="command">rc
       <em class="replaceable ">MY_SERVICE</em> start</code>.
-     </p></div><div class="table" id="idm140339637586848"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.2: </span><span class="name">Commands for Enabling and Disabling Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637586848">#</a></h6></div><div class="table-contents"><table summary="Commands for Enabling and Disabling Services" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+     </p></div><div class="table" id="idm140543169139840"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.2: </span><span class="name">Commands for Enabling and Disabling Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543169139840">#</a></h6></div><div class="table-contents"><table summary="Commands for Enabling and Disabling Services" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
          <p>
           Task
          </p>
@@ -370,7 +370,7 @@ hljs.configure({
    </p><p>
     The following list shows the most important systemd target units. For a
     full list refer to <code class="command">man 7 systemd.special</code>.
-   </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Selected systemd Target Units </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637526768">#</a></h6></div><dl class="variablelist"><dt id="idm140339637526016"><span class="term "><code class="systemitem">default.target</code>
+   </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Selected systemd Target Units </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543169079824">#</a></h6></div><dl class="variablelist"><dt id="idm140543169079072"><span class="term "><code class="systemitem">default.target</code>
      </span></dt><dd><p>
        The target that is booted by default. Not a <span class="quote">“<span class="quote">real</span>”</span> target,
        but rather a symbolic link to another target like
@@ -379,26 +379,26 @@ hljs.configure({
        a session, use the kernel parameter
        <code class="literal">systemd.unit=<em class="replaceable ">MY_TARGET.target</em></code>
        at the boot prompt.
-      </p></dd><dt id="idm140339637521552"><span class="term "><code class="systemitem">emergency.target</code>
+      </p></dd><dt id="idm140543169074608"><span class="term "><code class="systemitem">emergency.target</code>
      </span></dt><dd><p>
        Starts an emergency shell on the console. Only use it at the boot prompt
        as <code class="literal">systemd.unit=emergency.target</code>.
-      </p></dd><dt id="idm140339637518928"><span class="term "><code class="systemitem">graphical.target</code>
+      </p></dd><dt id="idm140543169071984"><span class="term "><code class="systemitem">graphical.target</code>
      </span></dt><dd><p>
        Starts a system with network, multiuser support and a display manager.
-      </p></dd><dt id="idm140339637516784"><span class="term "><code class="systemitem">halt.target</code>
+      </p></dd><dt id="idm140543169069840"><span class="term "><code class="systemitem">halt.target</code>
      </span></dt><dd><p>
        Shuts down the system.
-      </p></dd><dt id="idm140339637514688"><span class="term "><code class="systemitem">mail-transfer-agent.target</code>
+      </p></dd><dt id="idm140543169067744"><span class="term "><code class="systemitem">mail-transfer-agent.target</code>
      </span></dt><dd><p>
        Starts all services necessary for sending and receiving mails.
-      </p></dd><dt id="idm140339637512528"><span class="term "><code class="systemitem">multi-user.target</code>
+      </p></dd><dt id="idm140543169065584"><span class="term "><code class="systemitem">multi-user.target</code>
      </span></dt><dd><p>
        Starts a multiuser system with network.
-      </p></dd><dt id="idm140339637510416"><span class="term "><code class="systemitem">reboot.target</code>
+      </p></dd><dt id="idm140543169063472"><span class="term "><code class="systemitem">reboot.target</code>
      </span></dt><dd><p>
        Reboots the system.
-      </p></dd><dt id="idm140339637508320"><span class="term "><code class="systemitem">rescue.target</code>
+      </p></dd><dt id="idm140543169061376"><span class="term "><code class="systemitem">rescue.target</code>
      </span></dt><dd><p>
        Starts a single-user system without network.
       </p></dd></dl></div><p>
@@ -409,7 +409,7 @@ hljs.configure({
    </p><p>
     If you want to know the current target, use the command: <code class="command">systemctl
     get-default</code>
-   </p><div class="table" id="idm140339637503152"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.3: </span><span class="name">System V Runlevels and <code class="systemitem">systemd</code> Target Units </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637503152">#</a></h6></div><div class="table-contents"><table summary="System V Runlevels and systemd Target Units" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140543169056208"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 14.3: </span><span class="name">System V Runlevels and <code class="systemitem">systemd</code> Target Units </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543169056208">#</a></h6></div><div class="table-contents"><table summary="System V Runlevels and systemd Target Units" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
         <p>
          System V runlevel
         </p>
@@ -512,7 +512,7 @@ hljs.configure({
         <p>
          System reboot
         </p>
-       </td></tr></tbody></table></div></div><div id="idm140339637464032" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: systemd Ignores <code class="filename">/etc/inittab</code></h6><p>
+       </td></tr></tbody></table></div></div><div id="idm140543169017088" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: systemd Ignores <code class="filename">/etc/inittab</code></h6><p>
      The runlevels in a System V init system are configured in
      <code class="filename">/etc/inittab</code>. systemd does <span class="emphasis"><em>not</em></span>
      use this configuration. Refer to
@@ -652,7 +652,7 @@ hljs.configure({
      lists all active services like shown below (shortened). To get more
      information on a specific service, use <code class="command">systemctl status
      <em class="replaceable ">MY_SERVICE</em></code>.
-    </p><div class="example" id="idm140339637405648"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.1: </span><span class="name">List Active Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637405648">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemctl
+    </p><div class="example" id="idm140543168958768"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.1: </span><span class="name">List Active Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543168958768">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemctl
 UNIT                        LOAD   ACTIVE SUB       JOB DESCRIPTION
 [...]
 iscsi.service               loaded active exited    Login and scanning of iSC+
@@ -673,7 +673,7 @@ SUB    = The low-level unit activation state, values depend on unit type.
 To show all installed unit files use 'systemctl list-unit-files'.</pre></div></div></div><p>
      To restrict the output to services that failed to start, use the
      <code class="option">--failed</code> option:
-    </p><div class="example" id="idm140339637401664"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.2: </span><span class="name">List Failed Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637401664">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemctl --failed
+    </p><div class="example" id="idm140543168954784"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.2: </span><span class="name">List Failed Services </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543168954784">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemctl --failed
 UNIT                   LOAD   ACTIVE SUB    JOB DESCRIPTION
 apache2.service        loaded failed failed     apache
 NetworkManager.service loaded failed failed     Network Manager
@@ -685,8 +685,8 @@ plymouth-start.service loaded failed failed     Show Plymouth Boot Screen
      time, a list of services ordered by start-up time and can also generate an
      SVG graphic showing the time services took to start in relation to the
      other services.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637396720"><span class="term ">Listing the System Start-Up Time</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze
-Startup finished in 2666ms (kernel) + 21961ms (userspace) = 24628ms</pre></div></dd><dt id="idm140339637394336"><span class="term ">Listing the Services Start-Up Time</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze blame
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168949840"><span class="term ">Listing the System Start-Up Time</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze
+Startup finished in 2666ms (kernel) + 21961ms (userspace) = 24628ms</pre></div></dd><dt id="idm140543168947456"><span class="term ">Listing the Services Start-Up Time</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze blame
   6472ms systemd-modules-load.service
   5833ms remount-rootfs.service
   4597ms network.service
@@ -704,7 +704,7 @@ Startup finished in 2666ms (kernel) + 21961ms (userspace) = 24628ms</pre></div><
     72ms purge-kernels.service
     47ms dev-vda1.swap
     38ms bluez-coldplug.service
-    35ms splash_early.service</pre></div></dd><dt id="idm140339637391472"><span class="term ">Services Start-Up Time Graphics</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze plot &gt; jupiter.example.com-startup.svg</pre></div><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/systemd_startup.png"><img src="images/systemd_startup.png" width="" /></a></div></div></dd></dl></div></div><div class="sect3 " id="sec.boot.systemd.debug.complete"><div class="titlepage"><div><div><h4 class="title" id="sec.boot.systemd.debug.complete"><span class="number">14.3.2.3 </span><span class="name">Review the Complete Start-Up Process</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.debug.complete">#</a></h4></div></div></div><p>
+    35ms splash_early.service</pre></div></dd><dt id="idm140543168944592"><span class="term ">Services Start-Up Time Graphics</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-analyze plot &gt; jupiter.example.com-startup.svg</pre></div><div class="informalfigure"><div class="mediaobject"><a xmlns="" href="images/systemd_startup.png"><img src="images/systemd_startup.png" width="" /></a></div></div></dd></dl></div></div><div class="sect3 " id="sec.boot.systemd.debug.complete"><div class="titlepage"><div><div><h4 class="title" id="sec.boot.systemd.debug.complete"><span class="number">14.3.2.3 </span><span class="name">Review the Complete Start-Up Process</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.debug.complete">#</a></h4></div></div></div><p>
      The above-mentioned commands let you review the services that started and
      the time it took to start them. If you need to know more details, you can
      tell <code class="systemitem">systemd</code> to verbosely log the complete start-up procedure by
@@ -759,14 +759,14 @@ WantedBy=multi-user.target<span id="co.service_wrapper.target"></span><span clas
    module. It supports starting, stopping, enabling and disabling services. It
    also lets you show a service's status and change the default target. Start
    the YaST module with <span class="guimenu">YaST</span> › <span class="guimenu">System</span> › <span class="guimenu">Services Manager</span>.
-  </p><div class="figure" id="fig.yast2.runlevel"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_runlevel.png"><img src="images/yast2_runlevel.png" width="" alt="Services Manager" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 14.1: </span><span class="name">Services Manager </span><a title="Permalink" class="permalink" href="cha.systemd.html#fig.yast2.runlevel">#</a></h6></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140339637349536"><span class="term ">Changing the <span class="guimenu">Default System Target</span>
+  </p><div class="figure" id="fig.yast2.runlevel"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_runlevel.png"><img src="images/yast2_runlevel.png" width="" alt="Services Manager" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 14.1: </span><span class="name">Services Manager </span><a title="Permalink" class="permalink" href="cha.systemd.html#fig.yast2.runlevel">#</a></h6></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140543168902592"><span class="term ">Changing the <span class="guimenu">Default System Target</span>
     </span></dt><dd><p>
       To change the target the system boots into, choose a target from the
       <span class="guimenu">Default System Target</span> drop-down box. The most often
       used targets are <span class="guimenu">Graphical Interface</span> (starting a
       graphical login screen) and <span class="guimenu">Multi-User</span> (starting the
       system in command line mode).
-     </p></dd><dt id="idm140339637345776"><span class="term ">Starting or Stopping a Service</span></dt><dd><p>
+     </p></dd><dt id="idm140543168898832"><span class="term ">Starting or Stopping a Service</span></dt><dd><p>
       Select a service from the table. The <span class="guimenu">Active</span> column
       shows whether it is currently running (<span class="guimenu">Active</span>) or not
       (<span class="guimenu">Inactive</span>). Toggle its status by choosing
@@ -775,7 +775,7 @@ WantedBy=multi-user.target<span id="co.service_wrapper.target"></span><span clas
       Starting or stopping a service changes its status for the currently
       running session. To change its status throughout a reboot, you need to
       enable or disable it.
-     </p></dd><dt id="idm140339637341472"><span class="term ">Enabling or Disabling a Service</span></dt><dd><p>
+     </p></dd><dt id="idm140543168894528"><span class="term ">Enabling or Disabling a Service</span></dt><dd><p>
       Select a service from the table. The <span class="guimenu">Enabled</span> column
       shows whether it is currently <span class="guimenu">Enabled</span> or
       <span class="guimenu">Disabled</span>. Toggle its status by choosing
@@ -786,19 +786,19 @@ WantedBy=multi-user.target<span id="co.service_wrapper.target"></span><span clas
       (<span class="guimenu">Disabled</span>). This setting will not affect the current
       session. To change its status in the current session, you need to start
       or stop it.
-     </p></dd><dt id="idm140339637336240"><span class="term ">View a Status Messages</span></dt><dd><p>
+     </p></dd><dt id="idm140543168889296"><span class="term ">View a Status Messages</span></dt><dd><p>
       To view the status message of a service, select it from the list and
       choose <span class="guimenu">Show Details</span>. The output you will see is
       identical to the one generated by the command
       <code class="command">systemctl</code> <code class="option">-l</code> status
       <em class="replaceable ">MY_SERVICE</em>.
-     </p></dd></dl></div><div id="idm140339637332352" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Faulty Runlevel Settings May Damage Your System</h6><p>
+     </p></dd></dl></div><div id="idm140543168885408" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Faulty Runlevel Settings May Damage Your System</h6><p>
     Faulty runlevel settings may make your system unusable. Before applying
     your changes, make absolutely sure that you know their consequences.
    </p></div></div><div class="sect1 " id="sec.boot.systemd.custom"><div class="titlepage"><div><div><h2 class="title" id="sec.boot.systemd.custom"><span class="number">14.5 </span><span class="name">Customization of <code class="systemitem">systemd</code></span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.custom">#</a></h2></div></div></div><p>
    The following sections contain some examples for
    <code class="systemitem">systemd</code> customization.
-  </p><div id="idm140339637328336" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Avoiding Overwritten Customization</h6><p>
+  </p><div id="idm140543168881328" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Avoiding Overwritten Customization</h6><p>
     Always do systemd customization in <code class="filename">/etc/systemd/</code>,
     <span class="emphasis"><em>never</em></span> in <code class="filename">/usr/lib/systemd/</code>.
     Otherwise your changes will be overwritten by the next update of systemd.
@@ -924,7 +924,7 @@ Sep 09 15:30:36 jupiter systemd[1]: Started Daily Cleanup of Temporary Directori
     a defined state at any time. A snapshot is only available in the current
     session and will automatically be deleted on reboot. A snapshot name must
     end in <code class="filename">.snapshot</code>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637272784"><span class="term ">Create a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl snapshot <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140339637270544"><span class="term ">Delete a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl delete <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140339637268304"><span class="term ">View a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl show <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140339637266064"><span class="term ">Activate a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl isolate <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd></dl></div></div><div class="sect2 " id="sec.boot.systemd.advanced.kernel_modules"><div class="titlepage"><div><div><h3 class="title" id="sec.boot.systemd.advanced.kernel_modules"><span class="number">14.6.4 </span><span class="name">Loading Kernel Modules</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.advanced.kernel_modules">#</a></h3></div></div></div><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168825840"><span class="term ">Create a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl snapshot <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140543168823600"><span class="term ">Delete a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl delete <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140543168821360"><span class="term ">View a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl show <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd><dt id="idm140543168819120"><span class="term ">Activate a Snapshot</span></dt><dd><div class="verbatim-wrap"><pre class="screen">systemctl isolate <em class="replaceable ">MY_SNAPSHOT</em>.snapshot</pre></div></dd></dl></div></div><div class="sect2 " id="sec.boot.systemd.advanced.kernel_modules"><div class="titlepage"><div><div><h3 class="title" id="sec.boot.systemd.advanced.kernel_modules"><span class="number">14.6.4 </span><span class="name">Loading Kernel Modules</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.advanced.kernel_modules">#</a></h3></div></div></div><p>
     With <code class="systemitem">systemd</code>, kernel modules can automatically be loaded at boot time via
     a configuration file in <code class="filename">/etc/modules-load.d</code>. The file
     should be named <em class="replaceable ">MODULE</em>.conf and have the
@@ -944,16 +944,16 @@ Sep 09 15:30:36 jupiter systemd[1]: Started Daily Cleanup of Temporary Directori
     service, needed to be specified in <code class="filename">/etc/init.d/before.local
     </code>. This procedure is no longer supported with systemd. If you
     need to do actions before starting services, do the following:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637253744"><span class="term ">Loading Kernel Modules</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168806800"><span class="term ">Loading Kernel Modules</span></dt><dd><p>
        Create a drop-in file in <code class="filename">/etc/modules-load.d</code>
        directory (see <code class="command">man modules-load.d</code> for the syntax)
-      </p></dd><dt id="idm140339637251040"><span class="term ">
+      </p></dd><dt id="idm140543168804096"><span class="term ">
      Creating Files or Directories, Cleaning-up Directories, Changing
      Ownership
      </span></dt><dd><p>
        Create a drop-in file in <code class="filename">/etc/tmpfiles.d</code> (see
        <code class="command">man tmpfiles.d</code> for the syntax)
-      </p></dd><dt id="idm140339637248256"><span class="term ">Other Tasks</span></dt><dd><p>
+      </p></dd><dt id="idm140543168801312"><span class="term ">Other Tasks</span></dt><dd><p>
        Create a system service file, for example
        <code class="filename">/etc/systemd/system/before.service</code>, from the
        following template:
@@ -992,7 +992,7 @@ systemctl enable before</pre></div><p>
     To list all processes belonging to a service, use the command
     <code class="command">systemd-cgls</code>. The result will look like the following
     (shortened) example:
-   </p><div class="example" id="idm140339637236912"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.3: </span><span class="name">List all Processes Belonging to a Service </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140339637236912">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-cgls --no-pager
+   </p><div class="example" id="idm140543168789968"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 14.3: </span><span class="name">List all Processes Belonging to a Service </span><a title="Permalink" class="permalink" href="cha.systemd.html#idm140543168789968">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>systemd-cgls --no-pager
 ├─1 /usr/lib/systemd/systemd --switched-root --system --deserialize 20
 ├─user.slice
 │ └─user-1000.slice
@@ -1033,18 +1033,18 @@ systemctl enable before</pre></div><p>
     you to send a signal to each of these processes. Use <code class="command">systemctl
     kill</code> to send signals to services. For a list of available signals
     refer to <code class="command">man 7 signals</code>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637228560"><span class="term ">Sending <code class="systemitem">SIGTERM</code> to a Service</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168781616"><span class="term ">Sending <code class="systemitem">SIGTERM</code> to a Service</span></dt><dd><p>
        <code class="systemitem">SIGTERM</code> is the default signal that is sent.
-      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill <em class="replaceable ">MY_SERVICE</em></pre></div></dd><dt id="idm140339637225104"><span class="term ">Sending <em class="replaceable ">SIGNAL</em> to a Service</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill <em class="replaceable ">MY_SERVICE</em></pre></div></dd><dt id="idm140543168778160"><span class="term ">Sending <em class="replaceable ">SIGNAL</em> to a Service</span></dt><dd><p>
        Use the <code class="option">-s</code> option to specify the signal that should be
        sent.
-      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill -s <em class="replaceable ">SIGNAL</em> <em class="replaceable ">MY_SERVICE</em></pre></div></dd><dt id="idm140339637221184"><span class="term ">Selecting Processes</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill -s <em class="replaceable ">SIGNAL</em> <em class="replaceable ">MY_SERVICE</em></pre></div></dd><dt id="idm140543168774240"><span class="term ">Selecting Processes</span></dt><dd><p>
        By default the <code class="command">kill</code> command sends the signal to
        <code class="option">all</code> processes of the specified cgroup. You can restrict
        it to the <code class="option">control</code> or the <code class="option">main</code> process.
        The latter is for example useful to force a service to reload its
        configuration by sending <code class="systemitem">SIGHUP</code>:
-      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill -s SIGHUP --kill-who=main <em class="replaceable ">MY_SERVICE</em></pre></div></dd></dl></div><div id="idm140339637216064" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Terminating or Restarting the D-Bus Service is Not Supported</h6><p>
+      </p><div class="verbatim-wrap"><pre class="screen">systemctl kill -s SIGHUP --kill-who=main <em class="replaceable ">MY_SERVICE</em></pre></div></dd></dl></div><div id="idm140543168769120" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Terminating or Restarting the D-Bus Service is Not Supported</h6><p>
      The D-Bus service is the message bus for communication between systemd
      clients and the systemd manager that is running as pid 1. Even though
      <code class="systemitem">dbus</code> is a stand-alone daemon, it is
@@ -1068,7 +1068,7 @@ systemctl enable before</pre></div><p>
     together with status messages. The <code class="command">status</code> command works
     similar to <code class="command">tail</code> and can also display the log messages in
     different formats, making it a powerful debugging tool.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637206304"><span class="term ">Show Service Start-Up Failure</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168759424"><span class="term ">Show Service Start-Up Failure</span></dt><dd><p>
        Whenever a service fails to start, use <code class="command">systemctl status
        <em class="replaceable ">MY_SERVICE</em></code> to get a
        detailed error message:
@@ -1081,35 +1081,35 @@ Job failed. See system journal and 'systemctl status' for details.
    CGroup: name=systemd:/system/apache2.service
 
 Jun 04 16:52:26 g144 start_apache2[3088]: httpd2-prefork: Syntax error on line
-205 of /etc/apache2/httpd.conf: Syntax error on li...alHost&gt;</pre></div></dd><dt id="idm140339637201424"><span class="term ">Show Last <em class="replaceable ">N</em> Service Messages</span></dt><dd><p>
+205 of /etc/apache2/httpd.conf: Syntax error on li...alHost&gt;</pre></div></dd><dt id="idm140543168754544"><span class="term ">Show Last <em class="replaceable ">N</em> Service Messages</span></dt><dd><p>
        The default behavior of the <code class="command">status</code> subcommand is to
        display the last ten messages a service issued. To change the number of
        messages to show, use the
        <code class="option">--lines=<em class="replaceable ">N</em></code> parameter:
       </p><div class="verbatim-wrap"><pre class="screen">systemctl status ntp
-systemctl --lines=20 status ntp</pre></div></dd><dt id="idm140339637197376"><span class="term ">Show Service Messages in Append Mode</span></dt><dd><p>
+systemctl --lines=20 status ntp</pre></div></dd><dt id="idm140543168750496"><span class="term ">Show Service Messages in Append Mode</span></dt><dd><p>
        To display a <span class="quote">“<span class="quote">live stream</span>”</span> of service messages, use the
        <code class="option">--follow</code> option, which works like
        <code class="command">tail</code> <code class="option">-f</code>:
-      </p><div class="verbatim-wrap"><pre class="screen">systemctl --follow status ntp</pre></div></dd><dt id="idm140339637193280"><span class="term ">Messages Output Format</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">systemctl --follow status ntp</pre></div></dd><dt id="idm140543168746400"><span class="term ">Messages Output Format</span></dt><dd><p>
        The <code class="option">--output=<em class="replaceable ">MODE</em></code> parameter
        allows you to change the output format of service messages. The most
        important modes available are:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637190672"><span class="term "><code class="option">short</code>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168743792"><span class="term "><code class="option">short</code>
         </span></dt><dd><p>
           The default format. Shows the log messages with a human readable time
           stamp.
-         </p></dd><dt id="idm140339637188496"><span class="term "><code class="option">verbose</code>
+         </p></dd><dt id="idm140543168741616"><span class="term "><code class="option">verbose</code>
         </span></dt><dd><p>
           Full output with all fields.
-         </p></dd><dt id="idm140339637186384"><span class="term "><code class="option">cat</code>
+         </p></dd><dt id="idm140543168739504"><span class="term "><code class="option">cat</code>
         </span></dt><dd><p>
           Terse output without time stamps.
          </p></dd></dl></div></dd></dl></div></div></div><div class="sect1 " id="sec.boot.systemd.info"><div class="titlepage"><div><div><h2 class="title" id="sec.boot.systemd.info"><span class="number">14.7 </span><span class="name">More Information</span> <a title="Permalink" class="permalink" href="cha.systemd.html#sec.boot.systemd.info">#</a></h2></div></div></div><p>
    For more information on systemd refer to the following online resources:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140339637181344"><span class="term ">Homepage</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140543168734464"><span class="term ">Homepage</span></dt><dd><p>
       <a class="link" href="http://www.freedesktop.org/wiki/Software/systemd" target="_blank">http://www.freedesktop.org/wiki/Software/systemd</a>
-     </p></dd><dt id="idm140339637178960"><span class="term ">systemd for Administrators</span></dt><dd><p>
+     </p></dd><dt id="idm140543168732080"><span class="term ">systemd for Administrators</span></dt><dd><p>
       Lennart Pöttering, one of the systemd authors, has written a series of
       blog entries (13 at the time of writing this chapter). Find them at
       <a class="link" href="http://0pointer.de/blog/projects" target="_blank">http://0pointer.de/blog/projects</a>.
