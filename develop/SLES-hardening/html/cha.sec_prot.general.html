@@ -103,7 +103,7 @@ hljs.configure({
       plug in or unplug keyboards or mice. While locks are sometimes a useful
       feature, they are usually lower quality and easily defeated by attackers
       with ill intent.
-     </p></div></div><div class="sect1 " id="sec.sec_prot.general.bios"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span> <a title="Permalink" class="permalink" href="cha.sec_prot.general.html#sec.sec_prot.general.bios">#</a></h2></div></div></div><div id="idm140251665742736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Secure Boot</h6><p>
+     </p></div></div><div class="sect1 " id="sec.sec_prot.general.bios"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.bios"><span class="number">3.2 </span><span class="name">Locking Down the BIOS</span> <a title="Permalink" class="permalink" href="cha.sec_prot.general.html#sec.sec_prot.general.bios">#</a></h2></div></div></div><div id="idm140389594110912" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Secure Boot</h6><p>
       This section describes only basic methods to secure the boot process. To
       find out about more advanced boot protection using UEFI and the
       secure boot feature, see <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 11 “UEFI (Unified Extensible Firmware Interface)”, Section 11.1 “Secure Boot”</span>.
@@ -133,11 +133,11 @@ hljs.configure({
      Many BIOS firmwares have various other security related settings. Check
      with the system vendor, the system documentation or examine the BIOS
      during a system boot to find out more.
-    </p><div id="idm140251646342736" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Booting when a BIOS Boot Password is Set</h6><p>
+    </p><div id="idm140389598575712" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Booting when a BIOS Boot Password is Set</h6><p>
       If a system has been set up with a boot password, the host will not boot
       up unattended (for example in case of a system reboot or power failure).
       This is a trade-off.
-     </p></div><div id="idm140251646341184" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Losing the BIOS Admin Password</h6><p>
+     </p></div><div id="idm140389598574160" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Losing the BIOS Admin Password</h6><p>
       Once a system is setup the first time, the BIOS admin password will not
       be required often. Don't forget the password or you will need to clear
       the BIOS memory via hardware manipulation to get access again.
@@ -377,7 +377,7 @@ hljs.configure({
       Additional monthly checks are also run, however the key difference is
       mainly that the monthly file is not a diff like the daily/weekly ones but
       the full reports in one file.
-     </p><div id="idm140251665587568" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing Passwords with <code class="command">john</code></h6><p>
+     </p><div id="idm140389594132128" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Auditing Passwords with <code class="command">john</code></h6><p>
        To enable password auditing, it is necessary to first install the
        package <span class="package">john</span>. The package is available on the openSUSE Build Service at
        <a class="link" href="https://build.opensuse.org/package/show/security/john" target="_blank">https://build.opensuse.org/package/show/security/john</a>.
@@ -393,7 +393,7 @@ hljs.configure({
       limiting maximum idle times specific to users, groups, TTY devices and
       SSH sessions. <code class="filename">/etc/security/autologout.conf</code> also
       includes several configuration examples.
-     </p><div id="idm140251665580608" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+     </p><div id="idm140389594125216" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
        The automatic logout feature is not enabled by default. To enable it,
        edit <code class="filename">/etc/cron.d/autologout</code> and uncomment the
        example cron line.
@@ -414,7 +414,7 @@ hljs.configure({
      U.S. Department of Defense (DoD) standards. Note that many government
      agencies specify their own standards for data security. Some standards are
      stronger than others, yet may require more time to implement.
-    </p><div id="idm140251669926864" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wiping Wear Leveling Devices</h6><p>
+    </p><div id="idm140389563497648" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Wiping Wear Leveling Devices</h6><p>
       Some devices, like SSDs, use wear leveling and do not necessarily write
       new data in the same physical locations. Such devices usually provide
       their own erasing functionality.
@@ -424,50 +424,50 @@ hljs.configure({
       devices more difficult. It operates in three basic modes: on a character
       or block device, on a file, or on a directory specified. For more
       information, set the manual page <code class="command">man 1 scrub</code>.
-     </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported Scrub Methods </span><a title="Permalink" class="permalink" href="cha.sec_prot.general.html#idm140251669922512">#</a></h6></div><dl class="variablelist"><dt id="idm140251669921776"><span class="term ">nnsa</span></dt><dd><p>
+     </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported Scrub Methods </span><a title="Permalink" class="permalink" href="cha.sec_prot.general.html#idm140389563493296">#</a></h6></div><dl class="variablelist"><dt id="idm140389563492560"><span class="term ">nnsa</span></dt><dd><p>
          4-pass NNSA Policy Letter NAP-14.1-C (XVI-8) for sanitizing removable
          and non-removable hard disks, which requires overwriting all locations
          with a pseudo random pattern twice and then with a known pattern: ran-
          dom(x2), 0x00, verify.
-        </p></dd><dt id="idm140251669919712"><span class="term ">dod</span></dt><dd><p>
+        </p></dd><dt id="idm140389563490496"><span class="term ">dod</span></dt><dd><p>
          4-pass DoD 5220.22-M section 8-306 procedure (d) for sanitizing
          removable and non-removable rigid disks which requires overwriting all
          addressable locations with a character, its complement, a random
          character, then verify. NOTE: scrub performs the random pass first to
          make verification easier: random, 0x00, 0xff, verify.
-        </p></dd><dt id="idm140251669917552"><span class="term ">bsi</span></dt><dd><p>
+        </p></dd><dt id="idm140389600704880"><span class="term ">bsi</span></dt><dd><p>
          9-pass method recommended by the German Center of Security in
          Information Technologies
          (<a class="link" href="http://www.bsi.bund.de" target="_blank">http://www.bsi.bund.de</a>): 0xff, 0xfe, 0xfd, 0xfb,
          0xf7, 0xef, 0xdf, 0xbf, 0x7f.
-        </p></dd><dt id="idm140251669915040"><span class="term ">gutmann</span></dt><dd><p>
+        </p></dd><dt id="idm140389600702464"><span class="term ">gutmann</span></dt><dd><p>
          The canonical 35-pass sequence described in Gutmann's paper cited
          below.
-        </p></dd><dt id="idm140251672074256"><span class="term ">schneier</span></dt><dd><p>
+        </p></dd><dt id="idm140389600700592"><span class="term ">schneier</span></dt><dd><p>
          7-pass method described by Bruce Schneier in "Applied Cryptography"
          (1996): 0x00, 0xff, random(x5)
-        </p></dd><dt id="idm140251672072352"><span class="term ">pfitzner7</span></dt><dd><p>
+        </p></dd><dt id="idm140389600698688"><span class="term ">pfitzner7</span></dt><dd><p>
          Roy Pfitzner's 7-random-pass method: random(x7).
-        </p></dd><dt id="idm140251672070592"><span class="term ">pfitzner33</span></dt><dd><p>
+        </p></dd><dt id="idm140389600696848"><span class="term ">pfitzner33</span></dt><dd><p>
          Roy Pfitzner's 33-random-pass method: random(x33).
-        </p></dd><dt id="idm140251672068752"><span class="term ">usarmy</span></dt><dd><p>
+        </p></dd><dt id="idm140389600695008"><span class="term ">usarmy</span></dt><dd><p>
          US Army AR380-19 method: 0x00, 0xff, random. (Note: identical to DoD
          522.22-M section 8-306 procedure (e) for sanitizing magnetic core
          memory).
-        </p></dd><dt id="idm140251672066800"><span class="term ">fillzero</span></dt><dd><p>
+        </p></dd><dt id="idm140389600693056"><span class="term ">fillzero</span></dt><dd><p>
          1-pass pattern: 0x00.
-        </p></dd><dt id="idm140251672064976"><span class="term ">fillff</span></dt><dd><p>
+        </p></dd><dt id="idm140389600691232"><span class="term ">fillff</span></dt><dd><p>
          1-pass pattern: 0xff.
-        </p></dd><dt id="idm140251672063152"><span class="term ">random</span></dt><dd><p>
+        </p></dd><dt id="idm140389563639584"><span class="term ">random</span></dt><dd><p>
          1-pass pattern: random(x1).
-        </p></dd><dt id="idm140251672061328"><span class="term ">random2</span></dt><dd><p>
+        </p></dd><dt id="idm140389563637760"><span class="term ">random2</span></dt><dd><p>
          2-pass pattern: random(x2).
-        </p></dd><dt id="idm140251672059504"><span class="term ">old</span></dt><dd><p>
+        </p></dd><dt id="idm140389563635936"><span class="term ">old</span></dt><dd><p>
          6-pass pre-version 1.7 scrub method: 0x00, 0xff, 0xaa, 0x00, 0x55,
          verify.
-        </p></dd><dt id="idm140251633776016"><span class="term ">fastold</span></dt><dd><p>
+        </p></dd><dt id="idm140389563634176"><span class="term ">fastold</span></dt><dd><p>
          5-pass pattern: 0x00, 0xff, 0xaa, 0x55, verify.
-        </p></dd><dt id="idm140251633774176"><span class="term ">custom=string</span></dt><dd><p>
+        </p></dd><dt id="idm140389563632336"><span class="term ">custom=string</span></dt><dd><p>
          1-pass custom pattern. String may contain C-style numerical escapes:
          \nnn (octal) or \xnn (hex).
         </p></dd></dl></div></div></div><div class="sect1 " id="sec.sec_prot.general.backups"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.general.backups"><span class="number">3.6 </span><span class="name">Backups</span> <a title="Permalink" class="permalink" href="cha.sec_prot.general.html#sec.sec_prot.general.backups">#</a></h2></div></div></div><p>
@@ -614,7 +614,7 @@ hljs.configure({
       potentially subject to this attack. To enable TCP SYN Cookie Protection,
       edit the <code class="filename">/etc/sysctl.conf</code> file and ensure the
       following line and value exists:
-     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.tcp_syncookies = 1</pre></div><div id="idm140251635076240" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.tcp_syncookies = 1</pre></div><div id="idm140389573093008" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        Despite the name of the configuration option, it applies to IP version 6
        as well.
       </p></div></div><div class="sect2 " id="sec.sec_prot.general.route"><div class="titlepage"><div><div><h3 class="title" id="sec.sec_prot.general.route"><span class="number">3.9.2 </span><span class="name">Disable IP Source Routing (default in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">15</span></span>)</span> <a title="Permalink" class="permalink" href="cha.sec_prot.general.html#sec.sec_prot.general.route">#</a></h3></div></div></div><p>
@@ -657,7 +657,7 @@ hljs.configure({
       To turn on logging for Spoofed Packets, Source Routed Packets, and
       Redirect Packets, edit the <code class="filename">/etc/sysctl.conf</code> file and
       add the following line:
-     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.conf.all.log_martians = 1</pre></div><div id="idm140251634990048" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">net.ipv4.conf.all.log_martians = 1</pre></div><div id="idm140389594150736" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        Because of the way <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is set up (with rsyslog) for network
        event tracking, keep in mind that this can cause a large amount of
        messages to be logged.
@@ -821,7 +821,7 @@ hljs.configure({
      packages or desktop software packages (for example, an X Server) on
      production servers. If you do not need them, you should also not install,
      for example, the Apache Web server or Samba file sharing server.
-    </p><div id="idm140251669537744" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Requirements of Third-party Installers</h6><p>
+    </p><div id="idm140389598947408" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Requirements of Third-party Installers</h6><p>
       Many third-party vendors like Oracle and IBM require a desktop
       environment and development libraries to run installers. To avoid this
       from having an impact on the security of their production servers, many
@@ -840,7 +840,7 @@ hljs.configure({
      purposes. A good approach is to start with a minimum list of RPMs and then
      add packages as needed. This process is time-consuming but usually worth
      the effort.
-    </p><div id="idm140251669532336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Just Enough Operating System (JeOS)</h6><p>
+    </p><div id="idm140389598942000" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Just Enough Operating System (JeOS)</h6><p>
       The SUSE Appliance Program includes a component called JeOS (Just
       Enough Operating System). JeOS has a very small footprint and can be
       customized to fit the specific needs of a system developer. Main uses of
@@ -861,7 +861,7 @@ hljs.configure({
      This can be very useful, as running the removal command without a test can
      often yield a lot of complaints and require manual recursive dependency
      hunting.
-    </p><div id="idm140251669950896" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Removal of Essential System Packages</h6><p>
+    </p><div id="idm140389603140896" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Removal of Essential System Packages</h6><p>
       When removing packages, be careful not to remove any essential system
       packages. This could put your system into a broken state in which it can
       no longer be booted or repaired. If you are uncertain about this, then it
@@ -1027,7 +1027,7 @@ tcp   0      0      *:22             *.*             LISTEN  2317/sshd</pre></di
      running it is a designated as a mail or relay server. Running a port scan
      from another server can confirm that, but make sure to obtain proper
      permissions to scan/probe a machine on a production network.
-    </p><div id="idm140251675157280" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
+    </p><div id="idm140389600399328" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
       Some organizations consider port scans without permission a security
       offense.
      </p></div><p>
@@ -1110,7 +1110,7 @@ inet_interfaces = localhost</pre></div><p>
      Verify that Postfix is not listening for network requests (incoming) by
      running one of these commands from another host:
     </p><div class="verbatim-wrap"><pre class="screen">nmap -sT -p 25 <em class="replaceable ">REMOTE_HOST</em>
-telnet &lt;remote_host&gt; 25</pre></div><div id="idm140251672104960" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+telnet &lt;remote_host&gt; 25</pre></div><div id="idm140389596198864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Running these commands on the local host will provide inaccurate results
       because Postfix is supposed to accept connections from the local node.
       Use an external host for correct results.
@@ -1433,7 +1433,7 @@ polkit.addRule(function(action, subject) {
       return polkit.Result.NO;
     }
   }
-});</pre></div><div id="idm140251673142192" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Naming of the Rules File</h6><p>
+});</pre></div><div id="idm140389574762208" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Naming of the Rules File</h6><p>
         Rules files are processed in alphabetical order. Functions are called
         in the order they were added until one of the functions returns a
         value. Hence, to add an authorization rule that is processed before
@@ -1581,7 +1581,7 @@ polkit.addRule(function(action, subject) {
          <p>
           Account expiration date in the format YYYY-MM-DD.
          </p>
-        </td></tr></tbody></table></div><div id="idm140251665127600" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </td></tr></tbody></table></div><div id="idm140389594211296" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Users created prior to these modifications will not be affected.
      </p></div><p>
      Ensure that the above parameters are changed in the
@@ -1664,7 +1664,7 @@ Account Expires: Never</pre></div></div><div class="sect1 " id="sec.sec_prot.gen
       The PAM libraries follow a defined flow. The best way to design the
       perfect stack usually is to consider all of the requirements and
       policies and draw out a flow chart.
-     </p><div class="table" id="idm140251643869328"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3.1: </span><span class="name">Sample rules/constraints for password enforcement </span><a title="Permalink" class="permalink" href="cha.sec_prot.general.html#idm140251643869328">#</a></h6></div><div class="table-contents"><table summary="Sample rules/constraints for password enforcement" border="1"><colgroup><col /><col /><col /></colgroup><tbody><tr><td>
+     </p><div class="table" id="idm140389599052608"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 3.1: </span><span class="name">Sample rules/constraints for password enforcement </span><a title="Permalink" class="permalink" href="cha.sec_prot.general.html#idm140389599052608">#</a></h6></div><div class="table-contents"><table summary="Sample rules/constraints for password enforcement" border="1"><colgroup><col /><col /><col /></colgroup><tbody><tr><td>
           <p>
            <code class="systemitem">pam_cracklib.so</code>
           </p>
@@ -1763,7 +1763,7 @@ password  optional   pam_gnome_keyring.so    use_authtok
 password  required   pam_unix.so     use_authtok nullok shadow try_first_pass
 session   required   pam_limits.so
 session   required   pam_unix.so     try_first_pass
-session   optional   pam_umask.so</pre></div><div id="idm140251675890800" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+session   optional   pam_umask.so</pre></div><div id="idm140389598229392" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
        Editing the PAM configuration files directly is not recommended. Use
        the <code class="command">pam-config</code> command as shown above to fine-tune
        PAM. For more information see <code class="command">man 8 pam-config</code>.
@@ -1836,8 +1836,8 @@ oracle     0        Fri Dec 10 23:57:55 -0600 2005 on unknown</pre></div><p>
       <code class="command">ssh</code> and <code class="command">su</code>, and make sure
       the <code class="systemitem">root</code> id does not get locked! To lock or unlock accounts
       manually, run one of the following commands:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140251674856064"><span class="term ">Locking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -l <em class="replaceable ">USER</em>
-usermod -L <em class="replaceable ">USER</em></pre></div></dd><dt id="idm140251674853536"><span class="term ">Unlocking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -u <em class="replaceable ">USER</em>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140389598882224"><span class="term ">Locking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -l <em class="replaceable ">USER</em>
+usermod -L <em class="replaceable ">USER</em></pre></div></dd><dt id="idm140389598879696"><span class="term ">Unlocking</span></dt><dd><div class="verbatim-wrap"><pre class="screen">passwd -u <em class="replaceable ">USER</em>
 usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div></div><div class="sect1 " id="sec.sec_prot.dos"><div class="titlepage"><div><div><h2 class="title" id="sec.sec_prot.dos"><span class="number">3.29 </span><span class="name">Preventing Accidental Denial of Service</span> <a title="Permalink" class="permalink" href="cha.sec_prot.general.html#sec.sec_prot.dos">#</a></h2></div></div></div><p>
      Linux allows you to set limits on the amount of system resources that
      users and groups can consume. This is also very handy if bugs in programs
@@ -1864,7 +1864,7 @@ usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div><
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>ulimit -a</pre></div><p>
       For more information on <code class="command">ulimit</code> for the Bash shell,
       examine the Bash man pages.
-     </p><div id="idm140251674842464" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Setting Limits for SSH Sessions</h6><p>
+     </p><div id="idm140389594099904" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Setting Limits for SSH Sessions</h6><p>
        Setting "hard" and "soft" limits might not behave as expected when using
        an SSH session. To see valid behavior it may be necessary to login as
        root and then su to the id with limits (for example,
@@ -1876,7 +1876,7 @@ usermod -U <em class="replaceable ">USER</em></pre></div></dd></dl></div></div><
        daemon (<code class="command">systemctl restart sshd</code>) if it seems that the
        changes to resource limits are not working (via SSH). However this is
        not generally recommended – as it weakens a systems security.
-      </p></div><div id="idm140251646108480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Disabling Password Logins via <code class="command">ssh</code></h6><p>
+      </p></div><div id="idm140389594096256" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Disabling Password Logins via <code class="command">ssh</code></h6><p>
        You can add some extra security to your server by disabling password
        authentication for SSH. Remember that you need to have SSH keys
        configured, otherwise you cannot access the server. To disable password
@@ -1900,7 +1900,7 @@ oracle           hard    nofile          63536</pre></div><p>
       example up to the hard limit (in this example 63536) by executing:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>ulimit -n 63536</pre></div><p>
       You can set the soft and hard limits higher if necessary.
-     </p><div id="idm140251646099856" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p><div id="idm140389594087632" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
        It is important to be judicious with the usage of ulimits. Allowing a
        "hard" limit for <span class="quote">“<span class="quote">nofile</span>”</span> for a user that equals the kernel
        limit (<code class="filename">/proc/sys/fs/file-max</code>) is very bad! If the
@@ -1955,7 +1955,7 @@ EOF</pre></div></div></div><div class="sect1 " id="sec.sec_prot.banners"><div cl
      message of the day). The file exists by default on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>, but
      it is empty. Simply add content to the file that is applicable/required
      by the organization.
-    </p><div id="idm140251670000272" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Banner Length</h6><p>
+    </p><div id="idm140389573834096" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Banner Length</h6><p>
       Try to keep the login banner content to a single terminal page (or
       less), as it will scroll the screen if it does not fit, making it more
       difficult to read.
