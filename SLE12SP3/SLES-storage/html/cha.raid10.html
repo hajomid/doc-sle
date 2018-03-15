@@ -49,7 +49,7 @@ hljs.configure({
    The following table describes the advantages and disadvantages of RAID 10
    nesting as 1+0 versus 0+1. It assumes that the storage objects you use
    reside on different disks, each with a dedicated I/O capability.
-  </p><div class="table" id="idm140278231936960"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.1: </span><span class="name">Nested RAID Levels </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140278231936960">#</a></h6></div><div class="table-contents"><table summary="Nested RAID Levels" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm140654475104672"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.1: </span><span class="name">Nested RAID Levels </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140654475104672">#</a></h6></div><div class="table-contents"><table summary="Nested RAID Levels" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
        <p>
         RAID Level
        </p>
@@ -115,7 +115,7 @@ hljs.configure({
       </td></tr></tbody></table></div></div><div class="sect2 " id="sec.raid10.nest.10"><div class="titlepage"><div><div><h3 class="title" id="sec.raid10.nest.10"><span class="number">9.1.1 </span><span class="name">Creating Nested RAID 10 (1+0) with mdadm</span> <a title="Permalink" class="permalink" href="cha.raid10.html#sec.raid10.nest.10">#</a></h3></div></div></div><p>
     A nested RAID 1+0 is built by creating two or more RAID 1 (mirror) devices,
     then using them as component devices in a RAID 0.
-   </p><div id="idm140278231916928" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Multipathing</h6><p>
+   </p><div id="idm140654475084704" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Multipathing</h6><p>
      If you need to manage multiple connections to the devices, you must
      configure multipath I/O before configuring the RAID devices. For
      information, see
@@ -124,7 +124,7 @@ hljs.configure({
     The procedure in this section uses the device names shown in the following
     table. Ensure that you modify the device names with the names of your own
     devices.
-   </p><div class="table" id="idm140278231913984"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.2: </span><span class="name">Scenario for Creating a RAID 10 (1+0) by Nesting </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140278231913984">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 (1+0) by Nesting" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140654475081760"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.2: </span><span class="name">Scenario for Creating a RAID 10 (1+0) by Nesting </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140654475081760">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 (1+0) by Nesting" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
         <p>
          Raw Devices
         </p>
@@ -198,7 +198,7 @@ ARRAY /dev/md2 UUID=<em class="replaceable ">UUID</em></pre></div><p>
      </p><div class="verbatim-wrap"><pre class="screen">sudo mount /data</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.raid10.nest.01"><div class="titlepage"><div><div><h3 class="title" id="sec.raid10.nest.01"><span class="number">9.1.2 </span><span class="name">Creating Nested RAID 10 (0+1) with mdadm</span> <a title="Permalink" class="permalink" href="cha.raid10.html#sec.raid10.nest.01">#</a></h3></div></div></div><p>
     A nested RAID 0+1 is built by creating two to four RAID 0 (striping)
     devices, then mirroring them as component devices in a RAID 1.
-   </p><div id="idm140278231875152" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Multipathing</h6><p>
+   </p><div id="idm140654475042928" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Multipathing</h6><p>
      If you need to manage multiple connections to the devices, you must
      configure multipath I/O before configuring the RAID devices. For
      information, see
@@ -212,7 +212,7 @@ ARRAY /dev/md2 UUID=<em class="replaceable ">UUID</em></pre></div><p>
     The procedure in this section uses the device names shown in the following
     table. Ensure that you modify the device names with the names of your own
     devices.
-   </p><div class="table" id="idm140278231871504"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.3: </span><span class="name">Scenario for Creating a RAID 10 (0+1) by Nesting </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140278231871504">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 (0+1) by Nesting" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140654475039280"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.3: </span><span class="name">Scenario for Creating a RAID 10 (0+1) by Nesting </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140654475039280">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 (0+1) by Nesting" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
         <p>
          Raw Devices
         </p>
@@ -293,7 +293,7 @@ ARRAY /dev/md2 UUID=<em class="replaceable ">UUID</em></pre></div><p>
   </p><p>
    The complex RAID 10 is similar in purpose to a nested RAID 10
    (1+0), but differs in the following ways:
-  </p><div class="table" id="idm140278231830912"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.4: </span><span class="name">Complex RAID 10 compared to Nested RAID 10 </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140278231830912">#</a></h6></div><div class="table-contents"><table summary="Complex RAID 10 compared to Nested RAID 10" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm140654474998688"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.4: </span><span class="name">Complex RAID 10 compared to Nested RAID 10 </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140654474998688">#</a></h6></div><div class="table-contents"><table summary="Complex RAID 10 compared to Nested RAID 10" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
        <p>
         Feature
        </p>
@@ -473,21 +473,21 @@ ARRAY /dev/md2 UUID=<em class="replaceable ">UUID</em></pre></div><p>
      The number of replicas and the layout is specified as <span class="guimenu">Parity
      Algorithm</span> in YaST or with the <code class="option">--layout</code>
      parameter for mdadm. The following values are accepted:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140278231781232"><span class="term "><code class="literal">n<em class="replaceable ">N</em></code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140654474949136"><span class="term "><code class="literal">n<em class="replaceable ">N</em></code>
       </span></dt><dd><p>
         Specify <code class="literal">n</code> for near layout and replace
         <em class="replaceable ">N</em> with the number of replicas.
         <code class="literal">n2</code> is the default that is used when not configuring
         layout and the number of replicas.
-       </p></dd><dt id="idm140278231777456"><span class="term "><code class="literal">f<em class="replaceable ">N</em></code>
+       </p></dd><dt id="idm140654474945360"><span class="term "><code class="literal">f<em class="replaceable ">N</em></code>
       </span></dt><dd><p>
         Specify <code class="literal">f</code> for far layout and replace
         <em class="replaceable ">N</em> with the number of replicas.
-       </p></dd><dt id="idm140278231774160"><span class="term "><code class="literal">o<em class="replaceable ">N</em></code>
+       </p></dd><dt id="idm140654474942064"><span class="term "><code class="literal">o<em class="replaceable ">N</em></code>
       </span></dt><dd><p>
         Specify <code class="literal">o</code> for offset layout and replace
         <em class="replaceable ">N</em> with the number of replicas.
-       </p></dd></dl></div><div id="idm140278231770704" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Number of Replicas</h6><p>
+       </p></dd></dl></div><div id="idm140654474938608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Number of Replicas</h6><p>
       YaST automatically offers a selection of all possible values for the
       <span class="guimenu">Parity Algorithm</span> parameter.
      </p></div></div></div><div class="sect2 " id="sec.raid10.complex.yast"><div class="titlepage"><div><div><h3 class="title" id="sec.raid10.complex.yast"><span class="number">9.2.3 </span><span class="name">Creating a Complex RAID 10 with the YaST Partitioner</span> <a title="Permalink" class="permalink" href="cha.raid10.html#sec.raid10.complex.yast">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -594,7 +594,7 @@ ARRAY /dev/md2 UUID=<em class="replaceable ">UUID</em></pre></div><p>
     The procedure in this section uses the device names shown in the following
     table. Ensure that you modify the device names with the names of your own
     devices.
-   </p><div class="table" id="idm140278231715712"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.5: </span><span class="name">Scenario for Creating a RAID 10 Using mdadm </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140278231715712">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 Using mdadm" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140654474883616"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 9.5: </span><span class="name">Scenario for Creating a RAID 10 Using mdadm </span><a title="Permalink" class="permalink" href="cha.raid10.html#idm140654474883616">#</a></h6></div><div class="table-contents"><table summary="Scenario for Creating a RAID 10 Using mdadm" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Raw Devices
         </p>
