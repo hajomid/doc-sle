@@ -23,8 +23,8 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#book.smt" accesskey="c"><span class="single-contents-icon"></span>RMT Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#book.smt" accesskey="c"><span class="single-contents-icon"></span>Show Contents: RMT Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#pre_smt"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="#smt.installation"><span class="number">1 </span><span class="name">RMT Installation</span></a></li><li class="inactive"><a href="#smt.server"><span class="number">2 </span><span class="name">RMT Server Configuration</span></a></li><li class="inactive"><a href="#smt.mirroring"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span></a></li><li class="inactive"><a href="#smt.management"><span class="number">4 </span><span class="name">Managing Repositories with YaST RMT Server Management</span></a></li><li class="inactive"><a href="#smt.registration"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span></a></li><li class="inactive"><a href="#smt.client"><span class="number">6 </span><span class="name">Configuring Clients to Use RMT</span></a></li><li class="inactive"><a href="#smt.tools"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span></a></li><li class="inactive"><a href="#smt.advanced"><span class="number">8 </span><span class="name">Advanced Topics</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="book" id="book.smt" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></h6><div><h1 class="title">Repository Management Tool for SLES <span class="productnumber"><span class="phrase">15</span></span></h1></div><div class="authorgroup"><div><span class="imprint-label">Authors: </span><span class="firstname">Tomáš</span> <span class="surname">Bažant</span>, <span class="firstname">Jakub</span> <span class="surname">Friedl</span>, and <span class="firstname">Florian</span> <span class="surname">Nadge</span></div></div><div class="date"><span class="imprint-label">Publication Date: </span>March 15, 2018
-</div></div></div><div class="toc"><dl><dt><span class="preface"><a href="#pre_smt"><span class="name">About This Guide</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#idm140704871712064"><span class="name">Overview</span></a></span></dt><dt><span class="sect1"><a href="#idm140704893427824"><span class="name">Additional Documentation and Resources</span></a></span></dt><dt><span class="sect1"><a href="#idm140704902090640"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm140704901797376"><span class="name">Documentation Conventions</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.installation"><span class="number">1 </span><span class="name">RMT Installation</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.installation.wizard"><span class="number">1.1 </span><span class="name">RMT Configuration Wizard</span></a></span></dt><dt><span class="sect1"><a href="#smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span></a></span></dt><dt><span class="sect1"><a href="#idm140704895959936"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.server"><span class="number">2 </span><span class="name">RMT Server Configuration</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.yast.activation"><span class="number">2.1 </span><span class="name">Activating and Deactivating RMT with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.credentials"><span class="number">2.2 </span><span class="name">Setting the Update Server Credentials with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.database"><span class="number">2.3 </span><span class="name">Setting RMT Database Password with YaST</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.mirroring"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span></a></span></dt><dt><span class="sect1"><a href="#smt.mirroring.manage"><span class="number">3.2 </span><span class="name">Managing Software Repositories with RMT Command Line Tools</span></a></span></dt><dt><span class="sect1"><a href="#smt.repo.preload"><span class="number">3.3 </span><span class="name">Repository Preloading</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.management"><span class="number">4 </span><span class="name">Managing Repositories with YaST RMT Server Management</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.yast.staging.starting"><span class="number">4.1 </span><span class="name">Starting RMT Management Module</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.registration"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.registration.clients"><span class="number">5.1 </span><span class="name">Listing Registered Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.delete"><span class="number">5.2 </span><span class="name">Deleting Registrations</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.smtregister"><span class="number">5.3 </span><span class="name">Manual Registration of Clients at SUSE Customer Center</span></a></span></dt><dt><span class="sect1"><a href="#smt.registrations.schedule"><span class="number">5.4 </span><span class="name">Scheduling Periodic Registrations of Clients at SUSE Customer Center</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.client"><span class="number">6 </span><span class="name">Configuring Clients to Use RMT</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.client.parameters"><span class="number">6.1 </span><span class="name">Using linuxrc Parameters to Access an RMT Server</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.autoyast"><span class="number">6.2 </span><span class="name">Configuring Clients with AutoYaST Profile</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.clientsetupscript"><span class="number">6.3 </span><span class="name">Configuring Clients with the clientSetup4SMT.sh Script</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.yast"><span class="number">6.4 </span><span class="name">Configuring Clients with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.clients.repolist"><span class="number">6.5 </span><span class="name">Listing Accessible Repositories</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.onlinemigration"><span class="number">6.6 </span><span class="name">Online Migration of SUSE Linux Enterprise Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.clients.rhel"><span class="number">6.7 </span><span class="name">How to Update Red Hat Enterprise Linux with RMT</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.tools"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.scripts"><span class="number">7.1 </span><span class="name">Important Scripts and Tools</span></a></span></dt><dt><span class="sect1"><a href="#idm140704873767712"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span></a></span></dt><dt><span class="sect1"><a href="#smt.tools.cert"><span class="number">7.3 </span><span class="name">Server Certificates</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.advanced"><span class="number">8 </span><span class="name">Advanced Topics</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.backup"><span class="number">8.1 </span><span class="name">Backup of the RMT Server</span></a></span></dt><dt><span class="sect1"><a href="#smt.disconnected"><span class="number">8.2 </span><span class="name">Disconnected RMT Servers</span></a></span></dt></dl></dd></dl></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><dl><dt><span class="figure"><a href="#idm140704896223440"><span class="number">1 </span><span class="name">RMT</span></a></span></dt><dt><span class="figure"><a href="#idm140704893119840"><span class="number">1.1 </span><span class="name">RMT Pattern</span></a></span></dt><dt><span class="figure"><a href="#idm140704901822032"><span class="number">1.2 </span><span class="name">RMT Wizard</span></a></span></dt><dt><span class="figure"><a href="#idm140704894456384"><span class="number">1.3 </span><span class="name">Missing Server Certificate</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.credentials"><span class="number">2.1 </span><span class="name">Setting the Update Server Credentials with YaST</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.credtest"><span class="number">2.2 </span><span class="name">Successful Test of the Update Server Credentials</span></a></span></dt><dt><span class="figure"><a href="#idm140704893790944"><span class="number">4.1 </span><span class="name">List of Repositories</span></a></span></dt><dt><span class="figure"><a href="#idm140704872480176"><span class="number">4.2 </span><span class="name">Repository Filter</span></a></span></dt><dt><span class="figure"><a href="#idm140704892806896"><span class="number">4.3 </span><span class="name">Status of Mirroring Process</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.ca_cert"><span class="number">7.1 </span><span class="name">Certificates of a CA</span></a></span></dt><dt><span class="figure"><a href="#idm140704902007568"><span class="number">8.1 </span><span class="name">RMT Disconnected Setup</span></a></span></dt></dl></div><div class="list-of-examples"><div class="toc-title">List of Examples</div><dl><dt><span class="example"><a href="#ex.smt.mirroring.repos.o"><span class="number">3.1 </span><span class="name">Listing All Enabled Repositories</span></a></span></dt><dt><span class="example"><a href="#smt.mirroring.smtconf.ex"><span class="number">7.1 </span><span class="name">rmt.conf</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm140704897816144"><p>
+</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#book.smt" accesskey="c"><span class="single-contents-icon"></span>RMT Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#book.smt" accesskey="c"><span class="single-contents-icon"></span>Show Contents: RMT Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#pre_smt"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="#smt.installation"><span class="number">1 </span><span class="name">RMT Installation</span></a></li><li class="inactive"><a href="#smt.server"><span class="number">2 </span><span class="name">RMT Server Configuration</span></a></li><li class="inactive"><a href="#smt.mirroring"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span></a></li><li class="inactive"><a href="#smt.management"><span class="number">4 </span><span class="name">Managing Repositories with YaST RMT Server Management</span></a></li><li class="inactive"><a href="#smt.registration"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span></a></li><li class="inactive"><a href="#smt.client"><span class="number">6 </span><span class="name">Configuring Clients to Use RMT</span></a></li><li class="inactive"><a href="#smt.tools"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span></a></li><li class="inactive"><a href="#smt.advanced"><span class="number">8 </span><span class="name">Advanced Topics</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="book" id="book.smt" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></h6><div><h1 class="title">Repository Management Tool for SLES <span class="productnumber"><span class="phrase">15</span></span></h1></div><div class="authorgroup"><div><span class="imprint-label">Authors: </span><span class="firstname">Tomáš</span> <span class="surname">Bažant</span>, <span class="firstname">Jakub</span> <span class="surname">Friedl</span>, and <span class="firstname">Florian</span> <span class="surname">Nadge</span></div></div><div class="date"><span class="imprint-label">Publication Date: </span>March 16, 2018
+</div></div></div><div class="toc"><dl><dt><span class="preface"><a href="#pre_smt"><span class="name">About This Guide</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#idm139676634708992"><span class="name">Overview</span></a></span></dt><dt><span class="sect1"><a href="#idm139676615251808"><span class="name">Additional Documentation and Resources</span></a></span></dt><dt><span class="sect1"><a href="#idm139676636303520"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm139676611667952"><span class="name">Documentation Conventions</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.installation"><span class="number">1 </span><span class="name">RMT Installation</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.installation.wizard"><span class="number">1.1 </span><span class="name">RMT Configuration Wizard</span></a></span></dt><dt><span class="sect1"><a href="#smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span></a></span></dt><dt><span class="sect1"><a href="#idm139676616086736"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.server"><span class="number">2 </span><span class="name">RMT Server Configuration</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.yast.activation"><span class="number">2.1 </span><span class="name">Activating and Deactivating RMT with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.credentials"><span class="number">2.2 </span><span class="name">Setting the Update Server Credentials with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.database"><span class="number">2.3 </span><span class="name">Setting RMT Database Password with YaST</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.mirroring"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span></a></span></dt><dt><span class="sect1"><a href="#smt.mirroring.manage"><span class="number">3.2 </span><span class="name">Managing Software Repositories with RMT Command Line Tools</span></a></span></dt><dt><span class="sect1"><a href="#smt.repo.preload"><span class="number">3.3 </span><span class="name">Repository Preloading</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.management"><span class="number">4 </span><span class="name">Managing Repositories with YaST RMT Server Management</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.yast.staging.starting"><span class="number">4.1 </span><span class="name">Starting RMT Management Module</span></a></span></dt><dt><span class="sect1"><a href="#smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.registration"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.registration.clients"><span class="number">5.1 </span><span class="name">Listing Registered Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.delete"><span class="number">5.2 </span><span class="name">Deleting Registrations</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.smtregister"><span class="number">5.3 </span><span class="name">Manual Registration of Clients at SUSE Customer Center</span></a></span></dt><dt><span class="sect1"><a href="#smt.registrations.schedule"><span class="number">5.4 </span><span class="name">Scheduling Periodic Registrations of Clients at SUSE Customer Center</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.client"><span class="number">6 </span><span class="name">Configuring Clients to Use RMT</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.client.parameters"><span class="number">6.1 </span><span class="name">Using linuxrc Parameters to Access an RMT Server</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.autoyast"><span class="number">6.2 </span><span class="name">Configuring Clients with AutoYaST Profile</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.clientsetupscript"><span class="number">6.3 </span><span class="name">Configuring Clients with the clientSetup4SMT.sh Script</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.yast"><span class="number">6.4 </span><span class="name">Configuring Clients with YaST</span></a></span></dt><dt><span class="sect1"><a href="#smt.clients.repolist"><span class="number">6.5 </span><span class="name">Listing Accessible Repositories</span></a></span></dt><dt><span class="sect1"><a href="#smt.client.onlinemigration"><span class="number">6.6 </span><span class="name">Online Migration of SUSE Linux Enterprise Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.clients.rhel"><span class="number">6.7 </span><span class="name">How to Update Red Hat Enterprise Linux with RMT</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.tools"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.scripts"><span class="number">7.1 </span><span class="name">Important Scripts and Tools</span></a></span></dt><dt><span class="sect1"><a href="#idm139676643310496"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span></a></span></dt><dt><span class="sect1"><a href="#smt.tools.cert"><span class="number">7.3 </span><span class="name">Server Certificates</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#smt.advanced"><span class="number">8 </span><span class="name">Advanced Topics</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#smt.backup"><span class="number">8.1 </span><span class="name">Backup of the RMT Server</span></a></span></dt><dt><span class="sect1"><a href="#smt.disconnected"><span class="number">8.2 </span><span class="name">Disconnected RMT Servers</span></a></span></dt></dl></dd></dl></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><dl><dt><span class="figure"><a href="#idm139676632924400"><span class="number">1 </span><span class="name">RMT</span></a></span></dt><dt><span class="figure"><a href="#idm139676632902400"><span class="number">1.1 </span><span class="name">RMT Pattern</span></a></span></dt><dt><span class="figure"><a href="#idm139676642529456"><span class="number">1.2 </span><span class="name">RMT Wizard</span></a></span></dt><dt><span class="figure"><a href="#idm139676615080816"><span class="number">1.3 </span><span class="name">Missing Server Certificate</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.credentials"><span class="number">2.1 </span><span class="name">Setting the Update Server Credentials with YaST</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.credtest"><span class="number">2.2 </span><span class="name">Successful Test of the Update Server Credentials</span></a></span></dt><dt><span class="figure"><a href="#idm139676634691600"><span class="number">4.1 </span><span class="name">List of Repositories</span></a></span></dt><dt><span class="figure"><a href="#idm139676639057504"><span class="number">4.2 </span><span class="name">Repository Filter</span></a></span></dt><dt><span class="figure"><a href="#idm139676615260720"><span class="number">4.3 </span><span class="name">Status of Mirroring Process</span></a></span></dt><dt><span class="figure"><a href="#fig.yast.ca_cert"><span class="number">7.1 </span><span class="name">Certificates of a CA</span></a></span></dt><dt><span class="figure"><a href="#idm139676613510448"><span class="number">8.1 </span><span class="name">RMT Disconnected Setup</span></a></span></dt></dl></div><div class="list-of-examples"><div class="toc-title">List of Examples</div><dl><dt><span class="example"><a href="#ex.smt.mirroring.repos.o"><span class="number">3.1 </span><span class="name">Listing All Enabled Repositories</span></a></span></dt><dt><span class="example"><a href="#smt.mirroring.smtconf.ex"><span class="number">7.1 </span><span class="name">rmt.conf</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm139676638716416"><p>
   Copyright © 2006–
 2018
 
@@ -46,7 +46,7 @@ hljs.configure({
   detail. However, this does not guarantee complete accuracy. Neither SUSE LLC,
   its affiliates, the authors nor the translators shall be held liable for
   possible errors or the consequences thereof.
- </p></div></div><div class="preface " id="pre_smt"><div class="titlepage"><div><div><h1 class="title"><span class="number"> </span><span class="name">About This Guide</span> <a title="Permalink" class="permalink" href="#pre_smt">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_overview.xml</li><li><span class="ds-label">ID: </span>pre_smt</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm140704871712064"><span class="name">Overview</span></a></span></dt><dt><span class="sect1"><a href="#idm140704893427824"><span class="name">Additional Documentation and Resources</span></a></span></dt><dt><span class="sect1"><a href="#idm140704902090640"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm140704901797376"><span class="name">Documentation Conventions</span></a></span></dt></dl></div></div><p>
+ </p></div></div><div class="preface " id="pre_smt"><div class="titlepage"><div><div><h1 class="title"><span class="number"> </span><span class="name">About This Guide</span> <a title="Permalink" class="permalink" href="#pre_smt">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_overview.xml</li><li><span class="ds-label">ID: </span>pre_smt</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm139676634708992"><span class="name">Overview</span></a></span></dt><dt><span class="sect1"><a href="#idm139676615251808"><span class="name">Additional Documentation and Resources</span></a></span></dt><dt><span class="sect1"><a href="#idm139676636303520"><span class="name">Feedback</span></a></span></dt><dt><span class="sect1"><a href="#idm139676611667952"><span class="name">Documentation Conventions</span></a></span></dt></dl></div></div><p>
   Repository Management Tool (RMT) for SUSE Linux Enterprise <span class="productnumber"><span class="phrase">15</span></span> allows enterprise customers to
   optimize the management of SUSE Linux Enterprise software updates and subscription
   entitlements. It establishes a proxy system for SUSE® Customer Center with repository
@@ -82,50 +82,50 @@ hljs.configure({
    </p></li><li class="listitem "><p>
     You want to have a quick overview of the patch status of your SUSE Linux Enterprise servers and
     desktops.
-   </p></li></ul></div><div class="figure" id="idm140704896223440"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_schema.png"><img src="images/smt_schema.png" width="" alt="RMT" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1: </span><span class="name">RMT </span><a title="Permalink" class="permalink" href="#idm140704896223440">#</a></h6></div></div><div class="sect1 " id="idm140704871712064"><div class="titlepage"><div><div><h2 class="title" id="idm140704871712064"><span class="number">1 </span><span class="name">Overview</span> <a title="Permalink" class="permalink" href="#idm140704871712064">#</a></h2></div></div></div><p>
+   </p></li></ul></div><div class="figure" id="idm139676632924400"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_schema.png"><img src="images/smt_schema.png" width="" alt="RMT" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1: </span><span class="name">RMT </span><a title="Permalink" class="permalink" href="#idm139676632924400">#</a></h6></div></div><div class="sect1 " id="idm139676634708992"><div class="titlepage"><div><div><h2 class="title" id="idm139676634708992"><span class="number">1 </span><span class="name">Overview</span> <a title="Permalink" class="permalink" href="#idm139676634708992">#</a></h2></div></div></div><p>
    The <em class="citetitle ">Subscription Management Tool Guide</em> is divided into the following chapters:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873441504"><span class="term "><a class="xref" href="#smt.installation" title="Chapter 1. RMT Installation"><em>RMT Installation</em></a>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676635029184"><span class="term "><a class="xref" href="#smt.installation" title="Chapter 1. RMT Installation"><em>RMT Installation</em></a>
     </span></dt><dd><p>
       Introduction to the RMT installation process and the SMT Configuration
       Wizard. You will learn how to install the RMT add-on on your base
       system during the installation process or on an already installed base
       system.
-     </p></dd><dt id="idm140704873442368"><span class="term "><a class="xref" href="#smt.server" title="Chapter 2. RMT Server Configuration"><em>RMT Server Configuration</em></a>
+     </p></dd><dt id="idm139676635029616"><span class="term "><a class="xref" href="#smt.server" title="Chapter 2. RMT Server Configuration"><em>RMT Server Configuration</em></a>
     </span></dt><dd><p>
       Description of the YaST configuration module RMT Server. This chapter
       explains how to set and configure organization credentials and RMT
       database passwords. It also explains how to activate or deactivate the
       RMT service.
-     </p></dd><dt id="idm140704902105904"><span class="term "><a class="xref" href="#smt.mirroring" title="Chapter 3. Mirroring Repositories on the RMT Server"><em>Mirroring Repositories on the RMT Server</em></a>
+     </p></dd><dt id="idm139676643483808"><span class="term "><a class="xref" href="#smt.mirroring" title="Chapter 3. Mirroring Repositories on the RMT Server"><em>Mirroring Repositories on the RMT Server</em></a>
     </span></dt><dd><p>
       Explanation of how to mirror repositories with the RMT command line
       tools.
-     </p></dd><dt id="idm140704892838352"><span class="term ">
+     </p></dd><dt id="idm139676636376560"><span class="term ">
      <a class="xref" href="#smt.management" title="Chapter 4. Managing Repositories with YaST RMT Server Management"><em>Managing Repositories with YaST RMT Server Management</em></a>
     </span></dt><dd><p>
       Explanation of how to manage repositories with YaST.
-     </p></dd><dt id="idm140704897207024"><span class="term "><a class="xref" href="#smt.registration" title="Chapter 5. Managing Client Machines with RMT"><em>Managing Client Machines with RMT</em></a>
+     </p></dd><dt id="idm139676634791264"><span class="term "><a class="xref" href="#smt.registration" title="Chapter 5. Managing Client Machines with RMT"><em>Managing Client Machines with RMT</em></a>
     </span></dt><dd><p>
       Description of how to register client machines on SUSE Customer Center.
-     </p></dd><dt id="idm140704901799904"><span class="term "><a class="xref" href="#smt.client" title="Chapter 6. Configuring Clients to Use RMT"><em>Configuring Clients to Use RMT</em></a>
+     </p></dd><dt id="idm139676636301584"><span class="term "><a class="xref" href="#smt.client" title="Chapter 6. Configuring Clients to Use RMT"><em>Configuring Clients to Use RMT</em></a>
     </span></dt><dd><p>
       Introduction to configuring any client machine to
       register against RMT and download software updates from there instead
       of communicating directly with the SUSE Customer Center.
-     </p></dd><dt id="idm140704901800160"><span class="term "><a class="xref" href="#smt.tools" title="Chapter 7. RMT Tools and Configuration Files"><em>RMT Tools and Configuration Files</em></a>
+     </p></dd><dt id="idm139676613548096"><span class="term "><a class="xref" href="#smt.tools" title="Chapter 7. RMT Tools and Configuration Files"><em>RMT Tools and Configuration Files</em></a>
     </span></dt><dd><p>
       Description of the most important scripts, configuration files
       and certificates supplied with RMT.
-     </p></dd></dl></div></div><div class="sect1 " id="idm140704893427824"><div class="titlepage"><div><div><h2 class="title" id="idm140704893427824"><span class="number">2 </span><span class="name">Additional Documentation and Resources</span> <a title="Permalink" class="permalink" href="#idm140704893427824">#</a></h2></div></div></div><p>
+     </p></dd></dl></div></div><div class="sect1 " id="idm139676615251808"><div class="titlepage"><div><div><h2 class="title" id="idm139676615251808"><span class="number">2 </span><span class="name">Additional Documentation and Resources</span> <a title="Permalink" class="permalink" href="#idm139676615251808">#</a></h2></div></div></div><p>
    Chapters in this manual contain links to additional documentation resources
    that are available either on the system or on the Internet.
   </p><p>
    For an overview of the documentation available for your product and the
    latest documentation updates, refer to
    <a class="link" href="http://www.suse.com/documentation" target="_blank">http://www.suse.com/documentation</a>.
-  </p></div><div class="sect1 " id="idm140704902090640"><div class="titlepage"><div><div><h2 class="title" id="idm140704902090640"><span class="number">3 </span><span class="name">Feedback</span> <a title="Permalink" class="permalink" href="#idm140704902090640">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_feedback_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139676636303520"><div class="titlepage"><div><div><h2 class="title" id="idm139676636303520"><span class="number">3 </span><span class="name">Feedback</span> <a title="Permalink" class="permalink" href="#idm139676636303520">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_feedback_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Several feedback channels are available:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704892838224"><span class="term ">Bugs and Enhancement Requests</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676638403632"><span class="term ">Bugs and Enhancement Requests</span></dt><dd><p>
      For services and support options available for your product, refer to
      <a class="link" href="http://www.suse.com/support/" target="_blank">http://www.suse.com/support/</a>.
     </p><p>
@@ -135,20 +135,20 @@ hljs.configure({
      To report bugs for a product component, go to
      <a class="link" href="https://scc.suse.com/support/requests" target="_blank">https://scc.suse.com/support/requests</a>, log in, and
      click <span class="guimenu">Create New</span>.
-    </p></dd><dt id="idm140704871863488"><span class="term ">User Comments</span></dt><dd><p>
+    </p></dd><dt id="idm139676615031904"><span class="term ">User Comments</span></dt><dd><p>
      We want to hear your comments about and suggestions for this manual and
      the other documentation included with this product. Use the User Comments
      feature at the bottom of each page in the online documentation or go to
      <a class="link" href="http://www.suse.com/documentation/feedback.html" target="_blank">http://www.suse.com/documentation/feedback.html</a> and
      enter your comments there.
-    </p></dd><dt id="idm140704893029856"><span class="term ">Mail</span></dt><dd><p>
+    </p></dd><dt id="idm139676638934064"><span class="term ">Mail</span></dt><dd><p>
      For feedback on the documentation of this product, you can also send a
      mail to <code class="literal">doc-team@suse.com</code>. Make sure to include the
      document title, the product version and the publication date of the
      documentation. To report errors or suggest enhancements, provide a concise
      description of the problem and refer to the respective section number and
      page (or URL).
-    </p></dd></dl></div></div><div class="sect1 " id="idm140704901797376"><div class="titlepage"><div><div><h2 class="title" id="idm140704901797376"><span class="number">4 </span><span class="name">Documentation Conventions</span> <a title="Permalink" class="permalink" href="#idm140704901797376">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_typografie_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+    </p></dd></dl></div></div><div class="sect1 " id="idm139676611667952"><div class="titlepage"><div><div><h2 class="title" id="idm139676611667952"><span class="number">4 </span><span class="name">Documentation Conventions</span> <a title="Permalink" class="permalink" href="#idm139676611667952">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_intro_typografie_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   The following notices and typographical conventions are used in this
   documentation:
  </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -192,25 +192,25 @@ hljs.configure({
     Commands that can be run by non-privileged users.
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">command</code></pre></div></li><li class="listitem "><p>
     Notices
-   </p><div id="idm140704899081008" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Warning Notice</h6><p>
+   </p><div id="idm139676634942976" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Warning Notice</h6><p>
      Vital information you must be aware of before proceeding. Warns you about
      security issues, potential loss of data, damage to hardware, or physical
      hazards.
-    </p></div><div id="idm140704899079504" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Important Notice</h6><p>
+    </p></div><div id="idm139676634941472" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Important Notice</h6><p>
      Important information you should be aware of before proceeding.
-    </p></div><div id="idm140704897099632" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Note Notice</h6><p>
+    </p></div><div id="idm139676634940160" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Note Notice</h6><p>
      Additional information, for example about differences in software
      versions.
-    </p></div><div id="idm140704897098320" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Tip Notice</h6><p>
+    </p></div><div id="idm139676636539760" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Tip Notice</h6><p>
      Helpful information, like a guideline or a piece of practical advice.
-    </p></div></li></ul></div></div></div><div class="chapter " id="smt.installation"><div class="titlepage"><div><div><h1 class="title"><span class="number">1 </span><span class="name">RMT Installation</span> <a title="Permalink" class="permalink" href="#smt.installation">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_install.xml</li><li><span class="ds-label">ID: </span>smt.installation</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.installation.wizard"><span class="number">1.1 </span><span class="name">RMT Configuration Wizard</span></a></span></dt><dt><span class="sect1"><a href="#smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span></a></span></dt><dt><span class="sect1"><a href="#idm140704895959936"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span></a></span></dt></dl></div></div><p>
+    </p></div></li></ul></div></div></div><div class="chapter " id="smt.installation"><div class="titlepage"><div><div><h1 class="title"><span class="number">1 </span><span class="name">RMT Installation</span> <a title="Permalink" class="permalink" href="#smt.installation">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_install.xml</li><li><span class="ds-label">ID: </span>smt.installation</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.installation.wizard"><span class="number">1.1 </span><span class="name">RMT Configuration Wizard</span></a></span></dt><dt><span class="sect1"><a href="#smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span></a></span></dt><dt><span class="sect1"><a href="#idm139676616086736"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span></a></span></dt></dl></div></div><p>
      RMT is included in SUSE Linux Enterprise Server starting with version 12 SP1. To install
     it, start SUSE Linux Enterprise Server installation, and click
       <span class="guimenu">Software</span> on the <span class="guimenu">Installation
       Settings</span> screen. Select the <span class="guimenu">Subscription
       Management Tool</span> pattern on the <span class="guimenu">Software
       Selection and System Tasks</span> screen, then click
-      <span class="guimenu">OK</span>. </p><div class="figure" id="idm140704893119840"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_install_pattern.png"><img src="images/smt_install_pattern.png" width="" alt="RMT Pattern" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.1: </span><span class="name">RMT Pattern </span><a title="Permalink" class="permalink" href="#idm140704893119840">#</a></h6></div></div><div id="idm140704897091120" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installing RMT on an Existing System</h6><p>
+      <span class="guimenu">OK</span>. </p><div class="figure" id="idm139676632902400"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_install_pattern.png"><img src="images/smt_install_pattern.png" width="" alt="RMT Pattern" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.1: </span><span class="name">RMT Pattern </span><a title="Permalink" class="permalink" href="#idm139676632902400">#</a></h6></div></div><div id="idm139676634564112" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installing RMT on an Existing System</h6><p>
    To install RMT on the existing SUSE Linux Enterprise Server system, run
    <span class="guimenu">YaST</span> › <span class="guimenu">Software</span> › <span class="guimenu">Software
    Management</span>, select
@@ -226,7 +226,7 @@ hljs.configure({
   configuration using <span class="guimenu">YaST</span> › <span class="guimenu">Network
   Services</span> › <span class="guimenu">RMT Configuration
   Wizard</span>.
- </p><div id="idm140704893917504" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Install smt-client</h6><p>
+ </p><div id="idm139676643813344" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Install smt-client</h6><p>
      The <code class="literal">smt-client</code> package needs to be installed on clients
      connected to the RMT server. The package requires no configuration, and
      it can be installed using the <code class="command">sudo zypper in smt-client</code>
@@ -258,7 +258,7 @@ hljs.configure({
     </p><p>
      Click <span class="guimenu">Next</span> to continue to the second configuration
      step.
-    </p><div class="figure" id="idm140704901822032"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_wizard1.png"><img src="images/smt_wizard1.png" width="" alt="RMT Wizard" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.2: </span><span class="name">RMT Wizard </span><a title="Permalink" class="permalink" href="#idm140704901822032">#</a></h6></div></div></li><li class="step "><p>
+    </p><div class="figure" id="idm139676642529456"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_wizard1.png"><img src="images/smt_wizard1.png" width="" alt="RMT Wizard" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.2: </span><span class="name">RMT Wizard </span><a title="Permalink" class="permalink" href="#idm139676642529456">#</a></h6></div></div></li><li class="step "><p>
      For security reasons, RMT requires a separate user to connect to the
      database. In the <span class="guimenu">Database Password for smt User</span>
      screen, set the database password for this user.
@@ -277,8 +277,8 @@ hljs.configure({
      <span class="guimenu">Run CA Management</span> button. Refer to
      <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”, Chapter 17 “Managing X.509 Certification”, Section 17.2 “YaST Modules for CA Management”</span> for detailed information
      on managing certificates with YaST.
-    </p><div class="figure" id="idm140704894456384"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_missing_cert.png"><img src="images/smt_missing_cert.png" width="" alt="Missing Server Certificate" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.3: </span><span class="name">Missing Server Certificate </span><a title="Permalink" class="permalink" href="#idm140704894456384">#</a></h6></div></div></li></ol></div></div></div><div class="sect1 " id="smt.installation.upgrade"><div class="titlepage"><div><div><h2 class="title" id="smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span> <a title="Permalink" class="permalink" href="#smt.installation.upgrade">#</a></h2></div></div></div><p> This section provides information on upgrading RMT from the
-      previous versions. </p><div id="idm140704895926560" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Upgrade from Versions Prior to 11 SP3</h6><p>
+    </p><div class="figure" id="idm139676615080816"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_missing_cert.png"><img src="images/smt_missing_cert.png" width="" alt="Missing Server Certificate" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 1.3: </span><span class="name">Missing Server Certificate </span><a title="Permalink" class="permalink" href="#idm139676615080816">#</a></h6></div></div></li></ol></div></div></div><div class="sect1 " id="smt.installation.upgrade"><div class="titlepage"><div><div><h2 class="title" id="smt.installation.upgrade"><span class="number">1.2 </span><span class="name">Upgrading from Previous Versions of RMT</span> <a title="Permalink" class="permalink" href="#smt.installation.upgrade">#</a></h2></div></div></div><p> This section provides information on upgrading RMT from the
+      previous versions. </p><div id="idm139676615436384" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Upgrade from Versions Prior to 11 SP3</h6><p>
     
     A direct upgrade path from SMT to RMT prior to version 11 SP4 is not
    supported. You need to do the following:</p><div class="orderedlist "><ol class="orderedlist" type="1"><li class="listitem "><p>Upgrade the operating system to SUSE Linux Enterprise Server 11
@@ -329,7 +329,7 @@ hljs.configure({
           RMT with the customer center. It is recommended to ensure
           that the repositories are up to date. This can be done using
           the following commands: </p><div class="verbatim-wrap"><pre class="screen">   smt sync
-   smt mirror</pre></div></div></div></div><div class="sect1 " id="idm140704895959936"><div class="titlepage"><div><div><h2 class="title" id="idm140704895959936"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span> <a title="Permalink" class="permalink" href="#idm140704895959936">#</a></h2></div></div></div><p>
+   smt mirror</pre></div></div></div></div><div class="sect1 " id="idm139676616086736"><div class="titlepage"><div><div><h2 class="title" id="idm139676616086736"><span class="number">1.3 </span><span class="name">Enabling SLP Announcements</span> <a title="Permalink" class="permalink" href="#idm139676616086736">#</a></h2></div></div></div><p>
    RMT includes the SLP service description file
    (<code class="filename">/etc/slp.reg.d/smt.reg</code>). To enable SLP
    announcements of the RMT service, open respective ports in your
@@ -371,7 +371,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
    </p><p>
     If you want to abort the configuration and cancel any changes, click
     <span class="guimenu">Cancel</span>.
-   </p><div id="idm140704901815600" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Check for Certificate</h6><p>
+   </p><div id="idm139676634617792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Check for Certificate</h6><p>
      When the RMT Configuration applies changes, it checks whether the common
      server certificate exists. If the certificate
      does not exist, you will be asked whether the certificate should be created.
@@ -382,7 +382,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
           RMT Configuration. </p></li><li class="step "><p>
      Activate the <span class="guimenu">Enable Subscription Management Tool service
      (SMT)</span> option.
-    </p><div id="idm140704894568192" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Organization Credentials</h6><p>
+    </p><div id="idm139676635603360" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Organization Credentials</h6><p>
       Specify organization credentials before activating RMT. For more
       information on how to
       set organization credentials with YaST, see
@@ -475,7 +475,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
           click <span class="guimenu">OK</span>. </p></li></ol></div></div></div></div><div class="chapter " id="smt.mirroring"><div class="titlepage"><div><div><h1 class="title"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span> <a title="Permalink" class="permalink" href="#smt.mirroring">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_mirroring.xml</li><li><span class="ds-label">ID: </span>smt.mirroring</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span></a></span></dt><dt><span class="sect1"><a href="#smt.mirroring.manage"><span class="number">3.2 </span><span class="name">Managing Software Repositories with RMT Command Line Tools</span></a></span></dt><dt><span class="sect1"><a href="#smt.repo.preload"><span class="number">3.3 </span><span class="name">Repository Preloading</span></a></span></dt></dl></div></div><p>
   You can mirror the installation and update repositories on the RMT
   server. This way, you do not need to download updates on each machine, which saves time and bandwidth.
- </p><div id="idm140704897746560" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: SUSE Linux Enterprise Server 9 Repositories</h6><p>
+ </p><div id="idm139676636370576" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: SUSE Linux Enterprise Server 9 Repositories</h6><p>
    As SUSE Linux Enterprise Server 9 is no longer supported, RMT does not mirror SUSE Linux Enterprise Server 9
    repositories.
   </p></div><div class="sect1 " id="smt.mirroring.getcredentials"><div class="titlepage"><div><div><h2 class="title" id="smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span> <a title="Permalink" class="permalink" href="#smt.mirroring.getcredentials">#</a></h2></div></div></div><p>
@@ -516,7 +516,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
    repositories, and setting up custom repositories on the command line. For
    details on the YaST RMT Server Management module, see
    <a class="xref" href="#smt.management" title="Chapter 4. Managing Repositories with YaST RMT Server Management">Chapter 4, <em>Managing Repositories with YaST RMT Server Management</em></a>.
-  </p><div class="sect2 " id="idm140704897088496"><div class="titlepage"><div><div><h3 class="title" id="idm140704897088496"><span class="number">3.2.1 </span><span class="name">Updating the Local RMT Database</span> <a title="Permalink" class="permalink" href="#idm140704897088496">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="idm139676638784624"><div class="titlepage"><div><div><h3 class="title" id="idm139676638784624"><span class="number">3.2.1 </span><span class="name">Updating the Local RMT Database</span> <a title="Permalink" class="permalink" href="#idm139676638784624">#</a></h3></div></div></div><p>
 
     
     The local RMT database needs to be updated periodically with the
@@ -526,7 +526,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     To update the RMT database manually, use the <code class="command">smt-sync</code>
     command. For more information about the <code class="command">smt-sync</code>
     command, see <a class="xref" href="#smt.scripts.smtsync" title="7.1.1.7. smt-ssc-sync">Section 7.1.1.7, “smt-ssc-sync”</a>.
-   </p></div><div class="sect2 " id="idm140704896628224"><div class="titlepage"><div><div><h3 class="title" id="idm140704896628224"><span class="number">3.2.2 </span><span class="name">Enabled Repositories and Repositories That Can Be Mirrored</span> <a title="Permalink" class="permalink" href="#idm140704896628224">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm139676635632960"><div class="titlepage"><div><div><h3 class="title" id="idm139676635632960"><span class="number">3.2.2 </span><span class="name">Enabled Repositories and Repositories That Can Be Mirrored</span> <a title="Permalink" class="permalink" href="#idm139676635632960">#</a></h3></div></div></div><p>
     The database installed with RMT contains information about all software
     repositories available on SUSE Customer Center. However, the used mirror credentials
     determine which repositories can really be mirrored. For more information
@@ -540,7 +540,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     database will be mirrored. For more information about configuring which
     repositories should be mirrored,
     see <a class="xref" href="#smt.mirroring.manage.domirror" title="3.2.4. Selecting Repositories to Be Mirrored">Section 3.2.4, “Selecting Repositories to Be Mirrored”</a>.
-   </p></div><div class="sect2 " id="idm140704892534416"><div class="titlepage"><div><div><h3 class="title" id="idm140704892534416"><span class="number">3.2.3 </span><span class="name">Getting Information about Repositories</span> <a title="Permalink" class="permalink" href="#idm140704892534416">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm139676639158032"><div class="titlepage"><div><div><h3 class="title" id="idm139676639158032"><span class="number">3.2.3 </span><span class="name">Getting Information about Repositories</span> <a title="Permalink" class="permalink" href="#idm139676639158032">#</a></h3></div></div></div><p>
     Use the <code class="command">smt-repos</code> command to list available software
     repositories and additional information. Using this command without any
     options lists all available repositories, including repositories that
@@ -617,7 +617,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
       SUSE-Linux-Enterprise-Server-SP3,10,ppc</code> command. The list of
       known products can be obtained with the
       <code class="command">smt-list-products</code> command.
-     </p><div id="idm140704894760064" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installer Self-Update Repository</h6><p>
+     </p><div id="idm139676616076640" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installer Self-Update Repository</h6><p>
        RMT supports mirroring the installer self-update repository (find more
        information in <span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”, Chapter 8 “Installation Steps”, Section 8.2.1 “Self-Update Process”</span>). If
        you need to provide the self-update repository, identify and enable it,
@@ -653,7 +653,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
       press <span class="keycap">Enter</span>. If you want to disable all the
       listed repositories, use <code class="literal">a</code> and press
       <span class="keycap">Enter</span>.
-     </p></li></ol></div></div></div><div class="sect2 " id="idm140704901591600"><div class="titlepage"><div><div><h3 class="title" id="idm140704901591600"><span class="number">3.2.5 </span><span class="name">Deleting Mirrored Repositories</span> <a title="Permalink" class="permalink" href="#idm140704901591600">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="idm139676644698736"><div class="titlepage"><div><div><h3 class="title" id="idm139676644698736"><span class="number">3.2.5 </span><span class="name">Deleting Mirrored Repositories</span> <a title="Permalink" class="permalink" href="#idm139676644698736">#</a></h3></div></div></div><p>
     You can delete mirrored repositories that are no longer used. If you delete
     a repository, it will be physically removed from the SMT storage area.
    </p><p>
@@ -665,10 +665,10 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     The <code class="option">--delete</code> option lists all repositories. You can delete the specified
     repositories by entering the ID number or the name and target. To delete all repositories, enter
     <span class="guimenu">a</span>.
-   </p><div id="idm140704894493248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Detecting Repository IDs</h6><p>
+   </p><div id="idm139676638803600" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Detecting Repository IDs</h6><p>
      Every repository has an SHA-1 hash that you can use as an ID. You can get the
      repository's hash by calling <code class="command">smt-repos -v</code>.
-    </p></div></div><div class="sect2 " id="idm140704896941312"><div class="titlepage"><div><div><h3 class="title" id="idm140704896941312"><span class="number">3.2.6 </span><span class="name">Mirroring Custom Repositories</span> <a title="Permalink" class="permalink" href="#idm140704896941312">#</a></h3></div></div></div><p>
+    </p></div></div><div class="sect2 " id="idm139676638801584"><div class="titlepage"><div><div><h3 class="title" id="idm139676638801584"><span class="number">3.2.6 </span><span class="name">Mirroring Custom Repositories</span> <a title="Permalink" class="permalink" href="#idm139676638801584">#</a></h3></div></div></div><p>
     RMT also makes it possible to mirror repositories that are not available
     at the SUSE Customer Center. These repositories are called <span class="quote">“<span class="quote">custom
     repositories</span>”</span>, and they can be mirrored using the
@@ -706,7 +706,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
       <code class="literal">425</code>:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-setup-custom-repositories --productid 423 --productid 424 \
 --productid 425 --name 'My_repository' \
---exturl 'http://example.com/My_repository'</pre></div></li></ol></div></div><div id="idm140704894146400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mirroring Unsigned Repositories</h6><p>
+--exturl 'http://example.com/My_repository'</pre></div></li></ol></div></div><div id="idm139676613471520" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mirroring Unsigned Repositories</h6><p>
      By default, SUSE Linux Enterprise 10 does not allow the use of unsigned
      repositories. So if you want to mirror unsigned repositories and
      use them on client machines, be aware that the package installation
@@ -737,7 +737,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> rsync -av 'smt12:/srv/www/htdocs/repo/\$RCE/SLES12-Updates/sle-12-x86_64/' \
  '/srv/www/htdocs/repo/$RCE/SLES12-Updates/sle-12-x86_64/'</pre></div></li><li class="step "><p>
      To get the repository data fixed, run the following command:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-mirror -d -L /var/log/smt/smt-mirror.log</pre></div></li></ol></div></div><div id="idm140704894489536" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Possible Error Messages</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-mirror -d -L /var/log/smt/smt-mirror.log</pre></div></li></ol></div></div><div id="idm139676634579440" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Possible Error Messages</h6><p>
     Errors, such as <code class="literal">repomd.xml is the same, but repo is
     not valid. Start mirroring.</code>, are considered normal.
  They occur because the metadata of the preloaded repositories in
@@ -757,7 +757,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     </p></li></ul></div><p>
    This opens the RMT Management application window and switches to the
    <span class="guimenu">Repositories</span> section.
-  </p><div class="figure" id="idm140704893790944"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_repos.png"><img src="images/smt_repos.png" width="" alt="List of Repositories" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.1: </span><span class="name">List of Repositories </span><a title="Permalink" class="permalink" href="#idm140704893790944">#</a></h6></div></div></div><div class="sect1 " id="smt.yast.staging.viewing"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span> <a title="Permalink" class="permalink" href="#smt.yast.staging.viewing">#</a></h2></div></div></div><p>
+  </p><div class="figure" id="idm139676634691600"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_repos.png"><img src="images/smt_repos.png" width="" alt="List of Repositories" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.1: </span><span class="name">List of Repositories </span><a title="Permalink" class="permalink" href="#idm139676634691600">#</a></h6></div></div></div><div class="sect1 " id="smt.yast.staging.viewing"><div class="titlepage"><div><div><h2 class="title" id="smt.yast.staging.viewing"><span class="number">4.2 </span><span class="name">Viewing and Managing Repositories</span> <a title="Permalink" class="permalink" href="#smt.yast.staging.viewing">#</a></h2></div></div></div><p>
    In the <span class="guimenu">Repositories</span> section, you can see the list of all
    available package repositories for RMT. For each repository, the list
    shows the repository's name, target product and architecture, mirroring and
@@ -770,7 +770,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
     <span class="guimenu">Filter</span> to see only the matching entries. To cancel the
     current filter and display all repositories, clear the <span class="guimenu">Repository
     Filter</span> field and click <span class="guimenu">Filter</span>.
-   </p><div class="figure" id="idm140704872480176"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_repo_filter.png"><img src="images/smt_repo_filter.png" width="" alt="Repository Filter" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.2: </span><span class="name">Repository Filter </span><a title="Permalink" class="permalink" href="#idm140704872480176">#</a></h6></div></div></div><div class="sect2 " id="smt.yast.staging.viewing.mirror"><div class="titlepage"><div><div><h3 class="title" id="smt.yast.staging.viewing.mirror"><span class="number">4.2.2 </span><span class="name">Mirroring Repositories</span> <a title="Permalink" class="permalink" href="#smt.yast.staging.viewing.mirror">#</a></h3></div></div></div><p>
+   </p><div class="figure" id="idm139676639057504"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_repo_filter.png"><img src="images/smt_repo_filter.png" width="" alt="Repository Filter" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.2: </span><span class="name">Repository Filter </span><a title="Permalink" class="permalink" href="#idm139676639057504">#</a></h6></div></div></div><div class="sect2 " id="smt.yast.staging.viewing.mirror"><div class="titlepage"><div><div><h3 class="title" id="smt.yast.staging.viewing.mirror"><span class="number">4.2.2 </span><span class="name">Mirroring Repositories</span> <a title="Permalink" class="permalink" href="#smt.yast.staging.viewing.mirror">#</a></h3></div></div></div><p>
     Before you can offer package repositories, you need to create a
     local mirror of their packages. To do this, follow the procedure below.
    </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -791,7 +791,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
       result.
      </p></li><li class="step "><p>
       Click <span class="guimenu">OK</span> to refresh the list of repositories.
-     </p></li></ol></div></div><div class="figure" id="idm140704892806896"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_mirroring-done.png"><img src="images/smt_mirroring-done.png" width="" alt="Status of Mirroring Process" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.3: </span><span class="name">Status of Mirroring Process </span><a title="Permalink" class="permalink" href="#idm140704892806896">#</a></h6></div></div></div></div></div><div class="chapter " id="smt.registration"><div class="titlepage"><div><div><h1 class="title"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span> <a title="Permalink" class="permalink" href="#smt.registration">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_registration.xml</li><li><span class="ds-label">ID: </span>smt.registration</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.registration.clients"><span class="number">5.1 </span><span class="name">Listing Registered Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.delete"><span class="number">5.2 </span><span class="name">Deleting Registrations</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.smtregister"><span class="number">5.3 </span><span class="name">Manual Registration of Clients at SUSE Customer Center</span></a></span></dt><dt><span class="sect1"><a href="#smt.registrations.schedule"><span class="number">5.4 </span><span class="name">Scheduling Periodic Registrations of Clients at SUSE Customer Center</span></a></span></dt></dl></div></div><p>
+     </p></li></ol></div></div><div class="figure" id="idm139676615260720"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_mirroring-done.png"><img src="images/smt_mirroring-done.png" width="" alt="Status of Mirroring Process" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 4.3: </span><span class="name">Status of Mirroring Process </span><a title="Permalink" class="permalink" href="#idm139676615260720">#</a></h6></div></div></div></div></div><div class="chapter " id="smt.registration"><div class="titlepage"><div><div><h1 class="title"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span> <a title="Permalink" class="permalink" href="#smt.registration">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_registration.xml</li><li><span class="ds-label">ID: </span>smt.registration</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.registration.clients"><span class="number">5.1 </span><span class="name">Listing Registered Clients</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.delete"><span class="number">5.2 </span><span class="name">Deleting Registrations</span></a></span></dt><dt><span class="sect1"><a href="#smt.registration.smtregister"><span class="number">5.3 </span><span class="name">Manual Registration of Clients at SUSE Customer Center</span></a></span></dt><dt><span class="sect1"><a href="#smt.registrations.schedule"><span class="number">5.4 </span><span class="name">Scheduling Periodic Registrations of Clients at SUSE Customer Center</span></a></span></dt></dl></div></div><p>
   RMT lets you register and manage client machines on SUSE Customer Center. Client machines
   must be configured to use RMT. For information about configuring clients to
   use RMT, see <a class="xref" href="#smt.client" title="Chapter 6. Configuring Clients to Use RMT">Chapter 6, <em>Configuring Clients to Use RMT</em></a>.
@@ -848,7 +848,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
      <span class="guimenu">Hour</span> and <span class="guimenu">Minute</span> or appropriate time periods. For weekly and monthly
      schedules, select the <span class="guimenu">Day of the Week</span> or the
      <span class="guimenu">Day of the Month</span> the mirroring should occur.
-    </p><div id="idm140704897511648" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Lowest Registration Frequency</h6><p>
+    </p><div id="idm139676639433808" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Lowest Registration Frequency</h6><p>
       Do not set the frequency lower than 10 minutes, because the maximum value
       of the <code class="literal">rndRegister</code> is 450 (7.5 minutes). If the
       frequency is lower, it may happen that the started process is still
@@ -916,11 +916,11 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
    <em class="replaceable ">FQDN</em> being the fully qualified host name of the
    RMT server. It must be identical to the FQDN of the server certificate
    used on the RMT server. Example:
-  </p><div class="verbatim-wrap"><pre class="screen">regurl=https://smt.example.com/connect/</pre></div><div id="idm140704871769392" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Beware of Typing Errors</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">regurl=https://smt.example.com/connect/</pre></div><div id="idm139676636492112" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Beware of Typing Errors</h6><p>
     Make sure the values you enter are correct. If <code class="literal">regurl</code>
     has not been specified correctly, the registration of the update source
     will fail.
-   </p></div><div id="idm140704871767488" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Change of RMT Server Certificate</h6><p>
+   </p></div><div id="idm139676614258208" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Change of RMT Server Certificate</h6><p>
     If the RMT server gets a new certificate from an untrusted CA, the
     clients need to retrieve the new CA certificate file.  YaST displays a
     dialog for importing a new certificate. If you confirm importing the new
@@ -965,7 +965,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
    is provided together with RMT. This script allows you to configure a
    client machine to use an RMT server. It can also be used to reconfigure an
    existing client to use a different RMT server.
-  </p><div id="idm140704891715952" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Installation of <code class="command">wget</code></h6><p>
+  </p><div id="idm139676639579424" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Installation of <code class="command">wget</code></h6><p>
     The script <code class="filename">clientSetup4SMT.sh</code> itself uses
     <code class="command">wget</code>, so <code class="command">wget</code> must be installed on
     the client.
@@ -1010,12 +1010,12 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
      <code class="command">yast2 scc</code> (SUSE Linux Enterprise Server 12) module on the client.
     </p></li></ol></div></div><p>
    This script is also provided for download. You can get it by running
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>wget http://smt.example.com/repo/tools/clientSetup4SMT.sh</pre></div><div id="idm140704873343312" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Extension and Module Registration</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>wget http://smt.example.com/repo/tools/clientSetup4SMT.sh</pre></div><div id="idm139676638892672" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Extension and Module Registration</h6><p>
     When registering an existing system against RMT—both on the
     command line and using YaST—you need to register additional
     extensions and modules separately, one by one. This applies both to
     already installed extensions and to extensions that you plan to install.
-   </p></div><div class="sect2 " id="idm140704873340912"><div class="titlepage"><div><div><h3 class="title" id="idm140704873340912"><span class="number">6.3.1 </span><span class="name">Problems Downloading GPG Keys from the Server</span> <a title="Permalink" class="permalink" href="#idm140704873340912">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm139676638890272"><div class="titlepage"><div><div><h3 class="title" id="idm139676638890272"><span class="number">6.3.1 </span><span class="name">Problems Downloading GPG Keys from the Server</span> <a title="Permalink" class="permalink" href="#idm139676638890272">#</a></h3></div></div></div><p>
     The <code class="literal">apache2-example-pages</code> package includes a
     <code class="filename">robots.txt</code> file. The file is installed into the
     Apache2 document root directory, and controls how clients can access files
@@ -1073,7 +1073,7 @@ rcslpd start</pre></div></div></div><div class="chapter " id="smt.server"><div c
    details on SUSE Linux Enterprise Server Subscription with Expanded Support. This section discusses
    the actions required to configure the RMT server and clients (RHEL
    servers) for this solution.
-  </p><div id="idm140704873467648" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SUSE Linux Enterprise Server 10</h6><p>
+  </p><div id="idm139676635065056" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SUSE Linux Enterprise Server 10</h6><p>
     Configuring RHEL client with Subscription Management Tool for SUSE Linux Enterprise (RMT
     1.0) running SUSE Linux Enterprise Server 10 is slightly different. For more information, see
     <a class="link" href="http://www.novell.com/support/search.do?usemicrosite=true&amp;searchString=7001751" target="_blank">How
@@ -1164,7 +1164,7 @@ gpgcheck=1</pre></div><p>
     be installed, configured and executed as described below.
    </p></div><div class="sect2 " id="smt.client.rhel.rhel52"><div class="titlepage"><div><div><h3 class="title" id="smt.client.rhel.rhel52"><span class="number">6.7.4 </span><span class="name">How to Register RHEL 5.2 against RMT</span> <a title="Permalink" class="permalink" href="#smt.client.rhel.rhel52">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Install the suseRegisterRES package.
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> yum install suseRegisterRES</pre></div><div id="idm140704897649712" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Packages</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> yum install suseRegisterRES</pre></div><div id="idm139676614994064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Packages</h6><p>
        You may need to install the <code class="literal">perl-Crypt-SSLeay</code> and
        <code class="literal">perl-XML-Parser</code> packages from the original RHEL
        media.
@@ -1181,7 +1181,7 @@ gpgcheck=1</pre></div><p>
       Install the <code class="literal">suseRegisterRES</code> package:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> up2date --get suseRegisterRES
 <code class="prompt user">tux &gt; </code><code class="command">sudo</code> up2date --get perl-XML-Writer
-<code class="prompt user">tux &gt; </code><code class="command">sudo</code> rpm -ivh /var/spool/up2date/suseRegisterRES*.rpm /var/spool/up2date/perl-XML-Writer-0*.rpm</pre></div><div id="idm140704899904880" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Packages</h6><p>
+<code class="prompt user">tux &gt; </code><code class="command">sudo</code> rpm -ivh /var/spool/up2date/suseRegisterRES*.rpm /var/spool/up2date/perl-XML-Writer-0*.rpm</pre></div><div id="idm139676644741312" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Packages</h6><p>
        You may need to install the <code class="literal">perl-Crypt-SSLeay</code> and
        <code class="literal">perl-XML-Parser</code> packages from the original RHEL
        media.
@@ -1194,7 +1194,7 @@ gpgcheck=1</pre></div><p>
       or (for SUSE Customer Center)
      </p><div class="verbatim-wrap"><pre class="screen">url = https://<em class="replaceable ">smt.example.com</em>/connect/</pre></div></li><li class="step "><p>
       Register the system:
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> suse_register</pre></div></li></ol></div></div></div></div></div><div class="chapter " id="smt.tools"><div class="titlepage"><div><div><h1 class="title"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span> <a title="Permalink" class="permalink" href="#smt.tools">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_tools.xml</li><li><span class="ds-label">ID: </span>smt.tools</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.scripts"><span class="number">7.1 </span><span class="name">Important Scripts and Tools</span></a></span></dt><dt><span class="sect1"><a href="#idm140704873767712"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span></a></span></dt><dt><span class="sect1"><a href="#smt.tools.cert"><span class="number">7.3 </span><span class="name">Server Certificates</span></a></span></dt></dl></div></div><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> suse_register</pre></div></li></ol></div></div></div></div></div><div class="chapter " id="smt.tools"><div class="titlepage"><div><div><h1 class="title"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span> <a title="Permalink" class="permalink" href="#smt.tools">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_tools.xml</li><li><span class="ds-label">ID: </span>smt.tools</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#smt.scripts"><span class="number">7.1 </span><span class="name">Important Scripts and Tools</span></a></span></dt><dt><span class="sect1"><a href="#idm139676643310496"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span></a></span></dt><dt><span class="sect1"><a href="#smt.tools.cert"><span class="number">7.3 </span><span class="name">Server Certificates</span></a></span></dt></dl></div></div><p>
   This chapter describes the most important scripts, configuration files and
   certificates shipped with RMT.
  </p><div class="sect1 " id="smt.scripts"><div class="titlepage"><div><div><h2 class="title" id="smt.scripts"><span class="number">7.1 </span><span class="name">Important Scripts and Tools</span> <a title="Permalink" class="permalink" href="#smt.scripts">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_scripts.xml</li><li><span class="ds-label">ID: </span>smt.scripts</li></ul></div></div></div></div><p>
@@ -1250,7 +1250,7 @@ gpgcheck=1</pre></div><p>
       command consisting of <code class="command">smt</code> followed by the dash and the desired
       sub-command. For example, it is possible to use
       either <code class="command">smt mirror</code> or
-        <code class="command">smt-mirror</code>, as both have the same meaning. </p><div id="idm140704897659312" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Conflicting Commands</h6><p>
+        <code class="command">smt-mirror</code>, as both have the same meaning. </p><div id="idm139676635550848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Conflicting Commands</h6><p>
     Depending on your <code class="literal">$PATH</code> environment variable, the
     RMT <code class="command">smt</code> command
     (<code class="filename">/usr/sbin/smt</code>) may collide with the
@@ -1261,7 +1261,7 @@ gpgcheck=1</pre></div><p>
    </p><p>
     Another solution is to always use the <code class="command">smt-</code>
     <em class="replaceable ">SUBCOMMAND</em> syntax.
-   </p></div><div class="sect3 " id="idm140704897653008"><div class="titlepage"><div><div><h4 class="title" id="idm140704897653008"><span class="number">7.1.1.1 </span><span class="name">smt-client</span> <a title="Permalink" class="permalink" href="#idm140704897653008">#</a></h4></div></div></div><p>
+   </p></div><div class="sect3 " id="idm139676634463200"><div class="titlepage"><div><div><h4 class="title" id="idm139676634463200"><span class="number">7.1.1.1 </span><span class="name">smt-client</span> <a title="Permalink" class="permalink" href="#idm139676634463200">#</a></h4></div></div></div><p>
     The <code class="command">smt-client</code> command shows information about
     registered clients. The information includes the following:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -1276,42 +1276,42 @@ gpgcheck=1</pre></div><p>
       last contact with the RMT server
      </p></li></ul></div><p>
     The <code class="command">smt-client</code> supports the following options:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873558448"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676640984896"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
      </span></dt><dd><p>
        Shows detailed information about the client. The last contact date is
        shown as well.
-      </p></dd><dt id="idm140704897424592"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
+      </p></dd><dt id="idm139676640982272"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
      </span></dt><dd><p>
        Enables debugging mode.
-      </p></dd><dt id="idm140704897422048"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
+      </p></dd><dt id="idm139676640979728"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
      <em class="replaceable ">LOGFILE</em>
      </span></dt><dd><p>
        Specifies the file the log will be written to.
-      </p></dd><dt id="idm140704897419008"><span class="term "><code class="option">--hostname</code> or <code class="option">-h</code> with the
+      </p></dd><dt id="idm139676636619168"><span class="term "><code class="option">--hostname</code> or <code class="option">-h</code> with the
      parameter <em class="replaceable ">HOSTNAME</em>
      </span></dt><dd><p>
        Lists the entries whose host name begins with
        <em class="replaceable ">HOSTNAME</em>.
-      </p></dd><dt id="idm140704894451360"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
+      </p></dd><dt id="idm139676636615680"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
      <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Lists the entries whose GUID is <em class="replaceable ">ID</em>.
-      </p></dd><dt id="idm140704894447936"><span class="term "><code class="option">--severity</code> or <code class="option">-s</code> with the
+      </p></dd><dt id="idm139676636612208"><span class="term "><code class="option">--severity</code> or <code class="option">-s</code> with the
      parameter <em class="replaceable ">LEVEL</em>
      </span></dt><dd><p>
        Filters the result by the patch status information. The value
        <em class="replaceable ">level</em> can be one of <code class="literal">packagemanager</code>,
        <code class="literal">security</code>, <code class="literal">recommended</code> or <code class="literal">optional</code>.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704894442416"><div class="titlepage"><div><div><h4 class="title" id="idm140704894442416"><span class="number">7.1.1.2 </span><span class="name">smt-delete-registration</span> <a title="Permalink" class="permalink" href="#idm140704894442416">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676636553184"><div class="titlepage"><div><div><h4 class="title" id="idm139676636553184"><span class="number">7.1.1.2 </span><span class="name">smt-delete-registration</span> <a title="Permalink" class="permalink" href="#idm139676636553184">#</a></h4></div></div></div><p>
     The <code class="command">smt-delete-registration</code> command deletes one or
     more registrations from RMT and SUSE Customer Center. It unregisters machines
     from the system. The following options are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704891117968"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676636551120"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
      <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Deletes the machine with the guid <em class="replaceable ">ID</em> from
        the system. You can use this option multiple times.
-      </p></dd><dt id="idm140704891114528"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
+      </p></dd><dt id="idm139676640945072"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
      </span></dt><dd><p>
 
        Enables debugging mode.
@@ -1319,40 +1319,40 @@ gpgcheck=1</pre></div><p>
     The <code class="command">smt-job</code> script manages jobs for individual RMT
     clients. You can this command to list, create, edit, and delete jobs. The
     following options are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704893141408"><span class="term "><code class="option">--list</code> or <code class="option">-l</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676640939824"><span class="term "><code class="option">--list</code> or <code class="option">-l</code>
      </span></dt><dd><p>
        Lists all client jobs. This is the default if the operation mode
        switch is omitted.
-      </p></dd><dt id="idm140704893138784"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code> with the parameter
+      </p></dd><dt id="idm139676640937200"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code> with the parameter
      <em class="replaceable ">LEVEL</em>
      </span></dt><dd><p>
        Shows detailed information about a job or jobs in a list mode. The
        <em class="replaceable ">level</em> value can be a number from 0 to 3.
        The higher the value, the more verbose the command is.
-      </p></dd><dt id="idm140704893135184"><span class="term "><code class="option">--create</code> or <code class="option">-c</code>
+      </p></dd><dt id="idm139676615141056"><span class="term "><code class="option">--create</code> or <code class="option">-c</code>
      </span></dt><dd><p>
        Creates a new job.
-      </p></dd><dt id="idm140704897325168"><span class="term "><code class="option">--edit</code> or <code class="option">-e</code>
+      </p></dd><dt id="idm139676615138512"><span class="term "><code class="option">--edit</code> or <code class="option">-e</code>
      </span></dt><dd><p>
        Edits an existing job.
-      </p></dd><dt id="idm140704897322624"><span class="term "><code class="option">--delete</code> or <code class="option">-d</code>
+      </p></dd><dt id="idm139676615135968"><span class="term "><code class="option">--delete</code> or <code class="option">-d</code>
      </span></dt><dd><p>
        Deletes an existing job.
-      </p></dd><dt id="idm140704897320080"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
+      </p></dd><dt id="idm139676615133424"><span class="term "><code class="option">--guid</code> or <code class="option">-g</code> with the parameter
      <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Specifies the client's guid. This parameter
        can be used multiple times to create a job for more than one client.
-      </p></dd><dt id="idm140704897316976"><span class="term "><code class="option">--jobid</code> or <code class="option">-j</code> with the parameter
+      </p></dd><dt id="idm139676643668432"><span class="term "><code class="option">--jobid</code> or <code class="option">-j</code> with the parameter
      <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Specifies the job ID. You need to specify job ID and client's
        guid when editing or deleting a job,
        as the same job for multiple clients has the same job ID.
-      </p></dd><dt id="idm140704897788768"><span class="term "><code class="option">--deleteall</code> or <code class="option">-A</code><em class="replaceable ">id</em>
+      </p></dd><dt id="idm139676643665264"><span class="term "><code class="option">--deleteall</code> or <code class="option">-A</code><em class="replaceable ">id</em>
      </span></dt><dd><p> Omit either the client's guid or the job ID in the delete
               operation. The missing parameter will match all respective
-              jobs. </p></dd><dt id="idm140704897785808"><span class="term "><code class="option">--type</code> or <code class="option">-t</code> with the parameter
+              jobs. </p></dd><dt id="idm139676643662304"><span class="term "><code class="option">--type</code> or <code class="option">-t</code> with the parameter
      <em class="replaceable ">TYPE</em>
      </span></dt><dd><p>
        Specifies the job type. The type can be one of
@@ -1362,43 +1362,43 @@ gpgcheck=1</pre></div><p>
        <code class="literal">eject</code>. On the client, only the following job types
        are enabled by default: <code class="literal">patchstatus</code>,
        <code class="literal">softwarepush</code> and <code class="literal">update</code>.
-      </p></dd><dt id="idm140704900266848"><span class="term "><code class="option">--description <em class="replaceable ">DESCRIPTION</em></code>
+      </p></dd><dt id="idm139676644798064"><span class="term "><code class="option">--description <em class="replaceable ">DESCRIPTION</em></code>
      </span></dt><dd><p>
        Specifies a job description.
-      </p></dd><dt id="idm140704900264512"><span class="term "><code class="option">--parent</code><em class="replaceable ">ID</em>
+      </p></dd><dt id="idm139676644795664"><span class="term "><code class="option">--parent</code><em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Specifies the job ID of the parent job. Use it to define a
        dependency. A job will not be processed until its parent has
        successfully finished.
-      </p></dd><dt id="idm140704900261984"><span class="term "><code class="option">--name</code> or <code class="option">-n</code> with the parameter
+      </p></dd><dt id="idm139676613109072"><span class="term "><code class="option">--name</code> or <code class="option">-n</code> with the parameter
      <em class="replaceable ">NAME</em>
      </span></dt><dd><p>
        Specifies a job name.
-      </p></dd><dt id="idm140704899894736"><span class="term "><code class="option">--persistent</code>
+      </p></dd><dt id="idm139676613106064"><span class="term "><code class="option">--persistent</code>
      </span></dt><dd><p>
        Specifies if a job is persistent. Non-persistent jobs are processed
        only once, while persistent jobs are processed again and again. Use
        <code class="option">--timelag</code> to define the time that elapses until the
        next run.
-      </p></dd><dt id="idm140704899892016"><span class="term "><code class="option">--finished</code>
+      </p></dd><dt id="idm139676613103344"><span class="term "><code class="option">--finished</code>
      </span></dt><dd><p>
        Search option for finished jobs.
-      </p></dd><dt id="idm140704899889904"><span class="term "><code class="option">--targeted</code><em class="replaceable ">time</em>
+      </p></dd><dt id="idm139676613101232"><span class="term "><code class="option">--targeted</code><em class="replaceable ">time</em>
      </span></dt><dd><p>
        Specifies the earliest execution time of a job. Note that the job most
        likely will not run exactly at that point in time, but probably some
        minutes or hours after. The reason is that the client polls in a
        fixed interval for jobs.
-      </p></dd><dt id="idm140704899887280"><span class="term "><code class="option">--expires</code><em class="replaceable ">time</em>
+      </p></dd><dt id="idm139676614317888"><span class="term "><code class="option">--expires</code><em class="replaceable ">time</em>
      </span></dt><dd><p>
        Defines when the job will no longer be executed anymore.
-      </p></dd><dt id="idm140704871783856"><span class="term "><code class="option">--timelag</code><em class="replaceable ">time</em>
+      </p></dd><dt id="idm139676614315472"><span class="term "><code class="option">--timelag</code><em class="replaceable ">time</em>
      </span></dt><dd><p>
        Defines the time interval for persistent jobs.
       </p></dd></dl></div><p> For a complete list of available options and their explanations,
         see the manual page of the <code class="command">smt-job</code> command
           (<code class="command">man</code>
-        <code class="command">smt-job</code>). </p><div class="sect4 " id="idm140704871779520"><div class="titlepage"><div><div><h5 class="title" id="idm140704871779520"><span class="number">7.1.1.3.1 </span><span class="name">Examples</span> <a title="Permalink" class="permalink" href="#idm140704871779520">#</a></h5></div></div></div><p>
+        <code class="command">smt-job</code>). </p><div class="sect4 " id="idm139676614311136"><div class="titlepage"><div><div><h5 class="title" id="idm139676614311136"><span class="number">7.1.1.3.1 </span><span class="name">Examples</span> <a title="Permalink" class="permalink" href="#idm139676614311136">#</a></h5></div></div></div><p>
      List all finished jobs:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-job --list --finished</pre></div><p>
      Create a <code class="literal">softwarepush</code> job that installs <code class="literal">xterm</code>
@@ -1411,55 +1411,55 @@ gpgcheck=1</pre></div><p>
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-job --delete -jobid 42 --deleteall</pre></div></div></div><div class="sect3 " id="smt.scripts.listproducts"><div class="titlepage"><div><div><h4 class="title" id="smt.scripts.listproducts"><span class="number">7.1.1.4 </span><span class="name">smt-list-products</span> <a title="Permalink" class="permalink" href="#smt.scripts.listproducts">#</a></h4></div></div></div><p>
     The <code class="command">smt-list-products</code> script lists all software
     products in the RMT database. The following options are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873489632"><span class="term "><code class="option">--used</code> or <code class="option">-u</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676635160368"><span class="term "><code class="option">--used</code> or <code class="option">-u</code>
      </span></dt><dd><p>
 
        Shows only used products.
-      </p></dd><dt id="idm140704873487072"><span class="term "><code class="option">--catstat</code> or <code class="option">-c</code>
+      </p></dd><dt id="idm139676635157808"><span class="term "><code class="option">--catstat</code> or <code class="option">-c</code>
      </span></dt><dd><p>
 
        Shows whether all repositories needed for a product are locally
        mirrored.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704894803328"><div class="titlepage"><div><div><h4 class="title" id="idm140704894803328"><span class="number">7.1.1.5 </span><span class="name">smt-list-registrations</span> <a title="Permalink" class="permalink" href="#idm140704894803328">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676635154880"><div class="titlepage"><div><div><h4 class="title" id="idm139676635154880"><span class="number">7.1.1.5 </span><span class="name">smt-list-registrations</span> <a title="Permalink" class="permalink" href="#idm139676635154880">#</a></h4></div></div></div><p>
     The <code class="command">smt-list-registrations</code> script lists all
     registrations. There are two options available for this command:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704894801328"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676635152880"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
      </span></dt><dd><p>
        Shows detailed information about the registered devices.
-      </p></dd><dt id="idm140704894798752"><span class="term "><code class="option">--format</code> or <code class="option">-f</code> with the parameter
+      </p></dd><dt id="idm139676632893712"><span class="term "><code class="option">--format</code> or <code class="option">-f</code> with the parameter
      <em class="replaceable ">FORMAT</em>
      </span></dt><dd><p> Formats the output in the <em class="replaceable ">asciitable</em> or
-                <em class="replaceable ">csv</em> formats. </p></dd></dl></div></div><div class="sect3 " id="idm140704892724496"><div class="titlepage"><div><div><h4 class="title" id="idm140704892724496"><span class="number">7.1.1.6 </span><span class="name">smt-mirror</span> <a title="Permalink" class="permalink" href="#idm140704892724496">#</a></h4></div></div></div><p>
+                <em class="replaceable ">csv</em> formats. </p></dd></dl></div></div><div class="sect3 " id="idm139676632889584"><div class="titlepage"><div><div><h4 class="title" id="idm139676632889584"><span class="number">7.1.1.6 </span><span class="name">smt-mirror</span> <a title="Permalink" class="permalink" href="#idm139676632889584">#</a></h4></div></div></div><p>
     The <code class="command">smt-mirror</code> command performs the mirroring
     procedure and downloads repositories that are set to be mirrored.
    </p><p>
     You can run the <code class="command">smt-mirror</code> with the following
     options:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704892721568"><span class="term "><code class="option">--clean</code> or <code class="option">-c</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676632886656"><span class="term "><code class="option">--clean</code> or <code class="option">-c</code>
      </span></dt><dd><p>
        Removes all files no longer mentioned in the metadata from the mirror.
        No mirroring occurs before cleanup.
-      </p></dd><dt id="idm140704892718928"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
+      </p></dd><dt id="idm139676632884016"><span class="term "><code class="option">--debug</code> or <code class="option">-d</code>
      </span></dt><dd><p>
        Enables the debugging mode.
-      </p></dd><dt id="idm140704892716432"><span class="term "><code class="option">--deepverify</code>
+      </p></dd><dt id="idm139676614297520"><span class="term "><code class="option">--deepverify</code>
      </span></dt><dd><p>
        Turns on verifying of all package checksums.
-      </p></dd><dt id="idm140704872502368"><span class="term "><code class="option">--hardlink <em class="replaceable ">SIZE</em></code>
+      </p></dd><dt id="idm139676614295392"><span class="term "><code class="option">--hardlink <em class="replaceable ">SIZE</em></code>
      </span></dt><dd><p>
        Searches for duplicate files with a size greater than the size
        specified in kilobytes. Creates hard links for them.
 
-      </p></dd><dt id="idm140704872499872"><span class="term "><code class="option">--directory <em class="replaceable ">PATH</em></code>
+      </p></dd><dt id="idm139676614292896"><span class="term "><code class="option">--directory <em class="replaceable ">PATH</em></code>
      </span></dt><dd><p>
        Defines the directory to work on. When using this option, the default
        value configured in the <code class="filename">smt.conf</code> configuration
        file is ignored.
-      </p></dd><dt id="idm140704872496928"><span class="term "><code class="option">--dbreplfile <em class="replaceable ">FILE</em></code>
+      </p></dd><dt id="idm139676614289952"><span class="term "><code class="option">--dbreplfile <em class="replaceable ">FILE</em></code>
      </span></dt><dd><p>
        Defines a path to the *.xml file to use as database replacement. You
        can create this file with the <code class="command">smt-scc</code> command.
-      </p></dd><dt id="idm140704872494016"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the
+      </p></dd><dt id="idm139676631847440"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the
      parameter <em class="replaceable ">FILE</em>
      </span></dt><dd><p>
        Specifies the path to a log file.
@@ -1472,64 +1472,64 @@ gpgcheck=1</pre></div><p>
    </p><p>
     You can run the <code class="command">smt-scc-sync</code> with the following
     options:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873360128"><span class="term "><code class="option">--fromdir <em class="replaceable ">DIRECTORY</em></code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676631840608"><span class="term "><code class="option">--fromdir <em class="replaceable ">DIRECTORY</em></code>
      </span></dt><dd><p>
        Reads SUSE Customer Center data from a directory instead of downloading it from
        SUSE Customer Center.
-      </p></dd><dt id="idm140704873357648"><span class="term "><code class="option">--todir <em class="replaceable ">DIRECTORY</em></code>
+      </p></dd><dt id="idm139676613495680"><span class="term "><code class="option">--todir <em class="replaceable ">DIRECTORY</em></code>
      </span></dt><dd><p>
        Writes SUSE Customer Center data to the specified directory without updating the
        RMT database.
-      </p><div id="idm140704873355504" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: SUSE Manager's Subscription Matching Feature</h6><p>
+      </p><div id="idm139676613493536" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: SUSE Manager's Subscription Matching Feature</h6><p>
         This data can be used by the subscription matching feature of
         SUSE Manager, which gives you a detailed overview of your subscription
         usage. For more information on the subscription matching feature, see
         <a class="link" href="https://www.suse.com/documentation/suse-manager-3/book_suma_reference_manual/data/ref_webui_audit_subscription.html" target="_blank">https://www.suse.com/documentation/suse-manager-3/book_suma_reference_manual/data/ref_webui_audit_subscription.html</a>
-       </p></div></dd><dt id="idm140704891040512"><span class="term "><code class="option">--createdbreplacementfile</code>
+       </p></div></dd><dt id="idm139676613490960"><span class="term "><code class="option">--createdbreplacementfile</code>
      </span></dt><dd><p>
        Creates a database replacement file for using
        <code class="command">smt-mirror</code> without database.
-      </p></dd><dt id="idm140704891037904"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
+      </p></dd><dt id="idm139676613488432"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
      <em class="replaceable ">LOGFILE</em>
      </span></dt><dd><p>
        Specifies the path to a log file.
-      </p></dd><dt id="idm140704891034880"><span class="term "><code class="option">--debug</code>
+      </p></dd><dt id="idm139676615124048"><span class="term "><code class="option">--debug</code>
      </span></dt><dd><p>
        Enables debugging mode.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704891032464"><div class="titlepage"><div><div><h4 class="title" id="idm140704891032464"><span class="number">7.1.1.8 </span><span class="name">smt-register</span> <a title="Permalink" class="permalink" href="#idm140704891032464">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676615121632"><div class="titlepage"><div><div><h4 class="title" id="idm139676615121632"><span class="number">7.1.1.8 </span><span class="name">smt-register</span> <a title="Permalink" class="permalink" href="#idm139676615121632">#</a></h4></div></div></div><p>
     The <code class="command">smt-register</code> or <code class="command">smt register</code>
     command registers all currently unregistered clients at the SUSE Customer Center. It also
     registers all clients whose data has changed since the last
     registration.
    </p><p>
     The following options are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704892042240"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676615118624"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
      <em class="replaceable ">LOGFILE</em>
      </span></dt><dd><p>
        Specifies the path to a log file.
-      </p></dd><dt id="idm140704892039216"><span class="term "><code class="option">--debug</code>
+      </p></dd><dt id="idm139676615115600"><span class="term "><code class="option">--debug</code>
      </span></dt><dd><p>
        Enables debugging mode.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704892036800"><div class="titlepage"><div><div><h4 class="title" id="idm140704892036800"><span class="number">7.1.1.9 </span><span class="name">smt-report</span> <a title="Permalink" class="permalink" href="#idm140704892036800">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676639199856"><div class="titlepage"><div><div><h4 class="title" id="idm139676639199856"><span class="number">7.1.1.9 </span><span class="name">smt-report</span> <a title="Permalink" class="permalink" href="#idm139676639199856">#</a></h4></div></div></div><p>
     The <code class="command">smt-report</code> or <code class="command">smt report</code>
     command generates a subscription report based on local calculation or
     SUSE Customer Center registrations.
    </p><p>
     The following options are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704893749120"><span class="term "><code class="option">--mail</code> or <code class="option">-m</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676639196912"><span class="term "><code class="option">--mail</code> or <code class="option">-m</code>
      </span></dt><dd><p>
        Activates mailing the report to the addresses configured with the
        RMT Server and written in <code class="filename">/etc/smt.conf</code>. The
        report is formatted as tables.
-      </p></dd><dt id="idm140704893746016"><span class="term "><code class="option">--attach</code> or <code class="option">-a</code>
+      </p></dd><dt id="idm139676639193808"><span class="term "><code class="option">--attach</code> or <code class="option">-a</code>
      </span></dt><dd><p>
        Appends the report to the e-mails in CSV format. This option should
        only be used in combination with the <code class="option">--mail</code> option.
-      </p></dd><dt id="idm140704893742928"><span class="term "><code class="option">--quiet</code> or <code class="option">-q</code>
+      </p></dd><dt id="idm139676635367648"><span class="term "><code class="option">--quiet</code> or <code class="option">-q</code>
      </span></dt><dd><p>
        Suppresses output to STDOUT and runs <code class="command">smt-report</code> in
        quiet mode.
-      </p></dd><dt id="idm140704893739904"><span class="term "><code class="option">--csv</code> or <code class="option">-c</code>
+      </p></dd><dt id="idm139676635364624"><span class="term "><code class="option">--csv</code> or <code class="option">-c</code>
      </span></dt><dd><p>
        Exports the report to multiple files in the CSV format. The first line
        of each *.csv file consists of the column names. The
@@ -1537,17 +1537,17 @@ gpgcheck=1</pre></div><p>
        the <code class="option">--file</code> parameter. If the specified file name has
        the <code class="literal">.csv</code> extension, the report is formatted as CSV
        (as if the <code class="option">--csv</code> parameter was used).
-      </p></dd><dt id="idm140704894020240"><span class="term "><code class="option">--pdf</code> or <code class="option">-p</code>
+      </p></dd><dt id="idm139676635360032"><span class="term "><code class="option">--pdf</code> or <code class="option">-p</code>
      </span></dt><dd><p>
        Exports the report in the PDF format. Use it only in combination with
        the <code class="option">-file</code> option.
-      </p></dd><dt id="idm140704894017184"><span class="term "><code class="option">--xml</code>
+      </p></dd><dt id="idm139676635356976"><span class="term "><code class="option">--xml</code>
      </span></dt><dd><p>
        Exports the report in the XML format. Use it only in combination with
        the <code class="option">-file</code> option. For a detailed description of the
        XML format, see the manual page of the <code class="command">smt-report</code>
        command.
-      </p></dd><dt id="idm140704894014048"><span class="term "><code class="option">--file</code> or <code class="option">-F</code>
+      </p></dd><dt id="idm139676640919040"><span class="term "><code class="option">--file</code> or <code class="option">-F</code>
      </span></dt><dd><p>
        Exports the report to one or several files. By default, the report
        is written to a single file formatted as tables. Optionally, the
@@ -1559,74 +1559,74 @@ gpgcheck=1</pre></div><p>
       </p><p> In the CSV mode the report is written to multiple files,
               therefore the specified file name expands to
                   <code class="filename"><em class="replaceable ">[PATH/]FILENAME</em>-<em class="replaceable ">reportname</em>.<em class="replaceable ">extension</em></code>
-              for every report. </p></dd><dt id="idm140704900277744"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
+              for every report. </p></dd><dt id="idm139676640913360"><span class="term "><code class="option">--logfile</code> or <code class="option">-L</code> with the parameter
      <em class="replaceable ">LOGFILE</em>
      </span></dt><dd><p>
        Specifies path to a log file.
-      </p></dd><dt id="idm140704900274720"><span class="term "><code class="option">--debug</code>
+      </p></dd><dt id="idm139676640910336"><span class="term "><code class="option">--debug</code>
      </span></dt><dd><p>
        Enables debugging mode.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704900272304"><div class="titlepage"><div><div><h4 class="title" id="idm140704900272304"><span class="number">7.1.1.10 </span><span class="name">smt-repos</span> <a title="Permalink" class="permalink" href="#idm140704900272304">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676636392608"><div class="titlepage"><div><div><h4 class="title" id="idm139676636392608"><span class="number">7.1.1.10 </span><span class="name">smt-repos</span> <a title="Permalink" class="permalink" href="#idm139676636392608">#</a></h4></div></div></div><p>
     Use <code class="command">smt-repos</code> (or <code class="command">smt
     repositories</code>) to list all available repositories and for
     enabling, disabling, and deleting repositories. The following options are
     available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704871275200"><span class="term "><code class="option">--enable-mirror</code> or <code class="option">-e</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676636390112"><span class="term "><code class="option">--enable-mirror</code> or <code class="option">-e</code>
      </span></dt><dd><p>
        Enables repository mirroring.
-      </p></dd><dt id="idm140704871272640"><span class="term "><code class="option">--disable-mirror</code> or <code class="option">-d</code>
+      </p></dd><dt id="idm139676636387616"><span class="term "><code class="option">--disable-mirror</code> or <code class="option">-d</code>
        </span></dt><dd><p>
            Disables repository mirroring.
-         </p></dd><dt id="idm140704871270080"><span class="term "><code class="option">--enable-by-prod</code> or <code class="option">-p</code>
+         </p></dd><dt id="idm139676636385056"><span class="term "><code class="option">--enable-by-prod</code> or <code class="option">-p</code>
      </span></dt><dd><p>
        Enables repository mirroring by giving product data in the following
        format:
        <code class="literal">Product[,Version[,Architecture[,Release]]]</code>.
 
-      </p></dd><dt id="idm140704871267104"><span class="term "><code class="option">--disable-by-prod</code> or <code class="option">-P</code>
+      </p></dd><dt id="idm139676636381968"><span class="term "><code class="option">--disable-by-prod</code> or <code class="option">-P</code>
      </span></dt><dd><p>
        Disables repository mirroring by giving product data in the following
        format:
        <code class="literal">Product[,Version[,Architecture[,Release]]]</code>.
 
-      </p></dd><dt id="idm140704895993344"><span class="term "><code class="option">--only-mirrorable</code> or <code class="option">-m</code>
+      </p></dd><dt id="idm139676615026480"><span class="term "><code class="option">--only-mirrorable</code> or <code class="option">-m</code>
      </span></dt><dd><p>
        Lists only repositories that can be mirrored.
-      </p></dd><dt id="idm140704895990768"><span class="term "><code class="option">--only-enabled</code> or <code class="option">-o</code>
+      </p></dd><dt id="idm139676615023904"><span class="term "><code class="option">--only-enabled</code> or <code class="option">-o</code>
      </span></dt><dd><p>
        Lists only enabled repositories.
-      </p></dd><dt id="idm140704895988208"><span class="term "><code class="option">--delete</code>
+      </p></dd><dt id="idm139676615021344"><span class="term "><code class="option">--delete</code>
      </span></dt><dd><p>
        Lists repositories and deletes them from disk.
-      </p></dd><dt id="idm140704895986080"><span class="term "><code class="option">--namespace <em class="replaceable ">DIRNAME</em></code>
+      </p></dd><dt id="idm139676615019216"><span class="term "><code class="option">--namespace <em class="replaceable ">DIRNAME</em></code>
      </span></dt><dd><p>
        Deletes the repository in the specified name space.
-      </p></dd><dt id="idm140704895983664"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
+      </p></dd><dt id="idm139676635513040"><span class="term "><code class="option">--verbose</code> or <code class="option">-v</code>
      </span></dt><dd><p>
        Shows detailed repository information.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704901788768"><div class="titlepage"><div><div><h4 class="title" id="idm140704901788768"><span class="number">7.1.1.11 </span><span class="name">smt-setup-custom-repos</span> <a title="Permalink" class="permalink" href="#idm140704901788768">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676635510160"><div class="titlepage"><div><div><h4 class="title" id="idm139676635510160"><span class="number">7.1.1.11 </span><span class="name">smt-setup-custom-repos</span> <a title="Permalink" class="permalink" href="#idm139676635510160">#</a></h4></div></div></div><p>
     The <code class="command">smt-setup-custom-repos</code> and <code class="command">smt
     setup-custom-repos</code> script are designed for setting up custom
     repositories (repositories not present in the download server) for use with RMT.
     You can use this script to add a new repository to the RMT database or
     to delete a repository from the database. The script supports the
     following options:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704901786144"><span class="term "><code class="option">--productid</code> <em class="replaceable ">PRODUCT_ID</em>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676635507536"><span class="term "><code class="option">--productid</code> <em class="replaceable ">PRODUCT_ID</em>
      </span></dt><dd><p>
        ID of a product the repository belongs to. If a repository should
        belong to multiple products, use this option multiple times to assign
        the repository to all relevant products.
-      </p></dd><dt id="idm140704901783424"><span class="term "><code class="option">--name</code> <em class="replaceable ">NAME</em>
+      </p></dd><dt id="idm139676635504816"><span class="term "><code class="option">--name</code> <em class="replaceable ">NAME</em>
      </span></dt><dd><p>
        The name of the custom repository.
-      </p></dd><dt id="idm140704901780864"><span class="term "><code class="option">--description</code> <em class="replaceable ">DESCRIPTION</em>
+      </p></dd><dt id="idm139676635502256"><span class="term "><code class="option">--description</code> <em class="replaceable ">DESCRIPTION</em>
      </span></dt><dd><p>
        The description of the custom repository.
-      </p></dd><dt id="idm140704901778288"><span class="term "><code class="option">--exturl</code> <em class="replaceable ">URL</em>
+      </p></dd><dt id="idm139676640933488"><span class="term "><code class="option">--exturl</code> <em class="replaceable ">URL</em>
      </span></dt><dd><p>
        The URL for the repository to be mirrored from. Only HTTP and
        HTTPS protocols are supported.
-      </p></dd><dt id="idm140704900163168"><span class="term "><code class="option">--delete</code> <em class="replaceable ">ID</em>
+      </p></dd><dt id="idm139676640930864"><span class="term "><code class="option">--delete</code> <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Removes a custom repository with a given ID from the RMT database.
       </p></dd></dl></div><p>
@@ -1639,87 +1639,87 @@ gpgcheck=1</pre></div><p>
     To remove a configured repository, use the following command:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-setup-custom-repos --delete <em class="replaceable ">ID</em></pre></div><p>
     For example:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-setup-custom-repos --delete <em class="replaceable ">1cf336d819e8e5904f4d4b05ee081971a0cc8afc</em></pre></div></div><div class="sect3 " id="idm140704891744912"><div class="titlepage"><div><div><h4 class="title" id="idm140704891744912"><span class="number">7.1.1.12 </span><span class="name">smt-support</span> <a title="Permalink" class="permalink" href="#idm140704891744912">#</a></h4></div></div></div><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-setup-custom-repos --delete <em class="replaceable ">1cf336d819e8e5904f4d4b05ee081971a0cc8afc</em></pre></div></div><div class="sect3 " id="idm139676642026128"><div class="titlepage"><div><div><h4 class="title" id="idm139676642026128"><span class="number">7.1.1.12 </span><span class="name">smt-support</span> <a title="Permalink" class="permalink" href="#idm139676642026128">#</a></h4></div></div></div><p>
     The <code class="command">smt-support</code> command manages uploaded support data
     usually coming from the <code class="command">supportconfig</code> tool. You can
     forward the data to SUSE, either selectively or in full. This command
     supports the following options:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704891742384"><span class="term "><code class="option">--incoming</code> or <code class="option">-i</code> with the
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676642023600"><span class="term "><code class="option">--incoming</code> or <code class="option">-i</code> with the
      parameter <em class="replaceable ">DIRECTORY</em>
      </span></dt><dd><p>
        Specifies the directory where the supportconfig archives are uploaded.
        You can also set this option with the <code class="literal">SMT_INCOMING</code>
        environment variable. The default <code class="literal">SMT_INCOMING</code>
        directory is <code class="filename">/var/spool/smt-support</code>.
-      </p></dd><dt id="idm140704891737904"><span class="term "><code class="option">--list</code> or <code class="option">-l</code>
+      </p></dd><dt id="idm139676642019120"><span class="term "><code class="option">--list</code> or <code class="option">-l</code>
      </span></dt><dd><p>
        Lists the uploaded supportconfig archives in the incoming directory.
-      </p></dd><dt id="idm140704893785200"><span class="term "><code class="option">--remove</code> or <code class="option">-r</code> with the parameter
+      </p></dd><dt id="idm139676644770032"><span class="term "><code class="option">--remove</code> or <code class="option">-r</code> with the parameter
      <em class="replaceable ">ARCHIVE</em>
      </span></dt><dd><p>
        Deletes the specified archive.
-      </p></dd><dt id="idm140704893782240"><span class="term "><code class="option">--empty</code> or <code class="option">-R</code>
+      </p></dd><dt id="idm139676644767008"><span class="term "><code class="option">--empty</code> or <code class="option">-R</code>
      </span></dt><dd><p>
        Deletes all archives in the incoming directory.
-      </p></dd><dt id="idm140704893779664"><span class="term "><code class="option">--upload</code> or <code class="option">-u</code> with the parameter
+      </p></dd><dt id="idm139676644764432"><span class="term "><code class="option">--upload</code> or <code class="option">-u</code> with the parameter
      <em class="replaceable ">ARCHIVE</em>
      </span></dt><dd><p>
        Uploads the specified archive to SUSE. If you specify
        <code class="option">-s</code>, <code class="option">-n</code>, <code class="option">-c</code>,
        <code class="option">-p</code>, and <code class="option">-e</code> options, the archive is
        repackaged with contact information.
-      </p></dd><dt id="idm140704893774416"><span class="term "><code class="option">--uploadall</code> or <code class="option">-U</code>
+      </p></dd><dt id="idm139676644759088"><span class="term "><code class="option">--uploadall</code> or <code class="option">-U</code>
      </span></dt><dd><p>
        Uploads all archives in the incoming directory to SUSE.
-      </p></dd><dt id="idm140704895424832"><span class="term "><code class="option">--srnum</code> or <code class="option">-s</code> with the parameter <em class="replaceable ">SR_NUMBER</em>
+      </p></dd><dt id="idm139676634735504"><span class="term "><code class="option">--srnum</code> or <code class="option">-s</code> with the parameter <em class="replaceable ">SR_NUMBER</em>
      </span></dt><dd><p>
        Specifies the Novell Service Request 12-digit number.
-      </p></dd><dt id="idm140704895421808"><span class="term "><code class="option">--name</code> or <code class="option">-n</code> with the parameter
+      </p></dd><dt id="idm139676634732480"><span class="term "><code class="option">--name</code> or <code class="option">-n</code> with the parameter
      <em class="replaceable ">NAME</em>
      </span></dt><dd><p>
        Specifies the first and last name of the contact, in quotes.
-      </p></dd><dt id="idm140704895418752"><span class="term "><code class="option">--company</code> or <code class="option">-c</code> with the parameter
+      </p></dd><dt id="idm139676634729424"><span class="term "><code class="option">--company</code> or <code class="option">-c</code> with the parameter
      <em class="replaceable ">COMPANY</em>
      </span></dt><dd><p>
        Specifies the company name.
-      </p></dd><dt id="idm140704895415728"><span class="term "><code class="option">--storeid</code> or <code class="option">-d</code> with the parameter
+      </p></dd><dt id="idm139676634726400"><span class="term "><code class="option">--storeid</code> or <code class="option">-d</code> with the parameter
      <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Specifies the store ID, if applicable.
-      </p></dd><dt id="idm140704903106816"><span class="term "><code class="option">--terminalid</code> or <code class="option">-t</code> with the
+      </p></dd><dt id="idm139676644676912"><span class="term "><code class="option">--terminalid</code> or <code class="option">-t</code> with the
      parameter <em class="replaceable ">ID</em>
      </span></dt><dd><p>
        Specifies the terminal ID, if applicable.
-      </p></dd><dt id="idm140704903103824"><span class="term "><code class="option">--phone</code> or <code class="option">-p</code> with the parameter
+      </p></dd><dt id="idm139676644673872"><span class="term "><code class="option">--phone</code> or <code class="option">-p</code> with the parameter
      <em class="replaceable ">PHONE</em>
      </span></dt><dd><p>
        Specifies the phone number of the contact person.
-      </p></dd><dt id="idm140704903100784"><span class="term "><code class="option">--email</code> or <code class="option">-e</code> with the parameter
+      </p></dd><dt id="idm139676644670832"><span class="term "><code class="option">--email</code> or <code class="option">-e</code> with the parameter
      <em class="replaceable ">E-MAIL_ADDRESS</em>
      </span></dt><dd><p>
        Specifies the e-mail address of the contact.
-      </p></dd></dl></div></div></div><div class="sect2 " id="idm140704903097264"><div class="titlepage"><div><div><h3 class="title" id="idm140704903097264"><span class="number">7.1.2 </span><span class="name">RMT <code class="systemitem">systemd</code> Commands</span> <a title="Permalink" class="permalink" href="#idm140704903097264">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div></div><div class="sect2 " id="idm139676644667312"><div class="titlepage"><div><div><h3 class="title" id="idm139676644667312"><span class="number">7.1.2 </span><span class="name">RMT <code class="systemitem">systemd</code> Commands</span> <a title="Permalink" class="permalink" href="#idm139676644667312">#</a></h3></div></div></div><p>
    You can manage RMT-related services with the standard <code class="systemitem">systemd</code>
    commands:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704894563856"><span class="term "><code class="command">systemctl start smt.target</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676644664576"><span class="term "><code class="command">systemctl start smt.target</code>
     </span></dt><dd><p>
       Starts the RMT services.
-     </p></dd><dt id="idm140704894561744"><span class="term "><code class="command">systemctl stop smt.target</code>
+     </p></dd><dt id="idm139676643320304"><span class="term "><code class="command">systemctl stop smt.target</code>
     </span></dt><dd><p>
       Stops the RMT services.
-     </p></dd><dt id="idm140704894559632"><span class="term "><code class="command">systemctl status smt.target</code>
+     </p></dd><dt id="idm139676643318192"><span class="term "><code class="command">systemctl status smt.target</code>
     </span></dt><dd><p>
       Checks the status of the RMT services. Checks whether httpd, MariaDB,
       and cron are running.
-     </p></dd><dt id="idm140704894557440"><span class="term "><code class="command">systemctl restart smt.target</code>
+     </p></dd><dt id="idm139676643316000"><span class="term "><code class="command">systemctl restart smt.target</code>
     </span></dt><dd><p>
       Restarts the RMT services.
-     </p></dd><dt id="idm140704894555328"><span class="term "><code class="command">systemctl try-restart smt.target</code>
+     </p></dd><dt id="idm139676643313888"><span class="term "><code class="command">systemctl try-restart smt.target</code>
     </span></dt><dd><p>
       Checks whether the RMT services are enabled and if so, restarts them.
      </p></dd></dl></div><p>
    You can enable and disable RMT with the YaST RMT Server module.
-  </p></div></div><div class="sect1 " id="idm140704873767712"><div class="titlepage"><div><div><h2 class="title" id="idm140704873767712"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span> <a title="Permalink" class="permalink" href="#idm140704873767712">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_config_files.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+  </p></div></div><div class="sect1 " id="idm139676643310496"><div class="titlepage"><div><div><h2 class="title" id="idm139676643310496"><span class="number">7.2 </span><span class="name">RMT Configuration Files</span> <a title="Permalink" class="permalink" href="#idm139676643310496">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_config_files.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   The main RMT configuration file is <code class="filename">/etc/rmt.conf</code>.
   You can set most of the options with the YaST RMT Server module.
   Another important configuration file is
@@ -1732,44 +1732,44 @@ gpgcheck=1</pre></div><p>
    MariaDB database for RMT. The <code class="literal">[LOCAL]</code> section includes
    other configuration data. The <code class="literal">[REPORT]</code> section
    contains the configuration of RMT reports.
-  </p><div id="idm140704873760608" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Passwords in Clear Text</h6><p> The <code class="filename">/etc/rmt.conf</code> file contains passwords
+  </p><div id="idm139676640214144" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Passwords in Clear Text</h6><p> The <code class="filename">/etc/rmt.conf</code> file contains passwords
         in clear text. Its default permissions (640, root, wwwrun)
         make its content easily accessible with scripts running on the
         Apache server. Be careful with running other software on the
         RMT Apache server. The best policy is to use this server only
         for RMT. </p></div><div class="sect3 " id="smt.config.smtconf.nu"><div class="titlepage"><div><div><h4 class="title" id="smt.config.smtconf.nu"><span class="number">7.2.1.1 </span><span class="name">[NU] Section of /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#smt.config.smtconf.nu">#</a></h4></div></div></div><p>
     The following options are available in the [NU] section:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873756544"><span class="term "><code class="option">NUUrl</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676640210144"><span class="term "><code class="option">NUUrl</code>
      </span></dt><dd><p>
        URL of the update service. Usually it should contain the
        <code class="literal">https://updates.suse.com/</code> URL.
-      </p></dd><dt id="idm140704894821984"><span class="term "><code class="option">NURegUrl</code>
+      </p></dd><dt id="idm139676640207536"><span class="term "><code class="option">NURegUrl</code>
      </span></dt><dd><p>
        URL of the update registration service. It is used by
        <code class="command">smt-sync</code>. If this option is missing, the URL from
        <code class="filename">/etc/SUSEConnect</code> is used as a fallback.
-      </p></dd><dt id="idm140704894818912"><span class="term "><code class="option">NUUser</code>
+      </p></dd><dt id="idm139676640204464"><span class="term "><code class="option">NUUser</code>
      </span></dt><dd><p>
        <code class="option">NUUser</code> should contain the user name for update
        service. For information about getting organization credentials, see
        <a class="xref" href="#smt.mirroring.getcredentials" title="3.1. Mirroring Credentials">Section 3.1, “Mirroring Credentials”</a>. You can set this
        value with the RMT Server.
-      </p></dd><dt id="idm140704894815760"><span class="term "><code class="option">NUPass</code>
+      </p></dd><dt id="idm139676640193968"><span class="term "><code class="option">NUPass</code>
      </span></dt><dd><p>
        <code class="option">NUPass</code> is the password for the user defined in
        <code class="option">NUUser</code>. For information about getting organization
        credentials, see <a class="xref" href="#smt.mirroring.getcredentials" title="3.1. Mirroring Credentials">Section 3.1, “Mirroring Credentials”</a>. You
        can set this value with the RMT Server.
-      </p></dd><dt id="idm140704894812080"><span class="term "><code class="option">ApiType</code>
+      </p></dd><dt id="idm139676640190288"><span class="term "><code class="option">ApiType</code>
      </span></dt><dd><p>
               <code class="option">ApiType</code> is the type of service RMT
               uses; it can be either <code class="literal">NCC</code> for Novell
               Customer Center or <code class="literal">SCC</code> for SUSE Customer Center. The
               only supported value for RMT 12 is
-                <code class="literal">SCC</code>. </p></dd></dl></div></div><div class="sect3 " id="idm140704873376544"><div class="titlepage"><div><div><h4 class="title" id="idm140704873376544"><span class="number">7.2.1.2 </span><span class="name">[DB] Section of /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm140704873376544">#</a></h4></div></div></div><p>
+                <code class="literal">SCC</code>. </p></dd></dl></div></div><div class="sect3 " id="idm139676640185936"><div class="titlepage"><div><div><h4 class="title" id="idm139676640185936"><span class="number">7.2.1.2 </span><span class="name">[DB] Section of /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm139676640185936">#</a></h4></div></div></div><p>
     The three options defined in the [DB] section are used for configuring
     the database for RMT. Currently, only MariaDB is supported by RMT.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704873374928"><span class="term "><code class="option">config</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676640184320"><span class="term "><code class="option">config</code>
      </span></dt><dd><p>
        The first parameter of the DBI-&gt;connect Perl method used for
        connection to the MariaDB database. The value should be in the form
@@ -1777,18 +1777,18 @@ gpgcheck=1</pre></div><p>
        where <em class="replaceable ">SMT</em> is the name of the database and
        <em class="replaceable ">LOCALHOST</em> is the host name of the database
        server.
-      </p></dd><dt id="idm140704873370128"><span class="term "><code class="option">user</code>
+      </p></dd><dt id="idm139676613069712"><span class="term "><code class="option">user</code>
      </span></dt><dd><p>
        The user for the database. The default value is
        <code class="literal">smt</code>.
-      </p></dd><dt id="idm140704873367552"><span class="term "><code class="option">pass</code>
+      </p></dd><dt id="idm139676613067136"><span class="term "><code class="option">pass</code>
      </span></dt><dd><p>
        The password for the database user. You can set the password with the
        YaST RMT Server module.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704892763184"><div class="titlepage"><div><div><h4 class="title" id="idm140704892763184"><span class="number">7.2.1.3 </span><span class="name">[LOCAL] Section of /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm140704892763184">#</a></h4></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676613064640"><div class="titlepage"><div><div><h4 class="title" id="idm139676613064640"><span class="number">7.2.1.3 </span><span class="name">[LOCAL] Section of /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm139676613064640">#</a></h4></div></div></div><p>
     The following options are available in the <code class="literal">[LOCAL]</code>
     section:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704892761216"><span class="term "><code class="option">url</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676613062672"><span class="term "><code class="option">url</code>
      </span></dt><dd><p>
        The base URL of the RMT server which is used to construct URLs of
        the repositories available on the server. This value should be set by
@@ -1802,24 +1802,24 @@ gpgcheck=1</pre></div><p>
        host name of the server. For example,
        <code class="literal">http://smt.domain.tld/</code> instead of
        <code class="literal">http://server1.domain.tld/</code>.
-      </p></dd><dt id="idm140704892756048"><span class="term "><code class="option">nccEmail</code>
+      </p></dd><dt id="idm139676636514992"><span class="term "><code class="option">nccEmail</code>
      </span></dt><dd><p>
        E-mail address used for registration at the SUSE Customer Center. The RMT
        administrator can set this value with the YaST RMT Server module.
-      </p></dd><dt id="idm140704892753824"><span class="term "><code class="option">MirrorTo</code>
+      </p></dd><dt id="idm139676636512768"><span class="term "><code class="option">MirrorTo</code>
      </span></dt><dd><p>
        Determines the path to mirror to.
-      </p></dd><dt id="idm140704871881184"><span class="term "><code class="option">MirrorAll</code>
+      </p></dd><dt id="idm139676636510656"><span class="term "><code class="option">MirrorAll</code>
      </span></dt><dd><p>
        If the <code class="option">MirrorAll</code> option is set to
        <code class="literal">true</code>, the <code class="command">smt-sync</code> script will
        set all repositories that can be mirrored to be mirrored (DOMIRROR
        flag).
-      </p></dd><dt id="idm140704871877648"><span class="term "><code class="option">MirrorSRC</code>
+      </p></dd><dt id="idm139676636507120"><span class="term "><code class="option">MirrorSRC</code>
      </span></dt><dd><p>
        If the <code class="option">MirrorSRC</code> option is set to
        <code class="literal">true</code>, source RPM packages are mirrored.
-      </p></dd><dt id="idm140704871874624"><span class="term "><code class="option">rndRegister</code>
+      </p></dd><dt id="idm139676636504096"><span class="term "><code class="option">rndRegister</code>
      </span></dt><dd><p>
        Specify a delay in seconds before the clients are registered at SUSE Customer Center.
        The value is a random number between <code class="literal">0</code> and
@@ -1827,15 +1827,15 @@ gpgcheck=1</pre></div><p>
        The purpose of this random delay is to prevent a high load on the
        SUSE Customer Center server that would occur if all smt-register cron jobs connected
        at the same time.
-      </p></dd><dt id="idm140704871871296"><span class="term "><code class="option">mirror_preunlock_hook</code>
+      </p></dd><dt id="idm139676636500768"><span class="term "><code class="option">mirror_preunlock_hook</code>
      </span></dt><dd><p>
        Specify the path to the script that will be run before the
        <code class="command">smt-mirror</code> script removes its lock.
-      </p></dd><dt id="idm140704871868688"><span class="term "><code class="option">mirror_postunlock_hook</code>
+      </p></dd><dt id="idm139676616114064"><span class="term "><code class="option">mirror_postunlock_hook</code>
      </span></dt><dd><p>
        Specify the path to the script that will be run after the
        <code class="command">smt-mirror</code> script removes its lock.
-      </p></dd><dt id="idm140704892797104"><span class="term "><code class="option">HTTPProxy</code>
+      </p></dd><dt id="idm139676616111456"><span class="term "><code class="option">HTTPProxy</code>
      </span></dt><dd><p>
        If you do not want to use global proxy settings, specify the proxy to
        be used for HTTP connection here. Use the following form:
@@ -1845,7 +1845,7 @@ gpgcheck=1</pre></div><p>
        <code class="filename">/etc/rmt.conf</code>, the global proxy settings
        configured in <code class="filename">/etc/syconfig/proxy</code> are used. You
        can configure the global proxy settings with the YaST Proxy module.
-      </p></dd><dt id="idm140704892792208"><span class="term "><code class="option">HTTPSProxy</code>
+      </p></dd><dt id="idm139676616106560"><span class="term "><code class="option">HTTPSProxy</code>
      </span></dt><dd><p>
        If you do not want to use global proxy settings, specify the proxy to
        be used for HTTPS connection here. Use the form:
@@ -1855,7 +1855,7 @@ gpgcheck=1</pre></div><p>
        <code class="filename">/etc/rmt.conf</code>, the global proxy settings
        configured in <code class="filename">/etc/syconfig/proxy</code> are used. You
        can configure the global proxy settings with the YaST Proxy module.
-      </p></dd><dt id="idm140704892787312"><span class="term "><code class="option">ProxyUser</code>
+      </p></dd><dt id="idm139676616101664"><span class="term "><code class="option">ProxyUser</code>
      </span></dt><dd><p>
        If your proxy requires authentication, specify a user name and
        password here, using the
@@ -1866,13 +1866,13 @@ gpgcheck=1</pre></div><p>
        <code class="filename">/etc/rmt.conf</code>, the global proxy settings
        configured in <code class="filename">/etc/syconfig/proxy</code> are used. You
        can configure the global proxy settings with the YaST Proxy module.
-      </p><div id="idm140704874395200" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Global User Authentication Setting</h6><p>
+      </p><div id="idm139676615110752" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Global User Authentication Setting</h6><p>
         If you configure the global proxy settings with YaST, manually
         copy <code class="filename">/root/.curlrc</code> to the home directory of the
         <code class="systemitem">smt</code>. Adjust the
         permissions with the following commands as <code class="systemitem">root</code>:
        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> cp /root/.curlrc /var/lib/smt/
-<code class="prompt user">tux &gt; </code><code class="command">sudo</code> chown smt:www /var/lib/smt/.curlrc</pre></div></div></dd><dt id="idm140704874389712"><span class="term "><code class="option">requiredAuthType</code>
+<code class="prompt user">tux &gt; </code><code class="command">sudo</code> chown smt:www /var/lib/smt/.curlrc</pre></div></div></dd><dt id="idm139676615105264"><span class="term "><code class="option">requiredAuthType</code>
      </span></dt><dd><p>
        Specify an authentication type to access the repository. There are
        three possible types:
@@ -1885,17 +1885,17 @@ gpgcheck=1</pre></div><p>
         </p></li><li class="listitem "><p>
          <code class="literal">strict</code> - checks also if the user has access to
          the repository.
-        </p></li></ul></div></dd><dt id="idm140704892741056"><span class="term "><code class="option">smtUser</code>
+        </p></li></ul></div></dd><dt id="idm139676640232112"><span class="term "><code class="option">smtUser</code>
      </span></dt><dd><p>
        Specify a user name of a Unix user under which all smt commands will
        run.
-      </p></dd><dt id="idm140704892738896"><span class="term "><code class="option">signingKeyID</code>
+      </p></dd><dt id="idm139676640229952"><span class="term "><code class="option">signingKeyID</code>
      </span></dt><dd><p>
        Specify the ID of the GPG key to sign modified repositories. The user
        specified under <code class="option">smtUser</code> needs to have access to the
        key. If this option is not set, the modified repositories will be
        unsigned.
-      </p></dd></dl></div></div><div class="sect3 " id="idm140704892735856"><div class="titlepage"><div><div><h4 class="title" id="idm140704892735856"><span class="number">7.2.1.4 </span><span class="name">Example /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm140704892735856">#</a></h4></div></div></div><div class="example" id="smt.mirroring.smtconf.ex"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 7.1: </span><span class="name">rmt.conf </span><a title="Permalink" class="permalink" href="#smt.mirroring.smtconf.ex">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">[NU]
+      </p></dd></dl></div></div><div class="sect3 " id="idm139676640226912"><div class="titlepage"><div><div><h4 class="title" id="idm139676640226912"><span class="number">7.2.1.4 </span><span class="name">Example /etc/rmt.conf</span> <a title="Permalink" class="permalink" href="#idm139676640226912">#</a></h4></div></div></div><div class="example" id="smt.mirroring.smtconf.ex"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 7.1: </span><span class="name">rmt.conf </span><a title="Permalink" class="permalink" href="#smt.mirroring.smtconf.ex">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">[NU]
 NUUrl=https://updates.suse.com/
 NURegUrl=https://scc.suse.com/connect
 NUUser = exampleuser
@@ -2008,28 +2008,28 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
    with YaST (see  FIXME). Cron
    is used to launch these scheduled jobs. The cron table is located in the
    <code class="filename">/etc/cron.d/novell.com-smt</code> file.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140704869994608"><span class="term "><code class="option">SCC_SYNC_PARAMS</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139676613561968"><span class="term "><code class="option">SCC_SYNC_PARAMS</code>
     </span></dt><dd><p>
       Contains parameters of the <code class="command">smt scc-sync</code> command, if
       called as part of an RMT scheduled job via cron. The default value
       is <code class="literal">"-L /var/log/smt/smt-sync.log --mail"</code>.
-     </p></dd><dt id="idm140704869991520"><span class="term "><code class="option">MIRROR_PARAMS</code>
+     </p></dd><dt id="idm139676613558880"><span class="term "><code class="option">MIRROR_PARAMS</code>
     </span></dt><dd><p>
       Contains parameters of the <code class="command">smt mirror</code> command, if
       called as part of an RMT scheduled job via cron. The default value
       is <code class="literal">"-L /var/log/smt/smt-mirror.log --mail" </code>.
-     </p></dd><dt id="idm140704869988416"><span class="term "><code class="option">REGISTER_PARAMS</code>
+     </p></dd><dt id="idm139676613555776"><span class="term "><code class="option">REGISTER_PARAMS</code>
     </span></dt><dd><p>
       Contains parameters of the <code class="command">smt register</code> command, if
       called as part of an RMT scheduled job via cron. The default value
       is <code class="literal">"-r -L /var/log/smt/smt-register.log --mail" </code>.
-     </p></dd><dt id="idm140704869985312"><span class="term "><code class="option">REPORT_PARAMS</code>
+     </p></dd><dt id="idm139676613552672"><span class="term "><code class="option">REPORT_PARAMS</code>
     </span></dt><dd><p>
       Contains parameters of the <code class="command">smt report</code> command, if
       called as part of an RMT scheduled job via cron. The default value
       is <code class="literal">"--mail --attach -L /var/log/smt/smt-report.log"
       </code>.
-     </p></dd><dt id="idm140704898107200"><span class="term "><code class="option">JOBQUEUECLEANUP_PARAMS</code>
+     </p></dd><dt id="idm139676613549568"><span class="term "><code class="option">JOBQUEUECLEANUP_PARAMS</code>
     </span></dt><dd><p>
       Contains parameters for smt jobqueue cleanup, if called as a part of
       an RMT scheduled job via cron. The default value is <code class="literal">"--mail
@@ -2055,7 +2055,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
   the existence of the common server certificate. If the certificate does
   not exist, YaST asks whether the certificate should be created. If the
   user confirms, the YaST CA Management module is started.
- </p><div class="sect2 " id="idm140704898097104"><div class="titlepage"><div><div><h3 class="title" id="idm140704898097104"><span class="number">7.3.1 </span><span class="name">Certificate Expiration</span> <a title="Permalink" class="permalink" href="#idm140704898097104">#</a></h3></div></div></div><p>
+ </p><div class="sect2 " id="idm139676644365440"><div class="titlepage"><div><div><h3 class="title" id="idm139676644365440"><span class="number">7.3.1 </span><span class="name">Certificate Expiration</span> <a title="Permalink" class="permalink" href="#idm139676644365440">#</a></h3></div></div></div><p>
    The common server certificate RMT uses is valid for one year. After
    that time, a new certificate is needed. Either generate a new certificate
    using YaST CA Management module or import a new certificate using the
@@ -2085,7 +2085,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
             <span class="guimenu">Organization</span>, <span class="guimenu">Organizational
             Unit</span>, <span class="guimenu">Locality</span>, and
             <span class="guimenu">State</span> are optional. Click
-            <span class="guimenu">Next</span> to proceed.</p><div id="idm140704894036224" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Host Name in Server Certificate</h6><p>
+            <span class="guimenu">Next</span> to proceed.</p><div id="idm139676612890192" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Host Name in Server Certificate</h6><p>
       The server certificate must contain the correct host name. If the
       client requests server <code class="literal">https://some.hostname/</code>, then
       <code class="literal">some.hostname</code> must be part of the certificate. The
@@ -2101,7 +2101,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
      click <span class="guimenu">Advanced Options</span>, select <span class="guimenu">Subject
      Alternative Name</span> from the list and click
      <span class="guimenu">Add</span>.
-    </p><div id="idm140704897281536" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Subject Alternative Name</h6><p>
+    </p><div id="idm139676612880016" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Subject Alternative Name</h6><p>
       If <span class="guimenu">Subject Alternative Name</span> be in the server certificate,
       then it needs to contain the DNS entry. If <span class="guimenu">Subject Alternative Name</span> is present,
       the <span class="guimenu">Common Name</span> (CN) is not checked anymore.
@@ -2155,7 +2155,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
      <code class="filename">/etc/ssl/certs/YaST-CA.pem</code> to
      <code class="filename">/srv/www/htdocs/smt.crt</code>, the copy RMT uses.
      Restarting RMT also restarts the Web server.
-    </p></li></ol></div></div></div><div class="sect2 " id="idm140704902085392"><div class="titlepage"><div><div><h3 class="title" id="idm140704902085392"><span class="number">7.3.4 </span><span class="name">Synchronizing Time between RMT Server and Clients</span> <a title="Permalink" class="permalink" href="#idm140704902085392">#</a></h3></div></div></div><p>
+    </p></li></ol></div></div></div><div class="sect2 " id="idm139676644649616"><div class="titlepage"><div><div><h3 class="title" id="idm139676644649616"><span class="number">7.3.4 </span><span class="name">Synchronizing Time between RMT Server and Clients</span> <a title="Permalink" class="permalink" href="#idm139676644649616">#</a></h3></div></div></div><p>
    The synchronization of time between the RMT server and clients is
    highly recommended. Each server certificate has a validity period. If the
    client happens to be set to a time outside of this period, the
@@ -2197,7 +2197,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
     normally mirror the repositories on the restored server from the update
     server as well, the download can take a long time. Therefore backing up the
     repositories can save you time and bandwidth.
-   </p><div id="idm140704901903360" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
+   </p><div id="idm139676636627136" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
      The software repositories can be significant in size, and you will need to
      transfer them from the update server.
     </p></div><p>
@@ -2224,7 +2224,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
    You need an external RMT server that mirrors the repositories
    from SUSE Customer Center. Then you can transfer these repositories to the RMT servers on
    the isolated network using the external storage device.
-  </p><div class="figure" id="idm140704902007568"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="RMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">RMT Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm140704902007568">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm139676613510448"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="RMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">RMT Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm139676613510448">#</a></h6></div></div><p>
    Although the initial setup of this solution requires additional
    configuration, the regular update synchronization with SUSE Customer Center and
    distribution to isolated servers is simple. The steps required during the
@@ -2255,7 +2255,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
      internal RMT server
     </p></li></ul></div><p>
    Below is a detailed description of the individual steps.
-  </p><div class="procedure " id="idm140704900842448"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.1: </span><span class="name">External RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm140704900842448">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139676636410384"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.1: </span><span class="name">External RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm139676636410384">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Install and configure RMT as described in
      <a class="xref" href="#smt.installation" title="Chapter 1. RMT Installation">Chapter 1, <em>RMT Installation</em></a>.
     </p></li><li class="step "><p>
@@ -2280,7 +2280,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>mkdir <em class="replaceable ">/path/to/repository/on/storage/device</em>
 <code class="prompt user">tux &gt; </code>chmod o+w <em class="replaceable ">/path/to/repository/on/storage/device</em></pre></div></li><li class="step "><p>
      Unmount and detach the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm140704891609184"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.2: </span><span class="name">Internal RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm140704891609184">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm139676614933008"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.2: </span><span class="name">Internal RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="#idm139676614933008">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Ensure you have a working SUSE Linux Enterprise Server installation source.
     </p></li><li class="step "><p>
      Install RMT the same way as on the external server with the following
@@ -2324,7 +2324,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
    complete. However, the update repository is still empty. After you run the
    following daily operation routines for the first time, the repository will
    be synchronized, and the internal RMT server will be ready to serve clients.
-  </p><div class="procedure " id="idm140704897457680"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.3: </span><span class="name">Daily External RMT Server Operation </span><a title="Permalink" class="permalink" href="#idm140704897457680">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139676614380176"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.3: </span><span class="name">Daily External RMT Server Operation </span><a title="Permalink" class="permalink" href="#idm139676614380176">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect an external storage device and mount it.
     </p></li><li class="step "><p>
      Perform a mirror to a directory on the storage device based on the file
@@ -2338,7 +2338,7 @@ mailServerPassword =</pre></div></div></div></div></div><div class="sect2 " id="
      Optionally, scan the storage device for viruses and other unwanted content.
     </p></li><li class="step "><p>
      Unmount and disconnect the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm140704896100336"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.4: </span><span class="name">Daily Internal RMT Server Operation </span><a title="Permalink" class="permalink" href="#idm140704896100336">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm139676613588736"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.4: </span><span class="name">Daily Internal RMT Server Operation </span><a title="Permalink" class="permalink" href="#idm139676613588736">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect a storage device and mount it.
     </p></li><li class="step "><p>
      Update the SUSE Customer Center data on the server:

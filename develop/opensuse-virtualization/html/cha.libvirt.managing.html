@@ -28,7 +28,7 @@ hljs.configure({
   be done using the graphical application Virtual Machine Manager or on the command line using
   <code class="command">virsh</code>. Connecting to the graphical console via VNC is only
   possible from a graphical user interface.
- </p><div id="idm140071732714432" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Managing VM Guests on a Remote VM Host Server</h6><p>
+ </p><div id="idm139743349857728" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Managing VM Guests on a Remote VM Host Server</h6><p>
    If started on a VM Host Server, the <code class="systemitem">libvirt</code> tools Virtual Machine Manager,
    <code class="command">virsh</code>, and <code class="command">virt-viewer</code> can be used to
    manage VM Guests on the host. However, it is also possible to manage
@@ -59,8 +59,8 @@ hljs.configure({
    </p></div><div class="sect2 " id="sec.libvirt.managing.list.virsh"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.managing.list.virsh"><span class="number">9.1.2 </span><span class="name">Listing VM Guests with <code class="command">virsh</code></span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.list.virsh">#</a></h3></div></div></div><p>
     Use the command <code class="command">virsh</code> <code class="option">list</code> to get a
     list of VM Guests:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732696720"><span class="term ">List all running guests
-     </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh list</pre></div></dd><dt id="idm140071732694624"><span class="term ">List all running and inactive guests</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh list --all</pre></div></dd></dl></div><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349839952"><span class="term ">List all running guests
+     </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh list</pre></div></dd><dt id="idm139743349837856"><span class="term ">List all running and inactive guests</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh list --all</pre></div></dd></dl></div><p>
     For more information and further options, see <code class="command">virsh help
     list</code> or <code class="command">man 1 virsh</code>.
    </p></div></div><div class="sect1 " id="sec.libvirt.managing.console"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.managing.console"><span class="number">9.2 </span><span class="name">Accessing the VM Guest via Console</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.console">#</a></h2></div></div></div><p>
@@ -75,7 +75,7 @@ hljs.configure({
     When you click into the VNC console, the cursor is <span class="quote">“<span class="quote">grabbed</span>”</span>
     and cannot be used outside the console anymore. To release it, press
     <span class="keycap">Alt</span><span class="key-connector">–</span><span class="keycap">Ctrl</span>.
-   </p><div id="idm140071732684704" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Seamless (Absolute) Cursor Movement</h6><p>
+   </p><div id="idm139743349827872" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Seamless (Absolute) Cursor Movement</h6><p>
      To prevent the console from grabbing the cursor and to enable seamless
      cursor movement, add a tablet input device to the VM Guest. See
      <a class="xref" href="cha.libvirt.config.html#sec.libvirt.config.tablet" title="13.5. Enabling Seamless and Synchronized Mouse Pointer Movement">Section 13.5, “Enabling Seamless and Synchronized Mouse Pointer Movement”</a> for more information.
@@ -88,7 +88,7 @@ hljs.configure({
     <code class="command">virt-viewer</code>. With Virtual Machine Manager, you can alternatively use the
     <span class="quote">“<span class="quote">sticky key</span>”</span> feature as explained in
     <a class="xref" href="cha.kvm.inst.html#tip.libvirt.inst.vmm.sticky" title="Tip: Passing Key Combinations to Virtual Machines">Tip: Passing Key Combinations to Virtual Machines</a>.
-   </p><div id="idm140071732677632" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Supported VNC Viewers</h6><p>
+   </p><div id="idm139743349820704" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Supported VNC Viewers</h6><p>
      Principally all VNC viewers can connect to the console of a VM Guest.
      However, if you are using SASL authentication and/or TLS/SSL connection to
      access the guest, the options are limited. Common VNC viewers such as
@@ -114,8 +114,8 @@ hljs.configure({
      To connect to a guest that is running or paused, use either the ID, UUID,
      or name. VM Guests that are shut off do not have an ID—you can only
      connect to them by UUID or name.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732664240"><span class="term ">Connect to guest with the ID <code class="literal">8</code>
-      </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-viewer 8</pre></div></dd><dt id="idm140071732661696"><span class="term ">Connect to the inactive guest named <code class="literal">sles12</code>; the
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349807280"><span class="term ">Connect to guest with the ID <code class="literal">8</code>
+      </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-viewer 8</pre></div></dd><dt id="idm139743349804736"><span class="term ">Connect to the inactive guest named <code class="literal">sles12</code>; the
       connection window will open once the guest starts</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-viewer --wait sles12</pre></div><p>
         With the <code class="option">--wait</code> option, the connection will be upheld
         even if the VM Guest is not running at the moment. When the guest
@@ -123,7 +123,7 @@ hljs.configure({
        </p></dd></dl></div><p>
      For more information, see <code class="command">virt-viewer</code>
      <code class="option">--help</code> or <code class="command">man 1 virt-viewer</code>.
-    </p><div id="idm140071732656160" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Password Input on Remote connections with SSH</h6><p>
+    </p><div id="idm139743349799200" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Password Input on Remote connections with SSH</h6><p>
       When using <code class="command">virt-viewer</code> to open a connection to a
       remote host via SSH, the SSH password needs to be entered twice. The
       first time for authenticating with <code class="systemitem">libvirt</code>, the second time for
@@ -146,14 +146,14 @@ hljs.configure({
     Being able to connect to a VM Guest via serial console requires that the
     guest operating system supports serial console access and is properly
     supported. Refer to the guest operating system manual for more information.
-   </p><div id="idm140071732646880" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Enabling Serial Console Access for SUSE Linux Enterprise and openSUSE Guests</h6><p>
+   </p><div id="idm139743349789856" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Enabling Serial Console Access for SUSE Linux Enterprise and openSUSE Guests</h6><p>
      Serial console access in SUSE Linux Enterprise and openSUSE is disabled by default. To
      enable it, proceed as follows:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732645328"><span class="term ">SLES 12 / openSUSE</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349788208"><span class="term ">SLES 12 / openSUSE</span></dt><dd><p>
         Launch the YaST Boot Loader module and switch to the <span class="guimenu">Kernel
         Parameters</span> tab. Add <code class="literal">console=ttyS0</code> to the
         field <span class="guimenu">Optional Kernel Command Line Parameter</span>.
-       </p></dd><dt id="idm140071732642192"><span class="term ">SLES 11</span></dt><dd><p>
+       </p></dd><dt id="idm139743349785072"><span class="term ">SLES 11</span></dt><dd><p>
         Launch the YaST Boot Loader module and select the boot entry for
         which to activate serial console access. Choose <span class="guimenu">Edit</span>
         and add <code class="literal">console=ttyS0</code> to the field <span class="guimenu">Optional
@@ -170,7 +170,7 @@ hljs.configure({
    physical host and is only recommended if there are no alternatives. Forcing
    a shutdown may cause file system corruption and loss of data on the
    VM Guest.
-  </p><div id="idm140071732634336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Graceful Shutdown</h6><p>
+  </p><div id="idm139743349777216" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Graceful Shutdown</h6><p>
     To be able to perform a graceful shutdown, the VM Guest must be configured
     to support <a class="xref" href="gloss.vt.glossary.html#gloss.vt.acpi" title="ACPI">ACPI</a>. If you have created the guest
     with the Virtual Machine Manager, ACPI should be available in the VM Guest.
@@ -194,12 +194,12 @@ hljs.configure({
    </p></div><div class="sect2 " id="sec.libvirt.managing.status.vmm"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.managing.status.vmm"><span class="number">9.3.1 </span><span class="name">Changing a VM Guest's State with Virtual Machine Manager</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.status.vmm">#</a></h3></div></div></div><p>
     Changing a VM Guest's state can be done either from Virtual Machine Manager's main window,
     or from a VNC window.
-   </p><div class="procedure " id="idm140071732625072"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.1: </span><span class="name">State Change from the Virtual Machine Manager Window </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm140071732625072">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm139743349768016"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.1: </span><span class="name">State Change from the Virtual Machine Manager Window </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm139743349768016">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Right-click a VM Guest entry.
      </p></li><li class="step "><p>
       Choose <span class="guimenu">Run</span>, <span class="guimenu">Pause</span>, or one of the
       <span class="guimenu">Shutdown options</span> from the pop-up menu.
-     </p></li></ol></div></div><div class="procedure " id="idm140071732621008"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.2: </span><span class="name">State change from the VNC Window </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm140071732621008">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></li></ol></div></div><div class="procedure " id="idm139743349763952"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.2: </span><span class="name">State change from the VNC Window </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm139743349763952">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Open a VNC Window as described in
       <a class="xref" href="cha.libvirt.managing.html#sec.libvirt.managing.console.vnc.vmm" title="9.2.1.1. Opening a Graphical Console with Virtual Machine Manager">Section 9.2.1.1, “Opening a Graphical Console with Virtual Machine Manager”</a>.
      </p></li><li class="step "><p>
@@ -223,7 +223,7 @@ hljs.configure({
       </p></li></ol></div></div></div></div><div class="sect2 " id="sec.libvirt.managing.status.virsh"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.managing.status.virsh"><span class="number">9.3.2 </span><span class="name">Changing a VM Guest's State with <code class="command">virsh</code></span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.status.virsh">#</a></h3></div></div></div><p>
     In the following examples, the state of a VM Guest named
     <span class="quote">“<span class="quote">sles12</span>”</span> is changed.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732604384"><span class="term ">Start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh start sles12</pre></div></dd><dt id="idm140071732602304"><span class="term ">Pause</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh suspend sles12</pre></div></dd><dt id="idm140071732600224"><span class="term ">Resume (a Suspended  VM Guest)</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh resume sles12</pre></div></dd><dt id="idm140071732598128"><span class="term ">Reboot</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh reboot sles12</pre></div></dd><dt id="idm140071732596048"><span class="term ">Graceful shutdown</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh shutdown sles12</pre></div></dd><dt id="idm140071732593968"><span class="term ">Force shutdown</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh destroy sles12</pre></div></dd><dt id="idm140071732591888"><span class="term ">Turn on automatic start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh autostart sles12</pre></div></dd><dt id="idm140071732589808"><span class="term ">Turn off automatic start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh autostart --disable sles12</pre></div></dd></dl></div></div></div><div class="sect1 " id="sec.libvirt.manage.save"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.manage.save"><span class="number">9.4 </span><span class="name">Saving and Restoring the State of a VM Guest</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.manage.save">#</a></h2></div></div></div><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349747392"><span class="term ">Start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh start sles12</pre></div></dd><dt id="idm139743349745312"><span class="term ">Pause</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh suspend sles12</pre></div></dd><dt id="idm139743349743232"><span class="term ">Resume (a Suspended  VM Guest)</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh resume sles12</pre></div></dd><dt id="idm139743349741136"><span class="term ">Reboot</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh reboot sles12</pre></div></dd><dt id="idm139743349739056"><span class="term ">Graceful shutdown</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh shutdown sles12</pre></div></dd><dt id="idm139743349736976"><span class="term ">Force shutdown</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh destroy sles12</pre></div></dd><dt id="idm139743349734896"><span class="term ">Turn on automatic start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh autostart sles12</pre></div></dd><dt id="idm139743349732816"><span class="term ">Turn off automatic start</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh autostart --disable sles12</pre></div></dd></dl></div></div></div><div class="sect1 " id="sec.libvirt.manage.save"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.manage.save"><span class="number">9.4 </span><span class="name">Saving and Restoring the State of a VM Guest</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.manage.save">#</a></h2></div></div></div><p>
    Saving a VM Guest preserves the exact state of the guest’s memory. The
    operation is similar to <span class="emphasis"><em>hibernating</em></span> a computer. A saved
    VM Guest can be quickly restored to its previously saved running condition.
@@ -253,17 +253,17 @@ hljs.configure({
     If you used <code class="command">virsh</code> to save a VM Guest, you cannot
     restore it using Virtual Machine Manager. In this case, make sure to restore using
     <code class="command">virsh</code>.
-   </p></div><div id="idm140071732578416" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Only for VM Guests with Disk Types <code class="literal">raw</code>, <code class="literal">qcow2</code>, <code class="literal">qed</code></h6><p>
+   </p></div><div id="idm139743349721488" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Only for VM Guests with Disk Types <code class="literal">raw</code>, <code class="literal">qcow2</code>, <code class="literal">qed</code></h6><p>
     Saving and restoring VM Guests is only possible if the VM Guest is using
     a virtual disk of the type <code class="literal">raw</code>
     (<code class="filename">.img</code>), <span class="emphasis"><em>qcow2</em></span>, or
     <code class="literal">qed</code>.
-   </p></div><div class="sect2 " id="sec.libvirt.manage.save.vmm"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.manage.save.vmm"><span class="number">9.4.1 </span><span class="name">Saving/Restoring with Virtual Machine Manager</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.manage.save.vmm">#</a></h3></div></div></div><div class="procedure " id="idm140071732572704"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.3: </span><span class="name">Saving a VM Guest </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm140071732572704">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></div><div class="sect2 " id="sec.libvirt.manage.save.vmm"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.manage.save.vmm"><span class="number">9.4.1 </span><span class="name">Saving/Restoring with Virtual Machine Manager</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.manage.save.vmm">#</a></h3></div></div></div><div class="procedure " id="idm139743349715776"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.3: </span><span class="name">Saving a VM Guest </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm139743349715776">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Open a VNC connection window to a VM Guest. Make sure the guest is
       running.
      </p></li><li class="step "><p>
       Choose <span class="guimenu">Virtual Machine</span> › <span class="guimenu">Shutdown</span> › <span class="guimenu">Save</span>.
-     </p></li></ol></div></div><div class="procedure " id="idm140071732568144"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.4: </span><span class="name">Restoring a VM Guest </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm140071732568144">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></li></ol></div></div><div class="procedure " id="idm139743349711216"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 9.4: </span><span class="name">Restoring a VM Guest </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm139743349711216">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Open a VNC connection window to a VM Guest. Make sure the guest is not
       running.
      </p></li><li class="step "><p>
@@ -276,8 +276,8 @@ hljs.configure({
      </p></li></ol></div></div></div><div class="sect2 " id="sec.libvirt.manage.save.virsh"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.manage.save.virsh"><span class="number">9.4.2 </span><span class="name">Saving and Restoring with <code class="command">virsh</code></span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.manage.save.virsh">#</a></h3></div></div></div><p>
     Save a running VM Guest with the command <code class="command">virsh</code>
     <code class="option">save</code> and specify the file which it is saved to.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732558752"><span class="term ">Save the guest named <code class="literal">opensuse13</code>
-     </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh save opensuse13 /virtual/saves/opensuse13.vmsav</pre></div></dd><dt id="idm140071732556192"><span class="term ">Save the guest with the ID <code class="literal">37</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349701888"><span class="term ">Save the guest named <code class="literal">opensuse13</code>
+     </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh save opensuse13 /virtual/saves/opensuse13.vmsav</pre></div></dd><dt id="idm139743349699328"><span class="term ">Save the guest with the ID <code class="literal">37</code>
      </span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh save 37 /virtual/saves/opensuse13.vmsave</pre></div></dd></dl></div><p>
     To restore a VM Guest, use <code class="command">virsh</code>
     <code class="option">restore</code>:
@@ -292,17 +292,17 @@ hljs.configure({
    of a lot of packages. After starting a snapshot that was created while the
    VM Guest was shut off, you will need to boot it. Any changes written to the
    disk after that point in time will be lost when starting the snapshot.
-  </p><div id="idm140071732548208" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+  </p><div id="idm139743349691344" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     Snapshots are supported on KVM VM Host Servers only.
    </p></div><div class="sect2 " id="libvirt.snapshots.terminology"><div class="titlepage"><div><div><h3 class="title" id="libvirt.snapshots.terminology"><span class="number">9.5.1 </span><span class="name">Terminology</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#libvirt.snapshots.terminology">#</a></h3></div></div></div><p>
     There are several specific terms used to describe the type of snapshots:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732545456"><span class="term ">Internal snapshots</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349688432"><span class="term ">Internal snapshots</span></dt><dd><p>
        Snapshots that are saved into the qcow2 file of the original VM Guest.
        The file holds both the saved state of the snapshot and the changes made
        since the snapshot was taken. The main advantage of internal snapshots
        is that they are all stored in one file an therefore it is easy to copy
        or move them across multiple machines.
-      </p></dd><dt id="idm140071732543312"><span class="term ">External snapshots</span></dt><dd><p>
+      </p></dd><dt id="idm139743349686288"><span class="term ">External snapshots</span></dt><dd><p>
        When creating an external snapshot, the original qcow2 file is saved and
        made read-only, while a new qcow2 file is created to hold the changes.
        The original file is sometimes called a 'backing' or 'base' file, while
@@ -310,16 +310,16 @@ hljs.configure({
        file. External snapshots are useful when performing backups of
        VM Guests. For more information on external snapshots in QEMU, refer
        to <a class="xref" href="cha.qemu.guest_inst.html#cha.qemu.guest_inst.qemu-img.effect" title="27.2.4. Manipulate Disk Images Effectively">Section 27.2.4, “Manipulate Disk Images Effectively”</a>.
-      </p></dd><dt id="idm140071732540544"><span class="term ">Live snapshots</span></dt><dd><p>
+      </p></dd><dt id="idm139743349683520"><span class="term ">Live snapshots</span></dt><dd><p>
        Snapshots created when the original VM Guest is running. Internal live
        snapshots support saving the devices, and memory and disk states, while
        external live snapshots with <code class="command">virsh</code> support saving
        either the memory state, or the disk state, or both.
-      </p></dd><dt id="idm140071732538160"><span class="term ">Offline snapshots</span></dt><dd><p>
+      </p></dd><dt id="idm139743349681040"><span class="term ">Offline snapshots</span></dt><dd><p>
        Snapshot created from a VM Guest that is shut off. This ensures data
        integrity as all the guest's processes are stopped and no memory is in
        use.
-      </p></dd></dl></div></div><div class="sect2 " id="sec.libvirt.managing.snapshots.vmm"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.managing.snapshots.vmm"><span class="number">9.5.2 </span><span class="name">Creating and Managing Snapshots with Virtual Machine Manager</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.snapshots.vmm">#</a></h3></div></div></div><div id="idm140071732534736" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Internal Snapshots Only</h6><p>
+      </p></dd></dl></div></div><div class="sect2 " id="sec.libvirt.managing.snapshots.vmm"><div class="titlepage"><div><div><h3 class="title" id="sec.libvirt.managing.snapshots.vmm"><span class="number">9.5.2 </span><span class="name">Creating and Managing Snapshots with Virtual Machine Manager</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.libvirt.managing.snapshots.vmm">#</a></h3></div></div></div><div id="idm139743349677552" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Internal Snapshots Only</h6><p>
      Virtual Machine Manager supports only internal snapshots, both live and offline.
     </p></div><p>
     To open the snapshot management view in Virtual Machine Manager, open the VNC window as
@@ -558,7 +558,7 @@ Metadata:       yes</pre></div><div class="sect3 " id="sec.libvirt.managing.snap
       Right-click the VM Guest that you want to migrate and choose
       <span class="guimenu">Migrate</span>. Make sure the guest is running or
       paused—it is not possible to migrate guests that are shut down.
-     </p><div id="idm140071732420480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Increasing the Speed of the Migration</h6><p>
+     </p><div id="idm139743349562816" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Increasing the Speed of the Migration</h6><p>
        To increase the speed of the migration somewhat, pause the VM Guest.
        This is the equivalent of the former so-called <span class="quote">“<span class="quote">offline
        migration</span>”</span> option of Virtual Machine Manager.
@@ -582,7 +582,7 @@ Metadata:       yes</pre></div><div class="sect3 " id="sec.libvirt.managing.snap
       speed up the migration but only works when the current configuration
       allows for a consistent view of the VM Guest storage without using
       <code class="literal">cache="none"</code>/<code class="literal">0_DIRECT</code>.
-     </p><div id="idm140071732410352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Bandwidth Option</h6><p>
+     </p><div id="idm139743349552688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Bandwidth Option</h6><p>
        In recent versions of Virtual Machine Manager, the option of setting a bandwidth for the
        migration has been removed. To set a specific bandwidth, use
        <code class="command">virsh</code> instead.
@@ -601,20 +601,20 @@ Metadata:       yes</pre></div><div class="sect3 " id="sec.libvirt.managing.snap
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate [OPTIONS] <em class="replaceable ">VM_ID_or_NAME</em> <em class="replaceable ">CONNECTION_URI</em> [--migrateuri tcp://<em class="replaceable ">REMOTE_HOST:PORT</em>]</pre></div><p>
     The most important options are listed below. See <code class="command">virsh help
     migrate</code> for a full list.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732399120"><span class="term "><code class="option">--live</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349541456"><span class="term "><code class="option">--live</code>
      </span></dt><dd><p>
        Does a live migration. If not specified, the guest will be paused during
        the migration (<span class="quote">“<span class="quote">offline migration</span>”</span>).
-      </p></dd><dt id="idm140071732396512"><span class="term "><code class="option">--suspend</code>
+      </p></dd><dt id="idm139743349538848"><span class="term "><code class="option">--suspend</code>
      </span></dt><dd><p>
        Does an offline migration and does not restart the VM Guest on the
        target host.
-      </p></dd><dt id="idm140071732394352"><span class="term "><code class="option">--persistent</code>
+      </p></dd><dt id="idm139743349536688"><span class="term "><code class="option">--persistent</code>
      </span></dt><dd><p>
        By default a migrated VM Guest will be migrated temporarily, so its
        configuration is automatically deleted on the target host if it is shut
        down. Use this switch to make the migration persistent.
-      </p></dd><dt id="idm140071732392064"><span class="term "><code class="option">--undefinesource</code>
+      </p></dd><dt id="idm139743349534400"><span class="term "><code class="option">--undefinesource</code>
      </span></dt><dd><p>
        When specified, the VM Guest definition on the source host will be
        deleted after a successful migration (however, virtual disks attached to
@@ -623,9 +623,9 @@ Metadata:       yes</pre></div><div class="sect3 " id="sec.libvirt.managing.snap
     The following examples use mercury.example.com as the source system and jupiter.example.com as
     the target system; the VM Guest's name is <code class="literal">opensuse131</code>
     with Id <code class="literal">37</code>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140071732387456"><span class="term ">Offline migration with default parameters</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate 37 qemu+ssh://tux@jupiter.example.com/system</pre></div></dd><dt id="idm140071732385296"><span class="term ">Transient live migration with default parameters</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live opensuse131 qemu+ssh://tux@jupiter.example.com/system</pre></div></dd><dt id="idm140071732383120"><span class="term ">Persistent live migration; delete VM definition on source</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live --persistent --undefinesource 37 \
-qemu+tls://tux@jupiter.example.com/system</pre></div></dd><dt id="idm140071732380912"><span class="term ">Offline migration using port 49152</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate opensuse131 qemu+ssh://tux@jupiter.example.com/system \
---migrateuri tcp://@jupiter.example.com:49152</pre></div></dd></dl></div><div id="idm140071732378560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Transient Compared to Persistent Migrations</h6><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139743349529792"><span class="term ">Offline migration with default parameters</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate 37 qemu+ssh://tux@jupiter.example.com/system</pre></div></dd><dt id="idm139743349527632"><span class="term ">Transient live migration with default parameters</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live opensuse131 qemu+ssh://tux@jupiter.example.com/system</pre></div></dd><dt id="idm139743349525456"><span class="term ">Persistent live migration; delete VM definition on source</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate --live --persistent --undefinesource 37 \
+qemu+tls://tux@jupiter.example.com/system</pre></div></dd><dt id="idm139743349523248"><span class="term ">Offline migration using port 49152</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virsh migrate opensuse131 qemu+ssh://tux@jupiter.example.com/system \
+--migrateuri tcp://@jupiter.example.com:49152</pre></div></dd></dl></div><div id="idm139743349520896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Transient Compared to Persistent Migrations</h6><p>
      By default <code class="command">virsh migrate</code> creates a temporary
      (transient) copy of the VM Guest on the target host. A shut down version
      of the original guest description remains on the source host. A transient
@@ -709,7 +709,7 @@ Persistent:     yes
 Autostart:      yes
 Capacity:       2,68 TiB
 Allocation:     2,38 TiB
-Available:      306,05 GiB</pre></div><div id="idm140071732350272" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Pool Needs to Exist on All Target Hosts</h6><p>
+Available:      306,05 GiB</pre></div><div id="idm139743349492672" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Pool Needs to Exist on All Target Hosts</h6><p>
       Remember: this pool must be defined on each host where you want to be
       able to migrate your VM Guest.
      </p></div></div><div class="sect3 " id="sec.migrate.stepbstep.volume"><div class="titlepage"><div><div><h4 class="title" id="sec.migrate.stepbstep.volume"><span class="number">9.7.4.3 </span><span class="name">Creating the Volume</span> <a title="Permalink" class="permalink" href="cha.libvirt.managing.html#sec.migrate.stepbstep.volume">#</a></h4></div></div></div><p>
@@ -824,7 +824,7 @@ CPU: 6.1%  Mem: 3072 MB (3072 MB by guests)
    </p><div class="verbatim-wrap"><pre class="screen">kvm_stat                    # update in 1 second intervals
 kvm_stat -1                 # 1 second snapshot
 kvm_stat -l &gt; kvmstats.log  # update in 1 second intervals in log format
-                            # can be imported to a spreadsheet</pre></div><div class="example" id="idm140071732284208"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 9.1: </span><span class="name">Typical Output of <code class="command">kvm_stat</code> </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm140071732284208">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">kvm statistics
+                            # can be imported to a spreadsheet</pre></div><div class="example" id="idm139743349426736"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 9.1: </span><span class="name">Typical Output of <code class="command">kvm_stat</code> </span><a title="Permalink" class="permalink" href="cha.libvirt.managing.html#idm139743349426736">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">kvm statistics
 
  efer_reload                  0       0
  exits                 11378946  218130
