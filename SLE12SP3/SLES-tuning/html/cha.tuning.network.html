@@ -36,7 +36,7 @@ hljs.configure({
    <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 16 “Basic Networking”</span>. The Linux kernel handles data it receives
    or sends via the socket interface in socket buffers. These kernel socket
    buffers are tunable.
-  </p><div id="idm140551258635168" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: TCP Autotuning</h6><p>
+  </p><div id="idm139749862635280" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: TCP Autotuning</h6><p>
     Since kernel version 2.6.17 full autotuning with 4 MB maximum buffer
     size exists. This means that manual tuning usually will not
     improve networking performance considerably. It is often the best not to
@@ -65,25 +65,25 @@ hljs.configure({
    Socket Send Buffer for all protocols, or both these options for the TCP
    protocol only (in <code class="filename">ipv4</code>) and thus overriding the
    setting for all protocols (in <code class="filename">core</code>).
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140551258625280"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139749862625392"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code>
     </span></dt><dd><p>
       If <code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code> is set
       to <code class="literal">1</code>, autotuning is active and buffer size is
       adjusted dynamically.
-     </p></dd><dt id="idm140551258622208"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_rmem</code>
+     </p></dd><dt id="idm139749862622320"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_rmem</code>
     </span></dt><dd><p>
       The three values setting the minimum, initial, and maximum size of the
       Memory Receive Buffer per connection. They define the actual memory
       usage, not only TCP window size.
-     </p></dd><dt id="idm140551258619936"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_wmem</code>
+     </p></dd><dt id="idm139749862620048"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_wmem</code>
     </span></dt><dd><p>
       The same as <code class="filename">tcp_rmem</code>, but for Memory Send Buffer
       per connection.
-     </p></dd><dt id="idm140551258617344"><span class="term "><code class="filename">/proc/sys/net/core/rmem_max</code>
+     </p></dd><dt id="idm139749862617456"><span class="term "><code class="filename">/proc/sys/net/core/rmem_max</code>
     </span></dt><dd><p>
       Set to limit the maximum receive buffer size that applications can
       request.
-     </p></dd><dt id="idm140551258615168"><span class="term "><code class="filename">/proc/sys/net/core/wmem_max</code>
+     </p></dd><dt id="idm139749862615280"><span class="term "><code class="filename">/proc/sys/net/core/wmem_max</code>
     </span></dt><dd><p>
       Set to limit the maximum send buffer size that applications can
       request.
@@ -91,13 +91,13 @@ hljs.configure({
    Via <code class="filename">/proc</code> it is possible to disable TCP features
    that you do not need (all TCP features are switched on by default). For
    example, check the following files:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140551258611504"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_timestamps</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139749862611616"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_timestamps</code>
     </span></dt><dd><p>
       TCP time stamps are defined in RFC1323.
-     </p></dd><dt id="idm140551258609376"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_window_scaling</code>
+     </p></dd><dt id="idm139749862609488"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_window_scaling</code>
     </span></dt><dd><p>
       TCP window scaling is also defined in RFC1323.
-     </p></dd><dt id="idm140551258607232"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_sack</code>
+     </p></dd><dt id="idm139749862607344"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_sack</code>
     </span></dt><dd><p>
       Select acknowledgments (SACKS).
      </p></dd></dl></div><p>
@@ -109,7 +109,7 @@ hljs.configure({
    survive reboots reliably. With <code class="command">sysctl</code> you can read all
    variables and their values easily; as <code class="systemitem">root</code> use the following
    command to list TCP related settings:
-  </p><div class="verbatim-wrap"><pre class="screen">sysctl -a | grep tcp</pre></div><div id="idm140551258600000" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Side-Effects of Tuning Network Variables</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">sysctl -a | grep tcp</pre></div><div id="idm139749862600112" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Side-Effects of Tuning Network Variables</h6><p>
     Tuning network variables can affect other system resources such as CPU
     or memory use.
 

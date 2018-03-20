@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Managing Multipath I/O for Devices | Storage Administration Guide | SUSE Linux Enterprise Server 12 SP3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP3" /><meta name="book-title" content="Storage Administration Guide" /><meta name="chapter-title" content="Chapter 16. Managing Multipath I/O for Devices" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP3" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.net_storage.html" title="Part IV. Network Storage" /><link rel="prev" href="cha.fcoe.html" title="Chapter 15. Fibre Channel Storage over Ethernet Networks: FCoE" /><link rel="next" href="cha.nfs4_acls.html" title="Chapter 17. Managing Access Control Lists over NFSv4" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Managing Multipath I/O for Devices | Storage Administration Guide | SUSE Linux Enterprise Server 12 SP3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP3" /><meta name="book-title" content="Storage Administration Guide" /><meta name="chapter-title" content="Chapter 17. Managing Multipath I/O for Devices" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP3" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.net_storage.html" title="Part IV. Network Storage" /><link rel="prev" href="cha.nvmeof.html" title="Chapter 16. NVMe over Fabric" /><link rel="next" href="cha.nfs4_acls.html" title="Chapter 18. Managing Access Control Lists over NFSv4" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -23,11 +23,11 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.net_storage.html">Network Storage</a><span> › </span><a class="crumb" href="cha.multipath.html">Managing Multipath I/O for Devices</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">16 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">17 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="app.storage.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk08apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 15. Fibre Channel Storage over Ethernet Networks: FCoE" href="cha.fcoe.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 17. Managing Access Control Lists over NFSv4" href="cha.nfs4_acls.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.net_storage.html">Network Storage</a><span> › </span><a class="crumb" href="cha.multipath.html">Managing Multipath I/O for Devices</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 15. Fibre Channel Storage over Ethernet Networks: FCoE" href="cha.fcoe.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 17. Managing Access Control Lists over NFSv4" href="cha.nfs4_acls.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.multipath" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP3</span></span></span></div><div><h2 class="title"><span class="number">16 </span><span class="name">Managing Multipath I/O for Devices</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_multipath.xml</li><li><span class="ds-label">ID: </span>cha.multipath</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.intro"><span class="number">16.1 </span><span class="name">Understanding Multipath I/O</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.hardware"><span class="number">16.2 </span><span class="name">Hardware Support</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.planning"><span class="number">16.3 </span><span class="name">Planning for Multipathing</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.mpiotools"><span class="number">16.4 </span><span class="name">Multipath Management Tools</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.config"><span class="number">16.5 </span><span class="name">Configuring the System for Multipathing</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.conf_file"><span class="number">16.6 </span><span class="name">Creating or Modifying the /etc/multipath.conf File</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.policies_default"><span class="number">16.7 </span><span class="name">Configuring Default Policies for Polling, Queuing, and Failback</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.blacklist"><span class="number">16.8 </span><span class="name">Blacklisting Non-Multipath Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.names"><span class="number">16.9 </span><span class="name">Configuring User-Friendly Names or Alias Names</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.policies_failover"><span class="number">16.10 </span><span class="name">Configuring Path Failover Policies and Priorities</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.root"><span class="number">16.11 </span><span class="name">Configuring Multipath I/O for the Root Device</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.raid"><span class="number">16.12 </span><span class="name">Configuring Multipath I/O for an Existing Software RAID</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.lvm"><span class="number">16.13 </span><span class="name">Using LVM2 on Multipath Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.best_practice"><span class="number">16.14 </span><span class="name">Best Practice</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.trouble"><span class="number">16.15 </span><span class="name">Troubleshooting MPIO</span></a></span></dt></dl></div></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.net_storage.html">Network Storage</a><span> › </span><a class="crumb" href="cha.multipath.html">Managing Multipath I/O for Devices</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.nvmeof.html"><span class="number">16 </span><span class="name">NVMe over Fabric</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">17 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">18 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="app.storage.docupdates.html"><span class="number">A </span><span class="name">Documentation Updates</span></a></li><li class="inactive"><a href="bk08apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 16. NVMe over Fabric" href="cha.nvmeof.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 18. Managing Access Control Lists over NFSv4" href="cha.nfs4_acls.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.net_storage.html">Network Storage</a><span> › </span><a class="crumb" href="cha.multipath.html">Managing Multipath I/O for Devices</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 16. NVMe over Fabric" href="cha.nvmeof.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 18. Managing Access Control Lists over NFSv4" href="cha.nfs4_acls.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.multipath" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP3</span></span></span></div><div><h2 class="title"><span class="number">17 </span><span class="name">Managing Multipath I/O for Devices</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_multipath.xml</li><li><span class="ds-label">ID: </span>cha.multipath</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.intro"><span class="number">17.1 </span><span class="name">Understanding Multipath I/O</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.hardware"><span class="number">17.2 </span><span class="name">Hardware Support</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.planning"><span class="number">17.3 </span><span class="name">Planning for Multipathing</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.mpiotools"><span class="number">17.4 </span><span class="name">Multipath Management Tools</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.config"><span class="number">17.5 </span><span class="name">Configuring the System for Multipathing</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.conf_file"><span class="number">17.6 </span><span class="name">Creating or Modifying the /etc/multipath.conf File</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.policies_default"><span class="number">17.7 </span><span class="name">Configuring Default Policies for Polling, Queuing, and Failback</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.blacklist"><span class="number">17.8 </span><span class="name">Blacklisting Non-Multipath Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.names"><span class="number">17.9 </span><span class="name">Configuring User-Friendly Names or Alias Names</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.policies_failover"><span class="number">17.10 </span><span class="name">Configuring Path Failover Policies and Priorities</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.root"><span class="number">17.11 </span><span class="name">Configuring Multipath I/O for the Root Device</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.raid"><span class="number">17.12 </span><span class="name">Configuring Multipath I/O for an Existing Software RAID</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.lvm"><span class="number">17.13 </span><span class="name">Using LVM2 on Multipath Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.best_practice"><span class="number">17.14 </span><span class="name">Best Practice</span></a></span></dt><dt><span class="sect1"><a href="cha.multipath.html#sec.multipath.trouble"><span class="number">17.15 </span><span class="name">Troubleshooting MPIO</span></a></span></dt></dl></div></div><p>
   This section describes how to manage failover and path load balancing for
   multiple paths between the servers and block storage devices by using
   Multipath I/O (MPIO).
- </p><div class="sect1 " id="sec.multipath.intro"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.intro"><span class="number">16.1 </span><span class="name">Understanding Multipath I/O</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.intro">#</a></h2></div></div></div><p>
+ </p><div class="sect1 " id="sec.multipath.intro"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.intro"><span class="number">17.1 </span><span class="name">Understanding Multipath I/O</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.intro">#</a></h2></div></div></div><p>
    Multipathing is the ability of a server to communicate with the same
    physical or logical block storage device across multiple physical paths
    between the host bus adapters in the server and the storage controllers for
@@ -46,14 +46,14 @@ hljs.configure({
    errors for an active path, it fails over the traffic to the device’s
    designated secondary path. When the preferred path becomes healthy again,
    control can be returned to the preferred path.
-  </p></div><div class="sect1 " id="sec.multipath.hardware"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.hardware"><span class="number">16.2 </span><span class="name">Hardware Support</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.multipath.hardware"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.hardware"><span class="number">17.2 </span><span class="name">Hardware Support</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware">#</a></h2></div></div></div><p>
    The multipathing drivers and tools support all architectures for which
    <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is available. They support most storage arrays. The storage
    array that houses the multipathed device must support multipathing to use
    the multipathing drivers and tools. Some storage array vendors provide their
    own multipathing management tools. Consult the vendor’s hardware
    documentation to determine what settings are required.
-  </p><div class="sect2 " id="sec.multipath.hardware.autodetect"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.autodetect"><span class="number">16.2.1 </span><span class="name">Storage Arrays That Are Automatically Detected for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.autodetect">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.hardware.autodetect"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.autodetect"><span class="number">17.2.1 </span><span class="name">Storage Arrays That Are Automatically Detected for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.autodetect">#</a></h3></div></div></div><p>
     The <code class="filename">multipath-tools</code> package automatically detects the
     following storage arrays:
    </p><table border="0" summary="Simple list" class="simplelist "><tr><td>3PARdata VV</td></tr><tr><td>AIX NVDISK</td></tr><tr><td>AIX VDASD</td></tr><tr><td>APPLE Xserve RAID</td></tr><tr><td>COMPELNT Compellent Vol</td></tr><tr><td>COMPAQ/HP HSV101, HSV111, HSV200, HSV210, HSV300, HSV400, HSV 450</td></tr><tr><td>COMPAQ/HP MSA, HSV</td></tr><tr><td>COMPAQ/HP MSA VOLUME</td></tr><tr><td>DataCore SANmelody</td></tr><tr><td>DDN SAN DataDirector</td></tr><tr><td>DEC HSG80</td></tr><tr><td>DELL MD3000</td></tr><tr><td>DELL MD3000i</td></tr><tr><td>DELL MD32xx</td></tr><tr><td>DELL MD32xxi</td></tr><tr><td>DGC</td></tr><tr><td>EMC Clariion</td></tr><tr><td>EMC Invista</td></tr><tr><td>EMC SYMMETRIX</td></tr><tr><td>EUROLOGC FC2502</td></tr><tr><td>FSC CentricStor</td></tr><tr><td>FUJITSU ETERNUS_DX, DXL, DX400, DX8000</td></tr><tr><td>HITACHI DF</td></tr><tr><td>HITACHI/HP OPEN</td></tr><tr><td>HP A6189A</td></tr><tr><td>HP HSVX700</td></tr><tr><td>HP LOGICAL VOLUME</td></tr><tr><td>HP MSA2012fc, MSA 2212fc, MSA2012i</td></tr><tr><td>HP MSA2012sa, MSA2312 fc/i/sa, MCA2324 fc/i/sa, MSA2000s VOLUME</td></tr><tr><td>HP P2000 G3 FC|P2000G3 FC/iSCSI|P2000 G3 SAS|P2000 G3 iSCSI</td></tr><tr><td>IBM 1722-600</td></tr><tr><td>IBM 1724</td></tr><tr><td>IBM 1726</td></tr><tr><td>IBM 1742</td></tr><tr><td>IBM 1745, 1746</td></tr><tr><td>IBM 1750500</td></tr><tr><td>IBM 1814</td></tr><tr><td>IBM 1815</td></tr><tr><td>IBM 1818</td></tr><tr><td>IBM 1820N00</td></tr><tr><td>IBM 2105800</td></tr><tr><td>IBM 2105F20</td></tr><tr><td>IBM 2107900</td></tr><tr><td>IBM 2145</td></tr><tr><td>IBM 2810XIV</td></tr><tr><td>IBM 3303 NVDISK</td></tr><tr><td>IBM 3526</td></tr><tr><td>IBM 3542</td></tr><tr><td>IBM IPR</td></tr><tr><td>IBM Nseries</td></tr><tr><td>IBM ProFibre 4000R</td></tr><tr><td>IBM S/390 DASD ECKD</td></tr><tr><td>IBM S/390 DASD FBA</td></tr><tr><td>Intel Multi-Flex</td></tr><tr><td>LSI/ENGENIO INF-01-00</td></tr><tr><td>NEC DISK ARRAY</td></tr><tr><td>NETAPP LUN</td></tr><tr><td>NEXENTA COMSTAR</td></tr><tr><td>Pillar Axiom</td></tr><tr><td>PIVOT3 RAIGE VOLUME</td></tr><tr><td>SGI IS</td></tr><tr><td>SGI TP9100, TP 9300</td></tr><tr><td>SGI TP9400, TP9500</td></tr><tr><td>STK FLEXLINE 380</td></tr><tr><td>STK OPENstorage D280</td></tr><tr><td>SUN CSM200_R</td></tr><tr><td>SUN LCSM100_[IEFS]</td></tr><tr><td>SUN STK6580, STK6780</td></tr><tr><td>SUN StorEdge 3510, T4</td></tr><tr><td>SUN SUN_6180</td></tr></table><p>
@@ -62,38 +62,38 @@ hljs.configure({
     want non-default settings, you must manually create and configure the
     <code class="filename">/etc/multipath.conf</code> file. The same applies for
     hardware that is not automatically detected. For information, see
-    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="16.6. Creating or Modifying the /etc/multipath.conf File">Section 16.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
+    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="17.6. Creating or Modifying the /etc/multipath.conf File">Section 17.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
    </p><p>
     Consider the following caveats:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Not all of the storage arrays that are automatically detected have been
       tested on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. Also see
-      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.tested" title="16.2.2. Tested Storage Arrays for Multipathing Support">Section 16.2.2, “Tested Storage Arrays for Multipathing Support”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.tested" title="17.2.2. Tested Storage Arrays for Multipathing Support">Section 17.2.2, “Tested Storage Arrays for Multipathing Support”</a>.
      </p></li><li class="listitem "><p>
       Some storage arrays might require specific hardware handlers. A hardware
       handler is a kernel module that performs hardware-specific actions when
       switching path groups and dealing with I/O errors. For information, see
-      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.handlers" title="16.2.3. Storage Arrays that Require Specific Hardware Handlers">Section 16.2.3, “Storage Arrays that Require Specific Hardware Handlers”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.handlers" title="17.2.3. Storage Arrays that Require Specific Hardware Handlers">Section 17.2.3, “Storage Arrays that Require Specific Hardware Handlers”</a>.
      </p></li><li class="listitem "><p>
       After each modification of the <code class="filename">/etc/multipath.conf</code>
       file, you must run <code class="command">dracut</code> <code class="option">-f</code> to
       re-create the <code class="systemitem">initrd</code> on your system. Reboot
       afterward for the changes to take effect.
-     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.hardware.tested"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.tested"><span class="number">16.2.2 </span><span class="name">Tested Storage Arrays for Multipathing Support</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.tested">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.hardware.tested"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.tested"><span class="number">17.2.2 </span><span class="name">Tested Storage Arrays for Multipathing Support</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.tested">#</a></h3></div></div></div><p>
     Storage arrays from the following vendors have been tested with
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>:
    </p><table border="0" summary="Simple list" class="simplelist "><tr><td>EMC</td></tr><tr><td>Hitachi</td></tr><tr><td>Hewlett-Packard/Compaq</td></tr><tr><td>IBM</td></tr><tr><td>NetApp</td></tr><tr><td>SGI</td></tr></table><p>
     Most other vendor storage arrays should also work. Consult your vendor’s
     documentation for guidance. For a list of the default storage arrays
     recognized by the <code class="filename">multipath-tools</code> package, see
-    <a class="xref" href="cha.multipath.html#sec.multipath.hardware.autodetect" title="16.2.1. Storage Arrays That Are Automatically Detected for Multipathing">Section 16.2.1, “Storage Arrays That Are Automatically Detected for Multipathing”</a>.
-   </p></div><div class="sect2 " id="sec.multipath.hardware.handlers"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.handlers"><span class="number">16.2.3 </span><span class="name">Storage Arrays that Require Specific Hardware Handlers</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.handlers">#</a></h3></div></div></div><p>
+    <a class="xref" href="cha.multipath.html#sec.multipath.hardware.autodetect" title="17.2.1. Storage Arrays That Are Automatically Detected for Multipathing">Section 17.2.1, “Storage Arrays That Are Automatically Detected for Multipathing”</a>.
+   </p></div><div class="sect2 " id="sec.multipath.hardware.handlers"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.hardware.handlers"><span class="number">17.2.3 </span><span class="name">Storage Arrays that Require Specific Hardware Handlers</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.hardware.handlers">#</a></h3></div></div></div><p>
     Storage arrays that require special commands on failover from one path to
     the other or that require special nonstandard error handling might require
     more extensive support. Therefore, the Device Mapper Multipath service has
     hooks for hardware handlers. For example, one such handler for the EMC
     CLARiiON CX family of arrays is already provided.
-   </p><div id="idm140654473719664" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: For More Information</h6><p>
+   </p><div id="idm140604648024144" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: For More Information</h6><p>
      Consult the hardware vendor’s documentation to determine if its hardware
      handler must be installed for Device Mapper Multipath.
     </p></div><p>
@@ -103,7 +103,7 @@ hljs.configure({
     arrays. It lists only those arrays that require special handling and that
     the <code class="filename">multipath-tools</code> developers had access to during
     the tool development.
-   </p><div id="idm140654473716544" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exceptions</h6><p>
+   </p><div id="idm140604648021024" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exceptions</h6><p>
      Arrays with true active/active multipath support do not require special
      handling, so they are not listed for the <code class="command">multipath -t</code>
      command.
@@ -111,16 +111,16 @@ hljs.configure({
     A listing in the <code class="command">multipath -t</code> table does not necessarily
     mean that <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> was tested on that specific hardware. For a list of
     tested storage arrays, see
-    <a class="xref" href="cha.multipath.html#sec.multipath.hardware.tested" title="16.2.2. Tested Storage Arrays for Multipathing Support">Section 16.2.2, “Tested Storage Arrays for Multipathing Support”</a>.
-   </p></div></div><div class="sect1 " id="sec.multipath.planning"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.planning"><span class="number">16.3 </span><span class="name">Planning for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning">#</a></h2></div></div></div><p>
+    <a class="xref" href="cha.multipath.html#sec.multipath.hardware.tested" title="17.2.2. Tested Storage Arrays for Multipathing Support">Section 17.2.2, “Tested Storage Arrays for Multipathing Support”</a>.
+   </p></div></div><div class="sect1 " id="sec.multipath.planning"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.planning"><span class="number">17.3 </span><span class="name">Planning for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning">#</a></h2></div></div></div><p>
    Use the guidelines in this section when planning your multipath I/O
    solution.
-  </p><div class="sect2 " id="sec.multipath.planning.prereq"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.prereq"><span class="number">16.3.1 </span><span class="name">Prerequisites</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.prereq">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="sect2 " id="sec.multipath.planning.prereq"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.prereq"><span class="number">17.3.1 </span><span class="name">Prerequisites</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.prereq">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Multipathing is managed at the device level.
      </p></li><li class="listitem "><p>
       The storage array you use for the multipathed device must support
       multipathing. For more information, see
-      <a class="xref" href="cha.multipath.html#sec.multipath.hardware" title="16.2. Hardware Support">Section 16.2, “Hardware Support”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.hardware" title="17.2. Hardware Support">Section 17.2, “Hardware Support”</a>.
      </p></li><li class="listitem "><p>
       You need to configure multipathing only if multiple physical paths exist
       between host bus adapters in the server and host bus controllers for the
@@ -135,7 +135,7 @@ hljs.configure({
       When using multipathing in a virtualization environment, the multipathing
       is controlled in the host server environment. Configure multipathing for
       the device before you assign it to a virtual guest machine.
-     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.planning.disks"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.disks"><span class="number">16.3.2 </span><span class="name">Disk Management Tasks</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.disks">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.planning.disks"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.disks"><span class="number">17.3.2 </span><span class="name">Disk Management Tasks</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.disks">#</a></h3></div></div></div><p>
     Perform the following disk management tasks before you attempt to configure
     multipathing for a physical or logical device that has multiple paths:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -152,7 +152,7 @@ hljs.configure({
       Use third-party SAN array management tools to create logical devices such
       as LUNs. Logical device types that are supported for a given array depend
       on the array vendor.
-     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.planning.raid"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.raid"><span class="number">16.3.3 </span><span class="name">Software RAIDs</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.raid">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.planning.raid"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.raid"><span class="number">17.3.3 </span><span class="name">Software RAIDs</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.raid">#</a></h3></div></div></div><p>
     The Linux software RAID management software runs on top of multipathing.
     For each device that has multiple I/O paths and that you plan to use in a
     software RAID, you must configure the device for multipathing before you
@@ -161,22 +161,22 @@ hljs.configure({
     multipathing management running underneath.
    </p><p>
     For information about setting up multipathing for existing software RAIDs,
-    see <a class="xref" href="cha.multipath.html#sec.multipath.raid" title="16.12. Configuring Multipath I/O for an Existing Software RAID">Section 16.12, “Configuring Multipath I/O for an Existing Software RAID”</a>.
-   </p></div><div class="sect2 " id="sec.multipath.planning.ha"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.ha"><span class="number">16.3.4 </span><span class="name">High-Availability Solutions</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.ha">#</a></h3></div></div></div><p>
+    see <a class="xref" href="cha.multipath.html#sec.multipath.raid" title="17.12. Configuring Multipath I/O for an Existing Software RAID">Section 17.12, “Configuring Multipath I/O for an Existing Software RAID”</a>.
+   </p></div><div class="sect2 " id="sec.multipath.planning.ha"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.ha"><span class="number">17.3.4 </span><span class="name">High-Availability Solutions</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.ha">#</a></h3></div></div></div><p>
     High-availability solutions for clustering storage resources run on top of
     the multipathing service on each node. Make sure that the configuration
     settings in the <code class="filename">/etc/multipath.conf</code> file on each node
     are consistent across the cluster.
    </p><p>
     Make sure that multipath devices have the same name across all
-    devices. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.names.ha" title="16.9.1. Multipath Device Names in HA Clusters">Section 16.9.1, “Multipath Device Names in HA Clusters”</a> for details.
+    devices. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.names.ha" title="17.9.1. Multipath Device Names in HA Clusters">Section 17.9.1, “Multipath Device Names in HA Clusters”</a> for details.
    </p><p>
     The Distributed Replicated Block Device (DRBD) high-availability solution
     for mirroring devices across a LAN runs on top of multipathing. For each
     device that has multiple I/O paths and that you plan to use in a DRDB
     solution, you must configure the device for multipathing before you
     configure DRBD.
-   </p></div><div class="sect2 " id="sec.multipath.planning.initrd"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.initrd"><span class="number">16.3.5 </span><span class="name">
+   </p></div><div class="sect2 " id="sec.multipath.planning.initrd"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.planning.initrd"><span class="number">17.3.5 </span><span class="name">
     Always Keep the <code class="filename">initrd</code> in Synchronization with the
     System Configuration
    </span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.planning.initrd">#</a></h3></div></div></div><p>
@@ -184,19 +184,19 @@ hljs.configure({
     that the <code class="filename">initrd</code> and the installed system behave the
     same regarding the root file system and all other file systems required to
     boot the system. If Multipath is enabled in the system, it also needs to be
-    enabled in the <code class="filename">initrd</code> and vice versa. See <a class="xref" href="cha.multipath.html#sec.multipath.configuration.start" title="16.5.1. Enabling, Disabling, Starting and Stopping Multipath I/O Services">Section 16.5.1, “Enabling, Disabling, Starting and Stopping Multipath I/O Services”</a> for details.
+    enabled in the <code class="filename">initrd</code> and vice versa. See <a class="xref" href="cha.multipath.html#sec.multipath.configuration.start" title="17.5.1. Enabling, Disabling, Starting and Stopping Multipath I/O Services">Section 17.5.1, “Enabling, Disabling, Starting and Stopping Multipath I/O Services”</a> for details.
    </p><p>
     If the <code class="filename">initrd</code> and the system are not synchronized, the
     system will not properly boot and the start-up procedure will result in an
-    emergency shell. See <a class="xref" href="cha.multipath.html#sec.multipath.trouble.root" title="16.15.1. The System Exits to Emergency Shell at Boot When Multipath Is Enabled">Section 16.15.1, “The System Exits to Emergency Shell at Boot When Multipath Is Enabled”</a> for
+    emergency shell. See <a class="xref" href="cha.multipath.html#sec.multipath.trouble.root" title="17.15.1. The System Exits to Emergency Shell at Boot When Multipath Is Enabled">Section 17.15.1, “The System Exits to Emergency Shell at Boot When Multipath Is Enabled”</a> for
     instructions on how to avoid or repair such a scenario.
-   </p></div></div><div class="sect1 " id="sec.multipath.mpiotools"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.mpiotools"><span class="number">16.4 </span><span class="name">Multipath Management Tools</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.mpiotools"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.mpiotools"><span class="number">17.4 </span><span class="name">Multipath Management Tools</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools">#</a></h2></div></div></div><p>
    The multipathing support in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is based on the Device Mapper
    Multipath module of the Linux kernel and the
    <code class="systemitem">multipath-tools</code> user space package. You can use the
    Multiple Devices Administration utility (<code class="command">multipath</code>) to
    view the status of multipathed devices.
-  </p><div class="sect2 " id="sec.multipath.mpiotools.dm"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.dm"><span class="number">16.4.1 </span><span class="name">Device Mapper Multipath Module</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.dm">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.mpiotools.dm"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.dm"><span class="number">17.4.1 </span><span class="name">Device Mapper Multipath Module</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.dm">#</a></h3></div></div></div><p>
     The Device Mapper Multipath (DM-MP) module provides the multipathing
     capability for Linux. DM-MPIO is the preferred solution for multipathing on
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. It is the only multipathing option shipped with the product
@@ -211,7 +211,7 @@ hljs.configure({
     The DM-MPIO framework is extensible in two ways:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Using specific hardware handlers. For information, see
-      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.handlers" title="16.2.3. Storage Arrays that Require Specific Hardware Handlers">Section 16.2.3, “Storage Arrays that Require Specific Hardware Handlers”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.handlers" title="17.2.3. Storage Arrays that Require Specific Hardware Handlers">Section 17.2.3, “Storage Arrays that Require Specific Hardware Handlers”</a>.
      </p></li><li class="listitem "><p>
       Using load-balancing algorithms that are more sophisticated than the
       round-robin algorithm.
@@ -235,14 +235,14 @@ hljs.configure({
     switch has a connection to the storage processor that owns the LUNs you
     want to access. On most disk arrays, all LUNs belong to both storage
     processors, so both connections are active.
-   </p><div id="idm140654473665824" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Storage Processors</h6><p>
+   </p><div id="idm140604647970304" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Storage Processors</h6><p>
      On some disk arrays, the storage array manages the traffic through storage
      processors so that it presents only one storage processor at a time. One
      processor is active and the other one is passive until there is a failure.
      If you are connected to the wrong storage processor (the one with the
      passive path) you might not see the expected LUNs, or you might see the
      LUNs but get errors when you try to access them.
-    </p></div><div class="table" id="idm140654473664048"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.1: </span><span class="name">Multipath I/O Features of Storage Arrays </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473664048">#</a></h6></div><div class="table-contents"><table summary="Multipath I/O Features of Storage Arrays" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+    </p></div><div class="table" id="idm140604647968528"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 17.1: </span><span class="name">Multipath I/O Features of Storage Arrays </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647968528">#</a></h6></div><div class="table-contents"><table summary="Multipath I/O Features of Storage Arrays" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Features of Storage Arrays
         </p>
@@ -333,15 +333,15 @@ hljs.configure({
     manually in the <code class="filename">/etc/multipath.conf</code> file. The
     <code class="filename">multipath.conf</code> file does not exist until you create
     and configure it. For information, see
-    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="16.6. Creating or Modifying the /etc/multipath.conf File">Section 16.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
-   </p></div><div class="sect2 " id="sec.multipath.mpiotools.io_management"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.io_management"><span class="number">16.4.2 </span><span class="name">Multipath I/O Management Tools</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.io_management">#</a></h3></div></div></div><p>
+    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="17.6. Creating or Modifying the /etc/multipath.conf File">Section 17.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
+   </p></div><div class="sect2 " id="sec.multipath.mpiotools.io_management"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.io_management"><span class="number">17.4.2 </span><span class="name">Multipath I/O Management Tools</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.io_management">#</a></h3></div></div></div><p>
     The packages <code class="systemitem">multipath-tools</code> and
     <code class="systemitem">kpartx</code> provide tools that take
     care of automatic path discovery and grouping. They automatically test the
     path periodically, so that a previously failed path is automatically
     reinstated when it becomes healthy again. This minimizes the need for
     administrator attention in a production environment.
-   </p><div class="table" id="idm140654473629792"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.2: </span><span class="name">Tools in the multipath-tools Package </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473629792">#</a></h6></div><div class="table-contents"><table summary="Tools in the multipath-tools Package" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140604647934208"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 17.2: </span><span class="name">Tools in the multipath-tools Package </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647934208">#</a></h6></div><div class="table-contents"><table summary="Tools in the multipath-tools Package" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Tool
         </p>
@@ -384,7 +384,7 @@ hljs.configure({
          Manages SCSI-persistent reservations on Device Mapper Multipath
          devices.ppc
         </p>
-       </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.multipath.mpiotools.mdadm"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.mdadm"><span class="number">16.4.3 </span><span class="name">Using MDADM for Multipathed Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.mdadm">#</a></h3></div></div></div><p>
+       </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.multipath.mpiotools.mdadm"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.mdadm"><span class="number">17.4.3 </span><span class="name">Using MDADM for Multipathed Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.mdadm">#</a></h3></div></div></div><p>
     Udev is the default device handler, and devices are automatically known to
     the system by the Worldwide ID instead of by the device node name. This
     resolves problems in previous releases of MDADM and LVM where the
@@ -399,15 +399,15 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen">DEVICE /dev/disk/by-id/*</pre></div><p>
     If you are using user-friendly names, specify the path as follows so that
     only the device mapper names are scanned after multipathing is configured:
-   </p><div class="verbatim-wrap"><pre class="screen">DEVICE /dev/disk/by-id/dm-uuid-.*-mpath-.*</pre></div></div><div class="sect2 " id="sec.multipath.mpiotools.multipath"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.multipath"><span class="number">16.4.4 </span><span class="name">The multipath Command</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.multipath">#</a></h3></div></div></div><p>
+   </p><div class="verbatim-wrap"><pre class="screen">DEVICE /dev/disk/by-id/dm-uuid-.*-mpath-.*</pre></div></div><div class="sect2 " id="sec.multipath.mpiotools.multipath"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.multipath"><span class="number">17.4.4 </span><span class="name">The multipath Command</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.multipath">#</a></h3></div></div></div><p>
     Use the Linux <code class="command">multipath(8)</code> command to configure and
     manage multipathed devices. The general syntax for the command looks like
     the following:
    </p><div class="verbatim-wrap"><pre class="screen">multipath [-v verbosity_level] [-b bindings_file] [-d] [-h|-l|-ll|-f|-F|-B|-c|-q|-r|-w|-W|-t] [-p failover|multibus|group_by_serial|group_by_prio|group_by_node_name] [<em class="replaceable ">DEVICENAME</em>]</pre></div><p>
     Refer to <code class="command">man 8 multipath</code> for details.
-   </p><div class="sect1 bridgehead"><h2 class="title" id="idm140654473600896"><span class="name">General Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473600896">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140654473600160"><span class="term ">multipath</span></dt><dd><p>
+   </p><div class="sect1 bridgehead"><h2 class="title" id="idm140604647905344"><span class="name">General Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647905344">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140604647904608"><span class="term ">multipath</span></dt><dd><p>
        Configures all multipath devices.
-      </p></dd><dt id="idm140654473598336"><span class="term ">multipath <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm140604647902784"><span class="term ">multipath <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific multipath device.
       </p><p>
@@ -415,13 +415,13 @@ hljs.configure({
        such as <code class="filename">/dev/sdb</code> (as shown by udev in the $DEVNAME
        variable), or in the <code class="literal">major:minor</code> format. The device
        may alternatively be a multipath map name.
-      </p></dd><dt id="idm140654473594128"><span class="term ">multipath -f</span></dt><dd><p>
+      </p></dd><dt id="idm140604647898576"><span class="term ">multipath -f</span></dt><dd><p>
        Selectively suppresses a multipath map, and its device-mapped
        partitions.
-      </p></dd><dt id="idm140654473592256"><span class="term ">multipath -d</span></dt><dd><p>
+      </p></dd><dt id="idm140604647896704"><span class="term ">multipath -d</span></dt><dd><p>
        Dry run. Displays potential multipath devices, but does not create any
        devices and does not update device maps.
-      </p></dd><dt id="idm140654473590352"><span class="term ">multipath -v2 -d</span></dt><dd><p>
+      </p></dd><dt id="idm140604647894800"><span class="term ">multipath -v2 -d</span></dt><dd><p>
        Displays multipath map information for potential multipath devices in a
        dry run. The -v2 option shows only local disks. This verbosity level
        prints the created or updated multipath names only for use to feed other
@@ -430,7 +430,7 @@ hljs.configure({
        There is no output if the device already exists and there are no
        changes. Use <code class="command">multipath -ll</code> to see the status of
        configured multipath devices.
-      </p></dd><dt id="idm140654473587280"><span class="term ">multipath -v2 <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm140604647891728"><span class="term ">multipath -v2 <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific potential multipath device and displays multipath
        map information for it. This verbosity level prints only the created or
@@ -446,12 +446,12 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm140654473580992"><span class="term ">multipath -v3</span></dt><dd><p>
+      </p></dd><dt id="idm140604647885440"><span class="term ">multipath -v3</span></dt><dd><p>
        Configures potential multipath devices and displays multipath map
        information for them. This verbosity level prints all detected paths,
        multipaths, and device maps. Both WWID and <code class="literal">devnode</code>
        blacklisted devices are displayed.
-      </p></dd><dt id="idm140654473578528"><span class="term ">multipath -v3 <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm140604647882976"><span class="term ">multipath -v3 <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Configures a specific potential multipath device and displays
        information for it. The -v3 option shows the full path list. This
@@ -464,9 +464,9 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm140654473573216"><span class="term ">multipath -ll</span></dt><dd><p>
+      </p></dd><dt id="idm140604647877664"><span class="term ">multipath -ll</span></dt><dd><p>
        Displays the status of all multipath devices.
-      </p></dd><dt id="idm140654473571376"><span class="term ">multipath -ll <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm140604647875824"><span class="term ">multipath -ll <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Displays the status of a specified multipath device.
       </p><p>
@@ -475,10 +475,10 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm140654473566720"><span class="term ">multipath -F</span></dt><dd><p>
+      </p></dd><dt id="idm140604647871168"><span class="term ">multipath -F</span></dt><dd><p>
        Flushes all unused multipath device maps. This unresolves the multiple
        paths; it does not delete the devices.
-      </p></dd><dt id="idm140654473564816"><span class="term ">multipath -F <em class="replaceable ">DEVICENAME</em>
+      </p></dd><dt id="idm140604647869264"><span class="term ">multipath -F <em class="replaceable ">DEVICENAME</em>
      </span></dt><dd><p>
        Flushes unused multipath device maps for a specified multipath device.
        This unresolves the multiple paths; it does not delete the device.
@@ -488,10 +488,10 @@ hljs.configure({
        <code class="command">udev</code> in the $DEVNAME variable), or in the
        <code class="literal">major:minor</code> format. The device may alternatively be a
        multipath map name.
-      </p></dd><dt id="idm140654473560064"><span class="term ">multipath -p [ failover | multibus | group_by_serial | group_by_prio | group_by_node_name ]</span></dt><dd><p>
+      </p></dd><dt id="idm140604647864512"><span class="term ">multipath -p [ failover | multibus | group_by_serial | group_by_prio | group_by_node_name ]</span></dt><dd><p>
        Sets the group policy by specifying one of the group policy options that
        are described in the following table:
-      </p><div class="table" id="idm140654473558400"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.3: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473558400">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+      </p><div class="table" id="idm140604647862848"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 17.3: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647862848">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
            <p>
             Policy Option
            </p>
@@ -547,11 +547,11 @@ hljs.configure({
             fetched in the<code class="filename">
             /sys/class/fc_transport/target*/node_name</code> location.
            </p>
-          </td></tr></tbody></table></div></div></dd><dt id="idm140654473538240"><span class="term ">multipath -t</span></dt><dd><p>
+          </td></tr></tbody></table></div></div></dd><dt id="idm140604647842640"><span class="term ">multipath -t</span></dt><dd><p>
        Shows internal hardware table and active configuration of
        multipath. Refer to <code class="command">man multipath</code> for details
        about the configuration parameters.
-      </p></dd></dl></div></div><div class="sect2 " id="sec.multipath.mpiotools.mpathpersist"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.mpathpersist"><span class="number">16.4.5 </span><span class="name">The mpathpersist Utility</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.mpathpersist">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect2 " id="sec.multipath.mpiotools.mpathpersist"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.mpiotools.mpathpersist"><span class="number">17.4.5 </span><span class="name">The mpathpersist Utility</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.mpiotools.mpathpersist">#</a></h3></div></div></div><p>
     The <code class="command">mpathpersist</code> utility can be used to manage SCSI
     persistent reservations on Device Mapper Multipath devices. The general
     syntax for the command looks like the following:
@@ -581,19 +581,19 @@ hljs.configure({
    </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl restart multipathd</pre></div><p>
     After it is set up, you can specify the reservation key in the
     <code class="command">mpathpersist</code> commands.
-   </p><div class="sect1 bridgehead"><h2 class="title" id="idm140654473523904"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473523904">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140654473523168"><span class="term ">mpathpersist --out --register --param-sark=123abc --prout-type=5 -d /dev/mapper/mpath9</span></dt><dd><p>
+   </p><div class="sect1 bridgehead"><h2 class="title" id="idm140604647828368"><span class="name">Examples</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647828368">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140604647827632"><span class="term ">mpathpersist --out --register --param-sark=123abc --prout-type=5 -d /dev/mapper/mpath9</span></dt><dd><p>
        Register the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm140654473520816"><span class="term ">mpathpersist -i -k -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm140604647825280"><span class="term ">mpathpersist -i -k -d /dev/mapper/mpath9</span></dt><dd><p>
        Read the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm140654473518496"><span class="term ">mpathpersist --out --reserve --param-sark=123abc --prout-type=8 -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm140604647822960"><span class="term ">mpathpersist --out --reserve --param-sark=123abc --prout-type=8 -d /dev/mapper/mpath9</span></dt><dd><p>
        Reserve the Service Action Reservation Key for the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd><dt id="idm140654473516144"><span class="term ">mpathpersist -i -s -d /dev/mapper/mpath9</span></dt><dd><p>
+      </p></dd><dt id="idm140604647820608"><span class="term ">mpathpersist -i -s -d /dev/mapper/mpath9</span></dt><dd><p>
        Read the reservation status of the
        <code class="filename">/dev/mapper/mpath9</code> device.
-      </p></dd></dl></div></div></div><div class="sect1 " id="sec.multipath.config"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.config"><span class="number">16.5 </span><span class="name">Configuring the System for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.config">#</a></h2></div></div></div><div class="sect2 " id="sec.multipath.configuration.start"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.start"><span class="number">16.5.1 </span><span class="name">Enabling, Disabling, Starting and Stopping Multipath I/O Services</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.start">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div></div><div class="sect1 " id="sec.multipath.config"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.config"><span class="number">17.5 </span><span class="name">Configuring the System for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.config">#</a></h2></div></div></div><div class="sect2 " id="sec.multipath.configuration.start"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.start"><span class="number">17.5.1 </span><span class="name">Enabling, Disabling, Starting and Stopping Multipath I/O Services</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.start">#</a></h3></div></div></div><p>
     To enable multipath services to start at boot time, run the following
     command:
    </p><div class="verbatim-wrap"><pre class="screen">sudo systemctl enable multipathd</pre></div><p>
@@ -620,7 +620,7 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
      <code class="filename">/etc/multipath.conf</code> before rebuilding the initrd:
     </p><div class="verbatim-wrap"><pre class="screen">blacklist {
     wwid ".*"
-}</pre></div></div></div><div class="sect2 " id="sec.multipath.configuration.sandevs"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.sandevs"><span class="number">16.5.2 </span><span class="name">Preparing SAN Devices for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.sandevs">#</a></h3></div></div></div><p>
+}</pre></div></div></div><div class="sect2 " id="sec.multipath.configuration.sandevs"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.sandevs"><span class="number">17.5.2 </span><span class="name">Preparing SAN Devices for Multipathing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.sandevs">#</a></h3></div></div></div><p>
     Before configuring multipath I/O for your SAN devices, prepare the SAN
     devices, as necessary, by doing the following:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -633,7 +633,7 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
       automatically scans the HBA to discover any SAN devices that have
       permissions for the host. It presents them to the host for further
       configuration.
-     </p><div id="idm140654473496064" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Native Multipathing</h6><p>
+     </p><div id="idm140604647800592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Native Multipathing</h6><p>
        Make sure that the HBA driver you are using does not have native
        multipathing enabled.
       </p></div><p>
@@ -644,7 +644,7 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
      </p></li><li class="listitem "><p>
       If the SAN device will be used as the root device on the server, modify
       the timeout settings for the device as described in
-      <a class="xref" href="cha.multipath.html#sec.multipath.best_practice.san_timeout" title="16.14.9. SAN Timeout Settings When the Root Device Is Multipathed">Section 16.14.9, “SAN Timeout Settings When the Root Device Is Multipathed”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.best_practice.san_timeout" title="17.14.9. SAN Timeout Settings When the Root Device Is Multipathed">Section 17.14.9, “SAN Timeout Settings When the Root Device Is Multipathed”</a>.
      </p></li></ul></div><p>
     If the LUNs are not seen by the HBA driver, <code class="command">lsscsi </code>can
     be used to check whether the SCSI devices are seen correctly by the
@@ -658,7 +658,7 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
     consecutively. For information, see <em class="citetitle ">TID 3955167: Troubleshooting
     SCSI (LUN) Scanning Issues</em> in the SUSE Knowledgebase at
     <a class="link" href="https://www.suse.com/support/kb/doc.php?id=3955167" target="_blank">https://www.suse.com/support/kb/doc.php?id=3955167</a>.
-   </p></div><div class="sect2 " id="sec.multipath.configuration.partitioning"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.partitioning"><span class="number">16.5.3 </span><span class="name">Partitioning Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.partitioning">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.multipath.configuration.partitioning"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.configuration.partitioning"><span class="number">17.5.3 </span><span class="name">Partitioning Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.configuration.partitioning">#</a></h3></div></div></div><p>
     Partitioning devices that have multiple paths is not recommended, but it is
     supported. You can use the <code class="command">kpartx</code> tool to create
     partitions on multipath devices without rebooting. You can also partition
@@ -682,12 +682,12 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
     and the create fails. If you need to subdivide a SAN device, you can carve
     LUNs on the SAN device and present each LUN as a separate multipath device
     to the server.
-   </p></div></div><div class="sect1 " id="sec.multipath.conf_file"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.conf_file"><span class="number">16.6 </span><span class="name">Creating or Modifying the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.conf_file"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.conf_file"><span class="number">17.6 </span><span class="name">Creating or Modifying the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file">#</a></h2></div></div></div><p>
    The <code class="filename">/etc/multipath.conf</code> file does not exist unless you
    create it. Default multipath device settings are applied automatically when
    the <code class="command">multipathd</code> daemon runs unless you create the
    multipath configuration file and personalize the settings.
-  </p><div id="idm140654473480240" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
+  </p><div id="idm140604647784832" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: 
     Testing and Permanently Applying Changes from
     <code class="filename">/etc/multipath.conf</code>
    </h6><p>
@@ -695,8 +695,8 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
     file, the changes are not automatically applied when you save the
     file. This allows you to perform a dry run to verify your changes
     before they are committed. When you are satisfied with the revised
-    settings, you can update the multipath maps as described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>.
-   </p></div><div class="sect2 " id="sec.multipath.conf_file.create"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.create"><span class="number">16.6.1 </span><span class="name">Creating the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.create">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    settings, you can update the multipath maps as described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>.
+   </p></div><div class="sect2 " id="sec.multipath.conf_file.create"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.create"><span class="number">17.6.1 </span><span class="name">Creating the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.create">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Create an empty <code class="filename">/etc/multipath.conf</code> file with an
       editor of your choice.
      </p></li><li class="step "><p>
@@ -706,32 +706,32 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
       individual <code class="literal">device</code> sections.
      </p><p>
       If you are using a storage subsystem that is automatically detected (see
-      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.autodetect" title="16.2.1. Storage Arrays That Are Automatically Detected for Multipathing">Section 16.2.1, “Storage Arrays That Are Automatically Detected for Multipathing”</a>), adding a <code class="literal">device</code> is not
+      <a class="xref" href="cha.multipath.html#sec.multipath.hardware.autodetect" title="17.2.1. Storage Arrays That Are Automatically Detected for Multipathing">Section 17.2.1, “Storage Arrays That Are Automatically Detected for Multipathing”</a>), adding a <code class="literal">device</code> is not
       required—the default settings for this device will be applied in
       this case.
      </p></li><li class="step "><p>
       Create a <code class="literal">blacklist</code> section containing all
-      non-multipath devices of your machine. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a> for details.
+      non-multipath devices of your machine. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="17.8. Blacklisting Non-Multipath Devices">Section 17.8, “Blacklisting Non-Multipath Devices”</a> for details.
      </p></li><li class="step "><p>
-      If required, add more sections to the configuration file. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.sections" title="16.6.2. Sections in the /etc/multipath.conf File">Section 16.6.2, “Sections in the <code class="filename">/etc/multipath.conf</code> File”</a> for a brief
+      If required, add more sections to the configuration file. Refer to <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.sections" title="17.6.2. Sections in the /etc/multipath.conf File">Section 17.6.2, “Sections in the <code class="filename">/etc/multipath.conf</code> File”</a> for a brief
       introduction. More details are available when running <code class="command">man 5
       multipath.conf</code>.
      </p></li><li class="step "><p>
       When finished, save <code class="filename">/etc/multipath.conf</code> and test
-      your settings as described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.verify" title="16.6.3. Verifying the Multipath Setup in the /etc/multipath.conf File">Section 16.6.3, “Verifying the Multipath Setup in the /etc/multipath.conf File”</a>.
+      your settings as described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.verify" title="17.6.3. Verifying the Multipath Setup in the /etc/multipath.conf File">Section 17.6.3, “Verifying the Multipath Setup in the /etc/multipath.conf File”</a>.
      </p></li><li class="step "><p>
       When you have successfully verified the configuration, apply it as
-      described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.conf_file.sections"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.sections"><span class="number">16.6.2 </span><span class="name">Sections in the <code class="filename">/etc/multipath.conf</code> File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.sections">#</a></h3></div></div></div><p>
+      described in <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>.
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.conf_file.sections"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.sections"><span class="number">17.6.2 </span><span class="name">Sections in the <code class="filename">/etc/multipath.conf</code> File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.sections">#</a></h3></div></div></div><p>
     The <code class="filename">/etc/multipath.conf</code> file is organized into the
     following sections. See <code class="command">man 5 multipath.conf</code> for
     details.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140654473458720"><span class="term ">defaults</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140604647763312"><span class="term ">defaults</span></dt><dd><p>
        General default settings for multipath I/0. These values are used if no
        values are given in the appropriate device or multipath sections. For
        information, see
-       <a class="xref" href="cha.multipath.html#sec.multipath.policies_default" title="16.7. Configuring Default Policies for Polling, Queuing, and Failback">Section 16.7, “Configuring Default Policies for Polling, Queuing, and Failback”</a>.
-      </p></dd><dt id="idm140654473455952"><span class="term ">blacklist</span></dt><dd><p>
+       <a class="xref" href="cha.multipath.html#sec.multipath.policies_default" title="17.7. Configuring Default Policies for Polling, Queuing, and Failback">Section 17.7, “Configuring Default Policies for Polling, Queuing, and Failback”</a>.
+      </p></dd><dt id="idm140604647760544"><span class="term ">blacklist</span></dt><dd><p>
        Lists the device names to discard as not multipath candidates. Devices
        can be identified by their device node name
        (<code class="literal">devnode</code>), their WWID (<code class="literal">wwid</code>), or
@@ -742,8 +742,8 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
        <code class="literal">scd</code>, <code class="literal">st</code>, <code class="literal">ram</code>,
        <code class="literal">raw</code>, <code class="literal">loop</code>.
        For more information and examples, see
-       <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a>.
-      </p></dd><dt id="idm140654473446800"><span class="term ">blacklist_exceptions</span></dt><dd><p>
+       <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="17.8. Blacklisting Non-Multipath Devices">Section 17.8, “Blacklisting Non-Multipath Devices”</a>.
+      </p></dd><dt id="idm140604647751392"><span class="term ">blacklist_exceptions</span></dt><dd><p>
        Lists the device names of devices to be treated as multipath candidates
        even if they are on the blacklist. Devices can be identified by their
        device node name (<code class="literal">devnode</code>), their WWID
@@ -756,13 +756,13 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
        blacklist devices by using the <code class="literal">devnode</code> keyword and to
        exclude some of them by using the <code class="literal">wwid</code> keyword. For
        more information and examples, see
-       <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a>.
-      </p></dd><dt id="idm140654473440464"><span class="term ">multipaths</span></dt><dd><p>
+       <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="17.8. Blacklisting Non-Multipath Devices">Section 17.8, “Blacklisting Non-Multipath Devices”</a>.
+      </p></dd><dt id="idm140604647745056"><span class="term ">multipaths</span></dt><dd><p>
        Specifies settings for individual multipath devices. Except for settings
        that do not support individual settings, these values overwrite what is
        specified in the <code class="literal">defaults</code> and
        <code class="literal">devices</code> sections of the configuration file.
-      </p></dd><dt id="idm140654473437568"><span class="term ">devices</span></dt><dd><p>
+      </p></dd><dt id="idm140604647742160"><span class="term ">devices</span></dt><dd><p>
        Specifies settings for individual storage controllers. These values
        overwrite values specified in the <code class="filename">defaults</code> section
        of the configuration file. If you use a storage array that is not
@@ -773,10 +773,10 @@ sudo systemctl disable multipathd</pre></div><div id="ann.multipath.configuratio
       </p><p>
        For information, see the following:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
-         <a class="xref" href="cha.multipath.html#sec.multipath.names" title="16.9. Configuring User-Friendly Names or Alias Names">Section 16.9, “Configuring User-Friendly Names or Alias Names”</a>
+         <a class="xref" href="cha.multipath.html#sec.multipath.names" title="17.9. Configuring User-Friendly Names or Alias Names">Section 17.9, “Configuring User-Friendly Names or Alias Names”</a>
         </p></li><li class="listitem "><p>
-         <a class="xref" href="cha.multipath.html#sec.multipath.best_practice.zseries" title="16.14.6. Configuring Default Settings for IBM z Systems Devices">Section 16.14.6, “Configuring Default Settings for IBM z Systems Devices”</a>
-        </p></li></ul></div></dd></dl></div></div><div class="sect2 " id="sec.multipath.conf_file.verify"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.verify"><span class="number">16.6.3 </span><span class="name">Verifying the Multipath Setup in the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.verify">#</a></h3></div></div></div><p>
+         <a class="xref" href="cha.multipath.html#sec.multipath.best_practice.zseries" title="17.14.6. Configuring Default Settings for IBM z Systems Devices">Section 17.14.6, “Configuring Default Settings for IBM z Systems Devices”</a>
+        </p></li></ul></div></dd></dl></div></div><div class="sect2 " id="sec.multipath.conf_file.verify"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.verify"><span class="number">17.6.3 </span><span class="name">Verifying the Multipath Setup in the /etc/multipath.conf File</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.verify">#</a></h3></div></div></div><p>
     Whenever you create or modify the <code class="filename">/etc/multipath.conf</code>
     file, the changes are not automatically applied when you save the file. You
     can perform a <span class="quote">“<span class="quote">dry run</span>”</span> of the setup to verify the multipath
@@ -864,7 +864,7 @@ directio: starting new request
 directio: async io getevents returns 1 (errno=Success)
 directio: io finished 4096/0
 sdf: state = 2
-[...]</pre></div></div><div class="sect2 " id="sec.multipath.conf_file.apply"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.apply"><span class="number">16.6.4 </span><span class="name">Applying the /etc/multipath.conf File Changes to Update the Multipath Maps</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.apply">#</a></h3></div></div></div><p>
+[...]</pre></div></div><div class="sect2 " id="sec.multipath.conf_file.apply"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.apply"><span class="number">17.6.4 </span><span class="name">Applying the /etc/multipath.conf File Changes to Update the Multipath Maps</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.apply">#</a></h3></div></div></div><p>
     Changes to the <code class="filename">/etc/multipath.conf</code> file cannot take
     effect when <code class="command">multipathd</code> is running. After you make
     changes, save and close the file, then do the following to apply the
@@ -881,14 +881,14 @@ sdf: state = 2
       Run <code class="command">dracut -f</code> to re-create the
       <code class="filename">initrd</code> image on your system, then reboot for the
       changes to take effect.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.conf_file.wwid"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.wwid"><span class="number">16.6.5 </span><span class="name">Generating a WWID</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.wwid">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.conf_file.wwid"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.conf_file.wwid"><span class="number">17.6.5 </span><span class="name">Generating a WWID</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.conf_file.wwid">#</a></h3></div></div></div><p>
     To identify a device over different paths, multipath uses a World Wide
     Identification (WWID) for each device. If the WWID is the same for two
     device paths, they are assumed to represent the same device.  We recommend
     not changing the method of WWID generation, unless there is a compelling
     reason to do so. For more details, see <code class="command">man
     multipath.conf</code>.
-   </p></div></div><div class="sect1 " id="sec.multipath.policies_default"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.policies_default"><span class="number">16.7 </span><span class="name">Configuring Default Policies for Polling, Queuing, and Failback</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_default">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.policies_default"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.policies_default"><span class="number">17.7 </span><span class="name">Configuring Default Policies for Polling, Queuing, and Failback</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_default">#</a></h2></div></div></div><p>
    The goal of multipath I/O is to provide connectivity fault tolerance between
    the storage system and the server. The desired default behavior depends on
    whether the server is a stand-alone server or a node in a high-availability
@@ -954,7 +954,7 @@ sdf: state = 2
   }</pre></div><p>
    For information about setting the polling, queuing, and failback policies,
    see the following parameters in
-   <a class="xref" href="cha.multipath.html#sec.multipath.policies_failover" title="16.10. Configuring Path Failover Policies and Priorities">Section 16.10, “Configuring Path Failover Policies and Priorities”</a>:
+   <a class="xref" href="cha.multipath.html#sec.multipath.policies_failover" title="17.10. Configuring Path Failover Policies and Priorities">Section 17.10, “Configuring Path Failover Policies and Priorities”</a>:
   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
      <a class="xref" href="cha.multipath.html#polling_interval"><code class="literal">polling_interval</code>
       </a>
@@ -968,9 +968,9 @@ sdf: state = 2
    After you have modified the <code class="filename">/etc/multipath.conf</code> file,
    you must run <code class="command">dracut</code> <code class="option">-f</code> to re-create the
    <code class="filename">initrd</code> on your system, then restart the server for the
-   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
+   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
    for details.
-  </p></div><div class="sect1 " id="sec.multipath.blacklist"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.blacklist"><span class="number">16.8 </span><span class="name">Blacklisting Non-Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.blacklist">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.multipath.blacklist"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.blacklist"><span class="number">17.8 </span><span class="name">Blacklisting Non-Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.blacklist">#</a></h2></div></div></div><p>
    The <code class="filename">/etc/multipath.conf</code> file can contain a
    <code class="command">blacklist</code> section where all non-multipath devices are
    listed. You can blacklist devices by WWID (<code class="literal">wwid</code> keyword),
@@ -979,14 +979,14 @@ sdf: state = 2
    <code class="literal">blacklist_exceptions</code> section to enable multipath for some
    devices that are blacklisted by the regular expressions used in the
    <code class="literal">blacklist</code> section.
-  </p><div id="idm140654473377568" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
+  </p><div id="idm140604647682096" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
     Preferred Blacklisting Methods
    </h6><p>
     The preferred method for blacklisting devices is by <span class="emphasis"><em>WWID</em></span>
     or by <span class="emphasis"><em>vendor and product</em></span>. Blacklisting by
     <span class="emphasis"><em>devnode</em></span> is not recommended, because device nodes
     can change and thus are not useful for persistent device identification.
-   </p></div><div id="idm140654473374704" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Regular Expressions in multipath.conf</h6><p>Regular expressions in the <code class="filename">/etc/multipath.conf</code> do
+   </p></div><div id="idm140604647679232" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Regular Expressions in multipath.conf</h6><p>Regular expressions in the <code class="filename">/etc/multipath.conf</code> do
     <span class="emphasis"><em>not</em></span> work in general. They only work if they are
     matched against common strings. However, the standard configuration
     of multipath already contains regular expressions for many devices
@@ -1003,7 +1003,7 @@ sdf: state = 2
    disks do not have multiple paths. If you want
    <code class="command">multipath</code> to ignore single-path devices, put them in the
    <code class="command">blacklist</code> section.
-  </p><div id="idm140654473365216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Compatibility</h6><p>
+  </p><div id="idm140604647669744" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Compatibility</h6><p>
     The keyword <code class="literal">devnode_blacklist</code> has been deprecated and
     replaced with the keyword <code class="literal">blacklist</code>.
    </p><p>
@@ -1078,12 +1078,12 @@ blacklist_exceptions {
    After you have modified the <code class="filename">/etc/multipath.conf</code> file,
    you must run <code class="command">dracut</code> <code class="option">-f</code> to re-create the
    <code class="filename">initrd</code> on your system, then restart the server for the
-   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
+   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
    for details.
   </p><p>
    Following the reboot, the local devices should no longer be listed in the
    multipath maps when you issue the <code class="command">multipath -ll</code> command.
-  </p><div id="idm140654473343328" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using the <code class="literal">find_multipaths</code> Option</h6><p>
+  </p><div id="idm140604647647856" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using the <code class="literal">find_multipaths</code> Option</h6><p>
     Starting with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 12 SP2, the multipath tools support the option
     <code class="literal">find_multipaths</code> in the <code class="literal">defaults</code>
     section of <code class="filename">/etc/multipath.conf</code>. Simply put, this
@@ -1116,14 +1116,14 @@ blacklist_exceptions {
     In Summary, using <code class="literal">find_multipaths</code> may be convenient in
     certain use cases, but SUSE still recommends the default configuration
     with a properly configured blacklist and blacklist exceptions.
-   </p></div></div><div class="sect1 " id="sec.multipath.names"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.names"><span class="number">16.9 </span><span class="name">Configuring User-Friendly Names or Alias Names</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.names">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.names"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.names"><span class="number">17.9 </span><span class="name">Configuring User-Friendly Names or Alias Names</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.names">#</a></h2></div></div></div><p>
    A multipath device can be identified by its WWID, by a user-friendly name,
    or by an alias that you assign for it. Device node names in the form of
    <code class="filename">/dev/sdn</code> and <code class="filename">/dev/dm-n</code> can change
    on reboot and might be assigned to different devices each time. A device’s
    WWID, user-friendly name, and alias name persist across reboots, and are the
    preferred way to identify the device.
-  </p><div id="idm140654473329040" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using Persistent Names is Recommended</h6><p>
+  </p><div id="idm140604647633568" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using Persistent Names is Recommended</h6><p>
     Because device node names in the form of <code class="filename">/dev/sdn</code> and
     <code class="filename">/dev/dm-n</code> can change on reboot, referring to multipath
     devices by their WWID is preferred. You can also use a user-friendly name
@@ -1135,7 +1135,7 @@ blacklist_exceptions {
    example of <code class="filename">multipath.conf</code> settings, see the
    <code class="filename">/usr/share/doc/packages/multipath-tools/multipath.conf.synthetic</code>
    file.
-  </p><div class="table" id="idm140654473324608"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.4: </span><span class="name">Comparison of Multipath Device Name Types </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473324608">#</a></h6></div><div class="table-contents"><table summary="Comparison of Multipath Device Name Types" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm140604647629136"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 17.4: </span><span class="name">Comparison of Multipath Device Name Types </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647629136">#</a></h6></div><div class="table-contents"><table summary="Comparison of Multipath Device Name Types" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
        <p>
         Name Types
        </p>
@@ -1212,7 +1212,7 @@ blacklist_exceptions {
   </p><p>
    Using the <code class="literal">user_friendly_names</code> option can be problematic
    in the following situations:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140654473296304"><span class="term ">Root Device Is Using Multipath:</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140604647600832"><span class="term ">Root Device Is Using Multipath:</span></dt><dd><p>
       If the system root device is using multipath and you use the
       <code class="literal">user_friendly_names</code> option, the user-friendly settings
       in the <code class="filename">/var/lib/multipath/bindings</code> file are included
@@ -1220,7 +1220,7 @@ blacklist_exceptions {
       setup, such as by adding or removing devices, there is a mismatch between
       the bindings setting inside the <code class="filename">initrd</code> and the
       bindings settings in <code class="filename">/var/lib/multipath/bindings</code>.
-     </p><div id="idm140654473292272" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Binding Mismatches</h6><p>
+     </p><div id="idm140604647596800" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Binding Mismatches</h6><p>
        A bindings mismatch between <code class="filename">initrd</code> and
        <code class="filename">/var/lib/multipath/bindings</code> can lead to a wrong
        assignment of mount points to devices, which can result in file system
@@ -1231,7 +1231,7 @@ blacklist_exceptions {
       system root device. Because the device name would differ, using an alias
       causes you to lose the ability to seamlessly switch off multipathing via
       the kernel command line.
-     </p></dd><dt id="idm140654473288768"><span class="term ">Mounting /var from Another Partition:</span></dt><dd><p>
+     </p></dd><dt id="idm140604647593296"><span class="term ">Mounting /var from Another Partition:</span></dt><dd><p>
       The default location of the <code class="literal">user_friendly_names</code>
       configuration file is <code class="filename">/var/lib/multipath/bindings</code>.
       If the <code class="filename">/var</code> data is not located on the system root
@@ -1253,7 +1253,7 @@ blacklist_exceptions {
        </p><div class="verbatim-wrap"><pre class="screen">defaults {
                user_friendly_names yes
                bindings_file "/etc/multipath/bindings"
-}</pre></div></li></ol></div></dd><dt id="idm140654473278608"><span class="term ">Multipath Is in the initrd:</span></dt><dd><p>
+}</pre></div></li></ol></div></dd><dt id="idm140604647583136"><span class="term ">Multipath Is in the initrd:</span></dt><dd><p>
       Even if the system root device is not on multipath, it is possible for
       multipath to be included in the <code class="filename">initrd</code>. For example,
       this can happen if the system root device is on LVM. If you use the
@@ -1265,8 +1265,8 @@ blacklist_exceptions {
       system boots. After the system boots, the
       <code class="filename">boot.multipath</code> and <code class="filename">multipathd</code>
       boot scripts can activate multipathing.
-     </p></dd><dt id="idm140654473272864"><span class="term ">Multipathing in HA Clusters:</span></dt><dd><p>
-      See <a class="xref" href="cha.multipath.html#sec.multipath.names.ha" title="16.9.1. Multipath Device Names in HA Clusters">Section 16.9.1, “Multipath Device Names in HA Clusters”</a> for details.
+     </p></dd><dt id="idm140604647577392"><span class="term ">Multipathing in HA Clusters:</span></dt><dd><p>
+      See <a class="xref" href="cha.multipath.html#sec.multipath.names.ha" title="17.9.1. Multipath Device Names in HA Clusters">Section 17.9.1, “Multipath Device Names in HA Clusters”</a> for details.
      </p></dd></dl></div><p>
    To enable user-friendly names or to specify aliases:
   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -1326,7 +1326,7 @@ multipaths {
                wwid           36006048000028350131253594d303334
                alias             yellow2
        }
-}</pre></div><div id="idm140654473251632" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: WWWID Compared to WWN</h6><p>
+}</pre></div><div id="idm140604647556160" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: WWWID Compared to WWN</h6><p>
       When you define device aliases in the
       <code class="filename">/etc/multipath.conf</code> file, ensure that you use each
       device’s WWID (such as
@@ -1340,7 +1340,7 @@ multipaths {
      After you have modified the <code class="filename">/etc/multipath.conf</code> file,
      you must run <code class="command">dracut</code> <code class="option">-f</code> to re-create
      the <code class="filename">initrd</code> on your system, then restart the server
-     for the changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a> for details.
+     for the changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a> for details.
     </p></li></ol></div></div><p>
    To use the entire LUN directly (for example, if you are using
    the SAN features to partition your storage), you can use the
@@ -1355,7 +1355,7 @@ multipaths {
    <code class="filename">/etc/multipath.conf</code> file). The
    <code class="filename">scsi-</code> and <code class="filename">wwn-</code> device names
    represent physical paths to the devices.
-  </p><div class="sect2 " id="sec.multipath.names.ha"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.names.ha"><span class="number">16.9.1 </span><span class="name">Multipath Device Names in HA Clusters</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.names.ha">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.names.ha"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.names.ha"><span class="number">17.9.1 </span><span class="name">Multipath Device Names in HA Clusters</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.names.ha">#</a></h3></div></div></div><p>
     Make sure that multipath devices have the same name across all devices by
     doing the following:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -1369,13 +1369,13 @@ multipaths {
       <code class="filename">dm-uuid*</code> name or alias name in the
       <code class="filename">/dev/disk/by-id</code> directory, and not a fixed path
       instance of the device. For information, see
-      <a class="xref" href="cha.multipath.html#sec.multipath.names" title="16.9. Configuring User-Friendly Names or Alias Names">Section 16.9, “Configuring User-Friendly Names or Alias Names”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.names" title="17.9. Configuring User-Friendly Names or Alias Names">Section 17.9, “Configuring User-Friendly Names or Alias Names”</a>.
      </p></li><li class="listitem "><p>
       Set the <code class="literal">user_friendly_names</code> configuration option to
       <code class="literal">no</code> to disable it. A user-friendly name is unique to a
       node, but a device might not be assigned the same user-friendly name on
       every node in the cluster.
-     </p></li></ul></div><div id="idm140654473228464" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: User-Friendly Names</h6><p>
+     </p></li></ul></div><div id="idm140604647532992" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: User-Friendly Names</h6><p>
      If you really need to use user-friendly names, you can force the
      system-defined user-friendly names to be consistent across all nodes in
      the cluster by doing the following:
@@ -1411,9 +1411,9 @@ multipaths {
        After you have modified the <code class="filename">/etc/multipath.conf</code>
        file, you must run <code class="command">dracut</code> <code class="option">-f</code> to
        re-create the <code class="filename">initrd</code> on your system, then restart
-       the node for the changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a> for details. This applies to
+       the node for the changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a> for details. This applies to
        all affected nodes.
-      </p></li></ol></div></div></div></div></div><div class="sect1 " id="sec.multipath.policies_failover"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.policies_failover"><span class="number">16.10 </span><span class="name">Configuring Path Failover Policies and Priorities</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover">#</a></h2></div></div></div><p>
+      </p></li></ol></div></div></div></div></div><div class="sect1 " id="sec.multipath.policies_failover"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.policies_failover"><span class="number">17.10 </span><span class="name">Configuring Path Failover Policies and Priorities</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover">#</a></h2></div></div></div><p>
    In a Linux host, when there are multiple paths to a storage controller, each
    path appears as a separate block device, and results in multiple block
    devices for single LUN. The Device Mapper Multipath service detects multiple
@@ -1431,15 +1431,15 @@ multipaths {
    <code class="filename">/etc/multipath.conf</code> file, you must run
    <code class="command">dracut</code> <code class="option">-f</code> to re-create the
    <code class="filename">initrd</code> on your system, then restart the server for the
-   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="16.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 16.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
+   changes to take effect. See <a class="xref" href="cha.multipath.html#sec.multipath.conf_file.apply" title="17.6.4. Applying the /etc/multipath.conf File Changes to Update the Multipath Maps">Section 17.6.4, “Applying the /etc/multipath.conf File Changes to Update the Multipath Maps”</a>
    for details.
-  </p><div class="sect2 " id="sec.multipath.policies_failover.path"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.path"><span class="number">16.10.1 </span><span class="name">Configuring the Path Failover Policies</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.path">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.policies_failover.path"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.path"><span class="number">17.10.1 </span><span class="name">Configuring the Path Failover Policies</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.path">#</a></h3></div></div></div><p>
     Use the <code class="command">multipath</code> command with the <code class="option">-p</code>
     option to set the path failover policy:
    </p><div class="verbatim-wrap"><pre class="screen">sudo multipath <em class="replaceable ">DEVICENAME</em> -p <em class="replaceable ">POLICY</em></pre></div><p>
     Replace <em class="replaceable ">POLICY</em> with one of the following policy
     options:
-   </p><div class="table" id="idm140654473196192"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 16.5: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473196192">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140604647500784"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 17.5: </span><span class="name">Group Policy Options for the multipath -p Command </span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647500784">#</a></h6></div><div class="table-contents"><table summary="Group Policy Options for the multipath -p Command" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Policy Option
         </p>
@@ -1492,13 +1492,13 @@ multipaths {
          in the<code class="filename"> /sys/class/fc_transport/target*/node_name</code>
          location.
         </p>
-       </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.multipath.policies_failover.prio"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.prio"><span class="number">16.10.2 </span><span class="name">Configuring Failover Priorities</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio">#</a></h3></div></div></div><p>
+       </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.multipath.policies_failover.prio"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.prio"><span class="number">17.10.2 </span><span class="name">Configuring Failover Priorities</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio">#</a></h3></div></div></div><p>
     You must manually enter the failover priorities for the device in the
     <code class="filename">/etc/multipath.conf</code> file. Examples for all settings
     and options can be found in the
     <code class="filename">/usr/share/doc/packages/multipath-tools/multipath.conf.annotated</code>
     file.
-   </p><div class="sect3 " id="sec.multipath.policies_failover.prio.info"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.info"><span class="number">16.10.2.1 </span><span class="name">Understanding Priority Groups and Attributes</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.info">#</a></h4></div></div></div><p>
+   </p><div class="sect3 " id="sec.multipath.policies_failover.prio.info"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.info"><span class="number">17.10.2.1 </span><span class="name">Understanding Priority Groups and Attributes</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.info">#</a></h4></div></div></div><p>
      A <span class="emphasis"><em>priority group</em></span> is a collection of paths that go to
      the same physical LUN. By default, I/O is distributed in a round-robin
      fashion across all paths in the group. The <code class="command">multipath</code>
@@ -1523,7 +1523,7 @@ multipaths {
      <code class="literal">prio</code> line specifies the prioritizer. If the prioritizer
      requires an argument, you specify the argument by using the
      <code class="literal">prio_args</code> keyword on a second line.
-    </p><div class="sect1 bridgehead"><h2 class="title" id="idm140654473164208"><span class="name">PRIO Settings for the Defaults or Devices Sections</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473164208">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140654473163440"><span class="term ">prio</span></dt><dd><p>
+    </p><div class="sect1 bridgehead"><h2 class="title" id="idm140604647468800"><span class="name">PRIO Settings for the Defaults or Devices Sections</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647468800">#</a></h2></div><div class="variablelist "><dl class="variablelist"><dt id="idm140604647468032"><span class="term ">prio</span></dt><dd><p>
         Specifies the prioritizer program to call to obtain a path priority
         value. Weights are summed for each path group to determine the next
         path group to use in case of failure.
@@ -1638,7 +1638,7 @@ prio_args "hbtl 1:.:.:. 2 4:.:.:. 4"</pre></div>
             </p>
 <div class="verbatim-wrap"><pre class="screen">prio "weightedpath"
 prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
-           </td></tr></tbody></table></div></dd><dt id="idm140654473119152"><span class="term "><code class="literal">prio_args</code>
+           </td></tr></tbody></table></div></dd><dt id="idm140604647423744"><span class="term "><code class="literal">prio_args</code>
       </span></dt><dd><p>
         Specifies the arguments for the specified prioritizer program that
         requires arguments. Most <code class="literal">prio</code> programs do not need
@@ -1646,13 +1646,13 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
        </p><p>
         There is no default. The value depends on the <code class="literal">prio</code>
         setting and whether the prioritizer requires arguments.
-       </p></dd></dl></div><div class="sect1 bridgehead"><h2 class="title" id="idm140654473115344"><span class="name">Multipath Attributes</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140654473115344">#</a></h2></div><p>
+       </p></dd></dl></div><div class="sect1 bridgehead"><h2 class="title" id="idm140604647419936"><span class="name">Multipath Attributes</span><a title="Permalink" class="permalink" href="cha.multipath.html#idm140604647419936">#</a></h2></div><p>
      Multipath attributes are used to control the behavior of multipath I/O for
      devices. You can specify attributes as defaults for all multipath devices.
      You can also specify attributes that apply only to a given multipath
      device by creating an entry for that device in the
      <code class="literal">multipaths</code> section of the multipath configuration file.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140654473113392"><span class="term "><code class="literal">user_friendly_names</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140604647417984"><span class="term "><code class="literal">user_friendly_names</code>
       </span></dt><dd><p>
         Specifies whether to use world-wide IDs (WWIDs) or to use the
         <code class="filename">/var/lib/multipath/bindings</code> file to assign a
@@ -1745,7 +1745,7 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
         We recommend failback setting of <code class="literal">manual</code> for
         multipath in cluster environments to prevent multipath failover
         ping-pong.
-       </p><div class="verbatim-wrap"><pre class="screen">failback "manual"</pre></div><div id="idm140654473072944" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
+       </p><div class="verbatim-wrap"><pre class="screen">failback "manual"</pre></div><div id="idm140604647377536" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
          Make sure that you verify the failback setting with your storage
          system vendor. Different storage systems can require different
          settings.
@@ -1797,10 +1797,10 @@ prio_args "devname sda 50 sde 10 sdc 50 sdf 10"</pre></div>
         when the connection is lost to storage. Otherwise, the messages queue
         and the resource failover cannot occur.
        </p><div class="verbatim-wrap"><pre class="screen">no_path_retry "fail"
-no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
+no_path_retry "0"</pre></div><div id="idm140604647355040" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Verification</h6><p>
          Make sure that you verify the retry settings with your storage system
          vendor. Different storage systems can require different settings.
-        </p></div></dd><dt id="idm140654473048576"><span class="term "><code class="literal">path_checker</code>
+        </p></div></dd><dt id="idm140604647353232"><span class="term "><code class="literal">path_checker</code>
       </span></dt><dd><p>
         Determines the state of the path.
        </p><div class="informaltable"><table border="1"><colgroup><col width="30%" class="1" /><col width="70%" class="2" /></colgroup><thead><tr><th>
@@ -1851,7 +1851,7 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
                 Checks the path state for the LSI/Engenio RDAC storage
                 controller.
                </p></li></ul></div>
-           </td></tr></tbody></table></div></dd><dt id="idm140654473019760"><span class="term "><code class="literal">path_grouping_policy</code>
+           </td></tr></tbody></table></div></dd><dt id="idm140604647324416"><span class="term "><code class="literal">path_grouping_policy</code>
       </span></dt><dd><p>
         Specifies the path grouping policy for a multipath device hosted by a
         given controller.
@@ -1910,7 +1910,7 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
              names are fetched in
              <code class="filename">/sys/class/fc_transport/target*/node_name</code>.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm140654472996464"><span class="term "><code class="literal">path_selector</code>
+           </td></tr></tbody></table></div></dd><dt id="idm140604647301120"><span class="term "><code class="literal">path_selector</code>
       </span></dt><dd><p>
         Specifies the path-selector algorithm to use for load balancing.
        </p><div class="informaltable"><table border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
@@ -1948,7 +1948,7 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
              (Default) A service-time oriented load balancer that balances I/O
              on paths according to the latency.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm140654472979328"><span class="term ">pg_timeout</span></dt><dd><p>
+           </td></tr></tbody></table></div></dd><dt id="idm140604647283984"><span class="term ">pg_timeout</span></dt><dd><p>
         Specifies path group timeout handling. No value can be specified; an
         internal default is set.
        </p></dd><dt id="polling_interval"><span class="term "><code class="literal">polling_interval</code>
@@ -1960,14 +1960,14 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
         sure that you verify the polling_interval setting with your storage
         system vendor. Different storage systems can require different
         settings.
-       </p></dd><dt id="idm140654472974112"><span class="term "><code class="literal">rr_min_io_rq</code>
+       </p></dd><dt id="idm140604647278768"><span class="term "><code class="literal">rr_min_io_rq</code>
       </span></dt><dd><p>
         Specifies the number of I/O requests to route to a path before
         switching to the next path in the current path group, using
         request-based device-mapper-multipath.
        </p><p>
         Specify an integer value greater than 0. The default value is 1.
-       </p><div class="verbatim-wrap"><pre class="screen">rr_min_io_rq "1"</pre></div></dd><dt id="idm140654472970896"><span class="term "><code class="literal">rr_weight</code>
+       </p><div class="verbatim-wrap"><pre class="screen">rr_min_io_rq "1"</pre></div></dd><dt id="idm140604647275552"><span class="term "><code class="literal">rr_weight</code>
       </span></dt><dd><p>
         Specifies the weighting method to use for paths.
        </p><div class="informaltable"><table border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
@@ -1995,40 +1995,40 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
              Each path’s weight is determined by the path’s priority times
              the rr_min_io_rq setting.
             </p>
-           </td></tr></tbody></table></div></dd><dt id="idm140654472956672"><span class="term "><code class="literal">uid_attribute</code>
+           </td></tr></tbody></table></div></dd><dt id="idm140604647261328"><span class="term "><code class="literal">uid_attribute</code>
       </span></dt><dd><p>
         A udev attribute that provides a unique path identifier. The default
         value is <code class="literal">ID_SERIAL</code>.
-       </p></dd></dl></div></div><div class="sect3 " id="sec.multipath.policies_failover.rr"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.rr"><span class="number">16.10.2.2 </span><span class="name">Configuring for Round-Robin Load Balancing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.rr">#</a></h4></div></div></div><p>
+       </p></dd></dl></div></div><div class="sect3 " id="sec.multipath.policies_failover.rr"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.rr"><span class="number">17.10.2.2 </span><span class="name">Configuring for Round-Robin Load Balancing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.rr">#</a></h4></div></div></div><p>
      All paths are active. I/O is configured for some number of seconds or some
      number of I/O transactions before moving to the next open path in the
      sequence.
-    </p></div><div class="sect3 " id="sec.multipath.policies_failover.prio.single"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.single"><span class="number">16.10.2.3 </span><span class="name">Configuring for Single Path Failover</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.single">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.multipath.policies_failover.prio.single"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.single"><span class="number">17.10.2.3 </span><span class="name">Configuring for Single Path Failover</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.single">#</a></h4></div></div></div><p>
      A single path with the highest priority (lowest value setting) is active
      for traffic. Other paths are available for failover, but are not used
      unless failover occurs.
-    </p></div><div class="sect3 " id="sec.multipath.policies_failover.prio.rr_grouping"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.rr_grouping"><span class="number">16.10.2.4 </span><span class="name">Grouping I/O Paths for Round-Robin Load Balancing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.rr_grouping">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.multipath.policies_failover.prio.rr_grouping"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.policies_failover.prio.rr_grouping"><span class="number">17.10.2.4 </span><span class="name">Grouping I/O Paths for Round-Robin Load Balancing</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.prio.rr_grouping">#</a></h4></div></div></div><p>
      Multiple paths with the same priority fall into the active group. When all
      paths in that group fail, the device fails over to the next highest
      priority group. All paths in the group share the traffic load in a
      round-robin load balancing fashion.
-    </p></div></div><div class="sect2 " id="sec.multipath.policies_failover.rtpg"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.rtpg"><span class="number">16.10.3 </span><span class="name">Reporting Target Path Groups</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.rtpg">#</a></h3></div></div></div><p>
+    </p></div></div><div class="sect2 " id="sec.multipath.policies_failover.rtpg"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.policies_failover.rtpg"><span class="number">17.10.3 </span><span class="name">Reporting Target Path Groups</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.policies_failover.rtpg">#</a></h3></div></div></div><p>
     Use the SCSI Report Target Port Groups (<code class="command">sg_rtpg(8)</code>)
     command. For information, see the man page for
     <code class="command">sg_rtpg(8)</code>.
-   </p></div></div><div class="sect1 " id="sec.multipath.root"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.root"><span class="number">16.11 </span><span class="name">Configuring Multipath I/O for the Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.root"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.root"><span class="number">17.11 </span><span class="name">Configuring Multipath I/O for the Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root">#</a></h2></div></div></div><p>
    Device Mapper Multipath I/O (DM-MPIO) is available and supported for
    <code class="filename">/boot</code> and <code class="filename">/root</code> in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>.
    In addition, the YaST partitioner in the YaST installer supports
    enabling multipath during the install.
-  </p><div class="sect2 " id="sec.multipath.root.install"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.install"><span class="number">16.11.1 </span><span class="name">Enabling Multipath I/O at Install Time</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.root.install"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.install"><span class="number">17.11.1 </span><span class="name">Enabling Multipath I/O at Install Time</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install">#</a></h3></div></div></div><p>
     To install the operating system on a multipath device,
     the multipath software must be running at install time. The
     <code class="systemitem">multipathd</code> daemon is not
     automatically active during the system installation. You can start it by
     using the <span class="guimenu">Configure Multipath</span> option in the YaST
     Partitioner.
-   </p><div class="sect3 " id="sec.multipath.root.install.aa_lun"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.root.install.aa_lun"><span class="number">16.11.1.1 </span><span class="name">Enabling Multipath I/O at Install Time on an Active/Active Multipath Storage LUN</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install.aa_lun">#</a></h4></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="sect3 " id="sec.multipath.root.install.aa_lun"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.root.install.aa_lun"><span class="number">17.11.1.1 </span><span class="name">Enabling Multipath I/O at Install Time on an Active/Active Multipath Storage LUN</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install.aa_lun">#</a></h4></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
        Choose <span class="guimenu">Expert Partitioner</span> on the <span class="guimenu">Suggested
        Partitioning</span> screen during the installation.
       </p></li><li class="step "><p>
@@ -2044,7 +2044,7 @@ no_path_retry "0"</pre></div><div id="idm140654473050384" class="admonition impo
        This is the device that should be used for all further processing.
       </p></li><li class="step "><p>
        Click <span class="guimenu">Next</span> to continue with the installation.
-      </p></li></ol></div></div></div><div class="sect3 " id="sec.multipath.root.install.ap_lun"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.root.install.ap_lun"><span class="number">16.11.1.2 </span><span class="name">Enabling Multipath I/O at Install Time on an Active/Passive Multipath Storage LUN</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install.ap_lun">#</a></h4></div></div></div><p>
+      </p></li></ol></div></div></div><div class="sect3 " id="sec.multipath.root.install.ap_lun"><div class="titlepage"><div><div><h4 class="title" id="sec.multipath.root.install.ap_lun"><span class="number">17.11.1.2 </span><span class="name">Enabling Multipath I/O at Install Time on an Active/Passive Multipath Storage LUN</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.install.ap_lun">#</a></h4></div></div></div><p>
      The <code class="systemitem">multipathd</code> daemon is not
      automatically active during the system installation. You can start it by
      using the <span class="guimenu">Configure Multipath</span> option in the YaST
@@ -2133,7 +2133,7 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
        <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">Alt</span><span class="key-connector">–</span><span class="keycap">F7</span>.
       </p></li><li class="step "><p>
        Click <span class="guimenu">OK</span> to continue with the installation reboot.
-      </p></li></ol></div></div></div></div><div class="sect2 " id="sec.multipath.root.enable_existing"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.enable_existing"><span class="number">16.11.2 </span><span class="name">Enabling Multipath I/O for an Existing Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.enable_existing">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+      </p></li></ol></div></div></div></div><div class="sect2 " id="sec.multipath.root.enable_existing"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.enable_existing"><span class="number">17.11.2 </span><span class="name">Enabling Multipath I/O for an Existing Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.enable_existing">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Install Linux with only a single path active, preferably one where the
       <code class="filename">by-id</code> symbolic links are listed in the partitioner.
      </p></li><li class="step "><p>
@@ -2156,13 +2156,13 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
       <code class="command">zipl</code>.
      </p></li><li class="step "><p>
       Reboot the server.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.root.disable"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.disable"><span class="number">16.11.3 </span><span class="name">Disabling Multipath I/O on the Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.disable">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.root.disable"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.root.disable"><span class="number">17.11.3 </span><span class="name">Disabling Multipath I/O on the Root Device</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.root.disable">#</a></h3></div></div></div><p>
     Add <code class="literal">multipath=off</code> to the kernel command line. This can
     be done with the YaST Boot Loader module. Open <span class="guimenu">Boot
     Loader Installation</span> › <span class="guimenu">Kernel Parameters</span> and add the parameter to both command lines.
    </p><p>
     This affects only the root device. All other devices are not affected.
-   </p></div></div><div class="sect1 " id="sec.multipath.raid"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.raid"><span class="number">16.12 </span><span class="name">Configuring Multipath I/O for an Existing Software RAID</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.raid">#</a></h2></div></div></div><p>
+   </p></div></div><div class="sect1 " id="sec.multipath.raid"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.raid"><span class="number">17.12 </span><span class="name">Configuring Multipath I/O for an Existing Software RAID</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.raid">#</a></h2></div></div></div><p>
    Ideally, you should configure multipathing for devices before you use them
    as components of a software RAID device. If you add multipathing after
    creating any software RAID devices, the DM-MPIO service might be starting
@@ -2182,12 +2182,12 @@ umount /mnt</pre></div></li></ol></li><li class="step "><p>
     </p></li><li class="listitem "><p>
      If you grow your system by adding new HBA adapters to the server or
      expanding the storage subsystem in your SAN.
-    </p></li></ul></div><div id="idm140654472852272" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Assumptions</h6><p>
+    </p></li></ul></div><div id="idm140604647157040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Assumptions</h6><p>
     The following instructions assume the software RAID device is
     <code class="filename">/dev/mapper/mpath0</code>, which is its device name as
     recognized by the kernel. It assumes you have enabled user-friendly names
     in the <code class="filename">/etc/multipath.conf</code> file as described in
-    <a class="xref" href="cha.multipath.html#sec.multipath.names" title="16.9. Configuring User-Friendly Names or Alias Names">Section 16.9, “Configuring User-Friendly Names or Alias Names”</a>.
+    <a class="xref" href="cha.multipath.html#sec.multipath.names" title="17.9. Configuring User-Friendly Names or Alias Names">Section 17.9, “Configuring User-Friendly Names or Alias Names”</a>.
    </p><p>
     Make sure to modify the instructions for the device name of your
     software RAID.
@@ -2244,11 +2244,11 @@ sudo multipath -v0</pre></div><p>
      </td></tr><tr><td><code class="literal">0 253 0 0 active sync /dev/dm-0</code>
      </td></tr><tr><td><code class="literal">1 253 1 1 active sync /dev/dm-1</code>
      </td></tr><tr><td><code class="literal">2 253 2 2 active sync /dev/dm-2</code>
-     </td></tr></table></li></ol></div></div><div id="idm140654472817792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using mdadm with Multipath Devices</h6><p>
+     </td></tr></table></li></ol></div></div><div id="idm140604647122560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using mdadm with Multipath Devices</h6><p>
     The <code class="command">mdadm</code> tool requires that the devices be accessed by
     the ID rather than by the device node path. Refer to
-    <a class="xref" href="cha.multipath.html#sec.multipath.mpiotools.mdadm" title="16.4.3. Using MDADM for Multipathed Devices">Section 16.4.3, “Using MDADM for Multipathed Devices”</a> for details.
-   </p></div></div><div class="sect1 " id="sec.multipath.lvm"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.lvm"><span class="number">16.13 </span><span class="name">Using LVM2 on Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.lvm">#</a></h2></div></div></div><p>
+    <a class="xref" href="cha.multipath.html#sec.multipath.mpiotools.mdadm" title="17.4.3. Using MDADM for Multipathed Devices">Section 17.4.3, “Using MDADM for Multipathed Devices”</a> for details.
+   </p></div></div><div class="sect1 " id="sec.multipath.lvm"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.lvm"><span class="number">17.13 </span><span class="name">Using LVM2 on Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.lvm">#</a></h2></div></div></div><p>
    When using multipath, all paths to a resource are present as devices
    in the device tree. By default LVM checks if there is a multipath
    device on top of any device in the device tree. If LVM finds a
@@ -2261,7 +2261,7 @@ sudo multipath -v0</pre></div><p>
   </p><div class="verbatim-wrap"><pre class="screen">    # By default, LVM2 will ignore devices used as component paths
     # of device-mapper multipath devices.
     # 1 enables; 0 disables.
-    multipath_component_detection = 1</pre></div></div><div class="sect1 " id="sec.multipath.best_practice"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.best_practice"><span class="number">16.14 </span><span class="name">Best Practice</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice">#</a></h2></div></div></div><div class="sect2 " id="sec.multipath.best_practice.scandev"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.scandev"><span class="number">16.14.1 </span><span class="name">Scanning for New Devices without Rebooting</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.scandev">#</a></h3></div></div></div><p>
+    multipath_component_detection = 1</pre></div></div><div class="sect1 " id="sec.multipath.best_practice"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.best_practice"><span class="number">17.14 </span><span class="name">Best Practice</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice">#</a></h2></div></div></div><div class="sect2 " id="sec.multipath.best_practice.scandev"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.scandev"><span class="number">17.14.1 </span><span class="name">Scanning for New Devices without Rebooting</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.scandev">#</a></h3></div></div></div><p>
     If your system has already been configured for multipathing and you later
     need to add more storage to the SAN, you can use the
     <code class="command">rescan-scsi-bus.sh</code> script to scan for the new devices.
@@ -2271,7 +2271,7 @@ sudo multipath -v0</pre></div><p>
     For most storage subsystems, the script can be run successfully without
     options. However, some special cases might need to use one or more options.
     Run <code class="command">rescan-scsi-bus.sh --help</code> for details.
-   </p><div id="idm140654472806352" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
+   </p><div id="idm140604647111120" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
      In EMC PowerPath environments, do not use the
      <code class="filename">rescan-scsi-bus.sh</code> utility provided with the
      operating system or the HBA vendor scripts for scanning the SCSI buses. To
@@ -2316,10 +2316,10 @@ Feb 14 01:03 multipathd: mpath5: remaining active paths: 1
       DM-MPIO configuration. At a terminal console prompt, enter
      </p><div class="verbatim-wrap"><pre class="screen">sudo multipath</pre></div><p>
       You can now configure the new device for multipathing.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.scanpart"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.scanpart"><span class="number">16.14.2 </span><span class="name">Scanning for New Partitioned Devices without Rebooting</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.scanpart">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.scanpart"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.scanpart"><span class="number">17.14.2 </span><span class="name">Scanning for New Partitioned Devices without Rebooting</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.scanpart">#</a></h3></div></div></div><p>
     Use the example in this section to detect a newly added multipathed LUN
     without rebooting.
-   </p><div id="idm140654472789408" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
+   </p><div id="idm140604647094176" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: EMC PowerPath Environments</h6><p>
      In EMC PowerPath environments, do not use the
      <code class="filename">rescan-scsi-bus.sh</code> utility provided with the
      operating system or the HBA vendor scripts for scanning the SCSI buses. To
@@ -2400,7 +2400,7 @@ multipaths {
       next time you reboot to
      </p><div class="verbatim-wrap"><pre class="screen">LABEL=<em class="replaceable ">LABELNAME</em></pre></div></li><li class="step "><p>
       Create a directory to use as the mount point, then mount the device.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.status"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.status"><span class="number">16.14.3 </span><span class="name">Viewing Multipath I/O Status</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.status">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.status"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.status"><span class="number">17.14.3 </span><span class="name">Viewing Multipath I/O Status</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.status">#</a></h3></div></div></div><p>
     Querying the multipath I/O status outputs the current status of the
     multipath maps.
    </p><p>
@@ -2452,7 +2452,7 @@ multipaths {
       Major:minor numbers
      </p></li><li class="listitem "><p>
       Status of the device
-     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.best_practice.io_error"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.io_error"><span class="number">16.14.4 </span><span class="name">Managing I/O in Error Situations</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.io_error">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.multipath.best_practice.io_error"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.io_error"><span class="number">17.14.4 </span><span class="name">Managing I/O in Error Situations</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.io_error">#</a></h3></div></div></div><p>
     You might need to configure multipathing to queue I/O if all paths fail
     concurrently by enabling queue_if_no_path. Otherwise, I/O fails immediately
     if all paths are gone. In certain scenarios, where the driver, the HBA, or
@@ -2514,7 +2514,7 @@ multipaths {
      </p><p>
       This command immediately causes all queued I/O to fail and propagates the
       error to the calling application.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.io_stalled"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.io_stalled"><span class="number">16.14.5 </span><span class="name">Resolving Stalled I/O</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.io_stalled">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.io_stalled"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.io_stalled"><span class="number">17.14.5 </span><span class="name">Resolving Stalled I/O</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.io_stalled">#</a></h3></div></div></div><p>
     If all paths fail concurrently and I/O is queued and stalled, do the
     following:
    </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -2528,7 +2528,7 @@ multipaths {
       error to the calling application.
      </p></li><li class="step "><p>
       Reactivate queuing by entering the following command:
-     </p><div class="verbatim-wrap"><pre class="screen">sudo dmsetup message <em class="replaceable ">MAPNAME</em> 0 queue_if_no_path</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.zseries"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.zseries"><span class="number">16.14.6 </span><span class="name">Configuring Default Settings for IBM z Systems Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.zseries">#</a></h3></div></div></div><p>
+     </p><div class="verbatim-wrap"><pre class="screen">sudo dmsetup message <em class="replaceable ">MAPNAME</em> 0 queue_if_no_path</pre></div></li></ol></div></div></div><div class="sect2 " id="sec.multipath.best_practice.zseries"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.zseries"><span class="number">17.14.6 </span><span class="name">Configuring Default Settings for IBM z Systems Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.zseries">#</a></h3></div></div></div><p>
     Testing of the IBM z Systems device with multipathing has shown that the
     <code class="literal">dev_loss_tmo</code> parameter should be set to 90 seconds, and
     the <code class="literal">fast_io_fail_tmo</code> parameter should be set to 5
@@ -2556,7 +2556,7 @@ multipaths {
     changes are not applied until you update the multipath maps, or until the
     <code class="systemitem">multipathd</code> daemon is restarted
     (<code class="command">systemctl restart multipathd</code>).
-   </p></div><div class="sect2 " id="sec.multipath.best_practice.netapp"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.netapp"><span class="number">16.14.7 </span><span class="name">Using Multipath with NetApp Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.netapp">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.multipath.best_practice.netapp"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.netapp"><span class="number">17.14.7 </span><span class="name">Using Multipath with NetApp Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.netapp">#</a></h3></div></div></div><p>
     When using multipath for NetApp devices, we recommend the following
     settings in the <code class="filename">/etc/multipath.conf</code> file:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -2568,7 +2568,7 @@ queue_without_daemon no</pre></div></li><li class="listitem "><p>
       the hardware table:
      </p><div class="verbatim-wrap"><pre class="screen">dev_loss_tmo infinity
 fast_io_fail_tmo 5
-features "3 queue_if_no_path pg_init_retries 50"</pre></div></li></ul></div></div><div class="sect2 " id="sec.multipath.best_practice.noflush"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.noflush"><span class="number">16.14.8 </span><span class="name">Using --noflush with Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.noflush">#</a></h3></div></div></div><p>
+features "3 queue_if_no_path pg_init_retries 50"</pre></div></li></ul></div></div><div class="sect2 " id="sec.multipath.best_practice.noflush"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.noflush"><span class="number">17.14.8 </span><span class="name">Using --noflush with Multipath Devices</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.noflush">#</a></h3></div></div></div><p>
     The <code class="option">--noflush</code> option should always be used when running on
     multipath devices.
    </p><p>
@@ -2577,7 +2577,7 @@ features "3 queue_if_no_path pg_init_retries 50"</pre></div></li></ul></div></di
     outstanding I/O is not flushed, because you need the multipath topology
     information.
    </p><div class="verbatim-wrap"><pre class="screen">load
-resume --noflush</pre></div></div><div class="sect2 " id="sec.multipath.best_practice.san_timeout"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.san_timeout"><span class="number">16.14.9 </span><span class="name">SAN Timeout Settings When the Root Device Is Multipathed</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.san_timeout">#</a></h3></div></div></div><p>
+resume --noflush</pre></div></div><div class="sect2 " id="sec.multipath.best_practice.san_timeout"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.best_practice.san_timeout"><span class="number">17.14.9 </span><span class="name">SAN Timeout Settings When the Root Device Is Multipathed</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.best_practice.san_timeout">#</a></h3></div></div></div><p>
     A system with root (<code class="filename">/</code>) on a multipath device might
     stall when all paths have failed and are removed from the system because a
     <code class="literal">dev_loss_tmo</code> timeout is received from the storage
@@ -2606,10 +2606,10 @@ resume --noflush</pre></div></div><div class="sect2 " id="sec.multipath.best_pra
     Each of these multipath values should be set from the
     <code class="filename">/etc/multipath.conf</code> configuration file. For
     information, see
-    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="16.6. Creating or Modifying the /etc/multipath.conf File">Section 16.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
-   </p></div></div><div class="sect1 " id="sec.multipath.trouble"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.trouble"><span class="number">16.15 </span><span class="name">Troubleshooting MPIO</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble">#</a></h2></div></div></div><p>
+    <a class="xref" href="cha.multipath.html#sec.multipath.conf_file" title="17.6. Creating or Modifying the /etc/multipath.conf File">Section 17.6, “Creating or Modifying the /etc/multipath.conf File”</a>.
+   </p></div></div><div class="sect1 " id="sec.multipath.trouble"><div class="titlepage"><div><div><h2 class="title" id="sec.multipath.trouble"><span class="number">17.15 </span><span class="name">Troubleshooting MPIO</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble">#</a></h2></div></div></div><p>
    This section describes some known issues and possible solutions for MPIO.
-  </p><div class="sect2 " id="sec.multipath.trouble.root"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.root"><span class="number">16.15.1 </span><span class="name">The System Exits to Emergency Shell at Boot When Multipath Is Enabled</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.root">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="sec.multipath.trouble.root"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.root"><span class="number">17.15.1 </span><span class="name">The System Exits to Emergency Shell at Boot When Multipath Is Enabled</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.root">#</a></h3></div></div></div><p>
     During boot the system exits into the emergency shell with messages similar
     to the following:
    </p><div class="verbatim-wrap"><pre class="screen">[  OK  ] Listening on multipathd control socket.
@@ -2649,15 +2649,15 @@ Give root password for maintenance
     This issue occurs in the following situations:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
        A non-multipath root file system is not blacklisted when multipath is
-       enabled. See <a class="xref" href="cha.multipath.html#pro.multipath.trouble.root.blacklist" title="Emergency Shell: Blacklist File Systems">Procedure 16.1, “Emergency Shell: Blacklist File Systems”</a>
+       enabled. See <a class="xref" href="cha.multipath.html#pro.multipath.trouble.root.blacklist" title="Emergency Shell: Blacklist File Systems">Procedure 17.1, “Emergency Shell: Blacklist File Systems”</a>
       </p></li><li class="listitem "><p>
        On a system with a multipath root file system, multipath has been
        enabled/disabled without rebuilding the <code class="filename">initrd</code>. See
-       <a class="xref" href="cha.multipath.html#pro.multipath.trouble.root.initrd" title="Emergency Shell: Rebuild the initrd">Procedure 16.2, “Emergency Shell: Rebuild the <code class="filename">initrd</code>”</a>.
+       <a class="xref" href="cha.multipath.html#pro.multipath.trouble.root.initrd" title="Emergency Shell: Rebuild the initrd">Procedure 17.2, “Emergency Shell: Rebuild the <code class="filename">initrd</code>”</a>.
       </p></li><li class="listitem "><p>
        Network-storage drivers are missing in the <code class="filename">initrd</code>
        on a system with network-attached storage and multipath enabled.
-      </p></li></ul></div><div class="procedure " id="pro.multipath.trouble.root.blacklist"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.1: </span><span class="name">Emergency Shell: Blacklist File Systems </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.blacklist">#</a></h6></div><div class="procedure-contents"><p>
+      </p></li></ul></div><div class="procedure " id="pro.multipath.trouble.root.blacklist"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.1: </span><span class="name">Emergency Shell: Blacklist File Systems </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.blacklist">#</a></h6></div><div class="procedure-contents"><p>
      This fix is required if the root file system is not on multipath but
      multipath is enabled. In such a setup, multipath tries to set its paths
      for all devices that are not blacklisted. Since the device with the root
@@ -2679,10 +2679,10 @@ Dec 18 10:10:03 | 3600508b1001030343841423043300400: ignoring map</pre></div><p>
 }</pre></div><p>
       Replace <em class="replaceable ">WWWID</em> with the ID you retrieved in the
       previous step. For more information see
-      <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="16.8. Blacklisting Non-Multipath Devices">Section 16.8, “Blacklisting Non-Multipath Devices”</a>.
+      <a class="xref" href="cha.multipath.html#sec.multipath.blacklist" title="17.8. Blacklisting Non-Multipath Devices">Section 17.8, “Blacklisting Non-Multipath Devices”</a>.
      </p></li><li class="step "><p>
       Exit the emergency shell and reboot the server by pressing <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">D</span>.
-     </p></li></ol></div></div><div class="procedure " id="pro.multipath.trouble.root.initrd"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.2: </span><span class="name">Emergency Shell: Rebuild the <code class="filename">initrd</code> </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.initrd">#</a></h6></div><div class="procedure-contents"><p>
+     </p></li></ol></div></div><div class="procedure " id="pro.multipath.trouble.root.initrd"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.2: </span><span class="name">Emergency Shell: Rebuild the <code class="filename">initrd</code> </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.initrd">#</a></h6></div><div class="procedure-contents"><p>
      This fix is required if the multipath status (enabled or disabled) differs
      between <code class="filename">initrd</code> and system. To fix this, rebuild the
      <code class="filename">initrd</code>:
@@ -2694,7 +2694,7 @@ Dec 18 10:10:03 | 3600508b1001030343841423043300400: ignoring map</pre></div><p>
       rebuild the initrd with Multipath support with this command:
      </p><div class="verbatim-wrap"><pre class="screen">dracut --force -o multipath</pre></div></li><li class="step "><p>
       Exit the emergency shell and reboot the server by pressing <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">D</span>.
-     </p></li></ol></div></div><div class="procedure " id="pro.multipath.trouble.root.drivers"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.3: </span><span class="name">Emergency Shell: Rebuild the <code class="filename">initrd</code> </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.drivers">#</a></h6></div><div class="procedure-contents"><p>
+     </p></li></ol></div></div><div class="procedure " id="pro.multipath.trouble.root.drivers"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 17.3: </span><span class="name">Emergency Shell: Rebuild the <code class="filename">initrd</code> </span><a title="Permalink" class="permalink" href="cha.multipath.html#pro.multipath.trouble.root.drivers">#</a></h6></div><div class="procedure-contents"><p>
      This fix is required if the initrd does not contain drivers to access
      network attached storage. This may, for example, be the case when the
      system was installed without multipath or when the respective hardware was
@@ -2715,7 +2715,7 @@ Dec 18 10:10:03 | 3600508b1001030343841423043300400: ignoring map</pre></div><p>
       <code class="filename">/etc/fstab</code>.
      </p></li><li class="step "><p>
       Exit the emergency shell and reboot the server by pressing <span class="keycap">Ctrl</span><span class="key-connector">–</span><span class="keycap">D</span>.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.trouble.prio_fail"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.prio_fail"><span class="number">16.15.2 </span><span class="name">PRIO Settings for Individual Devices Fail After Upgrading to Multipath 0.4.9 or Later</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.prio_fail">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.multipath.trouble.prio_fail"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.prio_fail"><span class="number">17.15.2 </span><span class="name">PRIO Settings for Individual Devices Fail After Upgrading to Multipath 0.4.9 or Later</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.prio_fail">#</a></h3></div></div></div><p>
     Multipath Tools from version 0.4.9 onward uses the <code class="literal">prio</code>
     setting in the <code class="literal">defaults{}</code> or
     <code class="literal">devices{}</code> section of the
@@ -2729,7 +2729,7 @@ Dec 18 10:10:03 | 3600508b1001030343841423043300400: ignoring map</pre></div><p>
     <code class="literal">multipaths{)</code> section to override the
     <code class="literal">prio</code> settings in the <code class="literal">defaults{}</code> or
     <code class="literal">devices{}</code> section.
-   </p></div><div class="sect2 " id="sec.multipath.trouble.prio_argument_fail"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.prio_argument_fail"><span class="number">16.15.3 </span><span class="name">PRIO Settings with Arguments Fail After Upgrading to multipath-tools-0.4.9 or Later</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.prio_argument_fail">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.multipath.trouble.prio_argument_fail"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.prio_argument_fail"><span class="number">17.15.3 </span><span class="name">PRIO Settings with Arguments Fail After Upgrading to multipath-tools-0.4.9 or Later</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.prio_argument_fail">#</a></h3></div></div></div><p>
     When you upgrade from <code class="filename">multipath-tools-0.4.8</code> to
     <code class="filename">multipath-tools-0.4.9</code>, the <code class="literal">prio</code>
     settings in the <code class="filename">/etc/multipath.conf</code> file are broken
@@ -2757,7 +2757,7 @@ prio_args "hbtl [1,3]:.:.+:.+ 260 [0,2]:.:.+:.+ 20"</pre></div><p>
     Restart the <code class="systemitem">multipathd</code> daemon for
     the changes to become active by running <code class="command">sudo systemctl restart
     multipathd</code>.
-   </p></div><div class="sect2 " id="sec.multipath.trouble.tids"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.tids"><span class="number">16.15.4 </span><span class="name">Technical Information Documents</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.tids">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.multipath.trouble.tids"><div class="titlepage"><div><div><h3 class="title" id="sec.multipath.trouble.tids"><span class="number">17.15.4 </span><span class="name">Technical Information Documents</span> <a title="Permalink" class="permalink" href="cha.multipath.html#sec.multipath.trouble.tids">#</a></h3></div></div></div><p>
     For information about troubleshooting multipath I/O issues on SUSE Linux
     Enterprise Server, see the following Technical Information Documents (TIDs)
     in the SUSE Knowledgebase:
@@ -2770,6 +2770,6 @@ prio_args "hbtl [1,3]:.:.+:.+ 260 [0,2]:.:.+:.+ 20"</pre></div><p>
      </p></li><li class="listitem "><p>
       <a class="link" href="https://www.suse.com/support/kb/doc.php?id=7009660" target="_blank"><em class="citetitle ">HOWTO:
       Add, Resize and Remove LUN without restarting SLES</em></a>
-     </p></li></ul></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.nfs4_acls.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 17 </span>Managing Access Control Lists over NFSv4</span></a><a class="nav-link" href="cha.fcoe.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 15 </span>Fibre Channel Storage over Ethernet Networks: FCoE</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+     </p></li></ul></div></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.nfs4_acls.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 18 </span>Managing Access Control Lists over NFSv4</span></a><a class="nav-link" href="cha.nvmeof.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 16 </span>NVMe over Fabric</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
         SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
