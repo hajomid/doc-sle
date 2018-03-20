@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Installation on IBM z Systems | Deployment Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 5. Installation on IBM z Systems" /><meta name="description" content="This chapter describes the procedure for preparing the installation of SUSE® Linux Enterprise Server on IBM z Systems. It provides all information needed to prepare the installation on the LPAR and z/VM side." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.prep.html" title="Part I. Installation Preparation" /><link rel="prev" href="cha.power.html" title="Chapter 4. Installation on IBM POWER" /><link rel="next" href="cha.kiso.html" title="Chapter 6. Installation on Hardware Not Supported at Release" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Installation on IBM Z | Deployment Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Deployment Guide" /><meta name="chapter-title" content="Chapter 5. Installation on IBM Z" /><meta name="description" content="This chapter describes the procedure for preparing the installation of SUSE® Linux Enterprise Server on IBM Z. It provides all information needed to prepare the installation on the LPAR and z/VM side." /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.prep.html" title="Part I. Installation Preparation" /><link rel="prev" href="cha.power.html" title="Chapter 4. Installation on IBM POWER" /><link rel="next" href="cha.kiso.html" title="Chapter 6. Installation on Hardware Not Supported at Release" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -23,14 +23,14 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.zseries.html">Installation on IBM z Systems</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.aarch64.html"><span class="number">3 </span><span class="name">Installation on ARM AArch64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">4 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">5 </span><span class="name">Installation on IBM z Systems</span></a></li><li class="inactive"><a href="cha.kiso.html"><span class="number">6 </span><span class="name">Installation on Hardware Not Supported at Release</span></a></li></ol></li><li class="inactive"><a href="part.deployment.html"><span class="number">II </span><span class="name">Installation Procedure</span></a><ol><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">7 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">8 </span><span class="name">Installation Steps</span></a></li><li class="inactive"><a href="cha.expert_paritioner.html"><span class="number">9 </span><span class="name">Expert Partitioner</span></a></li><li class="inactive"><a href="cha.remote_installation.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.deployment.clone_image.html"><span class="number">11 </span><span class="name">Cloning Disk Images</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">12 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting Up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">13 </span><span class="name">Setting Up a Network Installation Source</span></a></li><li class="inactive"><a href="cha.deployment.prep_pxe.html"><span class="number">14 </span><span class="name">Preparing Network Boot Environment</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">IV </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.yast.hw.html"><span class="number">15 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.yast-software.html"><span class="number">16 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">17 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">18 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.yast.userman.html"><span class="number">19 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">20 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="app.create-os-image.html"><span class="number">A </span><span class="name">Imaging and Creating Products</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 4. Installation on IBM POWER" href="cha.power.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation on Hardware Not Supported at Release" href="cha.kiso.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.zseries.html">Installation on IBM z Systems</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 4. Installation on IBM POWER" href="cha.power.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation on Hardware Not Supported at Release" href="cha.kiso.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.zseries"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">5 </span><span class="name">Installation on IBM z Systems</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_zseries.xml</li><li><span class="ds-label">ID: </span>cha.zseries</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.zseries.html#idm140526235805392">#</a></h6></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.zseries.html">Installation on IBM Z</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Deployment Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.deployment.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.prep.html"><span class="number">I </span><span class="name">Installation Preparation</span></a><ol><li class="inactive"><a href="cha.planning.html"><span class="number">1 </span><span class="name">Planning for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span></a></li><li class="inactive"><a href="cha.x86.html"><span class="number">2 </span><span class="name">Installation on AMD64 and Intel 64</span></a></li><li class="inactive"><a href="cha.aarch64.html"><span class="number">3 </span><span class="name">Installation on ARM AArch64</span></a></li><li class="inactive"><a href="cha.power.html"><span class="number">4 </span><span class="name">Installation on IBM POWER</span></a></li><li class="inactive"><a href="cha.zseries.html"><span class="number">5 </span><span class="name">Installation on IBM Z</span></a></li><li class="inactive"><a href="cha.kiso.html"><span class="number">6 </span><span class="name">Installation on Hardware Not Supported at Release</span></a></li></ol></li><li class="inactive"><a href="part.deployment.html"><span class="number">II </span><span class="name">Installation Procedure</span></a><ol><li class="inactive"><a href="cha.boot_parameters.html"><span class="number">7 </span><span class="name">Boot Parameters</span></a></li><li class="inactive"><a href="cha.install.html"><span class="number">8 </span><span class="name">Installation Steps</span></a></li><li class="inactive"><a href="cha.expert_partitioner.html"><span class="number">9 </span><span class="name">Expert Partitioner</span></a></li><li class="inactive"><a href="cha.remote_installation.html"><span class="number">10 </span><span class="name">Remote Installation</span></a></li><li class="inactive"><a href="cha.deployment.clone_image.html"><span class="number">11 </span><span class="name">Cloning Disk Images</span></a></li><li class="inactive"><a href="cha.installation_troubleshooting.html"><span class="number">12 </span><span class="name">Troubleshooting</span></a></li></ol></li><li class="inactive"><a href="part.installserver.html"><span class="number">III </span><span class="name">Setting Up an Installation Server</span></a><ol><li class="inactive"><a href="cha.deployment.instserver.html"><span class="number">13 </span><span class="name">Setting Up a Network Installation Source</span></a></li><li class="inactive"><a href="cha.deployment.prep_pxe.html"><span class="number">14 </span><span class="name">Preparing Network Boot Environment</span></a></li></ol></li><li class="inactive"><a href="part.sysconfig.html"><span class="number">IV </span><span class="name">Initial System Configuration</span></a><ol><li class="inactive"><a href="cha.yast.hw.html"><span class="number">15 </span><span class="name">Setting Up Hardware Components with YaST</span></a></li><li class="inactive"><a href="cha.yast-software.html"><span class="number">16 </span><span class="name">Installing or Removing Software</span></a></li><li class="inactive"><a href="cha.add-ons.html"><span class="number">17 </span><span class="name">Installing Modules, Extensions, and Third Party Add-On Products</span></a></li><li class="inactive"><a href="cha.tuning.multikernel.html"><span class="number">18 </span><span class="name">Installing Multiple Kernel Versions</span></a></li><li class="inactive"><a href="cha.yast.userman.html"><span class="number">19 </span><span class="name">Managing Users with YaST</span></a></li><li class="inactive"><a href="cha.yast.lang.html"><span class="number">20 </span><span class="name">Changing Language and Country Settings with YaST</span></a></li></ol></li><li class="inactive"><a href="app.create-os-image.html"><span class="number">A </span><span class="name">Imaging and Creating Products</span></a></li><li class="inactive"><a href="bk02apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 4. Installation on IBM POWER" href="cha.power.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation on Hardware Not Supported at Release" href="cha.kiso.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.sle.deployment.html">Deployment Guide</a><span> › </span><a class="crumb" href="part.prep.html">Installation Preparation</a><span> › </span><a class="crumb" href="cha.zseries.html">Installation on IBM Z</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 4. Installation on IBM POWER" href="cha.power.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 6. Installation on Hardware Not Supported at Release" href="cha.kiso.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.zseries"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">5 </span><span class="name">Installation on IBM Z</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_zseries.xml</li><li><span class="ds-label">ID: </span>cha.zseries</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.zseries.html#idm140373603689680">#</a></h6></div><p>
     This chapter describes the procedure for preparing the installation of
-    <span class="productname"><span class="phrase">SUSE® Linux Enterprise Server</span></span> on IBM z Systems. It provides all information needed to
+    <span class="productname"><span class="phrase">SUSE® Linux Enterprise Server</span></span> on IBM Z. It provides all information needed to
     prepare the installation on the LPAR and z/VM side.
-   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.requirements"><span class="number">5.1 </span><span class="name">System Requirements</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.information"><span class="number">5.2 </span><span class="name">General Information</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.prep"><span class="number">5.3 </span><span class="name">Preparing for Installation</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.parm"><span class="number">5.4 </span><span class="name">The Parmfile—Automating the System Configuration</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.parm.examples"><span class="number">5.5 </span><span class="name">Example Parmfiles</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.vt220"><span class="number">5.6 </span><span class="name">Using the vt220 Terminal Emulator</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.further_information"><span class="number">5.7 </span><span class="name">Further In-Depth Information about IBM z Systems</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.zseries.requirements"><div class="titlepage"><div><div><h2 class="title" id="sec.zseries.requirements"><span class="number">5.1 </span><span class="name">System Requirements</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.requirements">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_zseries_requirements.xml</li><li><span class="ds-label">ID: </span>sec.zseries.requirements</li></ul></div></div></div></div><p>
-  This section provides a list of hardware for IBM z Systems supported by
-  <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. Next, the level of the MicroCode (MCL) used in your IBM
-  z Systems system, which is very important for the installation, is covered.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.requirements"><span class="number">5.1 </span><span class="name">System Requirements</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.information"><span class="number">5.2 </span><span class="name">General Information</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.zseries.prep"><span class="number">5.3 </span><span class="name">Preparing for Installation</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.parm"><span class="number">5.4 </span><span class="name">The Parmfile—Automating the System Configuration</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.parm.examples"><span class="number">5.5 </span><span class="name">Example Parmfiles</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.vt220"><span class="number">5.6 </span><span class="name">Using the vt220 Terminal Emulator</span></a></span></dt><dt><span class="sect1"><a href="cha.zseries.html#sec.appdendix.further_information"><span class="number">5.7 </span><span class="name">Further In-Depth Information about IBM Z</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.zseries.requirements"><div class="titlepage"><div><div><h2 class="title" id="sec.zseries.requirements"><span class="number">5.1 </span><span class="name">System Requirements</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.requirements">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_zseries_requirements.xml</li><li><span class="ds-label">ID: </span>sec.zseries.requirements</li></ul></div></div></div></div><p>
+  This section provides a list of hardware for IBM Z supported by
+  <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. Next, the level of the MicroCode (MCL) used in your
+  IBM Z system, which is very important for the installation, is covered.
   Additional software to install and use for installation is mentioned at the
   end of this section.
  </p><div class="sect2 " id="sec.zseries.requirements.hw"><div class="titlepage"><div><div><h3 class="title" id="sec.zseries.requirements.hw"><span class="number">5.1.1 </span><span class="name">Hardware</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.requirements.hw">#</a></h3></div></div></div><p>
@@ -79,7 +79,7 @@ hljs.configure({
         <p>
          For installation under KVM.
         </p>
-       </td></tr></tbody></table></div><div id="idm140526235776112" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Memory Requirements with Remote Installation Sources</h6><p>
+       </td></tr></tbody></table></div><div id="idm140373603660496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Memory Requirements with Remote Installation Sources</h6><p>
      For installation from NFS, FTP, or SMB installation sources or whenever
      VNC is used, 512MB of memory is required as a minimum. Otherwise, the
      installation attempt is likely to fail. Further note that the number of
@@ -188,36 +188,36 @@ hljs.configure({
   </p><p>
    To connect to the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> installation system, one of the following
    methods is required (SSH or VNC are recommended):
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140526235730448"><span class="term ">SSH with Terminal Emulation (xterm compatible)</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140373603614960"><span class="term ">SSH with Terminal Emulation (xterm compatible)</span></dt><dd><p>
       SSH is a standard Unix tool that should be present on any Unix or Linux
       system. For Windows, there is an SSH client called Putty. It is free to
       use and is available from
       <a class="link" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>.
-     </p></dd><dt id="idm140526235727856"><span class="term ">VNC Client</span></dt><dd><p>
+     </p></dd><dt id="idm140373603612368"><span class="term ">VNC Client</span></dt><dd><p>
       For Linux, a VNC client called vncviewer is included in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> as
       part of the <code class="systemitem">tightvnc</code> package.
       For Windows, TightVNC is also available. Download it from
       <a class="link" href="http://www.tightvnc.com/" target="_blank">http://www.tightvnc.com/</a>.
-     </p></dd><dt id="idm140526235723520"><span class="term ">X Server</span></dt><dd><p>
+     </p></dd><dt id="idm140373603608032"><span class="term ">X Server</span></dt><dd><p>
       Find a suitable X server implementation on any Linux or Unix
       workstation. There are many commercial X Window System environments for
       Windows and macOS*. Some can be downloaded as free trial
       versions. A trial version of the Mocha X Server from MochaSoft can be
       obtained at
       <a class="link" href="http://www.mochasoft.dk/freeware/x11.htm" target="_blank">http://www.mochasoft.dk/freeware/x11.htm</a>.
-     </p></dd></dl></div><div id="idm140526235720688" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Additional Information</h6><p>
+     </p></dd></dl></div><div id="idm140373603605200" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Additional Information</h6><p>
     Consult the <code class="filename">README</code> file located in the root directory of
-    DVD 1 of your <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> before installing <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on IBM
-    z Systems. This file complements this documentation.
+    DVD 1 of your <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> before installing <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on
+    IBM Z. This file complements this documentation.
    </p></div></div></div><div class="sect1 " id="sec.zseries.information"><div class="titlepage"><div><div><h2 class="title" id="sec.zseries.information"><span class="number">5.2 </span><span class="name">General Information</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.information">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>deployment_prep_zseries_info_i.xml</li><li><span class="ds-label">ID: </span>sec.zseries.information</li></ul></div></div></div></div><p>
   This section covers the
   different installation types and how to do an IPL for the first installation.
-  For detailed technical information about IBM z Systems on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> refer
+  For detailed technical information about IBM Z on <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> refer
   to
   <a class="link" href="http://www.ibm.com/developerworks/linux/linux390/documentation_suse.html" target="_blank">http://www.ibm.com/developerworks/linux/linux390/documentation_suse.html</a>.
  </p><div class="sect2 " id="sec.zseries.information.installation"><div class="titlepage"><div><div><h3 class="title" id="sec.zseries.information.installation"><span class="number">5.2.1 </span><span class="name">Installation Types</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.information.installation">#</a></h3></div></div></div><p>
    This section gives an overview of the different types of installation
-   possible with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems. <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> can be
+   possible with <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z. <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> can be
    installed in an <span class="emphasis"><em>LPAR</em></span>, as a guest within
    <span class="emphasis"><em>z/VM</em></span>, or as a guest within <span class="emphasis"><em>KVM</em></span>.
   </p><p>
@@ -225,7 +225,7 @@ hljs.configure({
    possibilities for starting the installation process and IPLing the installed
    system.
   </p><div class="sect3 " id="sec.zseries.information.installation.lpar"><div class="titlepage"><div><div><h4 class="title" id="sec.zseries.information.installation.lpar"><span class="number">5.2.1.1 </span><span class="name">LPAR</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.information.installation.lpar">#</a></h4></div></div></div><p>
-    If you install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems into a logical partition
+    If you install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z into a logical partition
     (LPAR), assign memory and processors to the instance. Installing into LPAR
     is recommended for highly loaded production machines. Running in LPAR also
     makes higher security standards available. Networking between LPARs is
@@ -233,7 +233,7 @@ hljs.configure({
     your installation for virtualization with KVM, installing into LPAR is
     highly recommended.
    </p></div><div class="sect3 " id="sec.zseries.information.installation.zvm"><div class="titlepage"><div><div><h4 class="title" id="sec.zseries.information.installation.zvm"><span class="number">5.2.1.2 </span><span class="name">z/VM</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.information.installation.zvm">#</a></h4></div></div></div><p>
-    Running <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems in z/VM means that <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is
+    Running <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z in z/VM means that <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is
     a guest system within z/VM. An advantage of this mode is that you have full
     control over <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> from z/VM. This is very helpful for kernel
     development or kernel-based debugging. It is also very easy to add or
@@ -241,7 +241,7 @@ hljs.configure({
     guests is simple and you can run hundreds of Linux instances
     simultaneously.
    </p></div><div class="sect3 " id="sec.zseries.information.installation.kvm"><div class="titlepage"><div><div><h4 class="title" id="sec.zseries.information.installation.kvm"><span class="number">5.2.1.3 </span><span class="name">KVM Guest</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.zseries.information.installation.kvm">#</a></h4></div></div></div><p>
-    Being able to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems as a KVM guest
+    Being able to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z as a KVM guest
     requires a KVM host server instance installed into LPAR.
 
     For details on the guest installation, refer to
@@ -305,29 +305,29 @@ hljs.configure({
   configuration and network installation.
  </p><div class="sect2 " id="sec.prep.makeavail"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.makeavail"><span class="number">5.3.1 </span><span class="name">Making the Installation Data Available</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail">#</a></h3></div></div></div><p>
    This section provides detailed information about making the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
-   IBM z Systems installation data accessible for installation. Depending on
+   IBM Z installation data accessible for installation. Depending on
    your computer and system environment, choose between NFS or FTP
    installation. If you are running Microsoft Windows workstations in your
    environment, you can use the Windows network (including the SMB
-   protocol) to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on your IBM z Systems system.
-  </p><div id="idm140526235654064" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: IPL from DVD</h6><p>
+   protocol) to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on your IBM Z system.
+  </p><div id="idm140373600575824" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: IPL from DVD</h6><p>
     It is possible to IPL from DVD and use the DVD as the installation medium. This
     is very convenient if you have restrictions setting up an installation
     server providing installation media over your network. The prerequisite is
     an FCP-attached SCSI DVD Drive.
-   </p></div><div id="idm140526235652464" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Installation <span class="quote">“<span class="quote">From Hard Disk</span>”</span></h6><p>
+   </p></div><div id="idm140373600574224" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Installation <span class="quote">“<span class="quote">From Hard Disk</span>”</span></h6><p>
     It is not possible to install from hard disk by putting the content of the
     DVD to a partition on a DASD.
    </p></div><div class="sect3 " id="sec.prep.makeavail.linuxws"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.makeavail.linuxws"><span class="number">5.3.1.1 </span><span class="name">Using a Linux Workstation or <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> DVD</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.linuxws">#</a></h4></div></div></div><p>
     If you have a Linux workstation running in your computer environment, use
-    the workstation to provide the installation data to the IBM z Systems
+    the workstation to provide the installation data to the IBM Z
     installation process by NFS or FTP. If the Linux workstation runs under
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>, you can set up an installation server (NFS or FTP) using the
     YaST <span class="guimenu">Installation Server</span> module as described in
     <a class="xref" href="cha.deployment.instserver.html#sec.deployment.instserver.sles9" title="13.1. Setting Up an Installation Server Using YaST">Section 13.1, “Setting Up an Installation Server Using YaST”</a>.
    </p><div class="sect4 " id="sec.prep.makeavail.linuxws.nfs"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.makeavail.linuxws.nfs"><span class="number">5.3.1.1.1 </span><span class="name">Over NFS</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.linuxws.nfs">#</a></h5></div></div></div><p>
      Use NFS (network file system) to make the installation media available.
-    </p><div id="idm140526235643712" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exporting Mounted Devices with NFS</h6><p>
+    </p><div id="idm140373600565552" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Exporting Mounted Devices with NFS</h6><p>
       Exporting the file system root (<code class="filename">/</code>) does not imply
       the export of mounted devices, such as DVD. Explicitly name the mount
       point in <code class="filename">/etc/exports</code>:
@@ -346,8 +346,8 @@ hljs.configure({
      therefore you need to configure the FTP server to support user
      authentication.
     </p></div><div class="sect4 " id="sec.prep.makeavail.linuxws.oncd"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.makeavail.linuxws.oncd"><span class="number">5.3.1.1.3 </span><span class="name"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on DVD</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.linuxws.oncd">#</a></h5></div></div></div><p>
-     DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems contains a bootable Linux
-     image for Intel-based workstations and an image for z Systems.
+     DVD1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z contains a bootable Linux
+     image for Intel-based workstations and an image for IBM Z.
     </p><p>
      For Intel-based workstations, boot from this DVD, answer the questions
      regarding your language and keyboard layout, and select <span class="guimenu">Start
@@ -357,10 +357,10 @@ hljs.configure({
      experience, because you need to set up the networking of the workstation
      manually.
     </p><p>
-     For z Systems, IPL your LPAR/VM guest from this DVD as described in
+     For IBM Z, IPL your LPAR/VM guest from this DVD as described in
      <a class="xref" href="cha.zseries.html#sec.prep.ipling.lpar.dvd" title="5.3.4.1.2. IPL from FCP-Attached SCSI DVD">Section 5.3.4.1.2, “IPL from FCP-Attached SCSI DVD”</a>. After entering your network
      parameters, the installation system treats the DVD as the source of
-     installation data. Because z Systems cannot have an X11-capable terminal
+     installation data. Because IBM Z cannot have an X11-capable terminal
      attached directly, choose between VNC or SSH installation. SSH also
      provides a graphical installation by tunneling the X connection through
      SSH with <code class="command">ssh -X</code>.
@@ -382,18 +382,18 @@ hljs.configure({
      The installation path in YaST can be:
     </p><div class="verbatim-wrap"><pre class="screen">smb://<em class="replaceable ">DOMAIN</em>;<em class="replaceable ">USER</em>:<em class="replaceable ">PW</em>@<em class="replaceable ">SERVERNAME</em>/<em class="replaceable ">SHAREPATH</em></pre></div><p>
      Where the placeholders mean:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140526235618320"><span class="term "><em class="replaceable ">DOMAIN</em>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140373600540240"><span class="term "><em class="replaceable ">DOMAIN</em>
       </span></dt><dd><p>
         Optional workgroup or active directory domain.
-       </p></dd><dt id="idm140526235616192"><span class="term "><em class="replaceable ">USER</em>
+       </p></dd><dt id="idm140373600538112"><span class="term "><em class="replaceable ">USER</em>
       , </span><span class="term "><em class="replaceable ">PW</em>
       </span></dt><dd><p>
         Optional user name and password of a user who can access this server
         and its share.
-       </p></dd><dt id="idm140526235613280"><span class="term "><em class="replaceable ">SERVERNAME</em>
+       </p></dd><dt id="idm140373600535200"><span class="term "><em class="replaceable ">SERVERNAME</em>
       </span></dt><dd><p>
         The name of the server that hosts the share(s).
-       </p></dd><dt id="idm140526235611152"><span class="term "><em class="replaceable ">SHAREPATH</em>
+       </p></dd><dt id="idm140373600533072"><span class="term "><em class="replaceable ">SHAREPATH</em>
       </span></dt><dd><p>
         The path to the share(s).
        </p></dd></dl></div></div><div class="sect4 " id="sec.prep.makeavail.windowsws.nfs"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.makeavail.windowsws.nfs"><span class="number">5.3.1.2.2 </span><span class="name">With NFS</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.windowsws.nfs">#</a></h5></div></div></div><p>
@@ -445,14 +445,14 @@ hljs.configure({
       </p></td></tr></table></div></div><div class="sect4 " id="sec.prep.makeavail.zpxe_cobbler.add_distro"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.makeavail.zpxe_cobbler.add_distro"><span class="number">5.3.1.3.2 </span><span class="name">Adding a Distribution</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.zpxe_cobbler.add_distro">#</a></h5></div></div></div><p>
      By adding a distribution, you tell Cobbler to provide the kernel and the
      initrd required to IPL via zPXE. Run the following command on the Cobbler
-     server to add <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems:
+     server to add <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> cobbler distro add --arch=s390 --breed=suse --name="<em class="replaceable ">IDENTIFIER</em>"<span id="co.cobbler.add.identifier"></span><span class="callout">1</span> \
   --os-version=sles12<span id="co.cobbler.add.os"></span><span class="callout">2</span> \
   --initrd=/srv/www/cobbler/ks_mirror/<em class="replaceable ">IDENTIFIER</em>/boot/s390x/initrd<span id="co.cobbler.add.initrd"></span><span class="callout">3</span> \
   --kernel=/srv/www/cobbler/ks_mirror/<em class="replaceable ">IDENTIFIER</em>/boot/s390x/linux<span id="co.cobbler.add.kernel"></span><span class="callout">4</span> \
   --kopts="install=http://cobbler.example.com/cobbler/ks_mirror/<em class="replaceable ">IDENTIFIER</em>"<span id="co.cobbler.add.server"></span><span class="callout">5</span></pre></div><div class="calloutlist "><table border="0" summary="Callout list"><tr><td width="5%" valign="top" align="left"><p><a href="#co.cobbler.add.identifier"><span class="callout">1</span></a> </p></td><td valign="top" align="left"><p>
        Custom identifier for the distribution, for example <span class="quote">“<span class="quote">SLES
-       <span class="productnumber"><span class="phrase">15</span></span> z Systems</span>”</span>. Must be unique.
+       <span class="productnumber"><span class="phrase">15</span></span> IBM Z</span>”</span>. Must be unique.
       </p></td></tr><tr><td width="5%" valign="top" align="left"><p><a href="#co.cobbler.add.os"><span class="callout">2</span></a> </p></td><td valign="top" align="left"><p>
        Operating system identifier. Use <code class="literal">sles12</code>.
       </p></td></tr><tr><td width="5%" valign="top" align="left"><p><a href="#co.cobbler.add.initrd"><span class="callout">3</span></a> </p></td><td valign="top" align="left"><p>
@@ -491,7 +491,7 @@ hljs.configure({
        <code class="literal">install</code> parameter as shown in the example.
       </p></td></tr></table></div></div><div class="sect4 " id="sec.prep.makeavail.zpxe_cobbler.system"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.makeavail.zpxe_cobbler.system"><span class="number">5.3.1.3.4 </span><span class="name">Adding Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.zpxe_cobbler.system">#</a></h5></div></div></div><p>
      The last step that is required is to add systems to the Cobbler server. A
-     system addition needs to be done for every z Systems guest that should
+     system addition needs to be done for every IBM Z guest that should
      boot via zPXE. Guests are identified via their z/VM user ID (in the
      following example, an ID called <span class="quote">“<span class="quote">linux01</span>”</span> is assumed). Note
      that this ID needs to be a lowercase string. To add a system, run the
@@ -527,7 +527,7 @@ ReadChannel=0.0.0700 \
 WriteChannel=0.0.0701 \
 DataChannel=0.0.0702 \
 DASD=600"</pre></div></div></div><div class="sect3 " id="sec.prep.makeavail.dvd_usb_hmc"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.makeavail.dvd_usb_hmc"><span class="number">5.3.1.4 </span><span class="name">Installing from DVD or Flash Disk of the HMC</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.makeavail.dvd_usb_hmc">#</a></h4></div></div></div><p>
-    To install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on IBM z Systems servers, usually a
+    To install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on IBM Z servers, usually a
     network installation source is needed. However, in certain environments, it
     could occur that this requirement cannot be fulfilled. With SUSE Linux Enterprise Server, you can
     use the existing DVD or the flash disk of the Hardware Management Console
@@ -552,20 +552,20 @@ DASD=600"</pre></div></div></div><div class="sect3 " id="sec.prep.makeavail.dvd_
       <span class="italic">Hardware Management Console</span>.
      </p><p>
       The installation medium must be inserted in the HMC.
-     </p></li></ul></div><div id="idm140526235526576" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Configure Network</h6><p>
+     </p></li></ul></div><div id="idm140373600449312" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Configure Network</h6><p>
      Do not forget to configure the network in <code class="filename">linuxrc</code>
      before starting the installation. There is no way to pass on boot
      parameters later in time, and it is very likely that you will need network
      access. In <code class="filename">linuxrc</code>, go to
      <span class="italic">Start Installation</span>, then choose
      <span class="italic">Network Setup</span>.
-    </p></div><div id="idm140526235522704" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Linux System Must Boot First</h6><p>
+    </p></div><div id="idm140373600445440" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Linux System Must Boot First</h6><p>
      Before granting access to the media in the DVD or the flash disk of the
      HMC, wait until the Linux system is booting. IPLing can disrupt the
      connection between the HMC and the LPAR. If the first attempt to use the
      described method fails, you can grant the access and retry the option
      <code class="option">HMC</code>.
-    </p></div><div id="idm140526235520608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Installation Repository</h6><p>
+    </p></div><div id="idm140373600443344" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Installation Repository</h6><p>
      Because of the transitory nature of the assignment, the DVD or the flash
      disk files will not be kept as a repository for installation. If you need
      an installation repository, register and use the online repository.
@@ -577,7 +577,7 @@ DASD=600"</pre></div></div></div><div class="sect3 " id="sec.prep.makeavail.dvd_
    of the desired installation mode to install <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> on your system.
   </p><p>
    As described in <a class="xref" href="cha.zseries.html#sec.prep.makeavail" title="5.3.1. Making the Installation Data Available">Section 5.3.1, “Making the Installation Data Available”</a>, there are three
-   different installation modes for Linux on IBM z Systems:
+   different installation modes for Linux on IBM Z:
   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
      LPAR installation
     </p></li><li class="listitem "><p>
@@ -627,7 +627,7 @@ DASD=600"</pre></div></div></div><div class="sect3 " id="sec.prep.makeavail.dvd_
      Start the installation using YaST and IPL the installed system. See
      <a class="xref" href="cha.install.html" title="Chapter 8. Installation Steps">Chapter 8, <em>Installation Steps</em></a>.
     </p></li></ol></div></div></div><div class="sect2 " id="sec.prep.prep_ipl"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.prep_ipl"><span class="number">5.3.3 </span><span class="name">Preparing the IPL of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Installation System</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.prep_ipl">#</a></h3></div></div></div><div class="sect3 " id="sec.prep.prep_ipl.natlpar"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.prep_ipl.natlpar"><span class="number">5.3.3.1 </span><span class="name">Preparing the IPL of an LPAR Installation</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.prep_ipl.natlpar">#</a></h4></div></div></div><p>
-    Configure your IBM z Systems system to start in ESA/S390 or Linux-only mode
+    Configure your IBM Z system to start in ESA/S390 or Linux-only mode
     with an appropriate activation profile and IOCDS. Consult IBM documentation
     for more on how to achieve this. Proceed with
     <a class="xref" href="cha.zseries.html#sec.prep.ipling.lpar" title="5.3.4.1. IPLing an LPAR Installation">Section 5.3.4.1, “IPLing an LPAR Installation”</a>.
@@ -638,7 +638,7 @@ DASD=600"</pre></div></div></div><div class="sect3 " id="sec.prep.makeavail.dvd_
     the password <code class="literal">LINPWD</code>, 1 GB of memory (extendable up
     to 2 GB), 32 MB of expanded RAM (XSTORE), several minidisks
     (MDISK), two CPUs, and an OSA QDIO device.
-   </p><div id="idm140526235472096" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Assigning Memory to z/VM guests</h6><p>
+   </p><div id="idm140373600395104" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Assigning Memory to z/VM guests</h6><p>
      When assigning memory to a z/VM guest, make sure that the memory size
      suits the needs of your preferred installation type. See
      <a class="xref" href="cha.zseries.html#sec.zseries.requirements.hw.mem" title="5.1.1.1. Memory Requirements">Section 5.1.1.1, “Memory Requirements”</a>. To set the memory size
@@ -716,7 +716,7 @@ DIRM USER WITHPASS</pre></div><p>
      A domain XML file is used to define the VM Guest. To create the domain
      XML file open an empty file <code class="filename">s12-1.xml</code> with an editor
      and create a file like in the following example.
-    </p><div class="complex-example"><div class="example" id="idm140526226809536"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.2: </span><span class="name">Example Domain XML File </span><a title="Permalink" class="permalink" href="cha.zseries.html#idm140526226809536">#</a></h6></div><div class="example-contents"><p>
+    </p><div class="complex-example"><div class="example" id="idm140373600370944"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 5.2: </span><span class="name">Example Domain XML File </span><a title="Permalink" class="permalink" href="cha.zseries.html#idm140373600370944">#</a></h6></div><div class="example-contents"><p>
       The following example creates a VM Guest with a single CPU, 1 GB RAM,
       and the virtual disk image created in the previous section (<a class="xref" href="cha.zseries.html#sec.prep.prep_ipl.kvm.disk" title="5.3.3.3.1. Create a Virtual Disk Image">Section 5.3.3.3.1, “Create a Virtual Disk Image”</a>). It assumes that the host network
       interface to which the virtual server is attached is
@@ -773,7 +773,7 @@ DIRM USER WITHPASS</pre></div><p>
      <span class="guimenu">Load address</span> and perform an IPL.
     </p></div></div><div class="sect3 " id="sec.prep.ipling.vm"><div class="titlepage"><div><div><h4 class="title" id="sec.prep.ipling.vm"><span class="number">5.3.4.2 </span><span class="name">IPLing a z/VM Installation</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.ipling.vm">#</a></h4></div></div></div><p>
     This section is about IPLing the installation system to install
-    <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM z Systems on a z/VM system.
+    <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z on a z/VM system.
    </p><div class="sect4 " id="sec.prep.ipling.vm.reader"><div class="titlepage"><div><div><h5 class="title" id="sec.prep.ipling.vm.reader"><span class="number">5.3.4.2.1 </span><span class="name">IPL from the z/VM Reader</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.ipling.vm.reader">#</a></h5></div></div></div><p>
      You need a working TCP/IP connection and an FTP client program within your
      newly defined z/VM guest to transfer the installation system via FTP.
@@ -782,7 +782,7 @@ DIRM USER WITHPASS</pre></div><p>
     </p><p>
      Log in as the z/VM Linux guest to IPL. Make the content of the directory
      <code class="filename">/boot/s390x</code> on DVD 1 of the <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for
-     IBM z Systems available via FTP within your network. From this directory,
+     IBM Z available via FTP within your network. From this directory,
      get the files <code class="filename">linux</code>, <code class="filename">initrd</code>,
      <code class="filename">parmfile</code>, and <code class="filename">sles12.exec</code>.
      Transfer the files with a fixed block size of 80 characters. Specify it
@@ -1130,7 +1130,7 @@ ter '+++' to abort).
    your terminal. See <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 5 “YaST in Text Mode”</span> for instructions on
    how to use YaST in text mode. Using the <code class="literal">ASCII Console</code>
    is only useful when installing into LPAR.
-  </p><div id="idm140526226598336" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminal Emulation for ASCII Console</h6><p>
+  </p><div id="idm140373604602848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminal Emulation for ASCII Console</h6><p>
     To be able to work with YaST in text mode, it needs to run in a terminal
     with VT220/Linux emulation (also called <code class="literal">ASCII console</code>).
     You cannot use YaST in a 3270 terminal, for example.
@@ -1156,7 +1156,7 @@ ter '+++' to abort).
      </p><div class="verbatim-wrap"><pre class="screen">http://&lt;IP address of installation system&gt;:5801/</pre></div></li><li class="step "><p>
       After the connection has been established, start installing <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
       with YaST.
-     </p></li></ol></div></div></div><div class="sect3 " id="sec.inst.connect.x"><div class="titlepage"><div><div><h4 class="title" id="sec.inst.connect.x"><span class="number">5.3.6.2 </span><span class="name">Initiating the Installation for the X Window System</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.inst.connect.x">#</a></h4></div></div></div><div id="idm140526226584752" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: X Authentication Mechanism</h6><p>
+     </p></li></ol></div></div></div><div class="sect3 " id="sec.inst.connect.x"><div class="titlepage"><div><div><h4 class="title" id="sec.inst.connect.x"><span class="number">5.3.6.2 </span><span class="name">Initiating the Installation for the X Window System</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.inst.connect.x">#</a></h4></div></div></div><div id="idm140373604588880" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: X Authentication Mechanism</h6><p>
      The direct installation with the X Window System relies on a primitive
      authentication mechanism based on host names. This mechanism is disabled
      on current <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> versions. Installation with SSH or VNC is
@@ -1194,7 +1194,7 @@ ter '+++' to abort).
    </p><p>
     Proceed with the detailed description of the installation procedure that
     can be found in <a class="xref" href="cha.install.html" title="Chapter 8. Installation Steps">Chapter 8, <em>Installation Steps</em></a>.
-   </p></div></div><div class="sect2 " id="sec.prep.boot_procedure"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.boot_procedure"><span class="number">5.3.7 </span><span class="name">The <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Boot Procedure on IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.boot_procedure">#</a></h3></div></div></div><p>
+   </p></div></div><div class="sect2 " id="sec.prep.boot_procedure"><div class="titlepage"><div><div><h3 class="title" id="sec.prep.boot_procedure"><span class="number">5.3.7 </span><span class="name">The <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Boot Procedure on IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.prep.boot_procedure">#</a></h3></div></div></div><p>
    The boot process for SLES 10 and 11 followed the scheme provided below.
    For in-depth information refer to the documentation provided at
    <a class="link" href="http://www.ibm.com/developerworks/linux/linux390/documentation_suse.html" target="_blank">http://www.ibm.com/developerworks/linux/linux390/documentation_suse.html</a>.
@@ -1209,7 +1209,7 @@ ter '+++' to abort).
      Install the configuration provided by <code class="filename">/etc/zipl.conf</code>
      to the system.
     </p></li></ol></div><p>
-   With SLES 12 the way <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is booted on IBM z Systems has changed.
+   With SLES 12 the way <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> is booted on IBM Z has changed.
    Several reasons led to this change:
   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
      Alignment with other architectures: From an administrative point of view
@@ -1223,13 +1223,13 @@ ter '+++' to abort).
      Btrfs, provides bootable system snapshots which can be used for system
      rollbacks (see <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 7 “System Recovery and Snapshot Management with Snapper”</span> for details).
     </p></li></ul></div><p>
-   For those reasons, starting with SLES 12, GRUB 2 replaces zipl on IBM
-   <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for z Systems. GRUB 2 on the AMD64/Intel 64 architecture
+   For those reasons, starting with SLES 12, GRUB 2 replaces zipl on
+   <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> for IBM Z. GRUB 2 on the AMD64/Intel 64 architecture
    includes device drivers on the firmware level to access the file system. On
    the mainframe there is no firmware and adding <code class="literal">ccw</code> to
    GRUB 2 would not only be a major undertaking, but would also require a reimplementation
    of zipl in GRUB 2. Therefore <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> uses a two-stage approach:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140526226548560"><span class="term ">Stage One:</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140373604552240"><span class="term ">Stage One:</span></dt><dd><p>
       A separate partition containing the kernel and an initrd is mounted to
       <code class="filename">/boot/zipl</code> (somewhat similar to
       <code class="filename">/boot/efi</code> on UEFI platforms). This kernel and the
@@ -1242,7 +1242,7 @@ ter '+++' to abort).
       <code class="filename">/boot/zipl/active_devices.txt</code>). Afterward a GRUB 2
       user space program is started, which reads
       <code class="filename">/boot/grub2/grub.cfg</code>.
-     </p></dd><dt id="idm140526226543264"><span class="term ">Stage Two:</span></dt><dd><p>
+     </p></dd><dt id="idm140373604546880"><span class="term ">Stage Two:</span></dt><dd><p>
       The kernel and the initrd specified in
       <code class="filename">/boot/grub2/grub.cfg</code> are started via
       <code class="command">kexec</code>. All devices listed in
@@ -1268,7 +1268,7 @@ ter '+++' to abort).
    parameters by spaces. You may specify the parameters in any order. Always
    keep the <code class="literal">PARAMETER=value</code> string together in one line. For
    example:
-  </p><div class="verbatim-wrap"><pre class="screen">Hostname=s390zvm01.suse.de HostIP=10.11.134.65</pre></div><div id="idm140526226533344" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using IPv6 during the Installation</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">Hostname=s390zvm01.suse.de HostIP=10.11.134.65</pre></div><div id="idm140373604536576" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using IPv6 during the Installation</h6><p>
     By default you can only assign IPv4 network addresses to your machine. To
     enable IPv6 during installation, enter one of the following parameters at
     the boot prompt: <code class="literal">ipv6=1</code> (accept IPv4 and IPv6) or
@@ -1331,23 +1331,23 @@ ifcfg=eth0.201=192.168.0.2/16,192.168.0.1</pre></div></div></div></div><div clas
   </p><div class="verbatim-wrap"><pre class="screen">parameters = "root=/dev/dasda2 TERM=dumb console=ttysclp0 console=ttysclp_line0"</pre></div><p>
    Save the changes in <code class="filename">/etc/zipl.conf</code>, run
    <code class="command">zipl</code>, and reboot the system.
-  </p></div><div class="sect1 " id="sec.appdendix.further_information"><div class="titlepage"><div><div><h2 class="title" id="sec.appdendix.further_information"><span class="number">5.7 </span><span class="name">Further In-Depth Information about IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.appdendix.further_information">#</a></h2></div></div></div><p>
-   Find additional in-depth technical documentation about IBM z Systems in the
+  </p></div><div class="sect1 " id="sec.appdendix.further_information"><div class="titlepage"><div><div><h2 class="title" id="sec.appdendix.further_information"><span class="number">5.7 </span><span class="name">Further In-Depth Information about IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.appdendix.further_information">#</a></h2></div></div></div><p>
+   Find additional in-depth technical documentation about IBM Z in the
    IBM Redbooks
    (<a class="link" href="https://www.redbooks.ibm.com/Redbooks.nsf/domains/zsystems" target="_blank">https://www.redbooks.ibm.com/Redbooks.nsf/domains/zsystems</a>)
    or at IBM developerWorks
    (<a class="link" href="https://www.ibm.com/developerworks/linux/linux390/" target="_blank">https://www.ibm.com/developerworks/linux/linux390/</a>).
    <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>-specific documentation is available from
    <a class="link" href="https://www.ibm.com/developerworks/linux/linux390/documentation_suse.html" target="_blank">https://www.ibm.com/developerworks/linux/linux390/documentation_suse.html</a>.
-  </p><div class="sect2 " id="sec.intro.further_information.general"><div class="titlepage"><div><div><h3 class="title" id="sec.intro.further_information.general"><span class="number">5.7.1 </span><span class="name">General Documents about Linux on IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.intro.further_information.general">#</a></h3></div></div></div><p>
-    A general coverage of Linux on IBM z Systems can be found in the following
+  </p><div class="sect2 " id="sec.intro.further_information.general"><div class="titlepage"><div><div><h3 class="title" id="sec.intro.further_information.general"><span class="number">5.7.1 </span><span class="name">General Documents about Linux on IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.intro.further_information.general">#</a></h3></div></div></div><p>
+    A general coverage of Linux on IBM Z can be found in the following
     documents:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Linux on IBM eServer zSeries and S/390: ISP and ASP Solutions (SG24-6299)
      </p></li></ul></div><p>
     These documents might not reflect the current state of Linux, but the
     principles of Linux deployment outlined there remain accurate.
-   </p></div><div class="sect2 " id="sec.intro.further_information.technical"><div class="titlepage"><div><div><h3 class="title" id="sec.intro.further_information.technical"><span class="number">5.7.2 </span><span class="name">Technical Issues of Linux on IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.intro.further_information.technical">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.intro.further_information.technical"><div class="titlepage"><div><div><h3 class="title" id="sec.intro.further_information.technical"><span class="number">5.7.2 </span><span class="name">Technical Issues of Linux on IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.intro.further_information.technical">#</a></h3></div></div></div><p>
     Refer to the following documents to get in-depth technical information
     about the Linux kernel and application topics. Refer to the Internet for
     up-to-date versions of these documents for the most recent code drop
@@ -1370,9 +1370,9 @@ ifcfg=eth0.201=192.168.0.2/16,192.168.0.1</pre></div></div></div></div><div clas
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Linux on IBM eServer zSeries and S/390: Application Development
       (SG24-6807)
-     </p></li></ul></div></div><div class="sect2 " id="sec.info.further_information.advanced"><div class="titlepage"><div><div><h3 class="title" id="sec.info.further_information.advanced"><span class="number">5.7.3 </span><span class="name">Advanced Configurations for Linux on IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.info.further_information.advanced">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.info.further_information.advanced"><div class="titlepage"><div><div><h3 class="title" id="sec.info.further_information.advanced"><span class="number">5.7.3 </span><span class="name">Advanced Configurations for Linux on IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.info.further_information.advanced">#</a></h3></div></div></div><p>
     Refer to the following Redbooks, Redpapers, and links for some more complex
-    IBM z Systems scenarios:
+    IBM Z scenarios:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       Linux on IBM eServer zSeries and S/390: Large Scale Deployment
       (SG24-6824)
@@ -1395,10 +1395,10 @@ ifcfg=eth0.201=192.168.0.2/16,192.168.0.1</pre></div></div></div></div><div clas
       Linux on System z documentation for "Development stream"
      </p><p>
       <a class="link" href="http://www.ibm.com/developerworks/linux/linux390/development_documentation.html" target="_blank">http://www.ibm.com/developerworks/linux/linux390/development_documentation.html</a>
-     </p></li></ul></div></div><div class="sect2 " id="sec.info.further_information.kvm"><div class="titlepage"><div><div><h3 class="title" id="sec.info.further_information.kvm"><span class="number">5.7.4 </span><span class="name">Virtualization with KVM on IBM z Systems</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.info.further_information.kvm">#</a></h3></div></div></div><p>
+     </p></li></ul></div></div><div class="sect2 " id="sec.info.further_information.kvm"><div class="titlepage"><div><div><h3 class="title" id="sec.info.further_information.kvm"><span class="number">5.7.4 </span><span class="name">Virtualization with KVM on IBM Z</span> <a title="Permalink" class="permalink" href="cha.zseries.html#sec.info.further_information.kvm">#</a></h3></div></div></div><p>
     Refer to the following documents at
     <a class="link" href="https://www.ibm.com/developerworks/linux/linux390/documentation_dev.html" target="_blank">https://www.ibm.com/developerworks/linux/linux390/documentation_dev.html</a>
-    for more information on KVM on IBM z Systems:
+    for more information on KVM on IBM Z:
    </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       <em class="citetitle ">Installing SUSE Linux Enterprise Server 12 as a KVM
       Guest</em> (SC34-2755-00)
