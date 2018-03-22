@@ -102,7 +102,7 @@ parm:           halt_poll_ns_shrink:int</pre></div></div><div class="sect1 " id=
       <code class="literal">priority-modulename.conf</code>, for example:
       <code class="filename">50-thinkfan.conf</code>. The configuration file must
       contain the name of the kernel module and the desired parameters. You can use the
-    example command below to create a configuration file containing the name of the kernel module and its parameters:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>echo "options thinkpad_acpi fan_control=1" | sudo tee /etc/modprobe.d/thinkfan.conf</pre></div><div id="idm139645876822944" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Loading Kernel Modules</h6><p>
+    example command below to create a configuration file containing the name of the kernel module and its parameters:</p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>echo "options thinkpad_acpi fan_control=1" | sudo tee /etc/modprobe.d/thinkfan.conf</pre></div><div id="idm140035806935648" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Loading Kernel Modules</h6><p>
           Most kernel modules are loaded by the system automatically when a
           device is detected or user space requests specific
           functionality. Thus, adding modules manually to
