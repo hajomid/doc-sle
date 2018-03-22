@@ -26,7 +26,7 @@ hljs.configure({
 </script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">RMT Guide</a><span> › </span><a class="crumb" href="smt.mirroring.html">Mirroring Repositories on the RMT Server</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Repository Management Tool for SLES 15</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="pre_smt.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="smt.installation.html"><span class="number">1 </span><span class="name">RMT Installation</span></a></li><li class="inactive"><a href="smt.server.html"><span class="number">2 </span><span class="name">RMT Server Configuration</span></a></li><li class="inactive"><a href="smt.mirroring.html"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span></a></li><li class="inactive"><a href="smt.management.html"><span class="number">4 </span><span class="name">Managing Repositories with YaST RMT Server Management</span></a></li><li class="inactive"><a href="smt.registration.html"><span class="number">5 </span><span class="name">Managing Client Machines with RMT</span></a></li><li class="inactive"><a href="smt.client.html"><span class="number">6 </span><span class="name">Configuring Clients to Use RMT</span></a></li><li class="inactive"><a href="smt.tools.html"><span class="number">7 </span><span class="name">RMT Tools and Configuration Files</span></a></li><li class="inactive"><a href="smt.advanced.html"><span class="number">8 </span><span class="name">Advanced Topics</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 2. RMT Server Configuration" href="smt.server.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 4. Managing Repositories with YaST RMT Server Management" href="smt.management.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="index.html">RMT Guide</a><span> › </span><a class="crumb" href="smt.mirroring.html">Mirroring Repositories on the RMT Server</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 2. RMT Server Configuration" href="smt.server.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 4. Managing Repositories with YaST RMT Server Management" href="smt.management.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="smt.mirroring"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h1 class="title"><span class="number">3 </span><span class="name">Mirroring Repositories on the RMT Server</span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>rmt_mirroring.xml</li><li><span class="ds-label">ID: </span>smt.mirroring</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="smt.mirroring.html#smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span></a></span></dt><dt><span class="sect1"><a href="smt.mirroring.html#smt.mirroring.manage"><span class="number">3.2 </span><span class="name">Managing Software Repositories with RMT Command Line Tools</span></a></span></dt><dt><span class="sect1"><a href="smt.mirroring.html#smt.repo.preload"><span class="number">3.3 </span><span class="name">Repository Preloading</span></a></span></dt></dl></div></div><p>
   You can mirror the installation and update repositories on the RMT
   server. This way, you do not need to download updates on each machine, which saves time and bandwidth.
- </p><div id="idm139790619262544" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: SUSE Linux Enterprise Server 9 Repositories</h6><p>
+ </p><div id="idm140579185312400" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: SUSE Linux Enterprise Server 9 Repositories</h6><p>
    As SUSE Linux Enterprise Server 9 is no longer supported, RMT does not mirror SUSE Linux Enterprise Server 9
    repositories.
   </p></div><div class="sect1 " id="smt.mirroring.getcredentials"><div class="titlepage"><div><div><h2 class="title" id="smt.mirroring.getcredentials"><span class="number">3.1 </span><span class="name">Mirroring Credentials</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#smt.mirroring.getcredentials">#</a></h2></div></div></div><p>
@@ -67,7 +67,7 @@ hljs.configure({
    repositories, and setting up custom repositories on the command line. For
    details on the YaST RMT Server Management module, see
    <a class="xref" href="smt.management.html" title="Chapter 4. Managing Repositories with YaST RMT Server Management">Chapter 4, <em>Managing Repositories with YaST RMT Server Management</em></a>.
-  </p><div class="sect2 " id="idm139790613972384"><div class="titlepage"><div><div><h3 class="title" id="idm139790613972384"><span class="number">3.2.1 </span><span class="name">Updating the Local RMT Database</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm139790613972384">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="idm140579182221840"><div class="titlepage"><div><div><h3 class="title" id="idm140579182221840"><span class="number">3.2.1 </span><span class="name">Updating the Local RMT Database</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm140579182221840">#</a></h3></div></div></div><p>
 
     
     The local RMT database needs to be updated periodically with the
@@ -77,7 +77,7 @@ hljs.configure({
     To update the RMT database manually, use the <code class="command">smt-sync</code>
     command. For more information about the <code class="command">smt-sync</code>
     command, see <a class="xref" href="smt.tools.html#smt.scripts.smtsync" title="7.1.1.7. smt-ssc-sync">Section 7.1.1.7, “smt-ssc-sync”</a>.
-   </p></div><div class="sect2 " id="idm139790613968048"><div class="titlepage"><div><div><h3 class="title" id="idm139790613968048"><span class="number">3.2.2 </span><span class="name">Enabled Repositories and Repositories That Can Be Mirrored</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm139790613968048">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm140579185113232"><div class="titlepage"><div><div><h3 class="title" id="idm140579185113232"><span class="number">3.2.2 </span><span class="name">Enabled Repositories and Repositories That Can Be Mirrored</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm140579185113232">#</a></h3></div></div></div><p>
     The database installed with RMT contains information about all software
     repositories available on SUSE Customer Center. However, the used mirror credentials
     determine which repositories can really be mirrored. For more information
@@ -91,7 +91,7 @@ hljs.configure({
     database will be mirrored. For more information about configuring which
     repositories should be mirrored,
     see <a class="xref" href="smt.mirroring.html#smt.mirroring.manage.domirror" title="3.2.4. Selecting Repositories to Be Mirrored">Section 3.2.4, “Selecting Repositories to Be Mirrored”</a>.
-   </p></div><div class="sect2 " id="idm139790614476896"><div class="titlepage"><div><div><h3 class="title" id="idm139790614476896"><span class="number">3.2.3 </span><span class="name">Getting Information about Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm139790614476896">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="idm140579180780368"><div class="titlepage"><div><div><h3 class="title" id="idm140579180780368"><span class="number">3.2.3 </span><span class="name">Getting Information about Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm140579180780368">#</a></h3></div></div></div><p>
     Use the <code class="command">smt-repos</code> command to list available software
     repositories and additional information. Using this command without any
     options lists all available repositories, including repositories that
@@ -168,7 +168,7 @@ hljs.configure({
       SUSE-Linux-Enterprise-Server-SP3,10,ppc</code> command. The list of
       known products can be obtained with the
       <code class="command">smt-list-products</code> command.
-     </p><div id="idm139790622950272" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installer Self-Update Repository</h6><p>
+     </p><div id="idm140579161100720" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installer Self-Update Repository</h6><p>
        RMT supports mirroring the installer self-update repository (find more
        information in <span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”, Chapter 8 “Installation Steps”, Section 8.2.1 “Self-Update Process”</span>). If
        you need to provide the self-update repository, identify and enable it,
@@ -204,7 +204,7 @@ hljs.configure({
       press <span class="keycap">Enter</span>. If you want to disable all the
       listed repositories, use <code class="literal">a</code> and press
       <span class="keycap">Enter</span>.
-     </p></li></ol></div></div></div><div class="sect2 " id="idm139790594595104"><div class="titlepage"><div><div><h3 class="title" id="idm139790594595104"><span class="number">3.2.5 </span><span class="name">Deleting Mirrored Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm139790594595104">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="idm140579189470544"><div class="titlepage"><div><div><h3 class="title" id="idm140579189470544"><span class="number">3.2.5 </span><span class="name">Deleting Mirrored Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm140579189470544">#</a></h3></div></div></div><p>
     You can delete mirrored repositories that are no longer used. If you delete
     a repository, it will be physically removed from the SMT storage area.
    </p><p>
@@ -216,10 +216,10 @@ hljs.configure({
     The <code class="option">--delete</code> option lists all repositories. You can delete the specified
     repositories by entering the ID number or the name and target. To delete all repositories, enter
     <span class="guimenu">a</span>.
-   </p><div id="idm139790619132464" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Detecting Repository IDs</h6><p>
+   </p><div id="idm140579180566352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Detecting Repository IDs</h6><p>
      Every repository has an SHA-1 hash that you can use as an ID. You can get the
      repository's hash by calling <code class="command">smt-repos -v</code>.
-    </p></div></div><div class="sect2 " id="idm139790619130448"><div class="titlepage"><div><div><h3 class="title" id="idm139790619130448"><span class="number">3.2.6 </span><span class="name">Mirroring Custom Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm139790619130448">#</a></h3></div></div></div><p>
+    </p></div></div><div class="sect2 " id="idm140579180564288"><div class="titlepage"><div><div><h3 class="title" id="idm140579180564288"><span class="number">3.2.6 </span><span class="name">Mirroring Custom Repositories</span> <a title="Permalink" class="permalink" href="smt.mirroring.html#idm140579180564288">#</a></h3></div></div></div><p>
     RMT also makes it possible to mirror repositories that are not available
     at the SUSE Customer Center. These repositories are called <span class="quote">“<span class="quote">custom
     repositories</span>”</span>, and they can be mirrored using the
@@ -257,7 +257,7 @@ hljs.configure({
       <code class="literal">425</code>:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-setup-custom-repositories --productid 423 --productid 424 \
 --productid 425 --name 'My_repository' \
---exturl 'http://example.com/My_repository'</pre></div></li></ol></div></div><div id="idm139790623326624" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mirroring Unsigned Repositories</h6><p>
+--exturl 'http://example.com/My_repository'</pre></div></li></ol></div></div><div id="idm140579187584400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Mirroring Unsigned Repositories</h6><p>
      By default, SUSE Linux Enterprise 10 does not allow the use of unsigned
      repositories. So if you want to mirror unsigned repositories and
      use them on client machines, be aware that the package installation
@@ -288,7 +288,7 @@ hljs.configure({
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> rsync -av 'smt12:/srv/www/htdocs/repo/\$RCE/SLES12-Updates/sle-12-x86_64/' \
  '/srv/www/htdocs/repo/$RCE/SLES12-Updates/sle-12-x86_64/'</pre></div></li><li class="step "><p>
      To get the repository data fixed, run the following command:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-mirror -d -L /var/log/smt/smt-mirror.log</pre></div></li></ol></div></div><div id="idm139790624096592" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Possible Error Messages</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> smt-mirror -d -L /var/log/smt/smt-mirror.log</pre></div></li></ol></div></div><div id="idm140579184916432" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Possible Error Messages</h6><p>
     Errors, such as <code class="literal">repomd.xml is the same, but repo is
     not valid. Start mirroring.</code>, are considered normal.
  They occur because the metadata of the preloaded repositories in
