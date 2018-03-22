@@ -34,7 +34,7 @@ hljs.configure({
   without the additional cost of hardware RAID controllers. However, this
   requires some CPU time and has memory requirements that make it unsuitable
   for real high performance computers.
- </p><div id="idm140475444933040" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: RAID on Cluster File Systems</h6><p>
+ </p><div id="idm140106254590320" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: RAID on Cluster File Systems</h6><p>
    Software RAID underneath clustered file systems needs to be set up using a
    cluster multi-device (Cluster MD). Refer to the High Availability Extension documentation at
    <a class="link" href="https://www.suse.com/documentation/sle-ha-12/book_sleha/data/cha_ha_cluster-md.html" target="_blank">https://www.suse.com/documentation/sle-ha-12/book_sleha/data/cha_ha_cluster-md.html</a>.
@@ -103,7 +103,7 @@ hljs.configure({
     RAID 5 in normal mode and single disk failure mode. It is very slow in
     dual disk failure mode. A RAID 6 configuration needs a considerable
     amount of CPU time and memory for write operations.
-   </p><div class="table" id="idm140475444912224"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 7.1: </span><span class="name">Comparison of RAID 5 and RAID 6 </span><a title="Permalink" class="permalink" href="cha.raid.html#idm140475444912224">#</a></h6></div><div class="table-contents"><table summary="Comparison of RAID 5 and RAID 6" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140106254569440"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 7.1: </span><span class="name">Comparison of RAID 5 and RAID 6 </span><a title="Permalink" class="permalink" href="cha.raid.html#idm140106254569440">#</a></h6></div><div class="table-contents"><table summary="Comparison of RAID 5 and RAID 6" border="1"><colgroup><col class="1" /><col class="2" /><col class="3" /></colgroup><thead><tr><th>
         <p>
          Feature
         </p>
@@ -245,7 +245,7 @@ hljs.configure({
     are listed as <code class="literal">md127</code> in <code class="filename">/proc/mdstat</code>
     and <code class="filename">/proc/partitions</code>. Working with these names can be
     clumsy. <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> offers two ways to work around this problem:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140475444841792"><span class="term ">Providing a Named Link to the Device</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140106254498880"><span class="term ">Providing a Named Link to the Device</span></dt><dd><p>
        You can optionally specify a name for the RAID device when creating it
        with YaST or on the command line with <code class="command">mdadm --create
        '/dev/md/</code> <em class="replaceable ">NAME</em>'. The device name
@@ -257,7 +257,7 @@ total 0
 lrwxrwxrwx 1 8 Dec  9 15:11 myRAID -&gt; ../md127</pre></div><p>
        The device will still be listed as <code class="literal">md127</code> under
        <code class="filename">/proc</code>.
-      </p></dd><dt id="idm140475444835568"><span class="term ">Providing a Named Device</span></dt><dd><p>
+      </p></dd><dt id="idm140106254492656"><span class="term ">Providing a Named Device</span></dt><dd><p>
        In case a named link to the device is not sufficient for your setup, add
        the line CREATE names=yes to <code class="filename">/etc/mdadm.conf</code> by
        running the following command:
@@ -269,7 +269,7 @@ lrwxrwxrwx 1 8 Dec  9 15:11 myRAID -&gt; ../md127</pre></div><p>
        this will only apply to RAIDs configured after the change to the
        configuration file. Active RAIDS will continue to use the
        <code class="literal">mdN</code> names until they get stopped and re-assembled.
-      </p><div id="idm140475444829616" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Incompatible Tools</h6><p>
+      </p><div id="idm140106254486704" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Incompatible Tools</h6><p>
         Not all tools may support named RAID devices. In case a tool expects a
         RAID device to be named <code class="literal">mdN</code>, it will fail to
         identify the devices.

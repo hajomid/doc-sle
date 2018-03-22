@@ -31,7 +31,7 @@ hljs.configure({
   <code class="command">qemu-system-ARCH</code>command. However, it is also possible to
   use <code class="command">qemu-system-ARCH</code> directly without using
   <code class="systemitem">libvirt</code>-based tools.
- </p><div id="idm140203565817584" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: <code class="command">qemu-system-ARCH</code> and libvirt</h6><p>
+ </p><div id="idm139696253176096" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: <code class="command">qemu-system-ARCH</code> and libvirt</h6><p>
    <a class="xref" href="gloss.vt.glossary.html#gloss.vt.vm" title="Virtual Machine">Virtual Machine</a>s created with
    <code class="command">qemu-system-ARCH</code> are not "visible" for the
    <code class="systemitem">libvirt</code>-based tools.
@@ -126,37 +126,37 @@ hljs.configure({
     <code class="command">qemu-img</code> uses the following general syntax:
    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-img subcommand [options]</pre></div><p>
     and supports the following subcommands:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140203565758256"><span class="term "><code class="literal">create</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139696253116896"><span class="term "><code class="literal">create</code>
      </span></dt><dd><p>
        Creates a new disk image on the file system.
-      </p></dd><dt id="idm140203565756128"><span class="term "><code class="literal">check</code>
+      </p></dd><dt id="idm139696253114768"><span class="term "><code class="literal">check</code>
      </span></dt><dd><p>
        Checks an existing disk image for errors.
-      </p></dd><dt id="idm140203565754000"><span class="term "><code class="literal">compare</code>
+      </p></dd><dt id="idm139696253112640"><span class="term "><code class="literal">compare</code>
      </span></dt><dd><p>
        Check if two images have the same content.
-      </p></dd><dt id="idm140203565751872"><span class="term "><code class="literal">map</code>
+      </p></dd><dt id="idm139696253110512"><span class="term "><code class="literal">map</code>
      </span></dt><dd><p>
        Dumps the metadata of the image file name and its backing file chain.
-      </p></dd><dt id="idm140203565749728"><span class="term "><code class="literal">amend</code>
+      </p></dd><dt id="idm139696253108368"><span class="term "><code class="literal">amend</code>
      </span></dt><dd><p>
        Amends the image format specific options for the image file name.
-      </p></dd><dt id="idm140203565747584"><span class="term "><code class="literal">convert</code>
+      </p></dd><dt id="idm139696253106224"><span class="term "><code class="literal">convert</code>
      </span></dt><dd><p>
        Converts an existing disk image to a new one in a different format.
-      </p></dd><dt id="idm140203565745440"><span class="term "><code class="literal">info</code>
+      </p></dd><dt id="idm139696253104080"><span class="term "><code class="literal">info</code>
      </span></dt><dd><p>
        Displays information about the relevant disk image.
-      </p></dd><dt id="idm140203565743312"><span class="term "><code class="literal">snapshot</code>
+      </p></dd><dt id="idm139696253101952"><span class="term "><code class="literal">snapshot</code>
      </span></dt><dd><p>
        Manages snapshots of existing disk images.
-      </p></dd><dt id="idm140203565741184"><span class="term "><code class="literal">commit</code>
+      </p></dd><dt id="idm139696253099824"><span class="term "><code class="literal">commit</code>
      </span></dt><dd><p>
        Applies changes made to an existing disk image.
-      </p></dd><dt id="idm140203565739056"><span class="term "><code class="literal">rebase</code>
+      </p></dd><dt id="idm139696253097696"><span class="term "><code class="literal">rebase</code>
      </span></dt><dd><p>
        Creates a new base image based on an existing image.
-      </p></dd><dt id="idm140203565736928"><span class="term "><code class="literal">resize</code>
+      </p></dd><dt id="idm139696253095568"><span class="term "><code class="literal">resize</code>
      </span></dt><dd><p>
        Increases or decreases the size of an existing image.
       </p></dd></dl></div></div><div class="sect2 " id="cha.qemu.guest_inst.qemu-img.create"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.guest_inst.qemu-img.create"><span class="number">28.2.2 </span><span class="name">Creating, Converting and Checking Disk Images</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#cha.qemu.guest_inst.qemu-img.create">#</a></h3></div></div></div><p>
@@ -203,7 +203,7 @@ disk size: 0</pre></div><p>
      As you can see, the <span class="emphasis"><em>virtual</em></span> size of the newly created
      image is 4 GB, but the actual reported disk size is 0 as no data has been
      written to the image yet.
-    </p><div id="idm140203565711664" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: VM Guest Images on the Btrfs File System</h6><p>
+    </p><div id="idm139696253070304" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: VM Guest Images on the Btrfs File System</h6><p>
       If you need to create a disk image on the Btrfs file system, you can use
       <code class="option">nocow=on</code> to reduce the performance overhead created by
       the copy-on-write feature of Btrfs:
@@ -275,7 +275,7 @@ ERROR: invalid cluster offset=0x34ab0000
      add more space to it.
     </p><p>
      To increase the size of an existing disk image by 2 gigabytes, use:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-img resize /images/sles.raw +2GB</pre></div><div id="idm140203565674016" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-img resize /images/sles.raw +2GB</pre></div><div id="idm139696253032656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       You can resize the disk image using the formats <code class="literal">raw</code>,
       <code class="literal">qcow2</code> and <code class="literal">qed</code>. To resize an image
       in another format, convert it to a supported format with
@@ -283,7 +283,7 @@ ERROR: invalid cluster offset=0x34ab0000
      </p></div><p>
      The image now contains an empty space of 2 GB after the final partition.
      You can resize the existing partitions or add new ones.
-    </p><div class="figure" id="idm140203565670640"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_guest_partman.png"><img src="images/qemu_guest_partman.png" width="" alt="New 2 GB Partition in Guest YaST Partitioner" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">New 2 GB Partition in Guest YaST Partitioner </span><a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm140203565670640">#</a></h6></div></div></div><div class="sect3 " id="qemu.qcow2.advanced_options"><div class="titlepage"><div><div><h4 class="title" id="qemu.qcow2.advanced_options"><span class="number">28.2.2.5 </span><span class="name">Advanced Options for the qcow2 File Format</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#qemu.qcow2.advanced_options">#</a></h4></div></div></div><p>
+    </p><div class="figure" id="idm139696253029280"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_guest_partman.png"><img src="images/qemu_guest_partman.png" width="" alt="New 2 GB Partition in Guest YaST Partitioner" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">New 2 GB Partition in Guest YaST Partitioner </span><a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm139696253029280">#</a></h6></div></div></div><div class="sect3 " id="qemu.qcow2.advanced_options"><div class="titlepage"><div><div><h4 class="title" id="qemu.qcow2.advanced_options"><span class="number">28.2.2.5 </span><span class="name">Advanced Options for the qcow2 File Format</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#qemu.qcow2.advanced_options">#</a></h4></div></div></div><p>
      <span class="emphasis"><em>qcow2</em></span> is the main disk image format used by QEMU.
      Its size grows on demand, and the disk space is only allocated when it is
      actually needed by the virtual machine.
@@ -302,7 +302,7 @@ ERROR: invalid cluster offset=0x34ab0000
      corresponding L2 table to find out the relevant data location. Because
      reading the table for each I/O operation consumes system resources, QEMU
      keeps a cache of L2 tables in memory to speed up disk access.
-    </p><div class="sect4 " id="idm140203565659760"><div class="titlepage"><div><div><h5 class="title" id="idm140203565659760"><span class="number">28.2.2.5.1 </span><span class="name">Choosing the Right Cache Size</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm140203565659760">#</a></h5></div></div></div><p>
+    </p><div class="sect4 " id="idm139696253018400"><div class="titlepage"><div><div><h5 class="title" id="idm139696253018400"><span class="number">28.2.2.5.1 </span><span class="name">Choosing the Right Cache Size</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm139696253018400">#</a></h5></div></div></div><p>
       The cache size relates to the amount of allocated space. L2 cache can map
       the following amount of virtual disk:
      </p><div class="verbatim-wrap"><pre class="screen">disk_size = l2_cache_size * cluster_size / 8</pre></div><p>
@@ -318,20 +318,20 @@ ERROR: invalid cluster offset=0x34ab0000
       default L2 cache size if your virtual disk size is up to 8 GB. For
       larger disks, you can speed up the disk access by increasing the L2 cache
       size.
-     </p></div><div class="sect4 " id="idm140203565654608"><div class="titlepage"><div><div><h5 class="title" id="idm140203565654608"><span class="number">28.2.2.5.2 </span><span class="name">Configuring the Cache Size</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm140203565654608">#</a></h5></div></div></div><p>
+     </p></div><div class="sect4 " id="idm139696253013248"><div class="titlepage"><div><div><h5 class="title" id="idm139696253013248"><span class="number">28.2.2.5.2 </span><span class="name">Configuring the Cache Size</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm139696253013248">#</a></h5></div></div></div><p>
       You can use the <code class="option">-drive</code> option on the QEMU command line
       to specify the cache sizes. Alternatively when communicating via QMP, use
       the <code class="command">blockdev-add</code> command. For more information on QMP,
       see <a class="xref" href="cha.qemu.monitor.html#qemu.monitor.qmp" title="30.11. QMP - QEMU Machine Protocol">Section 30.11, “QMP - QEMU Machine Protocol”</a>.
      </p><p>
       The following options configure the cache size for the virtual guest:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140203565651008"><span class="term ">l2-cache-size</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm139696253009648"><span class="term ">l2-cache-size</span></dt><dd><p>
          The maximum size of the L2 table cache.
-        </p></dd><dt id="idm140203565649168"><span class="term ">refcount-cache-size</span></dt><dd><p>
+        </p></dd><dt id="idm139696253007808"><span class="term ">refcount-cache-size</span></dt><dd><p>
          The maximum size of the <span class="emphasis"><em>refcount</em></span> block cache. For
          more information on <span class="emphasis"><em>refcount</em></span>, see
          <a class="link" href="https://github.com/qemu/qemu/blob/master/docs/specs/qcow2.txt" target="_blank">https://github.com/qemu/qemu/blob/master/docs/specs/qcow2.txt</a>.
-        </p></dd><dt id="idm140203565645824"><span class="term ">cache-size</span></dt><dd><p>
+        </p></dd><dt id="idm139696253004464"><span class="term ">cache-size</span></dt><dd><p>
          The maximum size of both caches combined.
         </p></dd></dl></div><p>
       When specifying values for the options above, be aware of the following:
@@ -346,7 +346,7 @@ ERROR: invalid cluster offset=0x34ab0000
       The refcount cache is used much less often than the L2 cache, therefore you
       can keep it relatively small:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code>qemu-system-ARCH [...] \
- -drive file=disk_image.qcow2,l2-cache-size=4194304,refcount-cache-size=262144</pre></div></div><div class="sect4 " id="idm140203565639008"><div class="titlepage"><div><div><h5 class="title" id="idm140203565639008"><span class="number">28.2.2.5.3 </span><span class="name">Reducing the Memory Usage</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm140203565639008">#</a></h5></div></div></div><p>
+ -drive file=disk_image.qcow2,l2-cache-size=4194304,refcount-cache-size=262144</pre></div></div><div class="sect4 " id="idm139696252997648"><div class="titlepage"><div><div><h5 class="title" id="idm139696252997648"><span class="number">28.2.2.5.3 </span><span class="name">Reducing the Memory Usage</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm139696252997648">#</a></h5></div></div></div><p>
       The larger the cache, the more memory it consumes. There is a separate L2
       cache for each qcow2 file. When using a lot of big disk images, you will
       probably need a considerably large amount of memory. Memory consumption
@@ -390,7 +390,7 @@ ERROR: invalid cluster offset=0x34ab0000
    </p><p>
     Once your <code class="literal">qcow2</code> disk image contains saved snapshots, you
     can inspect them with the <code class="command">qemu-img snapshot</code> command.
-   </p><div id="idm140203565623712" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Shut Down the VM Guest</h6><p>
+   </p><div id="idm139696252982352" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Shut Down the VM Guest</h6><p>
      Do not create or delete virtual machine snapshots with the
      <code class="command">qemu-img snapshot</code> command while the virtual machine is
      running. Otherwise, you may damage the disk image with the state of the
@@ -438,7 +438,7 @@ ID        TAG                 VM SIZE                DATE       VM CLOCK
      The next time you run the virtual machine with
      <code class="command">qemu-system-ARCH</code>, it will be in the state of snapshot
      number 5.
-    </p><div id="idm140203565599472" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+    </p><div id="idm139696252957984" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       The <code class="command">qemu-img snapshot -c</code> command is not related to the
       <code class="literal">savevm</code> command of QEMU monitor (see
       <a class="xref" href="cha.qemu.monitor.html" title="Chapter 30. Virtual Machine Administration Using QEMU Monitor">Chapter 30, <em>Virtual Machine Administration Using QEMU Monitor</em></a>). For example, you cannot apply a
@@ -483,7 +483,7 @@ ID        TAG                 VM SIZE                DATE       VM CLOCK
      no additional applications installed or removed. Later on, you can create
      another base image with the latest patches applied and based on the
      original base image.
-    </p></div><div class="sect3 " id="cha.qemu.guest_inst.qemu-img.effect.create_derived"><div class="titlepage"><div><div><h4 class="title" id="cha.qemu.guest_inst.qemu-img.effect.create_derived"><span class="number">28.2.4.2 </span><span class="name">Creating Derived Images</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#cha.qemu.guest_inst.qemu-img.effect.create_derived">#</a></h4></div></div></div><div id="idm140203565580592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+    </p></div><div class="sect3 " id="cha.qemu.guest_inst.qemu-img.effect.create_derived"><div class="titlepage"><div><div><h4 class="title" id="cha.qemu.guest_inst.qemu-img.effect.create_derived"><span class="number">28.2.4.2 </span><span class="name">Creating Derived Images</span> <a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#cha.qemu.guest_inst.qemu-img.effect.create_derived">#</a></h4></div></div></div><div id="idm139696252939104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       While you can use the <code class="literal">raw</code> format for base images, you
       cannot use it for derived images because the <code class="literal">raw</code>
       format does not support the <code class="literal">backing_file</code> option. Use
@@ -567,7 +567,7 @@ disk size: 2.8G</pre></div><p>
      Linux systems can mount an internal partition of a <code class="literal">raw</code>
      disk image using a loopback device. The first example procedure is more
      complex but more illustrative, while the second one is straightforward:
-    </p><div class="procedure " id="idm140203565557792"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.1: </span><span class="name">Mounting Disk Image by Calculating Partition Offset </span><a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm140203565557792">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p><div class="procedure " id="idm139696252916304"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.1: </span><span class="name">Mounting Disk Image by Calculating Partition Offset </span><a title="Permalink" class="permalink" href="cha.qemu.guest_inst.html#idm139696252916304">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
        Set a <span class="emphasis"><em>loop</em></span> device on the disk image whose partition
        you want to mount.
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>losetup /dev/loop0 /images/sles_base.raw</pre></div></li><li class="step "><p>
@@ -610,7 +610,7 @@ drwxr-xr-x  15 root root  4096 Nov 16 09:22 var</pre></div></li><li class="step 
        finished.
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cp /etc/X11/xorg.conf /mnt/sles/root/tmp
 <code class="prompt user">tux &gt; </code>ls -l /mnt/sles/root/tmp
-<code class="prompt user">tux &gt; </code>umount /mnt/sles/</pre></div></li></ol></div></div><div id="idm140203565539904" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Do not Write to Images Currently in Use</h6><p>
+<code class="prompt user">tux &gt; </code>umount /mnt/sles/</pre></div></li></ol></div></div><div id="idm139696252898416" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Do not Write to Images Currently in Use</h6><p>
       Never mount a partition of an image of a running virtual machine in a
       <code class="literal">read-write</code> mode. This could corrupt the partition and
       break the whole VM Guest.

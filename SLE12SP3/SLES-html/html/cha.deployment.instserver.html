@@ -32,7 +32,7 @@ hljs.configure({
   prerequisites for this method and the other illustrating the basic procedure.
   More detail is then provided for all the techniques used in these
   installation scenarios.
- </p><div id="idm140475487432928" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
+ </p><div id="idm140106299152400" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Terminology</h6><p>
    In the following sections, the system to hold your new <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>
    installation is called <span class="emphasis"><em>target system</em></span> or
    <span class="emphasis"><em>installation target</em></span>. The term
@@ -45,7 +45,7 @@ hljs.configure({
   network installation source for <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>, there are several options for
   the server configuration. The easiest way to set up an installation server is
   to use YaST on SUSE Linux Enterprise Server or openSUSE.
- </p><div id="idm140475487426608" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installation Server Operating System</h6><p>
+ </p><div id="idm140106299146080" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Installation Server Operating System</h6><p>
    You can even use a Microsoft Windows machine as the installation server for
    your Linux deployment. See <a class="xref" href="cha.deployment.instserver.html#sec.deployment.instserver.smb" title="8.5. Managing an SMB Repository">Section 8.5, “Managing an SMB Repository”</a>
    for details.
@@ -84,7 +84,7 @@ hljs.configure({
      will be accessible under
      <code class="literal">nfs://<em class="replaceable ">Server-IP</em>/<em class="replaceable ">Name</em></code>.
      Details of NFS and exports can be found in <a class="xref" href="cha.nfs.html" title="Chapter 27. Sharing File Systems with NFS">Chapter 27, <em>Sharing File Systems with NFS</em></a>.
-    </p><div id="idm140475487409248" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Firewall Settings</h6><p>
+    </p><div id="idm140106299128336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Firewall Settings</h6><p>
       Make sure that the firewall settings of your server system allow traffic
       on the ports for HTTP, NFS, and FTP. If they currently do not, enable
       <span class="guimenu">Open Port in Firewall</span> or check <span class="guimenu">Firewall
@@ -100,7 +100,7 @@ hljs.configure({
      necessary to add additional media, such as service pack DVDs as extra
      repositories. To announce your installation server in the network via
      OpenSLP, activate the appropriate option.
-    </p><div id="idm140475487405248" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Announcing the Repository</h6><p>
+    </p><div id="idm140106299124336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Announcing the Repository</h6><p>
       Consider announcing your repository via OpenSLP if your network setup
       supports this option. This saves you from entering the network
       installation path on every target machine. The target systems are booted
@@ -282,7 +282,7 @@ description=FTP Repository</pre></div><p>
        line should be entered as one continuous line.
       </p></li><li class="step "><p>
        Start the OpenSLP daemon with <code class="command">systemctl start slpd</code>.
-      </p></li></ol></li></ol></div></div><div id="idm140475489551744" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Configuring an FTP Server with YaST</h6><p>
+      </p></li></ol></li></ol></div></div><div id="idm140106299029248" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Configuring an FTP Server with YaST</h6><p>
     If you prefer using YaST instead of manually configuring the FTP installation
     server, refer to <a class="xref" href="cha.ftp.html" title="Chapter 32. Setting Up an FTP Server with YaST">Chapter 32, <em>Setting Up an FTP Server with YaST</em></a> for more information on how to
     use the YaST FTP server module.
