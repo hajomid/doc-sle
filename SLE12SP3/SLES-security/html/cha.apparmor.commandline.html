@@ -28,19 +28,19 @@ hljs.configure({
   rather than a graphical interface to manage and configure the system
   security. Track the status of <span class="phrase">AppArmor</span> and create, delete, or modify
   <span class="phrase">AppArmor</span> profiles using the <span class="phrase">AppArmor</span> command line tools.
- </p><div id="idm140382675221680" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Background Information</h6><p>
+ </p><div id="idm139668018532368" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Background Information</h6><p>
    Before starting to manage your profiles using the <span class="phrase">AppArmor</span> command line
    tools, check out the general introduction to <span class="phrase">AppArmor</span> given in
    <a class="xref" href="cha.apparmor.concept.html" title="Chapter 20. Immunizing Programs">Chapter 20, <em>Immunizing Programs</em></a> and
    <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>.
   </p></div><div class="sect1 " id="sec.apparmor.commandline.status"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.status"><span class="number">24.1 </span><span class="name">Checking the <span class="phrase">AppArmor</span> Status</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.status">#</a></h2></div></div></div><p>
    <span class="phrase">AppArmor</span> can be in any one of three states:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382675215392"><span class="term ">Unloaded</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018526080"><span class="term ">Unloaded</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is not activated in the kernel.
-     </p></dd><dt id="idm140382675213136"><span class="term ">Running</span></dt><dd><p>
+     </p></dd><dt id="idm139668018523824"><span class="term ">Running</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is activated in the kernel and is enforcing <span class="phrase">AppArmor</span> program
       policies.
-     </p></dd><dt id="idm140382675210400"><span class="term ">Stopped</span></dt><dd><p>
+     </p></dd><dt id="idm139668018521088"><span class="term ">Stopped</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is activated in the kernel, but no policies are enforced.
      </p></dd></dl></div><p>
    Detect the state of <span class="phrase">AppArmor</span> by inspecting
@@ -51,7 +51,7 @@ hljs.configure({
   </p><p>
    Manage <span class="phrase">AppArmor</span> with <code class="command">systemctl</code>. It lets you perform the
    following operations:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382675203008"><span class="term "><code class="command">sudo systemctl start apparmor</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018513696"><span class="term "><code class="command">sudo systemctl start apparmor</code>
     </span></dt><dd><p>
       Behavior depends on the state of <span class="phrase">AppArmor</span>. If it is not activated,
       <code class="option">start</code> activates and starts it, putting it in the
@@ -60,17 +60,17 @@ hljs.configure({
       <code class="filename">/etc/apparmor.d</code> and puts <span class="phrase">AppArmor</span> in the running
       state. If <span class="phrase">AppArmor</span> is already running, <code class="option">start</code> reports a
       warning and takes no action.
-     </p><div id="idm140382675197456" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Already Running Processes</h6><p>
+     </p><div id="idm139668018508144" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Already Running Processes</h6><p>
        Already running processes need to be restarted to apply the <span class="phrase">AppArmor</span>
        profiles on them.
-      </p></div></dd><dt id="idm140382675195264"><span class="term "><code class="command">sudo systemctl stop apparmor</code>
+      </p></div></dd><dt id="idm139668018505952"><span class="term "><code class="command">sudo systemctl stop apparmor</code>
     </span></dt><dd><p>
       Stops <span class="phrase">AppArmor</span> if it is running by removing all profiles from kernel
       memory, effectively disabling all access controls, and putting <span class="phrase">AppArmor</span>
       into the stopped state. If the <span class="phrase">AppArmor</span> is already stopped,
       <code class="option">stop</code> tries to unload the profiles again, but nothing
       happens.
-     </p></dd><dt id="idm140382675191184"><span class="term "><code class="command">sudo systemctl reload apparmor</code>
+     </p></dd><dt id="idm139668018501872"><span class="term "><code class="command">sudo systemctl reload apparmor</code>
     </span></dt><dd><p>
       Causes the <span class="phrase">AppArmor</span> module to re-scan the profiles in
       <code class="filename">/etc/apparmor.d</code> without unconfining running
@@ -95,11 +95,11 @@ hljs.configure({
    You can use a text editor, such as <code class="command">vi</code>, to access and
    make changes to these profiles. The following sections contain detailed
    steps for building profiles:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382675179616"><span class="term ">Adding or Creating <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018490240"><span class="term ">Adding or Creating <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
       Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add" title="24.3. Adding or Creating an AppArmor Profile">Section 24.3, “Adding or Creating an <span class="phrase">AppArmor</span> Profile”</a>
-     </p></dd><dt id="idm140382675176800"><span class="term ">Editing <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+     </p></dd><dt id="idm139668018487424"><span class="term ">Editing <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
       Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit" title="24.4. Editing an AppArmor Profile">Section 24.4, “Editing an <span class="phrase">AppArmor</span> Profile”</a>
-     </p></dd><dt id="idm140382675173984"><span class="term ">Deleting <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+     </p></dd><dt id="idm139668018484608"><span class="term ">Deleting <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
       Refer to
       <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.del" title="24.6. Deleting an AppArmor Profile">Section 24.6, “Deleting an <span class="phrase">AppArmor</span> Profile”</a>
      </p></dd></dl></div></div><div class="sect1 " id="sec.apparmor.commandline.add"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.add"><span class="number">24.3 </span><span class="name">Adding or Creating an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add">#</a></h2></div></div></div><p>
@@ -127,7 +127,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Restart <span class="phrase">AppArmor</span> by entering <code class="command">systemctl reload
      apparmor</code> in a terminal window.
-    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.unload"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.unload"><span class="number">24.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload">#</a></h2></div></div></div><div id="idm140382675152032" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Danger of Unloading Wanted Profiles</h6><p>
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.unload"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.unload"><span class="number">24.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload">#</a></h2></div></div></div><div id="idm139668018462720" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Danger of Unloading Wanted Profiles</h6><p>
     <code class="command">aa-remove-unkown</code> will unload all profiles that
     are not stored in <code class="filename">/etc/apparmor.d</code>, for example
     automatically generated LXD profiles. This may compromise the
@@ -155,12 +155,12 @@ hljs.configure({
   </p><p>
    There are two ways to approach <span class="phrase">AppArmor</span> profile creation. Tools are
    available for both methods.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382675129584"><span class="term ">Stand-Alone Profiling</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018440224"><span class="term ">Stand-Alone Profiling</span></dt><dd><p>
       A method suitable for profiling small applications that have a finite
       runtime, such as user client applications like mail clients. For more
       information, refer to
       <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.stand-alone" title="24.7.1. Stand-Alone Profiling">Section 24.7.1, “Stand-Alone Profiling”</a>.
-     </p></dd><dt id="idm140382675127024"><span class="term ">Systemic Profiling</span></dt><dd><p>
+     </p></dd><dt id="idm139668018437664"><span class="term ">Systemic Profiling</span></dt><dd><p>
       A method suitable for profiling many programs at once
       and for profiling applications that may run for days, weeks, or
       continuously across reboots, such as network server applications like
@@ -330,13 +330,13 @@ hljs.configure({
      without being a child of another program that already has a profile).
      Finding all such programs depends on the application in question. Here
      are several strategies for finding such programs:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382675061440"><span class="term ">Directories</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018372080"><span class="term ">Directories</span></dt><dd><p>
         If all the programs to profile are in one directory and there are no
         other programs in that directory, the simple command
         <code class="command">aa-autodep</code>
         <em class="replaceable ">/path/to/your/programs/*</em> creates basic
         profiles for all programs in that directory.
-       </p></dd><dt id="idm140382675058544"><span class="term ">pstree -p</span></dt><dd><p>
+       </p></dd><dt id="idm139668018369184"><span class="term ">pstree -p</span></dt><dd><p>
         You can run your application and use the standard Linux
         <code class="command">pstree</code> command to find all processes running.
         Then manually hunt down the location of these programs and run the
@@ -385,7 +385,7 @@ hljs.configure({
      <code class="filename">/usr/sbin</code> and puts them into complain mode.
      <code class="command">aa-complain /etc/apparmor.d/*</code> puts all of the
      profiles in <code class="filename">/etc/apparmor.d</code> into complain mode.
-    </p><div id="idm140382675033696" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
+    </p><div id="idm139668018344336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
       YaST offers a graphical front-end for toggling complain and
       enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>
       for information.
@@ -449,7 +449,7 @@ hljs.configure({
      the program name does not include its entire path,
      <code class="command">aa-enforce</code> searches <code class="envar">$PATH</code> for the
      program.
-    </p><div id="idm140382674999296" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
+    </p><div id="idm139668018310000" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
       YaST offers a graphical front-end for toggling complain and
       enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>
       for information.
@@ -537,7 +537,7 @@ requested_mask="::r" denied_mask="::r" fsuid=30 ouid=0</pre></div></li><li class
          <code class="command">aa-genprof</code> in generating the security profile.
         </p></li><li class="listitem "><p>
          <span class="keycap">F</span> exits the tool.
-        </p></li></ul></div><div id="idm140382674960112" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p></li></ul></div><div id="idm139668018270752" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
         If requests to add hats appear, proceed to
         <a class="xref" href="cha.apparmor.hat.html" title="Chapter 25. Profiling Your Web Applications Using ChangeHat">Chapter 25, <em>Profiling Your Web Applications Using ChangeHat</em></a>.
        </p></div></li><li class="step "><p>
@@ -570,7 +570,7 @@ Program:  xinetd
 Execute:  /usr/lib/cups/daemon/cups-lpd
 Severity: unknown
 
-(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny / Abo(r)t / (F)inish</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140382674947376"><span class="term ">Inherit (ix)</span></dt><dd><p>
+(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny / Abo(r)t / (F)inish</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139668018258080"><span class="term ">Inherit (ix)</span></dt><dd><p>
             The child inherits the parent's profile, running with the same
             access controls as the parent. This mode is useful when a
             confined program needs to call another confined program without
@@ -579,7 +579,7 @@ Severity: unknown
             the child program is a <span class="emphasis"><em>helper application</em></span>,
             such as the <code class="command">/usr/bin/mail</code> client using
             <code class="command">less</code> as a pager.
-           </p></dd><dt id="idm140382674943792"><span class="term ">Profile (px/Px)</span></dt><dd><p>
+           </p></dd><dt id="idm139668018254496"><span class="term ">Profile (px/Px)</span></dt><dd><p>
             The child runs using its own profile, which must be loaded into
             the kernel. If the profile is not present, attempts to execute
             the child fail with permission denied. This is most useful if
@@ -590,7 +590,7 @@ Severity: unknown
             option to scrub the environment of environment variables that
             could modify execution behavior when passed to the child
             process.
-           </p></dd><dt id="idm140382674940576"><span class="term ">Child (cx/Cx)</span></dt><dd><p>
+           </p></dd><dt id="idm139668018251280"><span class="term ">Child (cx/Cx)</span></dt><dd><p>
             Sets up a transition to a subprofile. It is like px/Px
             transition, except to a child profile.
            </p><p>
@@ -598,7 +598,7 @@ Severity: unknown
             option to scrub the environment of environment variables that
             could modify execution behavior when passed to the child
             process.
-           </p></dd><dt id="idm140382674937600"><span class="term ">Unconfined (ux/Ux)</span></dt><dd><p>
+           </p></dd><dt id="idm139668018248304"><span class="term ">Unconfined (ux/Ux)</span></dt><dd><p>
             The child runs completely unconfined without any <span class="phrase">AppArmor</span> profile
             applied to the executed resource.
            </p><p>
@@ -608,21 +608,21 @@ Severity: unknown
             process. Note that running unconfined profiles introduces a
             security vulnerability that could be used to evade <span class="phrase">AppArmor</span>. Only
             use it as a last resort.
-           </p></dd><dt id="idm140382674933648"><span class="term ">mmap (m)</span></dt><dd><p>
+           </p></dd><dt id="idm139668018244352"><span class="term ">mmap (m)</span></dt><dd><p>
             This permission denotes that the program running under the
             profile can access the resource using the mmap system call with
             the flag <code class="envar">PROT_EXEC</code>. This means that the data
             mapped in it can be executed. You are prompted to include this
             permission if it is requested during a profiling run.
-           </p></dd><dt id="idm140382674931088"><span class="term ">Deny</span></dt><dd><p>
+           </p></dd><dt id="idm139668018241792"><span class="term ">Deny</span></dt><dd><p>
             Adds a <code class="literal">deny</code> rule to the profile, and
             permanently prevents the program from accessing the specified
             directory path entries. <span class="phrase">AppArmor</span> then continues to the next
             event.
-           </p></dd><dt id="idm140382674928224"><span class="term ">Abort</span></dt><dd><p>
+           </p></dd><dt id="idm139668018238928"><span class="term ">Abort</span></dt><dd><p>
             Aborts <code class="command">aa-logprof</code>, losing all rule changes
             entered so far and leaving all profiles unmodified.
-           </p></dd><dt id="idm140382674925904"><span class="term ">Finish</span></dt><dd><p>
+           </p></dd><dt id="idm139668018236608"><span class="term ">Finish</span></dt><dd><p>
             Closes <code class="command">aa-logprof</code>, saving all rule changes
             entered so far and modifying all profiles.
            </p></dd></dl></div></li><li class="listitem "><p>
@@ -655,9 +655,9 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
          <span class="phrase">AppArmor</span> provides one or more paths or includes. By entering the
          option number, select the desired options then proceed to the next
          step.
-        </p><div id="idm140382674917344" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p><div id="idm139668018228048" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
           Not all of these options are always presented in the <span class="phrase">AppArmor</span> menu.
-         </p></div><div class="variablelist "><dl class="variablelist"><dt id="idm140382674915664"><span class="term "><code class="literal">#include</code>
+         </p></div><div class="variablelist "><dl class="variablelist"><dt id="idm139668018226368"><span class="term "><code class="literal">#include</code>
           </span></dt><dd><p>
             This is the section of an <span class="phrase">AppArmor</span> profile that refers to an
             include file, which procures access permissions for programs. By
@@ -665,11 +665,11 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
             paths or files that are also required by other programs. Using
             includes can reduce the size of a profile. It is good practice
             to select includes when suggested.
-           </p></dd><dt id="idm140382674912752"><span class="term ">Globbed Version</span></dt><dd><p>
+           </p></dd><dt id="idm139668018223456"><span class="term ">Globbed Version</span></dt><dd><p>
             This is accessed by selecting <span class="guimenu">Glob</span> as
             described in the next step. For information about globbing
             syntax, refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-           </p></dd><dt id="idm140382674909872"><span class="term ">Actual Path</span></dt><dd><p>
+           </p></dd><dt id="idm139668018220576"><span class="term ">Actual Path</span></dt><dd><p>
             This is the literal path to which the program needs access so
             that it can run properly.
            </p></dd></dl></div><p>
@@ -681,23 +681,23 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
         </p><p>
          The following options are available to process the learning mode
          entries and build the profile:
-        </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382674904544"><span class="term ">Select <span class="keycap">Enter</span>
+        </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018215248"><span class="term ">Select <span class="keycap">Enter</span>
           </span></dt><dd><p>
             Allows access to the selected directory path.
-           </p></dd><dt id="idm140382674902144"><span class="term ">Allow</span></dt><dd><p>
+           </p></dd><dt id="idm139668018212848"><span class="term ">Allow</span></dt><dd><p>
             Allows access to the specified directory path entries. <span class="phrase">AppArmor</span>
             suggests file permission access. For more information, refer to
             <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-           </p></dd><dt id="idm140382674899200"><span class="term ">Deny</span></dt><dd><p>
+           </p></dd><dt id="idm139668018209904"><span class="term ">Deny</span></dt><dd><p>
             Prevents the program from accessing the specified directory path
             entries. <span class="phrase">AppArmor</span> then continues to the next event.
-           </p></dd><dt id="idm140382674896848"><span class="term ">New</span></dt><dd><p>
+           </p></dd><dt id="idm139668018207552"><span class="term ">New</span></dt><dd><p>
             Prompts you to enter your own rule for this event, allowing you
             to specify a regular expression. If the expression does not
             actually satisfy the event that prompted the question in the
             first place, <span class="phrase">AppArmor</span> asks for confirmation and lets you reenter
             the expression.
-           </p></dd><dt id="idm140382674894320"><span class="term ">Glob</span></dt><dd><p>
+           </p></dd><dt id="idm139668018205024"><span class="term ">Glob</span></dt><dd><p>
             Select a specific path or create a general rule using wild cards
             that match a broader set of paths. To select any of the offered
             paths, enter the number that is printed in front of the path
@@ -705,7 +705,7 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
            </p><p>
             For more information about globbing syntax, refer to
             <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-           </p></dd><dt id="idm140382674891152"><span class="term ">Glob w/Ext</span></dt><dd><p>
+           </p></dd><dt id="idm139668018201856"><span class="term ">Glob w/Ext</span></dt><dd><p>
             This modifies the original directory path while retaining the
             file name extension. For example,
             <code class="filename">/etc/apache2/file.ext</code> becomes
@@ -713,10 +713,10 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
             (asterisk) in place of the file name. This allows the program to
             access all files in the suggested directory that end with the
             <code class="literal">.ext</code> extension.
-           </p></dd><dt id="idm140382674887728"><span class="term ">Abort</span></dt><dd><p>
+           </p></dd><dt id="idm139668018198432"><span class="term ">Abort</span></dt><dd><p>
             Aborts <code class="command">aa-logprof</code>, losing all rule changes
             entered so far and leaving all profiles unmodified.
-           </p></dd><dt id="idm140382674885408"><span class="term ">Finish</span></dt><dd><p>
+           </p></dd><dt id="idm139668018196112"><span class="term ">Finish</span></dt><dd><p>
             Closes <code class="command">aa-logprof</code>, saving all rule changes
             entered so far and modifying all profiles.
            </p></dd></dl></div></li></ul></div></li><li class="step "><p>
@@ -802,17 +802,17 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
      <code class="command">aa-logprof</code> into a terminal window while logged in as
      <code class="systemitem">root</code>. The following options can be used for
      <code class="command">aa-logprof</code>:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382674845872"><span class="term "><code class="command">aa-logprof -d</code><em class="replaceable ">/path/to/profile/directory/</em>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018156576"><span class="term "><code class="command">aa-logprof -d</code><em class="replaceable ">/path/to/profile/directory/</em>
       </span></dt><dd><p>
         Specifies the full path to the location of the profiles if the
         profiles are not located in the standard directory,
         <code class="filename">/etc/apparmor.d/</code>.
-       </p></dd><dt id="idm140382674842912"><span class="term "><code class="command">aa-logprof -f</code><em class="replaceable ">/path/to/logfile/</em>
+       </p></dd><dt id="idm139668018153616"><span class="term "><code class="command">aa-logprof -f</code><em class="replaceable ">/path/to/logfile/</em>
       </span></dt><dd><p>
         Specifies the full path to the location of the log file if the log
         file is not located in the default directory or
         <code class="filename">/var/log/audit/audit.log</code>.
-       </p></dd><dt id="idm140382674839952"><span class="term "><code class="command">aa-logprof -m "string marker in logfile"</code>
+       </p></dd><dt id="idm139668018150656"><span class="term "><code class="command">aa-logprof -m "string marker in logfile"</code>
       </span></dt><dd><p>
         Marks the starting point for <code class="command">aa-logprof</code> to look
         in the system log. <code class="command">aa-logprof</code> ignores all events
@@ -857,24 +857,24 @@ New Mode: r
  2 - /etc/group
 [(A)llow] / (D)eny / (N)ew / (G)lob / Glob w/(E)xt / Abo(r)t / (F)inish</pre></div><p>
      Select one of the following responses:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382674822176"><span class="term ">Select <span class="keycap">Enter</span>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018132944"><span class="term ">Select <span class="keycap">Enter</span>
       </span></dt><dd><p>
         Triggers the default action, which is, in this example, allowing
         access to the specified directory path entry.
-       </p></dd><dt id="idm140382674819712"><span class="term ">Allow</span></dt><dd><p>
+       </p></dd><dt id="idm139668018130480"><span class="term ">Allow</span></dt><dd><p>
         Allows access to the specified directory path entries. <span class="phrase">AppArmor</span>
         suggests file permission access. For more information about this,
         refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-       </p></dd><dt id="idm140382674816768"><span class="term ">Deny</span></dt><dd><p>
+       </p></dd><dt id="idm139668018127536"><span class="term ">Deny</span></dt><dd><p>
         Permanently prevents the program from accessing the specified
         directory path entries. <span class="phrase">AppArmor</span> then continues to the next event.
-       </p></dd><dt id="idm140382674814416"><span class="term ">New</span></dt><dd><p>
+       </p></dd><dt id="idm139668018125184"><span class="term ">New</span></dt><dd><p>
         Prompts you to enter your own rule for this event, allowing you to
         specify whatever form of regular expression you want. If the
         expression entered does not actually satisfy the event that prompted
         the question in the first place, <span class="phrase">AppArmor</span> asks for confirmation and
         lets you reenter the expression.
-       </p></dd><dt id="idm140382674811872"><span class="term ">Glob</span></dt><dd><p>
+       </p></dd><dt id="idm139668018122640"><span class="term ">Glob</span></dt><dd><p>
         Select either a specific path or create a general rule using wild
         cards that matches on a broader set of paths. To select any of the
         offered paths, enter the number that is printed in front of the
@@ -882,7 +882,7 @@ New Mode: r
        </p><p>
         For more information about globbing syntax, refer to
         <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-       </p></dd><dt id="idm140382674808736"><span class="term ">Glob w/Ext</span></dt><dd><p>
+       </p></dd><dt id="idm139668018119504"><span class="term ">Glob w/Ext</span></dt><dd><p>
         This modifies the original directory path while retaining the file
         name extension. For example,
         <code class="filename">/etc/apache2/file.ext</code> becomes
@@ -890,10 +890,10 @@ New Mode: r
         (asterisk) in place of the file name. This allows the program to
         access all files in the suggested directory that end with the
         <code class="literal">.ext</code> extension.
-       </p></dd><dt id="idm140382674805328"><span class="term ">Abort</span></dt><dd><p>
+       </p></dd><dt id="idm139668018116096"><span class="term ">Abort</span></dt><dd><p>
         Aborts <code class="command">aa-logprof</code>, losing all rule changes
         entered so far and leaving all profiles unmodified.
-       </p></dd><dt id="idm140382674803008"><span class="term ">Finish</span></dt><dd><p>
+       </p></dd><dt id="idm139668018113776"><span class="term ">Finish</span></dt><dd><p>
         Closes <code class="command">aa-logprof</code>, saving all rule changes
         entered so far and modifying all profiles.
        </p></dd></dl></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><span class="number">24.7.3.11 </span><span class="name">aa-logprof Example 2</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof_ex2">#</a></h4></div></div></div><p>
@@ -947,7 +947,7 @@ New Mode: r
      <span class="quote">“<span class="quote">page</span>”</span> long mail messages. Consequently, it presents this
      prompt:
     </p><div class="verbatim-wrap"><pre class="screen">/usr/bin/nail -&gt; /usr/bin/less
-(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny</pre></div><div id="idm140382674783792" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny</pre></div><div id="idm139668018094496" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       The actual executable file for <code class="filename">/usr/bin/mail</code>
       turns out to be <code class="filename">/usr/bin/nail</code>, which is not a
       typographical error.
@@ -958,7 +958,7 @@ New Mode: r
      using it for. However, <code class="command">less</code> is actually a large
      and powerful program that uses many other helper applications, such
      as <code class="command">tar</code> and <code class="command">rpm</code>.
-    </p><div id="idm140382674779056" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm139668018089760" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       Run <code class="command">less</code> on a tar file or an RPM file and it shows
       you the inventory of these containers.
      </p></div><p>
@@ -1026,7 +1026,7 @@ New Mode: r
      <code class="literal">ux</code> in your profile instead, select
      <span class="guimenu">No</span>. The default value selected is
      <code class="literal">Ux</code> for unconfined execution mode.
-    </p><div id="idm140382674753696" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Running Unconfined</h6><p>
+    </p><div id="idm139668018064400" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Running Unconfined</h6><p>
       Selecting <code class="literal">ux or Ux</code> is very dangerous and provides
       no enforcement of policy (from a security perspective) of the
       resulting execution behavior of the child program.
@@ -1046,7 +1046,7 @@ New Mode: r
       </p></li><li class="listitem "><p>
        A process that dies between <code class="command">netstat(8)</code> and further
        checks is mishandled
-      </p></li></ul></div><div id="idm140382674742128" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+      </p></li></ul></div><div id="idm139668018052896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       This program lists processes using TCP and UDP only. In short, this
       program is unsuitable for forensics use and is provided only as an aid
       to profiling all network-accessible processes in the lab.
@@ -1062,12 +1062,12 @@ New Mode: r
      X Window display number you are currently using, such as
      <code class="literal">:0</code>. The process is run in the background, and shows
      a notification each time a deny event happens.
-    </p><div id="idm140382674733568" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm139668018044400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       The active X Window display number is saved in the
       <code class="literal">$DISPLAY</code> variable, so you can use
       <code class="literal">--display $DISPLAY</code> to avoid finding out the current
       display number.
-     </p></div><div class="figure" id="idm140382674731664"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa-notify.png"><img src="images/aa-notify.png" width="" alt="aa-notify Message in GNOME" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 24.1: </span><span class="name"><code class="command">aa-notify Message in GNOME</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#idm140382674731664">#</a></h6></div></div><p>
+     </p></div><div class="figure" id="idm139668018042496"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa-notify.png"><img src="images/aa-notify.png" width="" alt="aa-notify Message in GNOME" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 24.1: </span><span class="name"><code class="command">aa-notify Message in GNOME</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#idm139668018042496">#</a></h6></div></div><p>
      With the <code class="option">-s <em class="replaceable ">DAYS</em></code> option,
      you can also configure <code class="command">aa-notify</code> to display a
      summary of notifications for the specified number of past days. For
@@ -1086,25 +1086,25 @@ New Mode: r
      type correctly as an <span class="phrase">AppArmor</span> profile, add
     </p><div class="verbatim-wrap"><pre class="screen"># vim:ft=apparmor</pre></div><p>
      at the end of the profile.
-    </p><div id="idm140382674717568" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm139668018028400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       <code class="command">vim</code> comes with <span class="phrase">AppArmor</span> highlighting automatically
       enabled for files in /etc/apparmor.d/.
      </p></div><p>
      When you enable this feature, vim colors the lines of the profile for
      you:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382674714896"><span class="term ">Blue</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018025728"><span class="term ">Blue</span></dt><dd><p>
         Comments
-       </p></dd><dt id="idm140382674713088"><span class="term ">White</span></dt><dd><p>
+       </p></dd><dt id="idm139668018023920"><span class="term ">White</span></dt><dd><p>
         Ordinary read access lines
-       </p></dd><dt id="idm140382674711264"><span class="term ">Brown</span></dt><dd><p>
+       </p></dd><dt id="idm139668018022096"><span class="term ">Brown</span></dt><dd><p>
         Capability statements and complain flags
-       </p></dd><dt id="idm140382674709424"><span class="term ">Yellow</span></dt><dd><p>
+       </p></dd><dt id="idm139668018020256"><span class="term ">Yellow</span></dt><dd><p>
         Lines that grant write access
-       </p></dd><dt id="idm140382674707600"><span class="term ">Green</span></dt><dd><p>
+       </p></dd><dt id="idm139668018018432"><span class="term ">Green</span></dt><dd><p>
         Lines that grant execute permission (either ix or px)
-       </p></dd><dt id="idm140382674705760"><span class="term ">Red</span></dt><dd><p>
+       </p></dd><dt id="idm139668018016592"><span class="term ">Red</span></dt><dd><p>
         Lines that grant unconfined access (ux)
-       </p></dd><dt id="idm140382674703920"><span class="term ">Red background</span></dt><dd><p>
+       </p></dd><dt id="idm139668018014752"><span class="term ">Red background</span></dt><dd><p>
         Syntax errors that will not load properly into the <span class="phrase">AppArmor</span> modules
        </p></dd></dl></div><p>
      Use the <code class="systemitem">apparmor.vim</code> and
@@ -1117,17 +1117,17 @@ New Mode: r
    by the <span class="phrase">AppArmor</span> framework. If you intend to manage and troubleshoot your
    profiles manually, make sure that you know about these files and
    directories:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140382674695584"><span class="term "><code class="filename">/sys/kernel/security/apparmor/profiles</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139668018006416"><span class="term "><code class="filename">/sys/kernel/security/apparmor/profiles</code>
     </span></dt><dd><p>
       Virtualized file representing the currently loaded set of profiles.
-     </p></dd><dt id="idm140382674693424"><span class="term "><code class="filename">/etc/apparmor/</code>
+     </p></dd><dt id="idm139668018004256"><span class="term "><code class="filename">/etc/apparmor/</code>
     </span></dt><dd><p>
       Location of <span class="phrase">AppArmor</span> configuration files.
-     </p></dd><dt id="idm140382674690880"><span class="term "><code class="filename">/etc/apparmor/profiles/extras/</code>
+     </p></dd><dt id="idm139668018001712"><span class="term "><code class="filename">/etc/apparmor/profiles/extras/</code>
     </span></dt><dd><p>
       A local repository of profiles shipped with <span class="phrase">AppArmor</span>, but not enabled
       by default.
-     </p></dd><dt id="idm140382674688272"><span class="term "><code class="filename">/etc/apparmor.d/</code>
+     </p></dd><dt id="idm139668017999104"><span class="term "><code class="filename">/etc/apparmor.d/</code>
     </span></dt><dd><p>
       Location of profiles, named with the convention of replacing the
       <code class="literal">/</code> in paths with <code class="literal">.</code> (not for the
@@ -1135,13 +1135,13 @@ New Mode: r
       example, the profile for the program
       <code class="filename">/usr/sbin/ntpd</code> is named
       <code class="filename">usr.sbin.ntpd</code>.
-     </p></dd><dt id="idm140382674683792"><span class="term "><code class="filename">/etc/apparmor.d/abstractions/</code>
+     </p></dd><dt id="idm139668017994624"><span class="term "><code class="filename">/etc/apparmor.d/abstractions/</code>
     </span></dt><dd><p>
       Location of abstractions.
-     </p></dd><dt id="idm140382674681680"><span class="term "><code class="filename">/etc/apparmor.d/program-chunks/</code>
+     </p></dd><dt id="idm139668017992512"><span class="term "><code class="filename">/etc/apparmor.d/program-chunks/</code>
     </span></dt><dd><p>
       Location of program chunks.
-     </p></dd><dt id="idm140382674679552"><span class="term "><code class="filename">/proc/*/attr/current</code>
+     </p></dd><dt id="idm139668017990384"><span class="term "><code class="filename">/proc/*/attr/current</code>
     </span></dt><dd><p>
       Check this file to review the confinement status of a process and the
       profile that is used to confine the process. The <code class="command">ps</code>
