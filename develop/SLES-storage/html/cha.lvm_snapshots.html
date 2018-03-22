@@ -35,7 +35,7 @@ hljs.configure({
    you access data via the snapshot, you see a point-in-time copy of the source
    logical volume. There is no need to restore data from backup media or to
    overwrite the changed data.
-  </p><div id="idm139805619454608" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting Volumes with Snapshots</h6><p>
+  </p><div id="idm139951082858192" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting Volumes with Snapshots</h6><p>
     During the snapshot’s lifetime, the snapshot must be mounted before its
     source logical volume can be mounted.
    </p></div><p>
@@ -92,7 +92,7 @@ hljs.configure({
    as any other thin volume. You can independently activate the volume, extend
    the volume, rename the volume, remove the volume, and even snapshot the
    volume.
-  </p><div id="idm139805619447072" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Thinly Provisioned Volumes in a Cluster</h6><p>
+  </p><div id="idm139951082850656" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Thinly Provisioned Volumes in a Cluster</h6><p>
     To use thinly provisioned snapshots in a cluster, the source logical volume
     and its snapshots must be managed in a single cluster resource. This allows
     the volume and its snapshots to always be mounted exclusively on the same
@@ -260,10 +260,10 @@ hljs.configure({
      <a class="xref" href="cha.lvm.html#sec.lvm.tagging" title="5.9. Tagging LVM2 Storage Objects">Section 5.9, “Tagging LVM2 Storage Objects”</a>.
     </p><p>
      The options include:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139805619387312"><span class="term ">-b, </span><span class="term ">--background</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139951082790768"><span class="term ">-b, </span><span class="term ">--background</span></dt><dd><p>
         Run the daemon in the background. This allows multiple specified
         snapshots to be merged concurrently in parallel.
-       </p></dd><dt id="idm139805619384944"><span class="term ">-i, </span><span class="term ">--interval &lt;<em class="replaceable ">SECONDS</em>&gt;</span></dt><dd><p>
+       </p></dd><dt id="idm139951082788400"><span class="term ">-i, </span><span class="term ">--interval &lt;<em class="replaceable ">SECONDS</em>&gt;</span></dt><dd><p>
         Report progress as a percentage at regular intervals. Specify the
         interval in seconds.
        </p></dd></dl></div><p>
