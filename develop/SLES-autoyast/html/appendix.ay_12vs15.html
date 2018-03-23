@@ -33,7 +33,7 @@ hljs.configure({
   Main differences between SUSE Linux Enterprise Server 12 and 15 profiles
  </a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Appendix C. Advanced Linuxrc Options" href="appendix.linuxrc.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix E. GNU Licenses" href="bk05ape.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="appendix.ay_12vs15"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h1 class="title"><span class="number">D </span><span class="name">
   Main differences between <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="phrase">12</span> and 15 profiles
- </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139769501539888">#</a></h6></div><p>
+ </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140444213377712">#</a></h6></div><p>
     Significant changes in <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 15, like the new modules concept or
     replacing SuSEfirewall2 with <code class="systemitem">firewalld</code>, required changes in AutoYaST. If you
     want to reuse existing <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="phrase">12</span> a profiles with
@@ -75,7 +75,7 @@ hljs.configure({
      medium does not require access to a registration server during the
      installation. It can be shared on local the network via an installation
      server.
-    </p></li></ul></div><div id="idm139769501519216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Maintenance Updates</h6><p>
+    </p></li></ul></div><div id="idm140444213357040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Maintenance Updates</h6><p>
     Only using the registration server will grant the access to all maintenance
     update at installation time. Maintenance updates are not available when
     using the DVD medium without registration.
@@ -124,7 +124,7 @@ hljs.configure({
    &lt;product_dir&gt;/Module-Basesystem&lt;/product_dir&gt;
   &lt;/listentry&gt;
  &lt;/add_on_products&gt;
-&lt;/add-on&gt;</pre></div></div></div><div id="idm139769501502576" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Product Name Matching</h6><p>
+&lt;/add-on&gt;</pre></div></div></div><div id="idm140444213340592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Product Name Matching</h6><p>
      
      The <code class="sgmltag-element">product</code> tag must match the internal product
      name contained in the repository. If the product name does not match at
@@ -133,7 +133,7 @@ hljs.configure({
      If you have multiple physical DVD drives you can select a specific device
      using <code class="literal">devices</code> parameter in the URL, for example
      <code class="literal">dvd:///?devices=/dev/sr1</code>.
-    </p></div><div id="idm139769501498096" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: &gt;Using SLE-15-Packages Medium from a Local Server</h6><p>
+    </p></div><div id="idm140444213336112" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: &gt;Using SLE-15-Packages Medium from a Local Server</h6><p>
      You can share the DVD content on the local network via a NFS, FTP or HTTP
      server. In that case replace the URL in the <code class="sgmltag-element">media_url</code> tag so it points to root of the medium on
      the server, for example:
@@ -203,7 +203,7 @@ hljs.configure({
     defined patterns and adjust the profiles accordingly. Additionally, the
     required patterns and packages have to be available in the activated
     extensions or modules.
-   </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Notes </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139769501458912">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+   </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Notes </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140444213296992">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
       The pattern renames in the table above are not 1:1 replacements, the
       content of some patterns has been changed as well, some packages were
       moved to a different pattern or even removed from <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> 15.
@@ -280,8 +280,8 @@ hljs.configure({
    very limited. It is recommended to updated profiles for <span class="phrase">SLE</span> 15 as
    outlined below. If keeping <span class="phrase">SLE</span> <span class="phrase">12</span> profiles we recommend to check the final
    configuration to avoid an unexpected behavior or network security threats.
-  </p><div class="table" id="idm139769501416960"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">SLE</span> 15: Backwards
-   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139769501416960">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in SLE 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
+  </p><div class="table" id="idm140444213255040"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">SLE</span> 15: Backwards
+   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140444213255040">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in SLE 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
        <p>
         <code class="sgmltag-element">FW_CONFIGURATIONS_\{DMZ, EXT, INT}</code>
        </p>
@@ -359,7 +359,7 @@ hljs.configure({
    future releases of <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. Some <code class="systemitem">firewalld</code> features are not yet
    support by YaST and AutoYaST—you can make use of them with post
    installation scripts in your AutoYaST profile.a See <a class="xref" href="configuration.html#createprofile.scripts" title="4.30. Custom User Scripts">Section 4.30, “Custom User Scripts”</a> for more information.
-   </p><div id="idm139769501372608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
+   </p><div id="idm140444213210688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
     Enabling and starting the <code class="systemitem">systemd</code> service for <code class="systemitem">firewalld</code> is done with
     the same syntax as in <span class="phrase">SLE</span> <span class="phrase">12</span>. This is the only part of the firewall
     configuration syntax in AutoYaST that has not changed:
@@ -374,7 +374,7 @@ hljs.configure({
     Both, SuSEfirewall2 and <code class="systemitem">firewalld</code> are zone-based, but have a different
     set of predefined rules and a different level of trust for network
     connections.
-   </p><div class="table" id="idm139769501363920"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139769501363920">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">SLE</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">SLE</span> <span class="phrase">12</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
+   </p><div class="table" id="idm140444213202064"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140444213202064">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">SLE</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">SLE</span> <span class="phrase">12</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
         <p>
          EXT with <code class="sgmltag-element">FW_MASQUERADE</code> set to
          <code class="literal">yes</code>
