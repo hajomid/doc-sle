@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>
+  Main differences between openSUSE Leap 42.3 and 15 profiles
+  | AutoYaST | openSUSE Leap 42.3</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.3" /><meta name="book-title" content="AutoYaST" /><meta name="chapter-title" content="Appendix D. &#10;  Main differences between openSUSE Leap 42.3 and 15 profiles&#10; " /><meta name="description" content="Significant changes in openSUSE Leap 15, like the new modules concept or replacing SuSEfirewall2 with firewalld, required changes in AutoYaST. If you want to reuse existing openSUSE Leap 42.3 a profiles with openSUSE Leap 15, you need to adjust them as documented here." /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="book.autoyast.html" title="AutoYaST" /><link rel="prev" href="appendix.linuxrc.html" title="Appendix C. Advanced Linuxrc Options" /><link rel="next" href="bk07ape.html" title="Appendix E. GNU Licenses" /><script type="text/javascript">
+
+var protocol = window.location.protocol.toLowerCase();
+if ( protocol != 'file:' ) {
+  var agent = navigator.userAgent.toLowerCase();
+  var wanted = ( protocol == 'https:') ? 'https' : 'http';
+  var file = 'fonts.css';
+  document.write('<link rel="stylesheet" type="text/css" href="' + wanted + '://static.opensuse.org/fonts/'+ file +'"></link>');
+}
+else {
+   document.write('<link rel="stylesheet" type="text/css" href="static/css/fonts-onlylocal.css"></link>');
+}
+
+</script><noscript><link rel="stylesheet" type="text/css" href="http://static.opensuse.org/fonts/fonts.css" /></noscript><script src="static/js/jquery-1.10.2.min.js" type="text/javascript"></script><script src="static/js/script.js" type="text/javascript"></script><script src="static/js/highlight.min.js" type="text/javascript"></script><script>
+
+$(document).ready(function() {
+  $('.verbatim-wrap.highlight').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});
+hljs.configure({
+  useBR: false
+});
+
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="openSUSE Leap Documentation"><span class="book-icon">openSUSE Leap Documentation</span></a><span> › </span><a class="crumb" href="book.autoyast.html">AutoYaST</a><span> › </span><a class="crumb" href="appendix.ay_12vs15.html">
+  Main differences between openSUSE Leap 42.3 and 15 profiles
+ </a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>AutoYaST</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="introduction.html"><span class="number">1 </span><span class="name">Introduction</span></a></li><li class="inactive"><a href="Profile.html"><span class="number">2 </span><span class="name">The Control File</span></a></li><li class="inactive"><a href="CreateProfile.html"><span class="number">3 </span><span class="name">Creating A Control File</span></a></li><li class="inactive"><a href="configuration.html"><span class="number">4 </span><span class="name">Configuration and Installation Options</span></a></li><li class="inactive"><a href="rulesandclass.html"><span class="number">5 </span><span class="name">Rules and Classes</span></a></li><li class="inactive"><a href="Invoking.html"><span class="number">6 </span><span class="name">The Auto-Installation Process</span></a></li><li class="inactive"><a href="InstalledSystem.html"><span class="number">7 </span><span class="name">Running AutoYaST in an Installed System</span></a></li><li class="inactive"><a href="handlingrules.html"><span class="number">A </span><span class="name">Handling Rules</span></a></li><li class="inactive"><a href="app.ay.faq.html"><span class="number">B </span><span class="name">AutoYaST FAQ - Frequently Asked Questions</span></a></li><li class="inactive"><a href="appendix.linuxrc.html"><span class="number">C </span><span class="name">Advanced Linuxrc Options</span></a></li><li class="inactive"><a href="appendix.ay_12vs15.html"><span class="number">D </span><span class="name">
+  Main differences between <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> and 15 profiles
+ </span></a></li><li class="inactive"><a href="bk07ape.html"><span class="number">E </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Appendix C. Advanced Linuxrc Options" href="appendix.linuxrc.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix E. GNU Licenses" href="bk07ape.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="openSUSE Leap Documentation"><span class="book-icon">openSUSE Leap Documentation</span></a><span> › </span><a class="crumb" href="book.autoyast.html">AutoYaST</a><span> › </span><a class="crumb" href="appendix.ay_12vs15.html">
+  Main differences between openSUSE Leap 42.3 and 15 profiles
+ </a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Appendix C. Advanced Linuxrc Options" href="appendix.linuxrc.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix E. GNU Licenses" href="bk07ape.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="appendix.ay_12vs15"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">openSUSE Leap</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">42.3</span></span></span></div><div><h1 class="title"><span class="number">D </span><span class="name">
+  Main differences between <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> and 15 profiles
+ </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139901202205392">#</a></h6></div><p>
+    Significant changes in <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, like the new modules concept or
+    replacing SuSEfirewall2 with <code class="systemitem">firewalld</code>, required changes in AutoYaST. If you
+    want to reuse existing <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> a profiles with
+    <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, you need to adjust them as documented here.
+   </p></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.product-selection"><span class="number">D.1 </span><span class="name">Product selection</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.registration"><span class="number">D.2 </span><span class="name">Registration of Module and Extension Dependencies</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning"><span class="number">D.3 </span><span class="name">Partitioning</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall"><span class="number">D.4 </span><span class="name">Firewall configuration</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.ntp"><span class="number">D.5 </span><span class="name">NTP Configuration</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.2nd-stage"><span class="number">D.6 </span><span class="name">AutoYaST Packages are Needed for 2nd Stage</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.ca"><span class="number">D.7 </span><span class="name">The CA Management Module has been Dropped</span></a></span></dt><dt><span class="sect1"><a href="appendix.ay_12vs15.html#sec.ay_12vs15.upgrade"><span class="number">D.8 </span><span class="name">Upgrade</span></a></span></dt></dl></div></div><div class="sect1 " id="sec.ay_12vs15.product-selection"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.product-selection"><span class="number">D.1 </span><span class="name">Product selection</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.product-selection">#</a></h2></div></div></div><p>
+   Starting with <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, all products are distributed using a single
+   installation medium. Therefore you need to choose which product to install
+   by using the <code class="sgmltag-element">product</code> tag. In the following
+   example SUSE Linux Enterprise Desktop is the chosen product:
+  </p><div class="verbatim-wrap"><pre class="screen">&lt;software&gt;
+  &lt;products config:type="list"&gt;
+    &lt;product&gt;SLED&lt;/product&gt;
+  &lt;/products&gt;
+&lt;/software&gt;&gt;</pre></div><p>
+   In special cases, the medium may contain only one product. If so there is
+   not need to explicitly select a product as described above. AutoYaST will select
+   the only available product automatically.
+  </p><p>
+   For backward compatibility with profiles created for pre-<span class="phrase">Leap</span> 15 products,
+   AutoYaST implements a heuristic that selects products automatically. This
+   heuristic will be used when the profile does not contain a <code class="sgmltag-element">product</code> element. This heuristic is based on the
+   package and pattern selection in the profile. However, whenever possible,
+   avoid using this mechanism and adapt old profiles to use explicit product
+   selection.
+  </p><p>
+   If the product selection fails, an error is shown and the installation
+   will not be continued.
+  </p></div><div class="sect1 " id="sec.ay_12vs15.registration"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.registration"><span class="number">D.2 </span><span class="name">Registration of Module and Extension Dependencies</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.registration">#</a></h2></div></div></div><p>
+   Since <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15 AutoYaST automatically reorders the extensions according
+   to their dependencies during registration. That means the order of the
+   extensions in the AutoYaST profile is not important.
+  </p><p>
+   Also AutoYaST automatically adds the depending modules even though they are
+   missing in the profile. That means you are not required to specify all
+   required modules. However, if an extension depends on another extension, it
+   needs to be specified in the profile, including the registration
+   key. Otherwise the registration would fail.
+  </p><p>
+   You can list the available extensions and modules in a registered system
+   using the <code class="command">SUSEConnect --list-extensions</code> command.
+  </p></div><div class="sect1 " id="sec.ay_12vs15.partitioning"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.partitioning"><span class="number">D.3 </span><span class="name">Partitioning</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning">#</a></h2></div></div></div><p>
+   The partitioning back-end previously used by YaST, <code class="systemitem">libstorage</code>, has been replaced by <code class="systemitem">libstorage-ng</code> that is designed to allow new
+   capabilities that were not possible before. Despite of the back-end change,
+   the AutoYaST, we managed not to change the XML syntax for profiles. However,
+   <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15 comes with some general changes, which are explained in the
+   following.
+  </p><div class="sect2 " id="sec.ay_12vs15.registration.partitioning.gpt"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.registration.partitioning.gpt"><span class="number">D.3.1 </span><span class="name">GPT Becomes the Default Partition Type on AMD64/Intel 64</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.registration.partitioning.gpt">#</a></h3></div></div></div><p>
+    On AMD64/Intel 64 systems, GPT is now the preferred partition type. However, if
+    you would like to retain the old behavior, you could explicitly indicate
+    this in the profile setting the <code class="sgmltag-element">disklabel</code>
+    element to <code class="literal">msdos</code>.
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.partition-numbers"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.partition-numbers"><span class="number">D.3.2 </span><span class="name">Setting Partition Numbers</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.partition-numbers">#</a></h3></div></div></div><p>
+    AutoYaST will no longer support forcing partition numbers, as it
+    might not work in some situations. Moreover, GPT is now the preferred
+    partition table type, so partition numbers are less relevant.
+   </p><p>
+    However, the <code class="sgmltag-element">partition_nr</code> tag is still available
+    in order to specify a partition to be reused. Refer to <a class="xref" href="configuration.html#ay.partition_configuration" title="4.4.2. Partition Configuration">Section 4.4.2, “Partition Configuration”</a> for more information.
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.default-subvolume"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.default-subvolume"><span class="number">D.3.3 </span><span class="name">Btrfs: Default Subvolume Name</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.default-subvolume">#</a></h3></div></div></div><p>
+    The new storage layer allows the user to set different default subvolumes
+    (or none at all) for every Btrfs file system. As shown in the example below,
+    a prefix name can be specified for each partition using the
+    <code class="sgmltag-element">subvolumes_prefix</code> tag:
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;partition&gt;
+ &lt;mount&gt;/&lt;/mount&gt;
+ &lt;filesystem config:type="symbol"&gt;btrfs&lt;/filesystem&gt;
+ &lt;size&gt;max&lt;/size&gt;
+ &lt;subvolumes_prefix&gt;@&lt;/subvolumes_prefix&gt;
+&lt;/partition&gt;</pre></div><p>
+    As a consequence, the old <code class="sgmltag-element">btrfs_set_default_subvolume_name</code> tag is deprecated,
+    although it is still supported for backward compatibility reasons.
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.fstab"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.fstab"><span class="number">D.3.4 </span><span class="name">
+    Reading an Existing <code class="filename">/etc/fstab</code> is no Longer Supported
+   </span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.fstab">#</a></h3></div></div></div><p>
+    On <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15 the ability to read an existing
+    <code class="filename">/etc/fstab</code> from a previous installation when trying to
+    determine the partitioning layout, is no longer supported.
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.aligning"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.aligning"><span class="number">D.3.5 </span><span class="name">
+    Setting for Aligning Partitions has been Dropped
+   </span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.aligning">#</a></h3></div></div></div><p>
+    As cylinders have become obsolete, the
+    <code class="sgmltag-element">partition_alignment</code>&gt; tag makes no sense and it
+    is no longer available. AutoYaST will always try to align partitions in an
+    optimal way.
+   </p></div></div><div class="sect1 " id="sec.ay_12vs15.firewall"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.firewall"><span class="number">D.4 </span><span class="name">Firewall configuration</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall">#</a></h2></div></div></div><p>
+   In <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, SuSEfirewall2 has been replaced by <code class="systemitem">firewalld</code> as the
+   default firewall. The configuration of both firewalls differs significantly,
+   and therefore the respective AutoYaST profile syntax has changed.
+  </p><p>
+   Old profiles will continue working, but the supported configuration will be
+   very limited. It is recommended to updated profiles for <span class="phrase">Leap</span> 15 as
+   outlined below. If keeping <span class="phrase">Leap</span> <span class="phrase">42.3</span> profiles we recommend to check the final
+   configuration to avoid an unexpected behavior or network security threats.
+  </p><div class="table" id="idm139901202156912"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">Leap</span> 15: Backwards
+   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139901202156912">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in Leap 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_CONFIGURATIONS_\{DMZ, EXT, INT}</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_ALLOW_FW_BROADCAST_\{DMZ, EXT, INT}</code>
+       </p>
+      </td></tr><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_DEV_\{DMZ, EXT, INT}</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_IGNORE_FW_BROADCAST_\{DMZ, EXT, INT}</code>
+       </p>
+      </td></tr><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_LOG_DROP_ALL</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_IPSECT_TRUST</code>
+       </p>
+      </td></tr><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_LOG_DROP_CRIT</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_LOAD_MODULES</code>
+       </p>
+      </td></tr><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_MASQUERADE</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_LOG_ACCEPT_ALL</code>
+       </p>
+      </td></tr><tr><td>
+       <p>
+        <code class="sgmltag-element">FW_SERVICES_\{DMZ, INT, EXT}_\{TCP, UDP, IP}</code>
+       </p>
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_LOG_ACCEPT_CRIT</code>
+       </p>
+      </td></tr><tr><td>
+       
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_PROTECT_FROM_INT</code>
+       </p>
+      </td></tr><tr><td>
+       
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_ROUTE</code>
+       </p>
+      </td></tr><tr><td>
+       
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_SERVICES_\{DMZ, EXT, INT}_RPC</code>
+       </p>
+      </td></tr><tr><td>
+       
+      </td><td>
+       <p>
+        <code class="sgmltag-element">FW_SERVICES_ACCEPT_RELATED_\{DMZ, EXT, INT}</code>
+       </p>
+      </td></tr></tbody></table></div></div><p>
+   Configuration options from SuSEfirewall2 that are no longer available,
+   either have no equivalent mapping in <code class="systemitem">firewalld</code> or will be supported in
+   future releases of <span class="productname"><span class="phrase">openSUSE Leap</span></span>. Some <code class="systemitem">firewalld</code> features are not yet
+   support by YaST and AutoYaST—you can make use of them with post
+   installation scripts in your AutoYaST profile.a See <a class="xref" href="configuration.html#createprofile.scripts" title="4.29. Custom User Scripts">Section 4.29, “Custom User Scripts”</a> for more information.
+   </p><div id="idm139901202112576" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
+    Enabling and starting the <code class="systemitem">systemd</code> service for <code class="systemitem">firewalld</code> is done with
+    the same syntax as in <span class="phrase">Leap</span> <span class="phrase">42.3</span>. This is the only part of the firewall
+    configuration syntax in AutoYaST that has not changed:
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;enable_firewall&gt;true&lt;/enable_firewall&gt;
+ &lt;start_firewall&gt;true&lt;/start_firewall&gt;
+ ...
+&lt;/firewall&gt;</pre></div></div><p>
+   The following examples will show how to convert deprecated (but still
+   supported) profiles to the <span class="phrase">Leap</span> 15 syntax:
+  </p><div class="sect2 " id="sec.ay_12vs15.firewall.zones"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.firewall.zones"><span class="number">D.4.1 </span><span class="name">Assigning Interfaces to Zones</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.zones">#</a></h3></div></div></div><p>
+    Both, SuSEfirewall2 and <code class="systemitem">firewalld</code> are zone-based, but have a different
+    set of predefined rules and a different level of trust for network
+    connections.
+   </p><div class="table" id="idm139901202103888"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139901202103888">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">Leap</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">Leap</span> <span class="phrase">42.3</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
+        <p>
+         EXT with <code class="sgmltag-element">FW_MASQUERADE</code> set to
+         <code class="literal">yes</code>
+        </p>
+       </td></tr><tr><td><p>public</p></td><td>
+        <p>
+         EXT with <code class="sgmltag-element">FW_MASQUERADE</code> set to
+         <code class="literal">no</code>
+        </p>
+       </td></tr><tr><td><p>internal</p></td><td>
+        <p>
+         INT with <code class="sgmltag-element">FW_PROTECT_FROM_INT</code> set to
+         <code class="literal">yes</code>
+        </p>
+       </td></tr><tr><td><p>trusted</p></td><td>
+        <p>
+         INT with <code class="sgmltag-element">FW_PROTECT_FROM_INT</code> set to
+         <code class="literal">no</code>
+        </p>
+       </td></tr><tr><td><p>block</p></td><td><p>N/A</p></td></tr><tr><td><p>drop</p></td><td><p>N/A</p></td></tr><tr><td><p>home</p></td><td><p>N/A</p></td></tr><tr><td><p>work</p></td><td><p>N/A</p></td></tr></tbody></table></div></div><p>
+    In SuSEfirewall2 the default zone is the external one (EXT) but also
+    allows the use of the special keyword <code class="literal">any</code> to assign all
+    the interfaces that are not listed anywhere to a specified zone.
+   </p><div class="sect3 " id="sec.ay_12vs15.firewall.zones.default"><div class="titlepage"><div><div><h4 class="title" id="sec.ay_12vs15.firewall.zones.default"><span class="number">D.4.1.1 </span><span class="name">Default Configuration</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.zones.default">#</a></h4></div></div></div><p>
+     The following two examples show the default configuration that is applied
+     for the interfaces <code class="systemitem">eth0</code>,
+     <code class="systemitem">eth1</code>, <code class="systemitem">wlan0</code> and
+     <code class="systemitem">wlan1</code>.
+    </p><div class="example" id="ex.ay_12vs15.firewall.zones.default.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.1: </span><span class="name">Assigning Zones: Default Configuration (Deprecated Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;FW_DEV_DMZ&gt;any eth0&lt;/FW_DEV_DMZ&gt;
+ &lt;FW_DEV_EXT&gt;eth1 wlan0&lt;/FW_DEV_EXT&gt;
+ &lt;FW_DEV_INT&gt;wlan1&lt;/FW_DEV_INT&gt;
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.zones.default.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.2: </span><span class="name">Assigning Zones: Default Configuration (<span class="phrase">Leap</span> 15 Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;default_zone&gt;dmz&lt;/default_zone&gt;
+ &lt;zones config:type="list"&gt;
+  &lt;zone&gt;
+   &lt;name&gt;dmz&lt;/name&gt;
+   &lt;interfaces&gt;
+    &lt;interface&gt;eth0&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;public&lt;/name&gt;
+   &lt;interfaces&gt;
+    &lt;interface&gt;eth1&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;trusted&lt;/name&gt;
+   &lt;interfaces&gt;
+    &lt;interface&gt;wlan1&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+ &lt;/zones&gt;
+&lt;/firewall&gt;</pre></div></div></div></div><div class="sect3 " id="sec.ay_12vs15.firewall.masq"><div class="titlepage"><div><div><h4 class="title" id="sec.ay_12vs15.firewall.masq"><span class="number">D.4.1.2 </span><span class="name">Masquerading and Protecting Internal Zones</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.masq">#</a></h4></div></div></div><p>
+     The following two examples show how to configure the interfaces
+     <code class="systemitem">eth0</code>, <code class="systemitem">eth1</code>,
+     <code class="systemitem">wlan0</code> and <code class="systemitem">wlan1</code> with
+     masquerading and protected internal zones
+    </p><div class="example" id="ex.ay_12vs15.firewall.masq.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.3: </span><span class="name">
+     Masquerading and Protecting Internal Zones (Deprecated Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.masq.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;FW_DEV_DMZ&gt;any eth0&lt;/FW_DEV_DMZ&gt;
+ &lt;FW_DEV_EXT&gt;eth1 wlan0&lt;/FW_DEV_EXT&gt;
+ &lt;FW_DEV_INT&gt;wlan1&lt;/FW_DEV_INT&gt;
+ &lt;FW_MASQUERADE&gt;yes&lt;/FW_MASQUERADE&gt;
+ &lt;FW_PROTECT_FROM_INT&gt;yes&lt;/FW_PROTECT_FROM_INT&gt;
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.masq.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.4: </span><span class="name">
+     Masquerading and Protecting Internal Zones (<span class="phrase">Leap</span> 15 Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.masq.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;default_zone&gt;dmz&lt;/default_zone&gt;
+ &lt;zones config:type="list"&gt;
+  &lt;zone&gt;
+   &lt;name&gt;dmz&lt;/name&gt;
+   &lt;interfaces config:type="list"&gt;
+    &lt;interface&gt;eth0&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;external&lt;/name&gt;
+   &lt;interfaces config:type="list"&gt;
+    &lt;interface&gt;eth1&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;internal&lt;/name&gt;
+   &lt;interfaces config:type="list"&gt;
+    &lt;interface&gt;wlan1&lt;/interface&gt;
+   &lt;/interfaces&gt;
+  &lt;/zone&gt;
+ &lt;/zones&gt;
+&lt;/firewall&gt;</pre></div></div></div></div></div><div class="sect2 " id="sec.ay_12vs15.firewall.ports"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.firewall.ports"><span class="number">D.4.2 </span><span class="name">Opening ports</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.ports">#</a></h3></div></div></div><p>
+    In SuSEfirewall2 the <code class="sgmltag-element">FW_SERVICES_\{DMZ,EXT,INT}_\{TCP,UDP,IP,RPC}</code> tags
+    were used to open ports in different zones.
+   </p><p>
+    For <code class="literal">TCP</code> or <code class="literal">UDP</code>, SuSEfirewall2
+    supported a port number or range, or a service name from
+    <code class="filename">/etc/services </code> with a single tag for
+    the respective zone and service. For IP services a port number or range, or
+    a protocol name from <code class="filename">/etc protocols</code> could be specified
+    with <code class="sgmltag-element">FW_SERVICES_<em class="replaceable ">ZONE</em>_IP</code>.
+   </p><p>
+    For <code class="systemitem">firewalld</code> each port, port range, service requires a separate entry in
+    the <code class="sgmltag-element">port</code> section for the respective zone. IP
+    services need separate entries in the <code class="sgmltag-element">protocol</code>
+    section.
+   </p><p>
+    RPC services, which were supported by SuSEfirewall2 are no longer
+    supported with <code class="systemitem">firewalld</code>.
+   </p><div class="example" id="ex.ay_12vs15.firewall.ports.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.5: </span><span class="name">
+     Opening Ports (Deprecated Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.ports.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;FW_SERVICES_DMZ_TCP&gt;ftp ssh 80 5900:5999&lt;/FW_SERVICES_DMZ_TCP&gt;
+ &lt;FW_SERVICES_EXT_UDP&gt;1723 ipsec-nat-t&lt;/FW_SERVICES_EXT_UDP&gt;
+ &lt;FW_SERVICES_EXT_IP&gt;esp icmp gre&lt;/FW_SERVICES_EXT_IP&gt;
+ &lt;FW_MASQUERADE&gt;yes&lt;/FW_MASQUERADE&gt;
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.ports.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.6: </span><span class="name">
+     Opening Ports (<span class="phrase">Leap</span> 15 Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.ports.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;zones config:type="list"&gt;
+  &lt;zone&gt;
+   &lt;name&gt;dmz&lt;/name&gt;
+   &lt;ports config:type="list"&gt;
+    &lt;port&gt;ftp/tcp&lt;/port&gt;
+    &lt;port&gt;ssh/tcp&lt;/port&gt;
+    &lt;port&gt;80/tcp&lt;/port&gt;
+    &lt;port&gt;5900-5999/tcp&lt;/port&gt;
+   &lt;ports&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;external&lt;/name&gt;
+   &lt;ports config:type="list"&gt;
+    &lt;port&gt;1723/udp&lt;/port&gt;
+    &lt;port&gt;ipsec-nat-t/udp&lt;/port&gt;
+   &lt;/ports&gt;
+   &lt;protocols config:type="list"&gt;
+    &lt;protocol&gt;esp&lt;/protocol&gt;
+    &lt;protocol&gt;icmp&lt;/protocol&gt;
+    &lt;protocol&gt;gre&lt;/protocol&gt;
+   &lt;/protocols&gt;
+  &lt;/zone&gt;
+ &lt;/zones&gt;
+&lt;/firewall&gt;</pre></div></div></div></div><div class="sect2 " id="sec.ay_12vs15.firewall.services"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.firewall.services"><span class="number">D.4.3 </span><span class="name">Opening <code class="systemitem">firewalld</code> services</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.services">#</a></h3></div></div></div><p>
+    For opening a combination of ports and/or protocols SuSEfirewall2 provides
+    the <code class="sgmltag-element">FW_CONFIGURATIONS_\{EXT, DMZ, INT}</code> tag which
+    are equivalent to services in <code class="systemitem">firewalld</code>.
+   </p><div class="example" id="ex.ay_12vs15.firewall.services.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.7: </span><span class="name">
+     Opening Services (Deprecated Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.services.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;FW_CONFIGURATIONS_EXT&gt;dhcp dhcpv6 samba vnc-server&lt;/FW_CONFIGURATIONS_EXT&gt;
+ &lt;FW_CONFIGURATIONS_DMZ&gt;ssh&lt;/FW_CONFIGURATIONS_DMZ&gt;
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.services.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.8: </span><span class="name">
+     Opening Services (<span class="phrase">Leap</span> 15 Syntax)
+     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.services.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+ &lt;zones config:type="list"&gt;
+  &lt;zone&gt;
+   &lt;name&gt;dmz&lt;/name&gt;
+   &lt;services config:type="list"&gt;
+    &lt;service&gt;ssh&lt;/service&gt;
+   &lt;/services&gt;
+  &lt;/zone&gt;
+  &lt;zone&gt;
+   &lt;name&gt;public&lt;/name&gt;
+   &lt;services config:type="list"&gt;
+    &lt;service&gt;dhcp&lt;/service&gt;
+    &lt;service&gt;dhcpv6&lt;/service&gt;
+    &lt;service&gt;samba&lt;/service&gt;
+    &lt;service&gt;vnc-server&lt;/service&gt;
+   &lt;/services&gt;
+  &lt;/zone&gt;
+ &lt;/zones&gt;
+&lt;/firewall&gt;</pre></div></div></div><p>
+    The services definition can be added via packages in both cases:
+   </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      SuSEfirewall2 Service Definitions: <a class="link" href="https://en.opensuse.org/SuSEfirewall2/Service_Definitions_Added_via_Packages" target="_blank">https://en.opensuse.org/SuSEfirewall2/Service_Definitions_Added_via_Packages</a>
+     </p></li><li class="listitem "><p>
+      <code class="systemitem">firewalld</code> RPM Packaging <a class="link" href="https://en.opensuse.org/firewalld/RPM_Packaging" target="_blank">https://en.opensuse.org/firewalld/RPM_Packaging</a>
+     </p><p>
+      <code class="systemitem">firewalld</code> already provides support for the majority of important
+      services in <code class="filename">/usr/lib/firewalld/services</code>. Check this
+      directory for an existing configuration before defining a new one.
+     </p></li></ul></div></div><div class="sect2 " id="sec.ay_12vs15.firewall.further-documentation"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.firewall.further-documentation"><span class="number">D.4.4 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.firewall.further-documentation">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+      <a class="link" href="https://www.suse.com/documentation/sles-12/book_autoyast/data/createprofile_firewall.html" target="_blank">SuSEfirewall2/AutoYaST
+      Documentation for <span class="phrase">Leap</span> 12</a>
+     </p></li><li class="listitem "><p>
+      <a class="link" href="http://www.firewalld.org/documentation/" target="_blank">Official
+      <code class="systemitem">firewalld</code> Documentation</a>
+     </p></li></ul></div></div></div><div class="sect1 " id="sec.ay_12vs15.ntp"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.ntp"><span class="number">D.5 </span><span class="name">NTP Configuration</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.ntp">#</a></h2></div></div></div><p>
+   The time server synchronization daemon <code class="systemitem">ntpd</code> has been replaced with the more modern
+   daemon <code class="systemitem">chrony</code>. Therefore the
+   configuration syntax for the time-keeping daemon in AutoYaST has changed. AutoYaST
+   profiles from <span class="phrase">Leap</span> <span class="phrase">42.3</span> that contain a section with <code class="sgmltag-element">ntp:client</code> need to be updated.
+  </p><p>
+   Instead of containing low level configuration options, NTP is now configured
+   by a set of high level options that are applied on top of the default
+   settings:
+  </p><div class="example" id="ex.ay_12vs15.ntp"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.9: </span><span class="name">
+    NTP configuration (<span class="phrase">Leap</span> 15 Syntax)
+    </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.ntp">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;ntp-client&gt;
+ &lt;ntp_policy&gt;auto&lt;/ntp_policy&gt;
+ &lt;ntp_servers config:type="list"&gt;
+  &lt;ntp_server&gt;
+   &lt;iburst config:type="boolean"&gt;false&lt;/iburst&gt;
+   &lt;address&gt;cz.pool.ntp.org&lt;/address&gt;
+   &lt;offline config:type="boolean"&gt;true&lt;/offline&gt;
+  &lt;/ntp_server&gt;
+ &lt;/ntp_servers&gt;
+ &lt;ntp_sync&gt;systemd&lt;/ntp_sync&gt;
+ &lt;/ntp-client&gt;</pre></div></div></div></div><div class="sect1 " id="sec.ay_12vs15.2nd-stage"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.2nd-stage"><span class="number">D.6 </span><span class="name">AutoYaST Packages are Needed for 2nd Stage</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.2nd-stage">#</a></h2></div></div></div><p>
+   A regular installation is performed in single stage, while an installation
+   performed via AutoYaST needs two stages in most of the cases. In order to
+   perform the second stage of the installation AutoYaST requires a few additional
+   packages, for example <span class="package">autoyast2-installation</span>
+   and <span class="package">autoyast2</span>. If these are missing, a warning will be
+   shown.
+  </p></div><div class="sect1 " id="sec.ay_12vs15.ca"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.ca"><span class="number">D.7 </span><span class="name">The CA Management Module has been Dropped</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.ca">#</a></h2></div></div></div><p>
+   The module for CA Management (<span class="package">yast2-ca-management</span>&gt;) has
+   been removed from <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, and for the time being there is no
+   replacement available. In case you are reusing a <span class="phrase">Leap</span> <span class="phrase">42.3</span> profile, make sure it does not contain a <code class="sgmltag-element">ca_mgm</code> section.
+  </p></div><div class="sect1 " id="sec.ay_12vs15.upgrade"><div class="titlepage"><div><div><h2 class="title" id="sec.ay_12vs15.upgrade"><span class="number">D.8 </span><span class="name">Upgrade</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.upgrade">#</a></h2></div></div></div><p>
+   in case of upgrading the system from a previous version, <span class="phrase">Leap</span> <span class="phrase">42.3</span> had two modes of evaluation of the packages that
+   need upgrade. This is now gone, packages that need to be upgraded are always
+   evaluated by the dependency solver (equivalent to using <code class="command">zypper
+   dup</code>).
+  </p><p>
+   This makes the option <code class="sgmltag-element">only_installed_packages</code> in
+   the software section obsolete.
+  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="bk07ape.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Appendix E </span>GNU Licenses</span></a><a class="nav-link" href="appendix.linuxrc.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Appendix C </span>Advanced Linuxrc Options</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+        2018 
+        SUSE</p></div></div></body></html>
