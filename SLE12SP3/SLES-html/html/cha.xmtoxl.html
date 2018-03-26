@@ -126,7 +126,7 @@ hljs.configure({
       <code class="filename">/etc/xen/xend-config.sxp</code> and
       <code class="filename">/boot/grub/menu.lst</code> files to keep references of
       previous parameters used for Xen.
-     </p></li></ul></div><div id="idm140106241813184" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p></li></ul></div><div id="idm140237421093680" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
      Currently, live migrating virtual machines running on a SLES 11 SP3
      Xen host to a SLES 12 Xen host is not supported. The
      <code class="command">xend</code> and libxl toolstacks are not
@@ -147,26 +147,26 @@ hljs.configure({
   <code class="command">xen2libvirt</code> general syntax is
  </p><div class="verbatim-wrap"><pre class="screen">xen2libvirt &lt;options&gt; <em class="replaceable ">/path/to/domain/config</em></pre></div><p>
   where <code class="option">options</code> can be:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140106241798064"><span class="term "><code class="option">-h</code>, <code class="option">--help</code>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140237421078624"><span class="term "><code class="option">-h</code>, <code class="option">--help</code>
    </span></dt><dd><p>
      Prints short information about <code class="command">xen2libvirt</code> usage.
-    </p></dd><dt id="idm140106241795072"><span class="term "><code class="option">-c</code>, <code class="option">--convert-only</code>
+    </p></dd><dt id="idm140237421075632"><span class="term "><code class="option">-c</code>, <code class="option">--convert-only</code>
    </span></dt><dd><p>
      Converts the domain configuration to the <code class="systemitem">libvirt</code> XML format, but
      does not do the import to <code class="systemitem">libvirt</code>.
-    </p></dd><dt id="idm140106241791040"><span class="term "><code class="option">-r</code>, <code class="option">--recursive</code>
+    </p></dd><dt id="idm140237421071600"><span class="term "><code class="option">-r</code>, <code class="option">--recursive</code>
    </span></dt><dd><p>
      Converts and/or imports all domains configuration recursively, starting
      at the specified path.
-    </p></dd><dt id="idm140106241788416"><span class="term "><code class="option">-f</code>, <code class="option">--format</code>
+    </p></dd><dt id="idm140237421068976"><span class="term "><code class="option">-f</code>, <code class="option">--format</code>
    </span></dt><dd><p>
      Specifies the format of the source domain configuration. Can be either
      <code class="literal">xm</code>, or <code class="literal">sexpr</code> (S-expression
      format).
-    </p></dd><dt id="idm140106241784912"><span class="term "><code class="option">-v</code>, <code class="option">--verbose</code>
+    </p></dd><dt id="idm140237421065472"><span class="term "><code class="option">-v</code>, <code class="option">--verbose</code>
    </span></dt><dd><p>
      Prints more detailed information about the import process.
-    </p></dd></dl></div><div class="complex-example"><div class="example" id="idm140106241782176"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example C.1: </span><span class="name">Converting Xen Domain Configuration to <code class="systemitem">libvirt</code> </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241782176">#</a></h6></div><div class="example-contents"><p>
+    </p></dd></dl></div><div class="complex-example"><div class="example" id="idm140237421062736"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example C.1: </span><span class="name">Converting Xen Domain Configuration to <code class="systemitem">libvirt</code> </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237421062736">#</a></h6></div><div class="example-contents"><p>
    Suppose you have a Xen domain managed with <code class="command">xm</code>
    with the following configuration saved in
    <code class="filename">/etc/xen/sle12.xm</code>:
@@ -224,7 +224,7 @@ hljs.configure({
    To easily understand the difference between <code class="command">xl</code> and
    <code class="command">xm</code> commands, the following notation is used in this
    section:
-  </p><div class="table" id="idm140106241757856"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.1: </span><span class="name">Notation Conventions </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241757856">#</a></h6></div><div class="table-contents"><table summary="Notation Conventions" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm140237421038416"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.1: </span><span class="name">Notation Conventions </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237421038416">#</a></h6></div><div class="table-contents"><table summary="Notation Conventions" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
        <p>
         Notation
        </p>
@@ -250,7 +250,7 @@ hljs.configure({
         Option exists in <code class="command">xl</code>, but <code class="command">xm</code>
         does not include it.
        </p>
-      </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.xmvsxl.global"><div class="titlepage"><div><div><h3 class="title" id="sec.xmvsxl.global"><span class="number">C.3.2 </span><span class="name">New Global Options</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.global">#</a></h3></div></div></div><div class="table" id="idm140106241742880"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.2: </span><span class="name">New Global Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241742880">#</a></h6></div><div class="table-contents"><table summary="New Global Options" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+      </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.xmvsxl.global"><div class="titlepage"><div><div><h3 class="title" id="sec.xmvsxl.global"><span class="number">C.3.2 </span><span class="name">New Global Options</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.global">#</a></h3></div></div></div><div class="table" id="idm140237421023440"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.2: </span><span class="name">New Global Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237421023440">#</a></h6></div><div class="table-contents"><table summary="New Global Options" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
        <p>
         Options
        </p>
@@ -288,7 +288,7 @@ hljs.configure({
       </td></tr></tbody></table></div></div></div><div class="sect2 " id="sec.xmvsxl.common"><div class="titlepage"><div><div><h3 class="title" id="sec.xmvsxl.common"><span class="number">C.3.3 </span><span class="name">Unchanged Options</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.common">#</a></h3></div></div></div><p>
    List of common options of <code class="command">xl</code> and
    <code class="command">xm</code>, and their <code class="systemitem">libvirt</code> equivalents.
-  </p><div class="table" id="idm140106241723328"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.3: </span><span class="name">Common Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241723328">#</a></h6></div><div class="table-contents"><table summary="Common Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /><col width="" class="3" /></colgroup><thead><tr><th>
+  </p><div class="table" id="idm140237421003888"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.3: </span><span class="name">Common Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237421003888">#</a></h6></div><div class="table-contents"><table summary="Common Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /><col width="" class="3" /></colgroup><thead><tr><th>
        <p>
         Options
        </p>
@@ -632,7 +632,7 @@ hljs.configure({
    available with the XL tool stack and a replacement solution if available.
   </p><div class="sect3 " id="sec.xmvsxl.removed.domain"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.removed.domain"><span class="number">C.3.4.1 </span><span class="name">Domain Management</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.removed.domain">#</a></h4></div></div></div><p>
     The list of Domain management removed command and their replacement.
-   </p><div class="table" id="idm140106241567184"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.4: </span><span class="name">Domain Management Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241567184">#</a></h6></div><div class="table-contents"><table summary="Domain Management Removed Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /><col width="20%" class="3" /></colgroup><thead><tr><th colspan="3">
+   </p><div class="table" id="idm140237420847744"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.4: </span><span class="name">Domain Management Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420847744">#</a></h6></div><div class="table-contents"><table summary="Domain Management Removed Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /><col width="20%" class="3" /></colgroup><thead><tr><th colspan="3">
         <p>
          Domain Management Removed Options
         </p>
@@ -783,7 +783,7 @@ hljs.configure({
     <code class="command">virsh</code> has the <code class="option"> attach-device</code> and
     <code class="option">detach-device</code> options but it does not work yet with
     <code class="option">USB</code>.
-   </p><div class="table" id="idm140106241493584"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.5: </span><span class="name">USB Devices Management Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241493584">#</a></h6></div><div class="table-contents"><table summary="USB Devices Management Removed Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420774080"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.5: </span><span class="name">USB Devices Management Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420774080">#</a></h6></div><div class="table-contents"><table summary="USB Devices Management Removed Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
         <p>
          USB Devices Management Removed Options
         </p>
@@ -862,7 +862,7 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.removed.cpu"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.removed.cpu"><span class="number">C.3.4.3 </span><span class="name">CPU Management</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.removed.cpu">#</a></h4></div></div></div><p>
     CPU management options has changed. New options are available, see:
     <a class="xref" href="cha.xmtoxl.html#sec.xmvsxl.changed.cpu" title="C.3.5.10. xl cpupool-*">Section C.3.5.10, “<code class="command">xl</code> <code class="option">cpupool-*</code>”</a>
-   </p><div class="table" id="idm140106241455232"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.6: </span><span class="name">CPU Management Removed options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241455232">#</a></h6></div><div class="table-contents"><table summary="CPU Management Removed options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420735728"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.6: </span><span class="name">CPU Management Removed options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420735728">#</a></h6></div><div class="table-contents"><table summary="CPU Management Removed options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
         <p>
          CPU Management Removed Options
         </p>
@@ -898,7 +898,7 @@ hljs.configure({
         <p>
          Removes a CPU pool from Xend management
         </p>
-       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.removed.others"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.removed.others"><span class="number">C.3.4.4 </span><span class="name">Other Options</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.removed.others">#</a></h4></div></div></div><div class="table" id="idm140106241433984"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.7: </span><span class="name">Other Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241433984">#</a></h6></div><div class="table-contents"><table summary="Other Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.removed.others"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.removed.others"><span class="number">C.3.4.4 </span><span class="name">Other Options</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.removed.others">#</a></h4></div></div></div><div class="table" id="idm140237420714480"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.7: </span><span class="name">Other Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420714480">#</a></h6></div><div class="table-contents"><table summary="Other Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th colspan="2">
         <p>
          Other Removed Options
         </p>
@@ -946,9 +946,9 @@ hljs.configure({
     <code class="command">xl</code> <code class="option">create</code>
     <em class="replaceable ">CONFIG_FILE</em> <em class="replaceable ">OPTIONS
     </em> <em class="replaceable ">VARS</em>
-   </p><div id="idm140106241405440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent:</h6><p>
+   </p><div id="idm140237420685936" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent:</h6><p>
      <code class="command">virsh</code> <code class="option">create</code>
-    </p></div><div class="table" id="idm140106241402640"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.8: </span><span class="name"><code class="command">xl</code> <code class="option">create</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241402640">#</a></h6></div><div class="table-contents"><table summary="xl create Changed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420683136"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.8: </span><span class="name"><code class="command">xl</code> <code class="option">create</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420683136">#</a></h6></div><div class="table-contents"><table summary="xl create Changed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">create</code> Changed Options
         </p>
@@ -969,7 +969,7 @@ hljs.configure({
         <p>
          Use the given configuration file
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241388848"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.9: </span><span class="name"><code class="command">xm</code> <code class="option">create</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241388848">#</a></h6></div><div class="table-contents"><table summary="xm create Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420669344"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.9: </span><span class="name"><code class="command">xm</code> <code class="option">create</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420669344">#</a></h6></div><div class="table-contents"><table summary="xm create Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">create</code> Removed Options
         </p>
@@ -1058,7 +1058,7 @@ hljs.configure({
         <p>
          Leave the domain paused after it is created
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241348976"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.10: </span><span class="name"><code class="command">xl</code> <code class="option">create</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241348976">#</a></h6></div><div class="table-contents"><table summary="xl create Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420629472"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.10: </span><span class="name"><code class="command">xl</code> <code class="option">create</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420629472">#</a></h6></div><div class="table-contents"><table summary="xl create Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">create</code> Added Options
         </p>
@@ -1089,9 +1089,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.console"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.console"><span class="number">C.3.5.2 </span><span class="name"><code class="option">console</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.console">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">console</code>
     <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DOMAIN</em>
-   </p><div id="idm140106241328160" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420608656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">console</code>
-    </p></div><div class="table" id="idm140106241325360"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.11: </span><span class="name"><code class="command">xl</code> <code class="option">console</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241325360">#</a></h6></div><div class="table-contents"><table summary="xl console Added Options" border="1"><colgroup><col width="20%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420605856"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.11: </span><span class="name"><code class="command">xl</code> <code class="option">console</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420605856">#</a></h6></div><div class="table-contents"><table summary="xl console Added Options" border="1"><colgroup><col width="20%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">console</code> Added Option
         </p>
@@ -1115,7 +1115,7 @@ hljs.configure({
         </p>
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.info"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.info"><span class="number">C.3.5.3 </span><span class="name">info</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.info">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">info</code>
-   </p><div class="table" id="idm140106241309264"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.12: </span><span class="name"><code class="command">xm</code> <code class="option">info</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241309264">#</a></h6></div><div class="table-contents"><table summary="xm info Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420589664"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.12: </span><span class="name"><code class="command">xm</code> <code class="option">info</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420589664">#</a></h6></div><div class="table-contents"><table summary="xm info Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">info</code> Removed Options
         </p>
@@ -1146,9 +1146,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.dump"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.dump"><span class="number">C.3.5.4 </span><span class="name"><code class="option">dump-core</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.dump">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">dump-core</code>
     <em class="replaceable ">DOMAIN</em> <em class="replaceable ">FILENAME</em>
-   </p><div id="idm140106241288576" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420569024" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">dump</code>
-    </p></div><div class="table" id="idm140106241285776"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.13: </span><span class="name"><code class="command">xm</code> <code class="option">dump-core</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241285776">#</a></h6></div><div class="table-contents"><table summary="xm dump-core Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420566224"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.13: </span><span class="name"><code class="command">xm</code> <code class="option">dump-core</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420566224">#</a></h6></div><div class="table-contents"><table summary="xm dump-core Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">dump-core</code> Removed Options
         </p>
@@ -1187,9 +1187,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.list"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.list"><span class="number">C.3.5.5 </span><span class="name"><code class="option">list</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.list">#</a></h4></div></div></div><p>
     <code class="command">xl list</code> <code class="option">options</code>
     <em class="replaceable ">DOMAIN</em>
-   </p><div id="idm140106241262352" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420542864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">list --all</code>
-    </p></div><div class="table" id="idm140106241259552"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.14: </span><span class="name"><code class="command">xm</code> <code class="option">list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241259552">#</a></h6></div><div class="table-contents"><table summary="xm list Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420540064"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.14: </span><span class="name"><code class="command">xm</code> <code class="option">list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420540064">#</a></h6></div><div class="table-contents"><table summary="xm list Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">list</code> Removed Options
         </p>
@@ -1218,7 +1218,7 @@ hljs.configure({
         <p>
          Output information for VMs in the specified state
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241241232"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.15: </span><span class="name"><code class="command">xl</code> <code class="option">list</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241241232">#</a></h6></div><div class="table-contents"><table summary="xl list Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420521744"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.15: </span><span class="name"><code class="command">xl</code> <code class="option">list</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420521744">#</a></h6></div><div class="table-contents"><table summary="xl list Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">list</code> Added Options
         </p>
@@ -1247,11 +1247,11 @@ hljs.configure({
          Also prints the domain UUIDs, the shutdown reason and security
          labels
         </p>
-       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.mem"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.mem"><span class="number">C.3.5.6 </span><span class="name"><code class="option">mem-*</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.mem">#</a></h4></div></div></div><div id="idm140106241222736" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.mem"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.mem"><span class="number">C.3.5.6 </span><span class="name"><code class="option">mem-*</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.mem">#</a></h4></div></div></div><div id="idm140237420503248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">setmem</code>
     </p><p>
      <code class="command">virsh</code> <code class="option">setmaxmem</code>
-    </p></div><div class="table" id="idm140106241218592"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.16: </span><span class="name"><code class="command">xl</code> <code class="option">mem-*</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241218592">#</a></h6></div><div class="table-contents"><table summary="xl mem-* Changed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420499104"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.16: </span><span class="name"><code class="command">xl</code> <code class="option">mem-*</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420499104">#</a></h6></div><div class="table-contents"><table summary="xl mem-* Changed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">mem-*</code> Changed Options
         </p>
@@ -1288,10 +1288,10 @@ hljs.configure({
     <code class="command">xl</code> <code class="option">migrate</code>
     <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DOMAIN</em>
     <em class="replaceable ">HOST</em>
-   </p><div id="idm140106241194128" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420474640" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh migrate --live hvm-sles11-qcow2 xen+</code>
      <em class="replaceable ">CONNECTOR</em>://<em class="replaceable ">USER</em>@<em class="replaceable ">IP_ADDRESS</em>/
-    </p></div><div class="table" id="idm140106241190400"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.17: </span><span class="name"><code class="command">xm</code> <code class="option">migrate</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241190400">#</a></h6></div><div class="table-contents"><table summary="xm migrate Removed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420470912"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.17: </span><span class="name"><code class="command">xm</code> <code class="option">migrate</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420470912">#</a></h6></div><div class="table-contents"><table summary="xm migrate Removed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">migrate</code> Removed Options
         </p>
@@ -1381,7 +1381,7 @@ hljs.configure({
         <p>
          Use ssl connection for migration
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241151520"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.18: </span><span class="name"><code class="command">xl</code> <code class="option">migrate</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241151520">#</a></h6></div><div class="table-contents"><table summary="xl migrate Added Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420432032"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.18: </span><span class="name"><code class="command">xl</code> <code class="option">migrate</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420432032">#</a></h6></div><div class="table-contents"><table summary="xl migrate Added Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">migrate</code> Added Options
         </p>
@@ -1422,9 +1422,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.management"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.management"><span class="number">C.3.5.8 </span><span class="name">Domain Management</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.management">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">reboot</code>
     <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DOMAIN</em>
-   </p><div id="idm140106241127616" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420408128" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">reboot</code>
-    </p></div><div class="table" id="idm140106241124816"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.19: </span><span class="name"><code class="command">xm</code> <code class="option">reboot</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241124816">#</a></h6></div><div class="table-contents"><table summary="xm reboot Removed Options" border="1"><colgroup><col width="20%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420405328"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.19: </span><span class="name"><code class="command">xm</code> <code class="option">reboot</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420405328">#</a></h6></div><div class="table-contents"><table summary="xm reboot Removed Options" border="1"><colgroup><col width="20%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">reboot</code> Removed Options
         </p>
@@ -1454,7 +1454,7 @@ hljs.configure({
          while, as all services in the domain need to be shut down
          cleanly
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241107760"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.20: </span><span class="name"><code class="command">xl</code> <code class="option">reboot</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241107760">#</a></h6></div><div class="table-contents"><table summary="xl reboot Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420388272"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.20: </span><span class="name"><code class="command">xl</code> <code class="option">reboot</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420388272">#</a></h6></div><div class="table-contents"><table summary="xl reboot Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">reboot</code> Added Options
         </p>
@@ -1479,9 +1479,9 @@ hljs.configure({
     <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DOMAIN</em>
     <em class="replaceable ">CHECK_POINT_FILE</em>
     <em class="replaceable ">CONFIG_FILE</em>
-   </p><div id="idm140106241091216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420371728" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">save</code>
-    </p></div><div class="table" id="idm140106241088416"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.21: </span><span class="name"><code class="command">xl</code> <code class="option">save</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241088416">#</a></h6></div><div class="table-contents"><table summary="xl save Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420368928"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.21: </span><span class="name"><code class="command">xl</code> <code class="option">save</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420368928">#</a></h6></div><div class="table-contents"><table summary="xl save Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">save</code> Added Options
         </p>
@@ -1506,9 +1506,9 @@ hljs.configure({
     <em class="replaceable ">OPTIONS</em>
     <em class="replaceable ">CONFIG_FILE</em>
     <em class="replaceable ">CHECK_POINT_FILE</em>
-   </p><div id="idm140106241072336" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420352848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">restore</code>
-    </p></div><div class="table" id="idm140106241069536"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.22: </span><span class="name"><code class="command">xl</code> <code class="option">restore</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241069536">#</a></h6></div><div class="table-contents"><table summary="xl restore Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420350048"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.22: </span><span class="name"><code class="command">xl</code> <code class="option">restore</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420350048">#</a></h6></div><div class="table-contents"><table summary="xl restore Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">restore</code> Added Options
         </p>
@@ -1564,9 +1564,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div><p>
     <code class="command">xl</code> <code class="option">shutdown</code>
     <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DOMAIN</em>
-   </p><div id="idm140106241042032" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420322544" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">shutdown</code>
-    </p></div><div class="table" id="idm140106241039232"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.23: </span><span class="name"><code class="command">xm</code> <code class="option">shutdown</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241039232">#</a></h6></div><div class="table-contents"><table summary="xm shutdown Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420319744"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.23: </span><span class="name"><code class="command">xm</code> <code class="option">shutdown</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420319744">#</a></h6></div><div class="table-contents"><table summary="xm shutdown Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">shutdown</code> Removed Options
         </p>
@@ -1606,7 +1606,7 @@ hljs.configure({
         </p>
        </td><td>
         
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241017584"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.24: </span><span class="name"><code class="command">xl</code> <code class="option">shutdown</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241017584">#</a></h6></div><div class="table-contents"><table summary="xl shutdown Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420298096"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.24: </span><span class="name"><code class="command">xl</code> <code class="option">shutdown</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420298096">#</a></h6></div><div class="table-contents"><table summary="xl shutdown Added Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">shutdown</code> Added Options
         </p>
@@ -1627,7 +1627,7 @@ hljs.configure({
          If the guest does not support PV shutdown control then fallback to
          sending an ACPI power event
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106241004128"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.25: </span><span class="name"><code class="command">xl</code> <code class="option">trigger</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106241004128">#</a></h6></div><div class="table-contents"><table summary="xl trigger Changed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420284640"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.25: </span><span class="name"><code class="command">xl</code> <code class="option">trigger</code> Changed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420284640">#</a></h6></div><div class="table-contents"><table summary="xl trigger Changed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">trigger</code> Changed Options
         </p>
@@ -1653,9 +1653,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.sched"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.sched"><span class="number">C.3.5.9 </span><span class="name"><code class="command">xl</code> <code class="option">sched-*</code></span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.sched">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">sched-credit</code>
     <em class="replaceable ">OPTIONS</em>
-   </p><div id="idm140106240985696" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420266208" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">schedinfo</code>
-    </p></div><div class="table" id="idm140106240982896"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.26: </span><span class="name"><code class="command">xm</code> <code class="option">sched-credit</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240982896">#</a></h6></div><div class="table-contents"><table summary="xm sched-credit Removed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420263408"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.26: </span><span class="name"><code class="command">xm</code> <code class="option">sched-credit</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420263408">#</a></h6></div><div class="table-contents"><table summary="xm sched-credit Removed Options" border="1"><colgroup><col width="30%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-credit</code> Removed Options
         </p>
@@ -1697,7 +1697,7 @@ hljs.configure({
          The CAP optionally fixes the maximum amount of CPU a domain can
          consume
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240960368"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.27: </span><span class="name"><code class="command">xl</code> <code class="option">sched-credit</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240960368">#</a></h6></div><div class="table-contents"><table summary="xl sched-credit Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420240880"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.27: </span><span class="name"><code class="command">xl</code> <code class="option">sched-credit</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420240880">#</a></h6></div><div class="table-contents"><table summary="xl sched-credit Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-credit</code> Added Options
         </p>
@@ -1748,10 +1748,10 @@ hljs.configure({
        </td></tr></tbody></table></div></div><p>
     <code class="command">xl</code> <code class="option">sched-credit2</code>
     <em class="replaceable ">OPTIONS</em>
-   </p><div id="idm140106240932896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Status</h6><p>
+   </p><div id="idm140237420213408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Status</h6><p>
      <code class="command">virsh</code> only supports credit scheduler, not credit2
      scheduler
-    </p></div><div class="table" id="idm140106240930496"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.28: </span><span class="name"><code class="command">xm</code> <code class="option">sched-credit2</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240930496">#</a></h6></div><div class="table-contents"><table summary="xm sched-credit2 Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420211008"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.28: </span><span class="name"><code class="command">xm</code> <code class="option">sched-credit2</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420211008">#</a></h6></div><div class="table-contents"><table summary="xm sched-credit2 Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-credit2</code> Removed Options
         </p>
@@ -1781,7 +1781,7 @@ hljs.configure({
         <p>
          Legal weights range from 1 to 65535 and the default is 256
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240912000"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.29: </span><span class="name"><code class="command">xl</code> <code class="option">sched-credit2</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240912000">#</a></h6></div><div class="table-contents"><table summary="xl sched-credit2 Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420192512"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.29: </span><span class="name"><code class="command">xl</code> <code class="option">sched-credit2</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420192512">#</a></h6></div><div class="table-contents"><table summary="xl sched-credit2 Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-credit2</code> Added Options
         </p>
@@ -1805,7 +1805,7 @@ hljs.configure({
        </td></tr></tbody></table></div></div><p>
     <code class="command">xl</code> <code class="option">sched-sedf</code>
     <em class="replaceable ">OPTIONS</em>
-   </p><div class="table" id="idm140106240895632"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.30: </span><span class="name"><code class="command">xm</code> <code class="option">sched-sedf</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240895632">#</a></h6></div><div class="table-contents"><table summary="xm sched-sedf Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420176144"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.30: </span><span class="name"><code class="command">xm</code> <code class="option">sched-sedf</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420176144">#</a></h6></div><div class="table-contents"><table summary="xm sched-sedf Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-sedf</code> Removed Options
         </p>
@@ -1864,7 +1864,7 @@ hljs.configure({
         <p>
          Another way of setting CPU slice
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240864272"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.31: </span><span class="name"><code class="command">xl</code> <code class="option">sched-sedf</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240864272">#</a></h6></div><div class="table-contents"><table summary="xl sched-sedf Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420144784"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.31: </span><span class="name"><code class="command">xl</code> <code class="option">sched-sedf</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420144784">#</a></h6></div><div class="table-contents"><table summary="xl sched-sedf Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">sched-sedf</code> Added Options
         </p>
@@ -1901,7 +1901,7 @@ hljs.configure({
    </p><p>
     <code class="command">xl</code> <code class="option">cpupool-list</code> [-c|--cpus]
     <em class="replaceable ">CPU_POOL</em>
-   </p><div class="table" id="idm140106240840368"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.32: </span><span class="name"><code class="command">xm</code> <code class="option">cpupool-list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240840368">#</a></h6></div><div class="table-contents"><table summary="xm cpupool-list Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420120880"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.32: </span><span class="name"><code class="command">xm</code> <code class="option">cpupool-list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420120880">#</a></h6></div><div class="table-contents"><table summary="xm cpupool-list Removed Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">cpupool-*</code> Removed Options
         </p>
@@ -1929,7 +1929,7 @@ hljs.configure({
     <code class="command">xl</code> <code class="option">cpupool-create</code>
     <em class="replaceable ">OPTIONS</em>
     <em class="replaceable ">CONFIG_FILE</em> [Variable=Value ...]
-   </p><div class="table" id="idm140106240821904"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.33: </span><span class="name"><code class="command">xm</code> <code class="option">cpupool-create</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240821904">#</a></h6></div><div class="table-contents"><table summary="xm cpupool-create Removed Options" border="1"><colgroup><col width="27%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+   </p><div class="table" id="idm140237420102416"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.33: </span><span class="name"><code class="command">xm</code> <code class="option">cpupool-create</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420102416">#</a></h6></div><div class="table-contents"><table summary="xm cpupool-create Removed Options" border="1"><colgroup><col width="27%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">cpupool-create</code> Removed Options
         </p>
@@ -1992,9 +1992,9 @@ hljs.configure({
        </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.attach"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.attach"><span class="number">C.3.5.11 </span><span class="name">PCI and Block Devices</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.attach">#</a></h4></div></div></div><p>
     <code class="command">xl</code> <code class="option">pci-detach</code> [-f]
     <em class="replaceable ">DOMAIN_ID</em> &lt;BDF&gt;
-   </p><div id="idm140106240790656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
+   </p><div id="idm140237420071168" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: <code class="systemitem">libvirt</code> Equivalent</h6><p>
      <code class="command">virsh</code> <code class="option">detach-device</code>
-    </p></div><div class="table" id="idm140106240787856"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.34: </span><span class="name"><code class="command">xl</code> <code class="option">pci-detach</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240787856">#</a></h6></div><div class="table-contents"><table summary="xl pci-detach Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+    </p></div><div class="table" id="idm140237420068368"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.34: </span><span class="name"><code class="command">xl</code> <code class="option">pci-detach</code> Added Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420068368">#</a></h6></div><div class="table-contents"><table summary="xl pci-detach Added Options" border="1"><colgroup><col width="" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">pci-detach</code> Added Options
         </p>
@@ -2015,7 +2015,7 @@ hljs.configure({
          If <code class="option">-f</code> is specified, <code class="command">xl</code> is going
          to forcefully remove the device even without guest's collaboration
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240773568"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.35: </span><span class="name"><code class="command">xm</code> <code class="option">block-list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240773568">#</a></h6></div><div class="table-contents"><table summary="xm block-list Removed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420054048"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.35: </span><span class="name"><code class="command">xm</code> <code class="option">block-list</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420054048">#</a></h6></div><div class="table-contents"><table summary="xm block-list Removed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          <code class="option">block-list</code> Removed Options
         </p>
@@ -2035,7 +2035,7 @@ hljs.configure({
         <p>
          List virtual block devices for a domain
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240759712"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.36: </span><span class="name">Other Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240759712">#</a></h6></div><div class="table-contents"><table summary="Other Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th>
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420040240"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.36: </span><span class="name">Other Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420040240">#</a></h6></div><div class="table-contents"><table summary="Other Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th>
         <p>
          Option
         </p>
@@ -2062,7 +2062,7 @@ hljs.configure({
         <p>
          <code class="command">virsh</code> <code class="option">domblklist</code>
         </p>
-       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.net"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.net"><span class="number">C.3.5.12 </span><span class="name">Network</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.net">#</a></h4></div></div></div><div class="table" id="idm140106240741408"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.37: </span><span class="name">Network Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240741408">#</a></h6></div><div class="table-contents"><table summary="Network Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th>
+       </td></tr></tbody></table></div></div></div><div class="sect3 " id="sec.xmvsxl.changed.net"><div class="titlepage"><div><div><h4 class="title" id="sec.xmvsxl.changed.net"><span class="number">C.3.5.12 </span><span class="name">Network</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmvsxl.changed.net">#</a></h4></div></div></div><div class="table" id="idm140237420022000"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.37: </span><span class="name">Network Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420022000">#</a></h6></div><div class="table-contents"><table summary="Network Options" border="1"><colgroup><col width="" class="1" /><col width="" class="2" /></colgroup><thead><tr><th>
         <p>
          Option
         </p>
@@ -2098,7 +2098,7 @@ hljs.configure({
          <code class="command">virsh</code>
          <code class="option">attach-interface/attach-device</code>
         </p>
-       </td></tr></tbody></table></div></div><div class="table" id="idm140106240719984"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.38: </span><span class="name"><code class="command">xl</code> <code class="option">network-attach</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140106240719984">#</a></h6></div><div class="table-contents"><table summary="xl network-attach Removed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
+       </td></tr></tbody></table></div></div><div class="table" id="idm140237420000576"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table C.38: </span><span class="name"><code class="command">xl</code> <code class="option">network-attach</code> Removed Options </span><a title="Permalink" class="permalink" href="cha.xmtoxl.html#idm140237420000576">#</a></h6></div><div class="table-contents"><table summary="xl network-attach Removed Options" border="1"><colgroup><col width="40%" class="c1" /><col width="" class="c2" /></colgroup><thead><tr><th colspan="2">
         <p>
          Removed Options
         </p>
@@ -2246,25 +2246,25 @@ hljs.configure({
       </td></tr></tbody></table></div></div></div></div><div class="sect1 " id="sec.xmtoxl.links"><div class="titlepage"><div><div><h2 class="title" id="sec.xmtoxl.links"><span class="number">C.4 </span><span class="name">External links</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.xmtoxl.links">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>xm_vs_xl_links.xml</li><li><span class="ds-label">ID: </span>sec.xmtoxl.links</li></ul></div></div></div></div><p>
   For more information on Xen tool stacks refer to the following online
   resources:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140106240645488"><span class="term ">XL in Xen</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140237419926016"><span class="term ">XL in Xen</span></dt><dd><p>
      <a class="link" href="http://wiki.xenproject.org/wiki/XL_in_Xen_4.2" target="_blank">XL in
      Xen 4.2</a>
-    </p></dd><dt id="idm140106240642944"><span class="term "><code class="command">xl</code> command</span></dt><dd><p>
+    </p></dd><dt id="idm140237419923472"><span class="term "><code class="command">xl</code> command</span></dt><dd><p>
      <a class="link" href="http://xenbits.xen.org/docs/unstable/man/xl.1.html" target="_blank">XL</a>
      command line.
-    </p></dd><dt id="idm140106240640096"><span class="term ">xl.cfg</span></dt><dd><p>
+    </p></dd><dt id="idm140237419920624"><span class="term ">xl.cfg</span></dt><dd><p>
      <a class="link" href="http://xenbits.xen.org/docs/unstable/man/xl.cfg.5.html" target="_blank">xl.cfg</a>
      domain configuration file syntax.
-    </p></dd><dt id="idm140106240637520"><span class="term ">xl disk</span></dt><dd><p>
+    </p></dd><dt id="idm140237419918048"><span class="term ">xl disk</span></dt><dd><p>
      <a class="link" href="http://xenbits.xen.org/docs/unstable/misc/xl-disk-configuration.txt" target="_blank">xl
      disk</a> configuration option.
-    </p></dd><dt id="idm140106240634944"><span class="term ">XL vs Xend</span></dt><dd><p>
+    </p></dd><dt id="idm140237419915472"><span class="term ">XL vs Xend</span></dt><dd><p>
      <a class="link" href="http://wiki.xenproject.org/wiki/XL_vs_Xend_Feature_Comparison" target="_blank">XL
      vs Xend</a> feature comparison.
-    </p></dd><dt id="idm140106240632368"><span class="term ">BDF doc</span></dt><dd><p>
+    </p></dd><dt id="idm140237419912896"><span class="term ">BDF doc</span></dt><dd><p>
      <a class="link" href="http://wiki.xen.org/wiki/Bus:Device.Function_%28BDF%29_Notation" target="_blank">BDF
      documentation</a>.
-    </p></dd><dt id="idm140106240629808"><span class="term ">libvirt</span></dt><dd><p>
+    </p></dd><dt id="idm140237419910336"><span class="term ">libvirt</span></dt><dd><p>
      <a class="link" href="http://libvirt.org/virshcmdref.html" target="_blank">virsh</a>
      command.
     </p></dd></dl></div></div><div class="sect1 " id="sec.libvirt.managing.export_Xen_xm"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.managing.export_Xen_xm"><span class="number">C.5 </span><span class="name">Saving a Xen Guest Configuration in an <code class="command">xm</code> Compatible Format</span> <a title="Permalink" class="permalink" href="cha.xmtoxl.html#sec.libvirt.managing.export_Xen_xm">#</a></h2></div></div></div><p>

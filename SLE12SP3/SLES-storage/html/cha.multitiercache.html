@@ -34,64 +34,64 @@ hljs.configure({
  </p><div class="sect1 " id="sec.multitiercache.terminology"><div class="titlepage"><div><div><h2 class="title" id="sec.multitiercache.terminology"><span class="number">4.1 </span><span class="name">General Terminology</span> <a title="Permalink" class="permalink" href="cha.multitiercache.html#sec.multitiercache.terminology">#</a></h2></div></div></div><p>
    This section explains several terms often used when describing cache related
    features:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139870422775104"><span class="term ">Migration</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139803494511024"><span class="term ">Migration</span></dt><dd><p>
       Movement of the primary copy of a logical block from one device to the
       other.
-     </p></dd><dt id="idm139870422773264"><span class="term ">Promotion</span></dt><dd><p>
+     </p></dd><dt id="idm139803494509152"><span class="term ">Promotion</span></dt><dd><p>
       Migration from the slow device to the fast device.
-     </p></dd><dt id="idm139870422771424"><span class="term ">Demotion</span></dt><dd><p>
+     </p></dd><dt id="idm139803494507312"><span class="term ">Demotion</span></dt><dd><p>
       Migration from the fast device to the slow device.
-     </p></dd><dt id="idm139870422769584"><span class="term ">Origin device</span></dt><dd><p>
+     </p></dd><dt id="idm139803494505472"><span class="term ">Origin device</span></dt><dd><p>
       The big and slower block device. It always contains a copy of the logical
       block, which may be out of date or kept in synchronization with the copy
       on the cache device (depending on policy).
-     </p></dd><dt id="idm139870422767600"><span class="term ">Cache device</span></dt><dd><p>
+     </p></dd><dt id="idm139803494503488"><span class="term ">Cache device</span></dt><dd><p>
       The small and faster block device.
-     </p></dd><dt id="idm139870422765776"><span class="term ">Metadata device</span></dt><dd><p>
+     </p></dd><dt id="idm139803494501664"><span class="term ">Metadata device</span></dt><dd><p>
       A small device that records which blocks are in the cache, which are
       dirty, and extra hints for use by the policy object. This information
       could be put on the cache device as well, but having it separate allows
       the volume manager to configure it differently, for example as a mirror
       for extra robustness. The metadata device may only be used by a single
       cache device.
-     </p></dd><dt id="idm139870422763584"><span class="term ">Dirty block</span></dt><dd><p>
+     </p></dd><dt id="idm139803494499472"><span class="term ">Dirty block</span></dt><dd><p>
       If some process writes to a block of data which is placed in the cache,
       the cached block is marked as <span class="emphasis"><em>dirty</em></span> because it was
       overwritten in the cache and needs to be written back to the original
       device.
-     </p></dd><dt id="idm139870422761152"><span class="term ">Cache miss</span></dt><dd><p>
+     </p></dd><dt id="idm139803494497040"><span class="term ">Cache miss</span></dt><dd><p>
       A request for I/O operations is pointed to the cached device's cache
       first. If it cannot find the requested values, it looks in the device
       itself, which is slow. This is called a <span class="emphasis"><em>cache miss</em></span>.
-     </p></dd><dt id="idm139870422758736"><span class="term ">Cache hit</span></dt><dd><p>
+     </p></dd><dt id="idm139803494494624"><span class="term ">Cache hit</span></dt><dd><p>
       When a requested value is found in the cached device's cache, it is
       served fast. This is called a <span class="emphasis"><em>cache hit</em></span>.
-     </p></dd><dt id="idm139870422756400"><span class="term ">Cold cache</span></dt><dd><p>
+     </p></dd><dt id="idm139803494492288"><span class="term ">Cold cache</span></dt><dd><p>
       Cache that holds no values (is empty) and causes <span class="emphasis"><em>cache
       misses</em></span>. As the cached block device operations progress, it
       gets filled with data and becomes <span class="emphasis"><em>warm</em></span>.
-     </p></dd><dt id="idm139870422753584"><span class="term ">Warm cache</span></dt><dd><p>
+     </p></dd><dt id="idm139803494489472"><span class="term ">Warm cache</span></dt><dd><p>
       Cache that already holds some values and is likely to result in
       <span class="emphasis"><em>cache hits</em></span>.
      </p></dd></dl></div></div><div class="sect1 " id="sec.multitiercache.caching_modes"><div class="titlepage"><div><div><h2 class="title" id="sec.multitiercache.caching_modes"><span class="number">4.2 </span><span class="name">Caching Modes</span> <a title="Permalink" class="permalink" href="cha.multitiercache.html#sec.multitiercache.caching_modes">#</a></h2></div></div></div><p>
    Following are the basic caching modes that multi-tier caches use:
    <span class="emphasis"><em>write-back</em></span>, <span class="emphasis"><em>write-through</em></span>,
    <span class="emphasis"><em>write-around</em></span> and <span class="emphasis"><em>pass-through</em></span>.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139870422747120"><span class="term ">write-back</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139803494483120"><span class="term ">write-back</span></dt><dd><p>
       Data written to a block that is cached go to the cache only, and the
       block is marked dirty. This is the default caching mode.
-     </p></dd><dt id="idm139870422745200"><span class="term ">write-through</span></dt><dd><p>
+     </p></dd><dt id="idm139803494481200"><span class="term ">write-through</span></dt><dd><p>
       Writing to a cached block will not complete until it has hit both the
       origin and cache devices. Clean blocks remain clean with
       <span class="emphasis"><em>write-through</em></span> cache.
-     </p></dd><dt id="idm139870422742832"><span class="term ">write-around</span></dt><dd><p>
+     </p></dd><dt id="idm139803494478832"><span class="term ">write-around</span></dt><dd><p>
       A similar technique to write-through cache, but write I/O is written
       directly to a permanent storage, bypassing the cache. This can prevent
       the cache being flooded with write I/O that will not subsequently be
       re-read, but the disadvantage is that a read request for recently written
       data will create a 'cache miss' and needs to be read from slower bulk
       storage and experience higher latency.
-     </p></dd><dt id="idm139870422740624"><span class="term ">pass-through</span></dt><dd><p>
+     </p></dd><dt id="idm139803494476624"><span class="term ">pass-through</span></dt><dd><p>
       To enable the <span class="emphasis"><em>pass-through</em></span> mode, the cache needs to
       be clean. Reading is served from the origin device bypassing the cache.
       Writing is forwarded to the origin device and 'invalidates' the cache
@@ -143,7 +143,7 @@ hljs.configure({
       write amplification. For example, using a hard disk with 4k sectors and
       an SSD with an erase block size of 2 MB this command would look as
       follows:
-     </p><div class="verbatim-wrap"><pre class="screen">sudo make-bcache --block 4k --bucket 2M -C /dev/sdc</pre></div><div id="idm139870422715696" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Multi-Device Support</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">sudo make-bcache --block 4k --bucket 2M -C /dev/sdc</pre></div><div id="idm139803494451760" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Multi-Device Support</h6><p>
        <code class="command">make-bcache</code> can prepare and register multiple backing
        devices and a cache device at the same time. In this case you do not
        need to manually attach the cache device to the backing device
