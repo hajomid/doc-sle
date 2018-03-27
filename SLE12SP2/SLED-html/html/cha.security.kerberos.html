@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Network Authentication with Kerberos | Security Guide | SUSE Linux Enterprise Desktop 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 7. Network Authentication with Kerberos" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.auth.html" title="Part I. Authentication" /><link rel="prev" href="cha.security.ad.html" title="Chapter 6. Active Directory Support" /><link rel="next" href="part.local_security.html" title="Part II. Local Security" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Network Authentication with Kerberos | Security Guide | SUSE Linux Enterprise Desktop 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 7. Network Authentication with Kerberos" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Desktop 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.auth.html" title="Part I. Authentication" /><link rel="prev" href="cha.security.ad.html" title="Chapter 6. Active Directory Support" /><link rel="next" href="part.local_security.html" title="Part II. Local Security" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -46,17 +46,17 @@ hljs.configure({
   For detailed technical instruction, refer to the Kerberos documentation.
  </p><div class="sect1 " id="sec.security.kerberos.terms"><div class="titlepage"><div><div><h2 class="title" id="sec.security.kerberos.terms"><span class="number">7.1 </span><span class="name">Kerberos Terminology</span> <a title="Permalink" class="permalink" href="cha.security.kerberos.html#sec.security.kerberos.terms">#</a></h2></div></div></div><p>
    The following glossary defines some Kerberos terminology.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140076798437008"><span class="term ">credential</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139752830552272"><span class="term ">credential</span></dt><dd><p>
       Users or clients need to present some kind of credentials that authorize
       them to request services. Kerberos knows two kinds of
       credentials—tickets and authenticators.
-     </p></dd><dt id="idm140076798435040"><span class="term ">ticket</span></dt><dd><p>
+     </p></dd><dt id="idm139752830550304"><span class="term ">ticket</span></dt><dd><p>
       A ticket is a per-server credential used by a client to
       authenticate at a server from which it is requesting a service. It
       contains the name of the server, the client's name, the client's
       Internet address, a time stamp, a lifetime, and a random session key.
       All this data is encrypted using the server's key.
-     </p></dd><dt id="idm140076798432912"><span class="term ">authenticator</span></dt><dd><p>
+     </p></dd><dt id="idm139752830548176"><span class="term ">authenticator</span></dt><dd><p>
       Combined with the ticket, an authenticator is used to prove that the
       client presenting a ticket is really the one it claims to be. An
       authenticator is built using the client's name, the workstation's IP
@@ -64,7 +64,7 @@ hljs.configure({
       session key known only to the client and the relevant server. An
       authenticator can only be used once, unlike a ticket. A client can build
       an authenticator itself.
-     </p></dd><dt id="idm140076798430656"><span class="term ">principal</span></dt><dd><p>
+     </p></dd><dt id="idm139752830545920"><span class="term ">principal</span></dt><dd><p>
       A Kerberos principal is a unique entity (a user or service) to which it
       can assign a ticket. A principal consists of the following components:
      </p><div class="verbatim-wrap"><pre class="screen"><em class="replaceable ">USER</em>/<em class="replaceable ">INSTANCE</em>@<em class="replaceable ">REALM</em></pre></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title">primary: </span>
@@ -81,22 +81,22 @@ hljs.configure({
        </p></li><li class="listitem "><p><span class="formalpara-title">realm: </span>
          Specifies the Kerberos realm. Normally, your realm is your domain
          name in uppercase letters.
-        </p></li></ul></div></dd><dt id="idm140076798417936"><span class="term ">mutual authentication</span></dt><dd><p>
+        </p></li></ul></div></dd><dt id="idm139752830533168"><span class="term ">mutual authentication</span></dt><dd><p>
       Kerberos ensures that both client and server can be sure of each
       other's identity. They share a session key, which they can use to
       communicate securely.
-     </p></dd><dt id="idm140076798415984"><span class="term ">session key</span></dt><dd><p>
+     </p></dd><dt id="idm139752830531216"><span class="term ">session key</span></dt><dd><p>
       Session keys are temporary private keys generated by Kerberos. They are
       known to the client and used to encrypt the communication between the
       client and the server for which it requested and received a ticket.
-     </p></dd><dt id="idm140076798413968"><span class="term ">replay</span></dt><dd><p>
+     </p></dd><dt id="idm139752830529200"><span class="term ">replay</span></dt><dd><p>
       Almost all messages sent in a network can be eavesdropped, stolen, and
       resent. In the Kerberos context, this would be most dangerous if an
       attacker manages to obtain your request for a service containing your
       ticket and authenticator. The attacker could then try to resend it
       (<span class="emphasis"><em>replay</em></span>) to impersonate you. However, Kerberos
       implements several mechanisms to deal with this problem.
-     </p></dd><dt id="idm140076798411344"><span class="term ">server or service</span></dt><dd><p>
+     </p></dd><dt id="idm139752830526576"><span class="term ">server or service</span></dt><dd><p>
       <span class="emphasis"><em>Service</em></span> is used to refer to a specific action to
       perform. The process behind this action is called a
       <span class="emphasis"><em>server</em></span>.

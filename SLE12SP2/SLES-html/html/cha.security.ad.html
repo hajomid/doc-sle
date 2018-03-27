@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Active Directory Support | Security Guide | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 6. Active Directory Support" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.auth.html" title="Part I. Authentication" /><link rel="prev" href="cha.security.ldap.html" title="Chapter 5. LDAP—A Directory Service" /><link rel="next" href="cha.security.kerberos.html" title="Chapter 7. Network Authentication with Kerberos" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Active Directory Support | Security Guide | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 6. Active Directory Support" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.auth.html" title="Part I. Authentication" /><link rel="prev" href="cha.security.ldap.html" title="Chapter 5. LDAP—A Directory Service" /><link rel="next" href="cha.security.kerberos.html" title="Chapter 7. Network Authentication with Kerberos" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -35,26 +35,26 @@ hljs.configure({
    With a Linux client (configured as an Active Directory client) that is
    joined to an existing Active Directory domain, benefit from various
    features not available on a pure <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> Linux client:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482951136"><span class="term ">Browsing Shared Files and Directories with SMB</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945459984"><span class="term ">Browsing Shared Files and Directories with SMB</span></dt><dd><p>
       GNOME Files (previously called Nautilus) supports browsing shared resources
       through SMB.
-     </p></dd><dt id="idm139622482949216"><span class="term ">Sharing Files and Directories with SMB</span></dt><dd><p>
+     </p></dd><dt id="idm140031945458064"><span class="term ">Sharing Files and Directories with SMB</span></dt><dd><p>
       GNOME Files supports sharing directories and files as in Windows.
-     </p></dd><dt id="idm139622482947344"><span class="term ">Accessing and Manipulating User Data on the Windows Server</span></dt><dd><p>
+     </p></dd><dt id="idm140031945456192"><span class="term ">Accessing and Manipulating User Data on the Windows Server</span></dt><dd><p>
       Through GNOME Files, users can access their Windows user data and
       can edit, create, and delete files and directories on the Windows
       server. Users can access their data without having to enter their
       password multiple times.
-     </p></dd><dt id="idm139622482945264"><span class="term ">Offline Authentication</span></dt><dd><p>
+     </p></dd><dt id="idm140031945454112"><span class="term ">Offline Authentication</span></dt><dd><p>
       Users can log in and access their local data on the Linux
       machine even if they are offline or the Active Directory server is unavailable for
       other reasons.
-     </p></dd><dt id="idm139622482943312"><span class="term ">Windows Password Change</span></dt><dd><p>
+     </p></dd><dt id="idm140031945452160"><span class="term ">Windows Password Change</span></dt><dd><p>
       This port of Active Directory support in Linux enforces corporate password policies
       stored in Active Directory. The display managers and console support
       password change messages and accept your input. You can even use the
       Linux <code class="command">passwd</code> command to set Windows passwords.
-     </p></dd><dt id="idm139622482940800"><span class="term ">Single-Sign-On through Kerberized Applications</span></dt><dd><p>
+     </p></dd><dt id="idm140031945449648"><span class="term ">Single-Sign-On through Kerberized Applications</span></dt><dd><p>
       
       Many desktop applications are Kerberos-enabled
       (<span class="emphasis"><em>kerberized</em></span>), which means they can transparently
@@ -73,13 +73,13 @@ hljs.configure({
   </p><p>
    To communicate with the directory service, the client needs to share at
    least two protocols with the server:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482934112"><span class="term ">LDAP</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945442960"><span class="term ">LDAP</span></dt><dd><p>
       LDAP is a protocol optimized for managing directory information. A
       Windows domain controller with Active Directory can use the LDAP protocol to
       exchange directory information with the clients. To learn more about
       LDAP in general and about the open source port of it, OpenLDAP, refer
       to <a class="xref" href="cha.security.ldap.html" title="Chapter 5. LDAP—A Directory Service">Chapter 5, <em>LDAP—A Directory Service</em></a>.
-     </p></dd><dt id="idm139622482931456"><span class="term ">Kerberos</span></dt><dd><p> Kerberos is a third-party trusted authentication service.
+     </p></dd><dt id="idm140031945440304"><span class="term ">Kerberos</span></dt><dd><p> Kerberos is a third-party trusted authentication service.
             All its clients trust Kerberos's authorization of another
             client's identity, enabling kerberized single-sign-on (SSO)
             solutions. Windows supports a Kerberos implementation,
@@ -87,7 +87,7 @@ hljs.configure({
             learn more about Kerberos in Linux, refer to <a class="xref" href="cha.security.kerberos.html" title="Chapter 7. Network Authentication with Kerberos">Chapter 7, <em>Network Authentication with Kerberos</em></a>. </p></dd></dl></div><p>
    Depending on which YaST module you use to set up Kerberos authentication,
    different client components process account and authentication data:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482927680"><span class="term ">Solutions Based on SSSD</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945436528"><span class="term ">Solutions Based on SSSD</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         The <code class="systemitem">sssd</code> daemon is the
         central part of this solution. It handles all communication with the
         Active Directory server.
@@ -101,7 +101,7 @@ hljs.configure({
         client is handled by <code class="filename">pam_mkhomedir</code>.
        </p><p>
         For more information about PAM, see <a class="xref" href="cha.pam.html" title="Chapter 2. Authentication with PAM">Chapter 2, <em>Authentication with PAM</em></a>.
-       </p></li></ul></div></dd><dt id="idm139622482919264"><span class="term ">Solution Based On Winbind (Samba)</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       </p></li></ul></div></dd><dt id="idm140031945428112"><span class="term ">Solution Based On Winbind (Samba)</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         The <code class="systemitem">winbindd</code> daemon is the
         central part of this solution. It handles all communication with the
         Active Directory server.
@@ -164,7 +164,7 @@ hljs.configure({
     error codes are translated into user-readable error messages that PAM
     gives at login through any of the supported methods (GDM, console, and
     SSH):
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482892320"><span class="term "><code class="literal">Password has expired</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945401104"><span class="term "><code class="literal">Password has expired</code>
      </span></dt><dd><p>
        The user sees a message stating that the password has expired and
        needs to be changed. The system prompts for a new password and
@@ -172,30 +172,30 @@ hljs.configure({
        password policies (for example the password is too short, too simple,
        or already in the history). If a user's password change fails, the
        reason is shown and a new password prompt is given.
-      </p></dd><dt id="idm139622482889824"><span class="term "><code class="literal">Account disabled</code>
+      </p></dd><dt id="idm140031945398608"><span class="term "><code class="literal">Account disabled</code>
      </span></dt><dd><p>
        The user sees an error message stating that the account has been
        disabled and to contact the system administrator.
-      </p></dd><dt id="idm139622482887616"><span class="term "><code class="literal">Account locked out</code>
+      </p></dd><dt id="idm140031945396400"><span class="term "><code class="literal">Account locked out</code>
      </span></dt><dd><p>
        The user sees an error message stating that the account has been
        locked and to contact the system administrator.
-      </p></dd><dt id="idm139622482885424"><span class="term "><code class="literal">Password has to be changed</code>
+      </p></dd><dt id="idm140031945394208"><span class="term "><code class="literal">Password has to be changed</code>
      </span></dt><dd><p>
        The user can log in but receives a warning that the password needs to
        be changed soon. This warning is sent three days before that password
        expires. After expiration, the user cannot log in.
-      </p></dd><dt id="idm139622482883120"><span class="term "><code class="literal">Invalid workstation</code>
+      </p></dd><dt id="idm140031945391904"><span class="term "><code class="literal">Invalid workstation</code>
      </span></dt><dd><p>
        When a user is restricted to specific workstations and the current
        <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> machine is not among them, a message appears that
        this user cannot log in from this workstation.
-      </p></dd><dt id="idm139622482879744"><span class="term "><code class="literal">Invalid logon hours</code>
+      </p></dd><dt id="idm140031945388528"><span class="term "><code class="literal">Invalid logon hours</code>
      </span></dt><dd><p>
        When a user is only allowed to log in during working hours and tries
        to log in outside working hours, a message informs the user that
        logging in is not possible at that time.
-      </p></dd><dt id="idm139622482877472"><span class="term "><code class="literal">Account expired</code>
+      </p></dd><dt id="idm140031945386256"><span class="term "><code class="literal">Account expired</code>
      </span></dt><dd><p>
        An administrator can set an expiration time for a specific user
        account. If that user tries to log in after expiration, the user gets
@@ -242,11 +242,11 @@ hljs.configure({
    Before your client can join an Active Directory domain, some adjustments must be made
    to your network setup to ensure the flawless interaction of client and
    server.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482864048"><span class="term ">DNS</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945372896"><span class="term ">DNS</span></dt><dd><p>
       Configure your client machine to use a DNS server that can forward DNS
       requests to the Active Directory DNS server. Alternatively, configure your machine
       to use the Active Directory DNS server as the name service data source.
-     </p></dd><dt id="idm139622482862016"><span class="term ">NTP</span></dt><dd><p>
+     </p></dd><dt id="idm140031945370864"><span class="term ">NTP</span></dt><dd><p>
       To succeed with Kerberos authentication, the client must have its time
       set accurately. It is highly recommended to use a central NTP time
       server for this purpose (this can be also the NTP server running on
@@ -258,7 +258,7 @@ hljs.configure({
       <a class="xref" href="cha.security.ad.html#proc.ad.join" title="Joining an Active Directory Domain Using Windows Domain Membership">Procedure 6.2, “
     Joining an Active Directory Domain Using <span class="guimenu">Windows Domain Membership</span>
    ”</a>.
-     </p></dd><dt id="idm139622482859088"><span class="term ">Firewall</span></dt><dd><p>
+     </p></dd><dt id="idm140031945367936"><span class="term ">Firewall</span></dt><dd><p>
       To browse your network neighborhood, either disable the firewall
       entirely or mark the interface used for browsing as part of the
       internal zone.
@@ -273,7 +273,7 @@ hljs.configure({
       disable the firewall, check the <span class="guimenu">Disable Firewall Automatic
       Starting</span> option, and leave the firewall module with
       <span class="guimenu">Next</span> › <span class="guimenu">Finish</span>.
-     </p></dd><dt id="idm139622482850288"><span class="term ">Active Directory Account</span></dt><dd><p>
+     </p></dd><dt id="idm140031945359136"><span class="term ">Active Directory Account</span></dt><dd><p>
       You cannot log in to an Active Directory domain unless the Active Directory administrator has
       provided you with a valid user account for that domain. Use the Active Directory
       user name and password to log in to the Active Directory domain from your Linux
@@ -320,7 +320,7 @@ hljs.configure({
     The YaST module <span class="guimenu">User Logon Management</span> supports
     authentication at an Active Directory. Additionally, it also supports the following
     related authentication and identification providers:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139622482828752"><span class="term ">Identification Providers</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">Delegate to third-party software library</span>. </span>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140031945337536"><span class="term ">Identification Providers</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">Delegate to third-party software library</span>. </span>
           Support for legacy NSS providers via a proxy.
          </p></li><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">FreeIPA</span>. </span>
           FreeIPA and Red Hat Enterprise Identity Management provider.
@@ -329,7 +329,7 @@ hljs.configure({
          <code class="command">man 5 sssd-ldap</code>.
         </p></li><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">Local SSSD file database</span>. </span>
           An SSSD-internal provider for local users.
-         </p></li></ul></div></dd><dt id="idm139622482818528"><span class="term ">Authentication Providers</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">Delegate to third-party software library</span>. </span>
+         </p></li></ul></div></dd><dt id="idm140031945327312"><span class="term ">Authentication Providers</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">Delegate to third-party software library</span>. </span>
           Relay authentication to another PAM target via a proxy.
          </p></li><li class="listitem "><p><span class="formalpara-title"><span class="guimenu">FreeIPA</span>. </span>
           FreeIPA and Red Hat Enterprise Identity Management provider.
@@ -386,8 +386,7 @@ hljs.configure({
         following dialog. However, there are reasons to make changes:
        </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p><span class="formalpara-title">
            If the Local Host Name Does Not Match the Host Name Set on the
-           Domain Controller
-          . </span>
+           Domain Controller. </span>
            
            Find out if the host name of your computer matches what the name
            your computer is known as to the Active Directory Domain Controller. In a
@@ -534,12 +533,12 @@ hljs.configure({
     </p><div class="figure" id="fig.ad.join1"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/ad_join1.png"><img src="images/ad_join1.png" width="" alt="Providing Administrator Credentials" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 6.6: </span><span class="name">Providing Administrator Credentials </span><a title="Permalink" class="permalink" href="cha.security.ad.html#fig.ad.join1">#</a></h6></div></div></li></ol></div></div><p>
    After you have joined the Active Directory domain, you can log in to it from your
    workstation using the display manager of your desktop or the console.
-  </p><div id="idm139622482690848" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Domain Name</h6><p>
+  </p><div id="idm140031945199376" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Domain Name</h6><p>
     Joining a domain may not succeed if the domain name ends with
     <code class="literal">.local</code>. Names ending in <code class="literal">.local</code>
     cause conflicts with Multicast DNS (MDNS) where
     <code class="literal">.local</code> is reserved for link-local host names.
-   </p></div><div id="idm139622482688032" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Only Administrators Can Enroll a Computer</h6><p>
+   </p></div><div id="idm140031945196560" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Only Administrators Can Enroll a Computer</h6><p>
     Only a domain administrator account, such as
     <code class="literal">Administrator</code>, can join <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> into Active
     Directory.
@@ -557,7 +556,7 @@ hljs.configure({
    Directory and you have a valid Windows user identity, you can log in to
    your machine using the Active Directory credentials. Login is supported for GNOME, the
    console, SSH, and any other PAM-aware application.
-  </p><div id="idm139622482677616" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Offline Authentication</h6><p>
+  </p><div id="idm140031945186144" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Offline Authentication</h6><p>
     <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> supports offline authentication, allowing you to log in
     to your client machine even when it is offline. See
     <a class="xref" href="cha.security.ad.html#sec.security.ad.background.offline" title="6.2.3. Offline Service and Policy Support">Section 6.2.3, “Offline Service and Policy Support”</a> for details.

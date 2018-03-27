@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Kernel Probes | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 5. Kernel Probes" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kerneltrace.html" title="Part III. Kernel Monitoring" /><link rel="prev" href="cha.tuning.systemtap.html" title="Chapter 4. SystemTap—Filtering and Analyzing System Data" /><link rel="next" href="cha.perf.html" title="Chapter 6. Hardware-Based Performance Monitoring with Perf" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Kernel Probes | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 5. Kernel Probes" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kerneltrace.html" title="Part III. Kernel Monitoring" /><link rel="prev" href="cha.tuning.systemtap.html" title="Chapter 4. SystemTap—Filtering and Analyzing System Data" /><link rel="next" href="cha.perf.html" title="Chapter 6. Hardware-Based Performance Monitoring with Perf" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -139,36 +139,36 @@ hljs.configure({
    probe handlers. For a more detailed description of these functions and
    their arguments, see the information sources in
    <a class="xref" href="cha.tuning.kprobes.html#cha.tuning.kprobes.moreinfo" title="5.5. For More Information">Section 5.5, “For More Information”</a>.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140178527139872"><span class="term "><code class="systemitem">register_kprobe()</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140473207881856"><span class="term "><code class="systemitem">register_kprobe()</code>
     </span></dt><dd><p>
       Inserts a break-point on a specified address. When the break-point is
       hit, the <code class="systemitem">pre_handler</code> and
       <code class="systemitem">post_handler</code> are called.
-     </p></dd><dt id="idm140178527136816"><span class="term "><code class="systemitem">register_jprobe()</code>
+     </p></dd><dt id="idm140473207878800"><span class="term "><code class="systemitem">register_jprobe()</code>
     </span></dt><dd><p>
       Inserts a break-point in the specified address. The address needs to
       be the address of the first instruction of the probed function. When
       the break-point is hit, the specified handler is run. The handler
       should have the same argument list and return type as the probed.
-     </p></dd><dt id="idm140178527134448"><span class="term "><code class="systemitem">register_kretprobe()</code>
+     </p></dd><dt id="idm140473207876432"><span class="term "><code class="systemitem">register_kretprobe()</code>
     </span></dt><dd><p>
       Inserts a return probe for the specified function. When the probed
       function returns, a specified handler is run. This function returns 0
       on success, or a negative error number on failure.
-     </p></dd><dt id="idm140178527132176"><span class="term "><code class="systemitem">unregister_kprobe()</code>, <code class="systemitem">unregister_jprobe()</code>, <code class="systemitem">unregister_kretprobe()</code>
+     </p></dd><dt id="idm140473211969968"><span class="term "><code class="systemitem">unregister_kprobe()</code>, <code class="systemitem">unregister_jprobe()</code>, <code class="systemitem">unregister_kretprobe()</code>
     </span></dt><dd><p>
       Removes the specified probe. You can use it any time after the probe
       has been registered.
-     </p></dd><dt id="idm140178527129104"><span class="term "><code class="systemitem">register_kprobes()</code>, <code class="systemitem">register_jprobes()</code>, <code class="systemitem">register_kretprobes()</code>
+     </p></dd><dt id="idm140473211966896"><span class="term "><code class="systemitem">register_kprobes()</code>, <code class="systemitem">register_jprobes()</code>, <code class="systemitem">register_kretprobes()</code>
     </span></dt><dd><p>
       Inserts each of the probes in the specified array.
-     </p></dd><dt id="idm140178527126080"><span class="term "><code class="systemitem">unregister_kprobes()</code>, <code class="systemitem">unregister_jprobes()</code>, <code class="systemitem">unregister_kretprobes()</code>
+     </p></dd><dt id="idm140473211963872"><span class="term "><code class="systemitem">unregister_kprobes()</code>, <code class="systemitem">unregister_jprobes()</code>, <code class="systemitem">unregister_kretprobes()</code>
     </span></dt><dd><p>
       Removes each of the probes in the specified array.
-     </p></dd><dt id="idm140178526579456"><span class="term "><code class="systemitem">disable_kprobe()</code>, <code class="systemitem">disable_jprobe()</code>, <code class="systemitem">disable_kretprobe()</code>
+     </p></dd><dt id="idm140473211960848"><span class="term "><code class="systemitem">disable_kprobe()</code>, <code class="systemitem">disable_jprobe()</code>, <code class="systemitem">disable_kretprobe()</code>
     </span></dt><dd><p>
       Disables the specified probe temporarily.
-     </p></dd><dt id="idm140178526576448"><span class="term "><code class="systemitem">enable_kprobe()</code>, <code class="systemitem">enable_jprobe()</code>, <code class="systemitem">enable_kretprobe()</code>
+     </p></dd><dt id="idm140473211957840"><span class="term "><code class="systemitem">enable_kprobe()</code>, <code class="systemitem">enable_jprobe()</code>, <code class="systemitem">enable_kretprobe()</code>
     </span></dt><dd><p>
       Temporarily enables disabled probes.
      </p></dd></dl></div></div><div class="sect1 " id="cha.tuning.kprobes.debugfs"><div class="titlepage"><div><div><h2 class="title" id="cha.tuning.kprobes.debugfs"><span class="number">5.4 </span><span class="name"><code class="systemitem">debugfs</code> Interface</span> <a title="Permalink" class="permalink" href="cha.tuning.kprobes.html#cha.tuning.kprobes.debugfs">#</a></h2></div></div></div><p>
@@ -224,6 +224,6 @@ c03dedc5  r  tcp_v4_rcv+0x0</pre></div><p>
      probes can be found in
      <a class="link" href="http://www.ibm.com/developerworks/library/l-kprobes.html" target="_blank">Kernel
      debugging with Kprobes</a>
-    </p></li></ul></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.perf.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 6 </span>Hardware-Based Performance Monitoring with Perf</span></a><a class="nav-link" href="cha.tuning.systemtap.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 4 </span>SystemTap—Filtering and Analyzing System Data</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+    </p></li></ul></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.perf.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 6 </span>Hardware-Based Performance Monitoring with Perf</span></a><a class="nav-link" href="cha.tuning.systemtap.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 4 </span>SystemTap—Filtering and Analyzing System Data</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The Auto-Installation Process | AutoYaST | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="AutoYaST" /><meta name="chapter-title" content="Chapter 6. The Auto-Installation Process" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="book.autoyast.html" title="AutoYaST" /><link rel="prev" href="rulesandclass.html" title="Chapter 5. Rules and Classes" /><link rel="next" href="InstalledSystem.html" title="Chapter 7. Running AutoYaST in an Installed System" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>The Auto-Installation Process | AutoYaST | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="AutoYaST" /><meta name="chapter-title" content="Chapter 6. The Auto-Installation Process" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="book.autoyast.html" title="AutoYaST" /><link rel="prev" href="rulesandclass.html" title="Chapter 5. Rules and Classes" /><link rel="next" href="InstalledSystem.html" title="Chapter 7. Running AutoYaST in an Installed System" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -75,7 +75,7 @@ hljs.configure({
      For testing/rescue purposes or because the NIC does not have a PROM or
      PXE you can build a bootable flash disk to use with AutoYaST. Flash
      disks can also store the control file.
-    </p><div id="idm140680931034016" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Creating a Bootable Flash Disk</h6><p>
+    </p><div id="idm140051893571120" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Creating a Bootable Flash Disk</h6><p>
       To create a bootable flash disk, copy either the
       <span class="productname"><span class="phrase">openSUSE Leap</span></span> iso image of DVD1 or the Mini CD ISO image to the
       disk using the <code class="command">dd</code> command (the flash disk must not be
@@ -146,7 +146,7 @@ hljs.configure({
      The configuration file used by linuxrc can have the following keywords
      (for a detailed description of how linuxrc works and other keywords,
      see <a class="xref" href="appendix.linuxrc.html" title="Appendix C. Advanced Linuxrc Options">Appendix C, <em>Advanced Linuxrc Options</em></a>):
-    </p><div class="table" id="idm140680931009600"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 6.1: </span><span class="name">Keywords for linuxrc </span><a title="Permalink" class="permalink" href="Invoking.html#idm140680931009600">#</a></h6></div><div class="table-contents"><table summary="Keywords for linuxrc" border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
+    </p><div class="table" id="idm140051893546640"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 6.1: </span><span class="name">Keywords for linuxrc </span><a title="Permalink" class="permalink" href="Invoking.html#idm140051893546640">#</a></h6></div><div class="table-contents"><table summary="Keywords for linuxrc" border="1"><colgroup><col /><col /></colgroup><thead><tr><th>
          <p>
           Keyword
          </p>
@@ -409,7 +409,7 @@ hljs.configure({
        virtual machine, that allows you to work in text mode. Then you can
        pass the needed parameters from an expect script or equivalent.</p><p>
      The following list of scenarios explains how the control file can be supplied:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140680929555648"><span class="term ">Using the Original <span class="productname"><span class="phrase">openSUSE Leap</span></span> DVD-ROM</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140051893450320"><span class="term ">Using the Original <span class="productname"><span class="phrase">openSUSE Leap</span></span> DVD-ROM</span></dt><dd><p>
         When using the original DVD-ROM (DVD #1 is needed), the control file
         needs to be accessible via flash disk or network:
        </p><p><span class="formalpara-title">Flash Disk. </span>
@@ -424,7 +424,7 @@ hljs.configure({
          <code class="literal">autoyast=https://..</code>,
          <code class="literal">autoyast=tftp://..</code>, or
          <code class="literal">autoyast=cifs://..</code>.
-        </p></dd><dt id="idm140680929546400"><span class="term ">Using a Custom DVD-ROM</span></dt><dd><p>
+        </p></dd><dt id="idm140051893441072"><span class="term ">Using a Custom DVD-ROM</span></dt><dd><p>
         In this case, you can include the control file directly on the
         DVD-ROM. When placing it in the root directory and naming it
         <code class="filename">autoinst.xml</code>, it will automatically be found
@@ -438,7 +438,7 @@ hljs.configure({
         accomplished by adding the <code class="literal">instmode=cd</code> option to
         the kernel command line (this can be automated done by adding the
         option to the <code class="filename">isolinux.cfg</code> file on the DVD).
-       </p></dd><dt id="idm140680929541472"><span class="term ">Using a Network Installation Source</span></dt><dd><p>
+       </p></dd><dt id="idm140051893436144"><span class="term ">Using a Network Installation Source</span></dt><dd><p>
         This option is the most important one because
         installations of multiple machines are usually done using SLP or NFS
         servers and other network services like BOOTP and DHCP. The easiest
@@ -459,12 +459,12 @@ hljs.configure({
          <code class="literal">autoyast=https://..</code>,
          <code class="literal">autoyast=tftp://..</code>, or
          <code class="literal">autoyast=cifs://..</code>.
-        </p></dd></dl></div><div id="idm140680929532368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Disabling Network and DHCP</h6><p>
+        </p></dd></dl></div><div id="idm140051893427040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Disabling Network and DHCP</h6><p>
       To disable the network during installations where it is not needed or
       unavailable, for example when auto-installing from DVD-ROMs, use the
       linuxrc option <code class="literal">netsetup=0</code> to disable the network
       setup.
-     </p></div><div id="idm140680929530368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
+     </p></div><div id="idm140051893425040" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: 
       Difference Between the <code class="literal">autoyast</code> and
       <code class="literal">autoyast2</code> Options
      </h6><p>
@@ -528,7 +528,7 @@ default</pre></div><p>
      To determine the hex representation of the IP address of the client,
      use the utility called <code class="command">/usr/bin/gethostip</code> available
      with the <code class="systemitem">syslinux</code> package.
-    </p><div class="example" id="idm140680929506544"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 6.1: </span><span class="name">Determine HEX code for an IP address </span><a title="Permalink" class="permalink" href="Invoking.html#idm140680929506544">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"># /usr/bin/gethostip 10.10.0.1
+    </p><div class="example" id="idm140051893401216"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 6.1: </span><span class="name">Determine HEX code for an IP address </span><a title="Permalink" class="permalink" href="Invoking.html#idm140051893401216">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"># /usr/bin/gethostip 10.10.0.1
 10.10.0.1 10.10.0.1 0A0A0001</pre></div></div></div></div><div class="sect2 " id="autoinstall.singlesystem"><div class="titlepage"><div><div><h3 class="title" id="autoinstall.singlesystem"><span class="number">6.3.2 </span><span class="name">Auto-installing a Single System</span> <a title="Permalink" class="permalink" href="Invoking.html#autoinstall.singlesystem">#</a></h3></div></div></div><p>
      The easiest way to auto-install a system without any network connection
      is to use the original <span class="productname"><span class="phrase">openSUSE Leap</span></span> DVD-ROMs and a flash disk. You
@@ -548,7 +548,7 @@ default</pre></div><p>
      is found, it will parse the content starting from that string and will
      finish when the string <code class="literal">end_linuxrc_conf</code> is found.
      The options are stored in the control file in the following way:
-    </p><div class="example" id="idm140680929495648"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 6.2: </span><span class="name">Linuxrc options in the control file </span><a title="Permalink" class="permalink" href="Invoking.html#idm140680929495648">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">....
+    </p><div class="example" id="idm140051893390320"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 6.2: </span><span class="name">Linuxrc options in the control file </span><a title="Permalink" class="permalink" href="Invoking.html#idm140051893390320">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">....
   &lt;install&gt;
 ....
     &lt;init&gt;
@@ -609,6 +609,6 @@ autoyast: file:///info
      You can define an unlimited number of custom scripts in the control
      file, either by editing the control file or by using the configuration
      system.
-    </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="InstalledSystem.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 7 </span>Running AutoYaST in an Installed System</span></a><a class="nav-link" href="rulesandclass.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 5 </span>Rules and Classes</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+    </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="InstalledSystem.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 7 </span>Running AutoYaST in an Installed System</span></a><a class="nav-link" href="rulesandclass.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 5 </span>Rules and Classes</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>

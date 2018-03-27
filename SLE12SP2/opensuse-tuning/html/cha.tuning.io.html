@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tuning I/O Performance | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 12. Tuning I/O Performance" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="prev" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="next" href="cha.tuning.taskscheduler.html" title="Chapter 13. Tuning the Task Scheduler" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tuning I/O Performance | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 12. Tuning I/O Performance" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="prev" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="next" href="cha.tuning.taskscheduler.html" title="Chapter 13. Tuning the Task Scheduler" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -91,7 +91,7 @@ noop deadline [cfq]</pre></div><p>
     <a class="xref" href="cha.tuning.resources.html#cha.tuning.resources.disk.ionice" title="8.3.3. Prioritizing Disk Access with ionice">Section 8.3.3, “Prioritizing Disk Access with <code class="command">ionice</code>”</a>). The
     <code class="systemitem">CFQ</code> scheduler has the
     following tunable parameters:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140178517834208"><span class="term "><code class="filename">
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140473198017056"><span class="term "><code class="filename">
       /sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/slice_idle_us
      </code>
      </span></dt><dd><p>
@@ -110,7 +110,7 @@ noop deadline [cfq]</pre></div><p>
       </p><p>For media where locality does not play a big role (SSDs, SANs
        with lots of disks) setting  <code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/slice_idle_us</code>
        to <code class="literal">0</code> can improve the throughput considerably.
-      </p></dd><dt id="idm140178517828192"><span class="term "><code class="filename">
+      </p></dd><dt id="idm140473198011040"><span class="term "><code class="filename">
       /sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/quantum
      </code>
      </span></dt><dd><p>
@@ -126,7 +126,7 @@ noop deadline [cfq]</pre></div><p>
        (the default value is <code class="literal">2</code>). This limits the maximum
        number of asynchronous requests—usually write
        requests—that are submitted in one time slice.
-      </p></dd><dt id="idm140178517823200"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/low_latency</code>
+      </p></dd><dt id="idm140473198006048"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/low_latency</code>
      </span></dt><dd><p>
        When enabled (which is the default on <span class="productname"><span class="phrase">openSUSE Leap</span></span>) the scheduler
        may dynamically adjust the length of the time slice by aiming to meet
@@ -134,13 +134,13 @@ noop deadline [cfq]</pre></div><p>
        slices are recomputed to meet this <code class="literal">target_latency</code>
        and ensure that processes get fair access within a bounded length of
        time.
-      </p></dd><dt id="idm140178517818384"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/target_latency</code>
+      </p></dd><dt id="idm140473198001232"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/target_latency</code>
      </span></dt><dd><p>
        Contains an estimated latency time for the
        <code class="systemitem">CFQ</code>.
        <code class="systemitem">CFQ</code> will use it to
        calculate the time slice used for every task.
-      </p></dd><dt id="idm140178517814288"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/group_idle_us</code></span></dt><dd><p>To avoid starving of blkio cgroups doing dependent I/O, CFQ
+      </p></dd><dt id="idm140473197997136"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/group_idle_us</code></span></dt><dd><p>To avoid starving of blkio cgroups doing dependent I/O, CFQ
            waits a bit after completion of I/O for one blkio cgroup before
            scheduling I/O for a different blkio cgroup. When
            <code class="literal">slice_idle_us</code> is set, this parameter does not
@@ -151,7 +151,7 @@ noop deadline [cfq]</pre></div><p>
            of blkio cgroups doing dependent I/O with lower overhead. Note that
            the file <code class="filename">group_idle</code> controls the same tunable
            however with millisecond granularity.
-         </p></dd></dl></div><div class="complex-example"><div class="example" id="idm140178517808992"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 12.1: </span><span class="name">Increasing individual thread throughput using <code class="systemitem">CFQ</code> </span><a title="Permalink" class="permalink" href="cha.tuning.io.html#idm140178517808992">#</a></h6></div><div class="example-contents"><p>
+         </p></dd></dl></div><div class="complex-example"><div class="example" id="idm140473197991840"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 12.1: </span><span class="name">Increasing individual thread throughput using <code class="systemitem">CFQ</code> </span><a title="Permalink" class="permalink" href="cha.tuning.io.html#idm140473197991840">#</a></h6></div><div class="example-contents"><p>
      In <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="productnumber"><span class="phrase">42.2</span></span>, the
      <code class="literal">low_latency</code> tuning parameter is enabled by default
      to ensure that processes get fair access within a bounded length of
@@ -324,16 +324,16 @@ sys     0m1.516s</pre></div><p>
     (especially when using <span class="quote">“<span class="quote">TCQ</span>”</span> disks). The
     <code class="systemitem">DEADLINE</code> scheduler has the
     following tunable parameters:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140178517770912"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/writes_starved</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140473197953760"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/writes_starved</code>
      </span></dt><dd><p>
        Controls how many reads can be sent to disk before it is possible to
        send writes. A value of <code class="literal">3</code> means, that three read
        operations are carried out for one write operation.
-      </p></dd><dt id="idm140178517767792"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
+      </p></dd><dt id="idm140473197950640"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
      </span></dt><dd><p>
        Sets the deadline (current time plus the read_expire value) for read
        operations in milliseconds. The default is 500.
-      </p></dd><dt id="idm140178517765120"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/write_expire</code>
+      </p></dd><dt id="idm140473197947968"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/write_expire</code>
      </span></dt><dd><p>
        <code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
        Sets the deadline (current time plus the read_expire value) for read
@@ -349,7 +349,7 @@ sys     0m1.516s</pre></div><p>
   </p><p>
    Sending write barriers can be disabled using the
    <code class="option">nobarrier</code> mount option.
-  </p><div id="idm140178517757632" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Disabling Barriers Can Lead to Data Loss</h6><p>
+  </p><div id="idm140473197940480" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Disabling Barriers Can Lead to Data Loss</h6><p>
     Disabling barriers when disks cannot guarantee caches are properly
     written in case of power failure can lead to severe file system
     corruption and data loss.
@@ -371,6 +371,6 @@ sys     0m1.516s</pre></div><p>
    devices attached to your system you might consider to switch to
    blk-mq for SCSI. This is done using the kernel command line option
    <code class="literal">scsi_mod.use_blk_mq=1</code>.
-  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.tuning.taskscheduler.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 13 </span>Tuning the Task Scheduler</span></a><a class="nav-link" href="part.tuning.kernel.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Part V </span>Kernel Tuning</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+  </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.tuning.taskscheduler.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 13 </span>Tuning the Task Scheduler</span></a><a class="nav-link" href="part.tuning.kernel.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Part V </span>Kernel Tuning</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>

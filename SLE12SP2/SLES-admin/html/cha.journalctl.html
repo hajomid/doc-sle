@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>journalctl: Query the systemd Journal | Administration Guide | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 14. journalctl: Query the systemd Journal" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.system.html" title="Part II. System" /><link rel="prev" href="cha.systemd.html" title="Chapter 13. The systemd Daemon" /><link rel="next" href="cha.basicnet.html" title="Chapter 15. Basic Networking" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>journalctl: Query the systemd Journal | Administration Guide | SUSE Linux Enterprise Server 12 SP2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="12 SP2" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 14. journalctl: Query the systemd Journal" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="SUSE Linux Enterprise Server 12 SP2" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.system.html" title="Part II. System" /><link rel="prev" href="cha.systemd.html" title="Chapter 13. The systemd Daemon" /><link rel="next" href="cha.basicnet.html" title="Chapter 15. Basic Networking" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -71,23 +71,23 @@ Storage=persistent
    <code class="command">journalctl</code> behavior. All switches are described in the
    <code class="command">journalctl</code> manual page, <code class="command">man 1
    journalctl</code>.
-  </p><div id="idm139818864781888" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
+  </p><div id="idm140310517622256" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
     To show all journal messages related to a specific executable, specify the
     full path to the executable:
-   </p><div class="verbatim-wrap"><pre class="screen">journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139818864779664"><span class="term ">-f</span></dt><dd><p>
+   </p><div class="verbatim-wrap"><pre class="screen">journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140310517620032"><span class="term ">-f</span></dt><dd><p>
       Shows only the most recent journal messages, and prints new log entries
       as they are added to the journal.
-     </p></dd><dt id="idm139818864777760"><span class="term ">-e</span></dt><dd><p>
+     </p></dd><dt id="idm140310517618128"><span class="term ">-e</span></dt><dd><p>
       Prints the messages and jumps to the end of the journal, so that the
       latest entries are visible within the pager.
-     </p></dd><dt id="idm139818864775856"><span class="term ">-r</span></dt><dd><p>
+     </p></dd><dt id="idm140310517616224"><span class="term ">-r</span></dt><dd><p>
       Prints the messages of the journal in reverse order, so that the latest
       entries are listed first.
-     </p></dd><dt id="idm139818864773968"><span class="term ">-k</span></dt><dd><p>
+     </p></dd><dt id="idm140310517614336"><span class="term ">-k</span></dt><dd><p>
       Shows only kernel messages. This is equivalent to the field match
       <code class="literal">_TRANSPORT=kernel</code> (see
       <a class="xref" href="cha.journalctl.html#journalctl.filtering.fields" title="14.3.3. Filtering Based on Fields">Section 14.3.3, “Filtering Based on Fields”</a>).
-     </p></dd><dt id="idm139818864771088"><span class="term ">-u</span></dt><dd><p>
+     </p></dd><dt id="idm140310517611456"><span class="term ">-u</span></dt><dd><p>
       Shows only messages for the specified <code class="systemitem">systemd</code> unit. This is equivalent
       to the field match
       <code class="literal">_SYSTEMD_UNIT=<em class="replaceable ">UNIT</em></code> (see

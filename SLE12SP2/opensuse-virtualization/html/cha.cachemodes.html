@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Disk Cache Modes | Virtualization Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="Virtualization Guide" /><meta name="chapter-title" content="Chapter 14. Disk Cache Modes" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.virt.common.html" title="Part III. Hypervisor-Independent Features" /><link rel="prev" href="part.virt.common.html" title="Part III. Hypervisor-Independent Features" /><link rel="next" href="sec.kvm.managing.clock.html" title="Chapter 15. VM Guest Clock Settings" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Disk Cache Modes | Virtualization Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="Virtualization Guide" /><meta name="chapter-title" content="Chapter 14. Disk Cache Modes" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.virt.common.html" title="Part III. Hypervisor-Independent Features" /><link rel="prev" href="part.virt.common.html" title="Part III. Hypervisor-Independent Features" /><link rel="next" href="sec.kvm.managing.clock.html" title="Chapter 15. VM Guest Clock Settings" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -53,7 +53,7 @@ hljs.configure({
    disk image format, image placement, or storage sub-system is best. The user
    should plan each guest's configuration carefully and experiment with
    various configurations to determine the optimal performance.
-  </p></div><div class="sect1 " id="cachemodes.descr"><div class="titlepage"><div><div><h2 class="title" id="cachemodes.descr"><span class="number">14.2 </span><span class="name">Description of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#cachemodes.descr">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140109676664304"><span class="term ">cache mode unspecified</span></dt><dd><p>
+  </p></div><div class="sect1 " id="cachemodes.descr"><div class="titlepage"><div><div><h2 class="title" id="cachemodes.descr"><span class="number">14.2 </span><span class="name">Description of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#cachemodes.descr">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140283283322240"><span class="term ">cache mode unspecified</span></dt><dd><p>
       In older QEMU versions, not specifying a cache mode meant that
       <span class="emphasis"><em>writethrough</em></span> would be used as the default. With
       modern versions—as shipped with <span class="productname"><span class="phrase">openSUSE Leap</span></span>— the various
@@ -116,7 +116,7 @@ hljs.configure({
       not send flushes when needed. It was the last cache mode added,
       completing the possible combinations of caching and direct access
       semantics.
-     </p></dd></dl></div></div><div class="sect1 " id="qemu.cachemodes.data_integrity"><div class="titlepage"><div><div><h2 class="title" id="qemu.cachemodes.data_integrity"><span class="number">14.3 </span><span class="name">Data Integrity Implications of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#qemu.cachemodes.data_integrity">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140109676637248"><span class="term ">writethrough, none, directsync</span></dt><dd><p>
+     </p></dd></dl></div></div><div class="sect1 " id="qemu.cachemodes.data_integrity"><div class="titlepage"><div><div><h2 class="title" id="qemu.cachemodes.data_integrity"><span class="number">14.3 </span><span class="name">Data Integrity Implications of Cache Modes</span> <a title="Permalink" class="permalink" href="cha.cachemodes.html#qemu.cachemodes.data_integrity">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140283283295248"><span class="term ">writethrough, none, directsync</span></dt><dd><p>
       These are the safest modes, and considered equally safe, given that
       the guest operating system is <span class="quote">“<span class="quote">modern and well behaved</span>”</span>,
       which means that it uses flushes as needed. If you have a suspect
@@ -125,7 +125,7 @@ hljs.configure({
       compatible with <code class="literal">none</code> or
       <code class="literal">directsync</code>, as they do not support O_DIRECT,
       which these cache modes rely on.
-     </p></dd><dt id="idm140109676632960"><span class="term ">writeback</span></dt><dd><p>
+     </p></dd><dt id="idm140283283290960"><span class="term ">writeback</span></dt><dd><p>
       This mode informs the guest of the presence of a write cache, and
       relies on the guest to send flush commands as needed to maintain data
       integrity within its disk image. This is a common storage design which
@@ -134,7 +134,7 @@ hljs.configure({
       write is reported as completed, and that write being committed to the
       storage device, this mode exposes the guest to data loss in the
       unlikely case of a host failure.
-     </p></dd><dt id="idm140109676630624"><span class="term ">unsafe</span></dt><dd><p>
+     </p></dd><dt id="idm140283283288624"><span class="term ">unsafe</span></dt><dd><p>
       This mode is similar to <span class="emphasis"><em>writeback</em></span> caching except the guest flush
       commands are ignored, nullifying the data integrity control of these
       flush commands, and resulting in a higher risk of data loss because of
@@ -171,12 +171,12 @@ hljs.configure({
    However, this restriction can be overridden with the
    <span class="quote">“<span class="quote">unsafe</span>”</span> option to the migration APIs, which is also
    supported by <code class="command">virsh</code>, as for example in
-  </p><div class="verbatim-wrap"><pre class="screen">virsh migrate --live --unsafe</pre></div><div id="idm140109676615856" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">virsh migrate --live --unsafe</pre></div><div id="idm140283283273856" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     The cache mode <code class="literal">none</code> is required for the AIO mode setting
     <code class="literal">native</code>. If another cache mode is used, then the
     AIO mode will silently be switched back to the default <code class="literal">threads</code>. The
     guest flush within the host is implemented using
     <code class="systemitem">fdatasync()</code>.
-   </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="sec.kvm.managing.clock.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 15 </span>VM Guest Clock Settings</span></a><a class="nav-link" href="part.virt.common.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Part III </span>Hypervisor-Independent Features</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+   </p></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="sec.kvm.managing.clock.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 15 </span>VM Guest Clock Settings</span></a><a class="nav-link" href="part.virt.common.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Part III </span>Hypervisor-Independent Features</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>

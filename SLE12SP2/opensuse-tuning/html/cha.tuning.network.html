@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tuning the Network | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.78.1" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 15. Tuning the Network" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="prev" href="cha.tuning.memory.html" title="Chapter 14. Tuning the Memory Management Subsystem" /><link rel="next" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Tuning the Network | System Analysis and Tuning Guide | openSUSE Leap 42.2</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><link rel="stylesheet" type="text/css" href="static/css/brand.css" /><meta name="generator" content="DAPS 2.4.0 using openSUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="openSUSE Leap" /><meta name="product-number" content="42.2" /><meta name="book-title" content="System Analysis and Tuning Guide" /><meta name="chapter-title" content="Chapter 15. Tuning the Network" /><meta name="tracker-url" content="https://bugzilla.opensuse.org/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="openSUSE Distribution" /><meta name="tracker-bsc-version" content="Leap 42.2" /><link rel="home" href="index.html" title="openSUSE Leap Documentation" /><link rel="up" href="part.tuning.kernel.html" title="Part V. Kernel Tuning" /><link rel="prev" href="cha.tuning.memory.html" title="Chapter 14. Tuning the Memory Management Subsystem" /><link rel="next" href="part.tuning.dumps.html" title="Part VI. Handling System Dumps" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -36,7 +36,7 @@ hljs.configure({
    <span class="intraxref">Book “<em class="citetitle ">Reference</em>”, Chapter 13 “Basic Networking”</span>. The Linux kernel handles data it receives
    or sends via the socket interface in socket buffers. These kernel socket
    buffers are tunable.
-  </p><div id="idm140178504857056" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: TCP Autotuning</h6><p>
+  </p><div id="idm140473211216128" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: TCP Autotuning</h6><p>
     Since kernel version 2.6.17 full autotuning with 4 MB maximum buffer
     size exists. This means that manual tuning usually will not
     improve networking performance considerably. It is often the best not to
@@ -65,25 +65,25 @@ hljs.configure({
    Socket Send Buffer for all protocols, or both these options for the TCP
    protocol only (in <code class="filename">ipv4</code>) and thus overriding the
    setting for all protocols (in <code class="filename">core</code>).
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140178504847168"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140473211206240"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code>
     </span></dt><dd><p>
       If <code class="filename">/proc/sys/net/ipv4/tcp_moderate_rcvbuf</code> is set
       to <code class="literal">1</code>, autotuning is active and buffer size is
       adjusted dynamically.
-     </p></dd><dt id="idm140178504844096"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_rmem</code>
+     </p></dd><dt id="idm140473211203168"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_rmem</code>
     </span></dt><dd><p>
       The three values setting the minimum, initial, and maximum size of the
       Memory Receive Buffer per connection. They define the actual memory
       usage, not only TCP window size.
-     </p></dd><dt id="idm140178504841824"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_wmem</code>
+     </p></dd><dt id="idm140473211200896"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_wmem</code>
     </span></dt><dd><p>
       The same as <code class="filename">tcp_rmem</code>, but for Memory Send Buffer
       per connection.
-     </p></dd><dt id="idm140178504839232"><span class="term "><code class="filename">/proc/sys/net/core/rmem_max</code>
+     </p></dd><dt id="idm140473211198304"><span class="term "><code class="filename">/proc/sys/net/core/rmem_max</code>
     </span></dt><dd><p>
       Set to limit the maximum receive buffer size that applications can
       request.
-     </p></dd><dt id="idm140178504837056"><span class="term "><code class="filename">/proc/sys/net/core/wmem_max</code>
+     </p></dd><dt id="idm140473211196128"><span class="term "><code class="filename">/proc/sys/net/core/wmem_max</code>
     </span></dt><dd><p>
       Set to limit the maximum send buffer size that applications can
       request.
@@ -91,13 +91,13 @@ hljs.configure({
    Via <code class="filename">/proc</code> it is possible to disable TCP features
    that you do not need (all TCP features are switched on by default). For
    example, check the following files:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140178504833392"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_timestamps</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140473211192464"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_timestamps</code>
     </span></dt><dd><p>
       TCP time stamps are defined in RFC1323.
-     </p></dd><dt id="idm140178504831264"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_window_scaling</code>
+     </p></dd><dt id="idm140473211190336"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_window_scaling</code>
     </span></dt><dd><p>
       TCP window scaling is also defined in RFC1323.
-     </p></dd><dt id="idm140178504829120"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_sack</code>
+     </p></dd><dt id="idm140473211188192"><span class="term "><code class="filename">/proc/sys/net/ipv4/tcp_sack</code>
     </span></dt><dd><p>
       Select acknowledgments (SACKS).
      </p></dd></dl></div><p>
@@ -109,7 +109,7 @@ hljs.configure({
    survive reboots reliably. With <code class="command">sysctl</code> you can read all
    variables and their values easily; as <code class="systemitem">root</code> use the following
    command to list TCP related settings:
-  </p><div class="verbatim-wrap"><pre class="screen">sysctl -a | grep tcp</pre></div><div id="idm140178504821888" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Side-Effects of Tuning Network Variables</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen">sysctl -a | grep tcp</pre></div><div id="idm140473211180960" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Side-Effects of Tuning Network Variables</h6><p>
     Tuning network variables can affect other system resources such as CPU
     or memory use.
 
@@ -222,6 +222,6 @@ F       F    0    0 (hex)</pre></div><p>
      John Heffner, Matt Mathis: <span class="quote">“<span class="quote">Tuning TCP for Linux 2.4 and
      2.6</span>”</span> (2006):
      <a class="link" href="http://www.psc.edu/networking/projects/tcptune/#Linux" target="_blank">http://www.psc.edu/networking/projects/tcptune/#Linux</a>
-    </p></li></ul></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.tuning.dumps.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part VI </span>Handling System Dumps</span></a><a class="nav-link" href="cha.tuning.memory.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 14 </span>Tuning the Memory Management Subsystem</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+    </p></li></ul></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.tuning.dumps.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part VI </span>Handling System Dumps</span></a><a class="nav-link" href="cha.tuning.memory.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 14 </span>Tuning the Memory Management Subsystem</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
-        SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
+        SUSE</p></div></div></body></html>
