@@ -33,7 +33,7 @@ hljs.configure({
    The migration itself has two phases. You first need to migrate the host,
    then the LXC containers. After that, you can run the original containers
    as VM Guests in the <code class="systemitem">libvirt</code> environment.
-  </p><div class="procedure " id="idm140187349596528"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 32.1: </span><span class="name">Host Migration </span><a title="Permalink" class="permalink" href="cha.lxc2libvirt.html#idm140187349596528">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140463685182368"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 32.1: </span><span class="name">Host Migration </span><a title="Permalink" class="permalink" href="cha.lxc2libvirt.html#idm140463685182368">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Upgrade the host to <span class="phrase">SUSE Linux Enterprise Server 12</span> 12 using the official DVD media.
     </p></li><li class="step "><p>
      After the upgrade, install the
@@ -60,7 +60,7 @@ hljs.configure({
    boot. It needs to be migrated to <span class="phrase">SUSE Linux Enterprise Server
    12</span> as well to get
    everything working.
-  </p><div class="procedure " id="idm140187349578640"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 32.2: </span><span class="name">Container Migration </span><a title="Permalink" class="permalink" href="cha.lxc2libvirt.html#idm140187349578640">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140463685164480"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 32.2: </span><span class="name">Container Migration </span><a title="Permalink" class="permalink" href="cha.lxc2libvirt.html#idm140463685164480">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      The <code class="filename">baseproduct</code> file is missing (and
      <code class="command">zypper</code> keeps complaining about it). Create the
      relevant symbolic link:
