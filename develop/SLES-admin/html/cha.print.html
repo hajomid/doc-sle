@@ -40,7 +40,7 @@ hljs.configure({
   interface that is supported (USB, Ethernet, or Wi-Fi) and a suitable printer
   language. Printers can be categorized on the basis of the following three
   classes of printer languages:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140462680094720"><span class="term ">PostScript Printers</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm139993393120832"><span class="term ">PostScript Printers</span></dt><dd><p>
      PostScript is the printer language in which most print jobs in Linux and
      Unix are generated and processed by the internal print system. If
      PostScript documents can be processed directly by the printer and do not
@@ -51,7 +51,7 @@ hljs.configure({
      format. PostScript+PDF printers that can directly print PDF (in addition
      to PostScript) already exist. For traditional PostScript printers PDF
      needs to be converted to PostScript in the printing workflow.
-    </p></dd><dt id="idm140462680091856"><span class="term ">Standard Printers (Languages Like PCL and ESC/P)</span></dt><dd><p>
+    </p></dd><dt id="idm139993393117968"><span class="term ">Standard Printers (Languages Like PCL and ESC/P)</span></dt><dd><p>
      In the case of known printer languages, the print system can convert
      PostScript jobs to the respective printer language with Ghostscript. This
      processing stage is called interpreting. The best-known languages are PCL
@@ -70,7 +70,7 @@ hljs.configure({
     </p></dd></dl></div><p>
   Before you buy a new printer, refer to the following sources to check how
   well the printer you intend to buy is supported:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140462680085248"><span class="term "><a class="link" href="http://www.linuxfoundation.org/OpenPrinting/" target="_blank">http://www.linuxfoundation.org/OpenPrinting/</a>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm139993393111360"><span class="term "><a class="link" href="http://www.linuxfoundation.org/OpenPrinting/" target="_blank">http://www.linuxfoundation.org/OpenPrinting/</a>
    </span></dt><dd><p>
      The OpenPrinting home page with the printer database. The database shows
      the latest Linux support status. However, a Linux distribution can only
@@ -79,10 +79,10 @@ hljs.configure({
      this status when the latest <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> version was released. Thus, the
      databases may not necessarily indicate the correct status, but only
      provide an approximation.
-    </p></dd><dt id="idm140462680081040"><span class="term "><a class="link" href="http://pages.cs.wisc.edu/~ghost/" target="_blank">http://pages.cs.wisc.edu/~ghost/</a>
+    </p></dd><dt id="idm139993393107152"><span class="term "><a class="link" href="http://pages.cs.wisc.edu/~ghost/" target="_blank">http://pages.cs.wisc.edu/~ghost/</a>
    </span></dt><dd><p>
      The Ghostscript Web page.
-    </p></dd><dt id="idm140462680078816"><span class="term "><code class="filename">/usr/share/doc/packages/ghostscript/catalog.devices</code>
+    </p></dd><dt id="idm139993393104928"><span class="term "><code class="filename">/usr/share/doc/packages/ghostscript/catalog.devices</code>
    </span></dt><dd><p>
      List of built-in Ghostscript drivers.
     </p></dd></dl></div><div class="sect1 " id="sec.print.workflow"><div class="titlepage"><div><div><h2 class="title" id="sec.print.workflow"><span class="number">18.1 </span><span class="name">The CUPS Workflow</span> <a title="Permalink" class="permalink" href="cha.print.html#sec.print.workflow">#</a></h2></div></div></div><p>
@@ -121,7 +121,7 @@ hljs.configure({
    the IBM Z mainframes are not supported by CUPS. On these platforms,
    printing is only possible over the network. The cabling for network printers
    must be installed according to the instructions of the printer manufacturer.
-  <strong class="arch-arrow-end"></strong></p><div id="idm140462680067792" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Changing Cable Connections in a Running System</h6><p>
+  <strong class="arch-arrow-end"></strong></p><div id="idm139993393093968" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Changing Cable Connections in a Running System</h6><p>
     When connecting the printer to the machine, do not forget that only USB
     devices can be plugged in or unplugged during operation. To avoid damaging
     your system or printer, shut down the system before changing any
@@ -164,14 +164,14 @@ hljs.configure({
    CUPS supports the <code class="systemitem">socket</code>,
    <code class="systemitem">LPD</code>, <code class="systemitem">IPP</code> and
    <code class="systemitem">smb</code> protocols.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140462680052688"><span class="term ">socket</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139993393078800"><span class="term ">socket</span></dt><dd><p>
       <span class="emphasis"><em>Socket</em></span> refers to a connection in which the plain
       print data is sent directly to a TCP socket. Some socket port numbers
       that are commonly used are <code class="option">9100</code> or <code class="option">35</code>.
       The device URI (uniform resource identifier) syntax is:
       socket://<em class="replaceable ">IP.OF.THE.PRINTER</em>:<em class="replaceable ">PORT</em>,
       for example: <code class="systemitem">socket://192.168.2.202:9100/</code>.
-     </p></dd><dt id="idm140462680047984"><span class="term ">LPD (Line Printer Daemon)</span></dt><dd><p>
+     </p></dd><dt id="idm139993393074096"><span class="term ">LPD (Line Printer Daemon)</span></dt><dd><p>
       The LPD protocol is described in RFC 1179. Under this protocol, some
       job-related data, such as the ID of the print queue, is sent before the
       actual print data is sent. Therefore, a print queue must be specified
@@ -181,7 +181,7 @@ hljs.configure({
       LPT1, LP1 or similar names are often used. The port number for an LPD
       service is <code class="option">515</code>. An example device URI is
       <code class="systemitem">lpd://192.168.2.202/LPT1</code>.
-     </p></dd><dt id="idm140462680044704"><span class="term ">IPP (Internet Printing Protocol)</span></dt><dd><p>
+     </p></dd><dt id="idm139993393070816"><span class="term ">IPP (Internet Printing Protocol)</span></dt><dd><p>
       IPP is a relatively new protocol (1999) based on the HTTP protocol. With
       IPP, more job-related data is transmitted than with the other protocols.
       CUPS uses IPP for internal data transmission. The name of the print queue
@@ -189,7 +189,7 @@ hljs.configure({
       <code class="literal">631</code>. Example device URIs are
       <code class="systemitem">ipp://192.168.2.202/ps</code> and
       <code class="systemitem">ipp://192.168.2.202/printers/ps</code>.
-     </p></dd><dt id="idm140462680041216"><span class="term ">SMB (Windows Share)</span></dt><dd><p>
+     </p></dd><dt id="idm139993393067328"><span class="term ">SMB (Windows Share)</span></dt><dd><p>
       CUPS also supports printing on printers connected to Windows shares. The
       protocol used for this purpose is SMB. SMB uses the port numbers
       <code class="option">137</code>, <code class="option">138</code> and <code class="option">139</code>.
@@ -394,13 +394,13 @@ Resolution/Output Resolution: 150dpi 300dpi *600dpi</pre></div></li></ol></div><
     to cause major problems. The problem spots reported by
     <code class="command">cupstestppd</code> should be eliminated. If necessary, ask the
     printer manufacturer for a suitable PPD file.
-   </p></div><div class="sect2 " id="sec.print.prob.netconnect"><div class="titlepage"><div><div><h3 class="title" id="sec.print.prob.netconnect"><span class="number">18.8.3 </span><span class="name">Network Printer Connections</span> <a title="Permalink" class="permalink" href="cha.print.html#sec.print.prob.netconnect">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140462679947072"><span class="term ">Identifying Network Problems</span></dt><dd><p>
+   </p></div><div class="sect2 " id="sec.print.prob.netconnect"><div class="titlepage"><div><div><h3 class="title" id="sec.print.prob.netconnect"><span class="number">18.8.3 </span><span class="name">Network Printer Connections</span> <a title="Permalink" class="permalink" href="cha.print.html#sec.print.prob.netconnect">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139993392973056"><span class="term ">Identifying Network Problems</span></dt><dd><p>
        Connect the printer directly to the computer. For test purposes,
        configure the printer as a local printer. If this works, the problems
        are related to the network.
-      </p></dd><dt id="idm140462679945088"><span class="term ">Checking the TCP/IP Network</span></dt><dd><p>
+      </p></dd><dt id="idm139993392971072"><span class="term ">Checking the TCP/IP Network</span></dt><dd><p>
        The TCP/IP network and name resolution must be functional.
-      </p></dd><dt id="idm140462679943216"><span class="term ">Checking a Remote <code class="command">lpd</code>
+      </p></dd><dt id="idm139993392969200"><span class="term ">Checking a Remote <code class="command">lpd</code>
      </span></dt><dd><p>
        Use the following command to test if a TCP connection can be established
        to <code class="command">lpd</code> (port <code class="literal">515</code>) on
@@ -425,7 +425,7 @@ Resolution/Output Resolution: 150dpi 300dpi *600dpi</pre></div></li></ol></div><
       </p><div class="example" id="aus.d.lpd"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 18.1: </span><span class="name">Error Message from <code class="command">lpd</code> </span><a title="Permalink" class="permalink" href="cha.print.html#aus.d.lpd">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">lpd: your host does not have line printer access
 lpd: queue does not exist
 printer: spooling disabled
-printer: printing disabled</pre></div></div></div></dd><dt id="idm140462679927184"><span class="term ">Checking a Remote <code class="command">cupsd</code>
+printer: printing disabled</pre></div></div></div></dd><dt id="idm139993392953168"><span class="term ">Checking a Remote <code class="command">cupsd</code>
      </span></dt><dd><p>
        A CUPS network server can broadcast its queues by default every 30
        seconds on UDP port <code class="literal">631</code>. Accordingly, the following
@@ -455,7 +455,7 @@ printer: printing disabled</pre></div></div></div></dd><dt id="idm14046267992718
        accepts a print job consisting of a single carriage-return character.
        Nothing should be printed. Possibly, a blank page may be ejected.
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>echo -en "\r" \
-| lp -d queue -h <em class="replaceable ">HOST</em></pre></div></dd><dt id="idm140462679910480"><span class="term ">
+| lp -d queue -h <em class="replaceable ">HOST</em></pre></div></dd><dt id="idm139993392936464"><span class="term ">
       Troubleshooting a Network Printer or Print Server Machine
      </span></dt><dd><p>
        Spoolers running in a print server machine sometimes cause problems when
