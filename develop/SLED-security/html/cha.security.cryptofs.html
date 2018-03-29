@@ -27,7 +27,7 @@ hljs.configure({
   Encrypting files, partitions, and entire disks prevents unauthorized access to your data and protects your confidential files and documents.
  </p><p>
   You can choose between the following encryption options:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140395781296496"><span class="term ">Encrypting a Hard Disk Partition</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140442968746496"><span class="term ">Encrypting a Hard Disk Partition</span></dt><dd><p>
      It is possible to create an encrypted partition with YaST during
      installation or in an already installed system. For further info, see
      <a class="xref" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_inst" title="11.1.1. Creating an Encrypted Partition during Installation">Section 11.1.1, “Creating an Encrypted Partition during Installation”</a> and
@@ -35,16 +35,16 @@ hljs.configure({
      option can also be used for removable media, such as external hard
      disks, as described in
      <a class="xref" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.removables" title="11.1.4. Encrypting the Content of Removable Media">Section 11.1.4, “Encrypting the Content of Removable Media”</a>.
-    </p></dd><dt id="idm140395781292736"><span class="term ">Creating an Encrypted Virtual Disk</span></dt><dd><p>
+    </p></dd><dt id="idm140442968742736"><span class="term ">Creating an Encrypted Virtual Disk</span></dt><dd><p>
      You can create a file-based encrypted virtual disk on your hard disk or a removable
      medium with YaST. The encrypted virtual disk can then be used
      as a regular folder for storing files or directories. For more
      information, refer to
      <a class="xref" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.vdisk" title="11.1.3. Creating an Encrypted Virtual Disk">Section 11.1.3, “Creating an Encrypted Virtual Disk”</a>.
-    </p></dd><dt id="idm140395781290112"><span class="term ">Encrypting Single Files with GPG</span></dt><dd><p>
+    </p></dd><dt id="idm140442968740112"><span class="term ">Encrypting Single Files with GPG</span></dt><dd><p>
      To quickly encrypt one or several files, you can use the GPG tool. See
      <a class="xref" href="cha.security.cryptofs.html#sec.security.cryptofs.gpg" title="11.2. Encrypting Files with GPG">Section 11.2, “Encrypting Files with GPG”</a> for more information.
-    </p></dd></dl></div><div id="idm140395781287488" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Encryption Offers Limited Protection</h6><p>
+    </p></dd></dl></div><div id="idm140442968737488" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Encryption Offers Limited Protection</h6><p>
    Encryption methods described in this chapter cannot protect your running
    system from being compromised. After the encrypted volume is successfully
    mounted, everybody with appropriate permissions can access it. However,
@@ -61,7 +61,7 @@ hljs.configure({
    the partition layout. The standard partitioning proposal as suggested by
    YaST, does not include an encrypted partition by default. Add it
    manually in the partitioning dialog.
-  </p><div class="sect2 " id="sec.security.cryptofs.y2.part_inst"><div class="titlepage"><div><div><h3 class="title" id="sec.security.cryptofs.y2.part_inst"><span class="number">11.1.1 </span><span class="name">Creating an Encrypted Partition during Installation</span> <a title="Permalink" class="permalink" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_inst">#</a></h3></div></div></div><div id="idm140395781281712" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Password Input</h6><p>
+  </p><div class="sect2 " id="sec.security.cryptofs.y2.part_inst"><div class="titlepage"><div><div><h3 class="title" id="sec.security.cryptofs.y2.part_inst"><span class="number">11.1.1 </span><span class="name">Creating an Encrypted Partition during Installation</span> <a title="Permalink" class="permalink" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_inst">#</a></h3></div></div></div><div id="idm140442968731776" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Password Input</h6><p>
      Make sure to memorize the password for your encrypted partitions well.
      Without that password, you cannot access or restore the encrypted data.
     </p></div><p>
@@ -79,7 +79,7 @@ hljs.configure({
       Select the file system, and mount point of this partition.
      </p></li><li class="step "><p>
       Activate the <span class="guimenu">Encrypt device</span> check box.
-     </p><div id="idm140395781272928" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Software Required</h6><p>
+     </p><div id="idm140442968722992" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Additional Software Required</h6><p>
        After checking <span class="guimenu">Encrypt device</span>, a pop-up window
        asking for installing additional software may appear. Confirm to
        install all the required packages to ensure that the encrypted
@@ -118,7 +118,7 @@ hljs.configure({
     during installation. In this case follow the description in
     <a class="xref" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_run" title="11.1.2. Creating an Encrypted Partition on a Running System">Section 11.1.2, “Creating an Encrypted Partition on a Running System”</a> and be aware that
     this action destroys all data on the existing partition.
-   </p></div><div class="sect2 " id="sec.security.cryptofs.y2.part_run"><div class="titlepage"><div><div><h3 class="title" id="sec.security.cryptofs.y2.part_run"><span class="number">11.1.2 </span><span class="name">Creating an Encrypted Partition on a Running System</span> <a title="Permalink" class="permalink" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_run">#</a></h3></div></div></div><div id="idm140395781259616" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Activating Encryption on a Running System</h6><p>
+   </p></div><div class="sect2 " id="sec.security.cryptofs.y2.part_run"><div class="titlepage"><div><div><h3 class="title" id="sec.security.cryptofs.y2.part_run"><span class="number">11.1.2 </span><span class="name">Creating an Encrypted Partition on a Running System</span> <a title="Permalink" class="permalink" href="cha.security.cryptofs.html#sec.security.cryptofs.y2.part_run">#</a></h3></div></div></div><div id="idm140442968709680" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Activating Encryption on a Running System</h6><p>
      It is also possible to create encrypted partitions on a running system.
      However, encrypting an existing partition destroys all data on it, and
      requires re-sizing and restructuring of existing partitions.
