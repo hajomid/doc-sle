@@ -29,8 +29,8 @@ hljs.configure({
   REST calls is <code class="literal">https://YOURSMTSERVER/=/1</code>. The SMT server
   responds with XML data described for each call by an RNC snippet with
   comments.
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm139781213219248"><span class="term "><span class="emphasis"><em>Quick Reference</em></span>
-   </span></dt><dd><div id="idm139781213217936" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: API for authenticating SMT clients.</h6><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127004918848"><span class="term "><span class="emphasis"><em>Quick Reference</em></span>
+   </span></dt><dd><div id="idm140127004917536" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: API for authenticating SMT clients.</h6><p>
       Used internally in the <code class="systemitem">smt-client</code> package.
       Not intended for general administrative use!
      </p></div><div class="verbatim-wrap"><pre class="screen">GET /jobs                            get list of all jobs for client
@@ -64,10 +64,10 @@ GET /product/&lt;productid&gt;/repos       get list of product's repositories</p
      for example:
     </p><div class="verbatim-wrap"><pre class="screen">GET /clients                         same as GET /client
 GET /repos                           same as GET /repo
-GET /product                         same as GET /product</pre></div></dd><dt id="idm139781213209744"><span class="term "><span class="emphasis"><em>Detailed Description</em></span>
+GET /product                         same as GET /product</pre></div></dd><dt id="idm140127004909344"><span class="term "><span class="emphasis"><em>Detailed Description</em></span>
    </span></dt><dd><p>
      API for authenticating clients:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139781213207664"><span class="term "><code class="literal">GET /jobs</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127004907264"><span class="term "><code class="literal">GET /jobs</code>
       </span></dt><dd><p>
         Get list of all jobs for an authenticating client. When getting the
         jobs via this path they will not be set to the status retrieved.
@@ -100,7 +100,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
   &lt;job name="Eject job" created="2010-06-18 16:42:00" description="Job to eject the CD/DVD drawer" exitcode="" expires="" finished="" guid="456" guid_id="30" id="39" message="" parent_id="" persistent="0" retrieved="" status="0" stderr="" stdout="" targeted="" timelag="" type="8" verbose="0"&gt;
     &lt;arguments action="toggle" /&gt;
   &lt;/job&gt;
-&lt;/jobs&gt;</pre></div></dd><dt id="idm139781213201920"><span class="term "><code class="literal">GET /jobs/@next</code>
+&lt;/jobs&gt;</pre></div></dd><dt id="idm140127004901520"><span class="term "><code class="literal">GET /jobs/@next</code>
       </span></dt><dd><p>
         Get the next job for an authenticating client. The job will not be
         set to the retrieved status.
@@ -108,7 +108,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
         Example:
        </p><div class="verbatim-wrap"><pre class="screen">&lt;job id="31" guid="456" type="patchstatus" verbose="false"&gt;
   &lt;arguments&gt;&lt;/arguments&gt;
-&lt;/job&gt;</pre></div></dd><dt id="idm139781213198736"><span class="term "><code class="literal">GET /jobs/&lt;jobid&gt;</code>
+&lt;/job&gt;</pre></div></dd><dt id="idm140127004898336"><span class="term "><code class="literal">GET /jobs/&lt;jobid&gt;</code>
       </span></dt><dd><p>
         Get a job with the specified jobid for an authenticating client. The
         job will be set to the retrieved status.
@@ -183,7 +183,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
       &lt;package&gt;whois&lt;/package&gt;
     &lt;/packages&gt;
   &lt;/arguments&gt;
-&lt;/job&gt;</pre></div></dd><dt id="idm139781213189856"><span class="term "><code class="literal">PUT /job/&lt;jobid&gt;</code>
+&lt;/job&gt;</pre></div></dd><dt id="idm140127004889456"><span class="term "><code class="literal">PUT /job/&lt;jobid&gt;</code>
       </span></dt><dd><p>
         Update a job for an authenticating client using XML data.
        </p><p> A client can only send job results for jobs properly
@@ -207,7 +207,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
           Example for a successful execute job:
          </p><div class="verbatim-wrap"><pre class="screen">&lt;job id="41" guid="abc123" exitcode="0" message="execute successfully finished" status="1" stderr="man:x:13:62:Manual pages viewer:/var/cache/man:/bin/bash" stdout="" /&gt;</pre></div></li></ul></div></dd></dl></div><p>
      API for general access:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139781213174224"><span class="term "><code class="literal">GET /repo/&lt;repoid&gt;</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127004873824"><span class="term "><code class="literal">GET /repo/&lt;repoid&gt;</code>
       </span></dt><dd><p>
         Returns detailed information about the specified repository. The
         <code class="literal">&lt;repoid&gt;</code> can be obtained using the
@@ -235,7 +235,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
   &lt;localpath&gt;/local/htdocs/repo/$RCE/SLES10-SP2-Updates/sles-10-i586&lt;/localpath&gt;
   &lt;mirrored date="1283523440"/&gt;
   &lt;url&gt;https://nu.novell.com/repo/$RCE/SLES10-SP2-Updates/sles-10-i586/&lt;/url&gt;
-&lt;/repo&gt;</pre></div></dd><dt id="idm139781213167792"><span class="term "><code class="literal">GET /repo/&lt;repoid&gt;/patches</code>
+&lt;/repo&gt;</pre></div></dd><dt id="idm140127004867392"><span class="term "><code class="literal">GET /repo/&lt;repoid&gt;/patches</code>
       </span></dt><dd><p>
         Returns a list of all patches in the specified software repository.
         The repoid can be obtained using the <code class="literal">/repos</code> or
@@ -260,7 +260,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
   &lt;patch name="slesp2-heartbeat" category="recommended" id="1524" version="5857"/&gt;
   &lt;patch name="slesp2-curl" category="security" id="1409" version="6402"/&gt;
   ...
-&lt;/patches&gt;</pre></div></dd><dt id="idm139781213162224"><span class="term "><code class="literal">GET /repos</code>
+&lt;/patches&gt;</pre></div></dd><dt id="idm140127004861824"><span class="term "><code class="literal">GET /repos</code>
       </span></dt><dd><p>
         Returns a list of all software repositories known to SMT. Those
         which are currently mirrored on SMT have non-empty mirror time stamp
@@ -282,7 +282,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
   &lt;repo name="SLE10-SDK-SP3-Pool" id="2" mirrored="" target="sles-10-ppc"/&gt;
   &lt;repo name="SLES10-SP2-Updates" id="226" mirrored="1283523440" target="sles-10-i586"/&gt;
   ...
-&lt;/repo&gt;</pre></div></dd><dt id="idm139781213157520"><span class="term "><code class="literal">GET /patch/&lt;patchid&gt;</code>
+&lt;/repo&gt;</pre></div></dd><dt id="idm140127004857120"><span class="term "><code class="literal">GET /patch/&lt;patchid&gt;</code>
       </span></dt><dd><p>
         Returns detailed information about the specified patch. The patchid
         can be obtained via the
@@ -355,7 +355,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
     &lt;reference id="CVE-2009-4212" href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-4212" title="CVE-2009-4212" type="cve"/&gt;
   &lt;/references&gt;
   &lt;title&gt;Security update for Kerberos 5&lt;/title&gt;
-&lt;/patch&gt;</pre></div></dd><dt id="idm139781213149536"><span class="term "><code class="literal">GET /products</code>
+&lt;/patch&gt;</pre></div></dd><dt id="idm140127004849136"><span class="term "><code class="literal">GET /products</code>
       </span></dt><dd><p>
         Returns list of all products known to SMT.
        </p><p>
@@ -378,7 +378,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
   &lt;product name="sle-hae" arch="i686" id="1880" rel="" uiname="SUSE Linux Enterprise High Availability Extension 11 SP1" version="11.1"/&gt;
   &lt;product name="SUSE-Linux-Enterprise-Thin-Client" arch="" id="940" rel="SP1" uiname="SUSE Linux Enterprise 10 Thin Client SP1" version="10"/&gt;
   ...
-&lt;/products&gt;</pre></div></dd><dt id="idm139781213144608"><span class="term "><code class="literal">GET /product/&lt;productid&gt;</code>
+&lt;/products&gt;</pre></div></dd><dt id="idm140127004844208"><span class="term "><code class="literal">GET /product/&lt;productid&gt;</code>
       </span></dt><dd><p> Returns information about the specified product. The
                 productid can be obtained from data returned by the
                   <code class="literal">/products</code> call. </p><p>
@@ -393,7 +393,7 @@ GET /product                         same as GET /product</pre></div></dd><dt id
                                     # to users
 }</pre></div><p>
         Example:
-       </p><div class="verbatim-wrap"><pre class="screen">&lt;product name="SUSE_SLED" arch="x86_64" id="1824" rel="" uiname="SUSE Linux Enterprise Server 11 SP1" version="11.1"/&gt;</pre></div></dd><dt id="idm139781213139600"><span class="term "><code class="literal">GET /product/&lt;productid&gt;/repos</code>
+       </p><div class="verbatim-wrap"><pre class="screen">&lt;product name="SUSE_SLED" arch="x86_64" id="1824" rel="" uiname="SUSE Linux Enterprise Server 11 SP1" version="11.1"/&gt;</pre></div></dd><dt id="idm140127004839200"><span class="term "><code class="literal">GET /product/&lt;productid&gt;/repos</code>
       </span></dt><dd><p> Returns the list of all software repositories for the
                 specified product. The productid can be obtained from
                 the data returned by the <code class="literal">/products</code>

@@ -78,7 +78,7 @@ root</pre></div><div class="calloutlist "><table border="0" summary="Callout lis
      </p></td></tr><tr><td width="5%" valign="top" align="left"><p><a href="#co.sudo.usage.nopw"><span class="callout">4</span></a> </p></td><td valign="top" align="left"><p>
       For a limited amount of time, you do not need to enter the <code class="systemitem">root</code>
       password again.
-     </p></td></tr></table></div><div id="idm140451436934416" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: I/O Redirection</h6><p>
+     </p></td></tr></table></div><div id="idm140128547654400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: I/O Redirection</h6><p>
      I/O redirection does not work as you would probably expect:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code> sudo echo s &gt; /proc/sysrq-trigger
 bash: /proc/sysrq-trigger: Permission denied
@@ -94,7 +94,7 @@ sudo dd if=/proc/1/maps | cat</pre></div></div></div><div class="sect2 " id="sec
     Having to add <code class="command">sudo</code> before every command can be cumbersome. While you
     could specify a shell as a command <code class="command">sudo bash</code>, it is
     recommended to rather use one of the built-in mechanisms to start a shell:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140451436925472"><span class="term "><code class="literal">sudo -s (&lt;command&gt;)</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140128547645456"><span class="term "><code class="literal">sudo -s (&lt;command&gt;)</code>
      </span></dt><dd><p>
        Starts a shell specified by the <code class="envar">SHELL</code> environment
        variable or the target user's default shell. If a command is given, it
@@ -103,7 +103,7 @@ sudo dd if=/proc/1/maps | cat</pre></div></div></div><div class="sect2 " id="sec
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux:~ &gt; </code>sudo -i
 root's password:
 <code class="prompt user">root:/home/tux # </code>exit
-<code class="prompt user">tux:~ &gt; </code></pre></div></dd><dt id="idm140451436920496"><span class="term "><code class="literal">sudo -i (&lt;command&gt;)</code>
+<code class="prompt user">tux:~ &gt; </code></pre></div></dd><dt id="idm140128547640480"><span class="term "><code class="literal">sudo -i (&lt;command&gt;)</code>
      </span></dt><dd><p>
        Like <code class="option">-s</code>, but starts the shell as login shell. This
        means that the shell's start-up files (<code class="filename">.profile</code>
@@ -128,7 +128,7 @@ root's password:
     see <a class="xref" href="cha.adm.sudo.html#tab.adm.sudo.options" title="Useful Flags and Options">Table 2.1, “Useful Flags and Options”</a>.
    </p></div></div><div class="sect1 " id="sec.sudo.conf"><div class="titlepage"><div><div><h2 class="title" id="sec.sudo.conf"><span class="number">2.2 </span><span class="name">Configuring <code class="command">sudo</code></span> <a title="Permalink" class="permalink" href="cha.adm.sudo.html#sec.sudo.conf">#</a></h2></div></div></div><p>
    <code class="command">sudo</code> is a very flexible tool with extensive configuration.
-  </p><div id="idm140451436903920" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Locked yourself out of sudo</h6><p>
+  </p><div id="idm140128547623904" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Locked yourself out of sudo</h6><p>
     If you accidentally locked yourself out of <code class="command">sudo</code>, use <code class="command">su
     -</code> and the <code class="systemitem">root</code> password to get a root shell.
     To fix the error, run <code class="command">visudo</code>.
@@ -151,7 +151,7 @@ root's password:
    </p><div class="verbatim-wrap"><pre class="screen">sudo visudo -f /etc/sudoers.d/<em class="replaceable ">NAME</em></pre></div><p>
     Alternatively with a different editor (for example
     <code class="command">nano</code>):
-   </p><div class="verbatim-wrap"><pre class="screen">sudo EDITOR=<em class="replaceable ">/usr/bin/nano</em> visudo -f /etc/sudoers.d/<em class="replaceable ">NAME</em></pre></div><div id="idm140451436890864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Ignored Files in <code class="filename">/etc/sudoers.d</code></h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen">sudo EDITOR=<em class="replaceable ">/usr/bin/nano</em> visudo -f /etc/sudoers.d/<em class="replaceable ">NAME</em></pre></div><div id="idm140128547610848" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Ignored Files in <code class="filename">/etc/sudoers.d</code></h6><p>
      The <code class="literal">#includedir</code> command in
      <code class="filename">/etc/sudoers</code>, used for
      <code class="filename">/etc/sudoers.d</code>, ignores files that end in
@@ -251,26 +251,26 @@ Defaults env_delete -= "JRE_HOME" # Remove JRE_HOME</pre></div>
     will only cover the basics. Each rule follows the basic scheme
     (<code class="literal">[]</code> marks optional parts):
    </p><div class="verbatim-wrap"><pre class="screen">#Who      Where         As whom      Tag                What
-User_List Host_List = [(User_List)] [NOPASSWD:|PASSWD:] Cmnd_List</pre></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Syntax for sudoers Rules </span><a title="Permalink" class="permalink" href="cha.adm.sudo.html#idm140451436840112">#</a></h6></div><dl class="variablelist"><dt id="idm140451436839360"><span class="term "><code class="literal">User_List</code>
+User_List Host_List = [(User_List)] [NOPASSWD:|PASSWD:] Cmnd_List</pre></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Syntax for sudoers Rules </span><a title="Permalink" class="permalink" href="cha.adm.sudo.html#idm140128547560096">#</a></h6></div><dl class="variablelist"><dt id="idm140128547559344"><span class="term "><code class="literal">User_List</code>
      </span></dt><dd><p>
        One or more (separated by <code class="literal">,</code>) identifiers: Either a
        user name, a group in the format <code class="literal">%GROUPNAME</code> or a user
        ID in the format <code class="literal">#UID</code>. Negation can be performed with
        a <code class="literal">!</code> prefix.
-      </p></dd><dt id="idm140451436835376"><span class="term "><code class="literal">Host_List</code>
+      </p></dd><dt id="idm140128547555360"><span class="term "><code class="literal">Host_List</code>
      </span></dt><dd><p>
        One or more (separated by <code class="literal">,</code>) identifiers: Either a
        (fully qualified) host name or an IP address. Negation can be performed
        with a <code class="literal">!</code> prefix. <code class="literal">ALL</code> is the usual
        choice for <code class="literal">Host_List</code>.
-      </p></dd><dt id="idm140451436831376"><span class="term "><code class="literal">NOPASSWD:|PASSWD:</code>
+      </p></dd><dt id="idm140128547551360"><span class="term "><code class="literal">NOPASSWD:|PASSWD:</code>
      </span></dt><dd><p>
        The user will not be prompted for a password when running commands
        matching <code class="literal">CMDSPEC</code> after <code class="literal">NOPASSWD:</code>.
       </p><p>
        <code class="literal">PASSWD</code> is the default, it only needs to be specified
        when both are on the same line:
-      </p><div class="verbatim-wrap"><pre class="screen">tux ALL = PASSWD: /usr/bin/foo, NOPASSWD: /usr/bin/bar</pre></div></dd><dt id="idm140451436826864"><span class="term "><code class="literal">Cmnd_List</code>
+      </p><div class="verbatim-wrap"><pre class="screen">tux ALL = PASSWD: /usr/bin/foo, NOPASSWD: /usr/bin/bar</pre></div></dd><dt id="idm140128547546848"><span class="term "><code class="literal">Cmnd_List</code>
      </span></dt><dd><p>
        One or more (separated by <code class="literal">,</code>) specifiers: A path to an
        executable, followed by allowed arguments or nothing.
@@ -288,7 +288,7 @@ User_List Host_List = [(User_List)] [NOPASSWD:|PASSWD:] Cmnd_List</pre></div><di
    </p><div class="verbatim-wrap"><pre class="screen">tux ALL = /usr/bin/systemctl restart apache2</pre></div><p>
     A rule that allows <code class="systemitem">tux</code> to run <code class="command">wall</code> as
     <code class="systemitem">admin</code> with no arguments:
-   </p><div class="verbatim-wrap"><pre class="screen">tux ALL = (admin) /usr/bin/wall ""</pre></div><div id="idm140451436814928" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Dangerous constructs</h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen">tux ALL = (admin) /usr/bin/wall ""</pre></div><div id="idm140128547534912" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Dangerous constructs</h6><p>
      Constructs of the kind
     </p><div class="verbatim-wrap"><pre class="screen">ALL ALL = ALL</pre></div><p>
      <span class="emphasis"><em>must not</em></span> be used without <code class="literal">Defaults
@@ -333,7 +333,7 @@ User_List Host_List = [(User_List)] [NOPASSWD:|PASSWD:] Cmnd_List</pre></div><di
      </p><p>
       Comment out or remove the allow-everything rule in
       <code class="filename">/etc/sudoers</code>:
-     </p><div class="verbatim-wrap"><pre class="screen">ALL     ALL=(ALL) ALL   # WARNING! Only use this together with 'Defaults targetpw'!</pre></div><div id="idm140451436791152" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Dangerous rule in sudoers</h6><p>
+     </p><div class="verbatim-wrap"><pre class="screen">ALL     ALL=(ALL) ALL   # WARNING! Only use this together with 'Defaults targetpw'!</pre></div><div id="idm140128547511136" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Dangerous rule in sudoers</h6><p>
        Do not forget this step, otherwise <span class="emphasis"><em>any</em></span> user can
        execute <span class="emphasis"><em>any</em></span> command as <code class="systemitem">root</code>!
       </p></div></li><li class="step "><p>
