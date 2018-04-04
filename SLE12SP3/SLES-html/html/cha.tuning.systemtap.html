@@ -100,14 +100,14 @@ hljs.configure({
     <code class="systemitem">root</code> privileges or must be a member of the
     <code class="systemitem">stapdev</code> or
     <code class="systemitem">stapusr</code> group.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279394432512"><span class="term "><code class="command">stap</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454087758816"><span class="term "><code class="command">stap</code>
      </span></dt><dd><p>
        SystemTap front-end. Runs a SystemTap script (either from file, or
        from standard input). It translates the script into C code, compiles
        it, and loads the resulting kernel module into a running Linux
        kernel. Then, the requested system trace or probe functions are
        performed.
-      </p></dd><dt id="idm140279394430128"><span class="term "><code class="command">staprun</code>
+      </p></dd><dt id="idm140454087756432"><span class="term "><code class="command">staprun</code>
      </span></dt><dd><p>
        SystemTap back-end. Loads and unloads kernel modules produced by the
        SystemTap front-end.
@@ -124,7 +124,7 @@ hljs.configure({
     access rights accordingly.  Also adjust the permissions of the
     <code class="command">staprun</code> command if the security implications are
     appropriate for your environment.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279394422624"><span class="term "><code class="systemitem">stapdev</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454087748928"><span class="term "><code class="systemitem">stapdev</code>
      </span></dt><dd><p>
        Members of this group can run SystemTap scripts with
        <code class="command">stap</code>, or run SystemTap instrumentation modules
@@ -132,7 +132,7 @@ hljs.configure({
        involves compiling scripts into kernel modules and loading them into
        the kernel, members of this group still have effective <code class="systemitem">root</code>
        access.
-      </p></dd><dt id="idm140279394418000"><span class="term "><code class="systemitem">stapusr</code>
+      </p></dd><dt id="idm140454087744304"><span class="term "><code class="systemitem">stapusr</code>
      </span></dt><dd><p>
        Members of this group are only allowed to run SystemTap
        instrumentation modules with <code class="command">staprun</code>. In addition,
@@ -143,22 +143,22 @@ hljs.configure({
       </p></dd></dl></div></div><div class="sect2 " id="sec.tuning.systemtap.concept.dir"><div class="titlepage"><div><div><h3 class="title" id="sec.tuning.systemtap.concept.dir"><span class="number">4.1.4 </span><span class="name">Important Files and Directories</span> <a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#sec.tuning.systemtap.concept.dir">#</a></h3></div></div></div><p>
     The following list gives an overview of the SystemTap main files and
     directories.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279394410320"><span class="term "><code class="filename">/lib/modules/<em class="replaceable ">KERNEL_VERSION</em>/systemtap/</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454087736624"><span class="term "><code class="filename">/lib/modules/<em class="replaceable ">KERNEL_VERSION</em>/systemtap/</code>
      </span></dt><dd><p>
        Holds the SystemTap instrumentation modules.
-      </p></dd><dt id="idm140279394407744"><span class="term "><code class="filename">/usr/share/systemtap/tapset/</code>
+      </p></dd><dt id="idm140454087734048"><span class="term "><code class="filename">/usr/share/systemtap/tapset/</code>
      </span></dt><dd><p>
        Holds the standard library of tapsets.
-      </p></dd><dt id="idm140279394405616"><span class="term "><code class="filename">/usr/share/doc/packages/systemtap/examples</code>
+      </p></dd><dt id="idm140454087731920"><span class="term "><code class="filename">/usr/share/doc/packages/systemtap/examples</code>
      </span></dt><dd><p>
        Holds several example SystemTap scripts for various purposes.
        Only available if the
        <code class="systemitem">systemtap-docs</code> package is
        installed.
-      </p></dd><dt id="idm140279394402672"><span class="term "><code class="filename">~/.systemtap/cache</code>
+      </p></dd><dt id="idm140454087728976"><span class="term "><code class="filename">~/.systemtap/cache</code>
      </span></dt><dd><p>
        Data directory for cached SystemTap files.
-      </p></dd><dt id="idm140279394400544"><span class="term "><code class="filename">/tmp/stap*</code>
+      </p></dd><dt id="idm140454087726848"><span class="term "><code class="filename">/tmp/stap*</code>
      </span></dt><dd><p>
        Temporary directory for SystemTap files, including translated C code
        and kernel object.
@@ -170,7 +170,7 @@ hljs.configure({
    probe with SystemTap, you need to install a set of the following
    packages. This set should exactly match the kernel version and flavor
    (indicated by <code class="literal">*</code> in the overview below).
-  </p><div id="idm140279394395552" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Repository for Packages with Debugging Information</h6><p>
+  </p><div id="idm140454087721792" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Repository for Packages with Debugging Information</h6><p>
     If you subscribed your system for online updates, you can find
     <span class="quote">“<span class="quote">debuginfo</span>”</span> packages in the
     <code class="literal">*-Debuginfo-Updates</code> online installation repository
@@ -247,12 +247,12 @@ Pass <a class="xref" href="cha.tuning.systemtap.html#co.tuning.stap.pass5"><span
    
   </p></div><div class="sect1 " id="sec.tuning.systemtap.syntax"><div class="titlepage"><div><div><h2 class="title" id="sec.tuning.systemtap.syntax"><span class="number">4.3 </span><span class="name">Script Syntax</span> <a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax">#</a></h2></div></div></div><p>
    SystemTap scripts consist of the following two components:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279394354176"><span class="term "><a class="xref" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax.events" title="4.3.2. SystemTap Events (Probe Points)">SystemTap Events (Probe Points)</a>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454087680352"><span class="term "><a class="xref" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax.events" title="4.3.2. SystemTap Events (Probe Points)">SystemTap Events (Probe Points)</a>
     </span></dt><dd><p>
       Name the kernel events at the associated handler should be executed.
       Examples for events are entering or exiting a certain function, a
       timer expiring, or starting or terminating a session.
-     </p></dd><dt id="idm140279394351552"><span class="term "><a class="xref" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax.handlers" title="4.3.3. SystemTap Handlers (Probe Body)">SystemTap Handlers (Probe Body)</a>
+     </p></dd><dt id="idm140454087677728"><span class="term "><a class="xref" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax.handlers" title="4.3.3. SystemTap Handlers (Probe Body)">SystemTap Handlers (Probe Body)</a>
     </span></dt><dd><p>
       Series of script language statements that specify the work to be done
       whenever a certain event occurs. This normally includes extracting
@@ -433,23 +433,23 @@ hald(2360) open
      functions can be used as <code class="literal">printf</code> arguments.
     </p><p>
      Among the most commonly used SystemTap functions are the following:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279397170048"><span class="term ">tid()</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454090496240"><span class="term ">tid()</span></dt><dd><p>
         ID of the current thread.
-       </p></dd><dt id="idm140279397168224"><span class="term ">pid()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090494416"><span class="term ">pid()</span></dt><dd><p>
         Process ID of the current thread.
-       </p></dd><dt id="idm140279397166400"><span class="term ">uid()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090492592"><span class="term ">uid()</span></dt><dd><p>
         ID of the current user.
-       </p></dd><dt id="idm140279397164576"><span class="term ">cpu()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090490768"><span class="term ">cpu()</span></dt><dd><p>
         Current CPU number.
-       </p></dd><dt id="idm140279397162768"><span class="term ">execname()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090488960"><span class="term ">execname()</span></dt><dd><p>
         Name of the current process.
-       </p></dd><dt id="idm140279397160944"><span class="term ">gettimeofday_s()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090487136"><span class="term ">gettimeofday_s()</span></dt><dd><p>
         Number of seconds since Unix epoch (January 1, 1970).
-       </p></dd><dt id="idm140279397159104"><span class="term ">ctime()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090485296"><span class="term ">ctime()</span></dt><dd><p>
         Convert time into a string.
-       </p></dd><dt id="idm140279397157280"><span class="term ">pp()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090483472"><span class="term ">pp()</span></dt><dd><p>
         String describing the probe point currently being handled.
-       </p></dd><dt id="idm140279397155424"><span class="term ">thread_indent()</span></dt><dd><p>
+       </p></dd><dt id="idm140454090481616"><span class="term ">thread_indent()</span></dt><dd><p>
         Useful function for organizing print results. It (internally) stores
         an indentation counter for each thread (<code class="literal">tid()</code>).
         The function takes one argument, an indentation delta, indicating
@@ -496,7 +496,7 @@ hald(2360) open
       evocation. To share variables between probes, declare them global
       anywhere in the script. To do so, use the <code class="literal">global</code>
       keyword outside of the probes:
-     </p><div class="complex-example"><div class="example" id="idm140279397139120"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.4: </span><span class="name">Using Global Variables </span><a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#idm140279397139120">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">global count_jiffies, count_ms
+     </p><div class="complex-example"><div class="example" id="idm140454090465376"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.4: </span><span class="name">Using Global Variables </span><a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#idm140454090465376">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">global count_jiffies, count_ms
 probe timer.jiffies(100) { count_jiffies ++ }
 probe timer.ms(100) { count_ms ++ }
 probe timer.ms(12345)
@@ -519,7 +519,7 @@ probe timer.ms(12345)
       </p></div></div></div></div><div class="sect4 " id="sec.tuning.systemtap.syntax.handlers.others.conditional"><div class="titlepage"><div><div><h5 class="title" id="sec.tuning.systemtap.syntax.handlers.others.conditional"><span class="number">4.3.3.2.2 </span><span class="name">Conditional Statements</span> <a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#sec.tuning.systemtap.syntax.handlers.others.conditional">#</a></h5></div></div></div><p>
       There are several conditional statements that you can use in
       SystemTap scripts. The following are probably the most common:
-     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279397131600"><span class="term ">If/Else Statements</span></dt><dd><p>
+     </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454090457856"><span class="term ">If/Else Statements</span></dt><dd><p>
          They are expressed in the following format:
         </p><div class="verbatim-wrap"><pre class="screen">if (<em class="replaceable ">CONDITION</em>)<span id="co.tuning.systemtap.cond.if"></span><span class="callout">1</span><em class="replaceable ">STATEMENT1</em><span id="co.tuning.systemtap.cond.if.statement1"></span><span class="callout">2</span>
 else<span id="co.tuning.systemtap.cond.else"></span><span class="callout">3</span><em class="replaceable ">STATEMENT2</em><span id="co.tuning.systemtap.cond.if.statement2"></span><span class="callout">4</span></pre></div><p>
@@ -540,7 +540,7 @@ else<span id="co.tuning.systemtap.cond.else"></span><span class="callout">3</spa
          and
          <a class="xref" href="cha.tuning.systemtap.html#co.tuning.systemtap.cond.if.statement2"><span class="callout">4</span></a>
          can also be statement blocks.
-        </p></dd><dt id="idm140279397118768"><span class="term ">While Loops</span></dt><dd><p>
+        </p></dd><dt id="idm140454090445024"><span class="term ">While Loops</span></dt><dd><p>
          They are expressed in the following format:
         </p><div class="verbatim-wrap"><pre class="screen">while (<em class="replaceable ">CONDITION</em>)<span id="co.tuning.systemtap.cond.while"></span><span class="callout">1</span><em class="replaceable ">STATEMENT</em><span id="co.tuning.systemtap.cond.while.statement"></span><span class="callout">2</span></pre></div><p>
          As long as <code class="literal">condition</code> is non-zero, the statement
@@ -549,7 +549,7 @@ else<span id="co.tuning.systemtap.cond.else"></span><span class="callout">3</spa
          <a class="xref" href="cha.tuning.systemtap.html#co.tuning.systemtap.cond.while.statement"><span class="callout">2</span></a>
          can also be a statement block. It must change a value so
          <code class="literal">condition</code> will eventually be zero.
-        </p></dd><dt id="idm140279397111408"><span class="term ">For Loops</span></dt><dd><p>
+        </p></dd><dt id="idm140454090437600"><span class="term ">For Loops</span></dt><dd><p>
          They are a shortcut for <code class="literal">while</code> loops and are
          expressed in the following format:
         </p><div class="verbatim-wrap"><pre class="screen">for (<em class="replaceable ">INITIALIZATION</em><span id="co.tuning.systemtap.cond.for.init"></span><span class="callout">1</span>; <em class="replaceable ">CONDITIONAL</em><span id="co.tuning.systemtap.cond.for.cond"></span><span class="callout">2</span>; <em class="replaceable ">INCREMENT</em><span id="co.tuning.systemtap.cond.for.increment"></span><span class="callout">3</span>) statement</pre></div><p>
@@ -564,7 +564,7 @@ else<span id="co.tuning.systemtap.cond.else"></span><span class="callout">3</spa
          <a class="xref" href="cha.tuning.systemtap.html#co.tuning.systemtap.cond.for.increment"><span class="callout">3</span></a>
          is used to increment the loop counter. It is executed at the end of
          each loop iteration.
-        </p></dd><dt id="idm140279397102080"><span class="term ">Conditional Operators</span></dt><dd><p>
+        </p></dd><dt id="idm140454090428272"><span class="term ">Conditional Operators</span></dt><dd><p>
          The following operators can be used in conditional statements:
         </p><p><span class="formalpara-title">==: </span>
           Is equal to
@@ -582,7 +582,7 @@ else<span id="co.tuning.systemtap.cond.else"></span><span class="callout">3</spa
   </p><p>
    This section describes a rather simple example script in more detail:
    <code class="filename">/usr/share/doc/packages/systemtap/examples/network/tcp_connections.stp</code>.
-  </p><div class="example" id="idm140279397090080"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.5: </span><span class="name">Monitoring Incoming TCP Connections with <code class="literal">tcp_connections.stp</code> </span><a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#idm140279397090080">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">#! /usr/bin/env stap
+  </p><div class="example" id="idm140454090416208"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 4.5: </span><span class="name">Monitoring Incoming TCP Connections with <code class="literal">tcp_connections.stp</code> </span><a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#idm140454090416208">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">#! /usr/bin/env stap
 
 probe begin {
   printf("%6s %16s %6s %6s %16s\n",
@@ -654,17 +654,17 @@ probe kernel.function("tcp_accept").return?,
   </p></div><div class="sect1 " id="sec.tuning.systemtap.more"><div class="titlepage"><div><div><h2 class="title" id="sec.tuning.systemtap.more"><span class="number">4.6 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.tuning.systemtap.html#sec.tuning.systemtap.more">#</a></h2></div></div></div><p>
    This chapter only provides a short SystemTap overview. Refer to the
    following links for more information about SystemTap:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140279397061728"><span class="term "><a class="link" href="http://sourceware.org/systemtap/" target="_blank">http://sourceware.org/systemtap/</a>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140454090387920"><span class="term "><a class="link" href="http://sourceware.org/systemtap/" target="_blank">http://sourceware.org/systemtap/</a>
     </span></dt><dd><p>
       SystemTap project home page.
-     </p></dd><dt id="idm140279397059536"><span class="term "><a class="link" href="http://sourceware.org/systemtap/wiki/" target="_blank">http://sourceware.org/systemtap/wiki/</a>
+     </p></dd><dt id="idm140454090385728"><span class="term "><a class="link" href="http://sourceware.org/systemtap/wiki/" target="_blank">http://sourceware.org/systemtap/wiki/</a>
     </span></dt><dd><p>
       Huge collection of useful information about SystemTap, ranging from
       detailed user and developer documentation to reviews and comparisons
       with other tools, or Frequently Asked Questions and tips. Also
       contains collections of SystemTap scripts, examples and usage stories
       and lists recent talks and papers about SystemTap.
-     </p></dd><dt id="idm140279397056992"><span class="term "><a class="link" href="http://sourceware.org/systemtap/documentation.html" target="_blank">http://sourceware.org/systemtap/documentation.html</a>
+     </p></dd><dt id="idm140454090383184"><span class="term "><a class="link" href="http://sourceware.org/systemtap/documentation.html" target="_blank">http://sourceware.org/systemtap/documentation.html</a>
     </span></dt><dd><p>
       Features a <em class="citetitle ">SystemTap Tutorial</em>, a
       <em class="citetitle ">SystemTap Beginner's Guide</em>, a <em class="citetitle ">Tapset
