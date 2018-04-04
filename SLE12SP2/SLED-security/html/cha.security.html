@@ -62,7 +62,7 @@ hljs.configure({
    resources or data in question. A Web server might be less restrictive in
    this respect, but you still would not want it to disclose your personal
    data to an anonymous user.
-  </p><a id="idm140386191984560" class="indexterm"></a><p>
+  </p><a id="idm139655225251264" class="indexterm"></a><p>
    In the list above, the first case is the one where the highest amount of
    human interaction is involved (such as when you are contacting a bank
    employee and are required to prove that you are the person owning that
@@ -78,7 +78,7 @@ hljs.configure({
    to target receptionists, service people working with the company, or even
    family members. Often such an attack based on social engineering
    is only discovered at a much later time.
-  </p><a id="idm140386191981632" class="indexterm"></a><a id="idm140386191980608" class="indexterm"></a><p>
+  </p><a id="idm139655225248336" class="indexterm"></a><a id="idm139655225247312" class="indexterm"></a><p>
    A person wanting to obtain unauthorized access to your data could also
    use the traditional way and try to get at your hardware directly.
    Therefore, the machine should be protected against any tampering so that
@@ -86,9 +86,9 @@ hljs.configure({
    to backups and even any network cables or power cords. Also secure the
    boot procedure, because there are some well-known key combinations that
    might provoke unusual behavior. Protect yourself against this by setting
-   passwords for the BIOS and the boot loader. <a id="idm140386191978576" class="indexterm"></a>
+   passwords for the BIOS and the boot loader. <a id="idm139655225245280" class="indexterm"></a>
   </p><p>
-   <a id="idm140386191976784" class="indexterm"></a> Serial terminals connected to serial ports are still used in
+   <a id="idm139655225243488" class="indexterm"></a> Serial terminals connected to serial ports are still used in
    many places. Unlike network interfaces, they do not rely on network
    protocols to communicate with the host. A simple cable or an infrared
    port is used to send plain characters back and forth between the devices.
@@ -156,7 +156,7 @@ hljs.configure({
      passwords like <span class="quote">“<span class="quote">beerbuddy</span>”</span> or <span class="quote">“<span class="quote">jasmine76</span>”</span> are
      easily guessed even by someone who has only some casual knowledge about
      you.
-    </p><a id="idm140386190629232" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.boot"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.boot"><span class="number">1.1.1.2 </span><span class="name">The Boot Procedure</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.boot">#</a></h4></div></div></div><a id="idx.security_booting" class="indexterm"></a><p>
+    </p><a id="idm139655223955744" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.boot"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.boot"><span class="number">1.1.1.2 </span><span class="name">The Boot Procedure</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.boot">#</a></h4></div></div></div><a id="idx.security_booting" class="indexterm"></a><p>
      Configure your system so it cannot be booted from a removable device,
      either by removing the drives entirely or by setting a BIOS password
      and configuring the BIOS to allow booting from a hard disk only.
@@ -170,7 +170,7 @@ hljs.configure({
      also the first authority to grant
      <code class="systemitem">root</code> permissions at system
      start-up.
-    </p><a id="idm140386190622960" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.permissions"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.permissions"><span class="number">1.1.1.3 </span><span class="name">File Permissions</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.permissions">#</a></h4></div></div></div><a id="idx.security_permissions" class="indexterm"></a><p>
+    </p><a id="idm139655223949408" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.permissions"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.permissions"><span class="number">1.1.1.3 </span><span class="name">File Permissions</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.permissions">#</a></h4></div></div></div><a id="idx.security_permissions" class="indexterm"></a><p>
      As a general rule, always work with the most restrictive privileges
      possible for a given task. For example, it is definitely not necessary
      to be <code class="systemitem">root</code> to read or write
@@ -216,7 +216,7 @@ hljs.configure({
      <code class="filename">/etc/permissions</code> or consult the manual page of
      <code class="command">chmod</code>
      (<code class="command">man</code> <code class="option">chmod</code>).
-    </p><a id="idm140386190603248" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.bugs"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.bugs"><span class="number">1.1.1.4 </span><span class="name">Buffer Overflows and Format String Bugs</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.bugs">#</a></h4></div></div></div><a id="idm140386190601088" class="indexterm"></a><p>
+    </p><a id="idm139655223929568" class="indexterm"></a></div><div class="sect3 " id="sec.security.general.overview.local.bugs"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.bugs"><span class="number">1.1.1.4 </span><span class="name">Buffer Overflows and Format String Bugs</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.bugs">#</a></h4></div></div></div><a id="idm139655223927408" class="indexterm"></a><p>
      Special care must be taken whenever a program needs to process data
      that could be changed by a user, but this is more of an issue for the
      programmer of an application than for regular users. The programmer
@@ -253,7 +253,7 @@ hljs.configure({
      can also be exploited over a network link. Accordingly, buffer
      overflows and format string bugs should be classified as being relevant
      for both local and network security.
-    </p></div><div class="sect3 " id="sec.security.general.overview.local.virus"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.virus"><span class="number">1.1.1.5 </span><span class="name">Viruses</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.virus">#</a></h4></div></div></div><a id="idm140386208304624" class="indexterm"></a><p>
+    </p></div><div class="sect3 " id="sec.security.general.overview.local.virus"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.local.virus"><span class="number">1.1.1.5 </span><span class="name">Viruses</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.local.virus">#</a></h4></div></div></div><a id="idm139655223919136" class="indexterm"></a><p>
      Contrary to popular opinion, there are viruses that run on Linux.
      However, the viruses that are known were released by their authors as a
      <span class="emphasis"><em>proof of concept</em></span> that the technique works as
@@ -281,7 +281,7 @@ hljs.configure({
     </p><p>
      Viruses should not be confused with worms, which belong entirely to the
      world of networks. Worms do not need a host to spread.
-    </p><a id="idm140386190590112" class="indexterm"></a></div></div><div class="sect2 " id="sec.security.general.overview.network"><div class="titlepage"><div><div><h3 class="title" id="sec.security.general.overview.network"><span class="number">1.1.2 </span><span class="name">Network Security</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network">#</a></h3></div></div></div><a id="idx.security_network" class="indexterm"></a><p>
+    </p><a id="idm139655223912240" class="indexterm"></a></div></div><div class="sect2 " id="sec.security.general.overview.network"><div class="titlepage"><div><div><h3 class="title" id="sec.security.general.overview.network"><span class="number">1.1.2 </span><span class="name">Network Security</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network">#</a></h3></div></div></div><a id="idx.security_network" class="indexterm"></a><p>
     Network security is important for protecting from an attack that is
     started outside the network. The typical login procedure requiring a
     user name and a password for user authentication is still a local
@@ -289,7 +289,7 @@ hljs.configure({
     differentiate between the two security aspects. What happens until the
     actual authentication is network security and anything that happens
     afterward is local security.
-   </p><div class="sect3 " id="sec.security.general.overview.network.x11"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.x11"><span class="number">1.1.2.1 </span><span class="name">X Window System and X Authentication</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.x11">#</a></h4></div></div></div><a id="idm140386190585232" class="indexterm"></a><a id="idm140386190584336" class="indexterm"></a><p>
+   </p><div class="sect3 " id="sec.security.general.overview.network.x11"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.x11"><span class="number">1.1.2.1 </span><span class="name">X Window System and X Authentication</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.x11">#</a></h4></div></div></div><a id="idm139655240426944" class="indexterm"></a><a id="idm139655243104064" class="indexterm"></a><p>
      As mentioned at the beginning, network transparency is one of the
      central characteristics of a Unix system. X, the windowing system of
      Unix operating systems, can use this feature in an impressive
@@ -331,13 +331,13 @@ hljs.configure({
      server side and setting a DISPLAY variable for the shell on the remote
      host. Further details about SSH can be found in
      <a class="xref" href="cha.ssh.html" title="Chapter 14. SSH: Secure Network Operations">Chapter 14, <em>SSH: Secure Network Operations</em></a>.
-    </p><div id="idm140386190576528" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: X Forwarding Can Be Insecure</h6><p>
+    </p><div id="idm139655223900384" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: X Forwarding Can Be Insecure</h6><p>
       
       If you do not consider the host where you log in to be a secure host,
       do not use X forwarding. If X forwarding is enabled, an attacker could
       authenticate via your SSH connection. The attacker could then intrude
       on your X server and, for example, read your keyboard input.
-     </p></div></div><div class="sect3 " id="sec.security.general.overview.network.bugs"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.bugs"><span class="number">1.1.2.2 </span><span class="name">Buffer Overflows and Format String Bugs</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.bugs">#</a></h4></div></div></div><a id="idm140386190573424" class="indexterm"></a><p>
+     </p></div></div><div class="sect3 " id="sec.security.general.overview.network.bugs"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.bugs"><span class="number">1.1.2.2 </span><span class="name">Buffer Overflows and Format String Bugs</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.bugs">#</a></h4></div></div></div><a id="idm139655223897568" class="indexterm"></a><p>
      As discussed in
      <a class="xref" href="cha.security.html#sec.security.general.overview.local.bugs" title="1.1.1.4. Buffer Overflows and Format String Bugs">Section 1.1.1.4, “Buffer Overflows and Format String Bugs”</a>, buffer
      overflows and format string bugs should be classified as issues
@@ -407,7 +407,7 @@ hljs.configure({
      abruptly, even if only for a short time, it makes it easier for him to
      push the active attack, because the host cannot interfere
      with the attack for some time.
-    </p></div><div class="sect3 " id="sec.security.general.overview.network.dns"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.dns"><span class="number">1.1.2.5 </span><span class="name">DNS Poisoning</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.dns">#</a></h4></div></div></div><a id="idm140386190553664" class="indexterm"></a><a id="idm140386190552640" class="indexterm"></a><p>
+    </p></div><div class="sect3 " id="sec.security.general.overview.network.dns"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.dns"><span class="number">1.1.2.5 </span><span class="name">DNS Poisoning</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.dns">#</a></h4></div></div></div><a id="idm139655223879936" class="indexterm"></a><a id="idm139655223878912" class="indexterm"></a><p>
      DNS poisoning means that the attacker corrupts the cache of a DNS
      server by replying to it with spoofed DNS reply packets, trying to get
      the server to send certain data to a victim who is requesting
@@ -420,7 +420,7 @@ hljs.configure({
      needs to target a well-timed DoS attack at the name server as well.
      Protect yourself by using encrypted connections that can verify
      the identity of the hosts to which to connect.
-    </p></div><div class="sect3 " id="sec.security.general.overview.network.worms"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.worms"><span class="number">1.1.2.6 </span><span class="name">Worms</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.worms">#</a></h4></div></div></div><a id="idm140386190548944" class="indexterm"></a><p>
+    </p></div><div class="sect3 " id="sec.security.general.overview.network.worms"><div class="titlepage"><div><div><h4 class="title" id="sec.security.general.overview.network.worms"><span class="number">1.1.2.6 </span><span class="name">Worms</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.overview.network.worms">#</a></h4></div></div></div><a id="idm139655223875280" class="indexterm"></a><p>
      Worms are often confused with viruses, but there is a clear difference
      between the two. Unlike viruses, worms do not need to infect a host
      program to live. Instead, they are specialized to spread as quickly as
@@ -432,9 +432,9 @@ hljs.configure({
      that an updated version of the affected program is available on time.
      That is only useful if the administrator actually installs the security
      updates on the systems in question.
-     <a id="idm140386190546704" class="indexterm"></a>
-     <a id="idm140386190545872" class="indexterm"></a>
-    </p></div></div></div><div class="sect1 " id="sec.security.general.tips"><div class="titlepage"><div><div><h2 class="title" id="sec.security.general.tips"><span class="number">1.2 </span><span class="name">Some General Security Tips and Tricks</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.tips">#</a></h2></div></div></div><a id="idm140386190543408" class="indexterm"></a><p>
+     <a id="idm139655223873040" class="indexterm"></a>
+     <a id="idm139655223872208" class="indexterm"></a>
+    </p></div></div></div><div class="sect1 " id="sec.security.general.tips"><div class="titlepage"><div><div><h2 class="title" id="sec.security.general.tips"><span class="number">1.2 </span><span class="name">Some General Security Tips and Tricks</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.tips">#</a></h2></div></div></div><a id="idm139655223869744" class="indexterm"></a><p>
    To handle security competently, it is important to observe some
    recommendations. You may find the following list of rules useful in
    dealing with basic security concerns:
@@ -481,7 +481,7 @@ hljs.configure({
      on new versions of such programs (<code class="command">bind</code>,
      <code class="command">postfix</code>, <code class="command">ssh</code>, etc.). The same
      should apply to software relevant to local security.
-    </p></li><li class="listitem "><a id="idm140386190520352" class="indexterm"></a><p>
+    </p></li><li class="listitem "><a id="idm139655223846688" class="indexterm"></a><p>
      Change the <code class="filename">/etc/permissions</code> file to optimize
      the permissions of files crucial to your system's security. If you
      remove the setuid bit from a program, it might well be that it
@@ -521,7 +521,7 @@ hljs.configure({
      of a security software package, which was fortunately discovered very
      quickly. If you install a binary package, have no doubts about the site
      from which you downloaded it.
-    </p><a id="idm140386190507344" class="indexterm"></a><a id="idm140386190506320" class="indexterm"></a><p>
+    </p><a id="idm139655223833680" class="indexterm"></a><a id="idm139655223832656" class="indexterm"></a><p>
      SUSE's RPM packages are gpg-signed. The key used by SUSE for
      signing is:
     </p><div class="verbatim-wrap"><pre class="screen">ID:9C800ACA 2000-10-19 SUSE Package Signing Key &lt;build@suse.de&gt;
@@ -546,7 +546,7 @@ hljs.configure({
      tcpd and hosts_access (<code class="command">man</code> <code class="option">8
      tcpd</code>,
      <code class="command">man</code> <code class="option">hosts_access</code>).
-    </p><a id="idm140386190496688" class="indexterm"></a></li><li class="listitem "><p>
+    </p><a id="idm139655223823024" class="indexterm"></a></li><li class="listitem "><p>
      Use SuSEfirewall to enhance the security provided by
      <code class="literal">tcpd</code> (<code class="literal">tcp_wrapper</code>).
     </p></li><li class="listitem "><p>
@@ -559,7 +559,7 @@ hljs.configure({
      <code class="filename">/etc/suspend.key</code>, and modifies
      <code class="filename">/etc/suspend.conf</code> to use encryption for suspend
      images.
-    </p></li></ul></div></div><div class="sect1 " id="sec.security.general.report"><div class="titlepage"><div><div><h2 class="title" id="sec.security.general.report"><span class="number">1.3 </span><span class="name">Using the Central Security Reporting Address</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.report">#</a></h2></div></div></div><a id="idm140386190488720" class="indexterm"></a><p>
+    </p></li></ul></div></div><div class="sect1 " id="sec.security.general.report"><div class="titlepage"><div><div><h2 class="title" id="sec.security.general.report"><span class="number">1.3 </span><span class="name">Using the Central Security Reporting Address</span> <a title="Permalink" class="permalink" href="cha.security.html#sec.security.general.report">#</a></h2></div></div></div><a id="idm139655223814992" class="indexterm"></a><p>
    If you discover a security-related problem (check the available update
    packages first), write an e-mail to &lt;<a class="email" href="mailto:security@suse.de">security@suse.de</a>&gt;.
    Include a detailed description of the problem and the version number of
@@ -570,6 +570,6 @@ hljs.configure({
 Key fingerprint = 73 5F 2E 99 DF DB 94 C4 8F 5A A3 AE AF 22 F2 D5</pre></div><p>
    This key is also available for download from
    <a class="link" href="http://www.suse.com/support/security/contact.html" target="_blank">http://www.suse.com/support/security/contact.html</a>.
-  </p><a id="idm140386190484864" class="indexterm"></a></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.auth.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part I </span>Authentication</span></a><a class="nav-link" href="preface.security.html"><span class="prev-icon">←</span><span class="nav-label">About This Guide</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+  </p><a id="idm139655223811136" class="indexterm"></a></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="part.auth.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Part I </span>Authentication</span></a><a class="nav-link" href="preface.security.html"><span class="prev-icon">←</span><span class="nav-label">About This Guide</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
         SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>

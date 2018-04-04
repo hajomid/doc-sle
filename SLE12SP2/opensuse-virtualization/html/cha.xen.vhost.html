@@ -31,7 +31,7 @@ hljs.configure({
   the <span class="productname"><span class="phrase">openSUSE Leap</span></span> operating system, but additional CPU, disk, memory, and
   network resources should be added to accommodate the resource demands of all
   planned VM Guest systems.
- </p><div id="idm140283283048816" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Resources</h6><p>
+ </p><div id="idm140308148855088" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Resources</h6><p>
    Remember that VM Guest systems, like physical machines, perform better when
    they run on faster processors and have access to more system memory.
   </p></div><p>
@@ -75,7 +75,7 @@ hljs.configure({
      If you intend to use a watchdog device attached to the Xen host, use
      only one at a time. It is recommended to use a driver with actual hardware
      integration over a generic software one.
-    </p></li></ul></div><div id="idm140283283027504" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Hardware Monitoring</h6><p>
+    </p></li></ul></div><div id="idm140308148833776" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Hardware Monitoring</h6><p>
     The Dom0 Kernel is running virtualized, so tools like
     <code class="command">irqbalance</code> or <code class="command">lscpu</code> will not reflect
     the real hardware characteristics.
@@ -87,7 +87,7 @@ hljs.configure({
    memory can be allocated appropriately to the hypervisor. An adequate amount
    would be 20 percent of the total system memory up to 4 GiB. A recommended
    minimum amount would be 512 MiB
-  </p><div id="idm140283283022608" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Minimum amount of Memory</h6><p>
+  </p><div id="idm140308148828816" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Minimum amount of Memory</h6><p>
     The minimum amount of memory heavily depends on how many VM Guest(s) the
     host should handle. So be sure you have enough memory to support all your
     VM Guests. If the value is too low, the host system may hang when multiple
@@ -111,7 +111,7 @@ hljs.configure({
       <code class="command">dom0_mem=768M</code>.
      </p></li><li class="step "><p>
       Restart the computer to apply the changes.
-     </p></li></ol></div></div><div id="idm140283283008048" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Xen Dom0 Memory</h6><p>
+     </p></li></ol></div></div><div id="idm140308148814192" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Xen Dom0 Memory</h6><p>
      When using the XL tool stack and the <code class="command">dom0_mem=</code> option
      for the Xen hypervisor in GRUB 2 you need to disable xl
      <span class="emphasis"><em>autoballoon</em></span> in <code class="filename">etc/xen/xl.conf</code>,
@@ -130,7 +130,7 @@ hljs.configure({
   </p><p>
    When using SUSE Linux Enterprise, only the paravirtualized network cards are available for
    the VM Guest by default. The following network options are available:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140283282999776"><span class="term ">emulated</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140308148805920"><span class="term ">emulated</span></dt><dd><p>
       To use an emulated network interface like an emulated Realtek card,
       specify <code class="literal">type=ioemu</code> in the <code class="literal">vif</code>
       device section of the domain xl configuration. An example configuration
@@ -139,10 +139,10 @@ hljs.configure({
       Find more details about the xl configuration in the
       <code class="filename">xl.conf</code> manual page <code class="command">man 5
       xl.conf</code>.
-     </p></dd><dt id="idm140283282995040"><span class="term ">paravirtualized</span></dt><dd><p>
+     </p></dd><dt id="idm140308148801184"><span class="term ">paravirtualized</span></dt><dd><p>
       When you specify <code class="literal">type=vif</code> and do not specify a model
       or type, the paravirtualized network interface is used:
-     </p><div class="verbatim-wrap"><pre class="screen">vif = [ 'type=vif,mac=00:16:3e:5f:48:e4,bridge=br0,backen=0' ]</pre></div></dd><dt id="idm140283282992208"><span class="term ">emulated and paravirtualized</span></dt><dd><p>
+     </p><div class="verbatim-wrap"><pre class="screen">vif = [ 'type=vif,mac=00:16:3e:5f:48:e4,bridge=br0,backen=0' ]</pre></div></dd><dt id="idm140308148798352"><span class="term ">emulated and paravirtualized</span></dt><dd><p>
       If the administrator should be offered both options, simply specify both
       type and model. The xl configuration would look like:
      </p><div class="verbatim-wrap"><pre class="screen">vif = [ 'type=ioemu,mac=00:16:3e:5f:48:e4,model=rtl8139,bridge=br0' ]</pre></div><p>
@@ -152,7 +152,7 @@ hljs.configure({
    If virtualization software is correctly installed, the computer boots to
    display the GRUB 2 boot loader with a <span class="guimenu">Xen</span> option on the
    menu. Select this option to start the virtual machine host.
-  </p><div id="idm140283282986688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Xen and Kdump</h6><p>
+  </p><div id="idm140308148792896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Xen and Kdump</h6><p>
     In Xen, the hypervisor manages the memory resource. If you need to
     reserve system memory for a recovery kernel in Dom0, this memory need to
     be reserved by the hypervisor. Thus, it is necessary to add the parameter
@@ -172,7 +172,7 @@ hljs.configure({
    After booting the hypervisor, the Dom0 virtual machine starts and displays
    its graphical desktop environment. If you did not install a graphical
    desktop, the command line environment appears.
-  </p><div id="idm140283282980016" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Graphics Problems</h6><p>
+  </p><div id="idm140308148786224" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Graphics Problems</h6><p>
     Sometimes it may happen that the graphics system does not work properly. In
     this case, add <code class="literal">vga=ask</code> to the boot parameters. To
     activate permanent settings, use <code class="literal">vga=mode-0x???</code> where
@@ -190,7 +190,7 @@ hljs.configure({
      Select the option to automatically start the NTP daemon during boot.
      Provide the IP address of an existing NTP time server, then click
      <span class="guimenu">Finish</span>.
-    </p></li></ol></div></div><div id="idm140283282970928" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Time Services on Virtual Guests</h6><p>
+    </p></li></ol></div></div><div id="idm140308148777136" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Time Services on Virtual Guests</h6><p>
     Hardware clocks commonly are not very precise. All modern operating systems
     try to correct the system time compared to the hardware time by means of an
     additional time source. To get the correct time on all VM Guest systems,
@@ -213,7 +213,7 @@ hljs.configure({
    technology is not sufficient to use this feature for fully virtualized
    guests. To make sure that your computer supports this feature, ask your
    supplier specifically to deliver a system that supports PCI Pass-Through.
-  </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations </span><a title="Permalink" class="permalink" href="cha.xen.vhost.html#idm140283282962016">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations </span><a title="Permalink" class="permalink" href="cha.xen.vhost.html#idm140308148768224">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
      Some graphics drivers use highly optimized ways to access DMA. This is not
      supported, and thus using graphics cards may be difficult.
     </p></li><li class="listitem "><p>
@@ -259,15 +259,15 @@ hljs.configure({
      device <span class="emphasis"><em>06:01.0</em></span> available for guests, run the command:
     </p><div class="verbatim-wrap"><pre class="screen">xl pci-assignable-add 06:01.0</pre></div></div></div><div class="sect2 " id="config.hypervisor.pciback.guests"><div class="titlepage"><div><div><h3 class="title" id="config.hypervisor.pciback.guests"><span class="number">17.5.2 </span><span class="name">Assigning PCI Devices to VM Guest Systems</span> <a title="Permalink" class="permalink" href="cha.xen.vhost.html#config.hypervisor.pciback.guests">#</a></h3></div></div></div><p>
     There are several possibilities to dedicate a PCI device to a VM Guest:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140283282934224"><span class="term ">Adding the device while installing:</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140308148740496"><span class="term ">Adding the device while installing:</span></dt><dd><p>
        During installation, add the <code class="literal">pci</code> line to the
        configuration file:
-      </p><div class="verbatim-wrap"><pre class="screen">pci=['06:01.0']</pre></div></dd><dt id="idm140283282931520"><span class="term ">Hotplugging PCI devices to VM Guest systems</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">pci=['06:01.0']</pre></div></dd><dt id="idm140308148737792"><span class="term ">Hotplugging PCI devices to VM Guest systems</span></dt><dd><p>
        The command <code class="literal">xl</code> can be used to add or remove PCI
        devices on the fly. To add the device with number
        <code class="literal">06:01.0</code> to a guest with name
        <code class="literal">sles12</code> use:
-      </p><div class="verbatim-wrap"><pre class="screen">xl pci-attach sles12 06:01.0</pre></div></dd><dt id="idm140283282927792"><span class="term ">Adding the PCI device to Xend</span></dt><dd><p>
+      </p><div class="verbatim-wrap"><pre class="screen">xl pci-attach sles12 06:01.0</pre></div></dd><dt id="idm140308148734064"><span class="term ">Adding the PCI device to Xend</span></dt><dd><p>
        To add the device to the guest permanently, add the following snippet to
        the guest configuration file:
       </p><div class="verbatim-wrap"><pre class="screen">pci = [ '06:01.0,power_mgmt=1,permissive=1' ]</pre></div></dd></dl></div><p>
@@ -277,7 +277,7 @@ hljs.configure({
     Xen 4.0 and newer supports VGA graphics adapter pass-through on fully
     virtualized VM Guests. The guest can take full control of the graphics
     adapter with high-performance full 3D and video acceleration.
-   </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations </span><a title="Permalink" class="permalink" href="cha.xen.vhost.html#idm140283282922592">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+   </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations </span><a title="Permalink" class="permalink" href="cha.xen.vhost.html#idm140308148728864">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
       VGA Pass-Through functionality is similar to PCI Pass-Through and as such also requires
       <a class="xref" href="gloss.vt.glossary.html#gloss.vt.acronym.iommu" title="IOMMU">IOMMU</a> (or Intel VT-d) support from the
       mainboard chipset and BIOS.
@@ -300,7 +300,7 @@ pci=['yy:zz.n']</pre></div><p>
    </p></div><div class="sect2 " id="sec.xen.vm.known"><div class="titlepage"><div><div><h3 class="title" id="sec.xen.vm.known"><span class="number">17.5.4 </span><span class="name">Troubleshooting</span> <a title="Permalink" class="permalink" href="cha.xen.vhost.html#sec.xen.vm.known">#</a></h3></div></div></div><p>
     In some circumstances, problems may occur during the installation of the
     VM Guest. This section describes some known problems and their solutions.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140283282911920"><span class="term ">During boot, the system hangs</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140308148718192"><span class="term ">During boot, the system hangs</span></dt><dd><p>
        The software I/O translation buffer allocates a large chunk of low
        memory early in the bootstrap process. If the requests for memory exceed
        the size of the buffer it usually results in a hung boot process. To
@@ -311,7 +311,7 @@ pci=['yy:zz.n']</pre></div><p>
        <code class="literal">swiotlb</code>. Add <code class="literal">swiotlb=128</code> on the
        cmdline of Dom0. Note that the number can be adjusted up or down to
        find the optimal size for the machine.
-      </p></dd></dl></div><div id="idm140283282907600" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: swiotlb a PV guest</h6><p>
+      </p></dd></dl></div><div id="idm140308148713872" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: swiotlb a PV guest</h6><p>
      The <code class="literal">swiotlb=force</code> kernel parameter is required for DMA
      access to work for PCI devices on a PV guest. For more information about
      IOMMU and the <code class="literal">swiotlb</code> option see the file
@@ -366,7 +366,7 @@ Bus 002 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub</pre></div><p>
    devices with <code class="literal">usbctrl</code> and <code class="literal">usbdev</code>. For
    example, in case of HVM guests:
   </p><div class="verbatim-wrap"><pre class="screen">usbctrl=['type=qubs,version=2,ports=4', 'type=qubs,version=1,ports=4', ]
-usbdev=['hostbus=2, hostaddr=1, controller=0,port=1', ]</pre></div><div id="idm140283282885488" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+usbdev=['hostbus=2, hostaddr=1, controller=0,port=1', ]</pre></div><div id="idm140308148691760" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
   It is important to specify <code class="literal">type=qusb</code> for the
   controller of HVM guests.
  </p></div><p>
