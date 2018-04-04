@@ -72,11 +72,11 @@ hljs.configure({
       <a class="xref" href="cha.yast.lang.html#sec.yast.lang.applications" title="16.1.3. Switching Languages for Standard X and GNOME Applications">Section 16.1.3, “Switching Languages for Standard X and GNOME Applications”</a>.
      </p></dd></dl></div><div class="sect2 " id="sec.yast.lang.primsec"><div class="titlepage"><div><div><h3 class="title" id="sec.yast.lang.primsec"><span class="number">16.1.1 </span><span class="name">Modifying System Languages with YaST</span> <a title="Permalink" class="permalink" href="cha.yast.lang.html#sec.yast.lang.primsec">#</a></h3></div></div></div><p>
     YaST knows two different language categories:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140015918212160"><span class="term ">Primary Language</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140037138209024"><span class="term ">Primary Language</span></dt><dd><p>
        The primary language set in YaST applies to the entire system,
        including YaST and the desktop environment. This language is used
        whenever available unless you manually specify another language.
-      </p></dd><dt id="idm140015918210160"><span class="term ">Secondary Languages</span></dt><dd><p>
+      </p></dd><dt id="idm140037138207024"><span class="term ">Secondary Languages</span></dt><dd><p>
        Install secondary languages to make your system multilingual. Languages
        installed as secondary languages can be selected manually for a specific
        situation. For example, use a secondary language to start an application
@@ -109,7 +109,7 @@ hljs.configure({
      </p></li><li class="step "><p>
       Additionally, adapt the keyboard to the new primary language and adjust
       the time zone, if appropriate.
-     </p><div id="idm140015918190032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Advanced Settings</h6><p>
+     </p><div id="idm140037138186960" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Advanced Settings</h6><p>
        For advanced keyboard or time zone settings, select <span class="guimenu">Hardware</span> › <span class="guimenu">System Keyboard Layout</span> or <span class="guimenu">System</span> › <span class="guimenu">Date
        and Time</span> in YaST to start the respective
        dialogs. For more information, refer to <a class="xref" href="cha.yast.hw.html#sec.yast.hw.keym" title="11.1. Setting Up Your System Keyboard Layout">Section 11.1, “Setting Up Your System Keyboard Layout”</a>
@@ -142,7 +142,7 @@ hljs.configure({
      </p></li><li class="step "><p>
       Select the desired new system language as <span class="guimenu">Primary
       Language</span>.
-     </p><div id="idm140015918168720" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Deleting Former System Languages</h6><p>
+     </p><div id="idm140037138165712" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Deleting Former System Languages</h6><p>
        If you switch to a different primary language, the localized software
        packages for the former primary language will be removed from the
        system. To switch the default system language but keep the former
@@ -187,7 +187,7 @@ hljs.configure({
      If you only run Linux on your machine, set the hardware clock to UTC and
      have the switch from standard time to daylight saving time performed
      automatically.
-    </p></li></ul></div><div id="idm140015918142752" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Set the Hardware Clock to UTC</h6><p>
+    </p></li></ul></div><div id="idm140037138139872" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Set the Hardware Clock to UTC</h6><p>
     The switch from standard time to daylight saving time (and vice versa) can
     only be performed automatically when the hardware clock (CMOS clock) is set
     to UTC. This also applies if you use automatic time synchronization with
@@ -202,14 +202,14 @@ hljs.configure({
    You can change the date and time manually or opt for synchronizing your
    machine against an NTP server, either permanently or only for adjusting your
    hardware clock.
-  </p><div class="procedure " id="idm140015918139328"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.2: </span><span class="name">Manually Adjusting Time and Date </span><a title="Permalink" class="permalink" href="cha.yast.lang.html#idm140015918139328">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140037138136448"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.2: </span><span class="name">Manually Adjusting Time and Date </span><a title="Permalink" class="permalink" href="cha.yast.lang.html#idm140037138136448">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      In the YaST timezone module, click <span class="guimenu">Other Settings</span> to
      set date and time.
     </p></li><li class="step "><p>
      Select <span class="guimenu">Manually</span> and enter date and time values.
     </p></li><li class="step "><p>
      Confirm your changes.
-    </p></li></ol></div></div><div class="procedure " id="idm140015918134752"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.3: </span><span class="name">Setting Date and Time With NTP Server </span><a title="Permalink" class="permalink" href="cha.yast.lang.html#idm140015918134752">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140037138131872"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 16.3: </span><span class="name">Setting Date and Time With NTP Server </span><a title="Permalink" class="permalink" href="cha.yast.lang.html#idm140037138131872">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Click <span class="guimenu">Other Settings</span> to set date and time.
     </p></li><li class="step "><p>
      Select <span class="guimenu">Synchronize with NTP Server</span>.

@@ -23,11 +23,11 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#book.sles.docker" accesskey="c"><span class="single-contents-icon"></span>Docker Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#book.sles.docker" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Docker Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#cha.docker.overview"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="#cha.docker.installation"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="#cha.sle2docker.installation"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="#cha.registry.installation"><span class="number">4 </span><span class="name">Storing Images</span></a></li><li class="inactive"><a href="#docker.building.images"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="#docker.dockerizing.application"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="#cha.working.with.containers"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="#idm139679845676512"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="book" id="book.sles.docker" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></h6><div><h1 class="title">Docker Guide</h1></div><div class="abstract "><p>
+</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#book.sles.docker" accesskey="c"><span class="single-contents-icon"></span>Docker Guide</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#book.sles.docker" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Docker Guide</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#cha.docker.overview"><span class="number">1 </span><span class="name">Docker Overview</span></a></li><li class="inactive"><a href="#cha.docker.installation"><span class="number">2 </span><span class="name">Docker Installation</span></a></li><li class="inactive"><a href="#cha.sle2docker.installation"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></li><li class="inactive"><a href="#cha.registry.installation"><span class="number">4 </span><span class="name">Storing Images</span></a></li><li class="inactive"><a href="#docker.building.images"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></li><li class="inactive"><a href="#docker.dockerizing.application"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></li><li class="inactive"><a href="#cha.working.with.containers"><span class="number">7 </span><span class="name">Working with Containers</span></a></li><li class="inactive"><a href="#idm139945361446416"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="book" id="book.sles.docker" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></h6><div><h1 class="title">Docker Guide</h1></div><div class="abstract "><p>
     This guide introduces Docker, a lightweight virtualization solution to run
     virtual units simultaneously on a single control host.
-   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>April 03, 2018
-</div></div></div><div class="toc"><dl><dt><span class="chapter"><a href="#cha.docker.overview"><span class="number">1 </span><span class="name">Docker Overview</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Docker_Architecture"><span class="number">1.1 </span><span class="name">Docker Architecture</span></a></span></dt><dt><span class="sect1"><a href="#Docker_Used_Drivers"><span class="number">1.2 </span><span class="name">Docker Drivers</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.docker.installation"><span class="number">2 </span><span class="name">Docker Installation</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Preparation"><span class="number">2.1 </span><span class="name">General Preparation</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.setup.net"><span class="number">2.2 </span><span class="name">Networking</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.sle2docker.installation"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></span></dt><dt><span class="chapter"><a href="#cha.registry.installation"><span class="number">4 </span><span class="name">Storing Images</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.docker.registry.definition"><span class="number">4.1 </span><span class="name">What is a Docker Registry?</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.registry.installation"><span class="number">4.2 </span><span class="name">Installing and Setting Up Docker Registry</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.registry.limitations"><span class="number">4.3 </span><span class="name">Limitations</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.portus"><span class="number">4.4 </span><span class="name">Portus</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#docker.building.images"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Building_Pre-build_Images"><span class="number">5.1 </span><span class="name">Obtaining Base SLES Images</span></a></span></dt><dt><span class="sect1"><a href="#Customizing_Pre-build_Images"><span class="number">5.2 </span><span class="name">Customizing SLES Docker Images</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#docker.dockerizing.application"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Application_with_specific_dependencies"><span class="number">6.1 </span><span class="name">Running an Application with Specific Package Versions</span></a></span></dt><dt><span class="sect1"><a href="#Applications_with_Configuration"><span class="number">6.2 </span><span class="name">Running Applications with Specific Configuration</span></a></span></dt><dt><span class="sect1"><a href="#Running_Application_with_Volumes"><span class="number">6.3 </span><span class="name">Sharing Data between an Application and the Host System</span></a></span></dt><dt><span class="sect1"><a href="#docker_daemons"><span class="number">6.4 </span><span class="name">Applications Running in the Background</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.working.with.containers"><span class="number">7 </span><span class="name">Working with Containers</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Linking.Containers"><span class="number">7.1 </span><span class="name">Linking Containers</span></a></span></dt></dl></dd><dt><span class="appendix"><a href="#idm139679845676512"><span class="number">A </span><span class="name">GNU Licenses</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#idm139679805977632"><span class="number">A.1 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></dd></dl></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><dl><dt><span class="figure"><a href="#Docker_architecture"><span class="number">1.1 </span><span class="name">The Docker architecture</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm139679845734192"><p>
+   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>April 04, 2018
+</div></div></div><div class="toc"><dl><dt><span class="chapter"><a href="#cha.docker.overview"><span class="number">1 </span><span class="name">Docker Overview</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Docker_Architecture"><span class="number">1.1 </span><span class="name">Docker Architecture</span></a></span></dt><dt><span class="sect1"><a href="#Docker_Used_Drivers"><span class="number">1.2 </span><span class="name">Docker Drivers</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.docker.installation"><span class="number">2 </span><span class="name">Docker Installation</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Preparation"><span class="number">2.1 </span><span class="name">General Preparation</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.setup.net"><span class="number">2.2 </span><span class="name">Networking</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.sle2docker.installation"><span class="number">3 </span><span class="name">Installing <code class="literal">sle2docker</code></span></a></span></dt><dt><span class="chapter"><a href="#cha.registry.installation"><span class="number">4 </span><span class="name">Storing Images</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#sec.docker.registry.definition"><span class="number">4.1 </span><span class="name">What is a Docker Registry?</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.registry.installation"><span class="number">4.2 </span><span class="name">Installing and Setting Up Docker Registry</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.registry.limitations"><span class="number">4.3 </span><span class="name">Limitations</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.portus"><span class="number">4.4 </span><span class="name">Portus</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#docker.building.images"><span class="number">5 </span><span class="name">Creating Custom Images</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Building_Pre-build_Images"><span class="number">5.1 </span><span class="name">Obtaining Base SLES Images</span></a></span></dt><dt><span class="sect1"><a href="#Customizing_Pre-build_Images"><span class="number">5.2 </span><span class="name">Customizing SLES Docker Images</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#docker.dockerizing.application"><span class="number">6 </span><span class="name">Dockerizing Applications</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Application_with_specific_dependencies"><span class="number">6.1 </span><span class="name">Running an Application with Specific Package Versions</span></a></span></dt><dt><span class="sect1"><a href="#Applications_with_Configuration"><span class="number">6.2 </span><span class="name">Running Applications with Specific Configuration</span></a></span></dt><dt><span class="sect1"><a href="#Running_Application_with_Volumes"><span class="number">6.3 </span><span class="name">Sharing Data between an Application and the Host System</span></a></span></dt><dt><span class="sect1"><a href="#docker_daemons"><span class="number">6.4 </span><span class="name">Applications Running in the Background</span></a></span></dt></dl></dd><dt><span class="chapter"><a href="#cha.working.with.containers"><span class="number">7 </span><span class="name">Working with Containers</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#Linking.Containers"><span class="number">7.1 </span><span class="name">Linking Containers</span></a></span></dt></dl></dd><dt><span class="appendix"><a href="#idm139945361446416"><span class="number">A </span><span class="name">GNU Licenses</span></a></span></dt><dd><dl><dt><span class="sect1"><a href="#idm139945362205136"><span class="number">A.1 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></dd></dl></div><div class="list-of-figures"><div class="toc-title">List of Figures</div><dl><dt><span class="figure"><a href="#Docker_architecture"><span class="number">1.1 </span><span class="name">The Docker architecture</span></a></span></dt></dl></div><div><div class="legalnotice" id="idm139945387961920"><p>
   Copyright © 2006–
 2018
 
@@ -91,7 +91,7 @@ hljs.configure({
      <span class="emphasis"><em>dockerfile</em></span>. For more details see
      <a class="link" href="http://docs.docker.com/engine/reference/glossary#image" target="_blank">the
      official Docker documentation</a>.
-    </p></dd><dt id="idm139679854925136"><span class="term ">
+    </p></dd><dt id="idm139945387639504"><span class="term ">
     Dockerfile
    </span></dt><dd><p>
      A <span class="emphasis"><em>dockerfile</em></span> stores changes made on top of the base
@@ -100,14 +100,14 @@ hljs.configure({
    </a> reads instructions in the
      <span class="emphasis"><em>dockerfile</em></span> and builds a new image according to the
      instructions.
-    </p></dd><dt id="idm139679849548656"><span class="term ">
+    </p></dd><dt id="idm139945345525520"><span class="term ">
     Container
    </span></dt><dd><p>
      A <span class="emphasis"><em>container</em></span> is a running instance based on a
      particular Docker <a class="xref" href="#Docker_Image">Image</a>. Each
      <span class="emphasis"><em>container</em></span> can be distinguished by a unique container
      ID.
-    </p></dd><dt id="idm139679853946496"><span class="term ">
+    </p></dd><dt id="idm139945384764400"><span class="term ">
     Registry
    </span></dt><dd><p>
      A <span class="emphasis"><em>registry</em></span> is storage for already created images. It
@@ -120,7 +120,7 @@ hljs.configure({
       </p></li><li class="listitem "><p>
        private registry - these are accessible for particular users or from a
        particular private network.
-      </p></li></ul></div></dd><dt id="idm139679844039680"><span class="term ">
+      </p></li></ul></div></dd><dt id="idm139945387967152"><span class="term ">
     Repository
    </span></dt><dd><p>
      A <span class="emphasis"><em>repository</em></span> is storage in a
@@ -138,7 +138,7 @@ hljs.configure({
    </span></dt><dd><p>
      Docker uses <span class="emphasis"><em>namespaces</em></span> for its containers that
      isolates resources reserved for particular containers.
-    </p></dd><dt id="idm139679807902928"><span class="term ">Orchestration</span></dt><dd><p>
+    </p></dd><dt id="idm139945345089568"><span class="term ">Orchestration</span></dt><dd><p>
      In a production environment you typically need a cluster with many
      containers on each cluster node. The containers must cooperate and you
      need a framework that enables you to manage the containers automatically.
@@ -166,7 +166,7 @@ hljs.configure({
     Provides you with container orchestration.
    </p></li></ul></div><p>
   On the other hand, Docker has the following limitations:
- </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="#idm139679825854144">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
+ </p><div class="itemizedlist "><div class="itemizedlist-title-wrap"><h6 class="itemizedlist-title"><span class="name">Limitations of Docker </span><a title="Permalink" class="permalink" href="#idm139945361639680">#</a></h6></div><ul class="itemizedlist"><li class="listitem "><p>
     Containers run inside the host system's kernel and cannot use a different
     kernel.
    </p></li><li class="listitem "><p>
@@ -225,7 +225,7 @@ hljs.configure({
     For example, to force the usage of the
     <code class="systemitem">devicemapper</code> driver enter the
     following text:
-   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm139679846690896" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
+   </p><div class="verbatim-wrap"><pre class="screen">DOCKER_OPTS="-s devicemapper"</pre></div><div id="idm139945362182944" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Mounting <code class="filename">/var/lib/docker</code></h6><p>
      It is recommended to have <code class="filename">/var/lib/docker</code> mounted on
      a separate partition or volume to not affect the Docker host operating
      system in case of a file system corruption.
@@ -243,7 +243,7 @@ hljs.configure({
     </p></div></div></div></div><div xml:lang="en" class="chapter " id="cha.docker.installation" lang="en"><div class="titlepage"><div><div><h1 class="title"><span class="number">2 </span><span class="name">Docker Installation</span> <a title="Permalink" class="permalink" href="#cha.docker.installation">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>docker_installation.xml</li><li><span class="ds-label">ID: </span>cha.docker.installation</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#Preparation"><span class="number">2.1 </span><span class="name">General Preparation</span></a></span></dt><dt><span class="sect1"><a href="#sec.docker.setup.net"><span class="number">2.2 </span><span class="name">Networking</span></a></span></dt></dl></div></div><div class="sect1 " id="Preparation"><div class="titlepage"><div><div><h2 class="title" id="Preparation"><span class="number">2.1 </span><span class="name">General Preparation</span> <a title="Permalink" class="permalink" href="#Preparation">#</a></h2></div></div></div><p>
    Prepare the host as described below. Before installing any Docker-related
    packages, you need to enable the container module:
-  </p><div id="idm139679850630592" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Built-in Docker Orchestration Support</h6><p>
+  </p><div id="idm139945392283280" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Built-in Docker Orchestration Support</h6><p>
     Starting with Docker 1.12 the container orchestration is now an integral
     part of the Docker engine. Even though this feature is available in
     SLES 12 SP1 and in SLES 12 SP2, it is not supported and is only a technical
@@ -251,7 +251,7 @@ hljs.configure({
     refer to the
     <a class="link" href="http://kubernetes.io/docs/getting-started-guides/kubeadm/" target="_blank">Kubernetes
     documentation</a>.
-   </p></div><div class="procedure " id="idm139679826195312"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.1: </span><span class="name">Enabling the Container Module Using YaST </span><a title="Permalink" class="permalink" href="#idm139679826195312">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></div><div class="procedure " id="idm139945392326288"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.1: </span><span class="name">Enabling the Container Module Using YaST </span><a title="Permalink" class="permalink" href="#idm139945392326288">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Start YaST, and select <span class="guimenu">Software</span> › <span class="guimenu"> Software Repositories</span>.
     </p></li><li class="step "><p>
      Click <span class="guimenu">Add</span> to open the add-on dialog.
@@ -266,12 +266,12 @@ hljs.configure({
      The containers module and its repositories will be added to your system.
     </p></li><li class="step "><p>
      If you use Repository Management Tool, update the list of repositories on the RMT server.
-    </p></li></ol></div></div><div class="procedure " id="idm139679855597184"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.2: </span><span class="name">Enabling the Container Module Using SUSEConnect </span><a title="Permalink" class="permalink" href="#idm139679855597184">#</a></h6></div><div class="procedure-contents"><ul class="procedure"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm139945344640528"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.2: </span><span class="name">Enabling the Container Module Using SUSEConnect </span><a title="Permalink" class="permalink" href="#idm139945344640528">#</a></h6></div><div class="procedure-contents"><ul class="procedure"><li class="step "><p>
      The Container Module can be added also with the following command:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> SUSEConnect -p sle-module-containers/12/x86_64 -r ''</pre></div><div id="idm139679847752928" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SUSEConnect Syntax</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> SUSEConnect -p sle-module-containers/12/x86_64 -r ''</pre></div><div id="idm139945363538784" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SUSEConnect Syntax</h6><p>
       The <code class="option">-r ''</code> flag is required to avoid a known limitation
       of SUSEConnect.
-     </p></div></li></ul></div></div><div class="procedure " id="idm139679852203520"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.3: </span><span class="name">Installing and Setting Up Docker </span><a title="Permalink" class="permalink" href="#idm139679852203520">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></div></li></ul></div></div><div class="procedure " id="idm139945385314336"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 2.3: </span><span class="name">Installing and Setting Up Docker </span><a title="Permalink" class="permalink" href="#idm139945385314336">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Install the <code class="systemitem">docker</code> package:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> zypper install docker</pre></div></li><li class="step "><p>
      To automatically start the Docker service at boot time:
@@ -327,7 +327,7 @@ hljs.configure({
     The network namespace of the host can be shared on a per-container basis by
     adding <code class="option">--net=host</code> to the <code class="option">docker run</code>
     command.
-   </p><div id="idm139679813867408" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: iptables support on SLE 12 SP1</h6><p>
+   </p><div id="idm139945388235136" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: iptables support on SLE 12 SP1</h6><p>
      SLE 12 SP1 hosts are not affected by this limitation but, given
      they use the same SLE 12 package, they will have iptables support
      disabled. This can be changed by removing the
@@ -413,7 +413,7 @@ hljs.configure({
    With the default configuration the registry listens on ports
    <code class="literal">5000</code> and stores the Docker images under
    <code class="filename">/var/lib/docker-registry</code>.
-  </p><div id="idm139679812583360" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Incompatible Versions of Docker and Docker Registry</h6><p>
+  </p><div id="idm139945392299936" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Incompatible Versions of Docker and Docker Registry</h6><p>
     Docker registry version 2.3 is not compatible with Docker versions older
     than 1.10, because v2 manifests were only introduced with Docker 1.10. As
     Docker and Docker registry can be installed on different boxes, the
@@ -477,7 +477,7 @@ hljs.configure({
   For creating your custom image you need a base docker image of SLES. You
   can use any of the pre-built SLES images that you can obtain as described
   in <a class="xref" href="#Customizing_Pre-build_Images" title="5.2. Customizing SLES Docker Images">Section 5.2, “Customizing SLES Docker Images”</a>.
- </p><div id="idm139679854818448" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No SLES Images in Docker Hub</h6><p>
+ </p><div id="idm139945393394608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No SLES Images in Docker Hub</h6><p>
    Usually you can pull a variety of base docker images from the
    <a class="link" href="https://hub.docker.com/" target="_blank">docker hub</a> but that does
    not apply for SLES. Currently we cannot distribute SLES images for
@@ -493,7 +493,7 @@ hljs.configure({
   For more information about <code class="literal">docker build</code> options, see the
   <a class="link" href="https://docs.docker.com/engine/reference/commandline/build/" target="_blank">official
   Docker documentation</a>.
- </p><div id="idm139679853768720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Dockerizing Your Applications</h6><p>
+ </p><div id="idm139945388448608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Dockerizing Your Applications</h6><p>
    You may want to write a dockerfile for your own application that should be
    run inside a docker container. For a procedure refer to
    <a class="xref" href="#docker.dockerizing.application" title="Chapter 6. Dockerizing Applications">Chapter 6, <em>Dockerizing Applications</em></a>.
@@ -530,7 +530,7 @@ hljs.configure({
    <code class="literal">/run/secrets</code> directory. The same applies to the
    <code class="filename">/etc/SUSEConnect</code> file of the host system, which is
    automatically injected into the <code class="filename">/run/secrets</code> directory.
-  </p><div id="idm139679806819488" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Credentials and Security</h6><p>
+  </p><div id="idm139945343851904" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Credentials and Security</h6><p>
     The contents of the <code class="filename">/run/secrets</code> directory are never
     committed to a Docker image, hence there is no risk of your credentials
     leaking.
@@ -596,7 +596,7 @@ RUN zypper -n in vim</pre></div></div><div class="sect2 " id="sec.docker.sle_ima
     You may have subscriptions to SLE extensions or modules that you would like
     to use in your custom image. To add them to the Docker image, proceed as
     follows:
-   </p><div class="procedure " id="idm139679855475264"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Adding Extension and Modules </span><a title="Permalink" class="permalink" href="#idm139679855475264">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm139945392549088"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 5.1: </span><span class="name">Adding Extension and Modules </span><a title="Permalink" class="permalink" href="#idm139945392549088">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Add the following into your <code class="filename">Dockerfile</code>:
      </p><div class="verbatim-wrap"><pre class="screen">ADD *.repo /etc/zypp/repos.d/
 ADD *.service /etc/zypp/services.d
@@ -734,7 +734,7 @@ ENTRYPOINT ["/etc/bin/example"]</pre></div><p>
    host system in the <code class="filename">Dockerfile</code> as the directory may not
    be accessible at the build time. You can find the mounted directory in the
    <code class="literal">/var/lib/docker/volumes/</code> directory on the host system.
-  </p><div id="idm139679853931472" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Discarding Changes to the Directory to Be Shared</h6><p>
+  </p><div id="idm139945362180656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Discarding Changes to the Directory to Be Shared</h6><p>
     After you declare a mount point by using the <code class="literal">VOLUME</code>
     instruction, all your changes performed (by using the
     <code class="literal">RUN</code> instruction) to the directory will be discarded.
@@ -745,7 +745,7 @@ ENTRYPOINT ["/etc/bin/example"]</pre></div><p>
    </p></div><p>
    You can specify a particular mount point on the host system when running a
    container by using the <code class="literal">-v</code> option:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash</pre></div><div id="idm139679851519856" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash</pre></div><div id="idm139945388262656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     Using the <code class="literal">-v</code> option overwrites the
     <code class="literal">VOLUME</code> instruction if you specify the same mount point
     in the container.
@@ -856,16 +856,16 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>docker run --link sles:sles sles12sp3 /bin/bash</pre></div><p>
    The container that links to <span class="emphasis"><em>sles</em></span> has defined
    environment variables that enable connecting to the linked container.
-  </p></div></div><div class="legal-section"><div class="appendix " id="idm139679845676512"><div class="titlepage"><div><div><h1 class="title"><span class="number">A </span><span class="name">GNU Licenses</span> <a title="Permalink" class="permalink" href="#idm139679845676512">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_legal.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm139679805977632"><span class="number">A.1 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><p>
+  </p></div></div><div class="legal-section"><div class="appendix " id="idm139945361446416"><div class="titlepage"><div><div><h1 class="title"><span class="number">A </span><span class="name">GNU Licenses</span> <a title="Permalink" class="permalink" href="#idm139945361446416">#</a></h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_legal.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm139945362205136"><span class="number">A.1 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><p>
   This appendix contains the GNU Free Documentation License version 1.2.
- </p><div class="sect1 " id="idm139679805977632"><div class="titlepage"><div><div><h2 class="title legal" id="idm139679805977632"><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm139679805977632">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+ </p><div class="sect1 " id="idm139945362205136"><div class="titlepage"><div><div><h2 class="title legal" id="idm139945362205136"><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm139945362205136">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679852182128"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945361465200"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#idm139679852182128">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945361465200">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -886,9 +886,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679807278128"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945343791456"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#idm139679807278128">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945343791456">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -967,9 +967,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679805970240"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945390899920"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#idm139679805970240">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945390899920">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -981,9 +981,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679813092096"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945343855472"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#idm139679813092096">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945343855472">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -1015,9 +1015,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679806781776"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945345382400"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#idm139679806781776">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945345382400">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
@@ -1111,9 +1111,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679850339408"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945364036560"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm139679850339408">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945364036560">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -1134,9 +1134,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679805550960"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945387896640"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm139679805550960">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945387896640">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -1147,9 +1147,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679850015568"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945387894416"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#idm139679850015568">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945387894416">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -1164,9 +1164,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679805949136"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945345312288"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#idm139679805949136">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945345312288">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -1182,18 +1182,18 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679850794928"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945345039040"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#idm139679850794928">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945345039040">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679805959248"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945345037552"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#idm139679805959248">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139945345037552">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -1207,9 +1207,9 @@ ENTRYPOINT ["/usr/sbin/postfix"]</pre></div><p>
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139679850735456"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139945391402960"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#idm139679850735456">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#idm139945391402960">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
