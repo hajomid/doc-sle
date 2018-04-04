@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Live Kernel Patching Using kGraft</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Live Kernel Patching Using kGraft</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#idm140693030617520"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></li><li class="inactive"><a href="#idm140693030612768"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></li><li class="inactive"><a href="#idm140693030606624"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></li><li class="inactive"><a href="#idm140693030583440"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span></a></li><li class="inactive"><a href="#idm140693030579600"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span></a></li><li class="inactive"><a href="#idm140693030679136"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></li><li class="inactive"><a href="#idm140693030556432"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span></a></li><li class="inactive"><a href="#scope_patching"><span class="number">8 </span><span class="name">Scope of SLE Live Patching</span></a></li><li class="inactive"><a href="#idm140693030552128"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span></a></li><li class="inactive"><a href="#idm140693030578224"><span class="number">10 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.kgraft" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></h6><div><h1 class="title">Live Kernel Patching Using kGraft <a title="Permalink" class="permalink" href="#art.kgraft">#</a></h1></div><div><h3 class="subtitle"><em><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP2</span></span></em></h3></div><div class="abstract "><p>
+</script></head><body class="draft single offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Live Kernel Patching Using kGraft</a><div class="bubble-corner active-contents"></div></div><div class="clearme"></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs inactive"><a class="single-crumb" href="#art.kgraft" accesskey="c"><span class="single-contents-icon"></span>Show Contents: Live Kernel Patching Using kGraft</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="clearme"></div></div><div class="clearme"></div></div><div class="active-contents bubble"><div class="bubble-container"><div id="_bubble-toc"><ol><li class="inactive"><a href="#idm139725241424064"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></li><li class="inactive"><a href="#idm139725241419312"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></li><li class="inactive"><a href="#idm139725241413168"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></li><li class="inactive"><a href="#idm139725241389984"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span></a></li><li class="inactive"><a href="#idm139725241386144"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span></a></li><li class="inactive"><a href="#idm139725241485808"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></li><li class="inactive"><a href="#idm139725241362976"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span></a></li><li class="inactive"><a href="#scope_patching"><span class="number">8 </span><span class="name">Scope of SLE Live Patching</span></a></li><li class="inactive"><a href="#idm139725241358672"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span></a></li><li class="inactive"><a href="#idm139725241384768"><span class="number">10 </span><span class="name">GNU Free Documentation License</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_toc-bubble-wrap"></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="article " id="art.kgraft" lang="en"><div class="titlepage"><div><h6 class="version-info"><span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">12 SP2</span></span></span></h6><div><h1 class="title">Live Kernel Patching Using kGraft <a title="Permalink" class="permalink" href="#art.kgraft">#</a></h1></div><div><h3 class="subtitle"><em><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> <span class="productnumber"><span class="phrase">12 SP2</span></span></em></h3></div><div class="abstract "><p>
     This document describes the basic principles of the kGraft live
     patching technology and provides usage guidelines for the SLE Live
     Patching service.
@@ -44,7 +44,7 @@ hljs.configure({
     Enterprise Server maintenance. kGraft patches distributed through SLE
     Live Patching supplement regular SLES maintenance updates. Common update
     stack and procedures can be used for SLE Live Patching deployment.
-   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>04/04/2018</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm140693030617520"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030612768"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030606624"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030583440"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030579600"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030679136"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030556432"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span></a></span></dt><dt><span class="sect1"><a href="#scope_patching"><span class="number">8 </span><span class="name">Scope of SLE Live Patching</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030552128"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span></a></span></dt><dt><span class="sect1"><a href="#idm140693030578224"><span class="number">10 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><div class="sect1 " id="idm140693030617520"><div class="titlepage"><div><div><h2 class="title" id="idm140693030617520"><span class="number">1 </span><span class="name">Advantages of kGraft</span> <a title="Permalink" class="permalink" href="#idm140693030617520">#</a></h2></div></div></div><p>
+   </p></div><div class="date"><span class="imprint-label">Publication Date: </span>04/04/2018</div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="#idm139725241424064"><span class="number">1 </span><span class="name">Advantages of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241419312"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241413168"><span class="number">3 </span><span class="name">Installing kGraft Patches</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241389984"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241386144"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241485808"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241362976"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span></a></span></dt><dt><span class="sect1"><a href="#scope_patching"><span class="number">8 </span><span class="name">Scope of SLE Live Patching</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241358672"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span></a></span></dt><dt><span class="sect1"><a href="#idm139725241384768"><span class="number">10 </span><span class="name">GNU Free Documentation License</span></a></span></dt></dl></div></div><div class="sect1 " id="idm139725241424064"><div class="titlepage"><div><div><h2 class="title" id="idm139725241424064"><span class="number">1 </span><span class="name">Advantages of kGraft</span> <a title="Permalink" class="permalink" href="#idm139725241424064">#</a></h2></div></div></div><p>
    Live kernel patching using kGraft is especially useful for quick
    response in emergencies (when serious vulnerabilities are known and
    should be fixed when possible or there are serious system stability
@@ -69,7 +69,7 @@ hljs.configure({
   </p><p>
    kGraft is also lean—it contains only a small amount of code,
    because it leverages other standard Linux technologies.
-  </p></div><div class="sect1 " id="idm140693030612768"><div class="titlepage"><div><div><h2 class="title" id="idm140693030612768"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span> <a title="Permalink" class="permalink" href="#idm140693030612768">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139725241419312"><div class="titlepage"><div><div><h2 class="title" id="idm139725241419312"><span class="number">2 </span><span class="name">Low-level Function of kGraft</span> <a title="Permalink" class="permalink" href="#idm139725241419312">#</a></h2></div></div></div><p>
    kGraft uses the ftrace infrastructure to perform patching. The following
    describes the implementation on the x86-64 architecture.
   </p><p>
@@ -113,10 +113,10 @@ hljs.configure({
    flag set, patching is complete, trampolines can be removed and the code
    can operate at full speed without performance impact other than an
    extra-long jump for each patched function.
-  </p></div><div class="sect1 " id="idm140693030606624"><div class="titlepage"><div><div><h2 class="title" id="idm140693030606624"><span class="number">3 </span><span class="name">Installing kGraft Patches</span> <a title="Permalink" class="permalink" href="#idm140693030606624">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139725241413168"><div class="titlepage"><div><div><h2 class="title" id="idm139725241413168"><span class="number">3 </span><span class="name">Installing kGraft Patches</span> <a title="Permalink" class="permalink" href="#idm139725241413168">#</a></h2></div></div></div><p>
    This section describes the activation of the SUSE Linux Enterprise Live
    Patching extension and the installation of kGraft patches.
-  </p><div class="sect2 " id="idm140693030605440"><div class="titlepage"><div><div><h3 class="title" id="idm140693030605440"><span class="number">3.1 </span><span class="name">Activation of SLE Live Patching</span> <a title="Permalink" class="permalink" href="#idm140693030605440">#</a></h3></div></div></div><p>
+  </p><div class="sect2 " id="idm139725241411984"><div class="titlepage"><div><div><h3 class="title" id="idm139725241411984"><span class="number">3.1 </span><span class="name">Activation of SLE Live Patching</span> <a title="Permalink" class="permalink" href="#idm139725241411984">#</a></h3></div></div></div><p>
     To activate SLE Live Patching on your system, follow these steps:
    </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       If your SLES system is not yet registered, register it. Registration
@@ -145,7 +145,7 @@ hljs.configure({
       Click <span class="guimenu">Accept</span> to complete the installation. This
       will install the base kGraft components on your system together with
       the initial live patch.
-     </p></li></ol></div></div></div><div class="sect2 " id="idm140693030593072"><div class="titlepage"><div><div><h3 class="title" id="idm140693030593072"><span class="number">3.2 </span><span class="name">Updating System</span> <a title="Permalink" class="permalink" href="#idm140693030593072">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="idm139725241399616"><div class="titlepage"><div><div><h3 class="title" id="idm139725241399616"><span class="number">3.2 </span><span class="name">Updating System</span> <a title="Permalink" class="permalink" href="#idm139725241399616">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       SLE Live Patching updates are distributed in a form that allows using
       standard SLE update stack for patch application. The initial live
       patch can be updated using <code class="command">zypper patch</code>, YaST2
@@ -184,13 +184,13 @@ hljs.configure({
       sleeping processes. It can be achieved easily using the <code class="command">kgr
       poke</code> command. Running processes are not interrupted.
 
-     </p></li></ol></div></div></div></div><div class="sect1 " id="idm140693030583440"><div class="titlepage"><div><div><h2 class="title" id="idm140693030583440"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span> <a title="Permalink" class="permalink" href="#idm140693030583440">#</a></h2></div></div></div><p>
+     </p></li></ol></div></div></div></div><div class="sect1 " id="idm139725241389984"><div class="titlepage"><div><div><h2 class="title" id="idm139725241389984"><span class="number">4 </span><span class="name">Removing a kGraft Patch</span> <a title="Permalink" class="permalink" href="#idm139725241389984">#</a></h2></div></div></div><p>
    To remove a kGraft patch, use the following procedure:
   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      First remove the patch itself using zypper:
     </p><div class="verbatim-wrap"><pre class="screen">    zypper rm kgraft-patch-<em class="replaceable ">3_12_32-25-default</em></pre></div></li><li class="step "><p>
      Then reboot the machine.
-    </p></li></ol></div></div></div><div class="sect1 " id="idm140693030579600"><div class="titlepage"><div><div><h2 class="title" id="idm140693030579600"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span> <a title="Permalink" class="permalink" href="#idm140693030579600">#</a></h2></div></div></div><p>
+    </p></li></ol></div></div></div><div class="sect1 " id="idm139725241386144"><div class="titlepage"><div><div><h2 class="title" id="idm139725241386144"><span class="number">5 </span><span class="name">Stuck Kernel Execution Threads</span> <a title="Permalink" class="permalink" href="#idm139725241386144">#</a></h2></div></div></div><p>
    Kernel threads need to be prepared to handle kGraft. Third-party
    software may not be completely ready for kGraft adoption and its kernel
    modules may spawn kernel execution threads. These threads will block the
@@ -200,30 +200,30 @@ hljs.configure({
    achieved by writing <code class="literal">0</code> into
    <code class="filename">/sys/kernel/kgraft/in_progress</code>. Consult SUSE
    Support before performing this procedure.
-  </p></div><div class="sect1 " id="idm140693030679136"><div class="titlepage"><div><div><h2 class="title" id="idm140693030679136"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span> <a title="Permalink" class="permalink" href="#idm140693030679136">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139725241485808"><div class="titlepage"><div><div><h2 class="title" id="idm139725241485808"><span class="number">6 </span><span class="name">The <code class="command">kgr</code> Tool</span> <a title="Permalink" class="permalink" href="#idm139725241485808">#</a></h2></div></div></div><p>
    Several kGraft management tasks can be simplified with the
    <code class="command">kgr</code> tool. The available commands are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140693030676912"><span class="term "><code class="command">kgr status</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139725241483584"><span class="term "><code class="command">kgr status</code>
     </span></dt><dd><p>
       Displays the overall status of kGraft patching
       (<code class="literal">ready</code> or <code class="literal">in_progress</code>).
 
-     </p></dd><dt id="idm140693030674272"><span class="term "><code class="command">kgr patches</code>
+     </p></dd><dt id="idm139725241480944"><span class="term "><code class="command">kgr patches</code>
     </span></dt><dd><p>
       Displays the list of loaded kGraft patches.
-     </p></dd><dt id="idm140693030672400"><span class="term "><code class="command">kgr blocking</code>
+     </p></dd><dt id="idm139725241479072"><span class="term "><code class="command">kgr blocking</code>
     </span></dt><dd><p>
       Lists processes that are preventing kGraft patching from finishing.
       By default just the PIDs are listed. Specifying <code class="option">-v</code>
       prints out command lines if available. Another <code class="option">-v</code>
       displays also stack traces.
-     </p></dd><dt id="idm140693030559376"><span class="term "><code class="command">kgr poke</code>
+     </p></dd><dt id="idm139725241365920"><span class="term "><code class="command">kgr poke</code>
     </span></dt><dd><p>
       Sends SIGSTOP and SIGCONT to all processess that are blocking kGraft
       patching from finishing.
      </p></dd></dl></div><p>
    For detailed information, see <code class="command">man kgr</code>.
-  </p></div><div class="sect1 " id="idm140693030556432"><div class="titlepage"><div><div><h2 class="title" id="idm140693030556432"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span> <a title="Permalink" class="permalink" href="#idm140693030556432">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139725241362976"><div class="titlepage"><div><div><h2 class="title" id="idm139725241362976"><span class="number">7 </span><span class="name">Scope of kGraft Technology</span> <a title="Permalink" class="permalink" href="#idm139725241362976">#</a></h2></div></div></div><p>
    kGraft is based on replacing functions. Data structure alteration can be
    accomplished only indirectly with kGraft. As a result, changes to kernel
    data structure require special care and, if the change is too large,
@@ -242,7 +242,7 @@ hljs.configure({
    criteria. SUSE reserves the right to skip fixes where production of a kernel
    live patch is unviable because of technical reasons. For more information
    on CVSS, which is the base for the SUSE CVSS rating, see <a class="link" href="http://nvd.nist.gov/cvss.cfm/" target="_blank">http://nvd.nist.gov/cvss.cfm/</a>.
-  </p></div><div class="sect1 " id="idm140693030552128"><div class="titlepage"><div><div><h2 class="title" id="idm140693030552128"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span> <a title="Permalink" class="permalink" href="#idm140693030552128">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="idm139725241358672"><div class="titlepage"><div><div><h2 class="title" id="idm139725241358672"><span class="number">9 </span><span class="name">Interaction with the Support Processes</span> <a title="Permalink" class="permalink" href="#idm139725241358672">#</a></h2></div></div></div><p>
    In the course of resolving a technical difficulty with SUSE Support, you
    may receive a so-called Program Temporary Fix (PTF). PTFs may be issued
    for various packages including those forming the base of SLE Live
@@ -261,14 +261,14 @@ hljs.configure({
   </p><p>
    PTFs for other packages in SLE Live Patching can be treated like regular
    PTFs with the usual guarantees.
-  </p></div><div class="legal-section"><div class="sect1 " id="idm140693030578224"><div class="titlepage"><div><div><h2 class="title" id="idm140693030578224"><span class="number">10 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm140693030578224">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
+  </p></div><div class="legal-section"><div class="sect1 " id="idm139725241384768"><div class="titlepage"><div><div><h2 class="title" id="idm139725241384768"><span class="number">10 </span><span class="name">GNU Free Documentation License</span> <a title="Permalink" class="permalink" href="#idm139725241384768">#</a></h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>common_gfdl1.2_i.xml</li><li><span class="ds-label">ID: </span><span class="ds-message">no ID found</span></li></ul></div></div></div></div><p>
   Copyright (C) 2000, 2001, 2002 Free Software Foundation, Inc. 51 Franklin St,
   Fifth Floor, Boston, MA 02110-1301 USA. Everyone is permitted to copy and
   distribute verbatim copies of this license document, but changing it is not
   allowed.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030535664"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241341696"><span class="name">
     0. PREAMBLE
-  </span><a title="Permalink" class="permalink" href="#idm140693030535664">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241341696">#</a></h5></div><p>
   The purpose of this License is to make a manual, textbook, or other
   functional and useful document "free" in the sense of freedom: to assure
   everyone the effective freedom to copy and redistribute it, with or without
@@ -289,9 +289,9 @@ hljs.configure({
   work, regardless of subject matter or whether it is published as a printed
   book. We recommend this License principally for works whose purpose is
   instruction or reference.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030532576"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241338608"><span class="name">
     1. APPLICABILITY AND DEFINITIONS
-  </span><a title="Permalink" class="permalink" href="#idm140693030532576">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241338608">#</a></h5></div><p>
   This License applies to any manual or other work, in any medium, that
   contains a notice placed by the copyright holder saying it can be distributed
   under the terms of this License. Such a notice grants a world-wide,
@@ -370,9 +370,9 @@ hljs.configure({
   considered to be included by reference in this License, but only as regards
   disclaiming warranties: any other implication that these Warranty Disclaimers
   may have is void and has no effect on the meaning of this License.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030522640"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241328784"><span class="name">
     2. VERBATIM COPYING
-  </span><a title="Permalink" class="permalink" href="#idm140693030522640">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241328784">#</a></h5></div><p>
   You may copy and distribute the Document in any medium, either commercially
   or non-commercially, provided that this License, the copyright notices, and
   the license notice saying this License applies to the Document are reproduced
@@ -384,9 +384,9 @@ hljs.configure({
  </p><p>
   You may also lend copies, under the same conditions stated above, and you may
   publicly display copies.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030671696"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241478464"><span class="name">
     3. COPYING IN QUANTITY
-  </span><a title="Permalink" class="permalink" href="#idm140693030671696">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241478464">#</a></h5></div><p>
   If you publish printed copies (or copies in media that commonly have printed
   covers) of the Document, numbering more than 100, and the Document's license
   notice requires Cover Texts, you must enclose the copies in covers that
@@ -418,9 +418,9 @@ hljs.configure({
   It is requested, but not required, that you contact the authors of the
   Document well before redistributing any large number of copies, to give them
   a chance to provide you with an updated version of the Document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030667200"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241473968"><span class="name">
     4. MODIFICATIONS
-  </span><a title="Permalink" class="permalink" href="#idm140693030667200">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241473968">#</a></h5></div><p>
   You may copy and distribute a Modified Version of the Document under the
   conditions of sections 2 and 3 above, provided that you release the Modified
   Version under precisely this License, with the Modified Version filling the
@@ -514,9 +514,9 @@ hljs.configure({
   The author(s) and publisher(s) of the Document do not by this License give
   permission to use their names for publicity for or to assert or imply
   endorsement of any Modified Version.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030645184"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241451952"><span class="name">
     5. COMBINING DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140693030645184">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241451952">#</a></h5></div><p>
   You may combine the Document with other documents released under this
   License, under the terms defined in section 4 above for modified versions,
   provided that you include in the combination all of the Invariant Sections of
@@ -537,9 +537,9 @@ hljs.configure({
   various original documents, forming one section Entitled "History"; likewise
   combine any sections Entitled "Acknowledgements", and any sections Entitled
   "Dedications". You must delete all sections Entitled "Endorsements".
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030641888"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241448656"><span class="name">
     6. COLLECTIONS OF DOCUMENTS
-  </span><a title="Permalink" class="permalink" href="#idm140693030641888">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241448656">#</a></h5></div><p>
   You may make a collection consisting of the Document and other documents
   released under this License, and replace the individual copies of this
   License in the various documents with a single copy that is included in the
@@ -550,9 +550,9 @@ hljs.configure({
   individually under this License, provided you insert a copy of this License
   into the extracted document, and follow this License in all other respects
   regarding verbatim copying of that document.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030482832"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241288992"><span class="name">
     7. AGGREGATION WITH INDEPENDENT WORKS
-  </span><a title="Permalink" class="permalink" href="#idm140693030482832">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241288992">#</a></h5></div><p>
   A compilation of the Document or its derivatives with other separate and
   independent documents or works, in or on a volume of a storage or
   distribution medium, is called an "aggregate" if the copyright resulting from
@@ -567,9 +567,9 @@ hljs.configure({
   the Document within the aggregate, or the electronic equivalent of covers if
   the Document is in electronic form. Otherwise they must appear on printed
   covers that bracket the whole aggregate.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030480352"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241286480"><span class="name">
     8. TRANSLATION
-  </span><a title="Permalink" class="permalink" href="#idm140693030480352">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241286480">#</a></h5></div><p>
   Translation is considered a kind of modification, so you may distribute
   translations of the Document under the terms of section 4. Replacing
   Invariant Sections with translations requires special permission from their
@@ -585,18 +585,18 @@ hljs.configure({
   If a section in the Document is Entitled "Acknowledgements", "Dedications",
   or "History", the requirement (section 4) to Preserve its Title (section 1)
   will typically require changing the actual title.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030477760"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241283888"><span class="name">
     9. TERMINATION
-  </span><a title="Permalink" class="permalink" href="#idm140693030477760">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241283888">#</a></h5></div><p>
   You may not copy, modify, sublicense, or distribute the Document except as
   expressly provided for under this License. Any other attempt to copy, modify,
   sublicense or distribute the Document is void, and will automatically
   terminate your rights under this License. However, parties who have received
   copies, or rights, from you under this License will not have their licenses
   terminated so long as such parties remain in full compliance.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030476160"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241282288"><span class="name">
     10. FUTURE REVISIONS OF THIS LICENSE
-  </span><a title="Permalink" class="permalink" href="#idm140693030476160">#</a></h5></div><p>
+  </span><a title="Permalink" class="permalink" href="#idm139725241282288">#</a></h5></div><p>
   The Free Software Foundation may publish new, revised versions of the GNU
   Free Documentation License from time to time. Such new versions will be
   similar in spirit to the present version, but may differ in detail to address
@@ -610,9 +610,9 @@ hljs.configure({
   been published (not as a draft) by the Free Software Foundation. If the
   Document does not specify a version number of this License, you may choose
   any version ever published (not as a draft) by the Free Software Foundation.
- </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm140693030472976"><span class="name">
+ </p><div class="sect4 bridgehead"><h5 class="title legal" id="idm139725241279104"><span class="name">
     ADDENDUM: How to use this License for your documents
-  </span><a title="Permalink" class="permalink" href="#idm140693030472976">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
+  </span><a title="Permalink" class="permalink" href="#idm139725241279104">#</a></h5></div><div class="verbatim-wrap"><pre class="screen">Copyright (c) YEAR YOUR NAME.
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.2
 or any later version published by the Free Software Foundation;
