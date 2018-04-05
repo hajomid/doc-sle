@@ -23,7 +23,7 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.software_raid.html">Software RAID</a><span> › </span><a class="crumb" href="cha.raid_leds.html">Storage Enclosure LED Utilities for MD Software RAIDs</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.nvmeof.html"><span class="number">16 </span><span class="name">NVMe over Fabric</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">17 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">18 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="bk09apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 11. Resizing Software RAID Arrays with mdadm" href="cha.raid_resize.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part IV. Network Storage" href="part.net_storage.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.software_raid.html">Software RAID</a><span> › </span><a class="crumb" href="cha.raid_leds.html">Storage Enclosure LED Utilities for MD Software RAIDs</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 11. Resizing Software RAID Arrays with mdadm" href="cha.raid_resize.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part IV. Network Storage" href="part.net_storage.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.raid_leds" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_raid-leds.xml</li><li><span class="ds-label">ID: </span>cha.raid_leds</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.raid_leds.html#idm139956855722368">#</a></h6></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.software_raid.html">Software RAID</a><span> › </span><a class="crumb" href="cha.raid_leds.html">Storage Enclosure LED Utilities for MD Software RAIDs</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Storage Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="storage.preface.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.filesystems.html"><span class="number">I </span><span class="name">File Systems and Mounting</span></a><ol><li class="inactive"><a href="cha.filesystems.html"><span class="number">1 </span><span class="name">Overview of File Systems in Linux</span></a></li><li class="inactive"><a href="cha.resize_fs.html"><span class="number">2 </span><span class="name">Resizing File Systems</span></a></li><li class="inactive"><a href="cha.uuid.html"><span class="number">3 </span><span class="name">Using UUIDs to Mount Devices</span></a></li><li class="inactive"><a href="cha.multitiercache.html"><span class="number">4 </span><span class="name">Multi-tier Caching for Block Device Operations</span></a></li></ol></li><li class="inactive"><a href="part.lvm.html"><span class="number">II </span><span class="name">Logical Volumes (LVM)</span></a><ol><li class="inactive"><a href="cha.lvm.html"><span class="number">5 </span><span class="name">LVM Configuration</span></a></li><li class="inactive"><a href="cha.lvm_snapshots.html"><span class="number">6 </span><span class="name">LVM Volume Snapshots</span></a></li></ol></li><li class="inactive"><a href="part.software_raid.html"><span class="number">III </span><span class="name">Software RAID</span></a><ol><li class="inactive"><a href="cha.raid.html"><span class="number">7 </span><span class="name">Software RAID Configuration</span></a></li><li class="inactive"><a href="cha.raidroot.html"><span class="number">8 </span><span class="name">Configuring Software RAID for the Root Partition</span></a></li><li class="inactive"><a href="cha.raid10.html"><span class="number">9 </span><span class="name">Creating Software RAID 10 Devices</span></a></li><li class="inactive"><a href="cha.raid_degraded.html"><span class="number">10 </span><span class="name">Creating a Degraded RAID Array</span></a></li><li class="inactive"><a href="cha.raid_resize.html"><span class="number">11 </span><span class="name">Resizing Software RAID Arrays with mdadm</span></a></li><li class="inactive"><a href="cha.raid_leds.html"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span></a></li></ol></li><li class="inactive"><a href="part.net_storage.html"><span class="number">IV </span><span class="name">Network Storage</span></a><ol><li class="inactive"><a href="cha.isns.html"><span class="number">13 </span><span class="name">iSNS for Linux</span></a></li><li class="inactive"><a href="cha.iscsi.html"><span class="number">14 </span><span class="name">Mass Storage over IP Networks: iSCSI</span></a></li><li class="inactive"><a href="cha.fcoe.html"><span class="number">15 </span><span class="name">Fibre Channel Storage over Ethernet Networks: FCoE</span></a></li><li class="inactive"><a href="cha.nvmeof.html"><span class="number">16 </span><span class="name">NVMe over Fabric</span></a></li><li class="inactive"><a href="cha.multipath.html"><span class="number">17 </span><span class="name">Managing Multipath I/O for Devices</span></a></li><li class="inactive"><a href="cha.nfs4_acls.html"><span class="number">18 </span><span class="name">Managing Access Control Lists over NFSv4</span></a></li></ol></li><li class="inactive"><a href="bk09apa.html"><span class="number">A </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 11. Resizing Software RAID Arrays with mdadm" href="cha.raid_resize.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part IV. Network Storage" href="part.net_storage.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="stor_admin.html">Storage Administration Guide</a><span> › </span><a class="crumb" href="part.software_raid.html">Software RAID</a><span> › </span><a class="crumb" href="cha.raid_leds.html">Storage Enclosure LED Utilities for MD Software RAIDs</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 11. Resizing Software RAID Arrays with mdadm" href="cha.raid_resize.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Part IV. Network Storage" href="part.net_storage.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div xml:lang="en" class="chapter " id="cha.raid_leds" lang="en"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">12 </span><span class="name">Storage Enclosure LED Utilities for MD Software RAIDs</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>storage_raid-leds.xml</li><li><span class="ds-label">ID: </span>cha.raid_leds</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="cha.raid_leds.html#idm140126780265840">#</a></h6></div><p>
     
     Storage enclosure LED Monitoring utility (<code class="command">ledmon</code>) and
     LED Control (<code class="command">ledctl</code>) utility are Linux user space
@@ -86,7 +86,7 @@ hljs.configure({
    To start <code class="systemitem">ledmon</code>, enter
   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> ledmon [options]</pre></div><p>
    where [options] is one or more of the following:
-  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Options for <code class="systemitem">ledmon</code> </span><a title="Permalink" class="permalink" href="cha.raid_leds.html#idm139956855700976">#</a></h6></div><dl class="variablelist"><dt id="idm139956855699680"><span class="term "><code class="option">-c <em class="replaceable ">PATH</em></code>
+  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Options for <code class="systemitem">ledmon</code> </span><a title="Permalink" class="permalink" href="cha.raid_leds.html#idm140126780244512">#</a></h6></div><dl class="variablelist"><dt id="idm140126780243216"><span class="term "><code class="option">-c <em class="replaceable ">PATH</em></code>
     , </span><span class="term "><code class="option">--confg=<em class="replaceable ">PATH</em></code>
     </span></dt><dd><p>
       The configuration is read from <code class="filename">~/.ledctl</code> or from
@@ -96,18 +96,18 @@ hljs.configure({
       Currently this option has no effect, since support for configuration
       files has not been implemented yet. See <code class="command">man 5
       ledctl.conf</code> for details.
-     </p></dd><dt id="idm139956855694304"><span class="term ">-l <em class="replaceable ">PATH</em>
+     </p></dd><dt id="idm140126780237840"><span class="term ">-l <em class="replaceable ">PATH</em>
     , </span><span class="term ">--log=<em class="replaceable ">PATH</em>
     </span></dt><dd><p>
       Sets a path to local log file. If this user-defined file is specified,
       the global log file <code class="filename">/var/log/ledmon.log</code> is not used.
-     </p></dd><dt id="idm139956855690624"><span class="term "><code class="option">-t <em class="replaceable ">SECONDS</em></code>
+     </p></dd><dt id="idm140126780234160"><span class="term "><code class="option">-t <em class="replaceable ">SECONDS</em></code>
     , </span><span class="term "><code class="option">--interval=<em class="replaceable ">SECONDS</em></code>
     </span></dt><dd><p>
       Sets the time interval between scans of <code class="filename">sysfs</code>. The
       value is given in seconds. The minimum is 5 seconds. The maximum is not
       specified.
-     </p></dd><dt id="idm139956855686656"><span class="term "><code class="option">--quiet</code>, <code class="option">--error</code>,
+     </p></dd><dt id="idm140126780230192"><span class="term "><code class="option">--quiet</code>, <code class="option">--error</code>,
     <code class="option">--warning</code>, <code class="option">--info</code>,
     <code class="option">--debug</code>, <code class="option">--all</code>
     </span></dt><dd><p>
@@ -116,16 +116,16 @@ hljs.configure({
       <code class="option">--quiet</code> option for no logging. Use the
       <code class="option">--all</code> option to log everything. If you specify more than
       one verbose option, the last option in the command applies.
-     </p></dd><dt id="idm139956855681184"><span class="term "><code class="option">-h</code>
+     </p></dd><dt id="idm140126780224720"><span class="term "><code class="option">-h</code>
     , </span><span class="term "><code class="option">--help</code>
     </span></dt><dd><p>
       Prints the command information to the console, then exits.
-     </p></dd><dt id="idm139956855678320"><span class="term "><code class="option">-v</code>
+     </p></dd><dt id="idm140126780221856"><span class="term "><code class="option">-v</code>
     , </span><span class="term "><code class="option">--version</code>
     </span></dt><dd><p>
       Displays version of <code class="command">ledmon</code> and information about the
       license, then exits.
-     </p></dd></dl></div><div id="idm139956855674832" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Known Issues</h6><p>
+     </p></dd></dl></div><div id="idm140126780218368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Known Issues</h6><p>
     The <code class="command">ledmon</code> daemon does not recognize the PFA (Predicted
     Failure Analysis) state from the SFF-8489 specification. Thus, the PFA
     pattern is not visualized.
@@ -151,26 +151,26 @@ hljs.configure({
    To start <code class="command">ledctl</code>, enter
   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> [options] <em class="replaceable ">PATTERN_NAME</em>=list_of_devices</pre></div><p>
    where [options] is one or more of the following:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139956855662464"><span class="term "><code class="option">-c <em class="replaceable ">PATH</em></code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140126780206000"><span class="term "><code class="option">-c <em class="replaceable ">PATH</em></code>
     , </span><span class="term "><code class="option">--confg=<em class="replaceable ">PATH</em></code>
     </span></dt><dd><p>
       Sets a path to local configuration file. If this option is specified, the
       global configuration file and user configuration file have no effect.
-     </p></dd><dt id="idm139956855658928"><span class="term ">-l <em class="replaceable ">PATH</em>
+     </p></dd><dt id="idm140126780202464"><span class="term ">-l <em class="replaceable ">PATH</em>
     , </span><span class="term ">--log=<em class="replaceable ">PATH</em>
     </span></dt><dd><p>
       Sets a path to local log file. If this user-defined file is specified,
       the global log file <code class="filename">/var/log/ledmon.log</code> is not used.
-     </p></dd><dt id="idm139956855655248"><span class="term "><code class="option">--quiet</code>
+     </p></dd><dt id="idm140126780198784"><span class="term "><code class="option">--quiet</code>
     </span></dt><dd><p>
       Turns off all messages sent to <code class="filename">stdout</code> or
       <code class="filename">stderr</code> out. The messages are still logged to local
       file and the <code class="filename">syslog</code> facility.
-     </p></dd><dt id="idm139956855651760"><span class="term "><code class="option">-h</code>
+     </p></dd><dt id="idm140126780195296"><span class="term "><code class="option">-h</code>
     , </span><span class="term "><code class="option">--help</code>
     </span></dt><dd><p>
       Prints the command information to the console, then exits.
-     </p></dd><dt id="idm139956855648896"><span class="term "><code class="option">-v</code>
+     </p></dd><dt id="idm140126780192432"><span class="term "><code class="option">-v</code>
     , </span><span class="term "><code class="option">--version</code>
     </span></dt><dd><p>
       Displays version of <code class="command">ledctl</code> and information about the
@@ -179,103 +179,103 @@ hljs.configure({
     The <code class="command">ledctl</code> application accepts the following names for
     <span class="guimenu">pattern_name</span> argument, according to the SFF-8489
     specification.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139956855642448"><span class="term "><code class="literal">locate</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140126780186048"><span class="term "><code class="literal">locate</code>
      </span></dt><dd><p>
        Turns on the Locate LED associated with the specified devices or empty
        slots. This state is used to identify a slot or drive.
-      </p></dd><dt id="idm139956855640240"><span class="term "><code class="literal">locate_off</code>
+      </p></dd><dt id="idm140126780183840"><span class="term "><code class="literal">locate_off</code>
      </span></dt><dd><p>
        Turns off the Locate LED associated with the specified devices or empty
        slots.
-      </p></dd><dt id="idm139956855638080"><span class="term "><code class="literal">normal</code>
+      </p></dd><dt id="idm140126780181680"><span class="term "><code class="literal">normal</code>
      </span></dt><dd><p>
        Turns off the Status LED, Failure LED, and Locate LED associated with
        the specified devices.
-      </p></dd><dt id="idm139956855635904"><span class="term "><code class="literal">off</code>
+      </p></dd><dt id="idm140126780179504"><span class="term "><code class="literal">off</code>
      </span></dt><dd><p>
        Turns off only the Status LED and Failure LED associated with the
        specified devices.
-      </p></dd><dt id="idm139956855633728"><span class="term "><code class="literal">ica</code>
+      </p></dd><dt id="idm140126780177328"><span class="term "><code class="literal">ica</code>
      , </span><span class="term "><code class="literal">degraded</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">In a Critical Array</code> pattern.
-      </p></dd><dt id="idm139956855630464"><span class="term "><code class="literal">rebuild</code>
+      </p></dd><dt id="idm140126780174064"><span class="term "><code class="literal">rebuild</code>
      , </span><span class="term "><code class="literal">rebuild_p</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">Rebuild</code> pattern. This supports both of
        the rebuild states for compatibility and legacy reasons.
-      </p></dd><dt id="idm139956855627120"><span class="term "><code class="literal">ifa</code>
+      </p></dd><dt id="idm140126780170720"><span class="term "><code class="literal">ifa</code>
      , </span><span class="term "><code class="literal">failed_array</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">In a Failed Array</code> pattern.
-      </p></dd><dt id="idm139956855623856"><span class="term "><code class="literal">hotspare</code>
+      </p></dd><dt id="idm140126780167456"><span class="term "><code class="literal">hotspare</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">Hotspare</code> pattern.
-      </p></dd><dt id="idm139956855621328"><span class="term "><code class="literal">pfa</code>
+      </p></dd><dt id="idm140126780164960"><span class="term "><code class="literal">pfa</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">Predicted Failure Analysis</code> pattern.
-      </p></dd><dt id="idm139956855618832"><span class="term "><code class="literal">failure</code>
+      </p></dd><dt id="idm140126780162416"><span class="term "><code class="literal">failure</code>
      , </span><span class="term "><code class="literal">disk_failed</code>
      </span></dt><dd><p>
        Visualizes the <code class="literal">Failure</code> pattern.
-      </p></dd><dt id="idm139956855615568"><span class="term ">ses_abort</span></dt><dd><p>
+      </p></dd><dt id="idm140126780159152"><span class="term ">ses_abort</span></dt><dd><p>
        SES-2 R/R ABORT
-      </p></dd><dt id="idm139956855613760"><span class="term "><code class="literal">ses_rebuild</code>
+      </p></dd><dt id="idm140126780157344"><span class="term "><code class="literal">ses_rebuild</code>
      </span></dt><dd><p>
        SES-2 REBUILD/REMAP
-      </p></dd><dt id="idm139956855611664"><span class="term "><code class="literal">ses_ifa</code>
+      </p></dd><dt id="idm140126780155248"><span class="term "><code class="literal">ses_ifa</code>
      </span></dt><dd><p>
        SES-2 IN FAILED ARRAY
-      </p></dd><dt id="idm139956855609568"><span class="term "><code class="literal">ses_ica</code>
+      </p></dd><dt id="idm140126780153152"><span class="term "><code class="literal">ses_ica</code>
      </span></dt><dd><p>
        SES-2 IN CRITICAL ARRAY
-      </p></dd><dt id="idm139956855607472"><span class="term "><code class="literal">ses_cons_check</code>
+      </p></dd><dt id="idm140126780151056"><span class="term "><code class="literal">ses_cons_check</code>
      </span></dt><dd><p>
        SES-2 CONS CHECK
-      </p></dd><dt id="idm139956855605376"><span class="term "><code class="literal">ses_hotspare</code>
+      </p></dd><dt id="idm140126780148960"><span class="term "><code class="literal">ses_hotspare</code>
      </span></dt><dd><p>
        SES-2 HOTSPARE
-      </p></dd><dt id="idm139956855603280"><span class="term "><code class="literal">ses_rsvd_dev</code>
+      </p></dd><dt id="idm140126780146864"><span class="term "><code class="literal">ses_rsvd_dev</code>
      </span></dt><dd><p>
        SES-2 RSVD DEVICE
-      </p></dd><dt id="idm139956855601184"><span class="term "><code class="literal">ses_ok</code>
+      </p></dd><dt id="idm140126780144768"><span class="term "><code class="literal">ses_ok</code>
      </span></dt><dd><p>
        SES-2 OK
-      </p></dd><dt id="idm139956855599104"><span class="term "><code class="literal">ses_ident</code>
+      </p></dd><dt id="idm140126780142688"><span class="term "><code class="literal">ses_ident</code>
      </span></dt><dd><p>
        SES-2 IDENT
-      </p></dd><dt id="idm139956855597008"><span class="term "><code class="literal">ses_rm</code>
+      </p></dd><dt id="idm140126780140592"><span class="term "><code class="literal">ses_rm</code>
      </span></dt><dd><p>
        SES-2 REMOVE
-      </p></dd><dt id="idm139956855594912"><span class="term "><code class="literal">ses_insert</code>
+      </p></dd><dt id="idm140126780138496"><span class="term "><code class="literal">ses_insert</code>
      </span></dt><dd><p>
        SES-2 INSERT
-      </p></dd><dt id="idm139956855592816"><span class="term "><code class="literal">ses_missing</code>
+      </p></dd><dt id="idm140126780136400"><span class="term "><code class="literal">ses_missing</code>
      </span></dt><dd><p>
        SES-2 MISSING
-      </p></dd><dt id="idm139956855590720"><span class="term "><code class="literal">ses_dnr</code>
+      </p></dd><dt id="idm140126780134304"><span class="term "><code class="literal">ses_dnr</code>
      </span></dt><dd><p>
        SES-2 DO NOT REMOVE
-      </p></dd><dt id="idm139956855588624"><span class="term "><code class="literal">ses_active</code>
+      </p></dd><dt id="idm140126780132208"><span class="term "><code class="literal">ses_active</code>
      </span></dt><dd><p>
        SES-2 ACTIVE
-      </p></dd><dt id="idm139956855586528"><span class="term "><code class="literal">ses_enable_bb</code>
+      </p></dd><dt id="idm140126780130112"><span class="term "><code class="literal">ses_enable_bb</code>
      </span></dt><dd><p>
        SES-2 ENABLE BYP B
-      </p></dd><dt id="idm139956855584432"><span class="term "><code class="literal">ses_enable_ba</code>
+      </p></dd><dt id="idm140126780128016"><span class="term "><code class="literal">ses_enable_ba</code>
      </span></dt><dd><p>
        SES-2 ENABLE BYP A
-      </p></dd><dt id="idm139956855582336"><span class="term "><code class="literal">ses_devoff</code>
+      </p></dd><dt id="idm140126780125920"><span class="term "><code class="literal">ses_devoff</code>
      </span></dt><dd><p>
        SES-2 DEVICE OFF
-      </p></dd><dt id="idm139956855580240"><span class="term "><code class="literal">ses_fault</code>
+      </p></dd><dt id="idm140126780123824"><span class="term "><code class="literal">ses_fault</code>
      </span></dt><dd><p>
        SES-2 FAULT
       </p></dd></dl></div><p>
     When a non-SES-2 pattern is sent to a device in an enclosure, the pattern
     is automatically translated to the SCSI Enclosure Services (SES) 2 pattern
     as shown above.
-   </p><div class="table" id="idm139956855577376"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 12.1: </span><span class="name">Translation between Non-SES-2 Patterns and SES-2 Patterns </span><a title="Permalink" class="permalink" href="cha.raid_leds.html#idm139956855577376">#</a></h6></div><div class="table-contents"><table summary="Translation between Non-SES-2 Patterns and SES-2 Patterns" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
+   </p><div class="table" id="idm140126780120960"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table 12.1: </span><span class="name">Translation between Non-SES-2 Patterns and SES-2 Patterns </span><a title="Permalink" class="permalink" href="cha.raid_leds.html#idm140126780120960">#</a></h6></div><div class="table-contents"><table summary="Translation between Non-SES-2 Patterns and SES-2 Patterns" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th>
         <p>
          Non-SES-2 Pattern
         </p>
