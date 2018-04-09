@@ -58,7 +58,7 @@ hljs.configure({
      <code class="systemitem">perl-libapparmor</code>
     </p></li><li class="listitem "><p>
      <code class="systemitem">yast2-apparmor</code>
-    </p></li></ul></div><div id="idm139623071569920" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p></li></ul></div><div id="idm140478460162400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     If <span class="phrase">AppArmor</span> is not installed on your system, install the pattern
     <code class="systemitem">apparmor</code> for a complete
     <span class="phrase">AppArmor</span> installation. Either use the YaST Software Management
@@ -67,11 +67,11 @@ hljs.configure({
    <span class="phrase">AppArmor</span> is configured to run by default on any fresh installation of
 
    <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span>. There are two ways of toggling the status of <span class="phrase">AppArmor</span>:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139623071561776"><span class="term ">Using YaST Services Manager</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140478460154192"><span class="term ">Using YaST Services Manager</span></dt><dd><p>
       Disable or enable <span class="phrase">AppArmor</span> by removing or adding its boot script to the
       sequence of scripts executed on system boot. Status changes are
       applied on reboot.
-     </p></dd><dt id="idm139623071559376"><span class="term ">Using <span class="phrase">AppArmor</span> Configuration Window</span></dt><dd><p>
+     </p></dd><dt id="idm140478460151792"><span class="term ">Using <span class="phrase">AppArmor</span> Configuration Window</span></dt><dd><p>
       Toggle the status of <span class="phrase">AppArmor</span> in a running system by switching it off
       or on using the YaST <span class="phrase">AppArmor</span> Control Panel. Changes made here are
       applied instantaneously. The Control Panel triggers a stop or start
@@ -126,7 +126,7 @@ hljs.configure({
    Each of the processes in the above example labeled <code class="literal">not
    confined</code> might need a custom profile to confine it. Those
    labeled <code class="literal">confined by</code> are already protected by <span class="phrase">AppArmor</span>.
-  </p><div id="idm139623071526032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
+  </p><div id="idm140478460118384" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
     For more information about choosing the right applications to profile,
     refer to <a class="xref" href="cha.apparmor.concept.html#sec.apparmor.concept.determine" title="20.2. Determining Programs to Immunize">Section 20.2, “Determining Programs to Immunize”</a>.
    </p></div></div><div class="sect1 " id="sec.apparmor.start.build"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.start.build"><span class="number">19.4 </span><span class="name">Building and Modifying Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.start.html#sec.apparmor.start.build">#</a></h2></div></div></div><p>
@@ -203,7 +203,7 @@ hljs.configure({
    application again as described in
    <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof" title="24.7.3.9. aa-logprof—Scanning the System Log">Section 24.7.3.9, “aa-logprof—Scanning the System Log”</a>.
    Determine the access rights or restrictions when prompted.
-  </p><div id="idm139623071489408" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
+  </p><div id="idm140478460081952" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: For More Information</h6><p>
     For more information about profile building and modification, refer to
     <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>,
     <a class="xref" href="cha.apparmor.yast.html" title="Chapter 23. Building and Managing Profiles with YaST">Chapter 23, <em>Building and Managing Profiles with YaST</em></a>, and
