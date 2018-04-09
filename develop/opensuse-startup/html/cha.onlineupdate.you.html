@@ -41,11 +41,11 @@ hljs.configure({
   about the Repository Manager in <a class="xref" href="cha.yast-software.html#sec.yast-software.instsource" title="11.3. Managing Software Repositories and Services">Section 11.3, “Managing Software Repositories and Services”</a>.
  </p><p>
   SUSE provides updates with different relevance levels:
- </p><div class="variablelist "><dl class="variablelist"><dt id="idm140240911341520"><span class="term ">Security Updates</span></dt><dd><p>
+ </p><div class="variablelist "><dl class="variablelist"><dt id="idm140449024040736"><span class="term ">Security Updates</span></dt><dd><p>
      Fix severe security hazards and should always be installed.
-    </p></dd><dt id="idm140240911339680"><span class="term ">Recommended Updates</span></dt><dd><p>
+    </p></dd><dt id="idm140449024038896"><span class="term ">Recommended Updates</span></dt><dd><p>
      Fix issues that could compromise your computer.
-    </p></dd><dt id="idm140240911337840"><span class="term ">Optional Updates</span></dt><dd><p>
+    </p></dd><dt id="idm140449024037056"><span class="term ">Optional Updates</span></dt><dd><p>
      Fix non-security relevant issues or provide enhancements.
     </p></dd></dl></div><div class="sect1 " id="sec.onlineupdate.you.overview"><div class="titlepage"><div><div><h2 class="title" id="sec.onlineupdate.you.overview"><span class="number">13.1 </span><span class="name">The Online Update Dialog</span> <a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#sec.onlineupdate.you.overview">#</a></h2></div></div></div><p>
    To open the YaST <span class="guimenu">Online Update</span> dialog, start YaST and
@@ -54,22 +54,22 @@ hljs.configure({
    line with <code class="command">yast2 online_update</code>.
   </p><p>
    The <span class="guimenu">Online Update</span> window consists of four sections.
-  </p><div class="figure" id="idm140240911331024"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_you.png"><img src="images/yast2_you.png" width="" alt="YaST Online Update" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 13.1: </span><span class="name">YaST Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140240911331024">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm140449024030240"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/yast2_you.png"><img src="images/yast2_you.png" width="" alt="YaST Online Update" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 13.1: </span><span class="name">YaST Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140449024030240">#</a></h6></div></div><p>
    The <span class="guimenu">Summary</span> section on the left lists the available
    patches for <span class="productname"><span class="phrase">openSUSE Leap</span></span>. The patches are sorted by security relevance:
    <code class="literal">security</code>, <code class="literal">recommended</code>, and
    <code class="literal">optional</code>. You can change the view of the
    <span class="guimenu">Summary</span> section by selecting one of the following options
    from <span class="guimenu">Show Patch Category</span>:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140240911321344"><span class="term "><span class="guimenu">Needed Patches</span> (default view)</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140449024020560"><span class="term "><span class="guimenu">Needed Patches</span> (default view)</span></dt><dd><p>
       Non-installed patches that apply to packages installed on your system.
-     </p></dd><dt id="idm140240911319200"><span class="term "><span class="guimenu">Unneeded Patches</span>
+     </p></dd><dt id="idm140449024018416"><span class="term "><span class="guimenu">Unneeded Patches</span>
     </span></dt><dd><p>
       Patches that either apply to packages not installed on your system, or
       patches that have requirements which have already have been fulfilled
       (because the relevant packages have already been updated from another
       source).
-     </p></dd><dt id="idm140240911316880"><span class="term "><span class="guimenu">All Patches</span>
+     </p></dd><dt id="idm140449024016096"><span class="term "><span class="guimenu">All Patches</span>
     </span></dt><dd><p>
       All patches available for <span class="productname"><span class="phrase">openSUSE Leap</span></span>.
      </p></dd></dl></div><p>
@@ -108,7 +108,7 @@ hljs.configure({
    to continue with the installation of the selected patches, skip the
    installation of all patches that need rebooting and install the rest, or go
    back to the manual patch selection.
-  </p><div class="procedure " id="idm140240911301920"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 13.1: </span><span class="name">Applying Patches with YaST Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140240911301920">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140449024001136"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 13.1: </span><span class="name">Applying Patches with YaST Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140449024001136">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Start YaST and select <span class="guimenu">Software</span> › <span class="guimenu">Online Update</span>.
     </p></li><li class="step "><p>
      To automatically apply all new patches (except <code class="literal">optional</code>
@@ -123,7 +123,7 @@ hljs.configure({
        Select or deselect patches according to your needs and wishes by
        right-clicking the patch and choosing the respective action from the
        context menu.
-      </p><div id="idm140240911292816" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Always Apply Security Updates</h6><p>
+      </p><div id="idm140449023992032" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Always Apply Security Updates</h6><p>
         Do not deselect any <code class="literal">security</code>-related patches without
         a very good reason. These patches fix severe security hazards and
         prevent your system from being exploited.
@@ -154,7 +154,7 @@ hljs.configure({
    agreements, require user interaction, which would cause the automatic update
    procedure to stop. You can configure to skip patches that require user
    interaction.
-  </p><div class="procedure " id="idm140240911281392"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 13.2: </span><span class="name">Configuring the Automatic Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140240911281392">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140449023980608"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 13.2: </span><span class="name">Configuring the Automatic Online Update </span><a title="Permalink" class="permalink" href="cha.onlineupdate.you.html#idm140449023980608">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      After installation, start YaST and select <span class="guimenu">Software</span> › <span class="guimenu">Online Update Configuration</span>.
     </p><p>
      Alternatively, start the module with
@@ -171,7 +171,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Select if you want to <span class="guimenu">Skip Interactive Patches</span> in case
      you want the update procedure to proceed fully automatically.
-    </p><div id="idm140240911271104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Skipping Patches</h6><p>
+    </p><div id="idm140449023970320" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Skipping Patches</h6><p>
       If you select to skip any packages that require interaction, run a manual
       <span class="guimenu">Online Update</span> occasionally to install those patches,
       too. Otherwise you might miss important patches.
