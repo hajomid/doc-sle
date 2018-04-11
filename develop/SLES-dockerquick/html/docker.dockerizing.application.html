@@ -153,7 +153,7 @@ ENTRYPOINT ["/etc/bin/example"]</pre></div><p>
    host system in the <code class="filename">Dockerfile</code> as the directory may not
    be accessible at the build time. You can find the mounted directory in the
    <code class="literal">/var/lib/docker/volumes/</code> directory on the host system.
-  </p><div id="idm140166208058608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Discarding Changes to the Directory to Be Shared</h6><p>
+  </p><div id="idm139766466801568" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Discarding Changes to the Directory to Be Shared</h6><p>
     After you declare a mount point by using the <code class="literal">VOLUME</code>
     instruction, all your changes performed (by using the
     <code class="literal">RUN</code> instruction) to the directory will be discarded.
@@ -164,7 +164,7 @@ ENTRYPOINT ["/etc/bin/example"]</pre></div><p>
    </p></div><p>
    You can specify a particular mount point on the host system when running a
    container by using the <code class="literal">-v</code> option:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash</pre></div><div id="idm140166208398896" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>docker run -it --name testing -v /home/tux/data:/data sles12sp3:latest /bin/bash</pre></div><div id="idm139766461731680" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     Using the <code class="literal">-v</code> option overwrites the
     <code class="literal">VOLUME</code> instruction if you specify the same mount point
     in the container.
