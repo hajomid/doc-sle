@@ -55,7 +55,7 @@ hljs.configure({
     normally mirror the repositories on the restored server from the update
     server as well, the download can take a long time. Therefore backing up the
     repositories can save you time and bandwidth.
-   </p><div id="idm139786578259200" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
+   </p><div id="idm140375844540416" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Size of the Repositories</h6><p>
      The software repositories can be significant in size, and you will need to
      transfer them from the update server.
     </p></div><p>
@@ -82,7 +82,7 @@ hljs.configure({
    You need an external RMT server that mirrors the repositories
    from SUSE Customer Center. Then you can transfer these repositories to the RMT servers on
    the isolated network using the external storage device.
-  </p><div class="figure" id="idm139786578416752"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="RMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">RMT Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm139786578416752">#</a></h6></div></div><p>
+  </p><div class="figure" id="idm140375844530560"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/smt_disconnected.png"><img src="images/smt_disconnected.png" width="" alt="RMT Disconnected Setup" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 8.1: </span><span class="name">RMT Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140375844530560">#</a></h6></div></div><p>
    Although the initial setup of this solution requires additional
    configuration, the regular update synchronization with SUSE Customer Center and
    distribution to isolated servers is simple. The steps required during the
@@ -113,7 +113,7 @@ hljs.configure({
      internal RMT server
     </p></li></ul></div><p>
    Below is a detailed description of the individual steps.
-  </p><div class="procedure " id="idm139786568029456"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.1: </span><span class="name">External RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm139786568029456">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140375839395120"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.1: </span><span class="name">External RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140375839395120">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Install and configure RMT as described in
      <a class="xref" href="smt.installation.html" title="Chapter 1. RMT Installation">Chapter 1, <em>RMT Installation</em></a>.
     </p></li><li class="step "><p>
@@ -138,7 +138,7 @@ hljs.configure({
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>mkdir <em class="replaceable ">/path/to/repository/on/storage/device</em>
 <code class="prompt user">tux &gt; </code>chmod o+w <em class="replaceable ">/path/to/repository/on/storage/device</em></pre></div></li><li class="step "><p>
      Unmount and detach the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm139786547923408"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.2: </span><span class="name">Internal RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm139786547923408">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140375847594336"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.2: </span><span class="name">Internal RMT Server Configuration for the Disconnected Setup </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140375847594336">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Ensure you have a working SUSE Linux Enterprise Server installation source.
     </p></li><li class="step "><p>
      Install RMT the same way as on the external server with the following
@@ -182,7 +182,7 @@ hljs.configure({
    complete. However, the update repository is still empty. After you run the
    following daily operation routines for the first time, the repository will
    be synchronized, and the internal RMT server will be ready to serve clients.
-  </p><div class="procedure " id="idm139786574580880"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.3: </span><span class="name">Daily External RMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm139786574580880">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm140375839015920"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.3: </span><span class="name">Daily External RMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140375839015920">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect an external storage device and mount it.
     </p></li><li class="step "><p>
      Perform a mirror to a directory on the storage device based on the file
@@ -196,7 +196,7 @@ hljs.configure({
      Optionally, scan the storage device for viruses and other unwanted content.
     </p></li><li class="step "><p>
      Unmount and disconnect the storage device.
-    </p></li></ol></div></div><div class="procedure " id="idm139786574571808"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.4: </span><span class="name">Daily Internal RMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm139786574571808">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+    </p></li></ol></div></div><div class="procedure " id="idm140375816297824"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 8.4: </span><span class="name">Daily Internal RMT Server Operation </span><a title="Permalink" class="permalink" href="smt.advanced.html#idm140375816297824">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Connect a storage device and mount it.
     </p></li><li class="step "><p>
      Update the SUSE Customer Center data on the server:
