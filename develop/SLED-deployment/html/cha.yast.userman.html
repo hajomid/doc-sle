@@ -43,25 +43,25 @@ hljs.configure({
    Depending on the set of users you choose to view and modify with, the dialog
    (local users, network users, system users), the main window shows several
    tabs. These allow you to execute the following tasks:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140539921219360"><span class="term ">Managing User Accounts</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139851935165888"><span class="term ">Managing User Accounts</span></dt><dd><p>
       From the <span class="guimenu">Users</span> tab create, modify, delete or
       temporarily disable user accounts as described in
       <a class="xref" href="cha.yast.userman.html#sec.yast.userman.users" title="15.2. Managing User Accounts">Section 15.2, “Managing User Accounts”</a>. Learn about advanced options like
       enforcing password policies, using encrypted home directories, or
       managing disk quotas in <a class="xref" href="cha.yast.userman.html#sec.yast.userman.adv" title="15.3. Additional Options for User Accounts">Section 15.3, “Additional Options for User Accounts”</a>.
-     </p></dd><dt id="idm140539921215792"><span class="term ">Changing Default Settings</span></dt><dd><p>
+     </p></dd><dt id="idm139851935162320"><span class="term ">Changing Default Settings</span></dt><dd><p>
       Local users accounts are created according to the settings defined on the
       <span class="guimenu">Defaults for New Users</span> tab. Learn how to change the
       default group assignment, or the default path and access permissions for
       home directories in <a class="xref" href="cha.yast.userman.html#sec.yast.userman.defaults" title="15.4. Changing Default Settings for Local Users">Section 15.4, “Changing Default Settings for Local Users”</a>.
-     </p></dd><dt id="idm140539921212784"><span class="term ">Assigning Users to Groups</span></dt><dd><p>
+     </p></dd><dt id="idm139851935159312"><span class="term ">Assigning Users to Groups</span></dt><dd><p>
       Learn how to change the group assignment for individual users in
       <a class="xref" href="cha.yast.userman.html#sec.yast.userman.assign" title="15.5. Assigning Users to Groups">Section 15.5, “Assigning Users to Groups”</a>.
-     </p></dd><dt id="idm140539921210352"><span class="term ">Managing Groups</span></dt><dd><p>
+     </p></dd><dt id="idm139851935156880"><span class="term ">Managing Groups</span></dt><dd><p>
       From the <span class="guimenu">Groups</span> tab, you can add, modify or delete
       existing groups. Refer to <a class="xref" href="cha.yast.userman.html#sec.yast.userman.groups" title="15.6. Managing Groups">Section 15.6, “Managing Groups”</a> for
       information on how to do this.
-     </p></dd><dt id="idm140539921207472"><span class="term ">Changing the User Authentication Method</span></dt><dd><p>
+     </p></dd><dt id="idm139851935154000"><span class="term ">Changing the User Authentication Method</span></dt><dd><p>
       When your machine is connected to a network that provides user
       authentication methods like NIS or LDAP, you can choose between several
       authentication methods on the <span class="guimenu">Authentication Settings</span>
@@ -85,7 +85,7 @@ hljs.configure({
    YaST offers to create, modify, delete or temporarily disable
    user accounts. Do not modify user accounts unless you are an experienced
    user or administrator.
-  </p><div id="idm140539921196976" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changing User IDs of Existing Users</h6><p>
+  </p><div id="idm139851935143440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Changing User IDs of Existing Users</h6><p>
     File ownership is bound to the user ID, not to the user name. After a user
     ID change, the files in the user's home directory are automatically
     adjusted to reflect this change. However, after an ID change, the user no
@@ -95,7 +95,7 @@ hljs.configure({
    In the following, learn how to set up default user accounts. For further
    options, refer to
    <a class="xref" href="cha.yast.userman.html#sec.yast.userman.adv" title="15.3. Additional Options for User Accounts">Section 15.3, “Additional Options for User Accounts”</a>.
-  </p><div class="procedure " id="idm140539921194176"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.1: </span><span class="name">Adding or Modifying User Accounts </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539921194176">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139851935140640"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.1: </span><span class="name">Adding or Modifying User Accounts </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935140640">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open the YaST <span class="guimenu">User and Group Administration</span> dialog
      and click the <span class="guimenu">Users</span> tab.
     </p></li><li class="step "><p>
@@ -149,13 +149,13 @@ hljs.configure({
      <span class="guimenu">User and Group Administration</span> dialog, click
      <span class="guimenu">Expert Options</span> › <span class="guimenu">Write Changes
      Now</span>.
-    </p></li></ol></div></div><div id="idm140539921170192" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Matching User IDs</h6><p>
+    </p></li></ol></div></div><div id="idm139851935116656" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Matching User IDs</h6><p>
     It is useful to match the (local) user ID to the ID in the network.
     For example, a new (local) user on a laptop, should integrate into a
     network environment with the same user ID. This ensures that the
     file ownership of the files the user creates <span class="quote">“<span class="quote">offline</span>”</span> is the
     same as if he had created them directly on the network.
-   </p></div><div class="procedure " id="idm140539921168096"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.2: </span><span class="name">Disabling or Deleting User Accounts </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539921168096">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></div><div class="procedure " id="idm139851935114560"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.2: </span><span class="name">Disabling or Deleting User Accounts </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935114560">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open the YaST <span class="guimenu">User and Group Administration</span> dialog
      and click the <span class="guimenu">Users</span> tab.
     </p></li><li class="step "><p>
@@ -179,7 +179,7 @@ hljs.configure({
     functionality can only be activated for one user at a time. Login without
     password allows all users to log in to the system after they have entered
     their user name in the login manager.
-   </p><div id="idm140539921156000" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Security Risk</h6><p>
+   </p><div id="idm139851935102336" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Security Risk</h6><p>
      Enabling <span class="emphasis"><em>Auto Login</em></span> or <span class="emphasis"><em>Passwordless
      Login</em></span> on a machine that can be accessed by more than one person
      is a security risk. Without the need to authenticate, any user can gain
@@ -196,7 +196,7 @@ hljs.configure({
     regularly and use strong passwords that cannot easily be exploited. For
     local users, proceed as follows:
 
-   </p><div class="procedure " id="idm140539921149168"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.3: </span><span class="name">Configuring Password Settings </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539921149168">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm139851935095440"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.3: </span><span class="name">Configuring Password Settings </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935095440">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Open the YaST <span class="guimenu">User and Group Administration</span> dialog
       and select the <span class="guimenu">Users</span> tab.
      </p></li><li class="step "><p>
@@ -245,18 +245,18 @@ hljs.configure({
     <code class="literal">hard</code> quotas. Additionally, grace intervals can be
     defined that allow users or groups to temporarily violate their quotas by
     certain amounts.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140539921127328"><span class="term ">Soft Quota</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139851935073600"><span class="term ">Soft Quota</span></dt><dd><p>
        Defines a warning level at which users are informed that they are
        nearing their limit. Administrators will urge the users to clean up and
        reduce their data on the partition. The soft quota limit is usually
        lower than the hard quota limit.
-      </p></dd><dt id="idm140539921125280"><span class="term ">Hard Quota</span></dt><dd><p>
+      </p></dd><dt id="idm139851935071552"><span class="term ">Hard Quota</span></dt><dd><p>
        Defines the limit at which write requests are denied. When the hard
        quota is reached, no more data can be stored and applications may crash.
-      </p></dd><dt id="idm140539921123344"><span class="term ">Grace Period</span></dt><dd><p>
+      </p></dd><dt id="idm139851935069616"><span class="term ">Grace Period</span></dt><dd><p>
        Defines the time between the overflow of the soft quota and a warning
        being issued. Usually set to a rather low value of one or several hours.
-      </p></dd></dl></div><div class="procedure " id="idm140539921121248"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.4: </span><span class="name">Enabling Quota Support for a Partition </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539921121248">#</a></h6></div><div class="procedure-contents"><p>
+      </p></dd></dl></div><div class="procedure " id="idm139851935067520"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.4: </span><span class="name">Enabling Quota Support for a Partition </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935067520">#</a></h6></div><div class="procedure-contents"><p>
      To configure quotas for certain users and groups, you need to enable quota
      support for the respective partition in the YaST Expert Partitioner
      first.
@@ -281,7 +281,7 @@ hljs.configure({
       It should be marked as being <code class="literal">active</code>. If this is not
       the case, start it with the command <code class="command">systemctl start
       quotaon</code>.
-     </p></li></ol></div></div><div class="procedure " id="idm140539921106880"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.5: </span><span class="name">Setting Up Quotas for Users or Groups </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539921106880">#</a></h6></div><div class="procedure-contents"><p>
+     </p></li></ol></div></div><div class="procedure " id="idm139851935053152"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.5: </span><span class="name">Setting Up Quotas for Users or Groups </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935053152">#</a></h6></div><div class="procedure-contents"><p>
      Now you can define soft or hard quotas for specific users or groups and
      set time periods as grace intervals.
     </p><ol class="procedure" type="1"><li class="step "><p>
@@ -366,7 +366,7 @@ hljs.configure({
    Users</span> tab. In the following, learn how to modify an individual
    user's group assignment. If you need to change the default group assignments
    for new users, refer to <a class="xref" href="cha.yast.userman.html#sec.yast.userman.defaults" title="15.4. Changing Default Settings for Local Users">Section 15.4, “Changing Default Settings for Local Users”</a>.
-  </p><div class="procedure " id="idm140539920462480"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.6: </span><span class="name">Changing a User's Group Assignment </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539920462480">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139851935006448"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.6: </span><span class="name">Changing a User's Group Assignment </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851935006448">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open the YaST <span class="guimenu">User and Group Administration</span> dialog
      and click the <span class="guimenu">Users</span> tab. It lists users and the
      groups the users belong to.
@@ -391,7 +391,7 @@ hljs.configure({
      Now</span>.
     </p></li></ol></div></div></div><div class="sect1 " id="sec.yast.userman.groups"><div class="titlepage"><div><div><h2 class="title" id="sec.yast.userman.groups"><span class="number">15.6 </span><span class="name">Managing Groups</span> <a title="Permalink" class="permalink" href="cha.yast.userman.html#sec.yast.userman.groups">#</a></h2></div></div></div><p>
    With YaST you can also easily add, modify or delete groups.
-  </p><div class="procedure " id="idm140539920448224"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.7: </span><span class="name">Creating and Modifying Groups </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539920448224">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+  </p><div class="procedure " id="idm139851934992128"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 15.7: </span><span class="name">Creating and Modifying Groups </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851934992128">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open the YaST <span class="guimenu">User and Group Management</span> dialog and
      click the <span class="guimenu">Groups</span> tab.
     </p></li><li class="step "><p>
@@ -429,15 +429,15 @@ hljs.configure({
   </p></div><div class="sect1 " id="sec.yast.userman.authent"><div class="titlepage"><div><div><h2 class="title" id="sec.yast.userman.authent"><span class="number">15.7 </span><span class="name">Changing the User Authentication Method</span> <a title="Permalink" class="permalink" href="cha.yast.userman.html#sec.yast.userman.authent">#</a></h2></div></div></div><p>
    When your machine is connected to a network, you can change the
    authentication method. The following options are available:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140539920423072"><span class="term ">NIS</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139851934966912"><span class="term ">NIS</span></dt><dd><p>
       Users are administered centrally on a NIS server for all systems
       in the network. For details, see <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”, Chapter 3 “Using NIS”</span>.
-     </p></dd><dt id="idm140539920420624"><span class="term ">SSSD</span></dt><dd><p>
+     </p></dd><dt id="idm139851934964464"><span class="term ">SSSD</span></dt><dd><p>
       The <span class="emphasis"><em>System Security Services Daemon</em></span> (SSSD)
       can locally cache user data  and then allow users to use the
       data, even if the real directory service is (temporarily)
       unreachable. For details, see <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”, Chapter 4 “Setting Up Authentication Servers and Clients Using YaST”, Section 4.3 “SSSD”</span>.
-     </p></dd><dt id="idm140539920417648"><span class="term ">Samba</span></dt><dd><p>
+     </p></dd><dt id="idm139851934961488"><span class="term ">Samba</span></dt><dd><p>
       SMB authentication is often used in mixed Linux and Windows
       networks. For details, see <span class="intraxref">Book “<em class="citetitle ">Administration Guide</em>”, Chapter 30 “Samba”</span><span class="phrase"> and <span class="intraxref">Book “<em class="citetitle ">Security Guide</em>”, Chapter 7 “Active Directory Support”</span></span>.
      </p></dd></dl></div><p>
@@ -469,68 +469,68 @@ hljs.configure({
    By default, <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> creates user names which cannot be deleted.
    These users are typically defined in the Linux Standard Base.
    The following list provides the common user names and their purpose:
-  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Common User Names Installed by Default </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm140539920396768">#</a></h6></div><dl class="variablelist"><dt id="idm140539920396016"><span class="term "><code class="systemitem">bin</code>, </span><span class="term "><code class="systemitem">daemon</code></span></dt><dd><p>
+  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Common User Names Installed by Default </span><a title="Permalink" class="permalink" href="cha.yast.userman.html#idm139851934940544">#</a></h6></div><dl class="variablelist"><dt id="idm139851934939792"><span class="term "><code class="systemitem">bin</code>, </span><span class="term "><code class="systemitem">daemon</code></span></dt><dd><p>
       Legacy user, included for compatibility with legacy applications. New
       applications should no longer use this user name.
-     </p></dd><dt id="idm140539920392848"><span class="term "><code class="systemitem">gdm</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934936624"><span class="term "><code class="systemitem">gdm</code></span></dt><dd><p>
       Used by GNOME Display Manager (GDM) to provide graphical log-ins and
       managing local and remote displays.
-     </p></dd><dt id="idm140539920390544"><span class="term "><code class="systemitem">lp</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934934320"><span class="term "><code class="systemitem">lp</code></span></dt><dd><p>
       Used by the Printer daemon for Common Unix Printing System (CUPS).
-     </p></dd><dt id="idm140539920388288"><span class="term "><code class="systemitem">mail</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934932064"><span class="term "><code class="systemitem">mail</code></span></dt><dd><p>
       User reserved for mailer programs like <code class="command">sendmail</code>
       or <code class="command">postfix</code>.
-     </p></dd><dt id="idm140539920385168"><span class="term "><code class="systemitem">man</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934928944"><span class="term "><code class="systemitem">man</code></span></dt><dd><p>
       Used by man to access man pages.
-     </p></dd><dt id="idm140539920382944"><span class="term "><code class="systemitem">messagebus</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934926720"><span class="term "><code class="systemitem">messagebus</code></span></dt><dd><p>
       Used to access D-Bus (desktop bus), a software bus for inter-process
       communication. Daemon is <code class="systemitem">dbus-daemon</code>.
-     </p></dd><dt id="idm140539920379936"><span class="term "><code class="systemitem">nobody</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934923712"><span class="term "><code class="systemitem">nobody</code></span></dt><dd><p>
       User which owns no files and is in no privileged groups. Nowadays,
       its use is limited as it is recommended by Linux Standard Base to provide
       a separate user account for each daemon.
-     </p></dd><dt id="idm140539920377552"><span class="term "><code class="systemitem">nscd</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934921328"><span class="term "><code class="systemitem">nscd</code></span></dt><dd><p>
       Used by the Name Service Caching Daemon. This daemon is a lookup
       service to improve performance with NIS and LDAP.
       Daemon is <code class="systemitem">nscd</code>.
-     </p></dd><dt id="idm140539920374512"><span class="term "><code class="systemitem">polkitd</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934918288"><span class="term "><code class="systemitem">polkitd</code></span></dt><dd><p>
       Used by the PolicyKit Authorization Framework which defines and
       handles authorization requests for unprivileged processes.
       Daemon is <code class="systemitem">polkitd</code>.
-     </p></dd><dt id="idm140539920371456"><span class="term "><code class="systemitem">postfix</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934915232"><span class="term "><code class="systemitem">postfix</code></span></dt><dd><p>
       Used by the Postfix mailer.
-     </p></dd><dt id="idm140539920369232"><span class="term "><code class="systemitem">pulse</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934913008"><span class="term "><code class="systemitem">pulse</code></span></dt><dd><p>
       Used by the Pulseaudio sound server.
-     </p></dd><dt id="idm140539920367008"><span class="term "><code class="systemitem">root</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934910784"><span class="term "><code class="systemitem">root</code></span></dt><dd><p>
       Used by the system administrator, providing all appropriate privileges.
-     </p></dd><dt id="idm140539920364752"><span class="term "><code class="systemitem">rpc</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934908528"><span class="term "><code class="systemitem">rpc</code></span></dt><dd><p>
       Used by the <code class="command">rpcbind</code> command, an RPC
       port mapper.
-     </p></dd><dt id="idm140539920362080"><span class="term "><code class="systemitem">rtkit</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934905856"><span class="term "><code class="systemitem">rtkit</code></span></dt><dd><p>
       Uses by the <span class="package">rtkit</span> package providing a
       D-Bus system service for real time scheduling mode.
-     </p></dd><dt id="idm140539920359376"><span class="term "><code class="systemitem">salt</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934903152"><span class="term "><code class="systemitem">salt</code></span></dt><dd><p>
       User for parallel remote execution provided by Salt. Daemon
       is named <code class="systemitem">salt-master</code>.
-     </p></dd><dt id="idm140539920356400"><span class="term "><code class="systemitem">scard</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934900176"><span class="term "><code class="systemitem">scard</code></span></dt><dd><p>
       User for communication with smart cards and readers. Daemon is named
       <code class="systemitem">pcscd</code>.
-     </p></dd><dt id="idm140539920353424"><span class="term "><code class="systemitem">srvGeoClue</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934897200"><span class="term "><code class="systemitem">srvGeoClue</code></span></dt><dd><p>
       Used by the GeoClue D-Bus service to provide location information.
-     </p></dd><dt id="idm140539920351168"><span class="term "><code class="systemitem">sshd</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934894944"><span class="term "><code class="systemitem">sshd</code></span></dt><dd><p>
       Used by the Secure Shell daemon (SSH) to ensure secured and encrypted
       communication over an insecure network.
-     </p></dd><dt id="idm140539920348864"><span class="term "><code class="systemitem">statd</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934892640"><span class="term "><code class="systemitem">statd</code></span></dt><dd><p>
       Used by the Network Status Monitor protocol (NSM), implemented in the
       <code class="systemitem">rpc.statd</code> daemon, to listen
       for reboot notifications.
-     </p></dd><dt id="idm140539920345840"><span class="term "><code class="systemitem">systemd-coredump</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934889616"><span class="term "><code class="systemitem">systemd-coredump</code></span></dt><dd><p>
       Used by the <code class="command">/usr/lib/systemd/systemd-coredump</code> command
       to acquire, save and process core dumps.
-     </p></dd><dt id="idm140539920343136"><span class="term "><code class="systemitem">systemd-network</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934886912"><span class="term "><code class="systemitem">systemd-network</code></span></dt><dd><p>
       Used by the <code class="command">/usr/lib/systemd/systemd-networkd</code> command
       to manage networks.
-     </p></dd><dt id="idm140539920340448"><span class="term "><code class="systemitem">systemd-timesync</code></span></dt><dd><p>
+     </p></dd><dt id="idm139851934884224"><span class="term "><code class="systemitem">systemd-timesync</code></span></dt><dd><p>
       Used by the <code class="command">/usr/lib/systemd/systemd-timesyncd</code> command
       to synchronize the local system clock with a remote Network Time
       Protocol (NTP) server.
