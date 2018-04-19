@@ -69,23 +69,23 @@ Storage=persistent
    <code class="command">journalctl</code> behavior. All switches are described in the
    <code class="command">journalctl</code> manual page, <code class="command">man 1
    journalctl</code>.
-  </p><div id="idm140305658628656" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
+  </p><div id="idm139941589022144" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Messages Related to a Specific Executable</h6><p>
     To show all journal messages related to a specific executable, specify the
     full path to the executable:
-   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140305658625856"><span class="term ">-f</span></dt><dd><p>
+   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> journalctl /usr/lib/systemd/systemd</pre></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139941589019344"><span class="term ">-f</span></dt><dd><p>
       Shows only the most recent journal messages, and prints new log entries
       as they are added to the journal.
-     </p></dd><dt id="idm140305658623952"><span class="term ">-e</span></dt><dd><p>
+     </p></dd><dt id="idm139941589017440"><span class="term ">-e</span></dt><dd><p>
       Prints the messages and jumps to the end of the journal, so that the
       latest entries are visible within the pager.
-     </p></dd><dt id="idm140305658622048"><span class="term ">-r</span></dt><dd><p>
+     </p></dd><dt id="idm139941589015536"><span class="term ">-r</span></dt><dd><p>
       Prints the messages of the journal in reverse order, so that the latest
       entries are listed first.
-     </p></dd><dt id="idm140305658620160"><span class="term ">-k</span></dt><dd><p>
+     </p></dd><dt id="idm139941589013648"><span class="term ">-k</span></dt><dd><p>
       Shows only kernel messages. This is equivalent to the field match
       <code class="literal">_TRANSPORT=kernel</code> (see
       <a class="xref" href="cha.journalctl.html#sec.journalctl.filter.fields" title="11.3.3. Filtering Based on Fields">Section 11.3.3, “Filtering Based on Fields”</a>).
-     </p></dd><dt id="idm140305658617280"><span class="term ">-u</span></dt><dd><p>
+     </p></dd><dt id="idm139941589010768"><span class="term ">-u</span></dt><dd><p>
       Shows only messages for the specified <code class="systemitem">systemd</code> unit. This is equivalent
       to the field match
       <code class="literal">_SYSTEMD_UNIT=<em class="replaceable ">UNIT</em></code> (see
@@ -245,7 +245,7 @@ enabled</pre></div></li><li class="listitem "><p>
   </p></div><div class="sect1 " id="sec.journalctl.gnome-logs"><div class="titlepage"><div><div><h2 class="title" id="sec.journalctl.gnome-logs"><span class="number">11.7 </span><span class="name">Viewing Logs in GNOME</span> <a title="Permalink" class="permalink" href="cha.journalctl.html#sec.journalctl.gnome-logs">#</a></h2></div></div></div><p>
    You can view the journal with <span class="emphasis"><em>GNOME Logs</em></span>.
    Start it from the application menu. To view system log messages, it
-   has to be run as root, for example with <code class="command">xdg-su
+   needs to be run as root, for example with <code class="command">xdg-su
    gnome-logs</code>. This command can be executed when pressing
    <span class="keycap">Alt</span><span class="key-connector">–</span><span class="keycap">F2</span>.
   </p></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.grub2.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 12 </span>The Boot Loader GRUB 2</span></a><a class="nav-link" href="cha.systemd.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 10 </span>The <code class="systemitem">systemd</code> Daemon</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
