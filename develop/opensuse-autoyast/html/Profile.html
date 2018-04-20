@@ -30,7 +30,7 @@ hljs.configure({
     system. It consists of sets of resources with properties including
     support for complex structures such as lists, records, trees and large
     embedded or referenced objects.
-   </p><div id="idm140624727988384" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Control Files from Previous Releases are Incompatible</h6><p>
+   </p><div id="idm140249228434064" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Control Files from Previous Releases are Incompatible</h6><p>
      A lot of major changes were introduced with <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="productnumber"><span class="phrase">42.3</span></span> (the
      switch to systemd and GRUB 2 for example). These changes also
      required fundamental changes in AutoYaST, therefore you cannot use
@@ -51,7 +51,7 @@ hljs.configure({
     (see  <a class="xref" href="CreateProfile.html#CreateProfile.Manual" title="3.3. Creating/Editing a Control File Manually">Section 3.3, “Creating/Editing a Control File Manually”</a>).
    </p><p>
     The following example shows a control file in XML format:
-   </p><div class="example" id="idm140624706295488"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.1: </span><span class="name">AutoYaST Control File (Profile) </span><a title="Permalink" class="permalink" href="Profile.html#idm140624706295488">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+   </p><div class="example" id="idm140249206263888"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.1: </span><span class="name">AutoYaST Control File (Profile) </span><a title="Permalink" class="permalink" href="Profile.html#idm140249206263888">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE profile&gt;
 &lt;profile
   xmlns="http://www.suse.com/1.0/yast2ns"
@@ -93,7 +93,7 @@ exit 0
 &lt;/profile&gt;</pre></div></div></div></div><div class="sect1 " id="Profile.Structure"><div class="titlepage"><div><div><h2 class="title" id="Profile.Structure"><span class="number">2.3 </span><span class="name">Structure</span> <a title="Permalink" class="permalink" href="Profile.html#Profile.Structure">#</a></h2></div></div></div><p>
     Below is an example of a basic control file container, the actual
     content of which is explained later on in this chapter.
-   </p><div class="example" id="idm140624705462416"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.2: </span><span class="name">Control file container </span><a title="Permalink" class="permalink" href="Profile.html#idm140624705462416">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
+   </p><div class="example" id="idm140249240118480"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.2: </span><span class="name">Control file container </span><a title="Permalink" class="permalink" href="Profile.html#idm140249240118480">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;?xml version="1.0"?&gt;
 &lt;!DOCTYPE profile&gt;
 &lt;profile
   xmlns="http://www.suse.com/1.0/yast2ns"
@@ -133,7 +133,7 @@ exit 0
      known as associative arrays, hashes, or dictionaries, contain mixed
      contents, identified by their tag names. Lists, or arrays, have all
      items of the same type.
-    </p><div class="example" id="idm140624716696704"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.3: </span><span class="name">Nested Resources </span><a title="Permalink" class="permalink" href="Profile.html#idm140624716696704">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
+    </p><div class="example" id="idm140249235135248"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 2.3: </span><span class="name">Nested Resources </span><a title="Permalink" class="permalink" href="Profile.html#idm140249235135248">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">...
 &lt;drive&gt;
   &lt;device&gt;/dev/sda&lt;/device&gt;
   &lt;partitions config:type="list"&gt;
