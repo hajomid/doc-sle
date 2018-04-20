@@ -60,7 +60,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Depending on your choice in the previous step, you need to provide the
      following data:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140289074004576"><span class="term "><span class="guimenu">Local Installation Media (ISO image or CDROM)</span>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139844144544880"><span class="term "><span class="guimenu">Local Installation Media (ISO image or CDROM)</span>
       </span></dt><dd><p>
         Specify the path on the VM Host Server to an iso image containing the
         installation data. If it is available as a volume in a libvirt storage
@@ -69,7 +69,7 @@ hljs.configure({
        </p><p>
         Alternatively, choose a physical CD-ROM or DVD inserted in the optical
         drive of the VM Host Server.
-       </p></dd><dt id="idm140289074000688"><span class="term "><span class="guimenu">Network Installation (HTTP, FTP, or NFS)</span>
+       </p></dd><dt id="idm139844144540992"><span class="term "><span class="guimenu">Network Installation (HTTP, FTP, or NFS)</span>
       </span></dt><dd><p>
         Provide the <span class="guimenu">URL</span> pointing to the installation source.
         Valid URL prefixes are, for example, <code class="literal">ftp://</code>,
@@ -83,11 +83,11 @@ hljs.configure({
         <span class="guimenu">Automatically Detect Operating System Based on
         Install-Media</span> and manually select the <span class="guimenu">OS
         Type</span> and <span class="guimenu">Version</span>.
-       </p></dd><dt id="idm140289073993728"><span class="term "><span class="guimenu">Network Boot (PXE)</span>
+       </p></dd><dt id="idm139844144534032"><span class="term "><span class="guimenu">Network Boot (PXE)</span>
       </span></dt><dd><p>
         When booting via PXE, you only need to provide the <span class="guimenu">OS
         Type</span> and the <span class="guimenu">Version</span>.
-       </p></dd><dt id="idm140289073990704"><span class="term "><span class="guimenu">Import Existing Disk Image</span>
+       </p></dd><dt id="idm139844144531008"><span class="term "><span class="guimenu">Import Existing Disk Image</span>
       </span></dt><dd><p>
         To set up the VM Guest from an existing image, you need to specify the
         path on the VM Host Server to the image. If it is available as a volume in a
@@ -151,7 +151,7 @@ hljs.configure({
    <code class="command">virt-install</code> is a complex script with a lot of command
    line switches. The following are required. For more information, see the man
    page of <code class="command">virt-install</code> (1).
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140289073956368"><span class="term ">General Options</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139844144496672"><span class="term ">General Options</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="option">--name <em class="replaceable ">VM_GUEST_NAME</em></code>:
         Specify the name of the new virtual machine. The name must be unique
         across all guests known to the hypervisor on the same connection. It is
@@ -167,7 +167,7 @@ hljs.configure({
         Specify the number of virtual CPUs. For best performance, the number of
         virtual processors should be less than or equal to the number of
         physical processors.
-       </p></li></ul></div></dd><dt id="idm140289073947664"><span class="term ">Virtualization Type</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+       </p></li></ul></div></dd><dt id="idm139844144487968"><span class="term ">Virtualization Type</span></dt><dd><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
         <code class="option">--paravirt</code>: Set up a paravirtualized guest. This is
         the default if the VM Host Server supports paravirtualization and full
         virtualization.
@@ -177,7 +177,7 @@ hljs.configure({
         <code class="option">--virt-type <em class="replaceable ">HYPERVISOR</em></code>:
         Specify the hypervisor. Supported values are <code class="literal">kvm</code>,
         <code class="literal">xen</code>, or <code class="literal">lxc</code>.
-       </p></li></ul></div></dd><dt id="idm140289073939456"><span class="term ">Guest Storage</span></dt><dd><p>
+       </p></li></ul></div></dd><dt id="idm139844144479760"><span class="term ">Guest Storage</span></dt><dd><p>
       Specify one of <code class="option">--disk</code>, <code class="option">--filesystem</code> or
       <code class="option">--nodisks</code> the type of the storage for the new virtual
       machine. For example, <code class="option">--disk size=10</code> creates 10 GB disk
@@ -187,11 +187,11 @@ hljs.configure({
       directory on the VM Host Server to be exported to the guest. And
       <code class="option">--nodisks</code> sets up a VM Guest without a local storage
       (good for Live CDs).
-     </p></dd><dt id="idm140289073934384"><span class="term ">Installation Method</span></dt><dd><p>
+     </p></dd><dt id="idm139844144474688"><span class="term ">Installation Method</span></dt><dd><p>
       Specify the installation method using one of <code class="option">--location</code>,
       <code class="option">--cdrom</code>, <code class="option">--pxe</code>,
       <code class="option">--import</code>, or <code class="option">--boot </code>.
-     </p></dd><dt id="idm140289073930320"><span class="term ">Accessing the Installation</span></dt><dd><p>
+     </p></dd><dt id="idm139844144470624"><span class="term ">Accessing the Installation</span></dt><dd><p>
       Use the <code class="option">--graphics <em class="replaceable ">VALUE</em></code>
       option to specify how to access the installation. <span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span> supports
       the values <code class="literal">vnc</code> or <code class="literal">none</code>.
@@ -208,7 +208,7 @@ hljs.configure({
       the VM Guest through operating system supported services, such as SSH or
       VNC. Refer to the operating system installation manual on how to set up
       these services in the installation system.
-     </p></dd><dt id="idm140289073921360"><span class="term ">Enabling the Console</span></dt><dd><p>
+     </p></dd><dt id="idm139844144461664"><span class="term ">Enabling the Console</span></dt><dd><p>
       By default, the console is not enabled for new virtual machines installed
       using <code class="command">virt-install</code>. To enable it, use
       <code class="option">--extra-args="console=ttyS0 textmode=1"</code> as in the
@@ -226,9 +226,9 @@ hljs.configure({
     qcow2 disk image as a storage, the source installation media being the host
     CD-ROM drive. It will use VNC graphics, and it will auto-launch the
     graphical client.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140289073912560"><span class="term ">KVM</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect qemu:///system --virt-type kvm  --name sled12 \
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139844144452864"><span class="term ">KVM</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect qemu:///system --virt-type kvm  --name sled12 \
 --memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \
---os-variant sled12</pre></div></dd><dt id="idm140289073910336"><span class="term ">Xen</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect xen:// --virt-type xen  --name sled12 \
+--os-variant sled12</pre></div></dd><dt id="idm139844144450640"><span class="term ">Xen</span></dt><dd><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>virt-install --connect xen:// --virt-type xen  --name sled12 \
 --memory 1024 --disk size=10 --cdrom /dev/cdrom --graphics vnc \
 --os-variant sled12</pre></div></dd></dl></div></div></div></div></div><div class="sect1 " id="sec.libvirt.inst.advanced"><div class="titlepage"><div><div><h2 class="title" id="sec.libvirt.inst.advanced"><span class="number">9.3 </span><span class="name">Advanced Guest Installation Scenarios</span> <a title="Permalink" class="permalink" href="cha.kvm.inst.html#sec.libvirt.inst.advanced">#</a></h2></div></div></div><p>
    This section provides instructions for operations exceeding the scope of a
