@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Building Profiles from the Command Line | Security Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 24. Building Profiles from the Command Line" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.apparmor.html" title="Part IV. Confining Privileges with AppArmor" /><link rel="prev" href="cha.apparmor.yast.html" title="Chapter 23. Building and Managing Profiles with YaST" /><link rel="next" href="cha.apparmor.hat.html" title="Chapter 25. Profiling Your Web Applications Using ChangeHat" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Building Profiles from the Command Line | Security Guide | SUSE Linux Enterprise Server 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Server" /><meta name="product-number" content="15" /><meta name="book-title" content="Security Guide" /><meta name="chapter-title" content="Chapter 25. Building Profiles from the Command Line" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Server 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Server Documentation" /><link rel="up" href="part.apparmor.html" title="Part IV. Confining Privileges with AppArmor" /><link rel="prev" href="cha.apparmor.yast.html" title="Chapter 24. Building and Managing Profiles with YaST" /><link rel="next" href="cha.apparmor.hat.html" title="Chapter 26. Profiling Your Web Applications Using ChangeHat" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -23,24 +23,24 @@ hljs.configure({
   useBR: false
 });
 
-</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.security.html">Security Guide</a><span> › </span><a class="crumb" href="part.apparmor.html">Confining Privileges with AppArmor</a><span> › </span><a class="crumb" href="cha.apparmor.commandline.html">Building Profiles from the Command Line</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Security Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.security.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.security.html"><span class="number">1 </span><span class="name">Security and Confidentiality</span></a></li><li class="inactive"><a href="part.auth.html"><span class="number">I </span><span class="name">Authentication</span></a><ol><li class="inactive"><a href="cha.pam.html"><span class="number">2 </span><span class="name">Authentication with PAM</span></a></li><li class="inactive"><a href="cha.nis.html"><span class="number">3 </span><span class="name">Using NIS</span></a></li><li class="inactive"><a href="cha.security.auth.html"><span class="number">4 </span><span class="name">Setting Up Authentication Servers and Clients Using YaST</span></a></li><li class="inactive"><a href="cha.security.ldap.html"><span class="number">5 </span><span class="name">LDAP—A Directory Service</span></a></li><li class="inactive"><a href="cha.security.kerberos.html"><span class="number">6 </span><span class="name">Network Authentication with Kerberos</span></a></li><li class="inactive"><a href="cha.security.ad.html"><span class="number">7 </span><span class="name">Active Directory Support</span></a></li></ol></li><li class="inactive"><a href="part.local_security.html"><span class="number">II </span><span class="name">Local Security</span></a><ol><li class="inactive"><a href="cha.security.yast_security.html"><span class="number">8 </span><span class="name">Configuring Security Settings with YaST</span></a></li><li class="inactive"><a href="cha.security.policykit.html"><span class="number">9 </span><span class="name">Authorization with PolKit</span></a></li><li class="inactive"><a href="cha.security.acls.html"><span class="number">10 </span><span class="name">Access Control Lists in Linux</span></a></li><li class="inactive"><a href="cha.security.cryptofs.html"><span class="number">11 </span><span class="name">Encrypting Partitions and Files</span></a></li><li class="inactive"><a href="cha.certstore.html"><span class="number">12 </span><span class="name">Certificate Store</span></a></li><li class="inactive"><a href="cha.aide.html"><span class="number">13 </span><span class="name">Intrusion Detection with AIDE</span></a></li></ol></li><li class="inactive"><a href="part.network_security.html"><span class="number">III </span><span class="name">Network Security</span></a><ol><li class="inactive"><a href="cha.ssh.html"><span class="number">14 </span><span class="name">SSH: Secure Network Operations</span></a></li><li class="inactive"><a href="cha.security.firewall.html"><span class="number">15 </span><span class="name">Masquerading and Firewalls</span></a></li><li class="inactive"><a href="cha.security.vpnserver.html"><span class="number">16 </span><span class="name">Configuring a VPN Server</span></a></li><li class="inactive"><a href="cha.security.yast_ca.html"><span class="number">17 </span><span class="name">Managing X.509 Certification</span></a></li></ol></li><li class="inactive"><a href="part.apparmor.html"><span class="number">IV </span><span class="name">Confining Privileges with <span class="phrase">AppArmor</span></span></a><ol><li class="inactive"><a href="cha.apparmor.intro.html"><span class="number">18 </span><span class="name">Introducing <span class="phrase">AppArmor</span></span></a></li><li class="inactive"><a href="cha.apparmor.start.html"><span class="number">19 </span><span class="name">Getting Started</span></a></li><li class="inactive"><a href="cha.apparmor.concept.html"><span class="number">20 </span><span class="name">Immunizing Programs</span></a></li><li class="inactive"><a href="cha.apparmor.profiles.html"><span class="number">21 </span><span class="name">Profile Components and Syntax</span></a></li><li class="inactive"><a href="cha.apparmor.repos.html"><span class="number">22 </span><span class="name"><span class="phrase">AppArmor</span> Profile Repositories</span></a></li><li class="inactive"><a href="cha.apparmor.yast.html"><span class="number">23 </span><span class="name">Building and Managing Profiles with YaST</span></a></li><li class="inactive"><a href="cha.apparmor.commandline.html"><span class="number">24 </span><span class="name">Building Profiles from the Command Line</span></a></li><li class="inactive"><a href="cha.apparmor.hat.html"><span class="number">25 </span><span class="name">Profiling Your Web Applications Using ChangeHat</span></a></li><li class="inactive"><a href="cha.apparmor.pam.html"><span class="number">26 </span><span class="name">Confining Users with <code class="systemitem">pam_apparmor</code></span></a></li><li class="inactive"><a href="cha.apparmor.managing.html"><span class="number">27 </span><span class="name">Managing Profiled Applications</span></a></li><li class="inactive"><a href="cha.apparmor.support.html"><span class="number">28 </span><span class="name">Support</span></a></li><li class="inactive"><a href="cha.apparmor.glossary.html"><span class="number">29 </span><span class="name"><span class="phrase">AppArmor</span> Glossary</span></a></li></ol></li><li class="inactive"><a href="bk06pt05.html"><span class="number">V </span><span class="name">SELinux</span></a><ol><li class="inactive"><a href="cha.selinux.html"><span class="number">30 </span><span class="name">Configuring SELinux</span></a></li></ol></li><li class="inactive"><a href="part.audit.html"><span class="number">VI </span><span class="name"><em class="citetitle ">The Linux Audit Framework</em></span></a><ol><li class="inactive"><a href="cha.audit.comp.html"><span class="number">31 </span><span class="name">Understanding Linux Audit</span></a></li><li class="inactive"><a href="cha.audit.setup.html"><span class="number">32 </span><span class="name">Setting Up the Linux Audit Framework</span></a></li><li class="inactive"><a href="cha.audit.scenarios.html"><span class="number">33 </span><span class="name">Introducing an Audit Rule Set</span></a></li><li class="inactive"><a href="cha.audit.moreinfo.html"><span class="number">34 </span><span class="name">Useful Resources</span></a></li></ol></li><li class="inactive"><a href="app.pcidss.html"><span class="number">A </span><span class="name">Achieving PCI-DSS Compliance</span></a></li><li class="inactive"><a href="bk06apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 23. Building and Managing Profiles with YaST" href="cha.apparmor.yast.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 25. Profiling Your Web Applications Using ChangeHat" href="cha.apparmor.hat.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.security.html">Security Guide</a><span> › </span><a class="crumb" href="part.apparmor.html">Confining Privileges with AppArmor</a><span> › </span><a class="crumb" href="cha.apparmor.commandline.html">Building Profiles from the Command Line</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 23. Building and Managing Profiles with YaST" href="cha.apparmor.yast.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 25. Profiling Your Web Applications Using ChangeHat" href="cha.apparmor.hat.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.apparmor.commandline"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">24 </span><span class="name">Building Profiles from the Command Line</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>apparmor_profiles_man.xml</li><li><span class="ds-label">ID: </span>cha.apparmor.commandline</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.status"><span class="number">24.1 </span><span class="name">Checking the <span class="phrase">AppArmor</span> Status</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.build"><span class="number">24.2 </span><span class="name">Building <span class="phrase">AppArmor</span> Profiles</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.add"><span class="number">24.3 </span><span class="name">Adding or Creating an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit"><span class="number">24.4 </span><span class="name">Editing an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload"><span class="number">24.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.del"><span class="number">24.6 </span><span class="name">Deleting an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling"><span class="number">24.7 </span><span class="name">Two Methods of Profiling</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.filenames"><span class="number">24.8 </span><span class="name">Important File Names and Directories</span></a></span></dt></dl></div></div><p>
+</script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.security.html">Security Guide</a><span> › </span><a class="crumb" href="part.apparmor.html">Confining Privileges with AppArmor</a><span> › </span><a class="crumb" href="cha.apparmor.commandline.html">Building Profiles from the Command Line</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Security Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="preface.security.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="cha.security.html"><span class="number">1 </span><span class="name">Security and Confidentiality</span></a></li><li class="inactive"><a href="part.auth.html"><span class="number">I </span><span class="name">Authentication</span></a><ol><li class="inactive"><a href="cha.pam.html"><span class="number">2 </span><span class="name">Authentication with PAM</span></a></li><li class="inactive"><a href="cha.nis.html"><span class="number">3 </span><span class="name">Using NIS</span></a></li><li class="inactive"><a href="cha.security.auth.html"><span class="number">4 </span><span class="name">Setting Up Authentication Servers and Clients Using YaST</span></a></li><li class="inactive"><a href="cha.security.ldap.html"><span class="number">5 </span><span class="name">LDAP—A Directory Service</span></a></li><li class="inactive"><a href="cha.security.kerberos.html"><span class="number">6 </span><span class="name">Network Authentication with Kerberos</span></a></li><li class="inactive"><a href="cha.security.ad.html"><span class="number">7 </span><span class="name">Active Directory Support</span></a></li></ol></li><li class="inactive"><a href="part.local_security.html"><span class="number">II </span><span class="name">Local Security</span></a><ol><li class="inactive"><a href="cha.security.yast_security.html"><span class="number">8 </span><span class="name">Configuring Security Settings with YaST</span></a></li><li class="inactive"><a href="cha.security.policykit.html"><span class="number">9 </span><span class="name">Authorization with PolKit</span></a></li><li class="inactive"><a href="cha.security.acls.html"><span class="number">10 </span><span class="name">Access Control Lists in Linux</span></a></li><li class="inactive"><a href="cha.security.cryptofs.html"><span class="number">11 </span><span class="name">Encrypting Partitions and Files</span></a></li><li class="inactive"><a href="cha.certstore.html"><span class="number">12 </span><span class="name">Certificate Store</span></a></li><li class="inactive"><a href="cha.aide.html"><span class="number">13 </span><span class="name">Intrusion Detection with AIDE</span></a></li></ol></li><li class="inactive"><a href="part.network_security.html"><span class="number">III </span><span class="name">Network Security</span></a><ol><li class="inactive"><a href="cha.xauth.html"><span class="number">14 </span><span class="name">X Window System and X Authentication</span></a></li><li class="inactive"><a href="cha.ssh.html"><span class="number">15 </span><span class="name">SSH: Secure Network Operations</span></a></li><li class="inactive"><a href="cha.security.firewall.html"><span class="number">16 </span><span class="name">Masquerading and Firewalls</span></a></li><li class="inactive"><a href="cha.security.vpnserver.html"><span class="number">17 </span><span class="name">Configuring a VPN Server</span></a></li><li class="inactive"><a href="cha.security.yast_ca.html"><span class="number">18 </span><span class="name">Managing X.509 Certification</span></a></li></ol></li><li class="inactive"><a href="part.apparmor.html"><span class="number">IV </span><span class="name">Confining Privileges with <span class="phrase">AppArmor</span></span></a><ol><li class="inactive"><a href="cha.apparmor.intro.html"><span class="number">19 </span><span class="name">Introducing <span class="phrase">AppArmor</span></span></a></li><li class="inactive"><a href="cha.apparmor.start.html"><span class="number">20 </span><span class="name">Getting Started</span></a></li><li class="inactive"><a href="cha.apparmor.concept.html"><span class="number">21 </span><span class="name">Immunizing Programs</span></a></li><li class="inactive"><a href="cha.apparmor.profiles.html"><span class="number">22 </span><span class="name">Profile Components and Syntax</span></a></li><li class="inactive"><a href="cha.apparmor.repos.html"><span class="number">23 </span><span class="name"><span class="phrase">AppArmor</span> Profile Repositories</span></a></li><li class="inactive"><a href="cha.apparmor.yast.html"><span class="number">24 </span><span class="name">Building and Managing Profiles with YaST</span></a></li><li class="inactive"><a href="cha.apparmor.commandline.html"><span class="number">25 </span><span class="name">Building Profiles from the Command Line</span></a></li><li class="inactive"><a href="cha.apparmor.hat.html"><span class="number">26 </span><span class="name">Profiling Your Web Applications Using ChangeHat</span></a></li><li class="inactive"><a href="cha.apparmor.pam.html"><span class="number">27 </span><span class="name">Confining Users with <code class="systemitem">pam_apparmor</code></span></a></li><li class="inactive"><a href="cha.apparmor.managing.html"><span class="number">28 </span><span class="name">Managing Profiled Applications</span></a></li><li class="inactive"><a href="cha.apparmor.support.html"><span class="number">29 </span><span class="name">Support</span></a></li><li class="inactive"><a href="cha.apparmor.glossary.html"><span class="number">30 </span><span class="name"><span class="phrase">AppArmor</span> Glossary</span></a></li></ol></li><li class="inactive"><a href="part.selinux.html"><span class="number">V </span><span class="name">SELinux</span></a><ol><li class="inactive"><a href="cha.selinux.html"><span class="number">31 </span><span class="name">Configuring SELinux</span></a></li></ol></li><li class="inactive"><a href="part.audit.html"><span class="number">VI </span><span class="name"><em class="citetitle ">The Linux Audit Framework</em></span></a><ol><li class="inactive"><a href="cha.audit.comp.html"><span class="number">32 </span><span class="name">Understanding Linux Audit</span></a></li><li class="inactive"><a href="cha.audit.setup.html"><span class="number">33 </span><span class="name">Setting Up the Linux Audit Framework</span></a></li><li class="inactive"><a href="cha.audit.scenarios.html"><span class="number">34 </span><span class="name">Introducing an Audit Rule Set</span></a></li><li class="inactive"><a href="cha.audit.moreinfo.html"><span class="number">35 </span><span class="name">Useful Resources</span></a></li></ol></li><li class="inactive"><a href="app.pcidss.html"><span class="number">A </span><span class="name">Achieving PCI-DSS Compliance</span></a></li><li class="inactive"><a href="bk06apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 24. Building and Managing Profiles with YaST" href="cha.apparmor.yast.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 26. Profiling Your Web Applications Using ChangeHat" href="cha.apparmor.hat.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Server Documentation"><span class="book-icon">SUSE Linux Enterprise Server Documentation</span></a><span> › </span><a class="crumb" href="book.security.html">Security Guide</a><span> › </span><a class="crumb" href="part.apparmor.html">Confining Privileges with AppArmor</a><span> › </span><a class="crumb" href="cha.apparmor.commandline.html">Building Profiles from the Command Line</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 24. Building and Managing Profiles with YaST" href="cha.apparmor.yast.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 26. Profiling Your Web Applications Using ChangeHat" href="cha.apparmor.hat.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.apparmor.commandline"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Server</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">25 </span><span class="name">Building Profiles from the Command Line</span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>apparmor_profiles_man.xml</li><li><span class="ds-label">ID: </span>cha.apparmor.commandline</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.status"><span class="number">25.1 </span><span class="name">Checking the <span class="phrase">AppArmor</span> Status</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.build"><span class="number">25.2 </span><span class="name">Building <span class="phrase">AppArmor</span> Profiles</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.add"><span class="number">25.3 </span><span class="name">Adding or Creating an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit"><span class="number">25.4 </span><span class="name">Editing an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload"><span class="number">25.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.del"><span class="number">25.6 </span><span class="name">Deleting an <span class="phrase">AppArmor</span> Profile</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling"><span class="number">25.7 </span><span class="name">Two Methods of Profiling</span></a></span></dt><dt><span class="sect1"><a href="cha.apparmor.commandline.html#sec.apparmor.commandline.filenames"><span class="number">25.8 </span><span class="name">Important File Names and Directories</span></a></span></dt></dl></div></div><p>
   <span class="phrase">AppArmor®</span> provides the user the ability to use a command line interface
   rather than a graphical interface to manage and configure the system
   security. Track the status of <span class="phrase">AppArmor</span> and create, delete, or modify
   <span class="phrase">AppArmor</span> profiles using the <span class="phrase">AppArmor</span> command line tools.
- </p><div id="idm140053263199872" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Background Information</h6><p>
+ </p><div id="idm140717273763680" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Background Information</h6><p>
    Before starting to manage your profiles using the <span class="phrase">AppArmor</span> command line
    tools, check out the general introduction to <span class="phrase">AppArmor</span> given in
-   <a class="xref" href="cha.apparmor.concept.html" title="Chapter 20. Immunizing Programs">Chapter 20, <em>Immunizing Programs</em></a> and
-   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>.
-  </p></div><div class="sect1 " id="sec.apparmor.commandline.status"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.status"><span class="number">24.1 </span><span class="name">Checking the <span class="phrase">AppArmor</span> Status</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.status">#</a></h2></div></div></div><p>
+   <a class="xref" href="cha.apparmor.concept.html" title="Chapter 21. Immunizing Programs">Chapter 21, <em>Immunizing Programs</em></a> and
+   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 22. Profile Components and Syntax">Chapter 22, <em>Profile Components and Syntax</em></a>.
+  </p></div><div class="sect1 " id="sec.apparmor.commandline.status"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.status"><span class="number">25.1 </span><span class="name">Checking the <span class="phrase">AppArmor</span> Status</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.status">#</a></h2></div></div></div><p>
    <span class="phrase">AppArmor</span> can be in any one of three states:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053263193584"><span class="term ">Unloaded</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273757392"><span class="term ">Unloaded</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is not activated in the kernel.
-     </p></dd><dt id="idm140053263191328"><span class="term ">Running</span></dt><dd><p>
+     </p></dd><dt id="idm140717273755136"><span class="term ">Running</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is activated in the kernel and is enforcing <span class="phrase">AppArmor</span> program
       policies.
-     </p></dd><dt id="idm140053263188592"><span class="term ">Stopped</span></dt><dd><p>
+     </p></dd><dt id="idm140717273752400"><span class="term ">Stopped</span></dt><dd><p>
       <span class="phrase">AppArmor</span> is activated in the kernel, but no policies are enforced.
      </p></dd></dl></div><p>
    Detect the state of <span class="phrase">AppArmor</span> by inspecting
@@ -51,7 +51,7 @@ hljs.configure({
   </p><p>
    Manage <span class="phrase">AppArmor</span> with <code class="command">systemctl</code>. It lets you perform the
    following operations:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053263181200"><span class="term "><code class="command">sudo systemctl start apparmor</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273745008"><span class="term "><code class="command">sudo systemctl start apparmor</code>
     </span></dt><dd><p>
       Behavior depends on the state of <span class="phrase">AppArmor</span>. If it is not activated,
       <code class="option">start</code> activates and starts it, putting it in the
@@ -60,17 +60,17 @@ hljs.configure({
       <code class="filename">/etc/apparmor.d</code> and puts <span class="phrase">AppArmor</span> in the running
       state. If <span class="phrase">AppArmor</span> is already running, <code class="option">start</code> reports a
       warning and takes no action.
-     </p><div id="idm140053263175648" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Already Running Processes</h6><p>
+     </p><div id="idm140717273739456" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Already Running Processes</h6><p>
        Already running processes need to be restarted to apply the <span class="phrase">AppArmor</span>
        profiles on them.
-      </p></div></dd><dt id="idm140053263173456"><span class="term "><code class="command">sudo systemctl stop apparmor</code>
+      </p></div></dd><dt id="idm140717273737264"><span class="term "><code class="command">sudo systemctl stop apparmor</code>
     </span></dt><dd><p>
       Stops <span class="phrase">AppArmor</span> if it is running by removing all profiles from kernel
       memory, effectively disabling all access controls, and putting <span class="phrase">AppArmor</span>
       into the stopped state. If the <span class="phrase">AppArmor</span> is already stopped,
       <code class="option">stop</code> tries to unload the profiles again, but nothing
       happens.
-     </p></dd><dt id="idm140053263169376"><span class="term "><code class="command">sudo systemctl reload apparmor</code>
+     </p></dd><dt id="idm140717273733184"><span class="term "><code class="command">sudo systemctl reload apparmor</code>
     </span></dt><dd><p>
       Causes the <span class="phrase">AppArmor</span> module to re-scan the profiles in
       <code class="filename">/etc/apparmor.d</code> without unconfining running
@@ -78,11 +78,11 @@ hljs.configure({
       processes. Freshly created profiles are enforced and recently deleted
       ones are removed from the <code class="filename">/etc/apparmor.d</code>
       directory.
-     </p></dd></dl></div></div><div class="sect1 " id="sec.apparmor.commandline.build"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.build"><span class="number">24.2 </span><span class="name">Building <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.build">#</a></h2></div></div></div><p>
+     </p></dd></dl></div></div><div class="sect1 " id="sec.apparmor.commandline.build"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.build"><span class="number">25.2 </span><span class="name">Building <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.build">#</a></h2></div></div></div><p>
    The <span class="phrase">AppArmor</span> module profile definitions are stored in the
    <code class="filename">/etc/apparmor.d</code> directory as plain text files. For a
    detailed description of the syntax of these files, refer to
-   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>.
+   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 22. Profile Components and Syntax">Chapter 22, <em>Profile Components and Syntax</em></a>.
   </p><p>
    All files in the <code class="filename">/etc/apparmor.d</code> directory are
    interpreted as profiles and are loaded as such. Renaming files in that
@@ -95,19 +95,19 @@ hljs.configure({
    You can use a text editor, such as <code class="command">vi</code>, to access and
    make changes to these profiles. The following sections contain detailed
    steps for building profiles:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053263157744"><span class="term ">Adding or Creating <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
-      Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add" title="24.3. Adding or Creating an AppArmor Profile">Section 24.3, “Adding or Creating an <span class="phrase">AppArmor</span> Profile”</a>
-     </p></dd><dt id="idm140053263154928"><span class="term ">Editing <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
-      Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit" title="24.4. Editing an AppArmor Profile">Section 24.4, “Editing an <span class="phrase">AppArmor</span> Profile”</a>
-     </p></dd><dt id="idm140053263152112"><span class="term ">Deleting <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273721552"><span class="term ">Adding or Creating <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+      Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add" title="25.3. Adding or Creating an AppArmor Profile">Section 25.3, “Adding or Creating an <span class="phrase">AppArmor</span> Profile”</a>
+     </p></dd><dt id="idm140717273718736"><span class="term ">Editing <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
+      Refer to <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit" title="25.4. Editing an AppArmor Profile">Section 25.4, “Editing an <span class="phrase">AppArmor</span> Profile”</a>
+     </p></dd><dt id="idm140717273715920"><span class="term ">Deleting <span class="phrase">AppArmor</span> Profiles</span></dt><dd><p>
       Refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.del" title="24.6. Deleting an AppArmor Profile">Section 24.6, “Deleting an <span class="phrase">AppArmor</span> Profile”</a>
-     </p></dd></dl></div></div><div class="sect1 " id="sec.apparmor.commandline.add"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.add"><span class="number">24.3 </span><span class="name">Adding or Creating an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add">#</a></h2></div></div></div><p>
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.del" title="25.6. Deleting an AppArmor Profile">Section 25.6, “Deleting an <span class="phrase">AppArmor</span> Profile”</a>
+     </p></dd></dl></div></div><div class="sect1 " id="sec.apparmor.commandline.add"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.add"><span class="number">25.3 </span><span class="name">Adding or Creating an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.add">#</a></h2></div></div></div><p>
    To add or create an <span class="phrase">AppArmor</span> profile for an application, you can use a
    systemic or stand-alone profiling method, depending on your needs. Learn
    more about these two approaches in
-   <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling" title="24.7. Two Methods of Profiling">Section 24.7, “Two Methods of Profiling”</a>.
-  </p></div><div class="sect1 " id="sec.apparmor.commandline.edit"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.edit"><span class="number">24.4 </span><span class="name">Editing an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit">#</a></h2></div></div></div><p>
+   <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling" title="25.7. Two Methods of Profiling">Section 25.7, “Two Methods of Profiling”</a>.
+  </p></div><div class="sect1 " id="sec.apparmor.commandline.edit"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.edit"><span class="number">25.4 </span><span class="name">Editing an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.edit">#</a></h2></div></div></div><p>
    The following steps describe the procedure for editing an <span class="phrase">AppArmor</span>
    profile:
   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -127,7 +127,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Restart <span class="phrase">AppArmor</span> by entering <code class="command">systemctl reload
      apparmor</code> in a terminal window.
-    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.unload"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.unload"><span class="number">24.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload">#</a></h2></div></div></div><div id="idm140053263130288" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Danger of Unloading Wanted Profiles</h6><p>
+    </p></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.unload"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.unload"><span class="number">25.5 </span><span class="name">Unloading Unknown <span class="phrase">AppArmor</span> Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.unload">#</a></h2></div></div></div><div id="idm140717273694096" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Danger of Unloading Wanted Profiles</h6><p>
     <code class="command">aa-remove-unkown</code> will unload all profiles that
     are not stored in <code class="filename">/etc/apparmor.d</code>, for example
     automatically generated LXD profiles. This may compromise the
@@ -138,7 +138,7 @@ hljs.configure({
    <code class="filename">/etc/apparmor.d/</code> <span class="phrase">AppArmor</span> profiles, run:
   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">aa-remove-unknown</code></pre></div><p>
    You can print a list of profiles that will be removed:
-  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">aa-remove-unknown -n</code></pre></div></div><div class="sect1 " id="sec.apparmor.commandline.del"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.del"><span class="number">24.6 </span><span class="name">Deleting an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.del">#</a></h2></div></div></div><p>
+  </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">aa-remove-unknown -n</code></pre></div></div><div class="sect1 " id="sec.apparmor.commandline.del"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.del"><span class="number">25.6 </span><span class="name">Deleting an <span class="phrase">AppArmor</span> Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.del">#</a></h2></div></div></div><p>
    The following steps describe the procedure for deleting an <span class="phrase">AppArmor</span>
    profile.
   </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
@@ -146,26 +146,26 @@ hljs.configure({
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">apparmor_parser -R /etc/apparmor.d/<em class="replaceable ">PROFILE</em></code></pre></div></li><li class="step "><p>
      Remove the definition file:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">rm /etc/apparmor.d/<em class="replaceable ">PROFILE</em></code>
-    <code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">rm /var/lib/apparmor/cache/<em class="replaceable ">PROFILE</em></code></pre></div></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.profiling"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.profiling"><span class="number">24.7 </span><span class="name">Two Methods of Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling">#</a></h2></div></div></div><p>
+    <code class="prompt user">tux &gt; </code><code class="command">sudo</code> <code class="command">rm /var/lib/apparmor/cache/<em class="replaceable ">PROFILE</em></code></pre></div></li></ol></div></div></div><div class="sect1 " id="sec.apparmor.commandline.profiling"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.profiling"><span class="number">25.7 </span><span class="name">Two Methods of Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling">#</a></h2></div></div></div><p>
    Given the syntax for <span class="phrase">AppArmor</span> profiles in
-   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 21. Profile Components and Syntax">Chapter 21, <em>Profile Components and Syntax</em></a>, you
+   <a class="xref" href="cha.apparmor.profiles.html" title="Chapter 22. Profile Components and Syntax">Chapter 22, <em>Profile Components and Syntax</em></a>, you
    could create profiles without using the tools. However, the effort
    involved would be substantial. To avoid such a situation, use the <span class="phrase">AppArmor</span>
    tools to automate the creation and refinement of profiles.
   </p><p>
    There are two ways to approach <span class="phrase">AppArmor</span> profile creation. Tools are
    available for both methods.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053263107856"><span class="term ">Stand-Alone Profiling</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273671600"><span class="term ">Stand-Alone Profiling</span></dt><dd><p>
       A method suitable for profiling small applications that have a finite
       runtime, such as user client applications like mail clients. For more
       information, refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.stand-alone" title="24.7.1. Stand-Alone Profiling">Section 24.7.1, “Stand-Alone Profiling”</a>.
-     </p></dd><dt id="idm140053263105296"><span class="term ">Systemic Profiling</span></dt><dd><p>
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.stand-alone" title="25.7.1. Stand-Alone Profiling">Section 25.7.1, “Stand-Alone Profiling”</a>.
+     </p></dd><dt id="idm140717273669040"><span class="term ">Systemic Profiling</span></dt><dd><p>
       A method suitable for profiling many programs at once
       and for profiling applications that may run for days, weeks, or
       continuously across reboots, such as network server applications like
       Web servers and mail servers. For more information, refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.systemic" title="24.7.2. Systemic Profiling">Section 24.7.2, “Systemic Profiling”</a>.
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.systemic" title="25.7.2. Systemic Profiling">Section 25.7.2, “Systemic Profiling”</a>.
      </p></dd></dl></div><p>
    Automated profile development becomes more manageable with the <span class="phrase">AppArmor</span>
    tools:
@@ -178,7 +178,7 @@ hljs.configure({
     </p></li><li class="step "><p>
      Enable dynamic learning. Activate learning mode for all profiled
      programs.
-    </p></li></ol></div></div><div class="sect2 " id="sec.apparmor.commandline.profiling.stand-alone"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.stand-alone"><span class="number">24.7.1 </span><span class="name">Stand-Alone Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.stand-alone">#</a></h3></div></div></div><p>
+    </p></li></ol></div></div><div class="sect2 " id="sec.apparmor.commandline.profiling.stand-alone"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.stand-alone"><span class="number">25.7.1 </span><span class="name">Stand-Alone Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.stand-alone">#</a></h3></div></div></div><p>
     Stand-alone profile generation and improvement is managed by a program
     called <code class="command">aa-genprof</code>. This method is easy because
     <code class="command">aa-genprof</code> takes care of everything, but is limited
@@ -188,8 +188,8 @@ hljs.configure({
    </p><p>
     To use <code class="command">aa-genprof</code> for the stand-alone method of
     profiling, refer to
-    <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.genprof" title="24.7.3.8. aa-genprof—Generating Profiles">Section 24.7.3.8, “aa-genprof—Generating Profiles”</a>.
-   </p></div><div class="sect2 " id="sec.apparmor.commandline.profiling.systemic"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.systemic"><span class="number">24.7.2 </span><span class="name">Systemic Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.systemic">#</a></h3></div></div></div><p>
+    <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.genprof" title="25.7.3.8. aa-genprof—Generating Profiles">Section 25.7.3.8, “aa-genprof—Generating Profiles”</a>.
+   </p></div><div class="sect2 " id="sec.apparmor.commandline.profiling.systemic"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.systemic"><span class="number">25.7.2 </span><span class="name">Systemic Profiling</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.systemic">#</a></h3></div></div></div><p>
     This method is called <span class="emphasis"><em>systemic profiling</em></span> because it
     updates all of the profiles on the system at once, rather than focusing
     on the one or few targeted by <code class="command">aa-genprof</code> or
@@ -208,7 +208,7 @@ hljs.configure({
       a program, you must at least have <code class="command">aa-autodep</code> create
       an approximate profile for it. To create this approximate profile,
       refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.autodep" title="24.7.3.1. aa-autodep—Creating Approximate Profiles">Section 24.7.3.1, “aa-autodep—Creating Approximate Profiles”</a>.
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.autodep" title="25.7.3.1. aa-autodep—Creating Approximate Profiles">Section 25.7.3.1, “aa-autodep—Creating Approximate Profiles”</a>.
      </p></li><li class="step "><p>
       Put relevant profiles into learning or complain mode.
      </p><p>
@@ -218,7 +218,7 @@ hljs.configure({
       in a terminal window while logged in as <code class="systemitem">root</code>. This
       functionality is also available through the YaST Profile Mode
       module, described in
-      <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>.
+      <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="24.4.2. Changing the Mode of Individual Profiles">Section 24.4.2, “Changing the Mode of Individual Profiles”</a>.
      </p><p>
       When in learning mode, access requests are not blocked, even if the
       profile dictates that they should be. This enables you to run through
@@ -228,7 +228,7 @@ hljs.configure({
       information, you can decide how secure to make the profile.
      </p><p>
       Refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.complain" title="24.7.3.2. aa-complain—Entering Complain or Learning Mode">Section 24.7.3.2, “aa-complain—Entering Complain or Learning Mode”</a>
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.complain" title="25.7.3.2. aa-complain—Entering Complain or Learning Mode">Section 25.7.3.2, “aa-complain—Entering Complain or Learning Mode”</a>
       for more detailed instructions for using learning or complain mode.
      </p></li><li class="step " id="st.apparmor.commandline.profiling.systemic.exec"><p>
       Exercise your application.
@@ -247,7 +247,7 @@ hljs.configure({
       <code class="command">aa-logprof</code> is:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> aa-logprof [ -d <em class="replaceable ">/path/to/profiles</em> ] [ -f <em class="replaceable ">/path/to/logfile</em> ]</pre></div><p>
       Refer to
-      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof" title="24.7.3.9. aa-logprof—Scanning the System Log">Section 24.7.3.9, “aa-logprof—Scanning the System Log”</a>
+      <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof" title="25.7.3.9. aa-logprof—Scanning the System Log">Section 25.7.3.9, “aa-logprof—Scanning the System Log”</a>
       for more information about using <code class="command">aa-logprof</code>.
      </p></li><li class="step "><p>
       Repeat
@@ -275,7 +275,7 @@ hljs.configure({
       command, except it sets the profiles to enforce mode. This
       functionality is also available through the YaST Profile Mode
       module, described in
-      <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>.
+      <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="24.4.2. Changing the Mode of Individual Profiles">Section 24.4.2, “Changing the Mode of Individual Profiles”</a>.
      </p><p>
       To ensure that all profiles are taken out of complain mode and put
       into enforce mode, enter <code class="command">aa-enforce
@@ -286,11 +286,11 @@ hljs.configure({
       To have <span class="phrase">AppArmor</span> re-scan all of the profiles and change the enforcement
       mode in the kernel, enter <code class="command">systemctl reload
       apparmor</code>.
-     </p></li></ol></div></div></div><div class="sect2 " id="sec.apparmor.commandline.profiling.summary"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.summary"><span class="number">24.7.3 </span><span class="name">Summary of Profiling Tools</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary">#</a></h3></div></div></div><p>
+     </p></li></ol></div></div></div><div class="sect2 " id="sec.apparmor.commandline.profiling.summary"><div class="titlepage"><div><div><h3 class="title" id="sec.apparmor.commandline.profiling.summary"><span class="number">25.7.3 </span><span class="name">Summary of Profiling Tools</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary">#</a></h3></div></div></div><p>
     All of the <span class="phrase">AppArmor</span> profiling utilities are provided by the
     <code class="systemitem">apparmor-utils</code> RPM package and are stored in
     <code class="filename">/usr/sbin</code>. Each tool has a different purpose.
-   </p><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.autodep"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.autodep"><span class="number">24.7.3.1 </span><span class="name">aa-autodep—Creating Approximate Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.autodep">#</a></h4></div></div></div><p>
+   </p><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.autodep"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.autodep"><span class="number">25.7.3.1 </span><span class="name">aa-autodep—Creating Approximate Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.autodep">#</a></h4></div></div></div><p>
      This creates an approximate profile for the program or application
      selected. You can generate approximate profiles for binary executables
      and interpreted script programs. The resulting profile is called
@@ -330,13 +330,13 @@ hljs.configure({
      without being a child of another program that already has a profile).
      Finding all such programs depends on the application in question. Here
      are several strategies for finding such programs:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053263038704"><span class="term ">Directories</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273602448"><span class="term ">Directories</span></dt><dd><p>
         If all the programs to profile are in one directory and there are no
         other programs in that directory, the simple command
         <code class="command">aa-autodep</code>
         <em class="replaceable ">/path/to/your/programs/*</em> creates basic
         profiles for all programs in that directory.
-       </p></dd><dt id="idm140053263035808"><span class="term ">pstree -p</span></dt><dd><p>
+       </p></dd><dt id="idm140717273599552"><span class="term ">pstree -p</span></dt><dd><p>
         You can run your application and use the standard Linux
         <code class="command">pstree</code> command to find all processes running.
         Then manually hunt down the location of these programs and run the
@@ -348,7 +348,7 @@ hljs.configure({
         <em class="replaceable ">MY_APPLICATION</em>' -print to determine an
         application's path (<em class="replaceable ">MY_APPLICATION</em> being
         an example application). You may use wild cards if appropriate.
-       </p></dd></dl></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.complain"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.complain"><span class="number">24.7.3.2 </span><span class="name">aa-complain—Entering Complain or Learning Mode</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.complain">#</a></h4></div></div></div><p>
+       </p></dd></dl></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.complain"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.complain"><span class="number">25.7.3.2 </span><span class="name">aa-complain—Entering Complain or Learning Mode</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.complain">#</a></h4></div></div></div><p>
      The complain or learning mode tool (<code class="command">aa-complain</code>)
      detects violations of <span class="phrase">AppArmor</span> profile rules, such as the profiled
      program accessing files not permitted by the profile. The violations
@@ -385,22 +385,22 @@ hljs.configure({
      <code class="filename">/usr/sbin</code> and puts them into complain mode.
      <code class="command">aa-complain /etc/apparmor.d/*</code> puts all of the
      profiles in <code class="filename">/etc/apparmor.d</code> into complain mode.
-    </p><div id="idm140053263008720" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
+    </p><div id="idm140717273572400" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
       YaST offers a graphical front-end for toggling complain and
-      enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>
+      enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="24.4.2. Changing the Mode of Individual Profiles">Section 24.4.2, “Changing the Mode of Individual Profiles”</a>
       for information.
-     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.decode"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.decode"><span class="number">24.7.3.3 </span><span class="name">aa-decode—Decoding Hex-encoded Strings in <span class="phrase">AppArmor</span> Log Files</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.decode">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.decode"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.decode"><span class="number">25.7.3.3 </span><span class="name">aa-decode—Decoding Hex-encoded Strings in <span class="phrase">AppArmor</span> Log Files</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.decode">#</a></h4></div></div></div><p>
      <code class="command">aa-decode</code> will decode hex-encoded strings in the
      <span class="phrase">AppArmor</span> log output. It can also process the audit log on standard
      input, convert any hex-encoded <span class="phrase">AppArmor</span> log entries, and display them on
      standard output.
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.disable"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.disable"><span class="number">24.7.3.4 </span><span class="name">aa-disable—Disabling an <span class="phrase">AppArmor</span> Security Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.disable">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.disable"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.disable"><span class="number">25.7.3.4 </span><span class="name">aa-disable—Disabling an <span class="phrase">AppArmor</span> Security Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.disable">#</a></h4></div></div></div><p>
      Use <code class="command">aa-disable</code> to disable the enforcement mode for
      one or more <span class="phrase">AppArmor</span> profiles. This command will unload the profile from
      the kernel, and prevent the profile from being loaded on <span class="phrase">AppArmor</span>
      start-up. Use <code class="command">aa-enforce</code> or
      <code class="command">aa-complain</code> utilities to change this behavior.
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.easyprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.easyprof"><span class="number">24.7.3.5 </span><span class="name">aa-easyprof—Easy Profile Generation</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.easyprof">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.easyprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.easyprof"><span class="number">25.7.3.5 </span><span class="name">aa-easyprof—Easy Profile Generation</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.easyprof">#</a></h4></div></div></div><p>
      <code class="command">aa-easyprof</code> provides an easy-to-use interface for
      <span class="phrase">AppArmor</span> profile generation. <code class="command">aa-easyprof</code> supports the
      use of templates and profile groups to quickly profile an application.
@@ -412,7 +412,7 @@ hljs.configure({
     </p><p>
      For more information, see the man page of
      <code class="command">aa-easyprof</code> (8).
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.enforce"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.enforce"><span class="number">24.7.3.6 </span><span class="name">aa-enforce—Entering Enforce Mode</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.enforce">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.enforce"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.enforce"><span class="number">25.7.3.6 </span><span class="name">aa-enforce—Entering Enforce Mode</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.enforce">#</a></h4></div></div></div><p>
      The enforce mode detects violations of <span class="phrase">AppArmor</span> profile rules, such as
      the profiled program accessing files not permitted by the profile. The
      violations are logged and not permitted. The default is for enforce
@@ -449,11 +449,11 @@ hljs.configure({
      the program name does not include its entire path,
      <code class="command">aa-enforce</code> searches <code class="envar">$PATH</code> for the
      program.
-    </p><div id="idm140053262972800" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
+    </p><div id="idm140717273536544" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Toggling Profile Mode with YaST</h6><p>
       YaST offers a graphical front-end for toggling complain and
-      enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="23.4.2. Changing the Mode of Individual Profiles">Section 23.4.2, “Changing the Mode of Individual Profiles”</a>
+      enforce mode. See <a class="xref" href="cha.apparmor.yast.html#sec.apparmor.yast.manage.profmodes" title="24.4.2. Changing the Mode of Individual Profiles">Section 24.4.2, “Changing the Mode of Individual Profiles”</a>
       for information.
-     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.exec"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.exec"><span class="number">24.7.3.7 </span><span class="name">aa-exec—Confining a Program with the Specified Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.exec">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.exec"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.exec"><span class="number">25.7.3.7 </span><span class="name">aa-exec—Confining a Program with the Specified Profile</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.exec">#</a></h4></div></div></div><p>
      Use <code class="command">aa-exec</code> to launch a program confined by a
      specified profile and/or profile namespace. If both a profile and
      namespace are specified, the program will be confined by the profile in
@@ -465,7 +465,7 @@ hljs.configure({
     </p><p>
      For more information on the command's options, see its manual page
      <code class="command">man 8 aa-exec</code>.
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.genprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.genprof"><span class="number">24.7.3.8 </span><span class="name">aa-genprof—Generating Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.genprof">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.genprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.genprof"><span class="number">25.7.3.8 </span><span class="name">aa-genprof—Generating Profiles</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.genprof">#</a></h4></div></div></div><p>
      <code class="command">aa-genprof</code> is <span class="phrase">AppArmor</span>'s profile generating utility.
      It runs <code class="command">aa-autodep</code> on the specified program,
      creating an approximate profile (if a profile does not already exist
@@ -490,7 +490,7 @@ hljs.configure({
          Checks to see if there is an existing profile for httpd2-prefork.
          If there is one, it updates it. If not, it creates one using the
          <code class="command">aa-autodep</code> as described in
-         <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary" title="24.7.3. Summary of Profiling Tools">Section 24.7.3, “Summary of Profiling Tools”</a>.
+         <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary" title="25.7.3. Summary of Profiling Tools">Section 25.7.3, “Summary of Profiling Tools”</a>.
         </p></li><li class="listitem "><p>
          Puts the profile for this program into learning or complain mode so
          that profile violations are logged, but are permitted to proceed. A
@@ -537,32 +537,32 @@ requested_mask="::r" denied_mask="::r" fsuid=30 ouid=0</pre></div></li><li class
          <code class="command">aa-genprof</code> in generating the security profile.
         </p></li><li class="listitem "><p>
          <span class="keycap">F</span> exits the tool.
-        </p></li></ul></div><div id="idm140053262932976" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p></li></ul></div><div id="idm140717273496720" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
         If requests to add hats appear, proceed to
-        <a class="xref" href="cha.apparmor.hat.html" title="Chapter 25. Profiling Your Web Applications Using ChangeHat">Chapter 25, <em>Profiling Your Web Applications Using ChangeHat</em></a>.
+        <a class="xref" href="cha.apparmor.hat.html" title="Chapter 26. Profiling Your Web Applications Using ChangeHat">Chapter 26, <em>Profiling Your Web Applications Using ChangeHat</em></a>.
        </p></div></li><li class="step "><p>
        Answer two types of questions:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          A resource is requested by a profiled program that is not in the
          profile (see
-         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 24.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>).
+         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 25.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>).
         </p></li><li class="listitem "><p>
          A program is executed by the profiled program and the security
          domain transition has not been defined (see
-         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 24.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>).
+         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 25.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>).
         </p></li></ul></div><p>
        Each of these categories results in a series of questions that you
        must answer to add the resource or program to the profile.
-       <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 24.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>
+       <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 25.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>
        and
-       <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 24.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>
+       <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 25.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>
        provide examples of each one. Subsequent steps describe your options
        in answering these questions.
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          Dealing with execute accesses is complex. You must decide how to
          proceed with this entry regarding which execute permission type to
          grant to this entry:
-        </p><div class="example" id="ex.apparmor.commandline.profiling.summary.genprof.learn"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 24.1: </span><span class="name">Learning Mode Exception: Controlling Access to Specific Resources </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Reading log entries from /var/log/audit/audit.log.
+        </p><div class="example" id="ex.apparmor.commandline.profiling.summary.genprof.learn"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 25.1: </span><span class="name">Learning Mode Exception: Controlling Access to Specific Resources </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Reading log entries from /var/log/audit/audit.log.
 Updating AppArmor profiles in /etc/apparmor.d.
 
 Profile:  /usr/sbin/cupsd
@@ -570,7 +570,7 @@ Program:  cupsd
 Execute:  /usr/lib/cups/daemon/cups-lpd
 Severity: unknown
 
-(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny / Abo(r)t / (F)inish</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140053262920240"><span class="term ">Inherit (ix)</span></dt><dd><p>
+(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny / Abo(r)t / (F)inish</pre></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140717273484048"><span class="term ">Inherit (ix)</span></dt><dd><p>
             The child inherits the parent's profile, running with the same
             access controls as the parent. This mode is useful when a
             confined program needs to call another confined program without
@@ -579,7 +579,7 @@ Severity: unknown
             the child program is a <span class="emphasis"><em>helper application</em></span>,
             such as the <code class="command">/usr/bin/mail</code> client using
             <code class="command">less</code> as a pager.
-           </p></dd><dt id="idm140053262916656"><span class="term ">Profile (px/Px)</span></dt><dd><p>
+           </p></dd><dt id="idm140717273480464"><span class="term ">Profile (px/Px)</span></dt><dd><p>
             The child runs using its own profile, which must be loaded into
             the kernel. If the profile is not present, attempts to execute
             the child fail with permission denied. This is most useful if
@@ -590,7 +590,7 @@ Severity: unknown
             option to scrub the environment of environment variables that
             could modify execution behavior when passed to the child
             process.
-           </p></dd><dt id="idm140053262913440"><span class="term ">Child (cx/Cx)</span></dt><dd><p>
+           </p></dd><dt id="idm140717273477248"><span class="term ">Child (cx/Cx)</span></dt><dd><p>
             Sets up a transition to a subprofile. It is like px/Px
             transition, except to a child profile.
            </p><p>
@@ -598,7 +598,7 @@ Severity: unknown
             option to scrub the environment of environment variables that
             could modify execution behavior when passed to the child
             process.
-           </p></dd><dt id="idm140053262910464"><span class="term ">Unconfined (ux/Ux)</span></dt><dd><p>
+           </p></dd><dt id="idm140717273474272"><span class="term ">Unconfined (ux/Ux)</span></dt><dd><p>
             The child runs completely unconfined without any <span class="phrase">AppArmor</span> profile
             applied to the executed resource.
            </p><p>
@@ -608,29 +608,29 @@ Severity: unknown
             process. Note that running unconfined profiles introduces a
             security vulnerability that could be used to evade <span class="phrase">AppArmor</span>. Only
             use it as a last resort.
-           </p></dd><dt id="idm140053262906512"><span class="term ">mmap (m)</span></dt><dd><p>
+           </p></dd><dt id="idm140717273470320"><span class="term ">mmap (m)</span></dt><dd><p>
             This permission denotes that the program running under the
             profile can access the resource using the mmap system call with
             the flag <code class="envar">PROT_EXEC</code>. This means that the data
             mapped in it can be executed. You are prompted to include this
             permission if it is requested during a profiling run.
-           </p></dd><dt id="idm140053262903952"><span class="term ">Deny</span></dt><dd><p>
+           </p></dd><dt id="idm140717273467760"><span class="term ">Deny</span></dt><dd><p>
             Adds a <code class="literal">deny</code> rule to the profile, and
             permanently prevents the program from accessing the specified
             directory path entries. <span class="phrase">AppArmor</span> then continues to the next
             event.
-           </p></dd><dt id="idm140053262901088"><span class="term ">Abort</span></dt><dd><p>
+           </p></dd><dt id="idm140717273464896"><span class="term ">Abort</span></dt><dd><p>
             Aborts <code class="command">aa-logprof</code>, losing all rule changes
             entered so far and leaving all profiles unmodified.
-           </p></dd><dt id="idm140053262898768"><span class="term ">Finish</span></dt><dd><p>
+           </p></dd><dt id="idm140717273462576"><span class="term ">Finish</span></dt><dd><p>
             Closes <code class="command">aa-logprof</code>, saving all rule changes
             entered so far and modifying all profiles.
            </p></dd></dl></div></li><li class="listitem "><p>
-         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 24.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>
+         <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms" title="Learning Mode Exception: Defining Permissions for an Entry">Example 25.2, “Learning Mode Exception: Defining Permissions for an Entry”</a>
          shows <span class="phrase">AppArmor</span> suggest allowing a globbing pattern
          <code class="filename">/var/run/nscd/*</code> for reading, then using an
          abstraction to cover common Apache-related access rules.
-        </p><div class="example" id="ex.apparmor.commandline.profiling.summary.genprof.perms"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 24.2: </span><span class="name">Learning Mode Exception: Defining Permissions for an Entry </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Profile:  /usr/sbin/httpd2-prefork
+        </p><div class="example" id="ex.apparmor.commandline.profiling.summary.genprof.perms"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 25.2: </span><span class="name">Learning Mode Exception: Defining Permissions for an Entry </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.perms">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">Profile:  /usr/sbin/httpd2-prefork
 Path:     /var/run/nscd/dbSz9CTr
 Mode:     r
 Severity: 3
@@ -655,9 +655,9 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
          <span class="phrase">AppArmor</span> provides one or more paths or includes. By entering the
          option number, select the desired options then proceed to the next
          step.
-        </p><div id="idm140053262890208" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+        </p><div id="idm140717273454016" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
           Not all of these options are always presented in the <span class="phrase">AppArmor</span> menu.
-         </p></div><div class="variablelist "><dl class="variablelist"><dt id="idm140053262888528"><span class="term "><code class="literal">#include</code>
+         </p></div><div class="variablelist "><dl class="variablelist"><dt id="idm140717273452336"><span class="term "><code class="literal">#include</code>
           </span></dt><dd><p>
             This is the section of an <span class="phrase">AppArmor</span> profile that refers to an
             include file, which procures access permissions for programs. By
@@ -665,11 +665,11 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
             paths or files that are also required by other programs. Using
             includes can reduce the size of a profile. It is good practice
             to select includes when suggested.
-           </p></dd><dt id="idm140053262885616"><span class="term ">Globbed Version</span></dt><dd><p>
+           </p></dd><dt id="idm140717273449424"><span class="term ">Globbed Version</span></dt><dd><p>
             This is accessed by selecting <span class="guimenu">Glob</span> as
             described in the next step. For information about globbing
-            syntax, refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-           </p></dd><dt id="idm140053262882736"><span class="term ">Actual Path</span></dt><dd><p>
+            syntax, refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="22.6. Profile Names, Flags, Paths, and Globbing">Section 22.6, “Profile Names, Flags, Paths, and Globbing”</a>.
+           </p></dd><dt id="idm140717273446544"><span class="term ">Actual Path</span></dt><dd><p>
             This is the literal path to which the program needs access so
             that it can run properly.
            </p></dd></dl></div><p>
@@ -681,31 +681,31 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
         </p><p>
          The following options are available to process the learning mode
          entries and build the profile:
-        </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053262877408"><span class="term ">Select <span class="keycap">Enter</span>
+        </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273441216"><span class="term ">Select <span class="keycap">Enter</span>
           </span></dt><dd><p>
             Allows access to the selected directory path.
-           </p></dd><dt id="idm140053262875008"><span class="term ">Allow</span></dt><dd><p>
+           </p></dd><dt id="idm140717273438816"><span class="term ">Allow</span></dt><dd><p>
             Allows access to the specified directory path entries. <span class="phrase">AppArmor</span>
             suggests file permission access. For more information, refer to
-            <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-           </p></dd><dt id="idm140053262872064"><span class="term ">Deny</span></dt><dd><p>
+            <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="22.7. File Permission Access Modes">Section 22.7, “File Permission Access Modes”</a>.
+           </p></dd><dt id="idm140717273435872"><span class="term ">Deny</span></dt><dd><p>
             Prevents the program from accessing the specified directory path
             entries. <span class="phrase">AppArmor</span> then continues to the next event.
-           </p></dd><dt id="idm140053262869712"><span class="term ">New</span></dt><dd><p>
+           </p></dd><dt id="idm140717273433520"><span class="term ">New</span></dt><dd><p>
             Prompts you to enter your own rule for this event, allowing you
             to specify a regular expression. If the expression does not
             actually satisfy the event that prompted the question in the
             first place, <span class="phrase">AppArmor</span> asks for confirmation and lets you reenter
             the expression.
-           </p></dd><dt id="idm140053262867184"><span class="term ">Glob</span></dt><dd><p>
+           </p></dd><dt id="idm140717273430992"><span class="term ">Glob</span></dt><dd><p>
             Select a specific path or create a general rule using wild cards
             that match a broader set of paths. To select any of the offered
             paths, enter the number that is printed in front of the path
             then decide how to proceed with the selected item.
            </p><p>
             For more information about globbing syntax, refer to
-            <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-           </p></dd><dt id="idm140053262864016"><span class="term ">Glob w/Ext</span></dt><dd><p>
+            <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="22.6. Profile Names, Flags, Paths, and Globbing">Section 22.6, “Profile Names, Flags, Paths, and Globbing”</a>.
+           </p></dd><dt id="idm140717273427824"><span class="term ">Glob w/Ext</span></dt><dd><p>
             This modifies the original directory path while retaining the
             file name extension. For example,
             <code class="filename">/etc/apache2/file.ext</code> becomes
@@ -713,10 +713,10 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
             (asterisk) in place of the file name. This allows the program to
             access all files in the suggested directory that end with the
             <code class="literal">.ext</code> extension.
-           </p></dd><dt id="idm140053262860592"><span class="term ">Abort</span></dt><dd><p>
+           </p></dd><dt id="idm140717273424400"><span class="term ">Abort</span></dt><dd><p>
             Aborts <code class="command">aa-logprof</code>, losing all rule changes
             entered so far and leaving all profiles unmodified.
-           </p></dd><dt id="idm140053262858272"><span class="term ">Finish</span></dt><dd><p>
+           </p></dd><dt id="idm140717273422080"><span class="term ">Finish</span></dt><dd><p>
             Closes <code class="command">aa-logprof</code>, saving all rule changes
             entered so far and modifying all profiles.
            </p></dd></dl></div></li></ul></div></li><li class="step "><p>
@@ -727,7 +727,7 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
        use the commands <code class="command">:syntax on</code> then <code class="command">:set
        syntax=apparmor</code>. For more information about vim and syntax
        highlighting, refer to
-       <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.vim" title="24.7.3.14. apparmor.vim">Section 24.7.3.14, “apparmor.vim”</a>.
+       <a class="xref" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.vim" title="25.7.3.14. apparmor.vim">Section 25.7.3.14, “apparmor.vim”</a>.
       </p></li><li class="step "><p>
        Restart <span class="phrase">AppArmor</span> and reload the profile set including the newly
        created one using the <code class="command">systemctl reload
@@ -765,7 +765,7 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
       </p></li><li class="step "><p>
        Leave <code class="command">aa-genprof</code> by pressing <span class="keycap">F</span>
        (<span class="guimenu">Finish</span>) when you are done and save your changes.
-      </p></li></ol></div></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof"><span class="number">24.7.3.9 </span><span class="name">aa-logprof—Scanning the System Log</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof">#</a></h4></div></div></div><p>
+      </p></li></ol></div></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof"><span class="number">25.7.3.9 </span><span class="name">aa-logprof—Scanning the System Log</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof">#</a></h4></div></div></div><p>
      <code class="command">aa-logprof</code> is an interactive tool used to review the
      complain and enforce mode events found in the log entries in
      <code class="filename">/var/log/audit/audit.log</code>, or directly in the
@@ -802,17 +802,17 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
      <code class="command">aa-logprof</code> into a terminal window while logged in as
      <code class="systemitem">root</code>. The following options can be used for
      <code class="command">aa-logprof</code>:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053262818672"><span class="term "><code class="command">aa-logprof -d</code><em class="replaceable ">/path/to/profile/directory/</em>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273382480"><span class="term "><code class="command">aa-logprof -d</code><em class="replaceable ">/path/to/profile/directory/</em>
       </span></dt><dd><p>
         Specifies the full path to the location of the profiles if the
         profiles are not located in the standard directory,
         <code class="filename">/etc/apparmor.d/</code>.
-       </p></dd><dt id="idm140053262815712"><span class="term "><code class="command">aa-logprof -f</code><em class="replaceable ">/path/to/logfile/</em>
+       </p></dd><dt id="idm140717273379520"><span class="term "><code class="command">aa-logprof -f</code><em class="replaceable ">/path/to/logfile/</em>
       </span></dt><dd><p>
         Specifies the full path to the location of the log file if the log
         file is not located in the default directory or
         <code class="filename">/var/log/audit/audit.log</code>.
-       </p></dd><dt id="idm140053262812752"><span class="term "><code class="command">aa-logprof -m "string marker in logfile"</code>
+       </p></dd><dt id="idm140717273376560"><span class="term "><code class="command">aa-logprof -m "string marker in logfile"</code>
       </span></dt><dd><p>
         Marks the starting point for <code class="command">aa-logprof</code> to look
         in the system log. <code class="command">aa-logprof</code> ignores all events
@@ -835,7 +835,7 @@ Adding #include &lt;abstractions/apache2-common&gt; to profile.</pre></div></div
      started). If this is the case, you can enter <code class="command">zcat -f `ls
      -1tr</code> <em class="replaceable ">/path/to/logfile*</em>` |
      aa-logprof -f -.
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof_ex1"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof_ex1"><span class="number">24.7.3.10 </span><span class="name">aa-logprof Example 1</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof_ex1">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof_ex1"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof_ex1"><span class="number">25.7.3.10 </span><span class="name">aa-logprof Example 1</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof_ex1">#</a></h4></div></div></div><p>
      The following is an example of how <code class="command">aa-logprof</code>
      addresses httpd2-prefork accessing the file
      <code class="filename">/etc/group</code>. <code class="literal">[]</code> indicates the
@@ -857,32 +857,32 @@ New Mode: r
  2 - /etc/group
 [(A)llow] / (D)eny / (N)ew / (G)lob / Glob w/(E)xt / Abo(r)t / (F)inish</pre></div><p>
      Select one of the following responses:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053262793856"><span class="term ">Select <span class="keycap">Enter</span>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273357664"><span class="term ">Select <span class="keycap">Enter</span>
       </span></dt><dd><p>
         Triggers the default action, which is, in this example, allowing
         access to the specified directory path entry.
-       </p></dd><dt id="idm140053262791392"><span class="term ">Allow</span></dt><dd><p>
+       </p></dd><dt id="idm140717273355200"><span class="term ">Allow</span></dt><dd><p>
         Allows access to the specified directory path entries. <span class="phrase">AppArmor</span>
         suggests file permission access. For more information about this,
-        refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
-       </p></dd><dt id="idm140053262788448"><span class="term ">Deny</span></dt><dd><p>
+        refer to <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="22.7. File Permission Access Modes">Section 22.7, “File Permission Access Modes”</a>.
+       </p></dd><dt id="idm140717273352256"><span class="term ">Deny</span></dt><dd><p>
         Permanently prevents the program from accessing the specified
         directory path entries. <span class="phrase">AppArmor</span> then continues to the next event.
-       </p></dd><dt id="idm140053262786096"><span class="term ">New</span></dt><dd><p>
+       </p></dd><dt id="idm140717273349904"><span class="term ">New</span></dt><dd><p>
         Prompts you to enter your own rule for this event, allowing you to
         specify whatever form of regular expression you want. If the
         expression entered does not actually satisfy the event that prompted
         the question in the first place, <span class="phrase">AppArmor</span> asks for confirmation and
         lets you reenter the expression.
-       </p></dd><dt id="idm140053262783552"><span class="term ">Glob</span></dt><dd><p>
+       </p></dd><dt id="idm140717273347360"><span class="term ">Glob</span></dt><dd><p>
         Select either a specific path or create a general rule using wild
         cards that matches on a broader set of paths. To select any of the
         offered paths, enter the number that is printed in front of the
         paths then decide how to proceed with the selected item.
        </p><p>
         For more information about globbing syntax, refer to
-        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="21.6. Profile Names, Flags, Paths, and Globbing">Section 21.6, “Profile Names, Flags, Paths, and Globbing”</a>.
-       </p></dd><dt id="idm140053262780416"><span class="term ">Glob w/Ext</span></dt><dd><p>
+        <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.glob" title="22.6. Profile Names, Flags, Paths, and Globbing">Section 22.6, “Profile Names, Flags, Paths, and Globbing”</a>.
+       </p></dd><dt id="idm140717273344224"><span class="term ">Glob w/Ext</span></dt><dd><p>
         This modifies the original directory path while retaining the file
         name extension. For example,
         <code class="filename">/etc/apache2/file.ext</code> becomes
@@ -890,13 +890,13 @@ New Mode: r
         (asterisk) in place of the file name. This allows the program to
         access all files in the suggested directory that end with the
         <code class="literal">.ext</code> extension.
-       </p></dd><dt id="idm140053262777008"><span class="term ">Abort</span></dt><dd><p>
+       </p></dd><dt id="idm140717273340816"><span class="term ">Abort</span></dt><dd><p>
         Aborts <code class="command">aa-logprof</code>, losing all rule changes
         entered so far and leaving all profiles unmodified.
-       </p></dd><dt id="idm140053262774688"><span class="term ">Finish</span></dt><dd><p>
+       </p></dd><dt id="idm140717273338496"><span class="term ">Finish</span></dt><dd><p>
         Closes <code class="command">aa-logprof</code>, saving all rule changes
         entered so far and modifying all profiles.
-       </p></dd></dl></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><span class="number">24.7.3.11 </span><span class="name">aa-logprof Example 2</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof_ex2">#</a></h4></div></div></div><p>
+       </p></dd></dl></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.logprof_ex2"><span class="number">25.7.3.11 </span><span class="name">aa-logprof Example 2</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.logprof_ex2">#</a></h4></div></div></div><p>
      For example, when profiling vsftpd, see this question:
     </p><div class="verbatim-wrap"><pre class="screen">Profile:  /usr/sbin/vsftpd
 Path:     /y2k.jpg
@@ -938,7 +938,7 @@ New Mode: r
      that it is good policy to be more conservative in your use of regular
      expressions for write accesses. Dealing with execute accesses is more
      complex. Find an example in
-     <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 24.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>.
+     <a class="xref" href="cha.apparmor.commandline.html#ex.apparmor.commandline.profiling.summary.genprof.learn" title="Learning Mode Exception: Controlling Access to Specific Resources">Example 25.1, “Learning Mode Exception: Controlling Access to Specific Resources”</a>.
     </p><p>
      In the following example, the <code class="filename">/usr/bin/mail</code> mail
      client is being profiled and <code class="command">aa-logprof</code> has
@@ -947,7 +947,7 @@ New Mode: r
      <span class="quote">“<span class="quote">page</span>”</span> long mail messages. Consequently, it presents this
      prompt:
     </p><div class="verbatim-wrap"><pre class="screen">/usr/bin/nail -&gt; /usr/bin/less
-(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny</pre></div><div id="idm140053262755472" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+(I)nherit / (P)rofile / (C)hild / (N)ame / (U)nconfined / (X)ix / (D)eny</pre></div><div id="idm140717273319216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       The actual executable file for <code class="filename">/usr/bin/mail</code>
       turns out to be <code class="filename">/usr/bin/nail</code>, which is not a
       typographical error.
@@ -958,7 +958,7 @@ New Mode: r
      using it for. However, <code class="command">less</code> is actually a large
      and powerful program that uses many other helper applications, such
      as <code class="command">tar</code> and <code class="command">rpm</code>.
-    </p><div id="idm140053262750736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm140717273314480" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       Run <code class="command">less</code> on a tar file or an RPM file and it shows
       you the inventory of these containers.
      </p></div><p>
@@ -981,7 +981,7 @@ New Mode: r
        <code class="filename">/usr/bin/less</code> in this context, the less program
        is far less dangerous than it would be without <span class="phrase">AppArmor</span> protection.
        Another option is to use the Cx execute modes. For more information
-       on execute modes, see <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.exec" title="21.8. Execute Modes">Section 21.8, “Execute Modes”</a>.
+       on execute modes, see <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.exec" title="22.8. Execute Modes">Section 22.8, “Execute Modes”</a>.
       </p></li></ul></div><p>
      In other circumstances, you might instead want to use the
      <span class="guimenu">Profile</span> option. This has the following effects on
@@ -1005,7 +1005,7 @@ New Mode: r
      If a separate profile exists for the child process, the default
      selection is profile. If a profile does not exist, the default is
      inherit. The inherit option, or <code class="literal">ix</code>, is described in
-     <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="21.7. File Permission Access Modes">Section 21.7, “File Permission Access Modes”</a>.
+     <a class="xref" href="cha.apparmor.profiles.html#sec.apparmor.profiles.perm" title="22.7. File Permission Access Modes">Section 22.7, “File Permission Access Modes”</a>.
     </p><p>
      The profile option indicates that the child program should run in its
      own profile. A secondary question asks whether to sanitize the
@@ -1026,11 +1026,11 @@ New Mode: r
      <code class="literal">ux</code> in your profile instead, select
      <span class="guimenu">No</span>. The default value selected is
      <code class="literal">Ux</code> for unconfined execution mode.
-    </p><div id="idm140053262725376" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Running Unconfined</h6><p>
+    </p><div id="idm140717273289120" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Running Unconfined</h6><p>
       Selecting <code class="literal">ux or Ux</code> is very dangerous and provides
       no enforcement of policy (from a security perspective) of the
       resulting execution behavior of the child program.
-     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.unconfined"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.unconfined"><span class="number">24.7.3.12 </span><span class="name">aa-unconfined—Identifying Unprotected Processes</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.unconfined">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.unconfined"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.unconfined"><span class="number">25.7.3.12 </span><span class="name">aa-unconfined—Identifying Unprotected Processes</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.unconfined">#</a></h4></div></div></div><p>
      The <code class="command">aa-unconfined</code> command examines open network
      ports on your system, compares that to the set of profiles loaded on
      your system, and reports network services that do not have <span class="phrase">AppArmor</span>
@@ -1046,11 +1046,11 @@ New Mode: r
       </p></li><li class="listitem "><p>
        A process that dies between <code class="command">netstat(8)</code> and further
        checks is mishandled
-      </p></li></ul></div><div id="idm140053262713872" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+      </p></li></ul></div><div id="idm140717273277616" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       This program lists processes using TCP and UDP only. In short, this
       program is unsuitable for forensics use and is provided only as an aid
       to profiling all network-accessible processes in the lab.
-     </p></div></div><div class="sect3 " id="commandline.profiling.summary.aa-notify"><div class="titlepage"><div><div><h4 class="title" id="commandline.profiling.summary.aa-notify"><span class="number">24.7.3.13 </span><span class="name">aa-notify</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#commandline.profiling.summary.aa-notify">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="commandline.profiling.summary.aa-notify"><div class="titlepage"><div><div><h4 class="title" id="commandline.profiling.summary.aa-notify"><span class="number">25.7.3.13 </span><span class="name">aa-notify</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#commandline.profiling.summary.aa-notify">#</a></h4></div></div></div><p>
      <code class="command">aa-notify</code> is a handy utility that displays <span class="phrase">AppArmor</span>
      notifications in your desktop environment. This is very convenient if
      you do not want to inspect the <span class="phrase">AppArmor</span> log file, but rather let the
@@ -1062,18 +1062,18 @@ New Mode: r
      X Window display number you are currently using, such as
      <code class="literal">:0</code>. The process is run in the background, and shows
      a notification each time a deny event happens.
-    </p><div id="idm140053262704736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm140717273268544" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       The active X Window display number is saved in the
       <code class="literal">$DISPLAY</code> variable, so you can use
       <code class="literal">--display $DISPLAY</code> to avoid finding out the current
       display number.
-     </p></div><div class="figure" id="idm140053262702832"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa-notify.png"><img src="images/aa-notify.png" width="" alt="aa-notify Message in GNOME" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 24.1: </span><span class="name"><code class="command">aa-notify Message in GNOME</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#idm140053262702832">#</a></h6></div></div><p>
+     </p></div><div class="figure" id="idm140717273266640"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/aa-notify.png"><img src="images/aa-notify.png" width="" alt="aa-notify Message in GNOME" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 25.1: </span><span class="name"><code class="command">aa-notify Message in GNOME</code> </span><a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#idm140717273266640">#</a></h6></div></div><p>
      With the <code class="option">-s <em class="replaceable ">DAYS</em></code> option,
      you can also configure <code class="command">aa-notify</code> to display a
      summary of notifications for the specified number of past days. For
      more information on <code class="command">aa-notify</code>, see its man page
      <code class="command">man 8 aa-notify</code>.
-    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.vim"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.vim"><span class="number">24.7.3.14 </span><span class="name">apparmor.vim</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.vim">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="sec.apparmor.commandline.profiling.summary.vim"><div class="titlepage"><div><div><h4 class="title" id="sec.apparmor.commandline.profiling.summary.vim"><span class="number">25.7.3.14 </span><span class="name">apparmor.vim</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.profiling.summary.vim">#</a></h4></div></div></div><p>
      A syntax highlighting file for the vim text editor highlights various
      features of an <span class="phrase">AppArmor</span> profile with colors. Using vim and the <span class="phrase">AppArmor</span>
      syntax mode for vim, you can see the semantic implications of your
@@ -1086,25 +1086,25 @@ New Mode: r
      type correctly as an <span class="phrase">AppArmor</span> profile, add
     </p><div class="verbatim-wrap"><pre class="screen"># vim:ft=apparmor</pre></div><p>
      at the end of the profile.
-    </p><div id="idm140053262688736" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+    </p><div id="idm140717273252544" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       <code class="command">vim</code> comes with <span class="phrase">AppArmor</span> highlighting automatically
       enabled for files in <code class="filename">/etc/apparmor.d/</code>.
      </p></div><p>
      When you enable this feature, vim colors the lines of the profile for
      you:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053262685648"><span class="term ">Blue</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273249456"><span class="term ">Blue</span></dt><dd><p>
         Comments
-       </p></dd><dt id="idm140053262683840"><span class="term ">White</span></dt><dd><p>
+       </p></dd><dt id="idm140717273247648"><span class="term ">White</span></dt><dd><p>
         Ordinary read access lines
-       </p></dd><dt id="idm140053262682016"><span class="term ">Brown</span></dt><dd><p>
+       </p></dd><dt id="idm140717273245824"><span class="term ">Brown</span></dt><dd><p>
         Capability statements and complain flags
-       </p></dd><dt id="idm140053262680176"><span class="term ">Yellow</span></dt><dd><p>
+       </p></dd><dt id="idm140717273243984"><span class="term ">Yellow</span></dt><dd><p>
         Lines that grant write access
-       </p></dd><dt id="idm140053262678352"><span class="term ">Green</span></dt><dd><p>
+       </p></dd><dt id="idm140717273242160"><span class="term ">Green</span></dt><dd><p>
         Lines that grant execute permission (either ix or px)
-       </p></dd><dt id="idm140053262676512"><span class="term ">Red</span></dt><dd><p>
+       </p></dd><dt id="idm140717273240320"><span class="term ">Red</span></dt><dd><p>
         Lines that grant unconfined access (ux)
-       </p></dd><dt id="idm140053262674672"><span class="term ">Red background</span></dt><dd><p>
+       </p></dd><dt id="idm140717273238480"><span class="term ">Red background</span></dt><dd><p>
         Syntax errors that will not load properly into the <span class="phrase">AppArmor</span> modules
        </p></dd></dl></div><p>
      Use the <code class="systemitem">apparmor.vim</code> and
@@ -1112,22 +1112,22 @@ New Mode: r
      syntax</code> from within the vim editor for further vim help about
      syntax highlighting. The <span class="phrase">AppArmor</span> syntax is stored in
      <code class="filename">/usr/share/vim/current/syntax/apparmor.vim.</code>
-    </p></div></div></div><div class="sect1 " id="sec.apparmor.commandline.filenames"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.filenames"><span class="number">24.8 </span><span class="name">Important File Names and Directories</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.filenames">#</a></h2></div></div></div><p>
+    </p></div></div></div><div class="sect1 " id="sec.apparmor.commandline.filenames"><div class="titlepage"><div><div><h2 class="title" id="sec.apparmor.commandline.filenames"><span class="number">25.8 </span><span class="name">Important File Names and Directories</span> <a title="Permalink" class="permalink" href="cha.apparmor.commandline.html#sec.apparmor.commandline.filenames">#</a></h2></div></div></div><p>
    The following list contains the most important files and directories used
    by the <span class="phrase">AppArmor</span> framework. If you intend to manage and troubleshoot your
    profiles manually, make sure that you know about these files and
    directories:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140053262666336"><span class="term "><code class="filename">/sys/kernel/security/apparmor/profiles</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140717273230144"><span class="term "><code class="filename">/sys/kernel/security/apparmor/profiles</code>
     </span></dt><dd><p>
       Virtualized file representing the currently loaded set of profiles.
-     </p></dd><dt id="idm140053262664176"><span class="term "><code class="filename">/etc/apparmor/</code>
+     </p></dd><dt id="idm140717273227984"><span class="term "><code class="filename">/etc/apparmor/</code>
     </span></dt><dd><p>
       Location of <span class="phrase">AppArmor</span> configuration files.
-     </p></dd><dt id="idm140053262661632"><span class="term "><code class="filename">/etc/apparmor/profiles/extras/</code>
+     </p></dd><dt id="idm140717273225440"><span class="term "><code class="filename">/etc/apparmor/profiles/extras/</code>
     </span></dt><dd><p>
       A local repository of profiles shipped with <span class="phrase">AppArmor</span>, but not enabled
       by default.
-     </p></dd><dt id="idm140053262659024"><span class="term "><code class="filename">/etc/apparmor.d/</code>
+     </p></dd><dt id="idm140717273222832"><span class="term "><code class="filename">/etc/apparmor.d/</code>
     </span></dt><dd><p>
       Location of profiles, named with the convention of replacing the
       <code class="literal">/</code> in paths with <code class="literal">.</code> (not for the
@@ -1135,18 +1135,18 @@ New Mode: r
       example, the profile for the program
       <code class="filename">/usr/sbin/smbd</code> is named
       <code class="filename">usr.sbin.smbd</code>.
-     </p></dd><dt id="idm140053262654544"><span class="term "><code class="filename">/etc/apparmor.d/abstractions/</code>
+     </p></dd><dt id="idm140717273218352"><span class="term "><code class="filename">/etc/apparmor.d/abstractions/</code>
     </span></dt><dd><p>
       Location of abstractions.
-     </p></dd><dt id="idm140053262652432"><span class="term "><code class="filename">/etc/apparmor.d/program-chunks/</code>
+     </p></dd><dt id="idm140717273216240"><span class="term "><code class="filename">/etc/apparmor.d/program-chunks/</code>
     </span></dt><dd><p>
       Location of program chunks.
-     </p></dd><dt id="idm140053262650304"><span class="term "><code class="filename">/proc/*/attr/current</code>
+     </p></dd><dt id="idm140717273214112"><span class="term "><code class="filename">/proc/*/attr/current</code>
     </span></dt><dd><p>
       Check this file to review the confinement status of a process and the
       profile that is used to confine the process. The <code class="command">ps</code>
       <code class="option">auxZ</code> command retrieves this information
       automatically.
-     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.apparmor.hat.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 25 </span>Profiling Your Web Applications Using ChangeHat</span></a><a class="nav-link" href="cha.apparmor.yast.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 23 </span>Building and Managing Profiles with YaST</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.apparmor.hat.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 26 </span>Profiling Your Web Applications Using ChangeHat</span></a><a class="nav-link" href="cha.apparmor.yast.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 24 </span>Building and Managing Profiles with YaST</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
         SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
