@@ -322,11 +322,11 @@ hljs.configure({
     it, or installs the boot loader if it is missing.
    </p><p>
     Other reasons for the machine not booting may be BIOS-related:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140408972062528"><span class="term ">BIOS Settings</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140187261558368"><span class="term ">BIOS Settings</span></dt><dd><p>
        Check your BIOS for references to your hard disk. GRUB 2 may simply not
        be started if the hard disk itself cannot be found with the current BIOS
        settings.
-      </p></dd><dt id="idm140408972060560"><span class="term ">BIOS Boot Order</span></dt><dd><p>
+      </p></dd><dt id="idm140187261556400"><span class="term ">BIOS Boot Order</span></dt><dd><p>
        Check whether your system's boot order includes the hard disk. If the
        hard disk option was not enabled, your system may install properly, but
        fails to boot when access to the hard disk is required.
@@ -640,40 +640,40 @@ hljs.configure({
      appropriate YaST module or ask your system administrator. The following
      list gives some typical network servers involved in a setup together with
      the symptoms of an outage.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140408971921344"><span class="term ">DNS (Name Service)</span></dt><dd><p>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140187261417184"><span class="term ">DNS (Name Service)</span></dt><dd><p>
         A broken or malfunctioning name service affects the network's
         functionality in many ways. If the local machine relies on any network
         servers for authentication and these servers cannot be found because of
         name resolution issues, users would not even be able to log in.
         Machines in the network managed by a broken name server would not be
         able to <span class="quote">“<span class="quote">see</span>”</span> each other and communicate.
-       </p></dd><dt id="idm140408971918704"><span class="term ">NTP (Time Service)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261414544"><span class="term ">NTP (Time Service)</span></dt><dd><p>
         A malfunctioning or completely broken NTP service could affect Kerberos
         authentication and X server functionality.
-       </p></dd><dt id="idm140408971916784"><span class="term ">NFS (File Service)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261412624"><span class="term ">NFS (File Service)</span></dt><dd><p>
         If any application needs data stored in an NFS mounted directory, it
         cannot start or function properly if this service was down or
         misconfigured. In the worst case scenario, a user's personal desktop
         configuration would not come up if their home directory containing the
         <code class="filename">.gconf</code> subdirectory could not be found because of
         a faulty NFS server.
-       </p></dd><dt id="idm140408971914176"><span class="term ">Samba (File Service)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261410016"><span class="term ">Samba (File Service)</span></dt><dd><p>
         If any application needs data stored in a directory on a faulty Samba
         server, it cannot start or function properly.
-       </p></dd><dt id="idm140408971912256"><span class="term ">NIS (User Management)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261408096"><span class="term ">NIS (User Management)</span></dt><dd><p>
         If your <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> system relies on a faulty NIS server to provide
         the user data, users cannot log in to this machine.
-       </p></dd><dt id="idm140408971909232"><span class="term ">LDAP (User Management)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261405072"><span class="term ">LDAP (User Management)</span></dt><dd><p>
         If your <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> system relies on a faulty LDAP server to provide
         the user data, users cannot log in to this machine.
-       </p></dd><dt id="idm140408971906208"><span class="term ">Kerberos (Authentication)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261402048"><span class="term ">Kerberos (Authentication)</span></dt><dd><p>
         Authentication will not work and login to any machine fails.
-       </p></dd><dt id="idm140408971904336"><span class="term ">CUPS (Network Printing)</span></dt><dd><p>
+       </p></dd><dt id="idm140187261400176"><span class="term ">CUPS (Network Printing)</span></dt><dd><p>
         Users cannot print.
        </p></dd></dl></div></li><li class="step "><p>
      Check whether the network servers are running and whether your network
      setup allows you to establish a connection:
-    </p><div id="idm140408971901360" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Limitations</h6><p>
+    </p><div id="idm140187261397200" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Limitations</h6><p>
       The debugging procedure described below only applies to a simple network
       server/client setup that does not involve any internal routing. It
       assumes both server and client are members of the same subnet without the
@@ -709,7 +709,7 @@ hljs.configure({
        running. If the <code class="command">host</code> command fails, check all network
        configuration files relating to name and address resolution on your
        host:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140408971889312"><span class="term "><code class="filename">/etc/resolv.conf</code>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140187261385152"><span class="term "><code class="filename">/etc/resolv.conf</code>
         </span></dt><dd><p>
           This file is used to keep track of the name server and domain you are
           currently using. It can be modified manually or automatically
@@ -728,7 +728,7 @@ nameserver <em class="replaceable ">IPADDRESS_OF_NAMESERVER</em></pre></div><p>
           Hostname via DHCP</span> (can be set globally for any interface or
           per interface) and <span class="guimenu">Update Name Servers and Search List via DHCP</span>
           in the YaST Network Settings module (Hostname/DNS tab).
-         </p></dd><dt id="idm140408971883376"><span class="term "><code class="filename">/etc/nsswitch.conf</code>
+         </p></dd><dt id="idm140187261379216"><span class="term "><code class="filename">/etc/nsswitch.conf</code>
         </span></dt><dd><p>
           This file tells Linux where to look for name service information. It
           should look like this:
@@ -806,7 +806,7 @@ networks: files dns
     hard disk. Linux comes with the <code class="command">dd</code> tool which can create
     an exact copy of your disk. Combined with <code class="command">gzip</code> you save
     some space.
-   </p><div class="procedure " id="idm140408971854384"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 34.2: </span><span class="name">Backing up and Restoring Hard Disks </span><a title="Permalink" class="permalink" href="cha.trouble.html#idm140408971854384">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm140187261350224"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 34.2: </span><span class="name">Backing up and Restoring Hard Disks </span><a title="Permalink" class="permalink" href="cha.trouble.html#idm140187261350224">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Start a Shell as user <code class="systemitem">root</code>.
      </p></li><li class="step "><p>
       Select your source device. Typically this is something like
@@ -948,7 +948,7 @@ networks: files dns
   </p><p>
    To set up a change root environment based on the installed system, proceed
    as follows:
-  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><div id="idm140408971775936" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Import LVM Volume Groups</h6><p>
+  </p><div class="procedure "><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><div id="idm140187261271760" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Import LVM Volume Groups</h6><p>
       If you are using an LVM setup (refer to <span class="intraxref">Book “<em class="citetitle ">Deployment Guide</em>”, Chapter 5 “Expert Partitioner”, Section 5.2 “LVM Configuration”</span> for more
       general details), import all existing volume groups to be able to
       find and mount the device(s):
@@ -978,7 +978,7 @@ sda           8:0    0 149,1G  0 disk
      unmount the partitions with <code class="command">umount</code> <code class="option">-a</code>
      and leave the <span class="quote">“<span class="quote">change root</span>”</span> environment with
      <code class="command">exit</code>.
-    </p></li></ol></div></div><div id="idm140408971756096" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Limitations</h6><p>
+    </p></li></ol></div></div><div id="idm140187261251920" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Limitations</h6><p>
     Although you have full access to the files and applications of the
     installed system, there are some limitations. The kernel that is running is
     the one that was booted with the rescue system, not with the change root
@@ -1038,7 +1038,7 @@ reboot</pre></div></li></ol></div></div></div><div class="sect3 " id="sec.troubl
    be faulty, which prevents you from accessing and using it. In this case,
    revert to the last working kernel (if available on the system) or install
    the original kernel from the installation media.
-  </p><div id="idm140408971728672" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: How to Keep Last Kernels after Update</h6><p>
+  </p><div id="idm140187261224496" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: How to Keep Last Kernels after Update</h6><p>
     To prevent failures to boot after a faulty kernel update, use the kernel
     multiversion feature and tell <code class="systemitem">libzypp</code> which
     kernels you want to keep after the update.
