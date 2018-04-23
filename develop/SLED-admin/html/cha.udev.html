@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Dynamic Kernel Device Management with udev | Administration Guide | SUSE Linux Enterprise Desktop 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 23. Dynamic Kernel Device Management with udev" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Desktop 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.system.html" title="Part III. System" /><link rel="prev" href="cha.mod.html" title="Chapter 22. Managing Kernel Modules" /><link rel="next" href="cha.kgraft.html" title="Chapter 24. Live Patching the Linux Kernel Using kGraft" /><script type="text/javascript">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Dynamic Kernel Device Management with udev | Administration Guide | SUSE Linux Enterprise Desktop 15</title><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /><link rel="stylesheet" type="text/css" href="static/css/style.css" /><link rel="stylesheet" type="text/css" href="static/css/highlight.css" /><meta name="generator" content="DAPS 2.4.0 using SUSE XSL Stylesheets 2.0.8 (based on DocBook XSL Stylesheets 1.78.1) - chunked" /><meta name="product-name" content="SUSE Linux Enterprise Desktop" /><meta name="product-number" content="15" /><meta name="book-title" content="Administration Guide" /><meta name="chapter-title" content="Chapter 22. Dynamic Kernel Device Management with udev" /><meta name="tracker-url" content="https://bugzilla.suse.com/enter_bug.cgi" /><meta name="tracker-type" content="bsc" /><meta name="tracker-bsc-assignee" content="fs@suse.com" /><meta name="tracker-bsc-component" content="Documentation" /><meta name="tracker-bsc-product" content="Beta SUSE Linux Enterprise Desktop 15" /><link rel="home" href="index.html" title="SUSE Linux Enterprise Desktop Documentation" /><link rel="up" href="part.system.html" title="Part III. System" /><link rel="prev" href="cha.mod.html" title="Chapter 21. Managing Kernel Modules" /><link rel="next" href="cha.kgraft.html" title="Chapter 23. Live Patching the Linux Kernel Using kGraft" /><script type="text/javascript">
 
 var protocol = window.location.protocol.toLowerCase();
 if ( protocol != 'file:' ) {
@@ -24,7 +24,7 @@ hljs.configure({
 });
 
 </script></head><body class="draft offline js-off"><div id="_outer-wrap"><div id="_white-bg"><div id="_header"><div id="_logo"><img src="static/images/logo.png" alt="Logo" /></div><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.admin.html">Administration Guide</a><span> › </span><a class="crumb" href="part.system.html">System</a><span> › </span><a class="crumb" href="cha.udev.html">Dynamic Kernel Device Management with udev</a></div><div class="clearme"></div></div></div><div id="_toolbar-wrap"><div id="_toolbar"><div id="_toc-area" class="inactive"><a id="_toc-area-button" class="tool" title="Contents" accesskey="c" href="index.html"><span class="tool-spacer"><span class="toc-icon">Contents</span><span class="clearme"></span></span><span class="tool-label">Contents</span></a><div class="active-contents bubble-corner"></div><div class="active-contents bubble"><div class="bubble-container"><h6>Administration Guide</h6><div id="_bubble-toc"><ol><li class="inactive"><a href="pre.sle.html"><span class="number"> </span><span class="name">About This Guide</span></a></li><li class="inactive"><a href="part.administration.html"><span class="number">I </span><span class="name">Common Tasks</span></a><ol><li class="inactive"><a href="cha.adm.shell.html"><span class="number">1 </span><span class="name">Bash and Bash Scripts</span></a></li><li class="inactive"><a href="cha.adm.sudo.html"><span class="number">2 </span><span class="name">sudo
-</span></a></li><li class="inactive"><a href="cha.onlineupdate.you.html"><span class="number">3 </span><span class="name">YaST Online Update</span></a></li><li class="inactive"><a href="cha.yast.gui.html"><span class="number">4 </span><span class="name">YaST</span></a></li><li class="inactive"><a href="cha.yast.text.html"><span class="number">5 </span><span class="name">YaST in Text Mode</span></a></li><li class="inactive"><a href="cha.sw_cl.html"><span class="number">6 </span><span class="name">Managing Software with Command Line Tools</span></a></li><li class="inactive"><a href="cha.snapper.html"><span class="number">7 </span><span class="name">System Recovery and Snapshot Management with Snapper</span></a></li><li class="inactive"><a href="cha.vnc.html"><span class="number">8 </span><span class="name">Remote Access with VNC</span></a></li><li class="inactive"><a href="cha.net.rsync.html"><span class="number">9 </span><span class="name">File Copying with RSync</span></a></li><li class="inactive"><a href="cha.gnome-configuration.html"><span class="number">10 </span><span class="name">GNOME Configuration for Administrators</span></a></li></ol></li><li class="inactive"><a href="part.boot.html"><span class="number">II </span><span class="name">Booting a Linux System</span></a><ol><li class="inactive"><a href="cha.boot.html"><span class="number">11 </span><span class="name">Introduction to the Booting Process</span></a></li><li class="inactive"><a href="cha.uefi.html"><span class="number">12 </span><span class="name">UEFI (Unified Extensible Firmware Interface)</span></a></li><li class="inactive"><a href="cha.grub2.html"><span class="number">13 </span><span class="name">The Boot Loader GRUB 2</span></a></li><li class="inactive"><a href="cha.systemd.html"><span class="number">14 </span><span class="name">The <code class="systemitem">systemd</code> Daemon</span></a></li></ol></li><li class="inactive"><a href="part.system.html"><span class="number">III </span><span class="name">System</span></a><ol><li class="inactive"><a href="cha.64bit.html"><span class="number">15 </span><span class="name">32-Bit and 64-Bit Applications in a 64-Bit System Environment</span></a></li><li class="inactive"><a href="cha.journalctl.html"><span class="number">16 </span><span class="name"><code class="command">journalctl</code>: Query the <code class="systemitem">systemd</code> Journal</span></a></li><li class="inactive"><a href="cha.update-alternative.html"><span class="number">17 </span><span class="name"><code class="command">update-alternatives</code>: Managing Multiple Versions of Commands and Files</span></a></li><li class="inactive"><a href="cha.network.html"><span class="number">18 </span><span class="name">Basic Networking</span></a></li><li class="inactive"><a href="cha.print.html"><span class="number">19 </span><span class="name">Printer Operation</span></a></li><li class="inactive"><a href="cha.x11.html"><span class="number">20 </span><span class="name">The X Window System</span></a></li><li class="inactive"><a href="cha.fuse.html"><span class="number">21 </span><span class="name">Accessing File Systems with FUSE</span></a></li><li class="inactive"><a href="cha.mod.html"><span class="number">22 </span><span class="name">Managing Kernel Modules</span></a></li><li class="inactive"><a href="cha.udev.html"><span class="number">23 </span><span class="name">Dynamic Kernel Device Management with <code class="systemitem">udev</code></span></a></li><li class="inactive"><a href="cha.kgraft.html"><span class="number">24 </span><span class="name">Live Patching the Linux Kernel Using kGraft</span></a></li><li class="inactive"><a href="cha.suse.html"><span class="number">25 </span><span class="name">Special System Features</span></a></li><li class="inactive"><a href="cha.nm.html"><span class="number">26 </span><span class="name">Using NetworkManager</span></a></li><li class="inactive"><a href="cha.power-mgmt.html"><span class="number">27 </span><span class="name">Power Management</span></a></li></ol></li><li class="inactive"><a href="part.services.html"><span class="number">IV </span><span class="name">Services</span></a><ol><li class="inactive"><a href="cha.ntp.html"><span class="number">28 </span><span class="name">Time Synchronization with NTP</span></a></li><li class="inactive"><a href="cha.nfs.html"><span class="number">29 </span><span class="name">Sharing File Systems with NFS</span></a></li><li class="inactive"><a href="cha.samba.html"><span class="number">30 </span><span class="name">Samba</span></a></li><li class="inactive"><a href="cha.autofs.html"><span class="number">31 </span><span class="name">On-Demand Mounting with Autofs</span></a></li></ol></li><li class="inactive"><a href="part.trouble.html"><span class="number">V </span><span class="name">Troubleshooting</span></a><ol><li class="inactive"><a href="cha.adminhelp.html"><span class="number">32 </span><span class="name">Help and Documentation</span></a></li><li class="inactive"><a href="cha.adm.support.html"><span class="number">33 </span><span class="name">Gathering System Information for Support</span></a></li><li class="inactive"><a href="cha.trouble.html"><span class="number">34 </span><span class="name">Common Problems and Their Solutions</span></a></li></ol></li><li class="inactive"><a href="app.nwscheme.html"><span class="number">A </span><span class="name">An Example Network</span></a></li><li class="inactive"><a href="bk01apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 22. Managing Kernel Modules" href="cha.mod.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Live Patching the Linux Kernel Using kGraft" href="cha.kgraft.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.admin.html">Administration Guide</a><span> › </span><a class="crumb" href="part.system.html">System</a><span> › </span><a class="crumb" href="cha.udev.html">Dynamic Kernel Device Management with udev</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 22. Managing Kernel Modules" href="cha.mod.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 24. Live Patching the Linux Kernel Using kGraft" href="cha.kgraft.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.udev"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">23 </span><span class="name">Dynamic Kernel Device Management with <code class="systemitem">udev</code></span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>udev.xml</li><li><span class="ds-label">ID: </span>cha.udev</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.udev.html#sec.udev.devdir"><span class="number">23.1 </span><span class="name">The <code class="filename">/dev</code> Directory</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.kernel"><span class="number">23.2 </span><span class="name">Kernel <code class="systemitem">uevents</code> and <code class="systemitem">udev</code></span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.drivers"><span class="number">23.3 </span><span class="name">Drivers, Kernel Modules and Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.boot"><span class="number">23.4 </span><span class="name">Booting and Initial Device Setup</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.debug"><span class="number">23.5 </span><span class="name">Monitoring the Running <code class="systemitem">udev</code> Daemon</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.rules"><span class="number">23.6 </span><span class="name">Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.persdev"><span class="number">23.7 </span><span class="name">Persistent Device Naming</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.files"><span class="number">23.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.moreinfo"><span class="number">23.9 </span><span class="name">For More Information</span></a></span></dt></dl></div></div><p>
+</span></a></li><li class="inactive"><a href="cha.onlineupdate.you.html"><span class="number">3 </span><span class="name">YaST Online Update</span></a></li><li class="inactive"><a href="cha.yast.gui.html"><span class="number">4 </span><span class="name">YaST</span></a></li><li class="inactive"><a href="cha.yast.text.html"><span class="number">5 </span><span class="name">YaST in Text Mode</span></a></li><li class="inactive"><a href="cha.sw_cl.html"><span class="number">6 </span><span class="name">Managing Software with Command Line Tools</span></a></li><li class="inactive"><a href="cha.snapper.html"><span class="number">7 </span><span class="name">System Recovery and Snapshot Management with Snapper</span></a></li><li class="inactive"><a href="cha.vnc.html"><span class="number">8 </span><span class="name">Remote Access with VNC</span></a></li><li class="inactive"><a href="cha.net.rsync.html"><span class="number">9 </span><span class="name">File Copying with RSync</span></a></li></ol></li><li class="inactive"><a href="part.boot.html"><span class="number">II </span><span class="name">Booting a Linux System</span></a><ol><li class="inactive"><a href="cha.boot.html"><span class="number">10 </span><span class="name">Introduction to the Booting Process</span></a></li><li class="inactive"><a href="cha.uefi.html"><span class="number">11 </span><span class="name">UEFI (Unified Extensible Firmware Interface)</span></a></li><li class="inactive"><a href="cha.grub2.html"><span class="number">12 </span><span class="name">The Boot Loader GRUB 2</span></a></li><li class="inactive"><a href="cha.systemd.html"><span class="number">13 </span><span class="name">The <code class="systemitem">systemd</code> Daemon</span></a></li></ol></li><li class="inactive"><a href="part.system.html"><span class="number">III </span><span class="name">System</span></a><ol><li class="inactive"><a href="cha.64bit.html"><span class="number">14 </span><span class="name">32-Bit and 64-Bit Applications in a 64-Bit System Environment</span></a></li><li class="inactive"><a href="cha.journalctl.html"><span class="number">15 </span><span class="name"><code class="command">journalctl</code>: Query the <code class="systemitem">systemd</code> Journal</span></a></li><li class="inactive"><a href="cha.update-alternative.html"><span class="number">16 </span><span class="name"><code class="command">update-alternatives</code>: Managing Multiple Versions of Commands and Files</span></a></li><li class="inactive"><a href="cha.network.html"><span class="number">17 </span><span class="name">Basic Networking</span></a></li><li class="inactive"><a href="cha.print.html"><span class="number">18 </span><span class="name">Printer Operation</span></a></li><li class="inactive"><a href="cha.gui_desktop.html"><span class="number">19 </span><span class="name">Graphical User Interface</span></a></li><li class="inactive"><a href="cha.fuse.html"><span class="number">20 </span><span class="name">Accessing File Systems with FUSE</span></a></li><li class="inactive"><a href="cha.mod.html"><span class="number">21 </span><span class="name">Managing Kernel Modules</span></a></li><li class="inactive"><a href="cha.udev.html"><span class="number">22 </span><span class="name">Dynamic Kernel Device Management with <code class="systemitem">udev</code></span></a></li><li class="inactive"><a href="cha.kgraft.html"><span class="number">23 </span><span class="name">Live Patching the Linux Kernel Using kGraft</span></a></li><li class="inactive"><a href="cha.suse.html"><span class="number">24 </span><span class="name">Special System Features</span></a></li><li class="inactive"><a href="cha.nm.html"><span class="number">25 </span><span class="name">Using NetworkManager</span></a></li><li class="inactive"><a href="cha.power-mgmt.html"><span class="number">26 </span><span class="name">Power Management</span></a></li></ol></li><li class="inactive"><a href="part.services.html"><span class="number">IV </span><span class="name">Services</span></a><ol><li class="inactive"><a href="cha.ntp.html"><span class="number">27 </span><span class="name">Time Synchronization with NTP</span></a></li><li class="inactive"><a href="cha.nfs.html"><span class="number">28 </span><span class="name">Sharing File Systems with NFS</span></a></li><li class="inactive"><a href="cha.samba.html"><span class="number">29 </span><span class="name">Samba</span></a></li><li class="inactive"><a href="cha.autofs.html"><span class="number">30 </span><span class="name">On-Demand Mounting with Autofs</span></a></li></ol></li><li class="inactive"><a href="part.trouble.html"><span class="number">V </span><span class="name">Troubleshooting</span></a><ol><li class="inactive"><a href="cha.adminhelp.html"><span class="number">31 </span><span class="name">Help and Documentation</span></a></li><li class="inactive"><a href="cha.adm.support.html"><span class="number">32 </span><span class="name">Gathering System Information for Support</span></a></li><li class="inactive"><a href="cha.trouble.html"><span class="number">33 </span><span class="name">Common Problems and Their Solutions</span></a></li></ol></li><li class="inactive"><a href="app.nwscheme.html"><span class="number">A </span><span class="name">An Example Network</span></a></li><li class="inactive"><a href="bk01apb.html"><span class="number">B </span><span class="name">GNU Licenses</span></a></li></ol></div><div class="clearme"></div></div></div></div><div id="_nav-area" class="inactive"><div class="tool"><span class="nav-inner"><span class="tool-label">Navigation</span><a accesskey="p" class="tool-spacer" title="Chapter 21. Managing Kernel Modules" href="cha.mod.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 23. Live Patching the Linux Kernel Using kGraft" href="cha.kgraft.html"><span class="next-icon">→</span></a></span></div></div></div></div><div id="_fixed-header-wrap" class="inactive"><div id="_fixed-header"><div class="crumbs"><a class="book-link" href="index.html" title="SUSE Linux Enterprise Desktop Documentation"><span class="book-icon">SUSE Linux Enterprise Desktop Documentation</span></a><span> › </span><a class="crumb" href="book.sle.admin.html">Administration Guide</a><span> › </span><a class="crumb" href="part.system.html">System</a><span> › </span><a class="crumb" href="cha.udev.html">Dynamic Kernel Device Management with udev</a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Chapter 21. Managing Kernel Modules" href="cha.mod.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Chapter 23. Live Patching the Linux Kernel Using kGraft" href="cha.kgraft.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="chapter " id="cha.udev"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">15</span></span></span></div><div><h2 class="title"><span class="number">22 </span><span class="name">Dynamic Kernel Device Management with <code class="systemitem">udev</code></span> </h2><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>udev.xml</li><li><span class="ds-label">ID: </span>cha.udev</li></ul></div></div></div></div><div class="line"><div class="toc"><dl><dt><span class="sect1"><a href="cha.udev.html#sec.udev.devdir"><span class="number">22.1 </span><span class="name">The <code class="filename">/dev</code> Directory</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.kernel"><span class="number">22.2 </span><span class="name">Kernel <code class="systemitem">uevents</code> and <code class="systemitem">udev</code></span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.drivers"><span class="number">22.3 </span><span class="name">Drivers, Kernel Modules and Devices</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.boot"><span class="number">22.4 </span><span class="name">Booting and Initial Device Setup</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.debug"><span class="number">22.5 </span><span class="name">Monitoring the Running <code class="systemitem">udev</code> Daemon</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.rules"><span class="number">22.6 </span><span class="name">Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.persdev"><span class="number">22.7 </span><span class="name">Persistent Device Naming</span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.files"><span class="number">22.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span></a></span></dt><dt><span class="sect1"><a href="cha.udev.html#sec.udev.moreinfo"><span class="number">22.9 </span><span class="name">For More Information</span></a></span></dt></dl></div></div><p>
   The kernel can add or remove almost any device in a running system. Changes
   in the device state (whether a device is plugged in or removed) need to be
   propagated to user space. Devices need to be configured when they are
@@ -38,7 +38,7 @@ hljs.configure({
   customize <code class="systemitem">udev</code> device handling by adding certain scripts to execute as part of kernel device
   handling, or request and import additional data to evaluate during device
   handling.
- </p><div class="sect1 " id="sec.udev.devdir"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.devdir"><span class="number">23.1 </span><span class="name">The <code class="filename">/dev</code> Directory</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.devdir">#</a></h2></div></div></div><p>
+ </p><div class="sect1 " id="sec.udev.devdir"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.devdir"><span class="number">22.1 </span><span class="name">The <code class="filename">/dev</code> Directory</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.devdir">#</a></h2></div></div></div><p>
    The device nodes in the <code class="filename">/dev</code> directory provide access
    to the corresponding kernel devices. With
    <code class="systemitem">udev</code>, the <code class="filename">/dev</code>
@@ -55,7 +55,7 @@ hljs.configure({
    configuration files are found in <code class="filename">/usr/lib/tmpfiles.d/</code>
    and <code class="filename">/etc/tmpfiles.d/</code>; for more information, see the
    <code class="systemitem">systemd-tmpfiles(8)</code> man page.
-  </p></div><div class="sect1 " id="sec.udev.kernel"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.kernel"><span class="number">23.2 </span><span class="name">Kernel <code class="systemitem">uevents</code> and <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.kernel">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.udev.kernel"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.kernel"><span class="number">22.2 </span><span class="name">Kernel <code class="systemitem">uevents</code> and <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.kernel">#</a></h2></div></div></div><p>
    The required device information is exported by the
    <code class="systemitem">sysfs</code> file system. For every
    device the kernel has detected and initialized, a directory with the device
@@ -70,7 +70,7 @@ hljs.configure({
    or removed, the daemon can reload the in-memory representation of all rules
    with the command <code class="command">udevadm control --reload</code>. For more
    details on <code class="systemitem">udev</code> rules and their
-   syntax, refer to <a class="xref" href="cha.udev.html#sec.udev.rules" title="23.6. Influencing Kernel Device Event Handling with udev Rules">Section 23.6, “Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules”</a>.
+   syntax, refer to <a class="xref" href="cha.udev.html#sec.udev.rules" title="22.6. Influencing Kernel Device Event Handling with udev Rules">Section 22.6, “Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules”</a>.
   </p><p>
    Every received event is matched against the set of provides rules. The rules
    can add or change event environment keys, request a specific name for the
@@ -78,7 +78,7 @@ hljs.configure({
    programs to run after the device node is created. The driver core
    <code class="systemitem">uevents</code> are received from a kernel
    netlink socket.
-  </p></div><div class="sect1 " id="sec.udev.drivers"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.drivers"><span class="number">23.3 </span><span class="name">Drivers, Kernel Modules and Devices</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.drivers">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.udev.drivers"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.drivers"><span class="number">22.3 </span><span class="name">Drivers, Kernel Modules and Devices</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.drivers">#</a></h2></div></div></div><p>
    The kernel bus drivers probe for devices. For every detected device, the
    kernel creates an internal device structure while the driver core sends a
    uevent to the <code class="systemitem">udev</code> daemon. Bus
@@ -101,7 +101,7 @@ hljs.configure({
    provided by the modules. If a matching entry is found, that module is
    loaded. All this is automatically triggered by
    <code class="systemitem">udev</code>.
-  </p></div><div class="sect1 " id="sec.udev.boot"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.boot"><span class="number">23.4 </span><span class="name">Booting and Initial Device Setup</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.boot">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.udev.boot"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.boot"><span class="number">22.4 </span><span class="name">Booting and Initial Device Setup</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.boot">#</a></h2></div></div></div><p>
    All device events happening during the boot process before the
    <code class="systemitem">udev</code> daemon is running are lost,
    because the infrastructure to handle these events resides on the root file
@@ -125,7 +125,7 @@ hljs.configure({
    From user space, there is no visible difference between a device coldplug
    sequence and a device discovery during runtime. In both cases, the same
    rules are used to match and the same configured programs are run.
-  </p></div><div class="sect1 " id="sec.udev.debug"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.debug"><span class="number">23.5 </span><span class="name">Monitoring the Running <code class="systemitem">udev</code> Daemon</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.debug">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.udev.debug"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.debug"><span class="number">22.5 </span><span class="name">Monitoring the Running <code class="systemitem">udev</code> Daemon</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.debug">#</a></h2></div></div></div><p>
    The program <code class="command">udevadm monitor</code> can be used to visualize the
    driver core events and the timing of the
    <code class="systemitem">udev</code> event processes.
@@ -170,7 +170,7 @@ MODALIAS=input:b0003v046DpC03Ee0110-e0,1,2,k110,111,112,r0,1,8,amlsfw</pre></div
    configuration file <code class="filename">/etc/udev/udev.conf</code>. The log
    priority of the running daemon can be changed with <code class="command">udevadm control
    --log_priority=</code><em class="replaceable ">LEVEL/NUMBER</em>.
-  </p></div><div class="sect1 " id="sec.udev.rules"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.rules"><span class="number">23.6 </span><span class="name">Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules">#</a></h2></div></div></div><p>
+  </p></div><div class="sect1 " id="sec.udev.rules"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.rules"><span class="number">22.6 </span><span class="name">Influencing Kernel Device Event Handling with <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules">#</a></h2></div></div></div><p>
    A <code class="systemitem">udev</code> rule can match any property
    the kernel adds to the event itself or any information that the kernel
    exports to <code class="filename">sysfs</code>. The rule can also request additional
@@ -192,7 +192,7 @@ MODALIAS=input:b0003v046DpC03Ee0110-e0,1,2,k110,111,112,r0,1,8,amlsfw</pre></div
    are all taken from the <code class="systemitem">udev</code> default
    rule set that is located under
    <code class="filename">/etc/udev/rules.d/50-udev-default.rules</code>.
-  </p><div class="example" id="ex.rules"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 23.1: </span><span class="name">Example <code class="systemitem">udev</code> Rules </span><a title="Permalink" class="permalink" href="cha.udev.html#ex.rules">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"># console
+  </p><div class="example" id="ex.rules"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 22.1: </span><span class="name">Example <code class="systemitem">udev</code> Rules </span><a title="Permalink" class="permalink" href="cha.udev.html#ex.rules">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen"># console
 KERNEL=="console", MODE="0600", OPTIONS="last_rule"
 
 # serial devices
@@ -274,181 +274,181 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
      <code class="literal">[]</code> patterns.
     </p></li><li class="listitem "><p>
      <code class="systemitem">udev</code> rules support substitutions.
-    </p></li></ul></div><div class="sect2 " id="sec.udev.rules.ops"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.ops"><span class="number">23.6.1 </span><span class="name">Using Operators in <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.ops">#</a></h3></div></div></div><p>
+    </p></li></ul></div><div class="sect2 " id="sec.udev.rules.ops"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.ops"><span class="number">22.6.1 </span><span class="name">Using Operators in <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.ops">#</a></h3></div></div></div><p>
     Creating keys you can choose from several operators, depending on the type
     of key you want to create. Match keys will normally be used to find a value
     that either matches or explicitly mismatches the search value. Match keys
     contain either of the following operators:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924317568"><span class="term "><code class="literal">==</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192824320"><span class="term "><code class="literal">==</code>
      </span></dt><dd><p>
        Compare for equality. If the key contains a search pattern, all results
        matching this pattern are valid.
-      </p></dd><dt id="idm139997924315376"><span class="term "><code class="literal">!=</code>
+      </p></dd><dt id="idm139666192822128"><span class="term "><code class="literal">!=</code>
      </span></dt><dd><p>
        Compare for non-equality. If the key contains a search pattern, all
        results matching this pattern are valid.
       </p></dd></dl></div><p>
     Any of the following operators can be used with assign keys:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924312240"><span class="term "><code class="literal">=</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192818992"><span class="term "><code class="literal">=</code>
      </span></dt><dd><p>
        Assign a value to a key. If the key previously consisted of a list of
        values, the key resets and only the single value is assigned.
-      </p></dd><dt id="idm139997924310016"><span class="term "><code class="literal">+=</code>
+      </p></dd><dt id="idm139666192816768"><span class="term "><code class="literal">+=</code>
      </span></dt><dd><p>
        Add a value to a key that contains a list of entries.
-      </p></dd><dt id="idm139997924307888"><span class="term "><code class="literal">:=</code>
+      </p></dd><dt id="idm139666192814640"><span class="term "><code class="literal">:=</code>
      </span></dt><dd><p>
        Assign a final value. Disallow any later change by later rules.
-      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.subst"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.subst"><span class="number">23.6.2 </span><span class="name">Using Substitutions in <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.subst">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.subst"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.subst"><span class="number">22.6.2 </span><span class="name">Using Substitutions in <code class="systemitem">udev</code> Rules</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.subst">#</a></h3></div></div></div><p>
     <code class="systemitem">udev</code> rules support the use of
     placeholders and substitutions. Use them in a similar fashion as you would
     do in any other scripts. The following substitutions can be used with
     <code class="systemitem">udev</code> rules:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924301200"><span class="term "><code class="literal">%r</code>, <code class="literal">$root</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192807952"><span class="term "><code class="literal">%r</code>, <code class="literal">$root</code>
      </span></dt><dd><p>
        The device directory, <code class="filename">/dev</code> by default.
-      </p></dd><dt id="idm139997924298208"><span class="term "><code class="literal">%p</code>, <code class="literal">$devpath</code>
+      </p></dd><dt id="idm139666192804960"><span class="term "><code class="literal">%p</code>, <code class="literal">$devpath</code>
      </span></dt><dd><p>
        The value of <code class="envar">DEVPATH</code>.
-      </p></dd><dt id="idm139997924295232"><span class="term "><code class="literal">%k</code>, <code class="literal">$kernel</code>
+      </p></dd><dt id="idm139666192801984"><span class="term "><code class="literal">%k</code>, <code class="literal">$kernel</code>
      </span></dt><dd><p>
        The value of <code class="envar">KERNEL</code> or the internal device name.
-      </p></dd><dt id="idm139997924292240"><span class="term "><code class="literal">%n</code>, <code class="literal">$number</code>
+      </p></dd><dt id="idm139666192798992"><span class="term "><code class="literal">%n</code>, <code class="literal">$number</code>
      </span></dt><dd><p>
        The device number.
-      </p></dd><dt id="idm139997924289696"><span class="term "><code class="literal">%N</code>, <code class="literal">$tempnode</code>
+      </p></dd><dt id="idm139666192796448"><span class="term "><code class="literal">%N</code>, <code class="literal">$tempnode</code>
      </span></dt><dd><p>
        The temporary name of the device file.
-      </p></dd><dt id="idm139997924287136"><span class="term "><code class="literal">%M</code>, <code class="literal">$major</code>
+      </p></dd><dt id="idm139666192793888"><span class="term "><code class="literal">%M</code>, <code class="literal">$major</code>
      </span></dt><dd><p>
        The major number of the device.
-      </p></dd><dt id="idm139997924284576"><span class="term "><code class="literal">%m</code>, <code class="literal">$minor</code>
+      </p></dd><dt id="idm139666192791328"><span class="term "><code class="literal">%m</code>, <code class="literal">$minor</code>
      </span></dt><dd><p>
        The minor number of the device.
-      </p></dd><dt id="idm139997924282016"><span class="term "><code class="literal">%s{<em class="replaceable ">ATTRIBUTE</em>}</code>,
+      </p></dd><dt id="idm139666192788768"><span class="term "><code class="literal">%s{<em class="replaceable ">ATTRIBUTE</em>}</code>,
      <code class="literal">$attr{<em class="replaceable ">ATTRIBUTE</em>}</code>
      </span></dt><dd><p>
        The value of a <code class="filename">sysfs</code> attribute (specified by
        <em class="replaceable ">ATTRIBUTE</em>).
-      </p></dd><dt id="idm139997924277680"><span class="term "><code class="literal">%E{<em class="replaceable ">VARIABLE</em>}</code>,
+      </p></dd><dt id="idm139666192784432"><span class="term "><code class="literal">%E{<em class="replaceable ">VARIABLE</em>}</code>,
      <code class="literal">$env{<em class="replaceable ">VARIABLE</em>}</code>
      </span></dt><dd><p>
        The value of an environment variable (specified by
        <em class="replaceable ">VARIABLE</em>).
-      </p></dd><dt id="idm139997924273760"><span class="term "><code class="literal">%c</code>, <code class="literal">$result</code>
+      </p></dd><dt id="idm139666192780512"><span class="term "><code class="literal">%c</code>, <code class="literal">$result</code>
      </span></dt><dd><p>
        The output of <code class="envar">PROGRAM</code>.
-      </p></dd><dt id="idm139997924270784"><span class="term "><code class="literal">%%</code>
+      </p></dd><dt id="idm139666192777536"><span class="term "><code class="literal">%%</code>
      </span></dt><dd><p>
        The <code class="literal">%</code> character.
-      </p></dd><dt id="idm139997924268256"><span class="term "><code class="literal">$$</code>
+      </p></dd><dt id="idm139666192775008"><span class="term "><code class="literal">$$</code>
      </span></dt><dd><p>
        The <code class="literal">$</code> character.
-      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.match"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.match"><span class="number">23.6.3 </span><span class="name">Using <code class="systemitem">udev</code> Match Keys</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.match">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.match"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.match"><span class="number">22.6.3 </span><span class="name">Using <code class="systemitem">udev</code> Match Keys</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.match">#</a></h3></div></div></div><p>
     Match keys describe conditions that must be met before a
     <code class="systemitem">udev</code> rule can be applied. The
     following match keys are available:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924261968"><span class="term "><code class="literal">ACTION</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192768720"><span class="term "><code class="literal">ACTION</code>
      </span></dt><dd><p>
        The name of the event action, for example, <code class="literal">add</code> or
        <code class="literal">remove</code> when adding or removing a device.
-      </p></dd><dt id="idm139997924258928"><span class="term "><code class="literal">DEVPATH</code>
+      </p></dd><dt id="idm139666192765680"><span class="term "><code class="literal">DEVPATH</code>
      </span></dt><dd><p>
        The device path of the event device, for example,
        <code class="literal">DEVPATH=/bus/pci/drivers/ipw3945</code> to search for all
        events related to the ipw3945 driver.
-      </p></dd><dt id="idm139997924256288"><span class="term "><code class="literal">KERNEL</code>
+      </p></dd><dt id="idm139666192763040"><span class="term "><code class="literal">KERNEL</code>
      </span></dt><dd><p>
        The internal (kernel) name of the event device.
-      </p></dd><dt id="idm139997924254160"><span class="term "><code class="literal">SUBSYSTEM</code>
+      </p></dd><dt id="idm139666192760912"><span class="term "><code class="literal">SUBSYSTEM</code>
      </span></dt><dd><p>
        The subsystem of the event device, for example,
        <code class="literal">SUBSYSTEM=usb</code> for all events related to USB devices.
-      </p></dd><dt id="idm139997924251552"><span class="term "><code class="literal">ATTR{<em class="replaceable ">FILENAME</em>}</code>
+      </p></dd><dt id="idm139666192758304"><span class="term "><code class="literal">ATTR{<em class="replaceable ">FILENAME</em>}</code>
      </span></dt><dd><p>
        <code class="systemitem">sysfs</code> attributes of the
        event device. To match a string contained in the
        <code class="filename">vendor</code> attribute file name, you could use
        <code class="literal">ATTR{vendor}=="On[sS]tream"</code>, for example.
-      </p></dd><dt id="idm139997924247296"><span class="term "><code class="literal">KERNELS</code>
+      </p></dd><dt id="idm139666192754048"><span class="term "><code class="literal">KERNELS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upward for a matching device name.
-      </p></dd><dt id="idm139997924244432"><span class="term "><code class="literal">SUBSYSTEMS</code>
+      </p></dd><dt id="idm139666192751184"><span class="term "><code class="literal">SUBSYSTEMS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upward for a matching device subsystem name.
-      </p></dd><dt id="idm139997924241568"><span class="term "><code class="literal">DRIVERS</code>
+      </p></dd><dt id="idm139666192748320"><span class="term "><code class="literal">DRIVERS</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upward for a matching device driver name.
-      </p></dd><dt id="idm139997924238704"><span class="term "><code class="literal">ATTRS{<em class="replaceable ">FILENAME</em>}</code>
+      </p></dd><dt id="idm139666192745456"><span class="term "><code class="literal">ATTRS{<em class="replaceable ">FILENAME</em>}</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> search the device path
        upward for a device with matching
        <code class="systemitem">sysfs</code> attribute values.
-      </p></dd><dt id="idm139997924234656"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm139666192741408"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        The value of an environment variable, for example,
        <code class="literal">ENV{ID_BUS}="ieee1394</code> to search for all events
        related to the FireWire bus ID.
-      </p></dd><dt id="idm139997924231584"><span class="term "><code class="literal">PROGRAM</code>
+      </p></dd><dt id="idm139666192738336"><span class="term "><code class="literal">PROGRAM</code>
      </span></dt><dd><p>
        Let <code class="systemitem">udev</code> execute an external
        program. To be successful, the program must return with exit code zero.
        The program's output, printed to STDOUT, is available to the
        <code class="literal">RESULT</code> key.
-      </p></dd><dt id="idm139997924228176"><span class="term "><code class="literal">RESULT</code>
+      </p></dd><dt id="idm139666192734928"><span class="term "><code class="literal">RESULT</code>
      </span></dt><dd><p>
        Match the output string of the last <code class="literal">PROGRAM</code> call.
        Either include this key in the same rule as the
        <code class="literal">PROGRAM</code> key or in a later one.
-      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.assign"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.assign"><span class="number">23.6.4 </span><span class="name">Using <code class="systemitem">udev</code> Assign Keys</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.assign">#</a></h3></div></div></div><p>
+      </p></dd></dl></div></div><div class="sect2 " id="sec.udev.rules.assign"><div class="titlepage"><div><div><h3 class="title" id="sec.udev.rules.assign"><span class="number">22.6.4 </span><span class="name">Using <code class="systemitem">udev</code> Assign Keys</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.rules.assign">#</a></h3></div></div></div><p>
     In contrast to the match keys described above, assign keys do not describe
     conditions that must be met. They assign values, names and actions to the
     device nodes maintained by <code class="systemitem">udev</code>.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924221264"><span class="term "><code class="literal">NAME</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192728016"><span class="term "><code class="literal">NAME</code>
      </span></dt><dd><p>
        The name of the device node to be created. After a rule has set a node
        name, all other rules with a <code class="literal">NAME</code> key for this node
        are ignored.
-      </p></dd><dt id="idm139997924218608"><span class="term "><code class="literal">SYMLINK</code>
+      </p></dd><dt id="idm139666192725360"><span class="term "><code class="literal">SYMLINK</code>
      </span></dt><dd><p>
        The name of a symbolic link related to the node to be created. Multiple
        matching rules can add symbolic links to be created with the device
        node. You can also specify multiple symbolic links for one node in one
        rule using the space character to separate the symbolic link names.
-      </p></dd><dt id="idm139997924216224"><span class="term "><code class="literal">OWNER, GROUP, MODE</code>
+      </p></dd><dt id="idm139666192722976"><span class="term "><code class="literal">OWNER, GROUP, MODE</code>
      </span></dt><dd><p>
        The permissions for the new device node. Values specified here overwrite
        anything that has been compiled in.
-      </p></dd><dt id="idm139997924214032"><span class="term "><code class="literal">ATTR{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm139666192720784"><span class="term "><code class="literal">ATTR{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        Specify a value to be written to a
        <code class="systemitem">sysfs</code> attribute of the event
        device. If the <code class="literal">==</code> operator is used, this key is also
        used to match against the value of a
        <code class="systemitem">sysfs</code> attribute.
-      </p></dd><dt id="idm139997924209488"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
+      </p></dd><dt id="idm139666192716240"><span class="term "><code class="literal">ENV{<em class="replaceable ">KEY</em>}</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to export a variable
        to the environment. If the <code class="literal">==</code> operator is used, this
        key is also used to match against an environment variable.
-      </p></dd><dt id="idm139997924205664"><span class="term "><code class="literal">RUN</code>
+      </p></dd><dt id="idm139666192712416"><span class="term "><code class="literal">RUN</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to add a program to
        the list of programs to be executed for this device. Keep in mind to
        restrict this to very short tasks to avoid blocking further events for
        this device.
-      </p></dd><dt id="idm139997924202672"><span class="term "><code class="literal">LABEL</code>
+      </p></dd><dt id="idm139666192709424"><span class="term "><code class="literal">LABEL</code>
      </span></dt><dd><p>
        Add a label where a <code class="literal">GOTO</code> can jump to.
-      </p></dd><dt id="idm139997924200128"><span class="term "><code class="literal">GOTO</code>
+      </p></dd><dt id="idm139666192706880"><span class="term "><code class="literal">GOTO</code>
      </span></dt><dd><p>
        Tell <code class="systemitem">udev</code> to skip several
        rules and continue with the one that carries the label referenced by the
        <code class="literal">GOTO</code> key.
-      </p></dd><dt id="idm139997924196784"><span class="term "><code class="literal">IMPORT{<em class="replaceable ">TYPE</em>}</code>
+      </p></dd><dt id="idm139666192703536"><span class="term "><code class="literal">IMPORT{<em class="replaceable ">TYPE</em>}</code>
      </span></dt><dd><p>
        Load variables into the event environment such as the output of an
        external program. <code class="systemitem">udev</code> imports
@@ -466,7 +466,7 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
          <code class="literal">parent</code> tells
          <code class="systemitem">udev</code> to import the stored
          keys from the parent device.
-        </p></li></ul></div></dd><dt id="idm139997924185280"><span class="term "><code class="literal">WAIT_FOR_SYSFS</code>
+        </p></li></ul></div></dd><dt id="idm139666192692032"><span class="term "><code class="literal">WAIT_FOR_SYSFS</code>
      </span></dt><dd><p>
        Tells <code class="systemitem">udev</code> to wait for the
        specified <code class="systemitem">sysfs</code> file to be
@@ -474,7 +474,7 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
        <code class="literal">WAIT_FOR_SYSFS="ioerr_cnt"</code> informs
        <code class="systemitem">udev</code> to wait until the
        <code class="filename">ioerr_cnt</code> file has been created.
-      </p></dd><dt id="idm139997924180032"><span class="term "><code class="literal">OPTIONS</code>
+      </p></dd><dt id="idm139666192686784"><span class="term "><code class="literal">OPTIONS</code>
      </span></dt><dd><p>
        The <code class="literal">OPTION</code> key may have several values:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
@@ -493,7 +493,7 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
          <code class="literal">all_partitions</code> tells
          <code class="systemitem">udev</code> to create device nodes
          for all available partitions on a block device.
-        </p></li></ul></div></dd></dl></div></div></div><div class="sect1 " id="sec.udev.persdev"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.persdev"><span class="number">23.7 </span><span class="name">Persistent Device Naming</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.persdev">#</a></h2></div></div></div><p>
+        </p></li></ul></div></dd></dl></div></div></div><div class="sect1 " id="sec.udev.persdev"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.persdev"><span class="number">22.7 </span><span class="name">Persistent Device Naming</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.persdev">#</a></h2></div></div></div><p>
    The dynamic device directory and the
    <code class="systemitem">udev</code> rules infrastructure make it
    possible to provide stable names for all disk devices—regardless of
@@ -526,13 +526,13 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
 `-- by-uuid
     |-- 159a47a4-e6e6-40be-a757-a629991479ae -&gt; ../../sda7
     |-- 3e999973-00c9-4917-9442-b7633bd95b9e -&gt; ../../sda6
-    `-- 4210-8F8C -&gt; ../../sdd1</pre></div></div><div class="sect1 " id="sec.udev.files"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.files"><span class="number">23.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.files">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139997924160448"><span class="term "><code class="filename">/sys/*</code>
+    `-- 4210-8F8C -&gt; ../../sdd1</pre></div></div><div class="sect1 " id="sec.udev.files"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.files"><span class="number">22.8 </span><span class="name">Files used by <code class="systemitem">udev</code></span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.files">#</a></h2></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139666192667136"><span class="term "><code class="filename">/sys/*</code>
     </span></dt><dd><p>
       Virtual file system provided by the Linux kernel, exporting all currently
       known devices. This information is used by
       <code class="systemitem">udev</code> to create device nodes in
       <code class="filename">/dev</code>
-     </p></dd><dt id="idm139997924157056"><span class="term "><code class="filename">/dev/*</code>
+     </p></dd><dt id="idm139666192663744"><span class="term "><code class="filename">/dev/*</code>
     </span></dt><dd><p>
       Dynamically created device nodes and static content created with
       systemd-tmpfiles; for more information, see the
@@ -540,36 +540,36 @@ SUBSYSTEM=="firmware", ACTION=="add", RUN+="firmware.sh"</pre></div></div></div>
      </p></dd></dl></div><p>
    The following files and directories contain the crucial elements of the
    <code class="systemitem">udev</code> infrastructure:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924152736"><span class="term "><code class="filename">/etc/udev/udev.conf</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192659424"><span class="term "><code class="filename">/etc/udev/udev.conf</code>
     </span></dt><dd><p>
       Main <code class="systemitem">udev</code> configuration file.
-     </p></dd><dt id="idm139997924149920"><span class="term "><code class="filename">/etc/udev/rules.d/*</code>
+     </p></dd><dt id="idm139666192656608"><span class="term "><code class="filename">/etc/udev/rules.d/*</code>
     </span></dt><dd><p>
       <code class="systemitem">udev</code> event matching rules.
-     </p></dd><dt id="idm139997924147104"><span class="term "><code class="filename">/usr/lib/tmpfiles.d/</code> and
+     </p></dd><dt id="idm139666192653792"><span class="term "><code class="filename">/usr/lib/tmpfiles.d/</code> and
     <code class="filename">/etc/tmpfiles.d/</code>
     </span></dt><dd><p>
       Responsible for static <code class="filename">/dev</code> content.
-     </p></dd><dt id="idm139997924144112"><span class="term "><code class="filename">/usr/lib/udev/*</code>
+     </p></dd><dt id="idm139666192650800"><span class="term "><code class="filename">/usr/lib/udev/*</code>
     </span></dt><dd><p>
       Helper programs called from <code class="systemitem">udev</code>
       rules.
-     </p></dd></dl></div></div><div class="sect1 " id="sec.udev.moreinfo"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.moreinfo"><span class="number">23.9 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.moreinfo">#</a></h2></div></div></div><p>
+     </p></dd></dl></div></div><div class="sect1 " id="sec.udev.moreinfo"><div class="titlepage"><div><div><h2 class="title" id="sec.udev.moreinfo"><span class="number">22.9 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.udev.html#sec.udev.moreinfo">#</a></h2></div></div></div><p>
    For more information about the <code class="systemitem">udev</code>
    infrastructure, refer to the following man pages:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139997924138288"><span class="term "><code class="systemitem">udev</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139666192644976"><span class="term "><code class="systemitem">udev</code>
     </span></dt><dd><p>
       General information about <code class="systemitem">udev</code>,
       keys, rules and other important configuration issues.
-     </p></dd><dt id="idm139997924135152"><span class="term "><code class="command">udevadm</code>
+     </p></dd><dt id="idm139666192641840"><span class="term "><code class="command">udevadm</code>
     </span></dt><dd><p>
       <code class="command">udevadm</code> can be used to control the runtime behavior of
       <code class="systemitem">udev</code>, request kernel events,
       manage the event queue and provide simple debugging mechanisms.
-     </p></dd><dt id="idm139997924131792"><span class="term "><code class="systemitem">udevd</code>
+     </p></dd><dt id="idm139666192638480"><span class="term "><code class="systemitem">udevd</code>
     </span></dt><dd><p>
       Information about the <code class="systemitem">udev</code> event
       managing daemon.
-     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.kgraft.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 24 </span>Live Patching the Linux Kernel Using kGraft</span></a><a class="nav-link" href="cha.mod.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 22 </span>Managing Kernel Modules</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
+     </p></dd></dl></div></div></div></div><div class="page-bottom"><div id="_bottom-navigation"><a class="nav-link" href="cha.kgraft.html"><span class="next-icon">→</span><span class="nav-label"><span class="number">Chapter 23 </span>Live Patching the Linux Kernel Using kGraft</span></a><a class="nav-link" href="cha.mod.html"><span class="prev-icon">←</span><span class="nav-label"><span class="number">Chapter 21 </span>Managing Kernel Modules</span></a></div><div id="_share-print"><div class="online-contents share"><strong>Share this page: </strong><span class="share-buttons"><span id="_share-fb" class="bottom-button">Facebook</span><span class="spacer"> • </span><span id="_share-gp" class="bottom-button">Google+</span><span class="spacer"> • </span><span id="_share-tw" class="bottom-button">Twitter</span><span class="spacer"> • </span><span id="_share-mail" class="bottom-button">E-Mail</span></span></div><div class="print"><span id="_print-button" class="bottom-button">Print this page</span></div><div class="clearme"></div></div></div></div><div id="_inward"></div></div><div id="_footer-wrap"><div id="_footer"><p>©
         2018 
         SUSE</p><ul><li><a href="http://www.suse.com/company/careers/" target="_top">Careers</a></li><li><a href="http://www.suse.com/company/legal/" target="_top">Legal</a></li><li><a href="http://www.suse.com/company/" target="_top">About</a></li><li><a href="http://www.suse.com/ContactsOffices/contacts_offices.jsp" target="_top">Contact Us</a></li></ul></div></div></body></html>
