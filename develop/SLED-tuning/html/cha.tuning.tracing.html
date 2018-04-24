@@ -31,7 +31,7 @@ hljs.configure({
   find out what system resources it uses. <span class="phrase">Most of the
   tools are part of the installation media. In some cases, they need to be
   installed from the SUSE Software Development Kit, which is a separate download.</span>
- </p><div id="idm140165282548656" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Tracing and Impact on Performance</h6><p>
+ </p><div id="idm139729185693104" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Tracing and Impact on Performance</h6><p>
    While a running process is being monitored for system or library calls,
    the performance of the process is heavily reduced. You are advised to use
    tracing tools only for the time you need to collect the data.
@@ -300,32 +300,32 @@ clock_gettime(1, 0x7fff4b5c34c0, 0xffffffffff600180, -1, 0) = 0
     .bashrc
    </p><p>
     A list of standard Valgrind tools with a brief description follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140165282480976"><span class="term "><code class="systemitem">memcheck</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139729185625344"><span class="term "><code class="systemitem">memcheck</code>
      </span></dt><dd><p>
        Detects memory errors. It helps you tune your programs to behave
        correctly.
-      </p></dd><dt id="idm140165282478816"><span class="term "><code class="systemitem">cachegrind</code>
+      </p></dd><dt id="idm139729185623184"><span class="term "><code class="systemitem">cachegrind</code>
      </span></dt><dd><p>
        Profiles cache prediction. It helps you tune your programs to run
        faster.
-      </p></dd><dt id="idm140165282476656"><span class="term "><code class="systemitem">callgrind</code>
+      </p></dd><dt id="idm139729185621024"><span class="term "><code class="systemitem">callgrind</code>
      </span></dt><dd><p>
        Works in a similar way to <code class="systemitem">cachegrind</code> but
        also gathers additional cache-profiling information.
-      </p></dd><dt id="idm140165282474064"><span class="term "><code class="systemitem">exp-drd</code>
+      </p></dd><dt id="idm139729185618432"><span class="term "><code class="systemitem">exp-drd</code>
      </span></dt><dd><p>
        Detects thread errors. It helps you tune your multi-threaded programs
        to behave correctly.
-      </p></dd><dt id="idm140165282471888"><span class="term "><code class="systemitem">helgrind</code>
+      </p></dd><dt id="idm139729185616256"><span class="term "><code class="systemitem">helgrind</code>
      </span></dt><dd><p>
        Another thread error detector. Similar to
        <code class="systemitem">exp-drd</code> but uses different techniques for
        problem analysis.
-      </p></dd><dt id="idm140165282469264"><span class="term "><code class="systemitem">massif</code>
+      </p></dd><dt id="idm139729185613632"><span class="term "><code class="systemitem">massif</code>
      </span></dt><dd><p>
        A heap profiler. Heap is an area of memory used for dynamic memory
        allocation. This tool helps you tune your program to use less memory.
-      </p></dd><dt id="idm140165282467040"><span class="term "><code class="systemitem">lackey</code>
+      </p></dd><dt id="idm139729185611408"><span class="term "><code class="systemitem">lackey</code>
      </span></dt><dd><p>
        An example tool showing instrumentation basics.
       </p></dd></dl></div></div><div class="sect2 " id="sec.tuning.tracing.valgrind.defopts"><div class="titlepage"><div><div><h3 class="title" id="sec.tuning.tracing.valgrind.defopts"><span class="number">16.3.4 </span><span class="name">Default Options</span> <a title="Permalink" class="permalink" href="cha.tuning.tracing.html#sec.tuning.tracing.valgrind.defopts">#</a></h3></div></div></div><p>
