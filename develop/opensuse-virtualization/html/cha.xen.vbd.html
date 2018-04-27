@@ -39,31 +39,31 @@ hljs.configure({
    You can include more disk definitions in the same line, each one separated
    by a comma. If a parameter is not specified, then its default value is
    taken:
-  </p><div class="verbatim-wrap"><pre class="screen">disk = [ '/root/image.iso,raw,hdc,ro,cdrom','/dev/vg/guest-volume,,hda','...' ]</pre></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">List of Parameters </span><a title="Permalink" class="permalink" href="cha.xen.vbd.html#idm140090116202576">#</a></h6></div><dl class="variablelist"><dt id="idm140090116201840"><span class="term ">target</span></dt><dd><p>
+  </p><div class="verbatim-wrap"><pre class="screen">disk = [ '/root/image.iso,raw,hdc,ro,cdrom','/dev/vg/guest-volume,,hda','...' ]</pre></div><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">List of Parameters </span><a title="Permalink" class="permalink" href="cha.xen.vbd.html#idm140568980078896">#</a></h6></div><dl class="variablelist"><dt id="idm140568980078160"><span class="term ">target</span></dt><dd><p>
       Source block device or disk image file path.
-     </p></dd><dt id="idm140090116200000"><span class="term ">format</span></dt><dd><p>
+     </p></dd><dt id="idm140568980076320"><span class="term ">format</span></dt><dd><p>
       The format of the image file. Default is <code class="literal">raw</code>.
-     </p></dd><dt id="idm140090116197728"><span class="term ">vdev</span></dt><dd><p>
+     </p></dd><dt id="idm140568980074048"><span class="term ">vdev</span></dt><dd><p>
       Virtual device as seen by the guest. Supported values are hd[x], xvd[x],
       sd[x] etc. See
       <code class="filename">/usr/share/doc/packages/xen/misc/vbd-interface.txt</code>
       for more details. This parameter is mandatory.
-     </p></dd><dt id="idm140090116195312"><span class="term ">access</span></dt><dd><p>
+     </p></dd><dt id="idm140568980071632"><span class="term ">access</span></dt><dd><p>
       Whether the block device is provided to the guest in read-only or
       read-write mode. Supported values are <code class="literal">ro</code> or
       <code class="literal">r</code> for read-only, and <code class="literal">rw</code> or
       <code class="literal">w</code> for read/write access. Default is
       <code class="literal">ro</code> for <code class="literal">devtype=cdrom</code>, and
       <code class="literal">rw</code> for other device types.
-     </p></dd><dt id="idm140090116190240"><span class="term ">devtype</span></dt><dd><p>
+     </p></dd><dt id="idm140568980066560"><span class="term ">devtype</span></dt><dd><p>
       Qualifies virtual device type. Supported value is
       <code class="literal">cdrom</code>.
-     </p></dd><dt id="idm140090116187952"><span class="term ">backendtype</span></dt><dd><p>
+     </p></dd><dt id="idm140568980064272"><span class="term ">backendtype</span></dt><dd><p>
       The back-end implementation to use. Supported values are
       <code class="literal">phy</code>, <code class="literal">tap</code>, and
       <code class="literal">qdisk</code>. Normally this option should not be specified as
       the back-end type is automatically determined.
-     </p></dd><dt id="idm140090116184672"><span class="term ">script</span></dt><dd><p>
+     </p></dd><dt id="idm140568980060992"><span class="term ">script</span></dt><dd><p>
       Specifies that <code class="literal">target</code> is not a normal host path, but
       rather information to be interpreted by the executable program. The
       specified script file is looked for in
@@ -98,7 +98,7 @@ mon_host=137.65.135.205\\:6789;137.65.135.206\\:6789;137.65.135.207\\:6789' ]</p
    create.
   </p><p>
    Changes take effect after the module is reloaded.
-  </p><div id="idm140090116170496" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div id="idm140568980046816" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     Enter <code class="command">rmmod loop</code> and <code class="command">modprobe loop</code> to
     unload and reload the module. In case <code class="command">rmmod</code> does not
     work, unmount all existing loop devices or reboot the computer.
