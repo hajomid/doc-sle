@@ -46,33 +46,33 @@ hljs.configure({
   </p><p>
    The Linux kernel maintains three tables, each for a particular category
    of functions of the packet filter:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140163831866528"><span class="term ">filter</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140650495428080"><span class="term ">filter</span></dt><dd><p>
       This table holds the bulk of the filter rules, because it implements
       the <span class="emphasis"><em>packet filtering</em></span> mechanism in the stricter
       sense, which determines whether packets are let through
       (<code class="literal">ACCEPT</code>) or discarded (<code class="literal">DROP</code>),
       for example.
-     </p></dd><dt id="idm140163831863232"><span class="term ">nat</span></dt><dd><p>
+     </p></dd><dt id="idm140650495424784"><span class="term ">nat</span></dt><dd><p>
       This table defines any changes to the source and target addresses of
       packets. Using these functions also allows you to implement
       <span class="emphasis"><em>masquerading</em></span>, which is a special case of NAT used
       to link a private network with the Internet.
-     </p></dd><dt id="idm140163831860784"><span class="term ">mangle</span></dt><dd><p>
+     </p></dd><dt id="idm140650495422336"><span class="term ">mangle</span></dt><dd><p>
       The rules held in this table make it possible to manipulate values
       stored in IP headers (such as the type of service).
      </p></dd></dl></div><p>
    These tables contain several predefined chains to match packets:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140163831857920"><span class="term ">PREROUTING</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140650495419472"><span class="term ">PREROUTING</span></dt><dd><p>
       This chain is applied to all incoming packets.
-     </p></dd><dt id="idm140163831856080"><span class="term ">INPUT</span></dt><dd><p>
+     </p></dd><dt id="idm140650495417632"><span class="term ">INPUT</span></dt><dd><p>
       This chain is applied to packets destined for the system's internal
       processes.
-     </p></dd><dt id="idm140163831854208"><span class="term ">FORWARD</span></dt><dd><p>
+     </p></dd><dt id="idm140650495415760"><span class="term ">FORWARD</span></dt><dd><p>
       This chain is applied to packets that are only routed through the
       system.
-     </p></dd><dt id="idm140163831852336"><span class="term ">OUTPUT</span></dt><dd><p>
+     </p></dd><dt id="idm140650495413888"><span class="term ">OUTPUT</span></dt><dd><p>
       This chain is applied to packets originating from the system itself.
-     </p></dd><dt id="idm140163831850480"><span class="term ">POSTROUTING</span></dt><dd><p>
+     </p></dd><dt id="idm140650495412032"><span class="term ">POSTROUTING</span></dt><dd><p>
       This chain is applied to all outgoing packets.
      </p></dd></dl></div><p>
    <a class="xref" href="cha.security.firewall.html#fig.fire.table" title="iptables: A Packet's Possible Paths">Figure 16.1, “iptables: A Packet's Possible Paths”</a> illustrates the paths along which a
@@ -107,7 +107,7 @@ hljs.configure({
    card (such as <code class="literal">eth0</code>) of the router, they can send any
    packets not destined for the local network to their default gateway or
    router.
-  </p><div id="idm140163831833248" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using the Correct Network Mask</h6><p>
+  </p><div id="idm140650495394800" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Using the Correct Network Mask</h6><p>
     When configuring your network, make sure both the broadcast address and
     the netmask are the same for all local hosts. Failing to do so prevents
     packets from being routed properly.
@@ -199,7 +199,7 @@ hljs.configure({
    For more information about the predefined zones and their meaning in
    <code class="systemitem">firewalld</code> refer to its manual at
    <a class="link" href="http://www.firewalld.org/documentation/zone/predefined-zones.html" target="_blank">http://www.firewalld.org/documentation/zone/predefined-zones.html</a>.
-  </p><div id="idm140163831808528" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Zone Assigned Behavior</h6><p>
+  </p><div id="idm140650495370144" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: No Zone Assigned Behavior</h6><p>
      The initial state for network interfaces is to be assigned to no zone at
      all. In this case the network interface will be implicitly handled in the
      default zone which can be determined by calling <code class="command">firewall-cmd
@@ -224,7 +224,7 @@ hljs.configure({
    restart of <code class="systemitem">firewalld</code>, or to experiment with new rules while being able to
    revert back to the original state. When you are changing the configuration
    you need to be aware of which configuration you're editing. How this is
-   done is discussed in <a class="xref" href="cha.security.firewall.html#sec.security.firewall.firewalld.configurations" title="16.4.1.2. Runtime versus Permanent Configuration">Section 16.4.1.2, “Runtime versus Permanent Configuration”</a>.
+   done is discussed in <a class="xref" href="cha.security.firewall.html#sec.security.firewall.firewalld.configurations" title="16.4.2.2. Runtime versus Permanent Configuration">Section 16.4.2.2, “Runtime versus Permanent Configuration”</a>.
   </p><p>
    If you want to perform the <code class="systemitem">firewalld</code> configuration using the graphical user
    interface <code class="command">firewall-config</code> then refer to its documentation
@@ -233,11 +233,18 @@ hljs.configure({
     In the following section we will be looking at how to perform typical
     <code class="systemitem">firewalld</code> configuration tasks using <code class="command">firewall-cmd</code> on the
     command line.
-  </p><div class="sect2 " id="sec.security.firewall.firewalld.cmd"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.cmd"><span class="number">16.4.1 </span><span class="name">Configuring the Firewall on the Command Line</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd">#</a></h3></div></div></div><div class="sect3 " id="idm140163831794944"><div class="titlepage"><div><div><h4 class="title" id="idm140163831794944"><span class="number">16.4.1.1 </span><span class="name">Firewall Startup</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140163831794944">#</a></h4></div></div></div><p>
+  </p><div class="sect2 " id="sec.security.firewall.firewalld.nm"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.nm"><span class="number">16.4.1 </span><span class="name">Configuring the Firewall with NetworkManager</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.nm">#</a></h3></div></div></div><p>
+    The NetworkManager supports a basic configuration of <span class="emphasis"><em>firewalld</em></span>
+    by selecting zones.
+   </p><p>
+    When editing a wired or wireless connection, go to the
+    <span class="emphasis"><em>Identity</em></span> tab in the configuration window and
+    use the <code class="literal">Firewall Zone</code> drop-down box.
+   </p></div><div class="sect2 " id="sec.security.firewall.firewalld.cmd"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.cmd"><span class="number">16.4.2 </span><span class="name">Configuring the Firewall on the Command Line</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd">#</a></h3></div></div></div><div class="sect3 " id="idm140650495352512"><div class="titlepage"><div><div><h4 class="title" id="idm140650495352512"><span class="number">16.4.2.1 </span><span class="name">Firewall Startup</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140650495352512">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> will be installed and enabled by default. It is a regular
      <code class="systemitem">systemd</code> service that can be configured via <code class="command">systemctl</code>
      or the YaST Services Manager.
-    </p><div id="idm140163831791824" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Automatic Firewall Configuration</h6><p> After the installation, YaST automatically starts
+    </p><div id="idm140650495349392" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Automatic Firewall Configuration</h6><p> After the installation, YaST automatically starts
       <code class="systemitem">firewalld</code> and leaves all interfaces in the default
       <code class="literal">public</code> zone. If a server application is configured
       and activated on the system, YaST can adjust the firewall
@@ -246,7 +253,7 @@ hljs.configure({
       in the server configuration modules. Some server module dialogs include a
       <span class="guimenu">Firewall Details</span> button for activating additional
       services and ports.
-     </p></div></div><div class="sect3 " id="sec.security.firewall.firewalld.configurations"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.configurations"><span class="number">16.4.1.2 </span><span class="name">Runtime versus Permanent Configuration</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.configurations">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="sec.security.firewall.firewalld.configurations"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.configurations"><span class="number">16.4.2.2 </span><span class="name">Runtime versus Permanent Configuration</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.configurations">#</a></h4></div></div></div><p>
      By default all <code class="command">firewall-cmd</code> commands operate on the
      runtime configuration. You can apply most operations to the permanent
      configuration <span class="emphasis"><em>only</em></span> by adding the
@@ -264,7 +271,7 @@ hljs.configure({
      about this you can also take the opposite approach to be on the safe side:
      Add new rules to the permanent configuration and reload <code class="systemitem">firewalld</code> to
      make them active.
-    </p><div id="idm140163831781120" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+    </p><div id="idm140650495338688" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
       Some configuration items like the default zone are shared by both the
       runtime and permanent configuration. Changing them will reflect in both
       configurations at once.
@@ -277,7 +284,7 @@ hljs.configure({
      For brevity the examples in the following sections will always operate on
      the runtime configuration, if applicable. Adjust them accordingly if you
      want to make them permanent.
-    </p></div><div class="sect3 " id="idm140163831774912"><div class="titlepage"><div><div><h4 class="title" id="idm140163831774912"><span class="number">16.4.1.3 </span><span class="name">Assignment of Interfaces to Zones</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140163831774912">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="idm140650495332480"><div class="titlepage"><div><div><h4 class="title" id="idm140650495332480"><span class="number">16.4.2.3 </span><span class="name">Assignment of Interfaces to Zones</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140650495332480">#</a></h4></div></div></div><p>
      You can list all network interfaces currently assigned to a zone like this:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public --list-interfaces</code>
 eth0</pre></div><p>
@@ -296,7 +303,7 @@ public</pre></div><p>
       for getting and setting the default zone assignment:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --get-default-zone</code>
 dmz
-<code class="prompt root">root # </code><code class="command">firewall-cmd --set-default-zone=public</code></pre></div><div id="idm140163831762656" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
+<code class="prompt root">root # </code><code class="command">firewall-cmd --set-default-zone=public</code></pre></div><div id="idm140650495320224" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important</h6><p>
       Any network interfaces not explicitly assigned to a zone will be
       automatically part of the default zone. Changing the default zone will
       reassign all those network interfaces immediately for the permanent and
@@ -310,7 +317,7 @@ dmz
       not appear in the zone interface list. There is currently no command to
       list unassigned interfaces. Due to this it is best to avoid unassigned
       network interfaces during regular operation.
-     </p></div></div><div class="sect3 " id="sec.security.firewall.firewalld.cmd.ports"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.cmd.ports"><span class="number">16.4.1.4 </span><span class="name">Making Network Services Accessible</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd.ports">#</a></h4></div></div></div><p>
+     </p></div></div><div class="sect3 " id="sec.security.firewall.firewalld.cmd.ports"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.cmd.ports"><span class="number">16.4.2.4 </span><span class="name">Making Network Services Accessible</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.cmd.ports">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> has a concept of <span class="emphasis"><em>services</em></span>. A service
      consists of definitions of ports and protocols. These definitions
      logically belong together in the context of a given network service like
@@ -339,13 +346,13 @@ dhcp
      approach. This will open TCP port 8000 in the internal zone:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-port=8000/tcp --zone=internal</code></pre></div><p>
      For removal use the counterpart command <code class="literal">--remove-port</code>.
-    </p><div id="idm140163831747792" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Temporarily Opening a Service or Port</h6><p>
+    </p><div id="idm140650495305296" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Temporarily Opening a Service or Port</h6><p>
       <code class="systemitem">firewalld</code> supports a <code class="literal">--timeout</code> parameter that allows
       to open a service or port for a limited time duration. This can be helpful
       for quick testing and makes sure that closing the service or port will not
       be forgotten. To allow the <code class="literal">imap</code> service in the
       <code class="literal">internal</code> zone for 5 minutes, you would call
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-service=imap --zone=internal --timeout=5m</code></pre></div></div></div><div class="sect3 " id="idm140163831742784"><div class="titlepage"><div><div><h4 class="title" id="idm140163831742784"><span class="number">16.4.1.5 </span><span class="name">Lockdown Mode</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140163831742784">#</a></h4></div></div></div><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --add-service=imap --zone=internal --timeout=5m</code></pre></div></div></div><div class="sect3 " id="idm140650495300288"><div class="titlepage"><div><div><h4 class="title" id="idm140650495300288"><span class="number">16.4.2.5 </span><span class="name">Lockdown Mode</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140650495300288">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> offers a <span class="emphasis"><em>lockdown mode</em></span> that prevents
      changes to the firewall rules while being active. Since applications can
      automatically change the firewall rules via the D-Bus interface and
@@ -360,7 +367,7 @@ dhcp
      currently implemented in <code class="systemitem">firewalld</code> provides no security against malicious
      intent as is pointed out in
      <a class="link" href="http://seclists.org/oss-sec/2017/q3/139" target="_blank">http://seclists.org/oss-sec/2017/q3/139</a>.
-    </p></div><div class="sect3 " id="idm140163831737280"><div class="titlepage"><div><div><h4 class="title" id="idm140163831737280"><span class="number">16.4.1.6 </span><span class="name">Adding Custom <code class="command">iptables</code> Rules</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140163831737280">#</a></h4></div></div></div><p>
+    </p></div><div class="sect3 " id="idm140650495294784"><div class="titlepage"><div><div><h4 class="title" id="idm140650495294784"><span class="number">16.4.2.6 </span><span class="name">Adding Custom <code class="command">iptables</code> Rules</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140650495294784">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> claims exclusive control over the host's
      <code class="systemitem">netfilter</code> rules. You should never modify
      firewall rules using other tools like <code class="command">iptables</code>. Doing
@@ -383,7 +390,7 @@ dhcp
      the following example drops all IPv4 packets originating from a certain
      source address:
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" \
-    source address="192.168.2.4" drop'</code></pre></div></div><div class="sect3 " id="idm140163831724816"><div class="titlepage"><div><div><h4 class="title" id="idm140163831724816"><span class="number">16.4.1.7 </span><span class="name">Routing, Forwarding and Masquerading</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140163831724816">#</a></h4></div></div></div><p>
+    source address="192.168.2.4" drop'</code></pre></div></div><div class="sect3 " id="idm140650495282320"><div class="titlepage"><div><div><h4 class="title" id="idm140650495282320"><span class="number">16.4.2.7 </span><span class="name">Routing, Forwarding and Masquerading</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#idm140650495282320">#</a></h4></div></div></div><p>
      <code class="systemitem">firewalld</code> is not designed to run as a fully fledged router. The
      basic functionality for typical home router setups is available. For a
      corporate production router you should not use <code class="systemitem">firewalld</code>, however, but
@@ -399,7 +406,7 @@ dhcp
        <code class="systemitem">firewalld</code> can also enable port forwarding. The following command will
        forward local TCP connections on port 80 to another host:
       </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt root">root # </code><code class="command">firewall-cmd --zone=public \
-    --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.1.10</code></pre></div></li></ul></div></div></div><div class="sect2 " id="sec.security.firewall.firewalld.rpcports"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.rpcports"><span class="number">16.4.2 </span><span class="name">Accessing Services Listening on Dynamic Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports">#</a></h3></div></div></div><p>
+    --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.1.10</code></pre></div></li></ul></div></div></div><div class="sect2 " id="sec.security.firewall.firewalld.rpcports"><div class="titlepage"><div><div><h3 class="title" id="sec.security.firewall.firewalld.rpcports"><span class="number">16.4.3 </span><span class="name">Accessing Services Listening on Dynamic Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports">#</a></h3></div></div></div><p>
     Some network services do not listen on predefined port numbers. Instead
     they operate based on the <code class="literal">portmapper</code> or
     <code class="literal">rpcbind</code> protocol. We will use the term
@@ -412,7 +419,7 @@ dhcp
     programs use this approach any more today. Popular examples are
     Network Information Services (NIS; <code class="command">ypserv</code> and
     <code class="command">ypbind</code>) and the Network File System (NFS) version 3.
-   </p><div id="idm140163831706976" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: About NFSv4</h6><p>
+   </p><div id="idm140650495264480" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: About NFSv4</h6><p>
      The newer NFSv4 only requires the single well known
      TCP port 2049 any more. For protocol version 4.0 the kernel parameter
      <code class="literal">fs.nfs.nfs_callback_tcpport</code> may need to be set
@@ -424,7 +431,7 @@ dhcp
     it difficult to make the affected services behind the firewall accessible.
     <code class="systemitem">firewalld</code> does not support these services by itself. In the following
     section an approach to handle this case is discussed.
-   </p><div class="sect3 " id="sec.security.firewall.firewalld.rpcports.static"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.rpcports.static"><span class="number">16.4.2.1 </span><span class="name">Configuring Static Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports.static">#</a></h4></div></div></div><p>
+   </p><div class="sect3 " id="sec.security.firewall.firewalld.rpcports.static"><div class="titlepage"><div><div><h4 class="title" id="sec.security.firewall.firewalld.rpcports.static"><span class="number">16.4.3.1 </span><span class="name">Configuring Static Ports</span> <a title="Permalink" class="permalink" href="cha.security.firewall.html#sec.security.firewall.firewalld.rpcports.static">#</a></h4></div></div></div><p>
      One possibility is to configure all involved network services to use
      fixed port numbers. Once this is done, the fixed ports can be opened in
      <code class="systemitem">firewalld</code> and everything should work. The actual port numbers used are
