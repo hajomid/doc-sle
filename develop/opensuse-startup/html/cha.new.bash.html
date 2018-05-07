@@ -113,7 +113,7 @@ tux@linux:~&gt;</pre></div><div class="calloutlist "><table border="0" summary="
    and <span class="keycap">Space</span>. You can correct typing errors or add
    options. The command is not executed until you press
    <span class="keycap">Enter</span>.
-  </p><div id="idm140127404048256" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: No News Is Good News</h6><p>
+  </p><div id="idm140068544531104" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: No News Is Good News</h6><p>
     The shell is not verbose: in contrast to some graphical user interfaces,
     it usually does not provide confirmation messages when commands have
     been executed. Messages only appear in case of problems or errors
@@ -284,13 +284,13 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
        </td></tr></tbody></table></div></div></div><div class="sect1 " id="sec.new.bash.commands.help"><div class="titlepage"><div><div><h2 class="title" id="sec.new.bash.commands.help"><span class="number">14.3 </span><span class="name">Getting Help</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.commands.help">#</a></h2></div></div></div><p>
    If you remember the name of command but are not sure about the options or
    the syntax of the command, choose one of the following possibilities:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403964448"><span class="term "><code class="option">--help</code>/<code class="option">-h</code> option</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544447232"><span class="term "><code class="option">--help</code>/<code class="option">-h</code> option</span></dt><dd><p>
       If you only want to look up the options of a certain command, try
       entering the command followed by a space and <code class="option">--help</code>.
       This <code class="option">--help</code> option exists for many commands. For
       example, <code class="command">ls</code> <code class="option">--help</code> displays all
       the options for the <code class="command">ls</code> command.
-     </p></dd><dt id="idm140127403959504"><span class="term ">Manual Pages</span></dt><dd><p>
+     </p></dd><dt id="idm140068544442320"><span class="term ">Manual Pages</span></dt><dd><p>
       To learn more about the various commands, you can also use the manual
       pages. Manual pages also give a short description of what the command
       does. They can be accessed with <code class="command">man</code> followed by
@@ -309,7 +309,7 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
        </p></li></ul></div><p>
       For more information about the <code class="command">man</code> command, use
       <code class="command">man man</code>.
-     </p></dd><dt id="idm140127403948800"><span class="term ">Info Pages</span></dt><dd><p>
+     </p></dd><dt id="idm140068544431568"><span class="term ">Info Pages</span></dt><dd><p>
       Info pages usually provide even more information about commands. To
       view the info page for a certain command, enter
       <code class="command">info</code> followed by the name of the command (for
@@ -334,13 +334,13 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
   </p></div><div class="sect1 " id="sec.new.bash.fildir"><div class="titlepage"><div><div><h2 class="title" id="sec.new.bash.fildir"><span class="number">14.4 </span><span class="name">Working with Files and Directories</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.fildir">#</a></h2></div></div></div><p>
    To address a certain file or directory, you must specify the path leading
    to that directory or file. There are two ways to specify a path:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403936064"><span class="term ">Absolute Path
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544418832"><span class="term ">Absolute Path
     </span></dt><dd><p>
       The entire path from the root directory (<code class="filename">/</code>) to the
       relevant file or directory. For example, the absolute path to a text
       file named <code class="filename">file.txt</code> in your
       <code class="filename">Documents</code> directory might be:
-     </p><div class="verbatim-wrap"><pre class="screen">/home/tux/Documents/file.txt</pre></div></dd><dt id="idm140127403932336"><span class="term ">Relative Path
+     </p><div class="verbatim-wrap"><pre class="screen">/home/tux/Documents/file.txt</pre></div></dd><dt id="idm140068544415104"><span class="term ">Relative Path
     </span></dt><dd><p>
       The path from the current working directory to the relevant file or
       directory. If your current working directory is
@@ -361,7 +361,7 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
    depending on your preferences or the amount of typing, both will lead to
    the same result. To change directories, use the <code class="command">cd</code>
    command and specify the path to the directory.
-  </p><div id="idm140127403924368" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Handling Blanks in Filenames or Directory Names</h6><p>
+  </p><div id="idm140068544407136" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Handling Blanks in Filenames or Directory Names</h6><p>
     If a filename or the name of a directory contains a space, either escape
     the space using a back slash (<code class="literal">\</code>) in front of the
     blank or enclose the filename in single
@@ -409,7 +409,7 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
     Suppose you want to copy a file located somewhere in your home directory
     to a subdirectory of <code class="filename">/tmp</code> that you need to create
     first.
-   </p><div class="procedure " id="idm140127403904288"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.1: </span><span class="name">Creating and Changing Directories </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403904288">#</a></h6></div><div class="procedure-contents"><p>
+   </p><div class="procedure " id="idm140068544387056"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.1: </span><span class="name">Creating and Changing Directories </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544387056">#</a></h6></div><div class="procedure-contents"><p>
      From your home directory create a subdirectory in
      <code class="filename">/tmp</code>:
     </p><ol class="procedure" type="1"><li class="step "><p>
@@ -427,11 +427,11 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
       of contents of the <code class="filename">/tmp</code> directory.
      </p></li><li class="step "><p>
       Switch to the newly created directory with
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cd /tmp/test</pre></div></li></ol></div></div><div class="procedure " id="idm140127403893296"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.2: </span><span class="name">Creating and Copying Files </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403893296">#</a></h6></div><div class="procedure-contents"><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>cd /tmp/test</pre></div></li></ol></div></div><div class="procedure " id="idm140068544376064"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.2: </span><span class="name">Creating and Copying Files </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544376064">#</a></h6></div><div class="procedure-contents"><p>
      Now create a new file in a subdirectory of your home directory and copy
      it to <code class="filename">/tmp/test</code>. Use a relative path for this
      task.
-    </p><div id="idm140127403891536" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Overwriting of Existing Files</h6><p>
+    </p><div id="idm140068544374304" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Overwriting of Existing Files</h6><p>
       Before copying, moving or renaming a file, check if your target
       directory already contains a file with the same name. If yes, consider
       changing one of the filenames or use <code class="command">cp</code> or
@@ -470,7 +470,7 @@ drwxr-xr-x 1 tux users  70733 2015-06-21 09:35 public_html
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>ls -l</pre></div><p>
       The file <code class="filename">myfile.txt </code> should appear in the list of
       contents for <code class="filename">/tmp/test</code>.
-     </p></li></ol></div></div><div class="procedure " id="idm140127403871184"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.3: </span><span class="name">Renaming and Removing Files or Directories </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403871184">#</a></h6></div><div class="procedure-contents"><p>
+     </p></li></ol></div></div><div class="procedure " id="idm140068544353952"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.3: </span><span class="name">Renaming and Removing Files or Directories </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544353952">#</a></h6></div><div class="procedure-contents"><p>
      Now suppose you want to rename <code class="filename">myfile.txt </code> into
      <code class="filename">tuxfile.txt</code>. Finally you decide to remove the
      renamed file and the <code class="filename">test</code> subdirectory.
@@ -771,7 +771,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
     <code class="systemitem">users</code> group can read the file but cannot write
     or execute it. The same holds true for the other users as shown by the
     third block of characters.
-   </p><div class="procedure " id="idm140127403744432"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.4: </span><span class="name">Changing Access Permissions </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403744432">#</a></h6></div><div class="procedure-contents"><p>
+   </p><div class="procedure " id="idm140068544227136"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.4: </span><span class="name">Changing Access Permissions </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544227136">#</a></h6></div><div class="procedure-contents"><p>
      Suppose you are <code class="systemitem">tux</code> and want to
      modify the access permissions to your files:
     </p><ol class="procedure" type="1"><li class="step "><p>
@@ -795,7 +795,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
       To grant others write permissions for two files, for
       <code class="filename">kde_quick.xml</code> and
       <code class="filename">gnome_quick.xml</code>, enter
-     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>chmod o+w  kde_quick.xml gnome_quick.xml</pre></div></li></ol></div></div><div class="procedure " id="idm140127403728080"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.5: </span><span class="name">Changing Ownership </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403728080">#</a></h6></div><div class="procedure-contents"><p>
+     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>chmod o+w  kde_quick.xml gnome_quick.xml</pre></div></li></ol></div></div><div class="procedure " id="idm140068544210784"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.5: </span><span class="name">Changing Ownership </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544210784">#</a></h6></div><div class="procedure-contents"><p>
      Suppose you are <code class="systemitem">tux</code> and want to
      transfer the ownership of the file <code class="filename">kde_quick.xml</code>
      to an other user, named <code class="systemitem">wilber</code>. In
@@ -814,7 +814,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
      </p></li></ol></div></div></div></div></div><div class="sect1 " id="sec.new.bash.feat"><div class="titlepage"><div><div><h2 class="title" id="sec.new.bash.feat"><span class="number">14.7 </span><span class="name">Time-Saving Features of Bash</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.feat">#</a></h2></div></div></div><p>
    Entering commands in Bash can involve a lot of typing. This section
    introduces some features that can save you both time and typing.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403714288"><span class="term ">History</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544196992"><span class="term ">History</span></dt><dd><p>
       By default, Bash <span class="quote">“<span class="quote">remembers</span>”</span> commands you have entered.
       This feature is called <span class="emphasis"><em>history</em></span>. You can browse
       through commands that have been entered before, select one you want to
@@ -843,7 +843,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
       changes to its normal appearance and shows the command you chose. You
       can now edit the command or directly execute it by pressing
       <span class="keycap">Enter</span>.
-     </p></dd><dt id="idm140127403703408"><span class="term ">Completion</span></dt><dd><p>
+     </p></dd><dt id="idm140068544186112"><span class="term ">Completion</span></dt><dd><p>
       Completing a filename or directory name to its full length after
       typing its first letters is another helpful feature of Bash. To do so,
       type the first letters then press <span class="keycap">→|</span>
@@ -860,7 +860,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
       with <span class="keycap">→|</span>, you can
       simultaneously check whether the file or path you want to enter really
       exists (and you can be sure of getting the spelling right).
-     </p></dd><dt id="idm140127403698416"><span class="term ">Wild Cards</span></dt><dd><p>
+     </p></dd><dt id="idm140068544181120"><span class="term ">Wild Cards</span></dt><dd><p>
       You can replace one or more characters in a filename with a wild card
       for pathname expansion. Wild cards are characters that can stand for
       other characters. There are three different types of these in Bash:
@@ -901,7 +901,7 @@ drwxr-xr-x 2 tux users     48 2015-06-23 16:09 local
          </td></tr></tbody></table></div></dd></dl></div><div class="sect2 " id="sec.new.bash.feat.ex"><div class="titlepage"><div><div><h3 class="title" id="sec.new.bash.feat.ex"><span class="number">14.7.1 </span><span class="name">Examples For Using History, Completion and Wildcards</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.feat.ex">#</a></h3></div></div></div><p>
     The following examples illustrate how to make use of these convenient
     features of Bash.
-   </p><div class="procedure " id="idm140127403681456"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.6: </span><span class="name">Using History and Completion </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403681456">#</a></h6></div><div class="procedure-contents"><p>
+   </p><div class="procedure " id="idm140068544164160"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.6: </span><span class="name">Using History and Completion </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544164160">#</a></h6></div><div class="procedure-contents"><p>
      If you already did the example <a class="xref" href="cha.new.bash.html#sec.new.bash.fildir.ex" title="14.4.1. Examples for Working with Files and Directories">Section 14.4.1, “Examples for Working with Files and Directories”</a>,
      your shell buffer should be filled with commands which you can retrieve
      using the history function.
@@ -933,7 +933,7 @@ Desktop/ Documents/ Downloads/
       Bash now completes the path.
      </p></li><li class="step "><p>
       You can now execute the command with <span class="keycap">Enter</span>.
-     </p></li></ol></div></div><div class="procedure " id="idm140127403665472"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.7: </span><span class="name">Using Wildcards </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403665472">#</a></h6></div><div class="procedure-contents"><p>
+     </p></li></ol></div></div><div class="procedure " id="idm140068544148176"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 14.7: </span><span class="name">Using Wildcards </span><a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544148176">#</a></h6></div><div class="procedure-contents"><p>
      Now suppose that your home directory contains several files with
      various file extensions. It also holds several versions of one file
      which you saved under different filenames
@@ -1002,7 +1002,7 @@ Desktop/ Documents/ Downloads/
     above, <code class="command">rm myfile[1-3,5].*</code> would lead to the same
     result as <code class="command">rm myfile[1-3,5].txt</code> because there are only
     files with the extension <code class="filename">.txt</code> available.
-   </p><div id="idm140127403634512" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using Wildcards in <code class="command">rm</code> Commands</h6><p>
+   </p><div id="idm140068544117216" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Using Wildcards in <code class="command">rm</code> Commands</h6><p>
      Wildcards in a <code class="command">rm </code> command can be very useful but
      also dangerous: you might delete more files from your directory than
      intended. To see which files would be affected by the
@@ -1017,19 +1017,19 @@ Desktop/ Documents/ Downloads/
    vi. There may be situations where no other editor than vi is available.
   </p><p>
    Basically, vi makes use of three operating modes:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403627664"><span class="term "><span class="emphasis"><em>command</em></span> mode</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544110304"><span class="term "><span class="emphasis"><em>command</em></span> mode</span></dt><dd><p>
       In this mode, vi accepts certain key combinations as commands. Simple
       tasks such as searching words or deleting a line can be executed.
-     </p></dd><dt id="idm140127403625440"><span class="term "><span class="emphasis"><em>insert</em></span> mode</span></dt><dd><p>
+     </p></dd><dt id="idm140068544108080"><span class="term "><span class="emphasis"><em>insert</em></span> mode</span></dt><dd><p>
       In this mode, you can write normal text.
-     </p></dd><dt id="idm140127403623328"><span class="term "><span class="emphasis"><em>extended</em></span> mode</span></dt><dd><p>
+     </p></dd><dt id="idm140068544105968"><span class="term "><span class="emphasis"><em>extended</em></span> mode</span></dt><dd><p>
       In this mode, also known as colon mode (as you have to enter a colon
       to switch to this mode), vi can execute also more complex tasks such
       as searching and replacing text.
      </p></dd></dl></div><p>
    In the following (very simple) example, you will learn how to open and
    edit a file with vi, how to save your changes and quit vi.
-  </p><div class="sect2 " id="sec.new.bash.edit.ex"><div class="titlepage"><div><div><h3 class="title" id="sec.new.bash.edit.ex"><span class="number">14.8.1 </span><span class="name">Example: Editing with vi</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.edit.ex">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><div id="idm140127403618864" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Display of Keys</h6><p>
+  </p><div class="sect2 " id="sec.new.bash.edit.ex"><div class="titlepage"><div><div><h3 class="title" id="sec.new.bash.edit.ex"><span class="number">14.8.1 </span><span class="name">Example: Editing with vi</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.edit.ex">#</a></h3></div></div></div><div class="procedure "><div class="procedure-contents"><div id="idm140068544101568" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Display of Keys</h6><p>
       In the following, find several commands that you can enter in vi by
       just pressing keys. These appear in uppercase as on a keyboard. If you
       need to enter a key in uppercase, this is stated explicitly by showing
@@ -1068,7 +1068,7 @@ Desktop/ Documents/ Downloads/
      </p></li></ol></div></div></div></div><div class="sect1 " id="sec.new.bash.search"><div class="titlepage"><div><div><h2 class="title" id="sec.new.bash.search"><span class="number">14.9 </span><span class="name">Searching for Files or Contents</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.new.bash.search">#</a></h2></div></div></div><p>
    Bash offers you several commands to search for files and to search for
    the contents of files:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403598000"><span class="term "><code class="command">find</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544080768"><span class="term "><code class="command">find</code>
     </span></dt><dd><p>
       With <code class="command">find</code>, search for a file in a given directory.
       The first argument specifies the directory in which to start the
@@ -1076,14 +1076,14 @@ Desktop/ Documents/ Downloads/
       string, which may also include wild cards. Unlike
       <code class="command">locate</code>, which uses a database,
       <code class="command">find</code> scans the actual directory.
-     </p></dd><dt id="idm140127403593888"><span class="term "><code class="command">grep</code>
+     </p></dd><dt id="idm140068544076656"><span class="term "><code class="command">grep</code>
     </span></dt><dd><p>
       The <code class="command">grep</code> command finds a specific search string in
       the specified text files. If the search string is found, the command
       displays the line in which <code class="literal">searchstring</code> was found,
       along with the filename. If desired, use wild cards to specify
       filenames.
-     </p></dd></dl></div><div class="sect2 " id="idm140127403590544"><div class="titlepage"><div><div><h3 class="title" id="idm140127403590544"><span class="number">14.9.1 </span><span class="name">Examples for Searching</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#idm140127403590544">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
+     </p></dd></dl></div><div class="sect2 " id="idm140068544073312"><div class="titlepage"><div><div><h3 class="title" id="idm140068544073312"><span class="number">14.9.1 </span><span class="name">Examples for Searching</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#idm140068544073312">#</a></h3></div></div></div><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
       To search your home directory for all occurrences of filenames that
       contain the file extension <code class="filename">.txt</code>, use:
      </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>find ~ -name '*.txt' -print</pre></div></li><li class="listitem "><p>
@@ -1106,32 +1106,32 @@ Desktop/ Documents/ Downloads/
    whether you want to open and edit this file. Bash offers you several
    commands to have a quick look at the contents of a text file directly in
    the shell, without opening an editor.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403577808"><span class="term "><code class="command">head</code></span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544060640"><span class="term "><code class="command">head</code></span></dt><dd><p>
       With <code class="command">head</code> you can view the first lines of a text
       file. If you do not specify the command any further,
       <code class="command">head</code> shows the first 10 lines of a text file.
-     </p></dd><dt id="idm140127403574864"><span class="term "><code class="command">tail</code></span></dt><dd><p>
+     </p></dd><dt id="idm140068544057696"><span class="term "><code class="command">tail</code></span></dt><dd><p>
       The <code class="command">tail</code> command is the counterpart of
       <code class="command">head</code>. If you use <code class="command">tail</code> without
       any further options it displays the last 10 lines of a text file. This
       can be very useful to view log files of your system, where the most
       recent messages or log entries are usually found at the end of the
       file.
-     </p></dd><dt id="idm140127403571344"><span class="term "><code class="command">less</code></span></dt><dd><p>
+     </p></dd><dt id="idm140068544054176"><span class="term "><code class="command">less</code></span></dt><dd><p>
       With <code class="command">less</code>, display the whole contents of a text
       file. To move up and down half a page use <span class="keycap">Page ↑</span>
       and <span class="keycap">Page ↓</span>. Use <span class="keycap">Space</span> to
       scroll down one page. <span class="keycap">Home</span> takes you to the
       beginning, and <span class="keycap">End</span> to the end of the document. To
       end the viewing mode, press <span class="keycap">Q</span>.
-     </p></dd><dt id="idm140127403565584"><span class="term "><code class="command">more</code></span></dt><dd><p>
+     </p></dd><dt id="idm140068544048416"><span class="term "><code class="command">more</code></span></dt><dd><p>
       Instead of <code class="literal">less</code>, you can also use the older program
       <code class="literal">more</code>. It has basically the same
       function—however, it is less convenient because it does not
       allow you to scroll backward. Use <span class="keycap">Space</span> to move
       forward. When you reach the end of the document, the viewer closes
       automatically.
-     </p></dd><dt id="idm140127403561952"><span class="term "><code class="command">cat</code></span></dt><dd><p>
+     </p></dd><dt id="idm140068544044784"><span class="term "><code class="command">cat</code></span></dt><dd><p>
       The <code class="command">cat</code> command displays the contents of a file,
       printing the entire contents to the screen without interruption. As
       <code class="command">cat</code> does not allow you to scroll it is not very
@@ -1147,11 +1147,11 @@ Desktop/ Documents/ Downloads/
    shell window) and the standard input is the keyboard. With
    certain symbols you can redirect the input or the output to another
    object, such as a file or another command.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403555712"><span class="term ">Redirection</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068544038544"><span class="term ">Redirection</span></dt><dd><p>
       With <code class="literal">&gt;</code> you can forward the output of a command
       to a file (output redirection), with <code class="literal">&lt;</code> you can
       use a file as input for a command (input redirection).
-     </p></dd><dt id="idm140127403552896"><span class="term ">Pipe</span></dt><dd><p>
+     </p></dd><dt id="idm140068544035728"><span class="term ">Pipe</span></dt><dd><p>
       By means of a pipe symbol <code class="literal">|</code> you can also redirect
       the output: with a pipe, you can combine several commands, using the
       output of one command as input for the next command. In contrast to
@@ -1348,39 +1348,39 @@ PID TTY          TIME CMD
    The following section lists the most important commands for file
    management. It covers everything from general file administration to the
    manipulation of file system ACLs.
-  </p><div class="sect3 " id="sec.shell.fileadmin"><div class="titlepage"><div><div><h4 class="title" id="sec.shell.fileadmin"><span class="number">14.14.1.1 </span><span class="name">File Administration</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.shell.fileadmin">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403458400"><span class="term "><code class="command">ls</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+  </p><div class="sect3 " id="sec.shell.fileadmin"><div class="titlepage"><div><div><h4 class="title" id="sec.shell.fileadmin"><span class="number">14.14.1.1 </span><span class="name">File Administration</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.shell.fileadmin">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543940976"><span class="term "><code class="command">ls</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        If you run <code class="command">ls</code> without any additional parameters,
        the program lists the contents of the current directory in short
        form.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403455056"><span class="term "><code class="option">-l</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543937632"><span class="term "><code class="option">-l</code></span></dt><dd><p>
           Detailed list
-         </p></dd><dt id="idm140127403453120"><span class="term "><code class="option">-a</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543935696"><span class="term "><code class="option">-a</code></span></dt><dd><p>
           Displays hidden files
-         </p></dd></dl></div></dd><dt id="idm140127403450688"><span class="term "><code class="command">cp</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543933264"><span class="term "><code class="command">cp</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
        Copies <code class="filename">source</code> to <code class="filename">target</code>.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403446560"><span class="term ">-i</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543929136"><span class="term ">-i</span></dt><dd><p>
           Waits for confirmation, if necessary, before an existing
           <code class="literal">target</code> is overwritten
-         </p></dd><dt id="idm140127403444240"><span class="term ">-r</span></dt><dd><p>
+         </p></dd><dt id="idm140068543926816"><span class="term ">-r</span></dt><dd><p>
           Copies recursively (includes subdirectories)
-         </p></dd></dl></div></dd><dt id="idm140127403441920"><span class="term "><code class="command">mv</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543924496"><span class="term "><code class="command">mv</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
        Copies <code class="filename">source</code> to <code class="filename">target</code>
        then deletes the original <code class="filename">source</code>.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403437328"><span class="term ">-b</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543919904"><span class="term ">-b</span></dt><dd><p>
           Creates a backup copy of the <code class="filename">source</code> before
           moving
-         </p></dd><dt id="idm140127403435040"><span class="term ">-i</span></dt><dd><p>
+         </p></dd><dt id="idm140068543917616"><span class="term ">-i</span></dt><dd><p>
           Waits for confirmation, if necessary, before an existing
           <code class="filename">targetfile</code> is overwritten
-         </p></dd></dl></div></dd><dt id="idm140127403432240"><span class="term "><code class="command">rm</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543914816"><span class="term "><code class="command">rm</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        Removes the specified files from the file system. Directories are not
        removed by <code class="command">rm</code> unless the option
        <code class="option">-r</code> is used.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403428464"><span class="term "><code class="option">-r</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543911040"><span class="term "><code class="option">-r</code></span></dt><dd><p>
           Deletes any existing subdirectories
-         </p></dd><dt id="idm140127403426496"><span class="term "><code class="option">-i</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543909072"><span class="term "><code class="option">-i</code></span></dt><dd><p>
           Waits for confirmation before deleting each file
-         </p></dd></dl></div></dd><dt id="idm140127403424048"><span class="term "><code class="command">ln</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543906624"><span class="term "><code class="command">ln</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SOURCE</em> <em class="replaceable ">TARGET</em></span></dt><dd><p>
        Creates an internal link from <em class="replaceable ">source</em> to
        <em class="replaceable ">target</em>. Normally, such a link points directly to
        <em class="replaceable ">source</em> on the same file system. However, if
@@ -1388,37 +1388,37 @@ PID TTY          TIME CMD
        option, it creates a symbolic link that only points to the directory
        in which <code class="filename">source</code> is located, enabling linking
        across file systems.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403417920"><span class="term ">-s</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543900496"><span class="term ">-s</span></dt><dd><p>
           Creates a symbolic link
-         </p></dd></dl></div></dd><dt id="idm140127403415616"><span class="term "><code class="command">cd</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543898192"><span class="term "><code class="command">cd</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
        Changes the current directory. <code class="command">cd</code> without any
        parameters changes to the user's home directory.
-      </p></dd><dt id="idm140127403412272"><span class="term "><code class="command">mkdir</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543894848"><span class="term "><code class="command">mkdir</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
        Creates a new directory.
-      </p></dd><dt id="idm140127403409440"><span class="term "><code class="command">rmdir</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543892016"><span class="term "><code class="command">rmdir</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
        Deletes the specified directory if it is already empty.
-      </p></dd><dt id="idm140127403406576"><span class="term "><code class="command">chown</code> <em class="replaceable ">OPTIONS</em> <code class="literal"><em class="replaceable ">USER_NAME</em>[:<em class="replaceable ">GROUP</em>]</code> <em class="replaceable ">FILES</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543889152"><span class="term "><code class="command">chown</code> <em class="replaceable ">OPTIONS</em> <code class="literal"><em class="replaceable ">USER_NAME</em>[:<em class="replaceable ">GROUP</em>]</code> <em class="replaceable ">FILES</em></span></dt><dd><p>
        Transfers ownership of a file to the user with the specified
        user name.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403402528"><span class="term "><code class="option">-R</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543885104"><span class="term "><code class="option">-R</code></span></dt><dd><p>
           Changes files and directories in all subdirectories
-         </p></dd></dl></div></dd><dt id="idm140127403400064"><span class="term "><code class="command">chgrp</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">GROUP_NAME</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543882640"><span class="term "><code class="command">chgrp</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">GROUP_NAME</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        Transfers the group ownership of a given <code class="filename">file</code> to
        the group with the specified group name. The file owner can change
        group ownership only if a member of both the current and the new
        group.
-      </p></dd><dt id="idm140127403396160"><span class="term "><code class="command">chmod</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">MODE</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543878736"><span class="term "><code class="command">chmod</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">MODE</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        Changes the access permissions.
       </p><p>
        The <code class="literal">mode</code> parameter has three parts:
        <code class="literal">group</code>, <code class="literal">access</code>, and
        <code class="literal">access type</code>. <code class="literal">group</code> accepts the
        following characters:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403390160"><span class="term ">u</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543872736"><span class="term ">u</span></dt><dd><p>
           User
-         </p></dd><dt id="idm140127403388352"><span class="term ">g</span></dt><dd><p>
+         </p></dd><dt id="idm140068543870928"><span class="term ">g</span></dt><dd><p>
           Group
-         </p></dd><dt id="idm140127403386544"><span class="term ">o</span></dt><dd><p>
+         </p></dd><dt id="idm140068543869120"><span class="term ">o</span></dt><dd><p>
           Others
          </p></dd></dl></div><p>
        For <code class="literal">access</code>, grant access with <code class="literal">+</code>
@@ -1426,13 +1426,13 @@ PID TTY          TIME CMD
       </p><p>
        The <code class="literal">access type</code> is controlled by the following
        options:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403381552"><span class="term ">r</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543864128"><span class="term ">r</span></dt><dd><p>
           Read
-         </p></dd><dt id="idm140127403379744"><span class="term ">w</span></dt><dd><p>
+         </p></dd><dt id="idm140068543862320"><span class="term ">w</span></dt><dd><p>
           Write
-         </p></dd><dt id="idm140127403377936"><span class="term ">x</span></dt><dd><p>
+         </p></dd><dt id="idm140068543860512"><span class="term ">x</span></dt><dd><p>
           Execute—executing files or changing to the directory
-         </p></dd><dt id="idm140127403376080"><span class="term ">s</span></dt><dd><p>
+         </p></dd><dt id="idm140068543858656"><span class="term ">s</span></dt><dd><p>
           Setuid bit—the application or program is started as if it
           were started by the owner of the file
          </p></dd></dl></div><p>
@@ -1446,40 +1446,40 @@ PID TTY          TIME CMD
        with 4, the write permission with 2, and the permission for executing
        a file is set with 1. The owner of a file would usually receive a 6
        or a 7 for executable files.
-      </p></dd><dt id="idm140127403372544"><span class="term "><code class="command">gzip</code> <em class="replaceable ">PARAMETERS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543855120"><span class="term "><code class="command">gzip</code> <em class="replaceable ">PARAMETERS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        This program compresses the contents of files using complex
        mathematical algorithms. Files compressed in this way are given the
        extension <code class="filename">.gz</code> and need to be uncompressed before
        they can be used. To compress several files or even entire
        directories, use the <code class="command">tar</code> command.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403368608"><span class="term ">-d</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543851184"><span class="term ">-d</span></dt><dd><p>
           Decompresses the packed gzip files so they return to their
           original size and can be processed normally (like the command
           <code class="command">gunzip</code>)
-         </p></dd></dl></div></dd><dt id="idm140127403365744"><span class="term "><code class="command">tar</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">ARCHIVE</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543848320"><span class="term "><code class="command">tar</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">ARCHIVE</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        <code class="command">tar</code> puts one or more files into an archive.
        Compression is optional. <code class="command">tar</code> is a quite complex
        command with several options available. The most frequently used
        options are:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403361456"><span class="term "><code class="option">-f</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543844032"><span class="term "><code class="option">-f</code></span></dt><dd><p>
           Writes the output to a file and not to the screen as is usually
           the case
-         </p></dd><dt id="idm140127403359456"><span class="term "><code class="option">-c</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543842032"><span class="term "><code class="option">-c</code></span></dt><dd><p>
           Creates a new TAR archive
-         </p></dd><dt id="idm140127403357504"><span class="term "><code class="option">-r</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543840080"><span class="term "><code class="option">-r</code></span></dt><dd><p>
           Adds files to an existing archive
-         </p></dd><dt id="idm140127403355552"><span class="term "><code class="option">-t</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543838128"><span class="term "><code class="option">-t</code></span></dt><dd><p>
           Outputs the contents of an archive
-         </p></dd><dt id="idm140127403353600"><span class="term "><code class="option">-u</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543836176"><span class="term "><code class="option">-u</code></span></dt><dd><p>
           Adds files, but only if they are newer than the files already
           contained in the archive
-         </p></dd><dt id="idm140127403351584"><span class="term "><code class="option">-x</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543834160"><span class="term "><code class="option">-x</code></span></dt><dd><p>
           Unpacks files from an archive (<span class="emphasis"><em>extraction</em></span>)
-         </p></dd><dt id="idm140127403349184"><span class="term "><code class="option">-z</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543831760"><span class="term "><code class="option">-z</code></span></dt><dd><p>
           Packs the resulting archive with <code class="command">gzip</code>
-         </p></dd><dt id="idm140127403346784"><span class="term "><code class="option">-j</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543829360"><span class="term "><code class="option">-j</code></span></dt><dd><p>
           Compresses the resulting archive with <code class="command">bzip2</code>
-         </p></dd><dt id="idm140127403344384"><span class="term "><code class="option">-v</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543826960"><span class="term "><code class="option">-v</code></span></dt><dd><p>
           Lists files processed
          </p></dd></dl></div><p>
        The archive files created by <code class="command">tar</code> end with
@@ -1488,65 +1488,65 @@ PID TTY          TIME CMD
        <code class="filename">.tgz</code> or <code class="filename">.tar.gz</code>. If it was
        compressed using <code class="command">bzip2</code>, the ending is
        <code class="filename">.tar.bz2</code>.
-      </p></dd><dt id="idm140127403338304"><span class="term "><code class="command">find</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543820880"><span class="term "><code class="command">find</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        With <code class="command">find</code>, search for a file in a given directory.
        The first argument specifies the directory in which to start the
        search. The option <code class="command">-name</code> must be followed by a
        search string, which may also include wild cards. Unlike
        <code class="command">locate</code>, which uses a database,
        <code class="command">find</code> scans the actual directory.
-      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.filecontents"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.filecontents"><span class="number">14.14.1.2 </span><span class="name">Commands to Access File Contents</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.filecontents">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403332080"><span class="term "><code class="command">file</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.filecontents"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.filecontents"><span class="number">14.14.1.2 </span><span class="name">Commands to Access File Contents</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.filecontents">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543814656"><span class="term "><code class="command">file</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        In Linux, files can have a file extensions but do not need to have
        one. The <code class="command">file</code> determines the file type of a given
        file. With the output of <code class="command">file</code>, you can then choose
        an appropriate application with which to open the file.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403328192"><span class="term ">-z</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543810768"><span class="term ">-z</span></dt><dd><p>
           Tries to look inside compressed files
-         </p></dd></dl></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403325424"><span class="term "><code class="command">cat</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+         </p></dd></dl></div></dd></dl></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543808000"><span class="term "><code class="command">cat</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        The <code class="command">cat</code> command displays the contents of a file,
        printing the entire contents to the screen without interruption.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403322080"><span class="term ">-n</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543804656"><span class="term ">-n</span></dt><dd><p>
           Numbers the output on the left margin
-         </p></dd></dl></div></dd><dt id="idm140127403319760"><span class="term "><code class="command">less</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543802336"><span class="term "><code class="command">less</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        This command can be used to browse the contents of the specified
        file. Scroll half a screen page up or down with <span class="keycap">Page ↑</span>
        and <span class="keycap">Page ↓</span> or a full screen page down with
        <span class="keycap">Space</span>. Jump to the beginning or end of a file using
        <span class="keycap">Home</span> and <span class="keycap">End</span>. Press
        <span class="keycap">Q</span> to quit the program.
-      </p></dd><dt id="idm140127403313504"><span class="term "><code class="command">grep</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SEARCH_STRING</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543796080"><span class="term "><code class="command">grep</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">SEARCH_STRING</em> <em class="replaceable ">FILES</em></span></dt><dd><p>
        The <code class="command">grep</code> command finds a specific search string in
        the specified files. If the search string is found, the command
        displays the line in which <em class="replaceable ">SEARCH_STRING</em> was
        found along with the file name.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403309216"><span class="term "><code class="option">-i</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543791792"><span class="term "><code class="option">-i</code></span></dt><dd><p>
           Ignores case
-         </p></dd><dt id="idm140127403307280"><span class="term "><code class="option">-H</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543789856"><span class="term "><code class="option">-H</code></span></dt><dd><p>
           Only displays the names of the relevant files, but not the text
           lines
-         </p></dd><dt id="idm140127403305280"><span class="term "><code class="option">-n</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543787856"><span class="term "><code class="option">-n</code></span></dt><dd><p>
           Additionally displays the numbers of the lines in which it found a
           hit
-         </p></dd><dt id="idm140127403303280"><span class="term "><code class="option">-l</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543785856"><span class="term "><code class="option">-l</code></span></dt><dd><p>
           Only lists the files in which <code class="literal">searchstring</code> does
           not occur
-         </p></dd></dl></div></dd><dt id="idm140127403300384"><span class="term "><code class="command">diff</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILE_1</em> <em class="replaceable ">FILE_2</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543782960"><span class="term "><code class="command">diff</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">FILE_1</em> <em class="replaceable ">FILE_2</em></span></dt><dd><p>
        The <code class="command">diff</code> command compares the contents of any two
        files. The output produced by the program lists all lines that do not
        match. This is frequently used by programmers who need only to send
        their program alterations and not the entire source code.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403296448"><span class="term "><code class="option">-q</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543779024"><span class="term "><code class="option">-q</code></span></dt><dd><p>
           Only reports whether the two files differ
-         </p></dd><dt id="idm140127403294480"><span class="term "><code class="option">-u</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543777056"><span class="term "><code class="option">-u</code></span></dt><dd><p>
           Produces a <span class="quote">“<span class="quote">unified</span>”</span> diff, which makes the output
           more readable
-         </p></dd></dl></div></dd></dl></div></div><div class="sect3 " id="sec.commands.filesystems"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.filesystems"><span class="number">14.14.1.3 </span><span class="name">File Systems</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.filesystems">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403289728"><span class="term "><code class="command">mount</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DEVICE</em> <em class="replaceable ">MOUNT_POINT</em></span></dt><dd><p>
+         </p></dd></dl></div></dd></dl></div></div><div class="sect3 " id="sec.commands.filesystems"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.filesystems"><span class="number">14.14.1.3 </span><span class="name">File Systems</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.filesystems">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543772368"><span class="term "><code class="command">mount</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DEVICE</em> <em class="replaceable ">MOUNT_POINT</em></span></dt><dd><p>
        This command can be used to mount any data media, such as hard disks,
        CD-ROM drives, and other drives, to a directory of the Linux file
        system.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403286336"><span class="term "><code class="option">-r</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543769008"><span class="term "><code class="option">-r</code></span></dt><dd><p>
           Mount read-only
-         </p></dd><dt id="idm140127403284448"><span class="term "><code class="option">-t <em class="replaceable ">FILE_SYSTEM</em></code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543767072"><span class="term "><code class="option">-t <em class="replaceable ">FILE_SYSTEM</em></code></span></dt><dd><p>
           Specify the file system: For Linux hard disks, this is commonly
           <code class="literal">ext4</code>, <code class="literal">xfs</code>, or
           <code class="literal">btrfs</code>.
@@ -1560,7 +1560,7 @@ PID TTY          TIME CMD
        <code class="filename">/etc/fstab</code> file (separated by commas) and save
        this change. Further information is available in the
        <code class="systemitem">mount(1)</code> man page.
-      </p></dd><dt id="idm140127403277088"><span class="term "><code class="command">umount</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">MOUNT_POINT</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543759712"><span class="term "><code class="command">umount</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">MOUNT_POINT</em></span></dt><dd><p>
        This command unmounts a mounted drive from the file system. To
        prevent data loss, run this command before taking a removable data
        medium from its drive. Normally, only
@@ -1573,54 +1573,54 @@ PID TTY          TIME CMD
    The following section lists a few of the most important commands needed
    for retrieving system information and controlling processes and the
    network.
-  </p><div class="sect3 " id="sec.commands.systeminfo"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.systeminfo"><span class="number">14.14.2.1 </span><span class="name">System Information</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.systeminfo">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403267920"><span class="term "><code class="command">df</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
+  </p><div class="sect3 " id="sec.commands.systeminfo"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.systeminfo"><span class="number">14.14.2.1 </span><span class="name">System Information</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.systeminfo">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543750416"><span class="term "><code class="command">df</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">DIRECTORY</em></span></dt><dd><p>
        The <code class="command">df</code> (disk free) command, when used without any
        options, displays information about the total disk space, the disk
        space currently in use, and the free space on all the mounted drives.
        If a directory is specified, the information is limited to the drive
        on which that directory is located.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403264384"><span class="term "><code class="option">-h</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543746880"><span class="term "><code class="option">-h</code></span></dt><dd><p>
           Shows the number of occupied blocks in gigabytes, megabytes, or
           kilobytes—in human-readable format
-         </p></dd><dt id="idm140127403262352"><span class="term "><code class="option">-T</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543744848"><span class="term "><code class="option">-T</code></span></dt><dd><p>
           Type of file system (ext2, nfs, etc.)
-         </p></dd></dl></div></dd><dt id="idm140127403259904"><span class="term "><code class="command">du</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PATH</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543742400"><span class="term "><code class="command">du</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PATH</em></span></dt><dd><p>
        This command, when executed without any parameters, shows the total
        disk space occupied by files and subdirectories in the current
        directory.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403256960"><span class="term "><code class="option">-a</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543739456"><span class="term "><code class="option">-a</code></span></dt><dd><p>
           Displays the size of each individual file
-         </p></dd><dt id="idm140127403254992"><span class="term "><code class="option">-h</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543737488"><span class="term "><code class="option">-h</code></span></dt><dd><p>
           Output in human-readable form
-         </p></dd><dt id="idm140127403253040"><span class="term "><code class="option">-s</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543735536"><span class="term "><code class="option">-s</code></span></dt><dd><p>
           Displays only the calculated total size
-         </p></dd></dl></div></dd><dt id="idm140127403250592"><span class="term "><code class="command">free</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543733088"><span class="term "><code class="command">free</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        The command <code class="command">free</code> displays information about RAM
        and swap space usage, showing the total and the used amount in both
        categories. See <span class="intraxref">Book “<em class="citetitle ">Reference</em>”, Chapter 15 “Special System Features”, Section 15.1.7 “The <code class="command">free</code> Command”</span> for more information.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403247120"><span class="term "><code class="option">-b</code></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543729616"><span class="term "><code class="option">-b</code></span></dt><dd><p>
           Output in bytes
-         </p></dd><dt id="idm140127403245184"><span class="term "><code class="option">-k</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543727680"><span class="term "><code class="option">-k</code></span></dt><dd><p>
           Output in kilobytes
-         </p></dd><dt id="idm140127403243232"><span class="term "><code class="option">-m</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543725728"><span class="term "><code class="option">-m</code></span></dt><dd><p>
           Output in megabytes
-         </p></dd></dl></div></dd><dt id="idm140127403240800"><span class="term "><code class="command">date</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543723296"><span class="term "><code class="command">date</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        This simple program displays the current system time. If run as
        <code class="systemitem">root</code>, it can also be used
        to change the system time. Details about the program are available in
        the date(1) man page.
-      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.processes"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.processes"><span class="number">14.14.2.2 </span><span class="name">Processes</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.processes">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403235824"><span class="term "><code class="command">top</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.processes"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.processes"><span class="number">14.14.2.2 </span><span class="name">Processes</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.processes">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543718256"><span class="term "><code class="command">top</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        <code class="command">top</code> provides a quick overview of the currently
        running processes. Press <span class="keycap">H</span> to access a page that
        briefly explains the main options for customizing the program.
-      </p></dd><dt id="idm140127403232416"><span class="term "><code class="command">ps</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_ID</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543714848"><span class="term "><code class="command">ps</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_ID</em></span></dt><dd><p>
        If run without any options, this command displays a table of all your
        own programs or processes—those you started. The options for
        this command are not preceded by hyphen.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403229440"><span class="term ">aux</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543711872"><span class="term ">aux</span></dt><dd><p>
           Displays a detailed list of all processes, independent of the
           owner
-         </p></dd></dl></div></dd><dt id="idm140127403227088"><span class="term "><code class="command">kill</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_ID</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543709520"><span class="term "><code class="command">kill</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_ID</em></span></dt><dd><p>
        Unfortunately, sometimes a program cannot be terminated in the normal
        way. In most cases, you should still be able to stop such a runaway
        program by executing the <code class="command">kill</code> command, specifying
@@ -1629,43 +1629,43 @@ PID TTY          TIME CMD
        <span class="emphasis"><em>TERM</em></span> signal that instructs the program to shut
        itself down. If this does not help, the following parameter can be
        used:
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403221712"><span class="term ">-9</span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543704144"><span class="term ">-9</span></dt><dd><p>
           Sends a <span class="emphasis"><em>KILL</em></span> signal instead of a
           <span class="emphasis"><em>TERM</em></span> signal, bringing the specified process
           to an end in almost all cases
-         </p></dd></dl></div></dd><dt id="idm140127403218448"><span class="term "><code class="command">killall</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_NAME</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543700880"><span class="term "><code class="command">killall</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">PROCESS_NAME</em></span></dt><dd><p>
        This command is similar to <code class="command">kill</code>, but uses the
        process name (instead of the process ID) as an argument, ending all
        processes with that name.
-      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.network"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.network"><span class="number">14.14.2.3 </span><span class="name">Network</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.network">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403213344"><span class="term "><code class="command">ping</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">HOSTNAME_OR_IP_ADDRESS</em></span></dt><dd><p>
+      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.network"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.network"><span class="number">14.14.2.3 </span><span class="name">Network</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.network">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543695712"><span class="term "><code class="command">ping</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">HOSTNAME_OR_IP_ADDRESS</em></span></dt><dd><p>
        The <code class="command">ping</code> command is the standard tool for testing
        the basic functionality of TCP/IP networks. It sends a small data
        packet to the destination host, requesting an immediate reply. If
        this works, <code class="command">ping</code> displays a message to that
        effect, which indicates that the network link is functioning.
-      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140127403209392"><span class="term "><code class="option">-c</code><em class="replaceable ">NUMBER</em></span></dt><dd><p>
+      </p><div class="variablelist "><dl class="variablelist"><dt id="idm140068543691760"><span class="term "><code class="option">-c</code><em class="replaceable ">NUMBER</em></span></dt><dd><p>
           Determines the total number of packages to send and ends after
           they have been dispatched (by default, there is no limitation set)
-         </p></dd><dt id="idm140127403207040"><span class="term "><code class="option">-f</code></span></dt><dd><p>
+         </p></dd><dt id="idm140068543689408"><span class="term "><code class="option">-f</code></span></dt><dd><p>
           <span class="emphasis"><em>flood ping</em></span>: sends as many data packages as
           possible; a popular means, reserved for
           <code class="systemitem">root</code>, to test networks
-         </p></dd><dt id="idm140127403203856"><span class="term "><code class="option">-i</code><em class="replaceable ">VALUE</em></span></dt><dd><p>
+         </p></dd><dt id="idm140068543686224"><span class="term "><code class="option">-i</code><em class="replaceable ">VALUE</em></span></dt><dd><p>
           Specifies the interval between two data packages in seconds
           (default: one second)
-         </p></dd></dl></div></dd><dt id="idm140127403201072"><span class="term "><code class="command">host</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">HOSTNAME</em> <em class="replaceable ">SERVER</em></span></dt><dd><p>
+         </p></dd></dl></div></dd><dt id="idm140068543683440"><span class="term "><code class="command">host</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">HOSTNAME</em> <em class="replaceable ">SERVER</em></span></dt><dd><p>
        The domain name system resolves domain names to IP addresses. With
        this tool, send queries to name servers (DNS servers).
-      </p></dd><dt id="idm140127403197680"><span class="term "><code class="command">ssh</code> <em class="replaceable ">OPTIONS</em> <code class="literal">[<em class="replaceable ">USER</em>@]<em class="replaceable ">HOSTNAME</em></code> <em class="replaceable ">COMMAND</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543680048"><span class="term "><code class="command">ssh</code> <em class="replaceable ">OPTIONS</em> <code class="literal">[<em class="replaceable ">USER</em>@]<em class="replaceable ">HOSTNAME</em></code> <em class="replaceable ">COMMAND</em></span></dt><dd><p>
        SSH is actually an Internet protocol that enables you to work on
        remote hosts across a network. SSH is also the name of a Linux
        program that uses this protocol to enable operations on remote
        computers.
-      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.misc"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.misc"><span class="number">14.14.2.4 </span><span class="name">Miscellaneous</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.misc">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140127403191744"><span class="term "><code class="command">passwd</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">USER_NAME</em></span></dt><dd><p>
+      </p></dd></dl></div></div><div class="sect3 " id="sec.commands.misc"><div class="titlepage"><div><div><h4 class="title" id="sec.commands.misc"><span class="number">14.14.2.4 </span><span class="name">Miscellaneous</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.commands.misc">#</a></h4></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140068543674112"><span class="term "><code class="command">passwd</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">USER_NAME</em></span></dt><dd><p>
        Users may change their own passwords at any time using this command.
        The administrator <code class="systemitem">root</code> can
        use the command to change the password of any user on the system.
-      </p></dd><dt id="idm140127403188064"><span class="term "><code class="command">su</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">USER_NAME</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543670432"><span class="term "><code class="command">su</code> <em class="replaceable ">OPTIONS</em> <em class="replaceable ">USER_NAME</em></span></dt><dd><p>
        The <code class="command">su</code> command makes it possible to log in under a
        different user name from a running session. Specify a user name and the
        corresponding password. The password is not required from
@@ -1676,13 +1676,13 @@ PID TTY          TIME CMD
        <code class="systemitem">root</code> password and change to
        the superuser (<code class="systemitem">root</code>). Use
        <code class="command">su -</code> to start a login shell for a different user.
-      </p></dd><dt id="idm140127403181088"><span class="term "><code class="command">halt</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543663456"><span class="term "><code class="command">halt</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        To avoid loss of data, you should always use this program to shut
        down your system.
-      </p></dd><dt id="idm140127403178624"><span class="term "><code class="command">reboot</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
+      </p></dd><dt id="idm140068543660992"><span class="term "><code class="command">reboot</code> <em class="replaceable ">OPTIONS</em></span></dt><dd><p>
        Does the same as <code class="command">halt</code> except the system performs
        an immediate reboot.
-      </p></dd><dt id="idm140127403175744"><span class="term "><code class="command">clear</code></span></dt><dd><p>
+      </p></dd><dt id="idm140068543658112"><span class="term "><code class="command">clear</code></span></dt><dd><p>
        This command cleans up the visible area of the console. It has no
        options.
       </p></dd></dl></div></div></div><div class="sect2 " id="sec.shell.commands.info"><div class="titlepage"><div><div><h3 class="title" id="sec.shell.commands.info"><span class="number">14.14.3 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.new.bash.html#sec.shell.commands.info">#</a></h3></div></div></div><p>

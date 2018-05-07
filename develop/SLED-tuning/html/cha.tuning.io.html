@@ -90,7 +90,7 @@ noop deadline [cfq]</pre></div><p>
     <a class="xref" href="cha.tuning.resources.html#cha.tuning.resources.disk.ionice" title="8.3.3. Prioritizing Disk Access with ionice">Section 8.3.3, “Prioritizing Disk Access with <code class="command">ionice</code>”</a>). The
     <code class="systemitem">CFQ</code> scheduler has the
     following tunable parameters:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139796824492832"><span class="term "><code class="filename">
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139800136601184"><span class="term "><code class="filename">
       /sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/slice_idle_us
      </code>
      </span></dt><dd><p>
@@ -109,7 +109,7 @@ noop deadline [cfq]</pre></div><p>
       </p><p>For media where locality does not play a big role (SSDs, SANs
        with lots of disks) setting  <code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/slice_idle_us</code>
        to <code class="literal">0</code> can improve the throughput considerably.
-      </p></dd><dt id="idm139796824486832"><span class="term "><code class="filename">
+      </p></dd><dt id="idm139800136595184"><span class="term "><code class="filename">
       /sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/quantum
      </code>
      </span></dt><dd><p>
@@ -125,7 +125,7 @@ noop deadline [cfq]</pre></div><p>
        (the default value is <code class="literal">2</code>). This limits the maximum
        number of asynchronous requests—usually write
        requests—that are submitted in one time slice.
-      </p></dd><dt id="idm139796824481840"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/low_latency</code>
+      </p></dd><dt id="idm139800136590192"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/low_latency</code>
      </span></dt><dd><p>
        When enabled (which is the default on <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span>) the scheduler
        may dynamically adjust the length of the time slice by aiming to meet
@@ -133,13 +133,13 @@ noop deadline [cfq]</pre></div><p>
        slices are recomputed to meet this <code class="literal">target_latency</code>
        and ensure that processes get fair access within a bounded length of
        time.
-      </p></dd><dt id="idm139796824477008"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/target_latency</code>
+      </p></dd><dt id="idm139800136585360"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/target_latency</code>
      </span></dt><dd><p>
        Contains an estimated latency time for the
        <code class="systemitem">CFQ</code>.
        <code class="systemitem">CFQ</code> will use it to
        calculate the time slice used for every task.
-      </p></dd><dt id="idm139796824472912"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/group_idle_us</code></span></dt><dd><p>To avoid starving of blkio cgroups doing dependent I/O, CFQ
+      </p></dd><dt id="idm139800136581264"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">DEVICE</em>/queue/iosched/group_idle_us</code></span></dt><dd><p>To avoid starving of blkio cgroups doing dependent I/O, CFQ
            waits a bit after completion of I/O for one blkio cgroup before
            scheduling I/O for a different blkio cgroup. When
            <code class="literal">slice_idle_us</code> is set, this parameter does not
@@ -150,7 +150,7 @@ noop deadline [cfq]</pre></div><p>
            of blkio cgroups doing dependent I/O with lower overhead. Note that
            the file <code class="filename">group_idle</code> controls the same tunable
            however with millisecond granularity.
-         </p></dd></dl></div><div class="complex-example"><div class="example" id="idm139796824467616"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 12.1: </span><span class="name">Increasing individual thread throughput using <code class="systemitem">CFQ</code> </span><a title="Permalink" class="permalink" href="cha.tuning.io.html#idm139796824467616">#</a></h6></div><div class="example-contents"><p>
+         </p></dd></dl></div><div class="complex-example"><div class="example" id="idm139800136575968"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 12.1: </span><span class="name">Increasing individual thread throughput using <code class="systemitem">CFQ</code> </span><a title="Permalink" class="permalink" href="cha.tuning.io.html#idm139800136575968">#</a></h6></div><div class="example-contents"><p>
      In <span class="productname"><span class="phrase">SUSE Linux Enterprise Desktop</span></span> <span class="productnumber"><span class="phrase">15</span></span>, the <code class="literal">low_latency</code>
      tuning parameter is enabled by default to ensure that processes get fair
      access within a bounded length of time. (Note that this parameter was not
@@ -323,16 +323,16 @@ sys     0m1.516s</pre></div><p>
     (especially when using <span class="quote">“<span class="quote">TCQ</span>”</span> disks). The
     <code class="systemitem">DEADLINE</code> scheduler has the
     following tunable parameters:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139796824428800"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/writes_starved</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139800136537152"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/writes_starved</code>
      </span></dt><dd><p>
        Controls how many reads can be sent to disk before it is possible to
        send writes. A value of <code class="literal">3</code> means, that three read
        operations are carried out for one write operation.
-      </p></dd><dt id="idm139796824425680"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
+      </p></dd><dt id="idm139800136534032"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
      </span></dt><dd><p>
        Sets the deadline (current time plus the read_expire value) for read
        operations in milliseconds. The default is 500.
-      </p></dd><dt id="idm139796824423008"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/write_expire</code>
+      </p></dd><dt id="idm139800136531360"><span class="term "><code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/write_expire</code>
      </span></dt><dd><p>
        <code class="filename">/sys/block/<em class="replaceable ">&lt;device&gt;</em>/queue/iosched/read_expire</code>
        Sets the deadline (current time plus the read_expire value) for read
@@ -348,7 +348,7 @@ sys     0m1.516s</pre></div><p>
   </p><p>
    Sending write barriers can be disabled using the
    <code class="option">nobarrier</code> mount option.
-  </p><div id="idm139796824415536" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Disabling Barriers Can Lead to Data Loss</h6><p>
+  </p><div id="idm139800136523888" class="admonition warning normal"><img class="symbol" alt="Warning" title="Warning" src="static/images/icon-warning.png" /><h6>Warning: Disabling Barriers Can Lead to Data Loss</h6><p>
     Disabling barriers when disks cannot guarantee caches are properly
     written in case of power failure can lead to severe file system
     corruption and data loss.
