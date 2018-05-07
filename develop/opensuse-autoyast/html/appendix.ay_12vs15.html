@@ -33,7 +33,7 @@ hljs.configure({
   Main differences between openSUSE Leap 42.3 and 15 profiles
  </a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Appendix C. Advanced Linuxrc Options" href="appendix.linuxrc.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix E. GNU Licenses" href="bk07ape.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="appendix.ay_12vs15"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">openSUSE Leap</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">42.3</span></span></span></div><div><h1 class="title"><span class="number">D </span><span class="name">
   Main differences between <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> and 15 profiles
- </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139675289170432">#</a></h6></div><p>
+ </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140502743162576">#</a></h6></div><p>
     Significant changes in <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, like the new modules concept or
     replacing SuSEfirewall2 with <code class="systemitem">firewalld</code>, required changes in AutoYaST. If you
     want to reuse existing <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> a profiles with
@@ -97,26 +97,40 @@ hljs.configure({
     (only on MS-DOS partition tables) setting the <code class="sgmltag-element">primary_type</code> 
     to <code class="literal">primary</code>. However, any other value, like <code class="literal">logical</code>,
     will be ignored by AutoYaST, which will automatically determine the partition type.
-   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.default-subvolume"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.default-subvolume"><span class="number">D.3.4 </span><span class="name">Btrfs: Default Subvolume Name</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.default-subvolume">#</a></h3></div></div></div><p>
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.default.subvolume"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.default.subvolume"><span class="number">D.3.4 </span><span class="name">Btrfs: Default Subvolume Name</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.default.subvolume">#</a></h3></div></div></div><p>
     The new storage layer allows the user to set different default subvolumes
     (or none at all) for every Btrfs file system. As shown in the example below,
     a prefix name can be specified for each partition using the
     <code class="sgmltag-element">subvolumes_prefix</code> tag:
-   </p><div class="verbatim-wrap"><pre class="screen">&lt;partition&gt;
+   </p><div class="example" id="ex.ay_12vs15.partitioning.default.subvolume"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.1: </span><span class="name">Specifying the Btrfs Default Subvolume Name </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.partitioning.default.subvolume">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partition&gt;
  &lt;mount&gt;/&lt;/mount&gt;
  &lt;filesystem config:type="symbol"&gt;btrfs&lt;/filesystem&gt;
  &lt;size&gt;max&lt;/size&gt;
  &lt;subvolumes_prefix&gt;@&lt;/subvolumes_prefix&gt;
-&lt;/partition&gt;</pre></div><p>
-    As a consequence, the old <code class="sgmltag-element">btrfs_set_default_subvolume_name</code> tag is deprecated,
-    although it is still supported for backward compatibility reasons.
-   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.fstab"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.fstab"><span class="number">D.3.5 </span><span class="name">
+&lt;/partition&gt;</pre></div></div></div><p>
+    To omit the subvolume prefix, set the <code class="sgmltag-element">subvolumes_prefix</code> tag:
+   </p><div class="example" id="ex.ay_12vs15.partitioning.disabling.btrfs.subvolumes"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.2: </span><span class="name">Disabling Btrfs Subvolumes </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.partitioning.disabling.btrfs.subvolumes">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;partition&gt;
+ &lt;mount&gt;/&lt;/mount&gt;
+ &lt;filesystem config:type="symbol"&gt;btrfs&lt;/filesystem&gt;
+ &lt;size&gt;max&lt;/size&gt;
+ &lt;subvolumes_prefix&gt;@&lt;/subvolumes_prefix&gt;
+&lt;/partition&gt;</pre></div></div></div><p>
+    As a consequence of the new behaviour, the old <code class="sgmltag-element">btrfs_set_default_subvolume_name</code> tag is not needed and,
+    therefore, it is not supported anymore.
+   </p></div><div class="sect2 " id="sec.ay_12v215.partitioning.disabling-subvolumes"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12v215.partitioning.disabling-subvolumes"><span class="number">D.3.5 </span><span class="name">Btrfs: Disabling Subvolumes</span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12v215.partitioning.disabling-subvolumes">#</a></h3></div></div></div><p>
+     Btrfs subvolumes can be disabled by setting the <code class="sgmltag-element">create_subvolumes</code>
+     to <code class="literal">false</code>. To skip the default <code class="literal">@</code>
+     subvolume, specify <code class="sgmltag-element">subvolumes_prefix</code>.
+   </p><div class="verbatim-wrap"><pre class="screen">&lt;partition&gt;
+ &lt;create_subvolumes config:type="boolean"&gt;false&lt;/create_subvolumes&gt;
+ &lt;subvolumes_prefix&gt;&lt;![CDATA[]]&gt;&lt;/subvolumes_prefix&gt;
+&lt;/partition&gt;]]&gt;</pre></div></div><div class="sect2 " id="sec.ay_12vs15.partitioning.fstab"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.fstab"><span class="number">D.3.6 </span><span class="name">
     Reading an Existing <code class="filename">/etc/fstab</code> is no Longer Supported
    </span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.fstab">#</a></h3></div></div></div><p>
     On <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15 the ability to read an existing
     <code class="filename">/etc/fstab</code> from a previous installation when trying to
     determine the partitioning layout, is no longer supported.
-   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.aligning"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.aligning"><span class="number">D.3.6 </span><span class="name">
+   </p></div><div class="sect2 " id="sec.ay_12vs15.partitioning.aligning"><div class="titlepage"><div><div><h3 class="title" id="sec.ay_12vs15.partitioning.aligning"><span class="number">D.3.7 </span><span class="name">
     Setting for Aligning Partitions has been Dropped
    </span> <a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#sec.ay_12vs15.partitioning.aligning">#</a></h3></div></div></div><p>
     As cylinders have become obsolete, the
@@ -132,8 +146,8 @@ hljs.configure({
    very limited. It is recommended to updated profiles for <span class="phrase">Leap</span> 15 as
    outlined below. If keeping <span class="phrase">Leap</span> <span class="phrase">42.3</span> profiles we recommend to check the final
    configuration to avoid an unexpected behavior or network security threats.
-  </p><div class="table" id="idm139675289117920"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">Leap</span> 15: Backwards
-   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139675289117920">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in Leap 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
+  </p><div class="table" id="idm140502743100528"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">Leap</span> 15: Backwards
+   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140502743100528">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in Leap 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
        <p>
         <code class="sgmltag-element">FW_CONFIGURATIONS_\{DMZ, EXT, INT}</code>
        </p>
@@ -211,7 +225,7 @@ hljs.configure({
    future releases of <span class="productname"><span class="phrase">openSUSE Leap</span></span>. Some <code class="systemitem">firewalld</code> features are not yet
    support by YaST and AutoYaST—you can make use of them with post
    installation scripts in your AutoYaST profile.a See <a class="xref" href="configuration.html#createprofile.scripts" title="4.29. Custom User Scripts">Section 4.29, “Custom User Scripts”</a> for more information.
-   </p><div id="idm139675289073584" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
+   </p><div id="idm140502743056192" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
     Enabling and starting the <code class="systemitem">systemd</code> service for <code class="systemitem">firewalld</code> is done with
     the same syntax as in <span class="phrase">Leap</span> <span class="phrase">42.3</span>. This is the only part of the firewall
     configuration syntax in AutoYaST that has not changed:
@@ -226,7 +240,7 @@ hljs.configure({
     Both, SuSEfirewall2 and <code class="systemitem">firewalld</code> are zone-based, but have a different
     set of predefined rules and a different level of trust for network
     connections.
-   </p><div class="table" id="idm139675289064896"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139675289064896">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">Leap</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">Leap</span> <span class="phrase">42.3</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
+   </p><div class="table" id="idm140502743047504"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm140502743047504">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">Leap</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">Leap</span> <span class="phrase">42.3</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
         <p>
          EXT with <code class="sgmltag-element">FW_MASQUERADE</code> set to
          <code class="literal">yes</code>
@@ -255,11 +269,11 @@ hljs.configure({
      for the interfaces <code class="systemitem">eth0</code>,
      <code class="systemitem">eth1</code>, <code class="systemitem">wlan0</code> and
      <code class="systemitem">wlan1</code>.
-    </p><div class="example" id="ex.ay_12vs15.firewall.zones.default.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.1: </span><span class="name">Assigning Zones: Default Configuration (Deprecated Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+    </p><div class="example" id="ex.ay_12vs15.firewall.zones.default.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.3: </span><span class="name">Assigning Zones: Default Configuration (Deprecated Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;FW_DEV_DMZ&gt;any eth0&lt;/FW_DEV_DMZ&gt;
  &lt;FW_DEV_EXT&gt;eth1 wlan0&lt;/FW_DEV_EXT&gt;
  &lt;FW_DEV_INT&gt;wlan1&lt;/FW_DEV_INT&gt;
-&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.zones.default.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.2: </span><span class="name">Assigning Zones: Default Configuration (<span class="phrase">Leap</span> 15 Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.zones.default.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.4: </span><span class="name">Assigning Zones: Default Configuration (<span class="phrase">Leap</span> 15 Syntax) </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.zones.default.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;default_zone&gt;dmz&lt;/default_zone&gt;
  &lt;zones config:type="list"&gt;
   &lt;zone&gt;
@@ -286,7 +300,7 @@ hljs.configure({
      <code class="systemitem">eth0</code>, <code class="systemitem">eth1</code>,
      <code class="systemitem">wlan0</code> and <code class="systemitem">wlan1</code> with
      masquerading and protected internal zones
-    </p><div class="example" id="ex.ay_12vs15.firewall.masq.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.3: </span><span class="name">
+    </p><div class="example" id="ex.ay_12vs15.firewall.masq.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.5: </span><span class="name">
      Masquerading and Protecting Internal Zones (Deprecated Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.masq.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;FW_DEV_DMZ&gt;any eth0&lt;/FW_DEV_DMZ&gt;
@@ -294,7 +308,7 @@ hljs.configure({
  &lt;FW_DEV_INT&gt;wlan1&lt;/FW_DEV_INT&gt;
  &lt;FW_MASQUERADE&gt;yes&lt;/FW_MASQUERADE&gt;
  &lt;FW_PROTECT_FROM_INT&gt;yes&lt;/FW_PROTECT_FROM_INT&gt;
-&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.masq.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.4: </span><span class="name">
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.masq.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.6: </span><span class="name">
      Masquerading and Protecting Internal Zones (<span class="phrase">Leap</span> 15 Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.masq.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;default_zone&gt;dmz&lt;/default_zone&gt;
@@ -336,14 +350,14 @@ hljs.configure({
    </p><p>
     RPC services, which were supported by SuSEfirewall2 are no longer
     supported with <code class="systemitem">firewalld</code>.
-   </p><div class="example" id="ex.ay_12vs15.firewall.ports.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.5: </span><span class="name">
+   </p><div class="example" id="ex.ay_12vs15.firewall.ports.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.7: </span><span class="name">
      Opening Ports (Deprecated Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.ports.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;FW_SERVICES_DMZ_TCP&gt;ftp ssh 80 5900:5999&lt;/FW_SERVICES_DMZ_TCP&gt;
  &lt;FW_SERVICES_EXT_UDP&gt;1723 ipsec-nat-t&lt;/FW_SERVICES_EXT_UDP&gt;
  &lt;FW_SERVICES_EXT_IP&gt;esp icmp gre&lt;/FW_SERVICES_EXT_IP&gt;
  &lt;FW_MASQUERADE&gt;yes&lt;/FW_MASQUERADE&gt;
-&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.ports.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.6: </span><span class="name">
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.ports.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.8: </span><span class="name">
      Opening Ports (<span class="phrase">Leap</span> 15 Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.ports.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;zones config:type="list"&gt;
@@ -373,12 +387,12 @@ hljs.configure({
     For opening a combination of ports and/or protocols SuSEfirewall2 provides
     the <code class="sgmltag-element">FW_CONFIGURATIONS_\{EXT, DMZ, INT}</code> tag which
     are equivalent to services in <code class="systemitem">firewalld</code>.
-   </p><div class="example" id="ex.ay_12vs15.firewall.services.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.7: </span><span class="name">
+   </p><div class="example" id="ex.ay_12vs15.firewall.services.deprecated"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.9: </span><span class="name">
      Opening Services (Deprecated Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.services.deprecated">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;FW_CONFIGURATIONS_EXT&gt;dhcp dhcpv6 samba vnc-server&lt;/FW_CONFIGURATIONS_EXT&gt;
  &lt;FW_CONFIGURATIONS_DMZ&gt;ssh&lt;/FW_CONFIGURATIONS_DMZ&gt;
-&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.services.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.8: </span><span class="name">
+&lt;/firewall&gt;</pre></div></div></div><div class="example" id="ex.ay_12vs15.firewall.services.supported"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.10: </span><span class="name">
      Opening Services (<span class="phrase">Leap</span> 15 Syntax)
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.firewall.services.supported">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;firewall&gt;
  &lt;zones config:type="list"&gt;
@@ -423,7 +437,7 @@ hljs.configure({
    Instead of containing low level configuration options, NTP is now configured
    by a set of high level options that are applied on top of the default
    settings:
-  </p><div class="example" id="ex.ay_12vs15.ntp"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.9: </span><span class="name">
+  </p><div class="example" id="ex.ay_12vs15.ntp"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.11: </span><span class="name">
     NTP configuration (<span class="phrase">Leap</span> 15 Syntax)
     </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.ntp">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;ntp-client&gt;
  &lt;ntp_policy&gt;auto&lt;/ntp_policy&gt;
@@ -461,7 +475,7 @@ hljs.configure({
     and old repositories and to cleanup the repositories for the
     dropped products. If you need to keep custom repositories, add them
     again using the <code class="sgmltag-element">add-on</code> option.
-   </p><div class="example" id="ex.ay_12vs15.minimal_registration"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.10: </span><span class="name">
+   </p><div class="example" id="ex.ay_12vs15.minimal_registration"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example D.12: </span><span class="name">
      Minimal Registration Configuration for Upgrade
      </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#ex.ay_12vs15.minimal_registration">#</a></h6></div><div class="example-contents"><div class="verbatim-wrap"><pre class="screen">&lt;suse_register&gt;
   &lt;do_registration config:type="boolean"&gt;true&lt;/do_registration&gt;
