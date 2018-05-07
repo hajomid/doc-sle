@@ -33,7 +33,7 @@ hljs.configure({
   Main differences between openSUSE Leap 42.3 and 15 profiles
  </a></div><div class="buttons"><a class="top-button button" href="#">Top</a><div class="button"><a accesskey="p" class="tool-spacer" title="Appendix C. Advanced Linuxrc Options" href="appendix.linuxrc.html"><span class="prev-icon">←</span></a><a accesskey="n" class="tool-spacer" title="Appendix E. GNU Licenses" href="bk07ape.html"><span class="next-icon">→</span></a></div><div class="clearme"></div></div><div class="clearme"></div></div></div><div id="_content" class="draft "><div class="documentation"><div class="appendix " id="appendix.ay_12vs15"><div class="titlepage"><div><div class="version-info">Applies to  <span class="productname"><span class="productname"><span class="phrase">openSUSE Leap</span></span></span> <span class="productnumber"><span class="productnumber"><span class="phrase">42.3</span></span></span></div><div><h1 class="title"><span class="number">D </span><span class="name">
   Main differences between <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> and 15 profiles
- </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139762268302096">#</a></h6></div><p>
+ </span> </h1><div class="doc-status"><ul><li><span class="ds-label">Filename: </span>ay_12_migrate_15.xml</li><li><span class="ds-label">ID: </span>appendix.ay_12vs15</li></ul></div></div><div><div class="abstract"><div class="abstract-title-wrap"><h6 class="abstract-title">Abstract<a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139843071235504">#</a></h6></div><p>
     Significant changes in <span class="productname"><span class="phrase">openSUSE Leap</span></span> 15, like the new modules concept or
     replacing SuSEfirewall2 with <code class="systemitem">firewalld</code>, required changes in AutoYaST. If you
     want to reuse existing <span class="productname"><span class="phrase">openSUSE Leap</span></span> <span class="phrase">42.3</span> a profiles with
@@ -132,8 +132,8 @@ hljs.configure({
    very limited. It is recommended to updated profiles for <span class="phrase">Leap</span> 15 as
    outlined below. If keeping <span class="phrase">Leap</span> <span class="phrase">42.3</span> profiles we recommend to check the final
    configuration to avoid an unexpected behavior or network security threats.
-  </p><div class="table" id="idm139762268249600"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">Leap</span> 15: Backwards
-   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139762268249600">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in Leap 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
+  </p><div class="table" id="idm139843071183136"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.1: </span><span class="name">AutoYaST Firewall Configuration in <span class="phrase">Leap</span> 15: Backwards
+   Compatibility </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139843071183136">#</a></h6></div><div class="table-contents"><table summary="AutoYaST Firewall Configuration in Leap 15: Backwards&#10;   Compatibility" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p>Supported (but deprecated)</p></th><th><p>Unsupported</p></th></tr></thead><tbody><tr><td>
        <p>
         <code class="sgmltag-element">FW_CONFIGURATIONS_\{DMZ, EXT, INT}</code>
        </p>
@@ -211,7 +211,7 @@ hljs.configure({
    future releases of <span class="productname"><span class="phrase">openSUSE Leap</span></span>. Some <code class="systemitem">firewalld</code> features are not yet
    support by YaST and AutoYaST—you can make use of them with post
    installation scripts in your AutoYaST profile.a See <a class="xref" href="configuration.html#createprofile.scripts" title="4.29. Custom User Scripts">Section 4.29, “Custom User Scripts”</a> for more information.
-   </p><div id="idm139762268205264" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
+   </p><div id="idm139843071138800" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Enabling and Starting the Firewall</h6><p>
     Enabling and starting the <code class="systemitem">systemd</code> service for <code class="systemitem">firewalld</code> is done with
     the same syntax as in <span class="phrase">Leap</span> <span class="phrase">42.3</span>. This is the only part of the firewall
     configuration syntax in AutoYaST that has not changed:
@@ -226,7 +226,7 @@ hljs.configure({
     Both, SuSEfirewall2 and <code class="systemitem">firewalld</code> are zone-based, but have a different
     set of predefined rules and a different level of trust for network
     connections.
-   </p><div class="table" id="idm139762268196640"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139762268196640">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">Leap</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">Leap</span> <span class="phrase">42.3</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
+   </p><div class="table" id="idm139843071130176"><div class="table-title-wrap"><h6 class="table-title"><span class="number">Table D.2: </span><span class="name">Mapping of SuSEfirewall2 and <code class="systemitem">firewalld</code> Zones </span><a title="Permalink" class="permalink" href="appendix.ay_12vs15.html#idm139843071130176">#</a></h6></div><div class="table-contents"><table summary="Mapping of SuSEfirewall2 and firewalld Zones" border="1"><colgroup><col class="1" /><col class="2" /></colgroup><thead><tr><th><p><code class="systemitem">firewalld</code> (<span class="phrase">Leap</span> 15)</p></th><th><p>SuSEfirewall2 (<span class="phrase">Leap</span> <span class="phrase">42.3</span>)</p></th></tr></thead><tbody><tr><td><p>dmz</p></td><td><p>DMZ</p></td></tr><tr><td><p>external</p></td><td>
         <p>
          EXT with <code class="sgmltag-element">FW_MASQUERADE</code> set to
          <code class="literal">yes</code>

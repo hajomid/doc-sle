@@ -30,7 +30,7 @@ hljs.configure({
   the <span class="quote">“<span class="quote">IEEE Standard for Local and Metropolitan Area
   Networks—Port-Based Network Access Control</span>”</span>. With NetworkManager, you need
   not worry about configuring network interfaces and switching between wired or
-  wireless networks when you are moving. NetworkManager can automatically connect to
+  wireless networks when you are on the move. NetworkManager can automatically connect to
   known wireless networks or manage several network connections in
   parallel—the fastest connection is then used as default. Furthermore,
   you can manually switch between available networks and manage your network
@@ -69,7 +69,7 @@ hljs.configure({
        Configure your network connections with NetworkManager as described in
        <a class="xref" href="cha.nm.html#sec.nm.configure" title="28.3. Configuring Network Connections">Section 28.3, “Configuring Network Connections”</a>.
       </p></li></ol></li><li class="step "><p>
-     To deactivate NetworkManager and control the network with your own configuration
+     To deactivate NetworkManager and control the network with your own configuration:
     </p><ol type="a" class="substeps "><li class="step "><p>
        In the <span class="guimenu">Network Setup Method</span> field, choose
        <span class="guimenu">Controlled by wicked</span>.
@@ -89,11 +89,11 @@ hljs.configure({
   </p><p>
    To open the network configuration dialog in GNOME, open the settings menu
    via the status menu and click the <span class="guimenu">Network</span> entry.
-  </p><div id="idm140525758939440" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability of Options</h6><p>
+  </p><div id="idm140175141950608" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: Availability of Options</h6><p>
     Depending on your system setup, you may not be allowed to configure
     connections. In a secured environment, some options may be locked or
     require <code class="systemitem">root</code> permission. Ask your system administrator for details.
-   </p></div><div class="figure" id="idm140525758937184"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/nm_gnome_tabs.png"><img src="images/nm_gnome_tabs.png" width="" alt="GNOME Network Connections Dialog" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">GNOME Network Connections Dialog </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140525758937184">#</a></h6></div></div><div class="procedure " id="pro.nm.configure.add"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.1: </span><span class="name">Adding and Editing Connections </span><a title="Permalink" class="permalink" href="cha.nm.html#pro.nm.configure.add">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p></div><div class="figure" id="idm140175141948352"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/nm_gnome_tabs.png"><img src="images/nm_gnome_tabs.png" width="" alt="GNOME Network Connections Dialog" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">GNOME Network Connections Dialog </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140175141948352">#</a></h6></div></div><div class="procedure " id="pro.nm.configure.add"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.1: </span><span class="name">Adding and Editing Connections </span><a title="Permalink" class="permalink" href="cha.nm.html#pro.nm.configure.add">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
      Open the NetworkManager configuration dialog.
     </p></li><li class="step "><p>
      To add a Connection:
@@ -117,10 +117,10 @@ hljs.configure({
       </p></li><li class="step "><p>
        Insert your changes and click <span class="guimenu">Apply</span> to save them.
       </p></li><li class="step "><p>
-       To Make your connection available as system connection go to the
+       To make your connection available as a system connection go to the
        <span class="guimenu">Identity</span> tab and set the check box <span class="guimenu">Make
-       available to other users</span>. For more information about User and
-       System Connections, see <a class="xref" href="cha.nm.html#sec.nm.sec.types" title="28.4.1. User and System Connections">Section 28.4.1, “User and System Connections”</a>.
+       available to other users</span>. For more information about user and
+       system connections, see <a class="xref" href="cha.nm.html#sec.nm.sec.types" title="28.4.1. User and System Connections">Section 28.4.1, “User and System Connections”</a>.
       </p></li></ol></li></ol></div></div><div class="sect2 " id="sec.nm.gome.applet.wired"><div class="titlepage"><div><div><h3 class="title" id="sec.nm.gome.applet.wired"><span class="number">28.3.1 </span><span class="name">Managing Wired Network Connections</span> <a title="Permalink" class="permalink" href="cha.nm.html#sec.nm.gome.applet.wired">#</a></h3></div></div></div><p>
     If your computer is connected to a wired network, use the NetworkManager applet to
     manage the connection.
@@ -138,7 +138,7 @@ hljs.configure({
     <span class="guimenu">Wireless Networks</span>. The signal strength of each network
     is also shown in the menu. Encrypted wireless networks are marked with a
     shield icon.
-   </p><div class="procedure " id="idm140525758907536"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.2: </span><span class="name">Connecting to a visible Wireless Network </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140525758907536">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm140175141918576"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.2: </span><span class="name">Connecting to a visible Wireless Network </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140175141918576">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       To connect to a visible wireless network, open the Status Menu and click
       <span class="guimenu">Wi-Fi</span>.
      </p></li><li class="step "><p>
@@ -150,7 +150,7 @@ hljs.configure({
       If the network is encrypted, a configuration dialog opens. It shows the
       type of encryption the network uses and text boxes for entering the login
       credentials.
-     </p></li></ol></div></div><div class="procedure " id="idm140525758900976"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.3: </span><span class="name">Connecting to an Invisible Wireless Network </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140525758900976">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+     </p></li></ol></div></div><div class="procedure " id="idm140175141912016"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.3: </span><span class="name">Connecting to an Invisible Wireless Network </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140175141912016">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       To connect to a network that does not broadcast its service set
       identifier (SSID or ESSID) and therefore cannot be detected
       automatically, open the Status Menu and click <span class="guimenu">Wi-Fi</span>.
@@ -187,19 +187,19 @@ hljs.configure({
     technology, <span class="productname"><span class="phrase">openSUSE Leap</span></span> comes with a base package providing the generic
     support for NetworkManager. In addition to that, you also need to install the
     respective desktop-specific package for your applet.
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140525758882256"><span class="term ">OpenVPN</span></dt><dd><p>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140175141893296"><span class="term ">OpenVPN</span></dt><dd><p>
        To use this VPN technology, install:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          <code class="systemitem">NetworkManager-openvpn</code>
         </p></li><li class="listitem "><p>
          <code class="systemitem">NetworkManager-openvpn-gnome</code>
-        </p></li></ul></div></dd><dt id="idm140525758876192"><span class="term ">openconnect</span></dt><dd><p>
+        </p></li></ul></div></dd><dt id="idm140175141887232"><span class="term ">OpenConnect</span></dt><dd><p>
        To use this VPN technology, install:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          <code class="systemitem">NetworkManager-openconnect</code>
         </p></li><li class="listitem "><p>
          <code class="systemitem">NetworkManager-openconnect-gnome</code>
-        </p></li></ul></div></dd><dt id="idm140525758870112"><span class="term ">PPTP (Point-to-Point Tunneling Protocol)</span></dt><dd><p>
+        </p></li></ul></div></dd><dt id="idm140175141881152"><span class="term ">PPTP (Point-to-Point Tunneling Protocol)</span></dt><dd><p>
        To use this VPN technology, install:
       </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
          <code class="systemitem">NetworkManager-pptp</code>
@@ -212,7 +212,7 @@ hljs.configure({
     Before you begin, make sure that the package
     <code class="systemitem">NetworkManager-openvpn-gnome</code> is
     installed and all dependencies have been resolved.
-   </p><div class="procedure " id="idm140525758862000"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.4: </span><span class="name">Setting Up OpenVPN with NetworkManager </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140525758862000">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
+   </p><div class="procedure " id="idm140175141873040"><div class="procedure-title-wrap"><h6 class="procedure-title"><span class="number">Procedure 28.4: </span><span class="name">Setting Up OpenVPN with NetworkManager </span><a title="Permalink" class="permalink" href="cha.nm.html#idm140175141873040">#</a></h6></div><div class="procedure-contents"><ol class="procedure" type="1"><li class="step "><p>
       Open the application <span class="guimenu">Settings</span> by clicking the status
       icons at the right end of the panel and clicking the <span class="guimenu">wrench and
       screwdriver</span> icon. In the window
@@ -286,7 +286,7 @@ hljs.configure({
       Alternatively, click the status icons at the right end of the panel, click
       the name of your VPN and then <span class="guimenu">Connect</span>.
      </p></li></ol></div></div></div></div><div class="sect1 " id="sec.nm.security"><div class="titlepage"><div><div><h2 class="title" id="sec.nm.security"><span class="number">28.4 </span><span class="name">NetworkManager and Security</span> <a title="Permalink" class="permalink" href="cha.nm.html#sec.nm.security">#</a></h2></div></div></div><p>
-   NetworkManager distinguishes two types of wireless connections, trusted and untrusted.
+   NetworkManager distinguishes two types of wireless connections: trusted and untrusted.
    A trusted connection is any network that you explicitly selected in the
    past. All others are untrusted. Trusted connections are identified by the
    name and MAC address of the access point. Using the MAC address ensures that
@@ -295,7 +295,7 @@ hljs.configure({
   </p><p>
    NetworkManager periodically scans for available wireless networks. If multiple trusted
    networks are found, the most recently used is automatically selected. NetworkManager
-   waits for your selection in case that all networks are untrusted.
+   waits for your selection in case if all networks are untrusted.
   </p><p>
    If the encryption setting changes but the name and MAC address remain the
    same, NetworkManager attempts to connect, but first you are asked to confirm the new
@@ -310,13 +310,13 @@ hljs.configure({
     that become available to NetworkManager when the first user logs in. Any required
     credentials are asked from the user and when the user logs out, the
     connections are disconnected and removed from NetworkManager. Connections that are
-    defined as system connection can be shared by all users and are made
+    defined as system connections can be shared by all users and are made
     available right after NetworkManager is started—before any users log in. In
     case of system connections, all credentials must be provided at the time
     the connection is created. Such system connections can be used to
     automatically connect to networks that require authorization. For
-    information how to configure user or system connections with NetworkManager, refer to
-    <a class="xref" href="cha.nm.html#sec.nm.configure" title="28.3. Configuring Network Connections">Section 28.3, “Configuring Network Connections”</a>.
+    information on how to configure user or system connections with NetworkManager, refer
+    to <a class="xref" href="cha.nm.html#sec.nm.configure" title="28.3. Configuring Network Connections">Section 28.3, “Configuring Network Connections”</a>.
    </p></div><div class="sect2 " id="sec.nm.sec.store"><div class="titlepage"><div><div><h3 class="title" id="sec.nm.sec.store"><span class="number">28.4.2 </span><span class="name">Storing Passwords and Credentials</span> <a title="Permalink" class="permalink" href="cha.nm.html#sec.nm.sec.store">#</a></h3></div></div></div><p>
     If you do not want to re-enter your credentials each time you want to
     connect to an encrypted network, you can use the GNOME Keyring Manager to
@@ -328,9 +328,9 @@ hljs.configure({
    </p></div></div><div class="sect1 " id="sec.nm.faq"><div class="titlepage"><div><div><h2 class="title" id="sec.nm.faq"><span class="number">28.5 </span><span class="name">Frequently Asked Questions</span> <a title="Permalink" class="permalink" href="cha.nm.html#sec.nm.faq">#</a></h2></div></div></div><p>
    In the following, find some frequently asked questions about configuring
    special network options with NetworkManager.
-  </p><div class="qandaset" id="idm140525758812352"><div class="free-id" id="idm140525758812064"></div><dl class="qandaentry"><dt class="question" id="idm140525758811776">
+  </p><div class="qandaset" id="idm140175141823184"><div class="free-id" id="idm140175141822896"></div><dl class="qandaentry"><dt class="question" id="idm140175141822608">
       How to tie a connection to a specific device?
-     </dt><dd class="answer" id="idm140525758810832"><p>
+     </dt><dd class="answer" id="idm140175141821664"><p>
       By default, connections in NetworkManager are device type-specific: they apply to
       all physical devices with the same type. If more than one physical device
       per connection type is available (for example, your machine is equipped
@@ -345,10 +345,10 @@ hljs.configure({
       modify. On the <span class="guimenu">Wired</span> or <span class="guimenu">Wireless</span>
       tab, enter the <span class="guimenu">MAC Address</span> of the device and confirm
       your changes.
-     </p></dd></dl><div class="free-id" id="idm140525758806032"></div><dl class="qandaentry"><dt class="question" id="idm140525758805744">
+     </p></dd></dl><div class="free-id" id="idm140175141816864"></div><dl class="qandaentry"><dt class="question" id="idm140175141816576">
       How to specify a certain access point in case multiple access points with
       the same ESSID are detected?
-     </dt><dd class="answer" id="idm140525758804736"><p>
+     </dt><dd class="answer" id="idm140175141815568"><p>
       When multiple access points with different wireless bands (a/b/g/n) are
       available, the access point with the strongest signal is automatically
       chosen by default. To override this, use the <span class="guimenu">BSSID</span>
@@ -364,9 +364,9 @@ hljs.configure({
       <a class="xref" href="cha.nm.html#sec.nm.configure" title="28.3. Configuring Network Connections">Section 28.3, “Configuring Network Connections”</a>. Choose the wireless connection you
       want to modify and click <span class="guimenu">Edit</span>. On the
       <span class="guimenu">Wireless</span> tab, enter the BSSID.
-     </p></dd></dl><div class="free-id" id="idm140525758800176"></div><dl class="qandaentry"><dt class="question" id="idm140525758799888">
-      How to share network connections to other computers?
-     </dt><dd class="answer" id="idm140525758798944"><p>
+     </p></dd></dl><div class="free-id" id="idm140175141811008"></div><dl class="qandaentry"><dt class="question" id="idm140175141810720">
+      How to share network connections with other computers?
+     </dt><dd class="answer" id="idm140175141809776"><p>
       The primary device (the device which is connected to the Internet) does
       not need any special configuration. However, you need to configure the
       device that is connected to the local hub or machine as follows:
@@ -388,10 +388,10 @@ hljs.configure({
         Service</span>, select <span class="guimenu">DCHP Server</span> from
         <span class="guimenu">Services to Allow</span> and click <span class="guimenu">Add</span>.
         Confirm your changes in YaST.
-       </p></li></ol></div></dd></dl><div class="free-id" id="idm140525758787840"></div><dl class="qandaentry"><dt class="question" id="idm140525758787552">
+       </p></li></ol></div></dd></dl><div class="free-id" id="idm140175141798672"></div><dl class="qandaentry"><dt class="question" id="idm140175141798384">
       How to provide static DNS information with automatic (DHCP, PPP, VPN)
       addresses?
-     </dt><dd class="answer" id="idm140525758786576"><p>
+     </dt><dd class="answer" id="idm140175141797408"><p>
       In case a DHCP server provides invalid DNS information (and/or routes),
       you can override it. Start the dialog for configuring network connections
       as described in <a class="xref" href="cha.nm.html#sec.nm.configure" title="28.3. Configuring Network Connections">Section 28.3, “Configuring Network Connections”</a>. Choose the connection
@@ -403,10 +403,10 @@ hljs.configure({
       fields. To <span class="guimenu">Ignore automatically obtained routes</span> click
       <span class="guimenu">Routes</span> and activate the respective check box. Confirm
       your changes.
-     </p></dd></dl><div class="free-id" id="idm140525758781008"></div><dl class="qandaentry"><dt class="question" id="idm140525758780720">
+     </p></dd></dl><div class="free-id" id="idm140175141791840"></div><dl class="qandaentry"><dt class="question" id="idm140175141791552">
       How to make NetworkManager connect to password protected networks before a user
       logs in?
-     </dt><dd class="answer" id="idm140525758779728"><p>
+     </dt><dd class="answer" id="idm140175141790560"><p>
       Define a <code class="literal">system connection</code> that can be used for such
       purposes. For more information, refer to
       <a class="xref" href="cha.nm.html#sec.nm.sec.types" title="28.4.1. User and System Connections">Section 28.4.1, “User and System Connections”</a>.
@@ -414,22 +414,20 @@ hljs.configure({
    Connection problems can occur. Some common problems related to NetworkManager include
    the applet not starting or a missing VPN option. Methods for resolving and
    preventing these problems depend on the tool used.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140525758775168"><span class="term ">NetworkManager Desktop Applet Does Not Start</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140175141786000"><span class="term ">NetworkManager Desktop Applet Does Not Start</span></dt><dd><p>
       The applets starts automatically if the network is set up for NetworkManager
       control. If the applet does not start, check if NetworkManager is enabled in YaST
       as described in <a class="xref" href="cha.nm.html#sec.nm.activate" title="28.2. Enabling or Disabling NetworkManager">Section 28.2, “Enabling or Disabling NetworkManager”</a>. Then make sure that
       the NetworkManager-gnome package is also installed.
      </p><p>
       If the desktop applet is installed but is not running for some reason,
-      start it manually. If the desktop applet is installed but is not running
-      for some reason, start it manually with the command
-      <code class="command">nm-applet</code>.
-     </p></dd><dt id="idm140525758771440"><span class="term ">NetworkManager Applet Does Not Include the VPN Option</span></dt><dd><p>
+      start it manually with the command <code class="command">nm-applet</code>.
+     </p></dd><dt id="idm140175141782384"><span class="term ">NetworkManager Applet Does Not Include the VPN Option</span></dt><dd><p>
       Support for NetworkManager, applets, and VPN for NetworkManager is distributed in separate
       packages. If your NetworkManager applet does not include the VPN option, check if
       the packages with NetworkManager support for your VPN technology are installed. For
       more information, see <a class="xref" href="cha.nm.html#sec.nm.vpn" title="28.3.4. NetworkManager and VPN">Section 28.3.4, “NetworkManager and VPN”</a>.
-     </p></dd><dt id="idm140525758768768"><span class="term ">No Network Connection Available</span></dt><dd><p>
+     </p></dd><dt id="idm140175141779712"><span class="term ">No Network Connection Available</span></dt><dd><p>
       If you have configured your network connection correctly and all other
       components for the network connection (router, etc.) are also up and
       running, it sometimes helps to restart the network interfaces on your
@@ -438,9 +436,9 @@ hljs.configure({
      </p></dd></dl></div></div><div class="sect1 " id="sec.nm.more"><div class="titlepage"><div><div><h2 class="title" id="sec.nm.more"><span class="number">28.7 </span><span class="name">For More Information</span> <a title="Permalink" class="permalink" href="cha.nm.html#sec.nm.more">#</a></h2></div></div></div><p>
    More information about NetworkManager can be found on the following Web sites and
    directories:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140525758763248"><span class="term ">NetworkManager Project Page</span></dt><dd><p>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140175141774128"><span class="term ">NetworkManager Project Page</span></dt><dd><p>
       <a class="link" href="http://projects.gnome.org/NetworkManager/" target="_blank">http://projects.gnome.org/NetworkManager/</a>
-     </p></dd><dt id="idm140525758760848"><span class="term ">Package Documentation</span></dt><dd><p>
+     </p></dd><dt id="idm140175141771728"><span class="term ">Package Documentation</span></dt><dd><p>
       Also check out the information in the following directories for the
       latest information about NetworkManager and the GNOME applet:
      </p><div class="itemizedlist "><ul class="itemizedlist"><li class="listitem "><p>
