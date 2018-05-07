@@ -51,11 +51,11 @@ hljs.configure({
    This section introduces general <code class="command">qemu-system-ARCH</code> options
    and options related to the basic emulated hardware, such as the virtual
    machine's processor, memory, model type, or time processing methods.
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246703520"><span class="term "><code class="literal">-name <em class="replaceable ">NAME_OF_GUEST</em></code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661847269760"><span class="term "><code class="literal">-name <em class="replaceable ">NAME_OF_GUEST</em></code>
     </span></dt><dd><p>
       Specifies the name of the running guest system. The name is displayed in
       the window caption and used for the VNC server.
-     </p></dd><dt id="idm139858246701024"><span class="term "><code class="literal">-boot <em class="replaceable ">OPTIONS</em></code>
+     </p></dd><dt id="idm140661847267264"><span class="term "><code class="literal">-boot <em class="replaceable ">OPTIONS</em></code>
     </span></dt><dd><p>
       Specifies the order in which the defined drives will be booted. Drives
       are represented by letters, where <code class="literal">a</code> and
@@ -67,23 +67,23 @@ hljs.configure({
       For example, <code class="literal">qemu-system-ARCH [...] -boot order=ndc</code>
       first tries to boot from network, then from the first CD-ROM drive, and
       finally from the first hard disk.
-     </p></dd><dt id="idm139858246694736"><span class="term "><code class="literal">-pidfile <em class="replaceable ">FILENAME</em></code>
+     </p></dd><dt id="idm140661847260976"><span class="term "><code class="literal">-pidfile <em class="replaceable ">FILENAME</em></code>
     </span></dt><dd><p>
       Stores the QEMU's process identification number (PID) in a file. This
       is useful if you run QEMU from a script.
-     </p></dd><dt id="idm139858246692256"><span class="term "><code class="literal">-nodefaults</code>
+     </p></dd><dt id="idm140661847258496"><span class="term "><code class="literal">-nodefaults</code>
     </span></dt><dd><p>
       By default QEMU creates basic virtual devices even if you do not
       specify them on the command line. This option turns this feature off, and
       you must specify every single device manually, including graphical and
       network cards, parallel or serial ports, or virtual consoles. Even QEMU
       monitor is not attached by default.
-     </p></dd><dt id="idm139858246689840"><span class="term "><code class="literal">-daemonize</code>
+     </p></dd><dt id="idm140661847256080"><span class="term "><code class="literal">-daemonize</code>
     </span></dt><dd><p>
       <span class="quote">“<span class="quote">Daemonizes</span>”</span> the QEMU process after it is started. QEMU
       will detach from the standard input and standard output after it is ready
       to receive connections on any of its devices.
-     </p></dd></dl></div><div id="idm139858246686992" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SeaBIOS BIOS Implementation</h6><p>
+     </p></dd></dl></div><div id="idm140661847253232" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: SeaBIOS BIOS Implementation</h6><p>
     SeaBIOS is the default BIOS used. You can boot USB devices, any drive
     (CD-ROM, Floppy, or a hard disk). It has USB mouse and keyboard support and
     supports multiple VGA cards. For more information about SeaBIOS, refer to
@@ -93,7 +93,7 @@ hljs.configure({
      You can specifies the type of the emulated machine. Run
      <code class="command">qemu-system-ARCH -M help</code> to view a list of supported
      machine types.
-    </p><div id="idm139858246680992" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: ISA-PC</h6><p>
+    </p><div id="idm140661847247232" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: ISA-PC</h6><p>
       The machine type <span class="emphasis"><em>isapc: ISA-only-PC</em></span> is unsupported.
      </p></div></div><div class="sect3 " id="cha.qemu.running.gen_opts.basic.cpu"><div class="titlepage"><div><div><h4 class="title" id="cha.qemu.running.gen_opts.basic.cpu"><span class="number">28.2.1.2 </span><span class="name">CPU Model</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.gen_opts.basic.cpu">#</a></h4></div></div></div><p>
      To specify the type of the processor (CPU) model, run
@@ -108,15 +108,15 @@ hljs.configure({
      The following is a list of most commonly used options while launching
      <span class="emphasis"><em>qemu</em></span> from command line. To see all options available
      refer to <span class="emphasis"><em>qemu-doc</em></span> man page.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246671568"><span class="term "><code class="literal">-m <em class="replaceable ">MEGABYTES</em></code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661847237872"><span class="term "><code class="literal">-m <em class="replaceable ">MEGABYTES</em></code>
       </span></dt><dd><p>
         Specifies how many megabytes are used for the virtual RAM size.
-       </p></dd><dt id="idm139858246669136"><span class="term "><code class="literal">-balloon virtio</code>
+       </p></dd><dt id="idm140661847235440"><span class="term "><code class="literal">-balloon virtio</code>
       </span></dt><dd><p>
         Specifies a paravirtualized device to dynamically change the amount of
         virtual RAM memory assigned to VM Guest. The top limit is the amount
         of memory specified with <code class="literal">-m</code>.
-       </p></dd><dt id="idm139858246666432"><span class="term "><code class="literal">-smp <em class="replaceable ">NUMBER_OF_CPUS</em></code>
+       </p></dd><dt id="idm140661847232736"><span class="term "><code class="literal">-smp <em class="replaceable ">NUMBER_OF_CPUS</em></code>
       </span></dt><dd><p>
         Specifies how many CPUs will be emulated. QEMU supports up to 255
         CPUs on the PC platform (up to 64 with KVM acceleration used). This
@@ -128,22 +128,22 @@ hljs.configure({
      <code class="command">qemu-system-ARCH</code> command line:
      
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-system-x86_64 -name "SLES 12 SP2" -M pc-i440fx-2.7 -m 512 \
--machine accel=kvm -cpu kvm64 -smp 2 -drive /images/sles.raw</pre></div><div class="figure" id="idm139858246659152"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_win_sles.png"><img src="images/qemu_win_sles.png" width="" alt="QEMU Window with SLES 11 SP3 as VM Guest" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">QEMU Window with SLES 11 SP3 as VM Guest </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246659152">#</a></h6></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139858246653840"><span class="term "><code class="literal">-no-acpi</code>
+-machine accel=kvm -cpu kvm64 -smp 2 -drive /images/sles.raw</pre></div><div class="figure" id="idm140661847225456"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_win_sles.png"><img src="images/qemu_win_sles.png" width="" alt="QEMU Window with SLES 11 SP3 as VM Guest" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.1: </span><span class="name">QEMU Window with SLES 11 SP3 as VM Guest </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661847225456">#</a></h6></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140661847220144"><span class="term "><code class="literal">-no-acpi</code>
       </span></dt><dd><p>
         Disables <a class="xref" href="gloss.vt.glossary.html#gloss.vt.acpi" title="ACPI">ACPI</a> support.
-       </p></dd><dt id="idm139858246651200"><span class="term "><code class="literal">-S</code>
+       </p></dd><dt id="idm140661847217504"><span class="term "><code class="literal">-S</code>
       </span></dt><dd><p>
         QEMU starts with CPU stopped. To start CPU, enter
         <code class="literal">c</code> in QEMU monitor. For more information, see
         <a class="xref" href="cha.qemu.monitor.html" title="Chapter 29. Virtual Machine Administration Using QEMU Monitor">Chapter 29, <em>Virtual Machine Administration Using QEMU Monitor</em></a>.
-       </p></dd></dl></div></div></div><div class="sect2 " id="cha.qemu.running.gen_opts.storing_cong"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.gen_opts.storing_cong"><span class="number">28.2.2 </span><span class="name">Storing and Reading Configuration of Virtual Devices</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.gen_opts.storing_cong">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139858246645984"><span class="term "><code class="literal">-readconfig <em class="replaceable ">CFG_FILE</em></code>
+       </p></dd></dl></div></div></div><div class="sect2 " id="cha.qemu.running.gen_opts.storing_cong"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.gen_opts.storing_cong"><span class="number">28.2.2 </span><span class="name">Storing and Reading Configuration of Virtual Devices</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.gen_opts.storing_cong">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140661847212288"><span class="term "><code class="literal">-readconfig <em class="replaceable ">CFG_FILE</em></code>
      </span></dt><dd><p>
        Instead of entering the devices configuration options on the command
        line each time you want to run VM Guest,
        <code class="command">qemu-system-ARCH</code> can read it from a file that was
        either previously saved with <code class="literal">-writeconfig</code> or edited
        manually.
-      </p></dd><dt id="idm139858246642592"><span class="term "><code class="literal">-writeconfig <em class="replaceable ">CFG_FILE</em></code>
+      </p></dd><dt id="idm140661847208896"><span class="term "><code class="literal">-writeconfig <em class="replaceable ">CFG_FILE</em></code>
      </span></dt><dd><p>
        Dumps the current virtual machine's devices configuration to a text
        file. It can be consequently re-used with the
@@ -160,7 +160,7 @@ hljs.configure({
   file = "/images/sles_base.raw"</pre></div><p>
        This way you can effectively manage the configuration of your virtual
        machines' devices in a well-arranged way.
-      </p></dd></dl></div></div><div class="sect2 " id="cha.qemu.running.gen_opts.rtc"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.gen_opts.rtc"><span class="number">28.2.3 </span><span class="name">Guest Real-Time Clock</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.gen_opts.rtc">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm139858246635808"><span class="term "><code class="literal">-rtc <em class="replaceable ">OPTIONS</em></code>
+      </p></dd></dl></div></div><div class="sect2 " id="cha.qemu.running.gen_opts.rtc"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.gen_opts.rtc"><span class="number">28.2.3 </span><span class="name">Guest Real-Time Clock</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.gen_opts.rtc">#</a></h3></div></div></div><div class="variablelist "><dl class="variablelist"><dt id="idm140661847202112"><span class="term "><code class="literal">-rtc <em class="replaceable ">OPTIONS</em></code>
      </span></dt><dd><p>
        Specifies the way the RTC is handled inside a VM Guest. By default, the
        clock of the guest is derived from that of the host system. Therefore,
@@ -187,7 +187,7 @@ hljs.configure({
    ports)<span class="phrase">, or multimedia devices (graphic and sound
    cards)</span>. This section introduces options to configure various types
    of supported devices.
-  </p><div id="idm139858246624016" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div id="idm140661847190320" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     If your device, such as <code class="literal">-drive</code>, needs a special driver
     and driver properties to be set, specify them with the
     <code class="literal">-device</code> option, and identify with
@@ -207,33 +207,33 @@ hljs.configure({
     <code class="literal">-drive</code>. This option has many sub-options, some of which
     are described in this section. For the complete list, see the manual page
     (<code class="command">man 1 qemu</code>).
-   </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Sub-options for the <code class="literal">-drive</code> Option </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246614400">#</a></h6></div><dl class="variablelist"><dt id="idm139858246613216"><span class="term "><code class="literal">file=image_fname</code>
+   </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Sub-options for the <code class="literal">-drive</code> Option </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661847180704">#</a></h6></div><dl class="variablelist"><dt id="idm140661847179520"><span class="term "><code class="literal">file=image_fname</code>
      </span></dt><dd><p>
        Specifies the path to the disk image that will be used with this drive.
        If not specified, an empty (removable) drive is assumed.
-      </p></dd><dt id="idm139858246611008"><span class="term "><code class="literal">if=drive_interface</code>
+      </p></dd><dt id="idm140661847177312"><span class="term "><code class="literal">if=drive_interface</code>
      </span></dt><dd><p>
        Specifies the type of interface to which the drive is connected.
        Currently only <code class="literal">floppy</code>, <code class="literal">scsi</code>,
        <code class="literal">ide</code>, or <code class="literal">virtio</code> are supported by
        SUSE. <code class="literal">virtio</code> defines a paravirtualized disk driver.
        Default is <code class="literal">ide</code>.
-      </p></dd><dt id="idm139858246606096"><span class="term "><code class="literal">index=index_of_connector</code>
+      </p></dd><dt id="idm140661847172400"><span class="term "><code class="literal">index=index_of_connector</code>
      </span></dt><dd><p>
        Specifies the index number of a connector on the disk interface (see the
        <code class="literal">if</code> option) where the drive is connected. If not
        specified, the index is automatically incremented.
-      </p></dd><dt id="idm139858246603376"><span class="term "><code class="literal">media=type</code>
+      </p></dd><dt id="idm140661847169680"><span class="term "><code class="literal">media=type</code>
      </span></dt><dd><p>
        Specifies the type of media. Can be <code class="literal">disk</code> for hard
        disks, or <code class="literal">cdrom</code> for removable CD-ROM drives.
-      </p></dd><dt id="idm139858246600336"><span class="term "><code class="literal">format=img_fmt</code>
+      </p></dd><dt id="idm140661847166640"><span class="term "><code class="literal">format=img_fmt</code>
      </span></dt><dd><p>
        Specifies the format of the connected disk image. If not specified, the
        format is autodetected. Currently, SUSE supports
        <code class="literal">qcow2</code>, <code class="literal">qed</code> and
        <code class="literal">raw</code> formats.
-      </p></dd><dt id="idm139858246596784"><span class="term "><code class="literal">cache=method</code>
+      </p></dd><dt id="idm140661847163088"><span class="term "><code class="literal">cache=method</code>
      </span></dt><dd><p>
        Specifies the caching method for the drive. Possible values are
        <code class="literal">unsafe</code>, <code class="literal">writethrough</code>,
@@ -245,7 +245,7 @@ hljs.configure({
        the safest option. Default for image files is
        <code class="literal">writeback</code>. For more information, see
        <a class="xref" href="cha.cachemodes.html" title="Chapter 14. Disk Cache Modes">Chapter 14, <em>Disk Cache Modes</em></a>.
-      </p></dd></dl></div><div id="idm139858246589728" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+      </p></dd></dl></div><div id="idm140661847156032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
      To simplify defining block devices, QEMU understands several shortcuts
      which you may find handy when entering the
      <code class="literal">qemu-system-ARCH</code> command line.
@@ -261,7 +261,7 @@ hljs.configure({
     </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> qemu-system-x86_64 -drive file=/images/image1.raw,index=0,media=disk \
 -drive file=/images/image2.raw,index=1,media=disk \
 -drive file=/images/image3.raw,index=2,media=disk \
--drive file=/images/image4.raw,index=3,media=disk</pre></div></div><div id="idm139858246582000" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using Host Drives Instead of Images</h6><p>
+-drive file=/images/image4.raw,index=3,media=disk</pre></div></div><div id="idm140661847148304" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Using Host Drives Instead of Images</h6><p>
      As an alternative to using disk images (see
      <a class="xref" href="cha.qemu.guest_inst.html#cha.qemu.guest_inst.qemu-img" title="27.2. Managing Disk Images with qemu-img">Section 27.2, “Managing Disk Images with <code class="command">qemu-img</code>”</a>) you can also use existing
      VM Host Server disks, connect them as drives, and access them from VM Guest.
@@ -286,7 +286,7 @@ hljs.configure({
      <span class="quote">“<span class="quote">holes</span>”</span> after deleting data from the sparse guest image. Note
      that this option is valid only for the <code class="literal">if=scsi</code> drive
      interface:
-    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> qemu-system-x86_64 [...] -drive file=/path/to/file.img,if=scsi,discard=on</pre></div><div id="idm139858246570576" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Support Status</h6><p>
+    </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code><code class="command">sudo</code> qemu-system-x86_64 [...] -drive file=/path/to/file.img,if=scsi,discard=on</pre></div><div id="idm140661847136880" class="admonition important normal"><img class="symbol" alt="Important" title="Important" src="static/images/icon-important.png" /><h6>Important: Support Status</h6><p>
       <code class="option">if=scsi</code> is not supported. This interface does not map to
       <span class="emphasis"><em>virtio-scsi</em></span>, but rather to the <span class="emphasis"><em>lsi SCSI
       adapter</em></span>.
@@ -338,7 +338,7 @@ format=raw,file=filename -device virtio-blk-pci,drive=drive1,scsi=off,\
        &gt;/boot/grub2/grub.cfg</code> to update the grub2 boot menu.
       </p></li><li class="step "><p>
        Reboot the guest with the new kernel command line active.
-      </p></li></ol></div></div><div id="idm139858246553136" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Bio-Based Driver on Slow Devices</h6><p>
+      </p></li></ol></div></div><div id="idm140661847119440" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Bio-Based Driver on Slow Devices</h6><p>
       The bio-based virtio-blk driver does not help on slow devices such as
       spin hard disks. The reason is that the benefit of scheduling is larger
       than what the shortened bio path offers. Do not use the bio-based driver
@@ -355,12 +355,12 @@ format=raw,file=filename -device virtio-blk-pci,drive=drive1,scsi=off,\
 
      iSCSI-based disk devices can also be
      specified in the libvirt XML configuration.
-    </p><div id="idm139858246548784" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: RAW Image Format</h6><p>
+    </p><div id="idm140661847115088" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: RAW Image Format</h6><p>
      This feature is only available using the RAW image format, as the
      iSCSI protocol has some technical limitations.
      </p></div><p>
      The following is the QEMU command line interface for iSCSI connectivity.
-    </p><div id="idm139858246546816" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: virt-manager Limitation</h6><p>
+    </p><div id="idm140661847113120" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note: virt-manager Limitation</h6><p>
       The use of libiscsi based storage provisioning is not yet exposed by
       the virt-manager interface, but instead it would be configured by
       directly editing the guest xml. This new way of accessing iSCSI
@@ -412,40 +412,40 @@ based iSCSI:
      QEMU uses <code class="literal">-vga</code> to define a video card used to display
      VM Guest graphical output. The <code class="literal">-vga</code> option understands
      the following values:
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246532944"><span class="term "><code class="literal">none</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661847099248"><span class="term "><code class="literal">none</code>
       </span></dt><dd><p>
         Disables video cards on VM Guest (no video card is emulated). You can
         still access the running VM Guest via the serial console.
-       </p></dd><dt id="idm139858246530720"><span class="term "><code class="literal">std</code>
+       </p></dd><dt id="idm140661847097024"><span class="term "><code class="literal">std</code>
       </span></dt><dd><p>
         Emulates a standard VESA 2.0 VBE video card. Use it if you intend to
         use high display resolution on VM Guest.
-       </p></dd><dt id="idm139858246528528"><span class="term "><code class="literal">cirrus</code>
+       </p></dd><dt id="idm140661847094832"><span class="term "><code class="literal">cirrus</code>
       </span></dt><dd><p>
         Emulates Cirrus Logic GD5446 video card. Good choice if you insist on
         high compatibility of the emulated video hardware. Most operating
         systems (even Windows 95) recognize this type of card.
-       </p><div id="idm139858246526560" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+       </p><div id="idm140661847092864" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
          For best video performance with the <code class="literal">cirrus</code> type,
          use 16-bit color depth both on VM Guest and VM Host Server.
         </p></div></dd></dl></div></div><div class="sect3 " id="cha.qemu.running.devices.graphic.display"><div class="titlepage"><div><div><h4 class="title" id="cha.qemu.running.devices.graphic.display"><span class="number">28.3.2.2 </span><span class="name">Display Options</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.devices.graphic.display">#</a></h4></div></div></div><p>
      The following options affect the way VM Guest graphical output is
      displayed.
-    </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246522368"><span class="term "><code class="literal">-display gtk</code>
+    </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661847088736"><span class="term "><code class="literal">-display gtk</code>
       </span></dt><dd><p>
         Display video output in a GTK window. This interface provides UI
         elements to configure and control the VM during runtime.
-       </p></dd><dt id="idm139858246520160"><span class="term "><code class="literal">-display sdl</code>
+       </p></dd><dt id="idm140661847086528"><span class="term "><code class="literal">-display sdl</code>
       </span></dt><dd><p>
         Display video output via SDL, usually in a separate graphics window.
         For more information, see the SDL documentation.
-       </p></dd><dt id="idm139858246517952"><span class="term "><code class="literal">-spice option[,option[,...]]</code>
+       </p></dd><dt id="idm140661847084320"><span class="term "><code class="literal">-spice option[,option[,...]]</code>
       </span></dt><dd><p>
         Enables the spice remote desktop protocol.
-       </p></dd><dt id="idm139858246515856"><span class="term "><code class="literal">-display vnc</code>
+       </p></dd><dt id="idm140661847082224"><span class="term "><code class="literal">-display vnc</code>
       </span></dt><dd><p>
         Refer to <a class="xref" href="cha.qemu.running.html#cha.qemu.running.vnc" title="28.5. Viewing a VM Guest with VNC">Section 28.5, “Viewing a VM Guest with VNC”</a> for more information.
-       </p></dd><dt id="idm139858246513200"><span class="term "><code class="literal">-nographic</code>
+       </p></dd><dt id="idm140661847079568"><span class="term "><code class="literal">-nographic</code>
       </span></dt><dd><p>
         Disables QEMU's graphical output. The emulated serial port is
         redirected to the console.
@@ -468,18 +468,18 @@ C-a C-a  sends C-a
 (pressed C-a c)
 
 QEMU 2.3.1 monitor - type 'help' for more information
-(qemu)</pre></div></dd><dt id="idm139858246507488"><span class="term "><code class="literal">-no-frame</code>
+(qemu)</pre></div></dd><dt id="idm140661847073856"><span class="term "><code class="literal">-no-frame</code>
       </span></dt><dd><p>
         Disables decorations for the QEMU window. Convenient for dedicated
         desktop work space.
-       </p></dd><dt id="idm139858246505312"><span class="term "><code class="literal">-full-screen</code>
+       </p></dd><dt id="idm140661847071680"><span class="term "><code class="literal">-full-screen</code>
       </span></dt><dd><p>
         Starts QEMU graphical output in full screen mode.
-       </p></dd><dt id="idm139858246503184"><span class="term "><code class="literal">-no-quit</code>
+       </p></dd><dt id="idm140661847069552"><span class="term "><code class="literal">-no-quit</code>
       </span></dt><dd><p>
         Disables the close button of the QEMU window and prevents it from
         being closed by force.
-       </p></dd><dt id="idm139858246501008"><span class="term "><code class="literal">-alt-grab</code>, <code class="literal">-ctrl-grab</code>
+       </p></dd><dt id="idm140661847067376"><span class="term "><code class="literal">-alt-grab</code>, <code class="literal">-ctrl-grab</code>
       </span></dt><dd><p>
         By default, the QEMU window releases the <span class="quote">“<span class="quote">captured</span>”</span> mouse
         after pressing
@@ -500,26 +500,26 @@ QEMU 2.3.1 monitor - type 'help' for more information
      <code class="literal">serial</code>, <code class="literal">braille</code>,
      <code class="literal">net</code>, <code class="literal">mouse</code>, and
      <code class="literal">tablet</code>.
-    </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Types of USB devices for the <code class="literal">-usbdevice</code> option </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246485600">#</a></h6></div><dl class="variablelist"><dt id="idm139858246484400"><span class="term "><code class="literal">disk</code>
+    </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Types of USB devices for the <code class="literal">-usbdevice</code> option </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661847051840">#</a></h6></div><dl class="variablelist"><dt id="idm140661847050640"><span class="term "><code class="literal">disk</code>
       </span></dt><dd><p>
         Emulates a mass storage device based on file. The optional
         <code class="literal">format</code> option is used rather than detecting the
         format.
        </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-system-x86_64 [...] -usbdevice
-        disk:format=raw:/virt/usb_disk.raw</pre></div></dd><dt id="idm139858246480960"><span class="term "><code class="literal">host</code>
+        disk:format=raw:/virt/usb_disk.raw</pre></div></dd><dt id="idm140661847047200"><span class="term "><code class="literal">host</code>
       </span></dt><dd><p>
         Pass through the host device (identified by bus.addr).
-       </p></dd><dt id="idm139858246478832"><span class="term "><code class="literal">serial</code>
+       </p></dd><dt id="idm140661847045072"><span class="term "><code class="literal">serial</code>
       </span></dt><dd><p>
         Serial converter to a host character device.
-       </p></dd><dt id="idm139858246476704"><span class="term "><code class="literal">braille</code>
+       </p></dd><dt id="idm140661847042944"><span class="term "><code class="literal">braille</code>
       </span></dt><dd><p>
         Emulates a braille device using BrlAPI to display the braille output.
-       </p></dd><dt id="idm139858246474560"><span class="term "><code class="literal">net</code>
+       </p></dd><dt id="idm140661847040800"><span class="term "><code class="literal">net</code>
       </span></dt><dd><p>
         Emulates a network adapter that supports CDC Ethernet and RNDIS
         protocols.
-       </p></dd><dt id="idm139858246472400"><span class="term "><code class="literal">mouse</code>
+       </p></dd><dt id="idm140661847038640"><span class="term "><code class="literal">mouse</code>
       </span></dt><dd><p>
         Emulates a virtual USB mouse. This option overrides the default PS/2
         mouse emulation. The following example shows the hardware status of a
@@ -535,7 +535,7 @@ Model: "Adomax QEMU USB Mouse"
 Hotplug: USB
 Vendor: usb 0x0627 "Adomax Technology Co., Ltd"
 Device: usb 0x0001 "QEMU USB Mouse"
-[...]</pre></div></dd><dt id="idm139858246468368"><span class="term "><code class="literal">tablet</code>
+[...]</pre></div></dd><dt id="idm140661847034608"><span class="term "><code class="literal">tablet</code>
       </span></dt><dd><p>
         Emulates a pointer device that uses absolute coordinates (such as
         touchscreen). This option overrides the default PS/2 mouse emulation.
@@ -558,14 +558,14 @@ Device: usb 0x0001 "QEMU USB Mouse"
     complete description of all back-end's sub-options, see the manual page
     (<code class="command">man 1 qemu</code>). A brief description of the available
     <code class="literal">back-ends</code> follows:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246452992"><span class="term "><code class="literal">null</code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661847019232"><span class="term "><code class="literal">null</code>
      </span></dt><dd><p>
        Creates an empty device that outputs no data and drops any data it
        receives.
-      </p></dd><dt id="idm139858246450832"><span class="term "><code class="literal">stdio</code>
+      </p></dd><dt id="idm140661847017072"><span class="term "><code class="literal">stdio</code>
      </span></dt><dd><p>
        Connects to QEMU's process standard input and standard output.
-      </p></dd><dt id="idm139858246448688"><span class="term "><code class="literal">socket</code>
+      </p></dd><dt id="idm140661847014928"><span class="term "><code class="literal">socket</code>
      </span></dt><dd><p>
        Creates a two-way stream socket. If <em class="replaceable ">PATH</em> is
        specified, a Unix socket is created:
@@ -581,7 +581,7 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
        The command creates a local listening (<code class="literal">server</code>) TCP
        socket on port 7777. QEMU will not block waiting for a client to
        connect to the listening port (<code class="literal">nowait</code>).
-      </p></dd><dt id="idm139858246440528"><span class="term "><code class="literal">udp</code>
+      </p></dd><dt id="idm140661847006768"><span class="term "><code class="literal">udp</code>
      </span></dt><dd><p>
        Sends all network traffic from VM Guest to a remote host over the UDP
        protocol.
@@ -589,7 +589,7 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
 -chardev udp,id=udp_fwd,host=mercury.example.com,port=7777</pre></div><p>
        The command binds port 7777 on the remote host mercury.example.com and sends
        VM Guest network traffic there.
-      </p></dd><dt id="idm139858246436720"><span class="term "><code class="literal">vc</code>
+      </p></dd><dt id="idm140661847002960"><span class="term "><code class="literal">vc</code>
      </span></dt><dd><p>
        Creates a new QEMU text console. You can optionally specify the
        dimensions of the virtual console:
@@ -597,7 +597,7 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
 -mon chardev=vc1</pre></div><p>
        The command creates a new virtual console called <code class="literal">vc1</code>
        of the specified size, and connects the QEMU monitor to it.
-      </p></dd><dt id="idm139858246432432"><span class="term "><code class="literal">file</code>
+      </p></dd><dt id="idm140661846998672"><span class="term "><code class="literal">file</code>
      </span></dt><dd><p>
        Logs all traffic from VM Guest to a file on VM Host Server. The
        <code class="literal">path</code> is required and will be created if it does not
@@ -608,7 +608,7 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
     parallel ports, and a special console for QEMU monitor. However, you can
     create your own character devices and use them for the mentioned
     purposes. The following options will help you:
-   </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246427552"><span class="term "><code class="literal">-serial <em class="replaceable ">CHAR_DEV</em></code>
+   </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661846993792"><span class="term "><code class="literal">-serial <em class="replaceable ">CHAR_DEV</em></code>
      </span></dt><dd><p>
        Redirects the VM Guest's virtual serial port to a character device
        <em class="replaceable ">CHAR_DEV</em> on VM Host Server. By default, it is a
@@ -619,12 +619,12 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
       </p><p>
        You can emulate up to 4 serial ports. Use <code class="literal">-serial
        none</code> to disable all serial ports.
-      </p></dd><dt id="idm139858246421792"><span class="term "><code class="literal">-parallel <em class="replaceable ">DEVICE</em></code>
+      </p></dd><dt id="idm140661846988032"><span class="term "><code class="literal">-parallel <em class="replaceable ">DEVICE</em></code>
      </span></dt><dd><p>
        Redirects the VM Guest's parallel port to a
        <em class="replaceable ">DEVICE</em>. This option supports the same devices
        as <code class="literal">-serial</code>.
-      </p><div id="idm139858246418768" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+      </p><div id="idm140661846985008" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
         With <span class="phrase">openSUSE
         Leap</span> as a VM Host Server, you can directly use the hardware parallel
         port devices <code class="filename">/dev/parportN</code> where
@@ -632,7 +632,7 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
        </p></div><p>
        You can emulate up to 3 parallel ports. Use <code class="literal">-parallel
        none</code> to disable all parallel ports.
-      </p></dd><dt id="idm139858246414912"><span class="term "><code class="literal">-monitor <em class="replaceable ">CHAR_DEV</em></code>
+      </p></dd><dt id="idm140661846981152"><span class="term "><code class="literal">-monitor <em class="replaceable ">CHAR_DEV</em></code>
      </span></dt><dd><p>
        Redirects the QEMU monitor to a character device
        <em class="replaceable ">CHAR_DEV</em> on VM Host Server. This option supports
@@ -652,16 +652,16 @@ socket,id=tcp_socket1,host=localhost,port=7777,server,nowait</pre></div><p>
    <code class="literal">user</code>, <code class="literal">bridge</code>, and
    <code class="literal">tap</code>. For a complete list of <code class="literal">-netdev</code>
    sub-options, see the manual page (<code class="command">man 1 qemu</code>).
-  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported <code class="literal">-netdev</code> Sub-options </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246402800">#</a></h6></div><dl class="variablelist"><dt id="idm139858246401616"><span class="term "><code class="literal">bridge</code>
+  </p><div class="variablelist "><div class="variablelist-title-wrap"><h6 class="variablelist-title"><span class="name">Supported <code class="literal">-netdev</code> Sub-options </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661846969104">#</a></h6></div><dl class="variablelist"><dt id="idm140661846967920"><span class="term "><code class="literal">bridge</code>
     </span></dt><dd><p>
       Uses a specified network helper to configure the TAP interface and attach
       it to a specified bridge. For more information, see
       <a class="xref" href="cha.qemu.running.html#cha.qemu.running.networking.bridge" title="28.4.3. Bridged Networking">Section 28.4.3, “Bridged Networking”</a>.
-     </p></dd><dt id="idm139858246398832"><span class="term "><code class="literal">user</code>
+     </p></dd><dt id="idm140661846965136"><span class="term "><code class="literal">user</code>
     </span></dt><dd><p>
       Specifies user-mode networking. For more information, see
       <a class="xref" href="cha.qemu.running.html#cha.qemu.running.networking.usermode" title="28.4.2. User-Mode Networking">Section 28.4.2, “User-Mode Networking”</a>.
-     </p></dd><dt id="idm139858246396128"><span class="term "><code class="literal">tap</code>
+     </p></dd><dt id="idm140661846962432"><span class="term "><code class="literal">tap</code>
     </span></dt><dd><p>
       Specifies bridged or routed networking. For more information, see
       <a class="xref" href="cha.qemu.running.html#cha.qemu.running.networking.bridge" title="28.4.3. Bridged Networking">Section 28.4.3, “Bridged Networking”</a>.
@@ -799,7 +799,7 @@ bootfile=/images/boot/pxelinux.0<span id="co.usermode.bootfile"></span><span cla
      </p></li><li class="step "><p>
       In the <span class="guimenu">Bridged Devices</span> pane, select the Ethernet
       device to add to the bridge.
-     </p><div class="figure" id="idm139858246318464"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_yast_bridge_eth0.png"><img src="images/qemu_yast_bridge_eth0.png" width="" alt="Configuring Network Bridge with YaST" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.2: </span><span class="name">Configuring Network Bridge with YaST </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246318464">#</a></h6></div></div><p>
+     </p><div class="figure" id="idm140661846884768"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_yast_bridge_eth0.png"><img src="images/qemu_yast_bridge_eth0.png" width="" alt="Configuring Network Bridge with YaST" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.2: </span><span class="name">Configuring Network Bridge with YaST </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661846884768">#</a></h6></div></div><p>
       Click <span class="guimenu">Next</span>. When asked about adapting an already
       configured device, click <span class="guimenu">Continue</span>.
      </p></li><li class="step "><p>
@@ -812,7 +812,7 @@ bootfile=/images/boot/pxelinux.0<span id="co.usermode.bootfile"></span><span cla
      bridge interface <code class="literal">br0</code>. Several commands in the script
      are run via the <code class="command">sudo</code> mechanism because they require
      <code class="systemitem">root</code> privileges.
-    </p><div id="idm139858246306032" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Required Software</h6><p>
+    </p><div id="idm140661846872336" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip: Required Software</h6><p>
       To manage a network bridge, you need to have the
       <span class="package">tunctl</span> package installed.
      </p></div><div class="verbatim-wrap"><pre class="screen">#!/bin/bash
@@ -889,7 +889,7 @@ sudo tunctl -d $tap<span id="co.qemu.net.bridge.deltap"></span><span class="call
      <code class="option">helper=/path/to/your/helper</code> option:
     </p><div class="verbatim-wrap"><pre class="screen">qemu-system-x86_64 [...] \
  -netdev bridge,id=hostnet0,vlan=0,br=br0,helper=/path/to/bridge-helper \
- -device virtio-net-pci,netdev=hostnet0</pre></div><div id="idm139858246269504" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+ -device virtio-net-pci,netdev=hostnet0</pre></div><div id="idm140661846835808" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
       To define access privileges to <code class="literal">qemu-bridge-helper</code>,
       inspect the <code class="filename">/etc/qemu/bridge.conf</code> file. For example
       the following directive
@@ -903,7 +903,7 @@ sudo tunctl -d $tap<span id="co.qemu.net.bridge.deltap"></span><span class="call
    With the <code class="literal">-vnc</code> option specified, you can make QEMU
    listen on a specified VNC display and redirect its graphical output to the
    VNC session.
-  </p><div id="idm139858246263088" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
+  </p><div id="idm140661846829328" class="admonition tip normal"><img class="symbol" alt="Tip" title="Tip" src="static/images/icon-tip.png" /><h6>Tip</h6><p>
     When working with QEMU's virtual machine via VNC session, it is useful to
     work with the <code class="literal">-usbdevice tablet</code> option.
    </p><p>
@@ -913,19 +913,19 @@ sudo tunctl -d $tap<span id="co.qemu.net.bridge.deltap"></span><span class="call
    The first suboption of <code class="literal">-vnc</code> must be a
    <span class="emphasis"><em>display</em></span> value. The <code class="literal">-vnc</code> option
    understands the following display specifications:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246258112"><span class="term "><code class="literal">host:display</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661846824352"><span class="term "><code class="literal">host:display</code>
     </span></dt><dd><p>
       Only connections from <code class="literal">host</code> on the display number
       <code class="literal">display</code> will be accepted. The TCP port on which the
       VNC session is then running is normally a 5900 +
       <code class="literal">display</code> number. If you do not specify
       <code class="literal">host</code>, connections will be accepted from any host.
-     </p></dd><dt id="idm139858246254064"><span class="term "><code class="literal">unix:path</code>
+     </p></dd><dt id="idm140661846820304"><span class="term "><code class="literal">unix:path</code>
     </span></dt><dd><p>
       The VNC server listens for connections on Unix domain sockets. The
       <code class="literal">path</code> option specifies the location of the related Unix
       socket.
-     </p></dd><dt id="idm139858246251424"><span class="term "><code class="literal">none</code>
+     </p></dd><dt id="idm140661846817664"><span class="term "><code class="literal">none</code>
     </span></dt><dd><p>
       The VNC server functionality is initialized, but the server itself is not
       started. You can start the VNC server later with the QEMU monitor. For
@@ -933,53 +933,53 @@ sudo tunctl -d $tap<span id="co.qemu.net.bridge.deltap"></span><span class="call
      </p></dd></dl></div><p>
    Following the display value there may be one or more option flags separated
    by commas. Valid options are:
-  </p><div class="variablelist "><dl class="variablelist"><dt id="idm139858246247616"><span class="term "><code class="literal">reverse</code>
+  </p><div class="variablelist "><dl class="variablelist"><dt id="idm140661846813856"><span class="term "><code class="literal">reverse</code>
     </span></dt><dd><p>
       Connect to a listening VNC client via a <span class="emphasis"><em>reverse</em></span>
       connection.
-     </p></dd><dt id="idm139858246245040"><span class="term "><code class="literal">websocket</code>
+     </p></dd><dt id="idm140661846811280"><span class="term "><code class="literal">websocket</code>
     </span></dt><dd><p>
       Opens an additional TCP listening port dedicated to VNC Websocket
       connections. By definition the Websocket port is 5700+display.
-     </p></dd><dt id="idm139858246242832"><span class="term "><code class="literal">password</code>
+     </p></dd><dt id="idm140661846809072"><span class="term "><code class="literal">password</code>
     </span></dt><dd><p>
       Require that password-based authentication is used for client
       connections.
-     </p></dd><dt id="idm139858246240672"><span class="term "><code class="literal">tls</code>
+     </p></dd><dt id="idm140661846806912"><span class="term "><code class="literal">tls</code>
     </span></dt><dd><p>
       Require that clients use TLS when communicating with the VNC server.
-     </p></dd><dt id="idm139858246238528"><span class="term "><code class="literal">x509=/path/to/certificate/dir</code>
+     </p></dd><dt id="idm140661846804768"><span class="term "><code class="literal">x509=/path/to/certificate/dir</code>
     </span></dt><dd><p>
       Valid if TLS is specified. Require that x509 credentials are used for
       negotiating the TLS session.
-     </p></dd><dt id="idm139858246236336"><span class="term "><code class="literal">x509verify=/path/to/certificate/dir</code>
+     </p></dd><dt id="idm140661846802576"><span class="term "><code class="literal">x509verify=/path/to/certificate/dir</code>
     </span></dt><dd><p>
       Valid if TLS is specified. Require that x509 credentials are used for
       negotiating the TLS session.
-     </p></dd><dt id="idm139858246234144"><span class="term "><code class="literal">sasl</code>
+     </p></dd><dt id="idm140661846800384"><span class="term "><code class="literal">sasl</code>
     </span></dt><dd><p>
       Require that the client uses SASL to authenticate with the VNC server.
-     </p></dd><dt id="idm139858246232000"><span class="term "><code class="literal">acl</code>
+     </p></dd><dt id="idm140661846798240"><span class="term "><code class="literal">acl</code>
     </span></dt><dd><p>
       Turn on access control lists for checking of the x509 client certificate
       and SASL party.
-     </p></dd><dt id="idm139858246229824"><span class="term "><code class="literal">lossy</code>
+     </p></dd><dt id="idm140661846796064"><span class="term "><code class="literal">lossy</code>
     </span></dt><dd><p>
       Enable lossy compression methods (gradient, JPEG, ...).
-     </p></dd><dt id="idm139858246227696"><span class="term "><code class="literal">non-adaptive</code>
+     </p></dd><dt id="idm140661846793936"><span class="term "><code class="literal">non-adaptive</code>
     </span></dt><dd><p>
       Disable adaptive encodings. Adaptive encodings are enabled by default.
-     </p></dd><dt id="idm139858246225552"><span class="term "><code class="literal">share=[allow-exclusive|force-shared|ignore]</code>
+     </p></dd><dt id="idm140661846791792"><span class="term "><code class="literal">share=[allow-exclusive|force-shared|ignore]</code>
     </span></dt><dd><p>
       Set display sharing policy.
-     </p></dd></dl></div><div id="idm139858246223248" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
+     </p></dd></dl></div><div id="idm140661846789488" class="admonition note normal"><img class="symbol" alt="Note" title="Note" src="static/images/icon-note.png" /><h6>Note</h6><p>
     For more details about the display options, see the
     <span class="emphasis"><em>qemu-doc</em></span> man page.
    </p></div><p>
    An example VNC usage:
   </p><div class="verbatim-wrap"><pre class="screen"><code class="prompt user">tux &gt; </code>qemu-system-x86_64 [...] -vnc :5
 # (on the client:)
-<code class="prompt user">wilber &gt; </code>vncviewer venus:5 &amp;</pre></div><div class="figure" id="idm139858246220176"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_sles_vnc.png"><img src="images/qemu_sles_vnc.png" width="" alt="QEMU VNC Session" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.3: </span><span class="name">QEMU VNC Session </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246220176">#</a></h6></div></div><div class="sect2 " id="cha.qemu.running.vnc.secure"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.vnc.secure"><span class="number">28.5.1 </span><span class="name">Secure VNC Connections</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.vnc.secure">#</a></h3></div></div></div><p>
+<code class="prompt user">wilber &gt; </code>vncviewer venus:5 &amp;</pre></div><div class="figure" id="idm140661846786416"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_sles_vnc.png"><img src="images/qemu_sles_vnc.png" width="" alt="QEMU VNC Session" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.3: </span><span class="name">QEMU VNC Session </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661846786416">#</a></h6></div></div><div class="sect2 " id="cha.qemu.running.vnc.secure"><div class="titlepage"><div><div><h3 class="title" id="cha.qemu.running.vnc.secure"><span class="number">28.5.1 </span><span class="name">Secure VNC Connections</span> <a title="Permalink" class="permalink" href="cha.qemu.running.html#cha.qemu.running.vnc.secure">#</a></h3></div></div></div><p>
     The default VNC server setup does not use any form of authentication. In
     the previous example, any user can connect and view the QEMU VNC session
     from any host on the network.
@@ -1016,7 +1016,7 @@ Password: ****</pre></div><p>
      You need the <code class="literal">-monitor stdio</code> option here, because you
      would not be able to manage the QEMU monitor without redirecting its
      input/output.
-    </p></div></div></div><div class="figure" id="idm139858246202736"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_vnc_pwd.png"><img src="images/qemu_vnc_pwd.png" width="" alt="Authentication Dialog in Remmina" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.4: </span><span class="name">Authentication Dialog in Remmina </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm139858246202736">#</a></h6></div></div><div class="complex-example"><div class="example" id="ex.running.vnc.secure.x509"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 28.6: </span><span class="name">x509 Certificate Authentication </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#ex.running.vnc.secure.x509">#</a></h6></div><div class="example-contents"><p>
+    </p></div></div></div><div class="figure" id="idm140661846768976"><div class="figure-contents"><div class="mediaobject"><a xmlns="" href="images/qemu_vnc_pwd.png"><img src="images/qemu_vnc_pwd.png" width="" alt="Authentication Dialog in Remmina" /></a></div></div><div class="figure-title-wrap"><h6 class="figure-title"><span class="number">Figure 28.4: </span><span class="name">Authentication Dialog in Remmina </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#idm140661846768976">#</a></h6></div></div><div class="complex-example"><div class="example" id="ex.running.vnc.secure.x509"><div class="example-title-wrap"><h6 class="example-title"><span class="number">Example 28.6: </span><span class="name">x509 Certificate Authentication </span><a title="Permalink" class="permalink" href="cha.qemu.running.html#ex.running.vnc.secure.x509">#</a></h6></div><div class="example-contents"><p>
      The QEMU VNC server can use TLS encryption for the session and x509
      certificates for authentication. The server asks the client for a
      certificate and validates it against the CA certificate. Use this
